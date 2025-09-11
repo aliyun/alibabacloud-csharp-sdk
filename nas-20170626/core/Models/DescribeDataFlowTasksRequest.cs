@@ -110,6 +110,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("WithReports")]
+        [Validation(Required=false)]
+        public bool? WithReports { get; set; }
+
     }
 
 }

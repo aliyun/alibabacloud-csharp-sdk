@@ -645,6 +645,166 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Associates the VSC device with the file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachVscToFilesystemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachVscToFilesystemsResponse
+        /// </returns>
+        public AttachVscToFilesystemsResponse AttachVscToFilesystemsWithOptions(AttachVscToFilesystemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
+            {
+                query["ResourceIds"] = request.ResourceIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachVscToFilesystems",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachVscToFilesystemsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates the VSC device with the file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachVscToFilesystemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachVscToFilesystemsResponse
+        /// </returns>
+        public async Task<AttachVscToFilesystemsResponse> AttachVscToFilesystemsWithOptionsAsync(AttachVscToFilesystemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
+            {
+                query["ResourceIds"] = request.ResourceIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachVscToFilesystems",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachVscToFilesystemsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates the VSC device with the file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachVscToFilesystemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachVscToFilesystemsResponse
+        /// </returns>
+        public AttachVscToFilesystemsResponse AttachVscToFilesystems(AttachVscToFilesystemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AttachVscToFilesystemsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates the VSC device with the file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachVscToFilesystemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachVscToFilesystemsResponse
+        /// </returns>
+        public async Task<AttachVscToFilesystemsResponse> AttachVscToFilesystemsAsync(AttachVscToFilesystemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AttachVscToFilesystemsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Removes automatic snapshot policies from one or more file systems.</para>
         /// </summary>
         /// 
@@ -3546,13 +3706,13 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only Cloud Parallel File Storage CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</para>
+        /// <para>  Only Cloud Parallel File Storage (CPFS) for Lingjun V2.4.0 and later support dataflow. You can view the version information on the file system details page in the console.</para>
         /// <list type="bullet">
-        /// <item><description>You can create a data flow task only for a data flow that is in the Running state.</description></item>
-        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2838089.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</description></item>
-        /// <item><description>When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.</description></item>
-        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.</description></item>
-        /// <item><description>CPFS for LINGJUN supports two types of tasks: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
+        /// <item><description>Dataflow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2838089.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</description></item>
+        /// <item><description>You can create a dataflow task only for a dataflow that is in the Running state.</description></item>
+        /// <item><description>When you manually run a dataflow task, the automatic data update task for the dataflow is interrupted and enters the pending state.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS for Lingjun file system does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS for Lingjun supports two types of tasks: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3648,13 +3808,13 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only Cloud Parallel File Storage CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</para>
+        /// <para>  Only Cloud Parallel File Storage (CPFS) for Lingjun V2.4.0 and later support dataflow. You can view the version information on the file system details page in the console.</para>
         /// <list type="bullet">
-        /// <item><description>You can create a data flow task only for a data flow that is in the Running state.</description></item>
-        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2838089.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</description></item>
-        /// <item><description>When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.</description></item>
-        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.</description></item>
-        /// <item><description>CPFS for LINGJUN supports two types of tasks: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
+        /// <item><description>Dataflow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2838089.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</description></item>
+        /// <item><description>You can create a dataflow task only for a dataflow that is in the Running state.</description></item>
+        /// <item><description>When you manually run a dataflow task, the automatic data update task for the dataflow is interrupted and enters the pending state.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS for Lingjun file system does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS for Lingjun supports two types of tasks: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3750,13 +3910,13 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only Cloud Parallel File Storage CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</para>
+        /// <para>  Only Cloud Parallel File Storage (CPFS) for Lingjun V2.4.0 and later support dataflow. You can view the version information on the file system details page in the console.</para>
         /// <list type="bullet">
-        /// <item><description>You can create a data flow task only for a data flow that is in the Running state.</description></item>
-        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2838089.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</description></item>
-        /// <item><description>When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.</description></item>
-        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.</description></item>
-        /// <item><description>CPFS for LINGJUN supports two types of tasks: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
+        /// <item><description>Dataflow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2838089.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</description></item>
+        /// <item><description>You can create a dataflow task only for a dataflow that is in the Running state.</description></item>
+        /// <item><description>When you manually run a dataflow task, the automatic data update task for the dataflow is interrupted and enters the pending state.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS for Lingjun file system does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS for Lingjun supports two types of tasks: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3780,13 +3940,13 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only Cloud Parallel File Storage CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</para>
+        /// <para>  Only Cloud Parallel File Storage (CPFS) for Lingjun V2.4.0 and later support dataflow. You can view the version information on the file system details page in the console.</para>
         /// <list type="bullet">
-        /// <item><description>You can create a data flow task only for a data flow that is in the Running state.</description></item>
-        /// <item><description>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2838089.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</description></item>
-        /// <item><description>When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.</description></item>
-        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.</description></item>
-        /// <item><description>CPFS for LINGJUN supports two types of tasks: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
+        /// <item><description>Dataflow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2838089.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</description></item>
+        /// <item><description>You can create a dataflow task only for a dataflow that is in the Running state.</description></item>
+        /// <item><description>When you manually run a dataflow task, the automatic data update task for the dataflow is interrupted and enters the pending state.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS for Lingjun file system does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS for Lingjun supports two types of tasks: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10163,6 +10323,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithReports))
+            {
+                query["WithReports"] = request.WithReports;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -10221,6 +10385,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithReports))
+            {
+                query["WithReports"] = request.WithReports;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11145,6 +11313,174 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFilesetsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about virtual storage channels associated with a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFilesystemsVscAttachInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFilesystemsVscAttachInfoResponse
+        /// </returns>
+        public DescribeFilesystemsVscAttachInfoResponse DescribeFilesystemsVscAttachInfoWithOptions(DescribeFilesystemsVscAttachInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
+            {
+                query["ResourceIds"] = request.ResourceIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFilesystemsVscAttachInfo",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFilesystemsVscAttachInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about virtual storage channels associated with a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFilesystemsVscAttachInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFilesystemsVscAttachInfoResponse
+        /// </returns>
+        public async Task<DescribeFilesystemsVscAttachInfoResponse> DescribeFilesystemsVscAttachInfoWithOptionsAsync(DescribeFilesystemsVscAttachInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
+            {
+                query["ResourceIds"] = request.ResourceIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFilesystemsVscAttachInfo",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFilesystemsVscAttachInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about virtual storage channels associated with a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFilesystemsVscAttachInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFilesystemsVscAttachInfoResponse
+        /// </returns>
+        public DescribeFilesystemsVscAttachInfoResponse DescribeFilesystemsVscAttachInfo(DescribeFilesystemsVscAttachInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFilesystemsVscAttachInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about virtual storage channels associated with a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeFilesystemsVscAttachInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFilesystemsVscAttachInfoResponse
+        /// </returns>
+        public async Task<DescribeFilesystemsVscAttachInfoResponse> DescribeFilesystemsVscAttachInfoAsync(DescribeFilesystemsVscAttachInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFilesystemsVscAttachInfoWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12981,6 +13317,166 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeZonesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unassociates a VSC device from a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachVscFromFilesystemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachVscFromFilesystemsResponse
+        /// </returns>
+        public DetachVscFromFilesystemsResponse DetachVscFromFilesystemsWithOptions(DetachVscFromFilesystemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
+            {
+                query["ResourceIds"] = request.ResourceIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetachVscFromFilesystems",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetachVscFromFilesystemsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unassociates a VSC device from a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachVscFromFilesystemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachVscFromFilesystemsResponse
+        /// </returns>
+        public async Task<DetachVscFromFilesystemsResponse> DetachVscFromFilesystemsWithOptionsAsync(DetachVscFromFilesystemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
+            {
+                query["ResourceIds"] = request.ResourceIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetachVscFromFilesystems",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetachVscFromFilesystemsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unassociates a VSC device from a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachVscFromFilesystemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachVscFromFilesystemsResponse
+        /// </returns>
+        public DetachVscFromFilesystemsResponse DetachVscFromFilesystems(DetachVscFromFilesystemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DetachVscFromFilesystemsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unassociates a VSC device from a file system.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachVscFromFilesystemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachVscFromFilesystemsResponse
+        /// </returns>
+        public async Task<DetachVscFromFilesystemsResponse> DetachVscFromFilesystemsAsync(DetachVscFromFilesystemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DetachVscFromFilesystemsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18220,7 +18716,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <list type="bullet">
         /// <item><description>The minimum capacity quota of a fileset is 10 GiB. The scaling step size is 1 GiB.</description></item>
         /// <item><description>A fileset supports a minimum of 10,000 files or directories and a maximum of 10 billion files or directories. The scaling step size is 1.</description></item>
-        /// <item><description>When you modify a directory quota, you must set the quota capacity or the file quantity to be greater than the capacity or file quantity that has been used.</description></item>
+        /// <item><description>When modifying a directory quota, you must set the new capacity or file quantity higher than what is currently used.</description></item>
+        /// <item><description>You must configure at least one of the Capacity Limit (GiB) and File Limit parameters.</description></item>
         /// <item><description>The quota statistics have a 15-minute latency. The actual usage takes effect after 15 minutes.</description></item>
         /// </list>
         /// </description>
@@ -18293,7 +18790,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <list type="bullet">
         /// <item><description>The minimum capacity quota of a fileset is 10 GiB. The scaling step size is 1 GiB.</description></item>
         /// <item><description>A fileset supports a minimum of 10,000 files or directories and a maximum of 10 billion files or directories. The scaling step size is 1.</description></item>
-        /// <item><description>When you modify a directory quota, you must set the quota capacity or the file quantity to be greater than the capacity or file quantity that has been used.</description></item>
+        /// <item><description>When modifying a directory quota, you must set the new capacity or file quantity higher than what is currently used.</description></item>
+        /// <item><description>You must configure at least one of the Capacity Limit (GiB) and File Limit parameters.</description></item>
         /// <item><description>The quota statistics have a 15-minute latency. The actual usage takes effect after 15 minutes.</description></item>
         /// </list>
         /// </description>
@@ -18366,7 +18864,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <list type="bullet">
         /// <item><description>The minimum capacity quota of a fileset is 10 GiB. The scaling step size is 1 GiB.</description></item>
         /// <item><description>A fileset supports a minimum of 10,000 files or directories and a maximum of 10 billion files or directories. The scaling step size is 1.</description></item>
-        /// <item><description>When you modify a directory quota, you must set the quota capacity or the file quantity to be greater than the capacity or file quantity that has been used.</description></item>
+        /// <item><description>When modifying a directory quota, you must set the new capacity or file quantity higher than what is currently used.</description></item>
+        /// <item><description>You must configure at least one of the Capacity Limit (GiB) and File Limit parameters.</description></item>
         /// <item><description>The quota statistics have a 15-minute latency. The actual usage takes effect after 15 minutes.</description></item>
         /// </list>
         /// </description>
@@ -18395,7 +18894,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <list type="bullet">
         /// <item><description>The minimum capacity quota of a fileset is 10 GiB. The scaling step size is 1 GiB.</description></item>
         /// <item><description>A fileset supports a minimum of 10,000 files or directories and a maximum of 10 billion files or directories. The scaling step size is 1.</description></item>
-        /// <item><description>When you modify a directory quota, you must set the quota capacity or the file quantity to be greater than the capacity or file quantity that has been used.</description></item>
+        /// <item><description>When modifying a directory quota, you must set the new capacity or file quantity higher than what is currently used.</description></item>
+        /// <item><description>You must configure at least one of the Capacity Limit (GiB) and File Limit parameters.</description></item>
         /// <item><description>The quota statistics have a 15-minute latency. The actual usage takes effect after 15 minutes.</description></item>
         /// </list>
         /// </description>

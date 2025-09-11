@@ -31,14 +31,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The type of the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>all (default): all types</description></item>
-        /// <item><description>standard: General-purpose NAS file system</description></item>
-        /// <item><description>extreme: Extreme NAS file system</description></item>
-        /// <item><description>cpfs: CPFS file system<remarks>
-        /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>all (default): All types.</description></item>
+        /// <item><description>standard: General-purpose NAS file system.</description></item>
+        /// <item><description>extreme: Extreme NAS file system.</description></item>
+        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS) file system.</description></item>
         /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>CPFS file systems are available only on the China site (aliyun.com).</description></item>
+        /// <item><description>Separate multiple file types with commas (,).</description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>standard</para>
@@ -89,13 +92,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<DescribeFileSystemsRequestTag> Tag { get; set; }
         public class DescribeFileSystemsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the resource.</para>
+            /// <para>The tag key.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
             /// <item><description>Valid values of N: 1 to 20.</description></item>
-            /// <item><description>The tag key must be 1 to 128 characters in length.</description></item>
-            /// <item><description>The tag key cannot start with aliyun or acs:.</description></item>
-            /// <item><description>The tag key cannot contain http:// or https://.</description></item>
+            /// <item><description>The tag key can be up to 128 characters in length.</description></item>
+            /// <item><description>The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+            /// <item><description>The tag key cannot contain <c>http://</c> or <c>https://</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,13 +109,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the resource.</para>
+            /// <para>The tag value.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
             /// <item><description>Valid values of N: 1 to 20.</description></item>
-            /// <item><description>The tag value must be 1 to 128 characters in length.</description></item>
-            /// <item><description>The tag value cannot start with aliyun or acs:.</description></item>
-            /// <item><description>The tag value cannot contain http:// or https://.</description></item>
+            /// <item><description>The tag value can be up to 128 characters in length.</description></item>
+            /// <item><description>The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+            /// <item><description>The tag value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

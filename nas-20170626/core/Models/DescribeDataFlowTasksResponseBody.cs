@@ -173,6 +173,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string FsPath { get; set; }
 
+                /// <summary>
+                /// <para>Filter the directories under directory and transfer the folder contents contained in the filtered directory.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[&quot;/test/&quot;,&quot;/test1/&quot;]</para>
+                /// </summary>
                 [NameInMap("Includes")]
                 [Validation(Required=false)]
                 public string Includes { get; set; }

@@ -39,11 +39,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The limit of the file quantity of the quota. Valid values:</para>
+        /// <para>The number of files of the quota. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Minimum value: 10000.</description></item>
-        /// <item><description>Maximum value: 10000000000.</description></item>
+        /// <item><description>Minimum value: 10,000.</description></item>
+        /// <item><description>Maximum value: 10,000,000,000.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the number of files is unlimited.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -78,9 +81,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The total capacity of the quota. Unit: bytes.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Minimum value: 10737418240 (10 GiB).</description></item>
-        /// <item><description>Step size: 1073741824 (1 GiB).</description></item>
+        /// <item><description>Minimum value: 10,737,418,240 (10 GiB).</description></item>
+        /// <item><description>Step size: 1,073,741,824 (1 GiB).</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> If you do not specify this parameter, the capacity is unlimited.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10737418240</para>

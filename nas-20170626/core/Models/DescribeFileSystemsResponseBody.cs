@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeFileSystemsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried file systems.</para>
+        /// <para>The file system list.</para>
         /// </summary>
         [NameInMap("FileSystems")]
         [Validation(Required=false)]
@@ -66,9 +66,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The billing method.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Subscription: The subscription billing method is used.</description></item>
-                /// <item><description>PayAsYouGo: The pay-as-you-go billing method is used.</description></item>
-                /// <item><description>Package: A storage plan is attached to the file system.</description></item>
+                /// <item><description>Subscription</description></item>
+                /// <item><description>PayAsYouGo</description></item>
+                /// <item><description>Package: storage plan</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The encryption type.</para>
+                /// <para>Indicates whether the data in the file system is encrypted.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>0: The data in the file system is not encrypted.</description></item>
@@ -135,16 +135,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string FileSystemId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the file system.</para>
+                /// <para>The file system type.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>standard: General-purpose NAS file system</description></item>
-                /// <item><description>extreme: Extreme NAS file system</description></item>
-                /// <item><description>cpfs: CPFS file system<remarks>
-                /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
-                /// </remarks>
-                /// </description></item>
+                /// <item><description>standard: General-purpose NAS file system.</description></item>
+                /// <item><description>extreme: Extreme NAS file system.</description></item>
+                /// <item><description>cpfs: CPFS file system.</description></item>
                 /// </list>
+                /// <remarks>
+                /// <para> CPFS file systems are available only on the China site (aliyun.com).</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>standard</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public long? MeteredSize { get; set; }
 
                 /// <summary>
-                /// <para>The information about mount targets.</para>
+                /// <para>The queried mount targets.</para>
                 /// </summary>
                 [NameInMap("MountTargets")]
                 [Validation(Required=false)]
@@ -340,12 +340,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                         /// <para>The status of the mount target.</para>
                         /// <para>Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>Active: The mount target is available.</description></item>
-                        /// <item><description>Inactive: The mount target is unavailable.</description></item>
-                        /// <item><description>Pending: The mount target is being processed.</description></item>
-                        /// <item><description>Deleting: The mount target is being deleted.</description></item>
-                        /// <item><description>Hibernating: The mount target is being hibernated.</description></item>
-                        /// <item><description>Hibernated: The mount target is hibernated.</description></item>
+                        /// <item><description>Active</description></item>
+                        /// <item><description>Inactive</description></item>
+                        /// <item><description>Pending</description></item>
+                        /// <item><description>Deleting</description></item>
+                        /// <item><description>Hibernating</description></item>
+                        /// <item><description>Hibernated</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -475,8 +475,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                         /// <para>The type of the storage plan.</para>
                         /// <para>Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>ssd: the storage plan for Performance NAS file systems.</description></item>
-                        /// <item><description>hybrid: the storage plan for Capacity NAS file systems.</description></item>
+                        /// <item><description>ssd: The storage plan for Performance NAS file systems.</description></item>
+                        /// <item><description>hybrid: The storage plan for Capacity NAS file systems.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -514,12 +514,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The protocol type of the file system.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NFS: Network File System (NFS)</description></item>
-                /// <item><description>SMB: Server Message Block (SMB)</description></item>
-                /// <item><description>cpfs: the protocol type supported by the CPFS file system</description></item>
+                /// <item><description>NFS: Network File System.</description></item>
+                /// <item><description>SMB: Server Message Block.</description></item>
+                /// <item><description>cpfs: The protocol type supported by the CPFS file system.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
+                /// <para> CPFS file systems are available only on the China site (aliyun.com).</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -530,7 +530,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string ProtocolType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vSwitch.</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-2ze37k6jh8ums2fw2****</para>
@@ -551,7 +551,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
                 /// <summary>
                 /// <para>The resource group ID.</para>
-                /// <para>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> to view resource group IDs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-acfmwavnfdf****</para>
@@ -666,12 +665,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
+                /// <summary>
+                /// <remarks>
+                /// <para> This parameter is not publicly available.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cpfs-370y1tv921vpuj4****-000001.cn-wulanchabu.cpfs.aliyuncs.com</para>
+                /// </summary>
                 [NameInMap("VscTarget")]
                 [Validation(Required=false)]
                 public string VscTarget { get; set; }
 
                 /// <summary>
-                /// <para>A collection of vSwitch IDs.</para>
+                /// <para>The information about vSwitch.</para>
                 /// </summary>
                 [NameInMap("VswIds")]
                 [Validation(Required=false)]

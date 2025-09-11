@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? CreateDirIfNotExist { get; set; }
 
         /// <summary>
-        /// <para>The dataflow ID.</para>
+        /// <para>The ID of the dataflow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -188,12 +188,28 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
+        /// <summary>
+        /// <para>Filters subdirectories and transfers their contents.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter takes effect only when the Directory parameter is specified.</description></item>
+        /// <item><description>The path length of a single folder must be 1 to 1023 characters, start and end with a forward slash (/), and the total length must not exceed 3000 characters.</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this parameter.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;/test/&quot;,&quot;/test1/&quot;]</para>
+        /// </summary>
         [NameInMap("Includes")]
         [Validation(Required=false)]
         public string Includes { get; set; }
 
         /// <summary>
-        /// <para>If you specify SrcTaskId, the configurations of the TaskAction, DataType, and EntryList parameters are copied from the desired dataflow task. You do not need to specify them.</para>
+        /// <para>If you specify SrcTaskId, you must enter the ID of the dataflow task. The system copies the TaskAction, DataType, and EntryList parameters from the destination dataflow task. You do not need to specify them.</para>
+        /// <remarks>
+        /// <para> Streaming dataflow tasks are not supported.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>task-27aa8e890f45****</para>
