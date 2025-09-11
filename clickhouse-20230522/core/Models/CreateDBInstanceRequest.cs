@@ -96,6 +96,30 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>6</para>
+        /// </summary>
+        [NameInMap("NodeCount")]
+        [Validation(Required=false)]
+        public int? NodeCount { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>32</para>
+        /// </summary>
+        [NameInMap("NodeScaleMax")]
+        [Validation(Required=false)]
+        public int? NodeScaleMax { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4</para>
+        /// </summary>
+        [NameInMap("NodeScaleMin")]
+        [Validation(Required=false)]
+        public int? NodeScaleMin { get; set; }
+
+        /// <summary>
         /// <para>The region ID</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -143,6 +167,22 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [NameInMap("SourceDBInstanceId")]
         [Validation(Required=false)]
         public string SourceDBInstanceId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
+        [NameInMap("StorageQuota")]
+        [Validation(Required=false)]
+        public string StorageQuota { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>oss</para>
+        /// </summary>
+        [NameInMap("StorageType")]
+        [Validation(Required=false)]
+        public string StorageType { get; set; }
 
         /// <summary>
         /// <para>The virtual private cloud (VPC) ID.</para>

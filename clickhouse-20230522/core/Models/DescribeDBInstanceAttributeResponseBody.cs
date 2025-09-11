@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Bid { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>enterprise</para>
+            /// </summary>
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
+            /// <summary>
             /// <para>The billing method. Enterprise Edition clusters use the pay-as-you-go billing method.</para>
             /// 
             /// <b>Example:</b>
@@ -231,6 +239,30 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("NodeCount")]
+            [Validation(Required=false)]
+            public string NodeCount { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>32</para>
+            /// </summary>
+            [NameInMap("NodeScaleMax")]
+            [Validation(Required=false)]
+            public string NodeScaleMax { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
+            [NameInMap("NodeScaleMin")]
+            [Validation(Required=false)]
+            public string NodeScaleMin { get; set; }
+
+            /// <summary>
             /// <para>The nodes.</para>
             /// </summary>
             [NameInMap("Nodes")]
@@ -318,6 +350,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("StorageQuota")]
+            [Validation(Required=false)]
+            public string StorageQuota { get; set; }
 
             /// <summary>
             /// <para>The size of the storage space. Unit: GB.</para>

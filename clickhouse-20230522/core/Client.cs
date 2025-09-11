@@ -621,6 +621,18 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             {
                 query["MultiZone"] = request.MultiZoneShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeCount))
+            {
+                query["NodeCount"] = request.NodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeScaleMax))
+            {
+                query["NodeScaleMax"] = request.NodeScaleMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeScaleMin))
+            {
+                query["NodeScaleMin"] = request.NodeScaleMin;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -640,6 +652,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDBInstanceId))
             {
                 query["SourceDBInstanceId"] = request.SourceDBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageQuota))
+            {
+                query["StorageQuota"] = request.StorageQuota;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -725,6 +745,18 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             {
                 query["MultiZone"] = request.MultiZoneShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeCount))
+            {
+                query["NodeCount"] = request.NodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeScaleMax))
+            {
+                query["NodeScaleMax"] = request.NodeScaleMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeScaleMin))
+            {
+                query["NodeScaleMin"] = request.NodeScaleMin;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -744,6 +776,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDBInstanceId))
             {
                 query["SourceDBInstanceId"] = request.SourceDBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageQuota))
+            {
+                query["StorageQuota"] = request.StorageQuota;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -4415,6 +4455,18 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeCount))
+            {
+                query["NodeCount"] = request.NodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeScaleMax))
+            {
+                query["NodeScaleMax"] = request.NodeScaleMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeScaleMin))
+            {
+                query["NodeScaleMin"] = request.NodeScaleMin;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -4426,6 +4478,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleMin))
             {
                 query["ScaleMin"] = request.ScaleMin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageQuota))
+            {
+                query["StorageQuota"] = request.StorageQuota;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4469,6 +4529,18 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeCount))
+            {
+                query["NodeCount"] = request.NodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeScaleMax))
+            {
+                query["NodeScaleMax"] = request.NodeScaleMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeScaleMin))
+            {
+                query["NodeScaleMin"] = request.NodeScaleMin;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -4480,6 +4552,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleMin))
             {
                 query["ScaleMin"] = request.ScaleMin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageQuota))
+            {
+                query["StorageQuota"] = request.StorageQuota;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

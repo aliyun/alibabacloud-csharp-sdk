@@ -218,6 +218,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>oss</para>
+                /// </summary>
+                [NameInMap("StorageType")]
+                [Validation(Required=false)]
+                public string StorageType { get; set; }
+
+                /// <summary>
                 /// <para>The tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
