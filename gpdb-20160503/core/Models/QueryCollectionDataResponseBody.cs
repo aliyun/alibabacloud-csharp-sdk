@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public Dictionary<string, string> Metadata { get; set; }
 
+                [NameInMap("MetadataV2")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> MetadataV2 { get; set; }
+
                 /// <summary>
                 /// <para>The similarity score of this data, which is related to the algorithm <c>(l2/ip/cosine)</c> specified when creating the index.</para>
                 /// 
