@@ -134,6 +134,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>123412345</para>
+        /// </summary>
+        [NameInMap("PromotionOptionNo")]
+        [Validation(Required=false)]
+        public string PromotionOptionNo { get; set; }
+
+        /// <summary>
         /// <para>The number of clusters whose specifications are to be changed.</para>
         /// <para>This parameter is required.</para>
         /// 

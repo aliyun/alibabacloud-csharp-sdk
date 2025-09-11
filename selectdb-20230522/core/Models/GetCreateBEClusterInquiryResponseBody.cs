@@ -26,6 +26,52 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string Currency { get; set; }
 
+            [NameInMap("OptionalPromotions")]
+            [Validation(Required=false)]
+            public List<GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions> OptionalPromotions { get; set; }
+            public class GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
+                [NameInMap("CanPromFee")]
+                [Validation(Required=false)]
+                public string CanPromFee { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>7afs9d</para>
+                /// </summary>
+                [NameInMap("OptionCode")]
+                [Validation(Required=false)]
+                public string OptionCode { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>通用优惠券可抵扣100</para>
+                /// </summary>
+                [NameInMap("PromotionDesc")]
+                [Validation(Required=false)]
+                public string PromotionDesc { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>通用优惠券</para>
+                /// </summary>
+                [NameInMap("PromotionName")]
+                [Validation(Required=false)]
+                public string PromotionName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>775735400028</para>
+                /// </summary>
+                [NameInMap("PromotionOptionNo")]
+                [Validation(Required=false)]
+                public string PromotionOptionNo { get; set; }
+
+            }
+
             [NameInMap("PricingRules")]
             [Validation(Required=false)]
             public Dictionary<string, string> PricingRules { get; set; }
