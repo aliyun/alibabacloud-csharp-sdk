@@ -38,6 +38,24 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         }
 
+        [NameInMap("ConfigList")]
+        [Validation(Required=false)]
+        public List<DescribeInstanceAuthInfoResponseBodyConfigList> ConfigList { get; set; }
+        public class DescribeInstanceAuthInfoResponseBodyConfigList : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>i5o1XAp4sR*****oyOb3O</para>
