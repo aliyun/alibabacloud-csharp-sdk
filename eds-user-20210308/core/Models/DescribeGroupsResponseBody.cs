@@ -17,6 +17,20 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public List<DescribeGroupsResponseBodyGroups> Groups { get; set; }
         public class DescribeGroupsResponseBodyGroups : TeaModel {
+            [NameInMap("AttachedLoginPolicy")]
+            [Validation(Required=false)]
+            public DescribeGroupsResponseBodyGroupsAttachedLoginPolicy AttachedLoginPolicy { get; set; }
+            public class DescribeGroupsResponseBodyGroupsAttachedLoginPolicy : TeaModel {
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("PolicyId")]
+                [Validation(Required=false)]
+                public string PolicyId { get; set; }
+
+            }
+
             [NameInMap("AuthedResources")]
             [Validation(Required=false)]
             public Dictionary<string, string> AuthedResources { get; set; }

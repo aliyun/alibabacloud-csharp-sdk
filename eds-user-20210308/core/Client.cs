@@ -1748,6 +1748,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             {
                 query["BizType"] = request.BizType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeAttachedLoginPolicyGroups))
+            {
+                query["ExcludeAttachedLoginPolicyGroups"] = request.ExcludeAttachedLoginPolicyGroups;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
@@ -1755,6 +1759,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
                 query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginPolicyId))
+            {
+                query["LoginPolicyId"] = request.LoginPolicyId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -1814,6 +1822,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             {
                 query["BizType"] = request.BizType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeAttachedLoginPolicyGroups))
+            {
+                query["ExcludeAttachedLoginPolicyGroups"] = request.ExcludeAttachedLoginPolicyGroups;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
@@ -1821,6 +1833,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
                 query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginPolicyId))
+            {
+                query["LoginPolicyId"] = request.LoginPolicyId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {

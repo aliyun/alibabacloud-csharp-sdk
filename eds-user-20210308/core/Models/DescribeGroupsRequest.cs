@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string BizType { get; set; }
 
+        [NameInMap("ExcludeAttachedLoginPolicyGroups")]
+        [Validation(Required=false)]
+        public bool? ExcludeAttachedLoginPolicyGroups { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>ug-12341234****</para>
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
+
+        [NameInMap("LoginPolicyId")]
+        [Validation(Required=false)]
+        public string LoginPolicyId { get; set; }
 
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
