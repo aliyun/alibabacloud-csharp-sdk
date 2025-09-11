@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateRenderingInstanceShrinkRequest : TeaModel {
+        [NameInMap("Attributes")]
+        [Validation(Required=false)]
+        public string AttributesShrink { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>

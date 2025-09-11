@@ -9,6 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateRenderingInstanceRequest : TeaModel {
+        [NameInMap("Attributes")]
+        [Validation(Required=false)]
+        public CreateRenderingInstanceRequestAttributes Attributes { get; set; }
+        public class CreateRenderingInstanceRequestAttributes : TeaModel {
+            [NameInMap("EdgeMediaService")]
+            [Validation(Required=false)]
+            public string EdgeMediaService { get; set; }
+
+            [NameInMap("InAccess")]
+            [Validation(Required=false)]
+            public string InAccess { get; set; }
+
+            [NameInMap("OutAccess")]
+            [Validation(Required=false)]
+            public string OutAccess { get; set; }
+
+            [NameInMap("Zone")]
+            [Validation(Required=false)]
+            public string Zone { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
