@@ -46,13 +46,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string NextVersion { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The rolling update configuration.</para>
         /// </summary>
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
+        [Obsolete]
         public UpgradeClusterRequestRollingPolicy RollingPolicy { get; set; }
         public class UpgradeClusterRequestRollingPolicy : TeaModel {
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The maximum number of nodes concurrently upgraded per batch.</para>
             /// 
@@ -61,6 +66,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("max_parallelism")]
             [Validation(Required=false)]
+            [Obsolete]
             public int? MaxParallelism { get; set; }
 
         }

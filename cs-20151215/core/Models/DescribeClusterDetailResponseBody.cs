@@ -352,6 +352,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The Docker version that is used by the cluster.</para>
         /// 
@@ -360,8 +362,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("docker_version")]
         [Validation(Required=false)]
+        [Obsolete]
         public string DockerVersion { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The ID of the Server Load Balancer (SLB) instance that is created for the Ingress of the cluster.</para>
         /// 
@@ -370,6 +375,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("external_loadbalancer_id")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ExternalLoadbalancerId { get; set; }
 
         [NameInMap("extra_sans")]
@@ -437,6 +443,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The network type of the cluster. Example: Virtual Private Cloud (VPC).</para>
         /// 
@@ -445,6 +453,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("network_mode")]
         [Validation(Required=false)]
+        [Obsolete]
         public string NetworkMode { get; set; }
 
         /// <summary>
@@ -512,13 +521,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The Resource Orchestration Service (ROS) parameters of the cluster.</para>
         /// </summary>
         [NameInMap("parameters")]
         [Validation(Required=false)]
+        [Obsolete]
         public Dictionary<string, string> Parameters { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Indicates whether Alibaba Cloud DNS PrivateZone (PrivateZone) is enabled for the cluster. Valid values:</para>
         /// <list type="bullet">
@@ -532,6 +546,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("private_zone")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? PrivateZone { get; set; }
 
         /// <summary>
@@ -757,6 +772,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string WorkerRamRoleName { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The ID of the zone within the region where the cluster is located.</para>
         /// 
@@ -765,6 +782,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("zone_id")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ZoneId { get; set; }
 
     }

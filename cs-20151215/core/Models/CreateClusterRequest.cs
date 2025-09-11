@@ -9,11 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateClusterRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The network access control list (ACL) rule of the SLB instance associated with the API server if the cluster is a registered cluster.</para>
         /// </summary>
         [NameInMap("access_control_list")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<string> AccessControlList { get; set; }
 
         /// <summary>
@@ -204,7 +207,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <item><description><c>ManagedKubernetes</c>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic Edition and Pro Edition), ACK Edge clusters (Basic Edition and Pro Edition), and ACK Lingjun clusters (Pro Edition).</description></item>
         /// <item><description><c>ExternalKubernetes</c>: registered cluster.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Kubernetes</para>
@@ -803,6 +805,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Obsolete]
         public string LoadBalancerSpec { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Enables Simple Log Service for the cluster. This parameter takes effect only for ACK Serverless clusters. Set the value to <c>SLS</c>.</para>
         /// 
@@ -811,6 +815,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("logging_type")]
         [Validation(Required=false)]
+        [Obsolete]
         public string LoggingType { get; set; }
 
         /// <term><b>Obsolete</b></term>
@@ -1032,6 +1037,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>[Deprecated] Use the <c>snat_entry</c> parameter instead.</para>
         /// 
@@ -1040,6 +1047,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("nat_gateway")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? NatGateway { get; set; }
 
         /// <summary>
@@ -1073,6 +1081,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Obsolete]
         public string NodeNameMode { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The node port range. Valid values: 30000 to 65535.</para>
         /// <para>Default value: <c>30000-32767</c>.</para>
@@ -1082,6 +1092,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("node_port_range")]
         [Validation(Required=false)]
+        [Obsolete]
         public string NodePortRange { get; set; }
 
         /// <summary>
@@ -1223,6 +1234,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Obsolete]
         public string Platform { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>If you select Terway as the network plug-in, you must allocate vSwitches to pods. For each vSwitch that allocates IP addresses to worker nodes, you must select a vSwitch in the same zone to allocate IP addresses to pods.</para>
         /// <remarks>
@@ -1231,6 +1244,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("pod_vswitch_ids")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<string> PodVswitchIds { get; set; }
 
         /// <summary>
@@ -1306,12 +1320,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.</para>
         /// <para>For more information about how to select a proper container runtime, see <a href="https://help.aliyun.com/document_detail/160313.html">Comparison among Docker, containerd, and Sandboxed-Container</a>.</para>
         /// </summary>
         [NameInMap("runtime")]
         [Validation(Required=false)]
+        [Obsolete]
         public Runtime Runtime { get; set; }
 
         /// <summary>
@@ -1357,7 +1374,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The Service CIDR block. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The Service CIDR block cannot overlap with the VPC CIDR block (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the Service CIDR block after the cluster is created.</para>
         /// <para>By default, the Service CIDR block is set to 172.19.0.0/20.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.21.0.0/20</para>
@@ -1366,6 +1382,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ServiceCidr { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The methods for implementing service discovery in <c>ACK Serverless</c> clusters.</para>
         /// <list type="bullet">
@@ -1376,6 +1394,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("service_discovery_types")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<string> ServiceDiscoveryTypes { get; set; }
 
         /// <summary>
@@ -1488,6 +1507,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string UserCa { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The user data of nodes.</para>
         /// 
@@ -1496,6 +1517,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("user_data")]
         [Validation(Required=false)]
+        [Obsolete]
         public string UserData { get; set; }
 
         /// <summary>

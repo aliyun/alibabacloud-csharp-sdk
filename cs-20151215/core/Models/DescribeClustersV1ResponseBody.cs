@@ -100,6 +100,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public bool? DeletionProtection { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The Docker version that is used by the cluster.</para>
             /// 
@@ -108,8 +110,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("docker_version")]
             [Validation(Required=false)]
+            [Obsolete]
             public string DockerVersion { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The ID of the Server Load Balancer (SLB) instance that is used by the Ingresses of the cluster.</para>
             /// <para>The default SLB specification is slb.s1.small, which belongs to the high-performance instance type.</para>
@@ -119,6 +124,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("external_loadbalancer_id")]
             [Validation(Required=false)]
+            [Obsolete]
             public string ExternalLoadbalancerId { get; set; }
 
             /// <summary>
@@ -182,6 +188,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The network mode of the cluster. Valid values:</para>
             /// <list type="bullet">
@@ -196,6 +204,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("network_mode")]
             [Validation(Required=false)]
+            [Obsolete]
             public string NetworkMode { get; set; }
 
             /// <summary>
@@ -252,6 +261,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>Indicates whether Alibaba Cloud DNS PrivateZone is enabled. Valid values:</para>
             /// <list type="bullet">
@@ -264,6 +275,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("private_zone")]
             [Validation(Required=false)]
+            [Obsolete]
             public bool? PrivateZone { get; set; }
 
             /// <summary>
@@ -435,6 +447,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public List<string> VswitchIds { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.</para>
             /// 
@@ -443,8 +457,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("worker_ram_role_name")]
             [Validation(Required=false)]
+            [Obsolete]
             public string WorkerRamRoleName { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The ID of the zone where the cluster is deployed.</para>
             /// 
@@ -453,6 +470,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </summary>
             [NameInMap("zone_id")]
             [Validation(Required=false)]
+            [Obsolete]
             public string ZoneId { get; set; }
 
         }

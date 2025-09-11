@@ -211,6 +211,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public bool? SerializeImagePulls { get; set; }
 
+        [NameInMap("serverTLSBootstrap")]
+        [Validation(Required=false)]
+        public bool? ServerTLSBootstrap { get; set; }
+
         [NameInMap("systemReserved")]
         [Validation(Required=false)]
         public Dictionary<string, object> SystemReserved { get; set; }

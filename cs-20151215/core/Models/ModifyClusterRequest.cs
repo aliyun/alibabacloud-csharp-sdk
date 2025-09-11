@@ -9,11 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyClusterRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.</para>
         /// </summary>
         [NameInMap("access_control_list")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<string> AccessControlList { get; set; }
 
         /// <summary>
@@ -411,6 +414,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public bool? EnableRrsa { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to remap the test domain name of the cluster. Valid values:</para>
         /// <list type="bullet">
@@ -424,8 +429,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("ingress_domain_rebinding")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? IngressDomainRebinding { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The ID of the Server Load Balancer (SLB) instance of the cluster to be modified.</para>
         /// 
@@ -434,8 +442,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("ingress_loadbalancer_id")]
         [Validation(Required=false)]
+        [Obsolete]
         public string IngressLoadbalancerId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to enable instance deletion protection. If you enable this option, the instance cannot be deleted in the console or by calling API operations. Valid values:</para>
         /// <list type="bullet">
@@ -449,6 +460,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("instance_deletion_protection")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? InstanceDeletionProtection { get; set; }
 
         /// <summary>
