@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("HasAssets")]
+        [Validation(Required=false)]
+        public bool? HasAssets { get; set; }
+
         /// <summary>
         /// <para>The routine name, which must be unique in the same account.</para>
         /// <para>This parameter is required.</para>

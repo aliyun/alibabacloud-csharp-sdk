@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public List<ListRoutineCodeVersionsResponseBodyCodeVersions> CodeVersions { get; set; }
         public class ListRoutineCodeVersionsResponseBodyCodeVersions : TeaModel {
+            [NameInMap("BuildId")]
+            [Validation(Required=false)]
+            public long? BuildId { get; set; }
+
             [NameInMap("CodeDescription")]
             [Validation(Required=false)]
             public string CodeDescription { get; set; }
@@ -21,9 +25,27 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string CodeVersion { get; set; }
 
+            [NameInMap("ConfOptions")]
+            [Validation(Required=false)]
+            public ListRoutineCodeVersionsResponseBodyCodeVersionsConfOptions ConfOptions { get; set; }
+            public class ListRoutineCodeVersionsResponseBodyCodeVersionsConfOptions : TeaModel {
+                [NameInMap("NotFoundStrategy")]
+                [Validation(Required=false)]
+                public string NotFoundStrategy { get; set; }
+
+            }
+
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
+
+            [NameInMap("ExtraInfo")]
+            [Validation(Required=false)]
+            public string ExtraInfo { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
         }
 

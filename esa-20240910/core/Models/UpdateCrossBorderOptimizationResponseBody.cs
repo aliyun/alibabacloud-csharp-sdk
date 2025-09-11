@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateCrossBorderOptimizationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</para>
         /// </summary>

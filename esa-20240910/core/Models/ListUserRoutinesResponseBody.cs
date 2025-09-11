@@ -36,9 +36,17 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("DefaultRelatedRecord")]
+            [Validation(Required=false)]
+            public string DefaultRelatedRecord { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            [NameInMap("HasAssets")]
+            [Validation(Required=false)]
+            public bool? HasAssets { get; set; }
 
             [NameInMap("RoutineName")]
             [Validation(Required=false)]

@@ -7641,6 +7641,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasAssets))
+            {
+                body["HasAssets"] = request.HasAssets;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
@@ -7686,6 +7690,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasAssets))
+            {
+                body["HasAssets"] = request.HasAssets;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -7744,6 +7752,162 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateRoutineWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布Routine某版本代码</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateRoutineCodeDeploymentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRoutineCodeDeploymentResponse
+        /// </returns>
+        public CreateRoutineCodeDeploymentResponse CreateRoutineCodeDeploymentWithOptions(CreateRoutineCodeDeploymentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateRoutineCodeDeploymentShrinkRequest request = new CreateRoutineCodeDeploymentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CodeVersions))
+            {
+                request.CodeVersionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CodeVersions, "CodeVersions", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeVersionsShrink))
+            {
+                body["CodeVersions"] = request.CodeVersionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                body["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                body["Strategy"] = request.Strategy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRoutineCodeDeployment",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRoutineCodeDeploymentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布Routine某版本代码</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateRoutineCodeDeploymentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRoutineCodeDeploymentResponse
+        /// </returns>
+        public async Task<CreateRoutineCodeDeploymentResponse> CreateRoutineCodeDeploymentWithOptionsAsync(CreateRoutineCodeDeploymentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateRoutineCodeDeploymentShrinkRequest request = new CreateRoutineCodeDeploymentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CodeVersions))
+            {
+                request.CodeVersionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CodeVersions, "CodeVersions", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeVersionsShrink))
+            {
+                body["CodeVersions"] = request.CodeVersionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                body["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                body["Strategy"] = request.Strategy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRoutineCodeDeployment",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRoutineCodeDeploymentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布Routine某版本代码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRoutineCodeDeploymentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRoutineCodeDeploymentResponse
+        /// </returns>
+        public CreateRoutineCodeDeploymentResponse CreateRoutineCodeDeployment(CreateRoutineCodeDeploymentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRoutineCodeDeploymentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布Routine某版本代码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRoutineCodeDeploymentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRoutineCodeDeploymentResponse
+        /// </returns>
+        public async Task<CreateRoutineCodeDeploymentResponse> CreateRoutineCodeDeploymentAsync(CreateRoutineCodeDeploymentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRoutineCodeDeploymentWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8056,6 +8220,170 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateRoutineRouteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建带Assets资源的Routine代码版本</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateRoutineWithAssetsCodeVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRoutineWithAssetsCodeVersionResponse
+        /// </returns>
+        public CreateRoutineWithAssetsCodeVersionResponse CreateRoutineWithAssetsCodeVersionWithOptions(CreateRoutineWithAssetsCodeVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateRoutineWithAssetsCodeVersionShrinkRequest request = new CreateRoutineWithAssetsCodeVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConfOptions))
+            {
+                request.ConfOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfOptions, "ConfOptions", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildId))
+            {
+                body["BuildId"] = request.BuildId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeDescription))
+            {
+                body["CodeDescription"] = request.CodeDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfOptionsShrink))
+            {
+                body["ConfOptions"] = request.ConfOptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraInfo))
+            {
+                body["ExtraInfo"] = request.ExtraInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRoutineWithAssetsCodeVersion",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRoutineWithAssetsCodeVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建带Assets资源的Routine代码版本</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateRoutineWithAssetsCodeVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRoutineWithAssetsCodeVersionResponse
+        /// </returns>
+        public async Task<CreateRoutineWithAssetsCodeVersionResponse> CreateRoutineWithAssetsCodeVersionWithOptionsAsync(CreateRoutineWithAssetsCodeVersionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateRoutineWithAssetsCodeVersionShrinkRequest request = new CreateRoutineWithAssetsCodeVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConfOptions))
+            {
+                request.ConfOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfOptions, "ConfOptions", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildId))
+            {
+                body["BuildId"] = request.BuildId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeDescription))
+            {
+                body["CodeDescription"] = request.CodeDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfOptionsShrink))
+            {
+                body["ConfOptions"] = request.ConfOptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraInfo))
+            {
+                body["ExtraInfo"] = request.ExtraInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRoutineWithAssetsCodeVersion",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRoutineWithAssetsCodeVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建带Assets资源的Routine代码版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRoutineWithAssetsCodeVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRoutineWithAssetsCodeVersionResponse
+        /// </returns>
+        public CreateRoutineWithAssetsCodeVersionResponse CreateRoutineWithAssetsCodeVersion(CreateRoutineWithAssetsCodeVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRoutineWithAssetsCodeVersionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建带Assets资源的Routine代码版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRoutineWithAssetsCodeVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRoutineWithAssetsCodeVersionResponse
+        /// </returns>
+        public async Task<CreateRoutineWithAssetsCodeVersionResponse> CreateRoutineWithAssetsCodeVersionAsync(CreateRoutineWithAssetsCodeVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRoutineWithAssetsCodeVersionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -40122,7 +40450,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点中国大陆网络接入优化配置</para>
+        /// <para>Modifies the configuration of the Chinese mainland network access optimization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40168,7 +40496,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点中国大陆网络接入优化配置</para>
+        /// <para>Modifies the configuration of the Chinese mainland network access optimization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40214,7 +40542,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点中国大陆网络接入优化配置</para>
+        /// <para>Modifies the configuration of the Chinese mainland network access optimization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40232,7 +40560,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点中国大陆网络接入优化配置</para>
+        /// <para>Modifies the configuration of the Chinese mainland network access optimization.</para>
         /// </summary>
         /// 
         /// <param name="request">

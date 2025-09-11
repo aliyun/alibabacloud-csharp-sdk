@@ -63,6 +63,46 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string CanaryCodeVersion { get; set; }
 
+            [NameInMap("CodeDeploy")]
+            [Validation(Required=false)]
+            public GetRoutineResponseBodyEnvsCodeDeploy CodeDeploy { get; set; }
+            public class GetRoutineResponseBodyEnvsCodeDeploy : TeaModel {
+                [NameInMap("CodeVersions")]
+                [Validation(Required=false)]
+                public List<GetRoutineResponseBodyEnvsCodeDeployCodeVersions> CodeVersions { get; set; }
+                public class GetRoutineResponseBodyEnvsCodeDeployCodeVersions : TeaModel {
+                    [NameInMap("CodeVersion")]
+                    [Validation(Required=false)]
+                    public string CodeVersion { get; set; }
+
+                    [NameInMap("CreateTime")]
+                    [Validation(Required=false)]
+                    public string CreateTime { get; set; }
+
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
+                    [NameInMap("Percentage")]
+                    [Validation(Required=false)]
+                    public long? Percentage { get; set; }
+
+                }
+
+                [NameInMap("CreationTime")]
+                [Validation(Required=false)]
+                public string CreationTime { get; set; }
+
+                [NameInMap("DeployId")]
+                [Validation(Required=false)]
+                public string DeployId { get; set; }
+
+                [NameInMap("Strategy")]
+                [Validation(Required=false)]
+                public string Strategy { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The version number of the code in the environment.</para>
             /// 
@@ -84,6 +124,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Env { get; set; }
 
         }
+
+        [NameInMap("HasAssets")]
+        [Validation(Required=false)]
+        public bool? HasAssets { get; set; }
 
         /// <summary>
         /// <para>The request ID.</para>
