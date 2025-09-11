@@ -125,6 +125,14 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             public string OrderId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("PqcEnabled")]
+            [Validation(Required=false)]
+            public int? PqcEnabled { get; set; }
+
+            /// <summary>
             /// <para>The ID of the region.</para>
             /// 
             /// <b>Example:</b>

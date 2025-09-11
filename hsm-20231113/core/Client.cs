@@ -2267,6 +2267,162 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>下载集群托管证书</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API允许用户获取特定集群的管理证书。</description></item>
+        /// <item><description>返回的数据是经过base64编码的证书内容。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadClusterManagedCertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadClusterManagedCertResponse
+        /// </returns>
+        public DownloadClusterManagedCertResponse DownloadClusterManagedCertWithOptions(DownloadClusterManagedCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadClusterManagedCert",
+                Version = "2023-11-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadClusterManagedCertResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下载集群托管证书</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API允许用户获取特定集群的管理证书。</description></item>
+        /// <item><description>返回的数据是经过base64编码的证书内容。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadClusterManagedCertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadClusterManagedCertResponse
+        /// </returns>
+        public async Task<DownloadClusterManagedCertResponse> DownloadClusterManagedCertWithOptionsAsync(DownloadClusterManagedCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadClusterManagedCert",
+                Version = "2023-11-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadClusterManagedCertResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下载集群托管证书</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API允许用户获取特定集群的管理证书。</description></item>
+        /// <item><description>返回的数据是经过base64编码的证书内容。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadClusterManagedCertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadClusterManagedCertResponse
+        /// </returns>
+        public DownloadClusterManagedCertResponse DownloadClusterManagedCert(DownloadClusterManagedCertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DownloadClusterManagedCertWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下载集群托管证书</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API允许用户获取特定集群的管理证书。</description></item>
+        /// <item><description>返回的数据是经过base64编码的证书内容。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadClusterManagedCertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadClusterManagedCertResponse
+        /// </returns>
+        public async Task<DownloadClusterManagedCertResponse> DownloadClusterManagedCertAsync(DownloadClusterManagedCertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DownloadClusterManagedCertWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Binds a backup to a specified hardware security module (HSM).</para>
         /// </summary>
         /// 
@@ -4713,6 +4869,202 @@ namespace AlibabaCloud.SDK.Hsm20231113
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>快速部署集群</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QuickDeployClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuickDeployClusterResponse
+        /// </returns>
+        public QuickDeployClusterResponse QuickDeployClusterWithOptions(QuickDeployClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QuickDeployClusterShrinkRequest request = new QuickDeployClusterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceList))
+            {
+                request.InstanceListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceList, "InstanceList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VSwitchIdList))
+            {
+                request.VSwitchIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VSwitchIdList, "VSwitchIdList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WhiteList))
+            {
+                request.WhiteListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WhiteList, "WhiteList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertManaged))
+            {
+                query["CertManaged"] = request.CertManaged;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
+            {
+                query["ClusterName"] = request.ClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceListShrink))
+            {
+                query["InstanceList"] = request.InstanceListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIdListShrink))
+            {
+                query["VSwitchIdList"] = request.VSwitchIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListShrink))
+            {
+                query["WhiteList"] = request.WhiteListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuickDeployCluster",
+                Version = "2023-11-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuickDeployClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>快速部署集群</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QuickDeployClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuickDeployClusterResponse
+        /// </returns>
+        public async Task<QuickDeployClusterResponse> QuickDeployClusterWithOptionsAsync(QuickDeployClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QuickDeployClusterShrinkRequest request = new QuickDeployClusterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceList))
+            {
+                request.InstanceListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceList, "InstanceList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VSwitchIdList))
+            {
+                request.VSwitchIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VSwitchIdList, "VSwitchIdList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WhiteList))
+            {
+                request.WhiteListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WhiteList, "WhiteList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertManaged))
+            {
+                query["CertManaged"] = request.CertManaged;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
+            {
+                query["ClusterName"] = request.ClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceListShrink))
+            {
+                query["InstanceList"] = request.InstanceListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIdListShrink))
+            {
+                query["VSwitchIdList"] = request.VSwitchIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListShrink))
+            {
+                query["WhiteList"] = request.WhiteListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuickDeployCluster",
+                Version = "2023-11-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuickDeployClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>快速部署集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuickDeployClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuickDeployClusterResponse
+        /// </returns>
+        public QuickDeployClusterResponse QuickDeployCluster(QuickDeployClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QuickDeployClusterWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>快速部署集群</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuickDeployClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuickDeployClusterResponse
+        /// </returns>
+        public async Task<QuickDeployClusterResponse> QuickDeployClusterAsync(QuickDeployClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QuickDeployClusterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Initializes a hardware security module (HSM).</para>
         /// </summary>
         /// 
@@ -5397,6 +5749,170 @@ namespace AlibabaCloud.SDK.Hsm20231113
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResumeInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轮转集群托管证书</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API用于触发指定集群的管理证书轮转过程。通过提供<c>ClusterId</c>参数，可以指定需要进行证书轮转的集群。此操作有助于提高集群的安全性，建议定期执行。</para>
+        /// <h3>注意事项</h3>
+        /// <list type="bullet">
+        /// <item><description>确保提供的<c>ClusterId</c>是有效的，并且用户具有对该集群的操作权限。</description></item>
+        /// <item><description>证书轮转可能会影响依赖于旧证书的服务，请在适当的时间窗口内执行此操作。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RotateClusterManagedCertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RotateClusterManagedCertResponse
+        /// </returns>
+        public RotateClusterManagedCertResponse RotateClusterManagedCertWithOptions(RotateClusterManagedCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RotateClusterManagedCert",
+                Version = "2023-11-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RotateClusterManagedCertResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轮转集群托管证书</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API用于触发指定集群的管理证书轮转过程。通过提供<c>ClusterId</c>参数，可以指定需要进行证书轮转的集群。此操作有助于提高集群的安全性，建议定期执行。</para>
+        /// <h3>注意事项</h3>
+        /// <list type="bullet">
+        /// <item><description>确保提供的<c>ClusterId</c>是有效的，并且用户具有对该集群的操作权限。</description></item>
+        /// <item><description>证书轮转可能会影响依赖于旧证书的服务，请在适当的时间窗口内执行此操作。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RotateClusterManagedCertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RotateClusterManagedCertResponse
+        /// </returns>
+        public async Task<RotateClusterManagedCertResponse> RotateClusterManagedCertWithOptionsAsync(RotateClusterManagedCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RotateClusterManagedCert",
+                Version = "2023-11-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RotateClusterManagedCertResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轮转集群托管证书</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API用于触发指定集群的管理证书轮转过程。通过提供<c>ClusterId</c>参数，可以指定需要进行证书轮转的集群。此操作有助于提高集群的安全性，建议定期执行。</para>
+        /// <h3>注意事项</h3>
+        /// <list type="bullet">
+        /// <item><description>确保提供的<c>ClusterId</c>是有效的，并且用户具有对该集群的操作权限。</description></item>
+        /// <item><description>证书轮转可能会影响依赖于旧证书的服务，请在适当的时间窗口内执行此操作。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RotateClusterManagedCertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RotateClusterManagedCertResponse
+        /// </returns>
+        public RotateClusterManagedCertResponse RotateClusterManagedCert(RotateClusterManagedCertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RotateClusterManagedCertWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>轮转集群托管证书</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API用于触发指定集群的管理证书轮转过程。通过提供<c>ClusterId</c>参数，可以指定需要进行证书轮转的集群。此操作有助于提高集群的安全性，建议定期执行。</para>
+        /// <h3>注意事项</h3>
+        /// <list type="bullet">
+        /// <item><description>确保提供的<c>ClusterId</c>是有效的，并且用户具有对该集群的操作权限。</description></item>
+        /// <item><description>证书轮转可能会影响依赖于旧证书的服务，请在适当的时间窗口内执行此操作。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RotateClusterManagedCertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RotateClusterManagedCertResponse
+        /// </returns>
+        public async Task<RotateClusterManagedCertResponse> RotateClusterManagedCertAsync(RotateClusterManagedCertRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RotateClusterManagedCertWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

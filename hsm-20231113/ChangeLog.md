@@ -1,3 +1,10 @@
+2025-09-11 Version: 1.2.0
+- Support API DownloadClusterManagedCert.
+- Support API QuickDeployCluster.
+- Support API RotateClusterManagedCert.
+- Update API GetInstance: add response parameters Body.Instance.PqcEnabled.
+
+
 2025-07-23 Version: 1.1.3
 - Update API GetCluster: add response parameters Body.Cluster.CertManaged.
 - Update API GetCluster: add response parameters Body.Cluster.EntityCertExpireTime.
