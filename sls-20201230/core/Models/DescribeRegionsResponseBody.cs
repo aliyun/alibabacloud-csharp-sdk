@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
+            [NameInMap("dataRedundancyType")]
+            [Validation(Required=false)]
+            public List<string> DataRedundancyType { get; set; }
+
             /// <summary>
             /// <para>The public endpoint of Simple Log Service.</para>
             /// </summary>
