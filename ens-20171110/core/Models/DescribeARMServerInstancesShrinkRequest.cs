@@ -131,6 +131,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string StatesShrink { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string TagsShrink { get; set; }
+
     }
 
 }

@@ -160,6 +160,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string ParentSDGId { get; set; }
 
+            [NameInMap("PerformanceLevel")]
+            [Validation(Required=false)]
+            public string PerformanceLevel { get; set; }
+
             /// <summary>
             /// <para>The preload information.</para>
             /// </summary>

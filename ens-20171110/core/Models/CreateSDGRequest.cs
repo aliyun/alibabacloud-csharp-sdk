@@ -62,6 +62,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
+        [NameInMap("PerformanceLevel")]
+        [Validation(Required=false)]
+        public long? PerformanceLevel { get; set; }
+
+        /// <summary>
         /// <para>The maximum capacity of the SDG. Unit: GB.</para>
         /// <remarks>
         /// </remarks>

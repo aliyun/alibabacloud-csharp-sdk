@@ -199,6 +199,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string ParentSDGId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("PerformanceLevel")]
+            [Validation(Required=false)]
+            public long? PerformanceLevel { get; set; }
+
+            /// <summary>
             /// <para>The ID of the SDG.</para>
             /// 
             /// <b>Example:</b>

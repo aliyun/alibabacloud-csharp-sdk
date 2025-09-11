@@ -131,6 +131,28 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<string> States { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<DescribeARMServerInstancesRequestTags> Tags { get; set; }
+        public class DescribeARMServerInstancesRequestTags : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>key-1</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>value-1</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

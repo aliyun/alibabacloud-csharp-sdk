@@ -1,3 +1,10 @@
+2025-09-11 Version: 8.2.1
+- Update API CreateSDG: add request parameters PerformanceLevel.
+- Update API DescribeARMServerInstances: add request parameters Tags.
+- Update API DescribeSDG: add response parameters Body.SDGs.$.PerformanceLevel.
+- Update API DescribeSDGs: add response parameters Body.SDGs.$.PerformanceLevel.
+
+
 2025-09-11 Version: 8.2.0
 - Support API DescribeNASAvailableResourceInfo.
 
