@@ -3681,6 +3681,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             {
                 query["Address"] = request.Address;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentGroup))
+            {
+                query["AgentGroup"] = request.AgentGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertIds))
             {
                 query["AlertIds"] = request.AlertIds;
@@ -3759,6 +3763,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Address))
             {
                 query["Address"] = request.Address;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentGroup))
+            {
+                query["AgentGroup"] = request.AgentGroup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertIds))
             {
@@ -15545,6 +15553,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await DescribeMonitoringAgentHostsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定资源的进程数列表</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -15590,6 +15603,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeMonitoringAgentProcessesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定资源的进程数列表</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -15635,6 +15653,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeMonitoringAgentProcessesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定资源的进程数列表</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -15656,6 +15679,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return DescribeMonitoringAgentProcessesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询指定资源的进程数列表</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
@@ -20253,6 +20281,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await InstallMonitoringAgentWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用分组内的进程监控</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGroupMonitoringAgentProcessRequest
         /// </param>
@@ -20302,6 +20335,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<ModifyGroupMonitoringAgentProcessResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用分组内的进程监控</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGroupMonitoringAgentProcessRequest
         /// </param>
@@ -20351,6 +20389,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<ModifyGroupMonitoringAgentProcessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用分组内的进程监控</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGroupMonitoringAgentProcessRequest
         /// </param>
@@ -20364,6 +20407,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return ModifyGroupMonitoringAgentProcessWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用分组内的进程监控</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGroupMonitoringAgentProcessRequest
         /// </param>
@@ -20581,6 +20629,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await ModifyHostAvailabilityWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改非阿里云的主机显示信息</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <hr>
@@ -20627,6 +20680,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<ModifyHostInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改非阿里云的主机显示信息</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <hr>
@@ -20673,6 +20731,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<ModifyHostInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改非阿里云的主机显示信息</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <hr>
@@ -20691,6 +20754,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return ModifyHostInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改非阿里云的主机显示信息</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <hr>
@@ -21573,6 +21641,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await ModifyMetricRuleTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用分组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyMonitorGroupRequest
         /// </param>
@@ -21618,6 +21691,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<ModifyMonitorGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用分组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyMonitorGroupRequest
         /// </param>
@@ -21663,6 +21741,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<ModifyMonitorGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用分组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyMonitorGroupRequest
         /// </param>
@@ -21676,6 +21759,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return ModifyMonitorGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用分组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyMonitorGroupRequest
         /// </param>
@@ -21691,7 +21779,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyMonitorGroupInstances</para>
+        /// <para>修改应用分组中的资源</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21737,7 +21825,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyMonitorGroupInstances</para>
+        /// <para>修改应用分组中的资源</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21783,7 +21871,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyMonitorGroupInstances</para>
+        /// <para>修改应用分组中的资源</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21801,7 +21889,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyMonitorGroupInstances</para>
+        /// <para>修改应用分组中的资源</para>
         /// </summary>
         /// 
         /// <param name="request">
