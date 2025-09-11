@@ -144,6 +144,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public int? TemplateType { get; set; }
 
+        [NameInMap("TrafficDriving")]
+        [Validation(Required=false)]
+        public string TrafficDriving { get; set; }
+
     }
 
 }

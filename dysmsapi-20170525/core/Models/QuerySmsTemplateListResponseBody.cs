@@ -169,6 +169,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 
             }
 
+            [NameInMap("SignatureName")]
+            [Validation(Required=false)]
+            public string SignatureName { get; set; }
+
             /// <summary>
             /// <para>The code of the message template.</para>
             /// <para>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm">Short Message Service (SMS) console</a>, click <b>Go China</b> or <b>Go Globe</b> in the left-side navigation pane, and then view the template code on the <b>Templates</b> tab. You can also call the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> operation to obtain the template code.</para>
