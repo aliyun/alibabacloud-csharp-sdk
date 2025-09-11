@@ -22927,6 +22927,100 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>输出指定用户ID下可用资源对应的nas信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNASAvailableResourceInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNASAvailableResourceInfoResponse
+        /// </returns>
+        public DescribeNASAvailableResourceInfoResponse DescribeNASAvailableResourceInfoWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNASAvailableResourceInfo",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNASAvailableResourceInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>输出指定用户ID下可用资源对应的nas信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNASAvailableResourceInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNASAvailableResourceInfoResponse
+        /// </returns>
+        public async Task<DescribeNASAvailableResourceInfoResponse> DescribeNASAvailableResourceInfoWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeNASAvailableResourceInfo",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeNASAvailableResourceInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>输出指定用户ID下可用资源对应的nas信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeNASAvailableResourceInfoResponse
+        /// </returns>
+        public DescribeNASAvailableResourceInfoResponse DescribeNASAvailableResourceInfo()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeNASAvailableResourceInfoWithOptions(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>输出指定用户ID下可用资源对应的nas信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeNASAvailableResourceInfoResponse
+        /// </returns>
+        public async Task<DescribeNASAvailableResourceInfoResponse> DescribeNASAvailableResourceInfoAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeNASAvailableResourceInfoWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>根据筛选条件获取指定NC属性和资源量信息</para>
         /// </summary>
         /// 
