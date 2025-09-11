@@ -1,3 +1,7 @@
+2025-09-11 Version: 1.5.1
+- Update API DescribeAuditLogs: add response parameters Body.Items.$.DbType.
+
+
 2025-09-09 Version: 1.5.0
 - Support API DescribeAuditLogs.
 

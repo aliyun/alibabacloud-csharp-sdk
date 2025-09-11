@@ -87,6 +87,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>MySQL</para>
+            /// </summary>
+            [NameInMap("DbType")]
+            [Validation(Required=false)]
+            public string DbType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
             [NameInMap("EffectRow")]
