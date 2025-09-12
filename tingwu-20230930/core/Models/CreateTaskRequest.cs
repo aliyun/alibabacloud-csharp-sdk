@@ -93,6 +93,16 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         [Validation(Required=false)]
         public CreateTaskRequestParameters Parameters { get; set; }
         public class CreateTaskRequestParameters : TeaModel {
+            [NameInMap("AutoChapters")]
+            [Validation(Required=false)]
+            public CreateTaskRequestParametersAutoChapters AutoChapters { get; set; }
+            public class CreateTaskRequestParametersAutoChapters : TeaModel {
+                [NameInMap("ChapterGranularity")]
+                [Validation(Required=false)]
+                public string ChapterGranularity { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>true</para>
@@ -183,6 +193,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [Validation(Required=false)]
                 public bool? DomainEducationEnabled { get; set; }
 
+                [NameInMap("FullTextSummaryFormat")]
+                [Validation(Required=false)]
+                public string FullTextSummaryFormat { get; set; }
+
                 [NameInMap("MaxKeywords")]
                 [Validation(Required=false)]
                 public int? MaxKeywords { get; set; }
@@ -229,6 +243,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [Validation(Required=false)]
             public bool? IdentityRecognitionEnabled { get; set; }
 
+            [NameInMap("LlmOutputLanguage")]
+            [Validation(Required=false)]
+            public string LlmOutputLanguage { get; set; }
+
             [NameInMap("MeetingAssistance")]
             [Validation(Required=false)]
             public CreateTaskRequestParametersMeetingAssistance MeetingAssistance { get; set; }
@@ -246,6 +264,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             [NameInMap("MeetingAssistanceEnabled")]
             [Validation(Required=false)]
             public bool? MeetingAssistanceEnabled { get; set; }
+
+            [NameInMap("Model")]
+            [Validation(Required=false)]
+            public string Model { get; set; }
 
             [NameInMap("PptExtractionEnabled")]
             [Validation(Required=false)]
@@ -400,6 +422,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [NameInMap("PhraseId")]
                 [Validation(Required=false)]
                 public string PhraseId { get; set; }
+
+                [NameInMap("ProfanityFilterEnabled")]
+                [Validation(Required=false)]
+                public bool? ProfanityFilterEnabled { get; set; }
 
                 [NameInMap("RealtimeDiarizationEnabled")]
                 [Validation(Required=false)]
