@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        [NameInMap("DisplayConfig")]
+        [Validation(Required=false)]
+        public string DisplayConfig { get; set; }
+
         [NameInMap("DownBandwidthLimit")]
         [Validation(Required=false)]
         public int? DownBandwidthLimit { get; set; }

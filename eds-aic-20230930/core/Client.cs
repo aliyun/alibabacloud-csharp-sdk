@@ -728,6 +728,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AutoPay"] = request.AutoPay;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayConfig))
+            {
+                query["DisplayConfig"] = request.DisplayConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownBandwidthLimit))
             {
                 query["DownBandwidthLimit"] = request.DownBandwidthLimit;
@@ -797,6 +801,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayConfig))
+            {
+                query["DisplayConfig"] = request.DisplayConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownBandwidthLimit))
             {

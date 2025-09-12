@@ -285,6 +285,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
+            [NameInMap("InternetStatus")]
+            [Validation(Required=false)]
+            public string InternetStatus { get; set; }
+
             /// <summary>
             /// <para>The ID of the key pair.</para>
             /// 

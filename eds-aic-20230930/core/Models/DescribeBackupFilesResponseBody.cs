@@ -175,6 +175,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("SystemVersion")]
+            [Validation(Required=false)]
+            public string SystemVersion { get; set; }
+
             /// <summary>
             /// <para>The task ID.</para>
             /// 
