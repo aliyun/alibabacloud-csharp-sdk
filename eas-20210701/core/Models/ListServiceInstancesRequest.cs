@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? IsSpot { get; set; }
 
+        [NameInMap("MemberType")]
+        [Validation(Required=false)]
+        public string MemberType { get; set; }
+
         /// <summary>
         /// <para>The sorting order.</para>
         /// <para>Valid values:</para>

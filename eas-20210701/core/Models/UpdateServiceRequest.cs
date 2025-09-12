@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceRequest : TeaModel {
+        [NameInMap("MemberToUpdate")]
+        [Validation(Required=false)]
+        public string MemberToUpdate { get; set; }
+
         /// <summary>
         /// <para>The type of the service update. Valid values: merge and replace. By default, merge is used if you do not specify this parameter.</para>
         /// <list type="bullet">

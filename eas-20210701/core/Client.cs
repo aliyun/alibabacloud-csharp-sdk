@@ -9517,6 +9517,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 query["IsSpot"] = request.IsSpot;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberType))
+            {
+                query["MemberType"] = request.MemberType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {
                 query["Order"] = request.Order;
@@ -9610,6 +9614,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSpot))
             {
                 query["IsSpot"] = request.IsSpot;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberType))
+            {
+                query["MemberType"] = request.MemberType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {
@@ -12403,6 +12411,10 @@ namespace AlibabaCloud.SDK.Eas20210701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberToUpdate))
+            {
+                query["MemberToUpdate"] = request.MemberToUpdate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateType))
             {
                 query["UpdateType"] = request.UpdateType;
@@ -12450,6 +12462,10 @@ namespace AlibabaCloud.SDK.Eas20210701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberToUpdate))
+            {
+                query["MemberToUpdate"] = request.MemberToUpdate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateType))
             {
                 query["UpdateType"] = request.UpdateType;
