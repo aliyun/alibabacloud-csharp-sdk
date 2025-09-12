@@ -121,6 +121,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ApplyId { get; set; }
 
+                [NameInMap("approver_email")]
+                [Validation(Required=false)]
+                public string ApproverEmail { get; set; }
+
+                [NameInMap("approver_id")]
+                [Validation(Required=false)]
+                public string ApproverId { get; set; }
+
+                [NameInMap("approver_name")]
+                [Validation(Required=false)]
+                public string ApproverName { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>CKG</para>
@@ -244,6 +256,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("cabin_class")]
                 [Validation(Required=false)]
                 public string CabinClass { get; set; }
+
+                [NameInMap("cabin_class_code")]
+                [Validation(Required=false)]
+                public string CabinClassCode { get; set; }
 
                 [NameInMap("capital_direction")]
                 [Validation(Required=false)]
@@ -417,6 +433,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string FlightTripType { get; set; }
 
+                [NameInMap("foreigners_tag")]
+                [Validation(Required=false)]
+                public string ForeignersTag { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -472,6 +492,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("itinerary_price")]
                 [Validation(Required=false)]
                 public double? ItineraryPrice { get; set; }
+
+                [NameInMap("location")]
+                [Validation(Required=false)]
+                public string Location { get; set; }
 
                 [NameInMap("mapping_company_code")]
                 [Validation(Required=false)]
@@ -701,6 +725,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string SettlementType { get; set; }
 
+                [NameInMap("sio")]
+                [Validation(Required=false)]
+                public string Sio { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -764,6 +792,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("trade_action_desc")]
                 [Validation(Required=false)]
                 public string TradeActionDesc { get; set; }
+
+                [NameInMap("traveler_email")]
+                [Validation(Required=false)]
+                public string TravelerEmail { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

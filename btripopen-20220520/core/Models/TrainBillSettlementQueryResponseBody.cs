@@ -84,6 +84,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ApplyId { get; set; }
 
+                [NameInMap("approver_email")]
+                [Validation(Required=false)]
+                public string ApproverEmail { get; set; }
+
+                [NameInMap("approver_id")]
+                [Validation(Required=false)]
+                public string ApproverId { get; set; }
+
+                [NameInMap("approver_name")]
+                [Validation(Required=false)]
+                public string ApproverName { get; set; }
+
                 [NameInMap("arr_city_code")]
                 [Validation(Required=false)]
                 public string ArrCityCode { get; set; }
@@ -296,6 +308,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string FeeTypeDesc { get; set; }
 
+                [NameInMap("foreigners_tag")]
+                [Validation(Required=false)]
+                public string ForeignersTag { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>4740293</para>
@@ -311,6 +327,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("is_transfer_order")]
                 [Validation(Required=false)]
                 public string IsTransferOrder { get; set; }
+
+                [NameInMap("location")]
+                [Validation(Required=false)]
+                public string Location { get; set; }
 
                 [NameInMap("long_ticket_no")]
                 [Validation(Required=false)]
@@ -496,6 +516,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ShortTicketNo { get; set; }
 
+                [NameInMap("sio")]
+                [Validation(Required=false)]
+                public string Sio { get; set; }
+
                 [NameInMap("speed_package_fee")]
                 [Validation(Required=false)]
                 public double? SpeedPackageFee { get; set; }
@@ -566,6 +590,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string TrainType { get; set; }
 
+                [NameInMap("traveler_email")]
+                [Validation(Required=false)]
+                public string TravelerEmail { get; set; }
+
                 [NameInMap("traveler_id")]
                 [Validation(Required=false)]
                 public string TravelerId { get; set; }
@@ -585,6 +613,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("traveler_name")]
                 [Validation(Required=false)]
                 public string TravelerName { get; set; }
+
+                [NameInMap("verify_failed_reason")]
+                [Validation(Required=false)]
+                public string VerifyFailedReason { get; set; }
+
+                [NameInMap("verify_status")]
+                [Validation(Required=false)]
+                public int? VerifyStatus { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

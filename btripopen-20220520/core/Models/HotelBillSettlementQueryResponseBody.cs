@@ -88,6 +88,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ApplyId { get; set; }
 
+                [NameInMap("approver_email")]
+                [Validation(Required=false)]
+                public string ApproverEmail { get; set; }
+
+                [NameInMap("approver_id")]
+                [Validation(Required=false)]
+                public string ApproverId { get; set; }
+
+                [NameInMap("approver_name")]
+                [Validation(Required=false)]
+                public string ApproverName { get; set; }
+
                 [NameInMap("average_nights")]
                 [Validation(Required=false)]
                 public string AverageNights { get; set; }
@@ -288,6 +300,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public double? Fines { get; set; }
 
+                [NameInMap("foreigners_tag")]
+                [Validation(Required=false)]
+                public string ForeignersTag { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -339,6 +355,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("is_share_str")]
                 [Validation(Required=false)]
                 public string IsShareStr { get; set; }
+
+                [NameInMap("location")]
+                [Validation(Required=false)]
+                public string Location { get; set; }
 
                 [NameInMap("mapping_company_code")]
                 [Validation(Required=false)]
@@ -540,6 +560,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string SettlementType { get; set; }
 
+                [NameInMap("sio")]
+                [Validation(Required=false)]
+                public string Sio { get; set; }
+
                 [NameInMap("star")]
                 [Validation(Required=false)]
                 public string Star { get; set; }
@@ -581,6 +605,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [NameInMap("trade_action_desc")]
                 [Validation(Required=false)]
                 public string TradeActionDesc { get; set; }
+
+                [NameInMap("traveler_email")]
+                [Validation(Required=false)]
+                public string TravelerEmail { get; set; }
 
                 [NameInMap("traveler_id")]
                 [Validation(Required=false)]

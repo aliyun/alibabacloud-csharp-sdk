@@ -194,6 +194,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ProjectTitle { get; set; }
 
+            [NameInMap("tax_number")]
+            [Validation(Required=false)]
+            public string TaxNumber { get; set; }
+
             /// <summary>
             /// <para>This parameter is required.</para>
             /// 
