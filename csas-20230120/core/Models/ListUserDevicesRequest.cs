@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<string> AppVersions { get; set; }
 
+        [NameInMap("AutoLoginStatuses")]
+        [Validation(Required=false)]
+        public List<string> AutoLoginStatuses { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

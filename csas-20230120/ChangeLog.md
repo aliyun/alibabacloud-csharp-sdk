@@ -1,3 +1,9 @@
+2025-09-12 Version: 1.14.10
+- Update API GetUserDevice: add response parameters Body.Device.AutoLoginStatus.
+- Update API ListUserDevices: add request parameters AutoLoginStatuses.
+- Update API ListUserDevices: add response parameters Body.Devices.$.AutoLoginStatus.
+
+
 2025-09-09 Version: 1.14.9
 - Update API ListConnectors: add response parameters Body.Connectors.$.ClusterIP.
 - Update API ListConnectors: add response parameters Body.Connectors.$.ClusterPort.

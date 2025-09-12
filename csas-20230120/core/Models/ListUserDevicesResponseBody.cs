@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string AppVersion { get; set; }
 
+            [NameInMap("AutoLoginStatus")]
+            [Validation(Required=false)]
+            public string AutoLoginStatus { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Apple M1</para>
