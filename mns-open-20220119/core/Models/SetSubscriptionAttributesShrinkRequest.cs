@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string NotifyStrategy { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>acs:ram::1234567890:role/roleName</para>
+        /// </summary>
+        [NameInMap("StsRoleArn")]
+        [Validation(Required=false)]
+        public string StsRoleArn { get; set; }
+
+        /// <summary>
         /// <para>The name of the subscription.</para>
         /// <para>This parameter is required.</para>
         /// 
