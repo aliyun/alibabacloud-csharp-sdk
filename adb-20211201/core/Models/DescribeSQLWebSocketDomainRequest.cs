@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("Module")]
+        [Validation(Required=false)]
+        public string Module { get; set; }
+
         /// <summary>
         /// <para>The region ID</para>
         /// <remarks>
