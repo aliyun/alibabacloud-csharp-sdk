@@ -217,6 +217,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019
             {
                 body["AdminPassword"] = request.AdminPassword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentNodeGroup))
+            {
+                body["AgentNodeGroup"] = request.AgentNodeGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                body["AutoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 body["AutoRenew"] = request.AutoRenew;
@@ -240,6 +248,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrontendNodeGroups))
             {
                 body["FrontendNodeGroups"] = request.FrontendNodeGroups;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
+            {
+                body["GatewayType"] = request.GatewayType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -351,6 +363,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019
             {
                 body["AdminPassword"] = request.AdminPassword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentNodeGroup))
+            {
+                body["AgentNodeGroup"] = request.AgentNodeGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                body["AutoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 body["AutoRenew"] = request.AutoRenew;
@@ -374,6 +394,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrontendNodeGroups))
             {
                 body["FrontendNodeGroups"] = request.FrontendNodeGroups;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
+            {
+                body["GatewayType"] = request.GatewayType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -1628,6 +1652,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FastMode))
+            {
+                query["FastMode"] = request.FastMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -1699,6 +1727,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FastMode))
+            {
+                query["FastMode"] = request.FastMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;

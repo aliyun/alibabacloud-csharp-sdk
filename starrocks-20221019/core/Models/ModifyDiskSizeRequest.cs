@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifyDiskSizeRequest : TeaModel {
+        [NameInMap("FastMode")]
+        [Validation(Required=false)]
+        public bool? FastMode { get; set; }
+
         /// <summary>
         /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>

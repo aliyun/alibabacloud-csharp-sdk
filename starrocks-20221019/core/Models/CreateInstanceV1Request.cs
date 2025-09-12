@@ -19,6 +19,20 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string AdminPassword { get; set; }
 
+        [NameInMap("AgentNodeGroup")]
+        [Validation(Required=false)]
+        public CreateInstanceV1RequestAgentNodeGroup AgentNodeGroup { get; set; }
+        public class CreateInstanceV1RequestAgentNodeGroup : TeaModel {
+            [NameInMap("cu")]
+            [Validation(Required=false)]
+            public int? Cu { get; set; }
+
+        }
+
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
@@ -193,6 +207,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string ZoneId { get; set; }
 
         }
+
+        [NameInMap("GatewayType")]
+        [Validation(Required=false)]
+        public string GatewayType { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
