@@ -16,6 +16,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks> InstanceRefreshTasks { get; set; }
         public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks : TeaModel {
+            [NameInMap("CheckpointPauseTime")]
+            [Validation(Required=false)]
+            public int? CheckpointPauseTime { get; set; }
+
+            [NameInMap("Checkpoints")]
+            [Validation(Required=false)]
+            public List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints> Checkpoints { get; set; }
+            public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints : TeaModel {
+                [NameInMap("Percentage")]
+                [Validation(Required=false)]
+                public int? Percentage { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The desired configurations of the instance refresh task.</para>
             /// </summary>
@@ -23,6 +37,46 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfiguration DesiredConfiguration { get; set; }
             public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfiguration : TeaModel {
+                [NameInMap("Containers")]
+                [Validation(Required=false)]
+                public List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers> Containers { get; set; }
+                public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers : TeaModel {
+                    [NameInMap("Args")]
+                    [Validation(Required=false)]
+                    public List<string> Args { get; set; }
+
+                    [NameInMap("Commands")]
+                    [Validation(Required=false)]
+                    public List<string> Commands { get; set; }
+
+                    [NameInMap("EnvironmentVars")]
+                    [Validation(Required=false)]
+                    public List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars> EnvironmentVars { get; set; }
+                    public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars : TeaModel {
+                        [NameInMap("FieldRefFieldPath")]
+                        [Validation(Required=false)]
+                        public string FieldRefFieldPath { get; set; }
+
+                        [NameInMap("Key")]
+                        [Validation(Required=false)]
+                        public string Key { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("Image")]
+                    [Validation(Required=false)]
+                    public string Image { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The ID of the image file that provides the image resource for Auto Scaling to create instances.</para>
                 /// 
@@ -32,6 +86,24 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
+
+                [NameInMap("LaunchTemplateId")]
+                [Validation(Required=false)]
+                public string LaunchTemplateId { get; set; }
+
+                [NameInMap("LaunchTemplateOverrides")]
+                [Validation(Required=false)]
+                public List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides> LaunchTemplateOverrides { get; set; }
+                public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides : TeaModel {
+                    [NameInMap("InstanceType")]
+                    [Validation(Required=false)]
+                    public string InstanceType { get; set; }
+
+                }
+
+                [NameInMap("LaunchTemplateVersion")]
+                [Validation(Required=false)]
+                public string LaunchTemplateVersion { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the scaling configuration.</para>

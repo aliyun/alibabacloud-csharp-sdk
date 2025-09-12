@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class StartInstanceRefreshRequest : TeaModel {
+        [NameInMap("CheckpointPauseTime")]
+        [Validation(Required=false)]
+        public int? CheckpointPauseTime { get; set; }
+
+        [NameInMap("Checkpoints")]
+        [Validation(Required=false)]
+        public List<StartInstanceRefreshRequestCheckpoints> Checkpoints { get; set; }
+        public class StartInstanceRefreshRequestCheckpoints : TeaModel {
+            [NameInMap("Percentage")]
+            [Validation(Required=false)]
+            public int? Percentage { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</para>
         /// 
@@ -34,6 +48,46 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public StartInstanceRefreshRequestDesiredConfiguration DesiredConfiguration { get; set; }
         public class StartInstanceRefreshRequestDesiredConfiguration : TeaModel {
+            [NameInMap("Containers")]
+            [Validation(Required=false)]
+            public List<StartInstanceRefreshRequestDesiredConfigurationContainers> Containers { get; set; }
+            public class StartInstanceRefreshRequestDesiredConfigurationContainers : TeaModel {
+                [NameInMap("Args")]
+                [Validation(Required=false)]
+                public List<string> Args { get; set; }
+
+                [NameInMap("Commands")]
+                [Validation(Required=false)]
+                public List<string> Commands { get; set; }
+
+                [NameInMap("EnvironmentVars")]
+                [Validation(Required=false)]
+                public List<StartInstanceRefreshRequestDesiredConfigurationContainersEnvironmentVars> EnvironmentVars { get; set; }
+                public class StartInstanceRefreshRequestDesiredConfigurationContainersEnvironmentVars : TeaModel {
+                    [NameInMap("FieldRefFieldPath")]
+                    [Validation(Required=false)]
+                    public string FieldRefFieldPath { get; set; }
+
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                [NameInMap("Image")]
+                [Validation(Required=false)]
+                public string Image { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The image ID.</para>
             /// <remarks>
@@ -51,6 +105,24 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
+
+            [NameInMap("LaunchTemplateId")]
+            [Validation(Required=false)]
+            public string LaunchTemplateId { get; set; }
+
+            [NameInMap("LaunchTemplateOverrides")]
+            [Validation(Required=false)]
+            public List<StartInstanceRefreshRequestDesiredConfigurationLaunchTemplateOverrides> LaunchTemplateOverrides { get; set; }
+            public class StartInstanceRefreshRequestDesiredConfigurationLaunchTemplateOverrides : TeaModel {
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
+            }
+
+            [NameInMap("LaunchTemplateVersion")]
+            [Validation(Required=false)]
+            public string LaunchTemplateVersion { get; set; }
 
             /// <summary>
             /// <para>The ID of the scaling configuration.</para>

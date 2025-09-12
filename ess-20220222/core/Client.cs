@@ -20289,6 +20289,14 @@ namespace AlibabaCloud.SDK.Ess20220222
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckpointPauseTime))
+            {
+                query["CheckpointPauseTime"] = request.CheckpointPauseTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Checkpoints))
+            {
+                query["Checkpoints"] = request.Checkpoints;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -20373,6 +20381,14 @@ namespace AlibabaCloud.SDK.Ess20220222
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckpointPauseTime))
+            {
+                query["CheckpointPauseTime"] = request.CheckpointPauseTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Checkpoints))
+            {
+                query["Checkpoints"] = request.Checkpoints;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
