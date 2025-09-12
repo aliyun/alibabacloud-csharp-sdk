@@ -1274,6 +1274,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             }
 
+            [NameInMap("SinkDataWorksTriggerParameters")]
+            [Validation(Required=false)]
+            public SinkDataWorksTriggerParameters SinkDataWorksTriggerParameters { get; set; }
+
             /// <summary>
             /// <para>The type of the event source.</para>
             /// </summary>

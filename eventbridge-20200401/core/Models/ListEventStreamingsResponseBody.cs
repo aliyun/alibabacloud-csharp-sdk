@@ -906,6 +906,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                     }
 
+                    [NameInMap("SinkDataWorksTriggerParameters")]
+                    [Validation(Required=false)]
+                    public SinkDataWorksTriggerParameters SinkDataWorksTriggerParameters { get; set; }
+
                     [NameInMap("SinkDorisParameters")]
                     [Validation(Required=false)]
                     public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDorisParameters SinkDorisParameters { get; set; }
