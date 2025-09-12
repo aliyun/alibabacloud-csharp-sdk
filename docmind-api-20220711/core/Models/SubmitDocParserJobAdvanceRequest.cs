@@ -9,6 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 {
     public class SubmitDocParserJobAdvanceRequest : TeaModel {
+        [NameInMap("CustomOssConfig")]
+        [Validation(Required=false)]
+        public SubmitDocParserJobAdvanceRequestCustomOssConfig CustomOssConfig { get; set; }
+        public class SubmitDocParserJobAdvanceRequestCustomOssConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>AccessId</para>
+            /// </summary>
+            [NameInMap("AccessId")]
+            [Validation(Required=false)]
+            public string AccessId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>AccessKeySecret</para>
+            /// </summary>
+            [NameInMap("AccessKeySecret")]
+            [Validation(Required=false)]
+            public string AccessKeySecret { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>StsToken</para>
+            /// </summary>
+            [NameInMap("StsToken")]
+            [Validation(Required=false)]
+            public string StsToken { get; set; }
+
+        }
+
         [NameInMap("EnhancementMode")]
         [Validation(Required=false)]
         public string EnhancementMode { get; set; }
@@ -40,6 +70,28 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [NameInMap("FormulaEnhancement")]
         [Validation(Required=false)]
         public bool? FormulaEnhancement { get; set; }
+
+        [NameInMap("LLMParam")]
+        [Validation(Required=false)]
+        public SubmitDocParserJobAdvanceRequestLLMParam LLMParam { get; set; }
+        public class SubmitDocParserJobAdvanceRequestLLMParam : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>qwen-vl-ocr-latest</para>
+            /// </summary>
+            [NameInMap("Model")]
+            [Validation(Required=false)]
+            public string Model { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Read all the text from the image.</para>
+            /// </summary>
+            [NameInMap("Prompt")]
+            [Validation(Required=false)]
+            public string Prompt { get; set; }
+
+        }
 
         [NameInMap("LlmEnhancement")]
         [Validation(Required=false)]

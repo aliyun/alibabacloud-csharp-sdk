@@ -3815,11 +3815,23 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SubmitDocParserJobShrinkRequest request = new SubmitDocParserJobShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CustomOssConfig))
+            {
+                request.CustomOssConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CustomOssConfig, "CustomOssConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LLMParam))
+            {
+                request.LLMParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LLMParam, "LLMParam", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MultimediaParameters))
             {
                 request.MultimediaParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultimediaParameters, "MultimediaParameters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOssConfigShrink))
+            {
+                query["CustomOssConfig"] = request.CustomOssConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnhancementMode))
             {
                 query["EnhancementMode"] = request.EnhancementMode;
@@ -3839,6 +3851,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormulaEnhancement))
             {
                 query["FormulaEnhancement"] = request.FormulaEnhancement;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LLMParamShrink))
+            {
+                query["LLMParam"] = request.LLMParamShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmEnhancement))
             {
@@ -3907,11 +3923,23 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SubmitDocParserJobShrinkRequest request = new SubmitDocParserJobShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CustomOssConfig))
+            {
+                request.CustomOssConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CustomOssConfig, "CustomOssConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LLMParam))
+            {
+                request.LLMParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LLMParam, "LLMParam", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MultimediaParameters))
             {
                 request.MultimediaParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultimediaParameters, "MultimediaParameters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOssConfigShrink))
+            {
+                query["CustomOssConfig"] = request.CustomOssConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnhancementMode))
             {
                 query["EnhancementMode"] = request.EnhancementMode;
@@ -3931,6 +3959,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormulaEnhancement))
             {
                 query["FormulaEnhancement"] = request.FormulaEnhancement;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LLMParamShrink))
+            {
+                query["LLMParam"] = request.LLMParamShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmEnhancement))
             {

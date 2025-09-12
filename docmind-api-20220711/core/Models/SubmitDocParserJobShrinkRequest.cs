@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 {
     public class SubmitDocParserJobShrinkRequest : TeaModel {
+        [NameInMap("CustomOssConfig")]
+        [Validation(Required=false)]
+        public string CustomOssConfigShrink { get; set; }
+
         [NameInMap("EnhancementMode")]
         [Validation(Required=false)]
         public string EnhancementMode { get; set; }
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [NameInMap("FormulaEnhancement")]
         [Validation(Required=false)]
         public bool? FormulaEnhancement { get; set; }
+
+        [NameInMap("LLMParam")]
+        [Validation(Required=false)]
+        public string LLMParamShrink { get; set; }
 
         [NameInMap("LlmEnhancement")]
         [Validation(Required=false)]
