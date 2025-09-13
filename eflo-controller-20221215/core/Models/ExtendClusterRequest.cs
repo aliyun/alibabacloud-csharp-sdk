@@ -236,6 +236,54 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public List<string> Hostnames { get; set; }
 
+            [NameInMap("HyperNodes")]
+            [Validation(Required=false)]
+            public List<ExtendClusterRequestNodeGroupsHyperNodes> HyperNodes { get; set; }
+            public class ExtendClusterRequestNodeGroupsHyperNodes : TeaModel {
+                [NameInMap("DataDisk")]
+                [Validation(Required=false)]
+                public List<ExtendClusterRequestNodeGroupsHyperNodesDataDisk> DataDisk { get; set; }
+                public class ExtendClusterRequestNodeGroupsHyperNodesDataDisk : TeaModel {
+                    [NameInMap("Category")]
+                    [Validation(Required=false)]
+                    public string Category { get; set; }
+
+                    [NameInMap("DeleteWithNode")]
+                    [Validation(Required=false)]
+                    public bool? DeleteWithNode { get; set; }
+
+                    [NameInMap("PerformanceLevel")]
+                    [Validation(Required=false)]
+                    public string PerformanceLevel { get; set; }
+
+                    [NameInMap("Size")]
+                    [Validation(Required=false)]
+                    public int? Size { get; set; }
+
+                }
+
+                [NameInMap("Hostname")]
+                [Validation(Required=false)]
+                public string Hostname { get; set; }
+
+                [NameInMap("HyperNodeId")]
+                [Validation(Required=false)]
+                public string HyperNodeId { get; set; }
+
+                [NameInMap("LoginPassword")]
+                [Validation(Required=false)]
+                public string LoginPassword { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
+                public string VSwitchId { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+            }
+
             /// <summary>
             /// <para>Set the login password for the purchased nodes. This parameter is not effective when the Amount parameter is set to 0.</para>
             /// 

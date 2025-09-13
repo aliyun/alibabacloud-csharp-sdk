@@ -502,6 +502,54 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public bool? FileSystemMountEnabled { get; set; }
 
+            [NameInMap("HyperNodes")]
+            [Validation(Required=false)]
+            public List<CreateClusterRequestNodeGroupsHyperNodes> HyperNodes { get; set; }
+            public class CreateClusterRequestNodeGroupsHyperNodes : TeaModel {
+                [NameInMap("DataDisk")]
+                [Validation(Required=false)]
+                public List<CreateClusterRequestNodeGroupsHyperNodesDataDisk> DataDisk { get; set; }
+                public class CreateClusterRequestNodeGroupsHyperNodesDataDisk : TeaModel {
+                    [NameInMap("Category")]
+                    [Validation(Required=false)]
+                    public string Category { get; set; }
+
+                    [NameInMap("DeleteWithNode")]
+                    [Validation(Required=false)]
+                    public bool? DeleteWithNode { get; set; }
+
+                    [NameInMap("PerformanceLevel")]
+                    [Validation(Required=false)]
+                    public string PerformanceLevel { get; set; }
+
+                    [NameInMap("Size")]
+                    [Validation(Required=false)]
+                    public int? Size { get; set; }
+
+                }
+
+                [NameInMap("Hostname")]
+                [Validation(Required=false)]
+                public string Hostname { get; set; }
+
+                [NameInMap("HyperNodeId")]
+                [Validation(Required=false)]
+                public string HyperNodeId { get; set; }
+
+                [NameInMap("LoginPassword")]
+                [Validation(Required=false)]
+                public string LoginPassword { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
+                public string VSwitchId { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+            }
+
             /// <summary>
             /// <para>System image ID</para>
             /// 

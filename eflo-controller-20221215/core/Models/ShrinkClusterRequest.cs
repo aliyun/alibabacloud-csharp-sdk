@@ -36,6 +36,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public List<ShrinkClusterRequestNodeGroups> NodeGroups { get; set; }
         public class ShrinkClusterRequestNodeGroups : TeaModel {
+            [NameInMap("HyperNodes")]
+            [Validation(Required=false)]
+            public List<ShrinkClusterRequestNodeGroupsHyperNodes> HyperNodes { get; set; }
+            public class ShrinkClusterRequestNodeGroupsHyperNodes : TeaModel {
+                [NameInMap("HyperNodeId")]
+                [Validation(Required=false)]
+                public string HyperNodeId { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The node group ID.</para>
             /// 
