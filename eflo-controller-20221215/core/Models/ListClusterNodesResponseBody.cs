@@ -87,6 +87,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string HpnZone { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>e01-cn-2r42tmj4z02</para>
+            /// </summary>
+            [NameInMap("HyperNodeId")]
+            [Validation(Required=false)]
+            public string HyperNodeId { get; set; }
+
+            /// <summary>
             /// <para>The system image ID.</para>
             /// 
             /// <b>Example:</b>
