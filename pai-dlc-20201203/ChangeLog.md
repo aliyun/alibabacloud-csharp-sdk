@@ -1,3 +1,7 @@
+2025-09-15 Version: 1.6.7
+- Update API GetJob: add response parameters Body.RestartRecord.
+
+
 2025-08-22 Version: 1.6.6
 - Generated csharp 2020-12-03 for pai-dlc.
 

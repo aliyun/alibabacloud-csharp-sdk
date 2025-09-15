@@ -572,6 +572,86 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        [NameInMap("RestartRecord")]
+        [Validation(Required=false)]
+        public List<GetJobResponseBodyRestartRecord> RestartRecord { get; set; }
+        public class GetJobResponseBodyRestartRecord : TeaModel {
+            [NameInMap("DetailErrorInfoList")]
+            [Validation(Required=false)]
+            public List<GetJobResponseBodyRestartRecordDetailErrorInfoList> DetailErrorInfoList { get; set; }
+            public class GetJobResponseBodyRestartRecordDetailErrorInfoList : TeaModel {
+                [NameInMap("AddJobLevelBlacklist")]
+                [Validation(Required=false)]
+                public bool? AddJobLevelBlacklist { get; set; }
+
+                [NameInMap("AddNodeToBlacklist")]
+                [Validation(Required=false)]
+                public bool? AddNodeToBlacklist { get; set; }
+
+                [NameInMap("DetailErrorMsg")]
+                [Validation(Required=false)]
+                public string DetailErrorMsg { get; set; }
+
+                [NameInMap("ErrorCode")]
+                [Validation(Required=false)]
+                public string ErrorCode { get; set; }
+
+                [NameInMap("ErrorMsg")]
+                [Validation(Required=false)]
+                public string ErrorMsg { get; set; }
+
+                [NameInMap("ErrorSource")]
+                [Validation(Required=false)]
+                public string ErrorSource { get; set; }
+
+                [NameInMap("Node")]
+                [Validation(Required=false)]
+                public string Node { get; set; }
+
+                [NameInMap("Pod")]
+                [Validation(Required=false)]
+                public string Pod { get; set; }
+
+                [NameInMap("TriggerRestart")]
+                [Validation(Required=false)]
+                public bool? TriggerRestart { get; set; }
+
+            }
+
+            [NameInMap("JobRestartCount")]
+            [Validation(Required=false)]
+            public long? JobRestartCount { get; set; }
+
+            [NameInMap("OccurPhase")]
+            [Validation(Required=false)]
+            public string OccurPhase { get; set; }
+
+            [NameInMap("OccurTime")]
+            [Validation(Required=false)]
+            public string OccurTime { get; set; }
+
+            [NameInMap("Reason")]
+            [Validation(Required=false)]
+            public string Reason { get; set; }
+
+            [NameInMap("RestartDurationInSec")]
+            [Validation(Required=false)]
+            public long? RestartDurationInSec { get; set; }
+
+            [NameInMap("RestartFailReason")]
+            [Validation(Required=false)]
+            public string RestartFailReason { get; set; }
+
+            [NameInMap("RestartStatus")]
+            [Validation(Required=false)]
+            public string RestartStatus { get; set; }
+
+            [NameInMap("TriggerID")]
+            [Validation(Required=false)]
+            public string TriggerID { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The number of retries and the maximum number of retries used by the job.</para>
         /// 
