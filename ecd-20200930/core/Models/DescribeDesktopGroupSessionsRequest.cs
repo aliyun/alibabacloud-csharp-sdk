@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopGroupSessionsRequest : TeaModel {
+        [NameInMap("DesktopGroupIds")]
+        [Validation(Required=false)]
+        public List<string> DesktopGroupIds { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ecd-4oyi32wmrctgx****</para>
+        /// </summary>
+        [NameInMap("DesktopGroupName")]
+        [Validation(Required=false)]
+        public string DesktopGroupName { get; set; }
+
         /// <summary>
         /// <para>The end of the time range to query.</para>
         /// 
@@ -28,6 +40,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public string EndUserId { get; set; }
+
+        [NameInMap("FillTerminalInfo")]
+        [Validation(Required=false)]
+        public bool? FillTerminalInfo { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
+        /// </summary>
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
 
         /// <summary>
         /// <para>The number of entries per page.</para>

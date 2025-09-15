@@ -242,6 +242,44 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string SubPayType { get; set; }
 
+            [NameInMap("TerminalInfo")]
+            [Validation(Required=false)]
+            public DescribeDesktopSessionsResponseBodySessionsTerminalInfo TerminalInfo { get; set; }
+            public class DescribeDesktopSessionsResponseBodySessionsTerminalInfo : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Mac</para>
+                /// </summary>
+                [NameInMap("Model")]
+                [Validation(Required=false)]
+                public string Model { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Mac</para>
+                /// </summary>
+                [NameInMap("ProductName")]
+                [Validation(Required=false)]
+                public string ProductName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>96c530bc-6095-4014-8bbc-d461b8ac****</para>
+                /// </summary>
+                [NameInMap("SerialNumber")]
+                [Validation(Required=false)]
+                public string SerialNumber { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>EBFDC7773BEBAD418A9F89429652****</para>
+                /// </summary>
+                [NameInMap("Uuid")]
+                [Validation(Required=false)]
+                public string Uuid { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The total connection duration. Unit: seconds.</para>
             /// 

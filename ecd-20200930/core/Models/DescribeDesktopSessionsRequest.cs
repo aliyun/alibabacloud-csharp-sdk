@@ -66,6 +66,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string EndUserIdFilter { get; set; }
 
+        [NameInMap("FillHardwareInfo")]
+        [Validation(Required=false)]
+        public bool? FillHardwareInfo { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
+        /// </summary>
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
+
         /// <summary>
         /// <para>The office network ID.</para>
         /// 

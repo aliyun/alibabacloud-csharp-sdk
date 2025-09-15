@@ -177,6 +177,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>off</para>
+        /// </summary>
+        [NameInMap("AutoReconnect")]
+        [Validation(Required=false)]
+        public string AutoReconnect { get; set; }
+
+        /// <summary>
         /// <para>The business type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
@@ -272,6 +280,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("Clipboard")]
         [Validation(Required=false)]
         public string Clipboard { get; set; }
+
+        [NameInMap("ClipboardGraineds")]
+        [Validation(Required=false)]
+        public List<ModifyCenterPolicyRequestClipboardGraineds> ClipboardGraineds { get; set; }
+        public class ModifyCenterPolicyRequestClipboardGraineds : TeaModel {
+            [NameInMap("ClipboardSize")]
+            [Validation(Required=false)]
+            public int? ClipboardSize { get; set; }
+
+            [NameInMap("ClipboardType")]
+            [Validation(Required=false)]
+            public string ClipboardType { get; set; }
+
+            [NameInMap("GrainedType")]
+            [Validation(Required=false)]
+            public string GrainedType { get; set; }
+
+        }
+
+        [NameInMap("ClipboardScope")]
+        [Validation(Required=false)]
+        public string ClipboardScope { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to enable color enhancement for design and 3D applications.</para>
@@ -839,6 +869,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string MobileRestart { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>off</para>
+        /// </summary>
+        [NameInMap("MobileSafeMenu")]
+        [Validation(Required=false)]
+        public string MobileSafeMenu { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to display the Stop button in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</para>
         /// <remarks>
         /// <para> This feature applies to only mobile clients of version 7.4.0 or later.</para>
@@ -855,6 +893,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("MobileShutdown")]
         [Validation(Required=false)]
         public string MobileShutdown { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>off</para>
+        /// </summary>
+        [NameInMap("MobileWuyingKeeper")]
+        [Validation(Required=false)]
+        public string MobileWuyingKeeper { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>off</para>
+        /// </summary>
+        [NameInMap("MobileWyAssistant")]
+        [Validation(Required=false)]
+        public string MobileWyAssistant { get; set; }
 
         /// <summary>
         /// <para>The policy name.</para>
@@ -1015,12 +1069,38 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? RecordEventDuration { get; set; }
 
+        [NameInMap("RecordEventFileExts")]
+        [Validation(Required=false)]
+        public List<string> RecordEventFileExts { get; set; }
+
         /// <summary>
         /// <para>The absolute paths to screen recording files.</para>
         /// </summary>
         [NameInMap("RecordEventFilePaths")]
         [Validation(Required=false)]
         public List<string> RecordEventFilePaths { get; set; }
+
+        [NameInMap("RecordEventLevels")]
+        [Validation(Required=false)]
+        public List<ModifyCenterPolicyRequestRecordEventLevels> RecordEventLevels { get; set; }
+        public class ModifyCenterPolicyRequestRecordEventLevels : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>HIGH</para>
+            /// </summary>
+            [NameInMap("EventLevel")]
+            [Validation(Required=false)]
+            public string EventLevel { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>StartApplication</para>
+            /// </summary>
+            [NameInMap("EventType")]
+            [Validation(Required=false)]
+            public string EventType { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The absolute paths to screen recording registries.</para>

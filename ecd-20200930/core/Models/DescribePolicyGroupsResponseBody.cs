@@ -175,6 +175,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>off</para>
+            /// </summary>
+            [NameInMap("AutoReconnect")]
+            [Validation(Required=false)]
+            public string AutoReconnect { get; set; }
+
+            /// <summary>
             /// <para>Indicates whether the webcam redirection feature is enabled.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
@@ -820,6 +828,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MobileRestart { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>off</para>
+            /// </summary>
+            [NameInMap("MobileSafeMenu")]
+            [Validation(Required=false)]
+            public string MobileSafeMenu { get; set; }
+
+            /// <summary>
             /// <para>Specifies whether to display the shut down button in the DesktopAssistant when the cloud computer is accessed from the Alibaba Cloud Workspace mobile clients (including the Android client and the iOS client).</para>
             /// <remarks>
             /// <para>Mobile clients of V7.4 and higher versions required.</para>
@@ -836,6 +852,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("MobileShutdown")]
             [Validation(Required=false)]
             public string MobileShutdown { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>off</para>
+            /// </summary>
+            [NameInMap("MobileWuyingKeeper")]
+            [Validation(Required=false)]
+            public string MobileWuyingKeeper { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>off</para>
+            /// </summary>
+            [NameInMap("MobileWyAssistant")]
+            [Validation(Required=false)]
+            public string MobileWyAssistant { get; set; }
 
             /// <summary>
             /// <para>The name of the cloud computer policy.</para>
@@ -1046,12 +1078,30 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? RecordEventDuration { get; set; }
 
+            [NameInMap("RecordEventFileExts")]
+            [Validation(Required=false)]
+            public List<string> RecordEventFileExts { get; set; }
+
             /// <summary>
             /// <para>The array of absolute paths of the monitored files in the screen recording audit policy.</para>
             /// </summary>
             [NameInMap("RecordEventFilePaths")]
             [Validation(Required=false)]
             public List<string> RecordEventFilePaths { get; set; }
+
+            [NameInMap("RecordEventLevels")]
+            [Validation(Required=false)]
+            public List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels> RecordEventLevels { get; set; }
+            public class DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels : TeaModel {
+                [NameInMap("EventLevel")]
+                [Validation(Required=false)]
+                public string EventLevel { get; set; }
+
+                [NameInMap("EventType")]
+                [Validation(Required=false)]
+                public string EventType { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The array of absolute paths of the monitored registry entries in the screen recording audit policy.</para>
