@@ -1,0 +1,33 @@
+2025-09-15 Version: 1.0.0
+- Delete API ChangeApplicationInfo.
+- Delete API ChargeFlow.
+- Delete API CreateApplicationInfo.
+- Delete API GetAliyunXgipToken.
+- Delete API GetApplication.
+- Delete API GetFreeFlowInstance.
+- Delete API GetFreeFlowProductList.
+- Delete API GetFreeFlowUsage.
+- Delete API GetFreeFlowUsageStatistic.
+- Delete API GetInventoryInfo.
+- Delete API GetItemList.
+- Delete API GetOrderFreeFlowProductStatus.
+- Delete API GetOrderItemList.
+- Delete API GetQosFlowUsage.
+- Delete API GetQosUsageStatistic.
+- Delete API GetUatDataList.
+- Delete API GetUatSpecCtData.
+- Delete API MockGetOrderFreeFlowProductStatus.
+- Delete API MockOrderFreeFlowProduct.
+- Delete API ModifyApplication.
+- Delete API OrderFreeFlowProduct.
+- Delete API SaveApplicationInfo.
+- Delete API SdkChargeFlow.
+- Delete API SdkGetInventoryInfo.
+- Delete API SdkGetItemInstList.
+- Delete API SdkOrderQosProduct.
+- Delete API SdkValidateStatus.
+- Delete API ValidControllerAuthor.
+- Delete API ValidFlow.
+- Delete API ValidateStatus.
+
+
