@@ -384,6 +384,20 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<GetUserCertificateDetailResponseBodyTags> Tags { get; set; }
+        public class GetUserCertificateDetailResponseBodyTags : TeaModel {
+            [NameInMap("TagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            [NameInMap("TagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
+
     }
 
 }
