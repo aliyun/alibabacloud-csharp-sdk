@@ -686,6 +686,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("SqlMode")]
+                [Validation(Required=false)]
+                public int? SqlMode { get; set; }
+
+                /// <summary>
                 /// <para>The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.</para>
                 /// 
                 /// <b>Example:</b>
