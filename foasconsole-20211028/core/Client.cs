@@ -230,9 +230,17 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             {
                 body["PricingCycle"] = request.PricingCycle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                body["PromotionCode"] = request.PromotionCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 body["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
+            {
+                body["UsePromotionCode"] = request.UsePromotionCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -298,9 +306,17 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             {
                 body["PricingCycle"] = request.PricingCycle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                body["PromotionCode"] = request.PromotionCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 body["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
+            {
+                body["UsePromotionCode"] = request.UsePromotionCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1991,6 +2007,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             return await ModifyElasticResourceSpecWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ModifyInstanceVswitch is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>修改集群交换机</para>
@@ -2006,6 +2026,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <returns>
         /// ModifyInstanceVswitchResponse
         /// </returns>
+        [Obsolete("OpenAPI ModifyInstanceVswitch is deprecated")]
+        // Deprecated
         public ModifyInstanceVswitchResponse ModifyInstanceVswitchWithOptions(ModifyInstanceVswitchRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2051,6 +2073,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             return TeaModel.ToObject<ModifyInstanceVswitchResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ModifyInstanceVswitch is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>修改集群交换机</para>
@@ -2066,6 +2092,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <returns>
         /// ModifyInstanceVswitchResponse
         /// </returns>
+        [Obsolete("OpenAPI ModifyInstanceVswitch is deprecated")]
+        // Deprecated
         public async Task<ModifyInstanceVswitchResponse> ModifyInstanceVswitchWithOptionsAsync(ModifyInstanceVswitchRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2111,6 +2139,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             return TeaModel.ToObject<ModifyInstanceVswitchResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ModifyInstanceVswitch is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>修改集群交换机</para>
@@ -2123,12 +2155,18 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <returns>
         /// ModifyInstanceVswitchResponse
         /// </returns>
+        [Obsolete("OpenAPI ModifyInstanceVswitch is deprecated")]
+        // Deprecated
         public ModifyInstanceVswitchResponse ModifyInstanceVswitch(ModifyInstanceVswitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyInstanceVswitchWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ModifyInstanceVswitch is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>修改集群交换机</para>
@@ -2141,6 +2179,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <returns>
         /// ModifyInstanceVswitchResponse
         /// </returns>
+        [Obsolete("OpenAPI ModifyInstanceVswitch is deprecated")]
+        // Deprecated
         public async Task<ModifyInstanceVswitchResponse> ModifyInstanceVswitchAsync(ModifyInstanceVswitchRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2776,9 +2816,17 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             {
                 body["PricingCycle"] = request.PricingCycle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                body["PromotionCode"] = request.PromotionCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 body["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
+            {
+                body["UsePromotionCode"] = request.UsePromotionCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2844,9 +2892,17 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             {
                 body["PricingCycle"] = request.PricingCycle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                body["PromotionCode"] = request.PromotionCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 body["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
+            {
+                body["UsePromotionCode"] = request.UsePromotionCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3542,9 +3598,17 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             {
                 body["PricingCycle"] = request.PricingCycle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                body["PromotionCode"] = request.PromotionCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 body["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
+            {
+                body["UsePromotionCode"] = request.UsePromotionCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3596,9 +3660,17 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             {
                 body["PricingCycle"] = request.PricingCycle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                body["PromotionCode"] = request.PromotionCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 body["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
+            {
+                body["UsePromotionCode"] = request.UsePromotionCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3686,9 +3758,17 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             {
                 body["PricingCycle"] = request.PricingCycle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                body["PromotionCode"] = request.PromotionCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 body["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
+            {
+                body["UsePromotionCode"] = request.UsePromotionCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3740,9 +3820,17 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             {
                 body["PricingCycle"] = request.PricingCycle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                body["PromotionCode"] = request.PromotionCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 body["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
+            {
+                body["UsePromotionCode"] = request.UsePromotionCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

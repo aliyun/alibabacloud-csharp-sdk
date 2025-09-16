@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
 
+        [NameInMap("PromotionCode")]
+        [Validation(Required=false)]
+        public string PromotionCode { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -65,6 +69,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
+
+        [NameInMap("UsePromotionCode")]
+        [Validation(Required=false)]
+        public bool? UsePromotionCode { get; set; }
 
     }
 
