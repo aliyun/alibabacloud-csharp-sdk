@@ -9,6 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateWmEmbedTaskRequest : TeaModel {
+        [NameInMap("AudioControl")]
+        [Validation(Required=false)]
+        public CreateWmEmbedTaskRequestAudioControl AudioControl { get; set; }
+        public class CreateWmEmbedTaskRequestAudioControl : TeaModel {
+            [NameInMap("MetadataControl")]
+            [Validation(Required=false)]
+            public CreateWmEmbedTaskRequestAudioControlMetadataControl MetadataControl { get; set; }
+            public class CreateWmEmbedTaskRequestAudioControlMetadataControl : TeaModel {
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+                [NameInMap("XmpKvBase64")]
+                [Validation(Required=false)]
+                public string XmpKvBase64 { get; set; }
+
+            }
+
+        }
+
         [NameInMap("CsvControl")]
         [Validation(Required=false)]
         public CreateWmEmbedTaskRequestCsvControl CsvControl { get; set; }
@@ -219,6 +239,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 [Validation(Required=false)]
                 public long? Angle { get; set; }
 
+                [NameInMap("Enhance")]
+                [Validation(Required=false)]
+                public bool? Enhance { get; set; }
+
                 [NameInMap("LogoBase64")]
                 [Validation(Required=false)]
                 public string LogoBase64 { get; set; }
@@ -395,6 +419,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public long? ImageEmbedLevel { get; set; }
 
+        [NameInMap("InvisibleEnable")]
+        [Validation(Required=false)]
+        public bool? InvisibleEnable { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>3000k</para>
@@ -402,6 +430,78 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [NameInMap("VideoBitrate")]
         [Validation(Required=false)]
         public string VideoBitrate { get; set; }
+
+        [NameInMap("VideoControl")]
+        [Validation(Required=false)]
+        public CreateWmEmbedTaskRequestVideoControl VideoControl { get; set; }
+        public class CreateWmEmbedTaskRequestVideoControl : TeaModel {
+            [NameInMap("MetadataControl")]
+            [Validation(Required=false)]
+            public CreateWmEmbedTaskRequestVideoControlMetadataControl MetadataControl { get; set; }
+            public class CreateWmEmbedTaskRequestVideoControlMetadataControl : TeaModel {
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+                [NameInMap("XmpKvBase64")]
+                [Validation(Required=false)]
+                public string XmpKvBase64 { get; set; }
+
+            }
+
+            [NameInMap("TextVisibleControl")]
+            [Validation(Required=false)]
+            public CreateWmEmbedTaskRequestVideoControlTextVisibleControl TextVisibleControl { get; set; }
+            public class CreateWmEmbedTaskRequestVideoControlTextVisibleControl : TeaModel {
+                [NameInMap("FontColor")]
+                [Validation(Required=false)]
+                public string FontColor { get; set; }
+
+                [NameInMap("FontSize")]
+                [Validation(Required=false)]
+                public int? FontSize { get; set; }
+
+                [NameInMap("Margin")]
+                [Validation(Required=false)]
+                public CreateWmEmbedTaskRequestVideoControlTextVisibleControlMargin Margin { get; set; }
+                public class CreateWmEmbedTaskRequestVideoControlTextVisibleControlMargin : TeaModel {
+                    [NameInMap("Bottom")]
+                    [Validation(Required=false)]
+                    public int? Bottom { get; set; }
+
+                    [NameInMap("Right")]
+                    [Validation(Required=false)]
+                    public int? Right { get; set; }
+
+                }
+
+                [NameInMap("Mode")]
+                [Validation(Required=false)]
+                public string Mode { get; set; }
+
+                [NameInMap("Opacity")]
+                [Validation(Required=false)]
+                public int? Opacity { get; set; }
+
+                [NameInMap("PosX")]
+                [Validation(Required=false)]
+                public int? PosX { get; set; }
+
+                [NameInMap("PosY")]
+                [Validation(Required=false)]
+                public int? PosY { get; set; }
+
+                [NameInMap("Visible")]
+                [Validation(Required=false)]
+                public bool? Visible { get; set; }
+
+                [NameInMap("VisibleText")]
+                [Validation(Required=false)]
+                public string VisibleText { get; set; }
+
+            }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>

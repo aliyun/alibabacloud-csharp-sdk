@@ -2565,6 +2565,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateWmEmbedTaskShrinkRequest request = new CreateWmEmbedTaskShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AudioControl))
+            {
+                request.AudioControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AudioControl, "AudioControl", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CsvControl))
             {
                 request.CsvControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CsvControl, "CsvControl", "json");
@@ -2577,12 +2581,19 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 request.ImageControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageControl, "ImageControl", "json");
             }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CsvControlShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VideoControl))
             {
-                query["CsvControl"] = request.CsvControlShrink;
+                request.VideoControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoControl, "VideoControl", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioControlShrink))
+            {
+                body["AudioControl"] = request.AudioControlShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CsvControlShrink))
+            {
+                body["CsvControl"] = request.CsvControlShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentControlShrink))
             {
                 body["DocumentControl"] = request.DocumentControlShrink;
@@ -2607,9 +2618,17 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["ImageEmbedLevel"] = request.ImageEmbedLevel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvisibleEnable))
+            {
+                body["InvisibleEnable"] = request.InvisibleEnable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoBitrate))
             {
                 body["VideoBitrate"] = request.VideoBitrate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoControlShrink))
+            {
+                body["VideoControl"] = request.VideoControlShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoIsLong))
             {
@@ -2633,7 +2652,6 @@ namespace AlibabaCloud.SDK.Csas20230120
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2671,6 +2689,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateWmEmbedTaskShrinkRequest request = new CreateWmEmbedTaskShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AudioControl))
+            {
+                request.AudioControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AudioControl, "AudioControl", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CsvControl))
             {
                 request.CsvControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CsvControl, "CsvControl", "json");
@@ -2683,12 +2705,19 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 request.ImageControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImageControl, "ImageControl", "json");
             }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CsvControlShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VideoControl))
             {
-                query["CsvControl"] = request.CsvControlShrink;
+                request.VideoControlShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoControl, "VideoControl", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioControlShrink))
+            {
+                body["AudioControl"] = request.AudioControlShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CsvControlShrink))
+            {
+                body["CsvControl"] = request.CsvControlShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocumentControlShrink))
             {
                 body["DocumentControl"] = request.DocumentControlShrink;
@@ -2713,9 +2742,17 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["ImageEmbedLevel"] = request.ImageEmbedLevel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InvisibleEnable))
+            {
+                body["InvisibleEnable"] = request.InvisibleEnable;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoBitrate))
             {
                 body["VideoBitrate"] = request.VideoBitrate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoControlShrink))
+            {
+                body["VideoControl"] = request.VideoControlShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoIsLong))
             {
@@ -2739,7 +2776,6 @@ namespace AlibabaCloud.SDK.Csas20230120
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -8199,7 +8235,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询connector</para>
+        /// <para>Batch query connectors</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8237,7 +8273,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询connector</para>
+        /// <para>Batch query connectors</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8275,7 +8311,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询connector</para>
+        /// <para>Batch query connectors</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8293,7 +8329,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询connector</para>
+        /// <para>Batch query connectors</para>
         /// </summary>
         /// 
         /// <param name="request">

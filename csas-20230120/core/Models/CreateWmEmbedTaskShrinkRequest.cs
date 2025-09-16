@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateWmEmbedTaskShrinkRequest : TeaModel {
+        [NameInMap("AudioControl")]
+        [Validation(Required=false)]
+        public string AudioControlShrink { get; set; }
+
         [NameInMap("CsvControl")]
         [Validation(Required=false)]
         public string CsvControlShrink { get; set; }
@@ -57,6 +61,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public long? ImageEmbedLevel { get; set; }
 
+        [NameInMap("InvisibleEnable")]
+        [Validation(Required=false)]
+        public bool? InvisibleEnable { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>3000k</para>
@@ -64,6 +72,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [NameInMap("VideoBitrate")]
         [Validation(Required=false)]
         public string VideoBitrate { get; set; }
+
+        [NameInMap("VideoControl")]
+        [Validation(Required=false)]
+        public string VideoControlShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
