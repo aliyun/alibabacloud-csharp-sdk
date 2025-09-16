@@ -133,6 +133,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string RouterTableId { get; set; }
 
+                [NameInMap("SecondaryCidrBlocks")]
+                [Validation(Required=false)]
+                public DescribeNetworksResponseBodyNetworksNetworkSecondaryCidrBlocks SecondaryCidrBlocks { get; set; }
+                public class DescribeNetworksResponseBodyNetworksNetworkSecondaryCidrBlocks : TeaModel {
+                    [NameInMap("SecondaryCidrBlock")]
+                    [Validation(Required=false)]
+                    public List<string> SecondaryCidrBlock { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The status of the network. Valid values:</para>
                 /// <list type="bullet">

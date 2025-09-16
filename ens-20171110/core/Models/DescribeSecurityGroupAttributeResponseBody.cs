@@ -80,6 +80,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string IpProtocol { get; set; }
 
+                [NameInMap("Ipv6DestCidrIp")]
+                [Validation(Required=false)]
+                public string Ipv6DestCidrIp { get; set; }
+
+                [NameInMap("Ipv6SourceCidrIp")]
+                [Validation(Required=false)]
+                public string Ipv6SourceCidrIp { get; set; }
+
                 /// <summary>
                 /// <para>The policy.</para>
                 /// 
