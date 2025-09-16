@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Configuration { get; set; }
 
+        [NameInMap("CreateAsync")]
+        [Validation(Required=false)]
+        public bool? CreateAsync { get; set; }
+
         /// <summary>
         /// <para>The instances in which you want to create the application. You can create applications in an existing virtual private cloud (VPC).</para>
         /// </summary>
