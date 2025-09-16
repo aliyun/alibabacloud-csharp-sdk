@@ -14,7 +14,6 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <remarks>
         /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-bp1lw6g669zpi660</para>
