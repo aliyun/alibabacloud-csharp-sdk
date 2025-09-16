@@ -4484,6 +4484,366 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>新增HTTP入站请求头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public CreateHttpIncomingRequestHeaderModificationRuleResponse CreateHttpIncomingRequestHeaderModificationRuleWithOptions(CreateHttpIncomingRequestHeaderModificationRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateHttpIncomingRequestHeaderModificationRuleShrinkRequest request = new CreateHttpIncomingRequestHeaderModificationRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RequestHeaderModification))
+            {
+                request.RequestHeaderModificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequestHeaderModification, "RequestHeaderModification", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestHeaderModificationShrink))
+            {
+                query["RequestHeaderModification"] = request.RequestHeaderModificationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateHttpIncomingRequestHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateHttpIncomingRequestHeaderModificationRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增HTTP入站请求头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<CreateHttpIncomingRequestHeaderModificationRuleResponse> CreateHttpIncomingRequestHeaderModificationRuleWithOptionsAsync(CreateHttpIncomingRequestHeaderModificationRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateHttpIncomingRequestHeaderModificationRuleShrinkRequest request = new CreateHttpIncomingRequestHeaderModificationRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RequestHeaderModification))
+            {
+                request.RequestHeaderModificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequestHeaderModification, "RequestHeaderModification", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestHeaderModificationShrink))
+            {
+                query["RequestHeaderModification"] = request.RequestHeaderModificationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateHttpIncomingRequestHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateHttpIncomingRequestHeaderModificationRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增HTTP入站请求头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public CreateHttpIncomingRequestHeaderModificationRuleResponse CreateHttpIncomingRequestHeaderModificationRule(CreateHttpIncomingRequestHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateHttpIncomingRequestHeaderModificationRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增HTTP入站请求头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<CreateHttpIncomingRequestHeaderModificationRuleResponse> CreateHttpIncomingRequestHeaderModificationRuleAsync(CreateHttpIncomingRequestHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateHttpIncomingRequestHeaderModificationRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public CreateHttpIncomingResponseHeaderModificationRuleResponse CreateHttpIncomingResponseHeaderModificationRuleWithOptions(CreateHttpIncomingResponseHeaderModificationRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateHttpIncomingResponseHeaderModificationRuleShrinkRequest request = new CreateHttpIncomingResponseHeaderModificationRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResponseHeaderModification))
+            {
+                request.ResponseHeaderModificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResponseHeaderModification, "ResponseHeaderModification", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseHeaderModificationShrink))
+            {
+                query["ResponseHeaderModification"] = request.ResponseHeaderModificationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateHttpIncomingResponseHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateHttpIncomingResponseHeaderModificationRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<CreateHttpIncomingResponseHeaderModificationRuleResponse> CreateHttpIncomingResponseHeaderModificationRuleWithOptionsAsync(CreateHttpIncomingResponseHeaderModificationRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateHttpIncomingResponseHeaderModificationRuleShrinkRequest request = new CreateHttpIncomingResponseHeaderModificationRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResponseHeaderModification))
+            {
+                request.ResponseHeaderModificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResponseHeaderModification, "ResponseHeaderModification", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseHeaderModificationShrink))
+            {
+                query["ResponseHeaderModification"] = request.ResponseHeaderModificationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateHttpIncomingResponseHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateHttpIncomingResponseHeaderModificationRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public CreateHttpIncomingResponseHeaderModificationRuleResponse CreateHttpIncomingResponseHeaderModificationRule(CreateHttpIncomingResponseHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateHttpIncomingResponseHeaderModificationRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<CreateHttpIncomingResponseHeaderModificationRuleResponse> CreateHttpIncomingResponseHeaderModificationRuleAsync(CreateHttpIncomingResponseHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateHttpIncomingResponseHeaderModificationRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Add HTTP Request Header Rule</para>
         /// </summary>
         /// 
@@ -12334,6 +12694,262 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteEdgeContainerAppVersionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除HTTP入站请求头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public DeleteHttpIncomingRequestHeaderModificationRuleResponse DeleteHttpIncomingRequestHeaderModificationRuleWithOptions(DeleteHttpIncomingRequestHeaderModificationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteHttpIncomingRequestHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteHttpIncomingRequestHeaderModificationRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除HTTP入站请求头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<DeleteHttpIncomingRequestHeaderModificationRuleResponse> DeleteHttpIncomingRequestHeaderModificationRuleWithOptionsAsync(DeleteHttpIncomingRequestHeaderModificationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteHttpIncomingRequestHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteHttpIncomingRequestHeaderModificationRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除HTTP入站请求头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public DeleteHttpIncomingRequestHeaderModificationRuleResponse DeleteHttpIncomingRequestHeaderModificationRule(DeleteHttpIncomingRequestHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteHttpIncomingRequestHeaderModificationRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除HTTP入站请求头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<DeleteHttpIncomingRequestHeaderModificationRuleResponse> DeleteHttpIncomingRequestHeaderModificationRuleAsync(DeleteHttpIncomingRequestHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteHttpIncomingRequestHeaderModificationRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public DeleteHttpIncomingResponseHeaderModificationRuleResponse DeleteHttpIncomingResponseHeaderModificationRuleWithOptions(DeleteHttpIncomingResponseHeaderModificationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteHttpIncomingResponseHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteHttpIncomingResponseHeaderModificationRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<DeleteHttpIncomingResponseHeaderModificationRuleResponse> DeleteHttpIncomingResponseHeaderModificationRuleWithOptionsAsync(DeleteHttpIncomingResponseHeaderModificationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteHttpIncomingResponseHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteHttpIncomingResponseHeaderModificationRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public DeleteHttpIncomingResponseHeaderModificationRuleResponse DeleteHttpIncomingResponseHeaderModificationRule(DeleteHttpIncomingResponseHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteHttpIncomingResponseHeaderModificationRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<DeleteHttpIncomingResponseHeaderModificationRuleResponse> DeleteHttpIncomingResponseHeaderModificationRuleAsync(DeleteHttpIncomingResponseHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteHttpIncomingResponseHeaderModificationRuleWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -22050,6 +22666,230 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询HTTP入站请求头规则详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public GetHttpIncomingRequestHeaderModificationRuleResponse GetHttpIncomingRequestHeaderModificationRuleWithOptions(GetHttpIncomingRequestHeaderModificationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHttpIncomingRequestHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetHttpIncomingRequestHeaderModificationRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站请求头规则详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<GetHttpIncomingRequestHeaderModificationRuleResponse> GetHttpIncomingRequestHeaderModificationRuleWithOptionsAsync(GetHttpIncomingRequestHeaderModificationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHttpIncomingRequestHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetHttpIncomingRequestHeaderModificationRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站请求头规则详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public GetHttpIncomingRequestHeaderModificationRuleResponse GetHttpIncomingRequestHeaderModificationRule(GetHttpIncomingRequestHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetHttpIncomingRequestHeaderModificationRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站请求头规则详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<GetHttpIncomingRequestHeaderModificationRuleResponse> GetHttpIncomingRequestHeaderModificationRuleAsync(GetHttpIncomingRequestHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetHttpIncomingRequestHeaderModificationRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public GetHttpIncomingResponseHeaderModificationRuleResponse GetHttpIncomingResponseHeaderModificationRuleWithOptions(GetHttpIncomingResponseHeaderModificationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHttpIncomingResponseHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetHttpIncomingResponseHeaderModificationRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<GetHttpIncomingResponseHeaderModificationRuleResponse> GetHttpIncomingResponseHeaderModificationRuleWithOptionsAsync(GetHttpIncomingResponseHeaderModificationRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHttpIncomingResponseHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetHttpIncomingResponseHeaderModificationRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public GetHttpIncomingResponseHeaderModificationRuleResponse GetHttpIncomingResponseHeaderModificationRule(GetHttpIncomingResponseHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetHttpIncomingResponseHeaderModificationRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<GetHttpIncomingResponseHeaderModificationRuleResponse> GetHttpIncomingResponseHeaderModificationRuleAsync(GetHttpIncomingResponseHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetHttpIncomingResponseHeaderModificationRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Query HTTP Request Header Rule Details</para>
         /// </summary>
         /// 
@@ -29796,6 +30636,230 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListEdgeRoutineRecordsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站请求头规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHttpIncomingRequestHeaderModificationRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHttpIncomingRequestHeaderModificationRulesResponse
+        /// </returns>
+        public ListHttpIncomingRequestHeaderModificationRulesResponse ListHttpIncomingRequestHeaderModificationRulesWithOptions(ListHttpIncomingRequestHeaderModificationRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListHttpIncomingRequestHeaderModificationRules",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListHttpIncomingRequestHeaderModificationRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站请求头规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHttpIncomingRequestHeaderModificationRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHttpIncomingRequestHeaderModificationRulesResponse
+        /// </returns>
+        public async Task<ListHttpIncomingRequestHeaderModificationRulesResponse> ListHttpIncomingRequestHeaderModificationRulesWithOptionsAsync(ListHttpIncomingRequestHeaderModificationRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListHttpIncomingRequestHeaderModificationRules",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListHttpIncomingRequestHeaderModificationRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站请求头规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHttpIncomingRequestHeaderModificationRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHttpIncomingRequestHeaderModificationRulesResponse
+        /// </returns>
+        public ListHttpIncomingRequestHeaderModificationRulesResponse ListHttpIncomingRequestHeaderModificationRules(ListHttpIncomingRequestHeaderModificationRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListHttpIncomingRequestHeaderModificationRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站请求头规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHttpIncomingRequestHeaderModificationRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHttpIncomingRequestHeaderModificationRulesResponse
+        /// </returns>
+        public async Task<ListHttpIncomingRequestHeaderModificationRulesResponse> ListHttpIncomingRequestHeaderModificationRulesAsync(ListHttpIncomingRequestHeaderModificationRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListHttpIncomingRequestHeaderModificationRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站响应头规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHttpIncomingResponseHeaderModificationRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHttpIncomingResponseHeaderModificationRulesResponse
+        /// </returns>
+        public ListHttpIncomingResponseHeaderModificationRulesResponse ListHttpIncomingResponseHeaderModificationRulesWithOptions(ListHttpIncomingResponseHeaderModificationRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListHttpIncomingResponseHeaderModificationRules",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListHttpIncomingResponseHeaderModificationRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站响应头规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHttpIncomingResponseHeaderModificationRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHttpIncomingResponseHeaderModificationRulesResponse
+        /// </returns>
+        public async Task<ListHttpIncomingResponseHeaderModificationRulesResponse> ListHttpIncomingResponseHeaderModificationRulesWithOptionsAsync(ListHttpIncomingResponseHeaderModificationRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListHttpIncomingResponseHeaderModificationRules",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListHttpIncomingResponseHeaderModificationRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站响应头规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHttpIncomingResponseHeaderModificationRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHttpIncomingResponseHeaderModificationRulesResponse
+        /// </returns>
+        public ListHttpIncomingResponseHeaderModificationRulesResponse ListHttpIncomingResponseHeaderModificationRules(ListHttpIncomingResponseHeaderModificationRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListHttpIncomingResponseHeaderModificationRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询HTTP入站响应头规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHttpIncomingResponseHeaderModificationRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHttpIncomingResponseHeaderModificationRulesResponse
+        /// </returns>
+        public async Task<ListHttpIncomingResponseHeaderModificationRulesResponse> ListHttpIncomingResponseHeaderModificationRulesAsync(ListHttpIncomingResponseHeaderModificationRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListHttpIncomingResponseHeaderModificationRulesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -41170,6 +42234,366 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateEdgeContainerAppResourceReserveWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改HTTP入站请求头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public UpdateHttpIncomingRequestHeaderModificationRuleResponse UpdateHttpIncomingRequestHeaderModificationRuleWithOptions(UpdateHttpIncomingRequestHeaderModificationRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateHttpIncomingRequestHeaderModificationRuleShrinkRequest request = new UpdateHttpIncomingRequestHeaderModificationRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RequestHeaderModification))
+            {
+                request.RequestHeaderModificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequestHeaderModification, "RequestHeaderModification", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestHeaderModificationShrink))
+            {
+                query["RequestHeaderModification"] = request.RequestHeaderModificationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateHttpIncomingRequestHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateHttpIncomingRequestHeaderModificationRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改HTTP入站请求头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<UpdateHttpIncomingRequestHeaderModificationRuleResponse> UpdateHttpIncomingRequestHeaderModificationRuleWithOptionsAsync(UpdateHttpIncomingRequestHeaderModificationRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateHttpIncomingRequestHeaderModificationRuleShrinkRequest request = new UpdateHttpIncomingRequestHeaderModificationRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RequestHeaderModification))
+            {
+                request.RequestHeaderModificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequestHeaderModification, "RequestHeaderModification", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestHeaderModificationShrink))
+            {
+                query["RequestHeaderModification"] = request.RequestHeaderModificationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateHttpIncomingRequestHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateHttpIncomingRequestHeaderModificationRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改HTTP入站请求头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public UpdateHttpIncomingRequestHeaderModificationRuleResponse UpdateHttpIncomingRequestHeaderModificationRule(UpdateHttpIncomingRequestHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateHttpIncomingRequestHeaderModificationRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改HTTP入站请求头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHttpIncomingRequestHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHttpIncomingRequestHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<UpdateHttpIncomingRequestHeaderModificationRuleResponse> UpdateHttpIncomingRequestHeaderModificationRuleAsync(UpdateHttpIncomingRequestHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateHttpIncomingRequestHeaderModificationRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public UpdateHttpIncomingResponseHeaderModificationRuleResponse UpdateHttpIncomingResponseHeaderModificationRuleWithOptions(UpdateHttpIncomingResponseHeaderModificationRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateHttpIncomingResponseHeaderModificationRuleShrinkRequest request = new UpdateHttpIncomingResponseHeaderModificationRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResponseHeaderModification))
+            {
+                request.ResponseHeaderModificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResponseHeaderModification, "ResponseHeaderModification", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseHeaderModificationShrink))
+            {
+                query["ResponseHeaderModification"] = request.ResponseHeaderModificationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateHttpIncomingResponseHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateHttpIncomingResponseHeaderModificationRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<UpdateHttpIncomingResponseHeaderModificationRuleResponse> UpdateHttpIncomingResponseHeaderModificationRuleWithOptionsAsync(UpdateHttpIncomingResponseHeaderModificationRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateHttpIncomingResponseHeaderModificationRuleShrinkRequest request = new UpdateHttpIncomingResponseHeaderModificationRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResponseHeaderModification))
+            {
+                request.ResponseHeaderModificationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResponseHeaderModification, "ResponseHeaderModification", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseHeaderModificationShrink))
+            {
+                query["ResponseHeaderModification"] = request.ResponseHeaderModificationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateHttpIncomingResponseHeaderModificationRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateHttpIncomingResponseHeaderModificationRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public UpdateHttpIncomingResponseHeaderModificationRuleResponse UpdateHttpIncomingResponseHeaderModificationRule(UpdateHttpIncomingResponseHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateHttpIncomingResponseHeaderModificationRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改HTTP入站响应头规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHttpIncomingResponseHeaderModificationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHttpIncomingResponseHeaderModificationRuleResponse
+        /// </returns>
+        public async Task<UpdateHttpIncomingResponseHeaderModificationRuleResponse> UpdateHttpIncomingResponseHeaderModificationRuleAsync(UpdateHttpIncomingResponseHeaderModificationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateHttpIncomingResponseHeaderModificationRuleWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
