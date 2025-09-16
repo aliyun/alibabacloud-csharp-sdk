@@ -376,6 +376,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            [NameInMap("WebSDKConfigJson")]
+            [Validation(Required=false)]
+            public string WebSDKConfigJson { get; set; }
+
         }
 
         /// <summary>

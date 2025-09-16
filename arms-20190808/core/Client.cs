@@ -38329,6 +38329,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             {
                 query["Stop"] = request.Stop;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebSDKConfigJson))
+            {
+                query["WebSDKConfigJson"] = request.WebSDKConfigJson;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -38423,6 +38427,10 @@ namespace AlibabaCloud.SDK.ARMS20190808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stop))
             {
                 query["Stop"] = request.Stop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebSDKConfigJson))
+            {
+                query["WebSDKConfigJson"] = request.WebSDKConfigJson;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
