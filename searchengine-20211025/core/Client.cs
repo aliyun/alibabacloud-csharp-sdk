@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             {
                 body["partition"] = request.Partition;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                body["path"] = request.Path;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 body["tag"] = request.Tag;
@@ -180,6 +184,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Partition))
             {
                 body["partition"] = request.Partition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                body["path"] = request.Path;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -12393,6 +12401,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return await ModifyFileWithOptionsAsync(instanceId, indexName, versionName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑索引表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyIndexRequest
         /// </param>
@@ -12488,6 +12501,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyIndexResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑索引表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyIndexRequest
         /// </param>
@@ -12583,6 +12601,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return TeaModel.ToObject<ModifyIndexResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑索引表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyIndexRequest
         /// </param>
@@ -12597,6 +12620,11 @@ namespace AlibabaCloud.SDK.Searchengine20211025
             return ModifyIndexWithOptions(instanceId, indexName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑索引表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyIndexRequest
         /// </param>

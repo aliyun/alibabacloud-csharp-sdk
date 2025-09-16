@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public string Partition { get; set; }
 
+        [NameInMap("path")]
+        [Validation(Required=false)]
+        public string Path { get; set; }
+
         [NameInMap("tag")]
         [Validation(Required=false)]
         public string Tag { get; set; }

@@ -175,6 +175,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public string Table { get; set; }
 
+                [NameInMap("tableFormat")]
+                [Validation(Required=false)]
+                public string TableFormat { get; set; }
+
                 [NameInMap("tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
