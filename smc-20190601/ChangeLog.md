@@ -1,3 +1,7 @@
+2025-09-17 Version: 1.1.1
+- Update API DescribeReplicationJobs: add response parameters Body.ReplicationJobs.$.WorkgroupId.
+
+
 2025-03-31 Version: 1.1.0
 - Support API AssociateSourceServers.
 - Support API CreateCrossZoneMigrationJob.

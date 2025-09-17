@@ -900,6 +900,10 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
+                [NameInMap("WorkgroupId")]
+                [Validation(Required=false)]
+                public string WorkgroupId { get; set; }
+
             }
 
         }

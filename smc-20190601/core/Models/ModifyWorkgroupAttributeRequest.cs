@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
 {
     public class ModifyWorkgroupAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The new description of the workgroup.</para>
-        /// <para>The description must be 2 to 128 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The new description of the workgroup. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -21,7 +20,11 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The new name of the workgroup. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the workgroup. The name must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The name must be unique.</description></item>
+        /// <item><description>The name must be 2 to 64 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain digits, colons (:), periods (.), underscores (_), and hyphens (-).</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>testMigrationTaskName</para>
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The workgroup ID.</para>
+        /// <para>The ID of the workgroup.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

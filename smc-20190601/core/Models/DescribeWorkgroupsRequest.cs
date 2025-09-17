@@ -64,15 +64,14 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The list of tag information of workgroups.</para>
+        /// <para>The tags of the reserved instance. You can specify up to 20 tags. If you specify multiple tags, the tag keys cannot be duplicated.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeWorkgroupsRequestTag> Tag { get; set; }
         public class DescribeWorkgroupsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the workgroup. Valid values of N: 1 to 20.</para>
-            /// <para>You cannot specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</para>
+            /// <para>The tag key of the workgroup. You cannot specify an empty string as a tag key. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -82,8 +81,7 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the workgroup. Valid values of N: 1 to 20.</para>
-            /// <para>You can specify an empty string as a tag value. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</para>
+            /// <para>The tag value of the workgroup. The tag value can be up to 128 characters in length, cannot be an empty string, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

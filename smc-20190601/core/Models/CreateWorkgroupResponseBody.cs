@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The workgroup ID.</para>
+        /// <para>The ID of the workgroup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>w-***</para>

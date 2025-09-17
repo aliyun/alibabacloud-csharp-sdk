@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The IDs of migration sources. You can specify up to 50 IDs.</para>
+        /// <para>The ID of the migration source. A workgroup can be associated with a maximum of 50 migration sources.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SourceId")]

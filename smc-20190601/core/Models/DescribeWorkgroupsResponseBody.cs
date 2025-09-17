@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The queried workgroups.</para>
+        /// <para>The details of the workgroup.</para>
         /// </summary>
         [NameInMap("Workgroups")]
         [Validation(Required=false)]
@@ -109,7 +109,6 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
                     public class DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTagsTag : TeaModel {
                         /// <summary>
                         /// <para>The tag key of the workgroup.</para>
-                        /// <para>You can specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TestKey</para>
@@ -119,8 +118,7 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The tag value of the workgroup. Valid values of N: 1 to 20.</para>
-                        /// <para>You can specify an empty string as a tag value. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</para>
+                        /// <para>The tag value of the workgroup.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TestValue</para>
@@ -177,7 +175,7 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
                 }
 
                 /// <summary>
-                /// <para>The workgroup ID.</para>
+                /// <para>The ID of the workgroup.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>w-***</para>

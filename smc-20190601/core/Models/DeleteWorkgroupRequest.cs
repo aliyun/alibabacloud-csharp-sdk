@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Smc20190601.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The workgroup ID.</para>
+        /// <para>The ID of the workgroup.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
