@@ -89,9 +89,9 @@ namespace AlibabaCloud.SDK.Acc20240402.Models
             /// <b>Example:</b>
             /// <para>myusername</para>
             /// </summary>
-            [NameInMap("UserName")]
+            [NameInMap("Username")]
             [Validation(Required=false)]
-            public string UserName { get; set; }
+            public string Username { get; set; }
 
         }
 
