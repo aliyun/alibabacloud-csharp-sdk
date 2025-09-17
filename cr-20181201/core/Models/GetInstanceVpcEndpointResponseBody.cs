@@ -82,6 +82,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Ip { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>PRIVATE_ZONE_CONFLICT_AT_{private_zone_id}</para>
+            /// </summary>
+            [NameInMap("Issue")]
+            [Validation(Required=false)]
+            public string Issue { get; set; }
+
+            /// <summary>
             /// <para>The status of the VPC. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>CREATING</c></description></item>
