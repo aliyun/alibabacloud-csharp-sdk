@@ -8,20 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
 {
-    public class UpdateResourceRequest : TeaModel {
-        /// <summary>
-        /// <para>The request body. The property of the resource to be updated is specified in JSON format.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{
-        ///      &quot;AccountPassword&quot;: &quot;4321****&quot;,
-        ///      &quot;Description&quot;: &quot;cctest&quot;
-        /// }</para>
-        /// </summary>
-        [NameInMap("body")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Body { get; set; }
-
+    public class DeleteResourceShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request. If a cloud service supports idempotence, the parameter takes effect.</para>
         /// 
@@ -32,8 +19,12 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("filter")]
+        [Validation(Required=false)]
+        public string FilterShrink { get; set; }
+
         /// <summary>
-        /// <para>The region ID. This parameter is required if a cloud service is a regionalized.</para>
+        /// <para>The region. This parameter is required if a cloud service is a regionalized.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

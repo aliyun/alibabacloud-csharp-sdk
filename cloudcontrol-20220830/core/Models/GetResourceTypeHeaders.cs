@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
 
+        /// <summary>
+        /// <para>The language selected for the returned product.</para>
+        /// <para>zh_CH: Chinese (default)</para>
+        /// <para>en_US: English</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh_CH</para>
+        /// </summary>
         [NameInMap("x-acs-accept-language")]
         [Validation(Required=false)]
         public string XAcsAcceptLanguage { get; set; }

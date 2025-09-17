@@ -37,13 +37,27 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @summary 取消任务
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to cancel a specified asynchronous task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only tasks that are in the Pending or Running state can be canceled.
+        /// You can call the CancelTask operation to cancel a Cloud Control API task, but the tasks that have been started in the downstream Alibaba Cloud services cannot be canceled.</para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelTaskResponse
+        /// </returns>
         public CancelTaskResponse CancelTaskWithOptions(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -65,13 +79,27 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<CancelTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 取消任务
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CancelTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to cancel a specified asynchronous task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only tasks that are in the Pending or Running state can be canceled.
+        /// You can call the CancelTask operation to cancel a Cloud Control API task, but the tasks that have been started in the downstream Alibaba Cloud services cannot be canceled.</para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelTaskResponse
+        /// </returns>
         public async Task<CancelTaskResponse> CancelTaskWithOptionsAsync(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -93,11 +121,20 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<CancelTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 取消任务
-         *
-         * @return CancelTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to cancel a specified asynchronous task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only tasks that are in the Pending or Running state can be canceled.
+        /// You can call the CancelTask operation to cancel a Cloud Control API task, but the tasks that have been started in the downstream Alibaba Cloud services cannot be canceled.</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// CancelTaskResponse
+        /// </returns>
         public CancelTaskResponse CancelTask(string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -105,11 +142,20 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return CancelTaskWithOptions(taskId, headers, runtime);
         }
 
-        /**
-         * @summary 取消任务
-         *
-         * @return CancelTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to cancel a specified asynchronous task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only tasks that are in the Pending or Running state can be canceled.
+        /// You can call the CancelTask operation to cancel a Cloud Control API task, but the tasks that have been started in the downstream Alibaba Cloud services cannot be canceled.</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// CancelTaskResponse
+        /// </returns>
         public async Task<CancelTaskResponse> CancelTaskAsync(string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -117,15 +163,32 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return await CancelTaskWithOptionsAsync(taskId, headers, runtime);
         }
 
-        /**
-         * @summary 创建资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param request CreateResourceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to create resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// CreateResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceResponse
+        /// </returns>
         public CreateResourceResponse CreateResourceWithOptions(string requestPath, CreateResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -159,15 +222,32 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<CreateResourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param request CreateResourceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return CreateResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to create resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// CreateResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceResponse
+        /// </returns>
         public async Task<CreateResourceResponse> CreateResourceWithOptionsAsync(string requestPath, CreateResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -201,13 +281,26 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<CreateResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 创建资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param request CreateResourceRequest
-         * @return CreateResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to create resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// CreateResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceResponse
+        /// </returns>
         public CreateResourceResponse CreateResource(string requestPath, CreateResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -215,13 +308,26 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return CreateResourceWithOptions(requestPath, request, headers, runtime);
         }
 
-        /**
-         * @summary 创建资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param request CreateResourceRequest
-         * @return CreateResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to create resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// CreateResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceResponse
+        /// </returns>
         public async Task<CreateResourceResponse> CreateResourceAsync(string requestPath, CreateResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -229,22 +335,49 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return await CreateResourceWithOptionsAsync(requestPath, request, headers, runtime);
         }
 
-        /**
-         * @summary 删除资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param request DeleteResourceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteResourceResponse
-         */
-        public DeleteResourceResponse DeleteResourceWithOptions(string requestPath, DeleteResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to delete resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="tmpReq">
+        /// DeleteResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteResourceResponse
+        /// </returns>
+        public DeleteResourceResponse DeleteResourceWithOptions(string requestPath, DeleteResourceRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteResourceShrinkRequest request = new DeleteResourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "filter", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["filter"] = request.FilterShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -270,22 +403,49 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<DeleteResourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param request DeleteResourceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return DeleteResourceResponse
-         */
-        public async Task<DeleteResourceResponse> DeleteResourceWithOptionsAsync(string requestPath, DeleteResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to delete resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="tmpReq">
+        /// DeleteResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteResourceResponse
+        /// </returns>
+        public async Task<DeleteResourceResponse> DeleteResourceWithOptionsAsync(string requestPath, DeleteResourceRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteResourceShrinkRequest request = new DeleteResourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "filter", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["filter"] = request.FilterShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -311,13 +471,26 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<DeleteResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 删除资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param request DeleteResourceRequest
-         * @return DeleteResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to delete resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// DeleteResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteResourceResponse
+        /// </returns>
         public DeleteResourceResponse DeleteResource(string requestPath, DeleteResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -325,13 +498,26 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return DeleteResourceWithOptions(requestPath, request, headers, runtime);
         }
 
-        /**
-         * @summary 删除资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param request DeleteResourceRequest
-         * @return DeleteResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to delete resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// DeleteResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteResourceResponse
+        /// </returns>
         public async Task<DeleteResourceResponse> DeleteResourceAsync(string requestPath, DeleteResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -339,15 +525,27 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return await DeleteResourceWithOptionsAsync(requestPath, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询价格
-         *
-         * @param requestPath the whole path of resource string
-         * @param tmpReq GetPriceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetPriceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>An RFQ interface through which users can query resource prices.</para>
+        /// </summary>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="tmpReq">
+        /// GetPriceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPriceResponse
+        /// </returns>
         public GetPriceResponse GetPriceWithOptions(string requestPath, GetPriceRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -386,15 +584,27 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<GetPriceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询价格
-         *
-         * @param requestPath the whole path of resource string
-         * @param tmpReq GetPriceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetPriceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>An RFQ interface through which users can query resource prices.</para>
+        /// </summary>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="tmpReq">
+        /// GetPriceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPriceResponse
+        /// </returns>
         public async Task<GetPriceResponse> GetPriceWithOptionsAsync(string requestPath, GetPriceRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -433,13 +643,21 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<GetPriceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询价格
-         *
-         * @param requestPath the whole path of resource string
-         * @param request GetPriceRequest
-         * @return GetPriceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>An RFQ interface through which users can query resource prices.</para>
+        /// </summary>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// GetPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPriceResponse
+        /// </returns>
         public GetPriceResponse GetPrice(string requestPath, GetPriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -447,13 +665,21 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return GetPriceWithOptions(requestPath, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询价格
-         *
-         * @param requestPath the whole path of resource string
-         * @param request GetPriceRequest
-         * @return GetPriceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>An RFQ interface through which users can query resource prices.</para>
+        /// </summary>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// GetPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPriceResponse
+        /// </returns>
         public async Task<GetPriceResponse> GetPriceAsync(string requestPath, GetPriceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -461,14 +687,24 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return await GetPriceWithOptionsAsync(requestPath, request, headers, runtime);
         }
 
-        /**
-         * @summary 获取资源元数据
-         *
-         * @param requestPath the whole path of resource string
-         * @param headers GetResourceTypeHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetResourceTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the operation to obtain resource metadata.</para>
+        /// </summary>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="headers">
+        /// GetResourceTypeHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceTypeResponse
+        /// </returns>
         public GetResourceTypeResponse GetResourceTypeWithOptions(string requestPath, GetResourceTypeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -499,14 +735,24 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<GetResourceTypeResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取资源元数据
-         *
-         * @param requestPath the whole path of resource string
-         * @param headers GetResourceTypeHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetResourceTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the operation to obtain resource metadata.</para>
+        /// </summary>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="headers">
+        /// GetResourceTypeHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceTypeResponse
+        /// </returns>
         public async Task<GetResourceTypeResponse> GetResourceTypeWithOptionsAsync(string requestPath, GetResourceTypeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
@@ -537,12 +783,18 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<GetResourceTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 获取资源元数据
-         *
-         * @param requestPath the whole path of resource string
-         * @return GetResourceTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the operation to obtain resource metadata.</para>
+        /// </summary>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceTypeResponse
+        /// </returns>
         public GetResourceTypeResponse GetResourceType(string requestPath)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -550,12 +802,18 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return GetResourceTypeWithOptions(requestPath, headers, runtime);
         }
 
-        /**
-         * @summary 获取资源元数据
-         *
-         * @param requestPath the whole path of resource string
-         * @return GetResourceTypeResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the operation to obtain resource metadata.</para>
+        /// </summary>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceTypeResponse
+        /// </returns>
         public async Task<GetResourceTypeResponse> GetResourceTypeAsync(string requestPath)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -563,15 +821,33 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return await GetResourceTypeWithOptionsAsync(requestPath, headers, runtime);
         }
 
-        /**
-         * @summary 查询资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param tmpReq GetResourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the operation to query resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out CloudControl API.
+        /// You can call this operation to query resources List and Get based on different request paths.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="tmpReq">
+        /// GetResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourcesResponse
+        /// </returns>
         public GetResourcesResponse GetResourcesWithOptions(string requestPath, GetResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -618,15 +894,33 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<GetResourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param tmpReq GetResourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the operation to query resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out CloudControl API.
+        /// You can call this operation to query resources List and Get based on different request paths.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="tmpReq">
+        /// GetResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourcesResponse
+        /// </returns>
         public async Task<GetResourcesResponse> GetResourcesWithOptionsAsync(string requestPath, GetResourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -673,13 +967,27 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<GetResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param request GetResourcesRequest
-         * @return GetResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the operation to query resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out CloudControl API.
+        /// You can call this operation to query resources List and Get based on different request paths.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// GetResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourcesResponse
+        /// </returns>
         public GetResourcesResponse GetResources(string requestPath, GetResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -687,13 +995,27 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return GetResourcesWithOptions(requestPath, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param request GetResourcesRequest
-         * @return GetResourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the operation to query resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out CloudControl API.
+        /// You can call this operation to query resources List and Get based on different request paths.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// GetResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourcesResponse
+        /// </returns>
         public async Task<GetResourcesResponse> GetResourcesAsync(string requestPath, GetResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -701,15 +1023,26 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return await GetResourcesWithOptionsAsync(requestPath, request, headers, runtime);
         }
 
-        /**
-         * @summary 查询任务
-         *
-         * @description GET /api/v1/tasks/{taskId}。
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to query a specified asynchronous task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>GET /api/v1/tasks/{taskId}.</para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
         public GetTaskResponse GetTaskWithOptions(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -731,15 +1064,26 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<GetTaskResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询任务
-         *
-         * @description GET /api/v1/tasks/{taskId}。
-         *
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return GetTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to query a specified asynchronous task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>GET /api/v1/tasks/{taskId}.</para>
+        /// </description>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
         public async Task<GetTaskResponse> GetTaskWithOptionsAsync(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -761,13 +1105,19 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<GetTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 查询任务
-         *
-         * @description GET /api/v1/tasks/{taskId}。
-         *
-         * @return GetTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to query a specified asynchronous task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>GET /api/v1/tasks/{taskId}.</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
         public GetTaskResponse GetTask(string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -775,13 +1125,19 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return GetTaskWithOptions(taskId, headers, runtime);
         }
 
-        /**
-         * @summary 查询任务
-         *
-         * @description GET /api/v1/tasks/{taskId}。
-         *
-         * @return GetTaskResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to query a specified asynchronous task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>GET /api/v1/tasks/{taskId}.</para>
+        /// </description>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
         public async Task<GetTaskResponse> GetTaskAsync(string taskId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -789,15 +1145,27 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return await GetTaskWithOptionsAsync(taskId, headers, runtime);
         }
 
-        /**
-         * @summary 列举资源属性可选值
-         *
-         * @param requestPath the whole path of resource string
-         * @param tmpReq ListDataSourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDataSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the operation to query the valid values of resource attributes, such as RegionID and ZoneId.</para>
+        /// </summary>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="tmpReq">
+        /// ListDataSourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataSourcesResponse
+        /// </returns>
         public ListDataSourcesResponse ListDataSourcesWithOptions(string requestPath, ListDataSourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -836,15 +1204,27 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<ListDataSourcesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 列举资源属性可选值
-         *
-         * @param requestPath the whole path of resource string
-         * @param tmpReq ListDataSourcesRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListDataSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the operation to query the valid values of resource attributes, such as RegionID and ZoneId.</para>
+        /// </summary>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="tmpReq">
+        /// ListDataSourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataSourcesResponse
+        /// </returns>
         public async Task<ListDataSourcesResponse> ListDataSourcesWithOptionsAsync(string requestPath, ListDataSourcesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -883,13 +1263,21 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<ListDataSourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 列举资源属性可选值
-         *
-         * @param requestPath the whole path of resource string
-         * @param request ListDataSourcesRequest
-         * @return ListDataSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the operation to query the valid values of resource attributes, such as RegionID and ZoneId.</para>
+        /// </summary>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// ListDataSourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataSourcesResponse
+        /// </returns>
         public ListDataSourcesResponse ListDataSources(string requestPath, ListDataSourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -897,13 +1285,21 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return ListDataSourcesWithOptions(requestPath, request, headers, runtime);
         }
 
-        /**
-         * @summary 列举资源属性可选值
-         *
-         * @param requestPath the whole path of resource string
-         * @param request ListDataSourcesRequest
-         * @return ListDataSourcesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the operation to query the valid values of resource attributes, such as RegionID and ZoneId.</para>
+        /// </summary>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// ListDataSourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataSourcesResponse
+        /// </returns>
         public async Task<ListDataSourcesResponse> ListDataSourcesAsync(string requestPath, ListDataSourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -911,16 +1307,29 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return await ListDataSourcesWithOptionsAsync(requestPath, request, headers, runtime);
         }
 
-        /**
-         * @summary 列举资源类型
-         *
-         * @description GET /api/v1/providers/{provider}/products。
-         *
-         * @param request ListProductsRequest
-         * @param headers ListProductsHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListProductsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to list the supported services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>GET /api/v1/providers/{provider}/products.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListProductsRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListProductsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProductsResponse
+        /// </returns>
         public ListProductsResponse ListProductsWithOptions(string provider, ListProductsRequest request, ListProductsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -962,16 +1371,29 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<ListProductsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 列举资源类型
-         *
-         * @description GET /api/v1/providers/{provider}/products。
-         *
-         * @param request ListProductsRequest
-         * @param headers ListProductsHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListProductsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to list the supported services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>GET /api/v1/providers/{provider}/products.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListProductsRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListProductsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProductsResponse
+        /// </returns>
         public async Task<ListProductsResponse> ListProductsWithOptionsAsync(string provider, ListProductsRequest request, ListProductsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1013,14 +1435,23 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<ListProductsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 列举资源类型
-         *
-         * @description GET /api/v1/providers/{provider}/products。
-         *
-         * @param request ListProductsRequest
-         * @return ListProductsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to list the supported services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>GET /api/v1/providers/{provider}/products.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListProductsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProductsResponse
+        /// </returns>
         public ListProductsResponse ListProducts(string provider, ListProductsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1028,14 +1459,23 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return ListProductsWithOptions(provider, request, headers, runtime);
         }
 
-        /**
-         * @summary 列举资源类型
-         *
-         * @description GET /api/v1/providers/{provider}/products。
-         *
-         * @param request ListProductsRequest
-         * @return ListProductsResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to list the supported services.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>GET /api/v1/providers/{provider}/products.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListProductsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListProductsResponse
+        /// </returns>
         public async Task<ListProductsResponse> ListProductsAsync(string provider, ListProductsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1043,16 +1483,29 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return await ListProductsWithOptionsAsync(provider, request, headers, runtime);
         }
 
-        /**
-         * @summary 列举资源类型
-         *
-         * @description GET /api/v1/providers/{provider}/products/{product}/resourceTypes。
-         *
-         * @param tmpReq ListResourceTypesRequest
-         * @param headers ListResourceTypesHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListResourceTypesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to list the resource types of a service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>GET /api/v1/providers/{provider}/products/{product}/resourceTypes.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListResourceTypesRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListResourceTypesHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceTypesResponse
+        /// </returns>
         public ListResourceTypesResponse ListResourceTypesWithOptions(string provider, string product, ListResourceTypesRequest tmpReq, ListResourceTypesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1104,16 +1557,29 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<ListResourceTypesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 列举资源类型
-         *
-         * @description GET /api/v1/providers/{provider}/products/{product}/resourceTypes。
-         *
-         * @param tmpReq ListResourceTypesRequest
-         * @param headers ListResourceTypesHeaders
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return ListResourceTypesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to list the resource types of a service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>GET /api/v1/providers/{provider}/products/{product}/resourceTypes.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListResourceTypesRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListResourceTypesHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceTypesResponse
+        /// </returns>
         public async Task<ListResourceTypesResponse> ListResourceTypesWithOptionsAsync(string provider, string product, ListResourceTypesRequest tmpReq, ListResourceTypesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1165,14 +1631,23 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<ListResourceTypesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 列举资源类型
-         *
-         * @description GET /api/v1/providers/{provider}/products/{product}/resourceTypes。
-         *
-         * @param request ListResourceTypesRequest
-         * @return ListResourceTypesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to list the resource types of a service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>GET /api/v1/providers/{provider}/products/{product}/resourceTypes.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListResourceTypesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceTypesResponse
+        /// </returns>
         public ListResourceTypesResponse ListResourceTypes(string provider, string product, ListResourceTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1180,14 +1655,23 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return ListResourceTypesWithOptions(provider, product, request, headers, runtime);
         }
 
-        /**
-         * @summary 列举资源类型
-         *
-         * @description GET /api/v1/providers/{provider}/products/{product}/resourceTypes。
-         *
-         * @param request ListResourceTypesRequest
-         * @return ListResourceTypesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to list the resource types of a service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>GET /api/v1/providers/{provider}/products/{product}/resourceTypes.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListResourceTypesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceTypesResponse
+        /// </returns>
         public async Task<ListResourceTypesResponse> ListResourceTypesAsync(string provider, string product, ListResourceTypesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1195,15 +1679,34 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return await ListResourceTypesWithOptionsAsync(provider, product, request, headers, runtime);
         }
 
-        /**
-         * @summary 更新资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param request UpdateResourceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to update resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.
+        /// If resources fail to be updated at any time, the Cloud Control API does not roll the resource back to the original status.
+        /// The resource APIs cannot be rolled back. If the API operation is partially failed to be called, you can call the GetResource operation to view the latest status of the resource. If necessary, you can call the UpdateResource or DeleteResource operation to manually compensate for the failure.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// UpdateResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateResourceResponse
+        /// </returns>
         public UpdateResourceResponse UpdateResourceWithOptions(string requestPath, UpdateResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1237,15 +1740,34 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<UpdateResourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param request UpdateResourceRequest
-         * @param headers map
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return UpdateResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to update resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.
+        /// If resources fail to be updated at any time, the Cloud Control API does not roll the resource back to the original status.
+        /// The resource APIs cannot be rolled back. If the API operation is partially failed to be called, you can call the GetResource operation to view the latest status of the resource. If necessary, you can call the UpdateResource or DeleteResource operation to manually compensate for the failure.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// UpdateResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateResourceResponse
+        /// </returns>
         public async Task<UpdateResourceResponse> UpdateResourceWithOptionsAsync(string requestPath, UpdateResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1279,13 +1801,28 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return TeaModel.ToObject<UpdateResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @summary 更新资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param request UpdateResourceRequest
-         * @return UpdateResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to update resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.
+        /// If resources fail to be updated at any time, the Cloud Control API does not roll the resource back to the original status.
+        /// The resource APIs cannot be rolled back. If the API operation is partially failed to be called, you can call the GetResource operation to view the latest status of the resource. If necessary, you can call the UpdateResource or DeleteResource operation to manually compensate for the failure.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// UpdateResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateResourceResponse
+        /// </returns>
         public UpdateResourceResponse UpdateResource(string requestPath, UpdateResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1293,13 +1830,28 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             return UpdateResourceWithOptions(requestPath, request, headers, runtime);
         }
 
-        /**
-         * @summary 更新资源
-         *
-         * @param requestPath the whole path of resource string
-         * @param request UpdateResourceRequest
-         * @return UpdateResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls this operation to update resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.
+        /// If resources fail to be updated at any time, the Cloud Control API does not roll the resource back to the original status.
+        /// The resource APIs cannot be rolled back. If the API operation is partially failed to be called, you can call the GetResource operation to view the latest status of the resource. If necessary, you can call the UpdateResource or DeleteResource operation to manually compensate for the failure.</para>
+        /// </description>
+        /// 
+        /// <param name="requestPath">
+        /// the whole path of resource string
+        /// </param>
+        /// <param name="request">
+        /// UpdateResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateResourceResponse
+        /// </returns>
         public async Task<UpdateResourceResponse> UpdateResourceAsync(string requestPath, UpdateResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
