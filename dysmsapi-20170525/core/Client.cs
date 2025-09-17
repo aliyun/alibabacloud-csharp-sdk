@@ -8878,6 +8878,198 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>发送物流短信</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendLogisticsSmsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendLogisticsSmsResponse
+        /// </returns>
+        public SendLogisticsSmsResponse SendLogisticsSmsWithOptions(SendLogisticsSmsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpressCompanyCode))
+            {
+                query["ExpressCompanyCode"] = request.ExpressCompanyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailNo))
+            {
+                query["MailNo"] = request.MailNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformCompanyCode))
+            {
+                query["PlatformCompanyCode"] = request.PlatformCompanyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
+            {
+                query["SignName"] = request.SignName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateParam))
+            {
+                query["TemplateParam"] = request.TemplateParam;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendLogisticsSms",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendLogisticsSmsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送物流短信</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendLogisticsSmsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendLogisticsSmsResponse
+        /// </returns>
+        public async Task<SendLogisticsSmsResponse> SendLogisticsSmsWithOptionsAsync(SendLogisticsSmsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpressCompanyCode))
+            {
+                query["ExpressCompanyCode"] = request.ExpressCompanyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailNo))
+            {
+                query["MailNo"] = request.MailNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformCompanyCode))
+            {
+                query["PlatformCompanyCode"] = request.PlatformCompanyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
+            {
+                query["SignName"] = request.SignName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateParam))
+            {
+                query["TemplateParam"] = request.TemplateParam;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendLogisticsSms",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendLogisticsSmsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送物流短信</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendLogisticsSmsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendLogisticsSmsResponse
+        /// </returns>
+        public SendLogisticsSmsResponse SendLogisticsSms(SendLogisticsSmsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SendLogisticsSmsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发送物流短信</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendLogisticsSmsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendLogisticsSmsResponse
+        /// </returns>
+        public async Task<SendLogisticsSmsResponse> SendLogisticsSmsAsync(SendLogisticsSmsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SendLogisticsSmsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Sends a message. Before you call this operation, submit a message signature and message template, and make sure that the signature and template are approved.</para>
         /// </summary>
         /// 
@@ -11230,6 +11422,166 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ValidPhoneCodeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>物流短信运单号校验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyLogisticsSmsMailNoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyLogisticsSmsMailNoResponse
+        /// </returns>
+        public VerifyLogisticsSmsMailNoResponse VerifyLogisticsSmsMailNoWithOptions(VerifyLogisticsSmsMailNoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpressCompanyCode))
+            {
+                query["ExpressCompanyCode"] = request.ExpressCompanyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailNo))
+            {
+                query["MailNo"] = request.MailNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformCompanyCode))
+            {
+                query["PlatformCompanyCode"] = request.PlatformCompanyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyLogisticsSmsMailNo",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyLogisticsSmsMailNoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>物流短信运单号校验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyLogisticsSmsMailNoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyLogisticsSmsMailNoResponse
+        /// </returns>
+        public async Task<VerifyLogisticsSmsMailNoResponse> VerifyLogisticsSmsMailNoWithOptionsAsync(VerifyLogisticsSmsMailNoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpressCompanyCode))
+            {
+                query["ExpressCompanyCode"] = request.ExpressCompanyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailNo))
+            {
+                query["MailNo"] = request.MailNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformCompanyCode))
+            {
+                query["PlatformCompanyCode"] = request.PlatformCompanyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyLogisticsSmsMailNo",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyLogisticsSmsMailNoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>物流短信运单号校验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyLogisticsSmsMailNoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyLogisticsSmsMailNoResponse
+        /// </returns>
+        public VerifyLogisticsSmsMailNoResponse VerifyLogisticsSmsMailNo(VerifyLogisticsSmsMailNoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VerifyLogisticsSmsMailNoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>物流短信运单号校验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyLogisticsSmsMailNoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyLogisticsSmsMailNoResponse
+        /// </returns>
+        public async Task<VerifyLogisticsSmsMailNoResponse> VerifyLogisticsSmsMailNoAsync(VerifyLogisticsSmsMailNoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VerifyLogisticsSmsMailNoWithOptionsAsync(request, runtime);
         }
 
     }
