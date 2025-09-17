@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreatePermissionApplyOrderRequest : TeaModel {
         /// <summary>
-        /// <para>The objects on which you want to request permissions.</para>
+        /// <para>The list of requested objects.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplyObject")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public List<CreatePermissionApplyOrderRequestApplyObject> ApplyObject { get; set; }
         public class CreatePermissionApplyOrderRequestApplyObject : TeaModel {
             /// <summary>
-            /// <para>The permission that you want to request. If you want to request multiple permissions at the same time, separate them with commas (,). You can request only the following permissions: Select, Describe, Drop, Alter, Update, and Download.</para>
+            /// <para>The type of permissions requested. Use commas (,) to separate multiple permission types in a single request. Currently only supports Select, Describe, Drop, Alter, Update, and Download permission types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Select,Describe</para>
@@ -28,18 +28,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Actions { get; set; }
 
             /// <summary>
-            /// <para>The fields on which you want to request permissions.</para>
+            /// <para>The list of column objects.</para>
             /// </summary>
             [NameInMap("ColumnMetaList")]
             [Validation(Required=false)]
             public List<CreatePermissionApplyOrderRequestApplyObjectColumnMetaList> ColumnMetaList { get; set; }
             public class CreatePermissionApplyOrderRequestApplyObjectColumnMetaList : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Select</para>
+                /// </summary>
                 [NameInMap("Actions")]
                 [Validation(Required=false)]
                 public string Actions { get; set; }
 
                 /// <summary>
-                /// <para>The field on which you want to request permissions. If you want to request permissions on an entire table, enter all fields in the table. You can request permissions on specific fields of a table in a MaxCompute project only after LabelSecurity is enabled for this project. If LabelSecurity is disabled, you can request permissions only on an entire table.</para>
+                /// <para>Permissions for the target columns. Enter the column names here. If applying for permissions on the entire table, enter all column names of the table. Permissions for specific columns can only be requested if labelSecurity is enabled for the MaxCompute project. Otherwise, you can only apply for permissions on the entire table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aColumnName</para>
@@ -51,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The name of the object on which you want to request permissions. You can request permissions only on MaxCompute tables. Set this parameter to the name of the table on which you want to request permissions.</para>
+            /// <para>The object you request access to. Currently, only permission requests for MaxCompute tables are supported. The name of the target table needs to be entered here.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aTableName</para>
@@ -73,6 +77,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string ApplyReason { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>MaxComputeTable</para>
+        /// </summary>
         [NameInMap("ApplyType")]
         [Validation(Required=false)]
         public string ApplyType { get; set; }
@@ -88,6 +96,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string ApplyUserIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>hive</para>
+        /// </summary>
         [NameInMap("CatalogName")]
         [Validation(Required=false)]
         public string CatalogName { get; set; }
@@ -105,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The type of the compute engine in which you want to request permissions on the fields of a table. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in the MaxCompute compute engine.</para>
+        /// <para>The type of compute engine for permission requests. Currently only supports ODPS, which means only MaxCompute compute engine permissions are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps</para>
@@ -119,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The name of the MaxCompute project in which you request permissions on the fields of a table.</para>
+        /// <para>The name of the MaxCompute project you request access to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aMaxcomputeProjectName</para>
@@ -131,7 +143,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</para>
+        /// <para>The request type. The only supported value is 1, which represents an object ACL permission request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -145,7 +157,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? OrderType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace that is associated with the MaxCompute project in which you want to request permissions on the fields of a table. You can go to the SettingCenter page in the DataWorks console to view the workspace ID.</para>
+        /// <para>The DataWorks workspace ID to which the MaxCompute project belongs for permission requests. You can check the workspace ID on the DataWorks workspace configuration page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>

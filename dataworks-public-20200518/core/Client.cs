@@ -33563,7 +33563,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of permission request orders.</para>
+        /// <para>Views permission requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33653,7 +33653,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of permission request orders.</para>
+        /// <para>Views permission requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33743,7 +33743,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of permission request orders.</para>
+        /// <para>Views permission requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33761,7 +33761,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of permission request orders.</para>
+        /// <para>Views permission requests.</para>
         /// </summary>
         /// 
         /// <param name="request">

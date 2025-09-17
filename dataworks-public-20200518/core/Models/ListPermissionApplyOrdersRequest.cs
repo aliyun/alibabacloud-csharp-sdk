@@ -9,10 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListPermissionApplyOrdersRequest : TeaModel {
+        /// <summary>
+        /// <para>设置申请单类型，枚举值为：</para>
+        /// <list type="bullet">
+        /// <item><description>[ MaxComputeTable]  MaxCompute表权限申请单</description></item>
+        /// <item><description>[ MaxComputeFunction] MaxCompute函数申请单</description></item>
+        /// <item><description>[ MaxComputeResource] MaxCompute资源申请单</description></item>
+        /// <item><description>[ DLFSchema] DLF1.0版本Schema权限申请单</description></item>
+        /// <item><description>[ DLFTable] DLF1.0版本表权限申请单</description></item>
+        /// <item><description>[ DLFColumn] DLF1.0版本列权限申请单</description></item>
+        /// <item><description>[ DsApiDeploy] 发布数据服务权限申请单</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MaxComputeTable</para>
+        /// </summary>
         [NameInMap("ApplyType")]
         [Validation(Required=false)]
         public string ApplyType { get; set; }
 
+        /// <summary>
+        /// <para>查询的数据目录名称。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hive</para>
+        /// </summary>
         [NameInMap("CatalogName")]
         [Validation(Required=false)]
         public string CatalogName { get; set; }
@@ -27,8 +48,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
-        /// <term><b>Obsolete</b></term>
-        /// 
         /// <summary>
         /// <para>The type of the compute engine with which the permission request order is associated. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in the MaxCompute compute engine.</para>
         /// 
@@ -37,7 +56,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// </summary>
         [NameInMap("EngineType")]
         [Validation(Required=false)]
-        [Obsolete]
         public string EngineType { get; set; }
 
         /// <summary>
@@ -66,8 +84,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         [Validation(Required=false)]
         public string MaxComputeProjectName { get; set; }
 
-        /// <term><b>Obsolete</b></term>
-        /// 
         /// <summary>
         /// <para>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</para>
         /// 
@@ -76,7 +92,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
-        [Obsolete]
         public int? OrderType { get; set; }
 
         /// <summary>

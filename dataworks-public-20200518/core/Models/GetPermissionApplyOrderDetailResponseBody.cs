@@ -189,6 +189,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             }
 
+            [NameInMap("FinishAapprovalTimestamp")]
+            [Validation(Required=false)]
+            public long? FinishAapprovalTimestamp { get; set; }
+
+            [NameInMap("FinishApprovalComment")]
+            [Validation(Required=false)]
+            public string FinishApprovalComment { get; set; }
+
             /// <summary>
             /// <para>The ID of the permission request order.</para>
             /// 
