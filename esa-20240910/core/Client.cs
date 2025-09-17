@@ -9790,6 +9790,178 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建四层应用</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateTransportLayerApplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTransportLayerApplicationResponse
+        /// </returns>
+        public CreateTransportLayerApplicationResponse CreateTransportLayerApplicationWithOptions(CreateTransportLayerApplicationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateTransportLayerApplicationShrinkRequest request = new CreateTransportLayerApplicationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
+            {
+                request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossBorderOptimization))
+            {
+                query["CrossBorderOptimization"] = request.CrossBorderOptimization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpAccessRule))
+            {
+                query["IpAccessRule"] = request.IpAccessRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6))
+            {
+                query["Ipv6"] = request.Ipv6;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordName))
+            {
+                query["RecordName"] = request.RecordName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RulesShrink))
+            {
+                query["Rules"] = request.RulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTransportLayerApplication",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTransportLayerApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建四层应用</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateTransportLayerApplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTransportLayerApplicationResponse
+        /// </returns>
+        public async Task<CreateTransportLayerApplicationResponse> CreateTransportLayerApplicationWithOptionsAsync(CreateTransportLayerApplicationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateTransportLayerApplicationShrinkRequest request = new CreateTransportLayerApplicationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
+            {
+                request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossBorderOptimization))
+            {
+                query["CrossBorderOptimization"] = request.CrossBorderOptimization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpAccessRule))
+            {
+                query["IpAccessRule"] = request.IpAccessRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6))
+            {
+                query["Ipv6"] = request.Ipv6;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordName))
+            {
+                query["RecordName"] = request.RecordName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RulesShrink))
+            {
+                query["Rules"] = request.RulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTransportLayerApplication",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTransportLayerApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建四层应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTransportLayerApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTransportLayerApplicationResponse
+        /// </returns>
+        public CreateTransportLayerApplicationResponse CreateTransportLayerApplication(CreateTransportLayerApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTransportLayerApplicationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建四层应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTransportLayerApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTransportLayerApplicationResponse
+        /// </returns>
+        public async Task<CreateTransportLayerApplicationResponse> CreateTransportLayerApplicationAsync(CreateTransportLayerApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTransportLayerApplicationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建网页监测配置</para>
         /// </summary>
         /// 
@@ -14963,6 +15135,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["RecordId"] = request.RecordId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -15004,6 +15180,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordId))
             {
                 query["RecordId"] = request.RecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -16454,6 +16634,134 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSiteOriginClientCertificateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除四层应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTransportLayerApplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTransportLayerApplicationResponse
+        /// </returns>
+        public DeleteTransportLayerApplicationResponse DeleteTransportLayerApplicationWithOptions(DeleteTransportLayerApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTransportLayerApplication",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTransportLayerApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除四层应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTransportLayerApplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTransportLayerApplicationResponse
+        /// </returns>
+        public async Task<DeleteTransportLayerApplicationResponse> DeleteTransportLayerApplicationWithOptionsAsync(DeleteTransportLayerApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTransportLayerApplication",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTransportLayerApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除四层应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTransportLayerApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTransportLayerApplicationResponse
+        /// </returns>
+        public DeleteTransportLayerApplicationResponse DeleteTransportLayerApplication(DeleteTransportLayerApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteTransportLayerApplicationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除四层应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTransportLayerApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTransportLayerApplicationResponse
+        /// </returns>
+        public async Task<DeleteTransportLayerApplicationResponse> DeleteTransportLayerApplicationAsync(DeleteTransportLayerApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteTransportLayerApplicationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -27760,6 +28068,118 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询四层应用详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTransportLayerApplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTransportLayerApplicationResponse
+        /// </returns>
+        public GetTransportLayerApplicationResponse GetTransportLayerApplicationWithOptions(GetTransportLayerApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTransportLayerApplication",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTransportLayerApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询四层应用详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTransportLayerApplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTransportLayerApplicationResponse
+        /// </returns>
+        public async Task<GetTransportLayerApplicationResponse> GetTransportLayerApplicationWithOptionsAsync(GetTransportLayerApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTransportLayerApplication",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTransportLayerApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询四层应用详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTransportLayerApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTransportLayerApplicationResponse
+        /// </returns>
+        public GetTransportLayerApplicationResponse GetTransportLayerApplication(GetTransportLayerApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTransportLayerApplicationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询四层应用详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTransportLayerApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTransportLayerApplicationResponse
+        /// </returns>
+        public async Task<GetTransportLayerApplicationResponse> GetTransportLayerApplicationAsync(GetTransportLayerApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTransportLayerApplicationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the execution status and running information of a file upload task based on the task ID.</para>
         /// </summary>
         /// 
@@ -34810,6 +35230,118 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询四层应用列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTransportLayerApplicationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTransportLayerApplicationsResponse
+        /// </returns>
+        public ListTransportLayerApplicationsResponse ListTransportLayerApplicationsWithOptions(ListTransportLayerApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTransportLayerApplications",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTransportLayerApplicationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询四层应用列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTransportLayerApplicationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTransportLayerApplicationsResponse
+        /// </returns>
+        public async Task<ListTransportLayerApplicationsResponse> ListTransportLayerApplicationsWithOptionsAsync(ListTransportLayerApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTransportLayerApplications",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTransportLayerApplicationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询四层应用列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTransportLayerApplicationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTransportLayerApplicationsResponse
+        /// </returns>
+        public ListTransportLayerApplicationsResponse ListTransportLayerApplications(ListTransportLayerApplicationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTransportLayerApplicationsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询四层应用列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTransportLayerApplicationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTransportLayerApplicationsResponse
+        /// </returns>
+        public async Task<ListTransportLayerApplicationsResponse> ListTransportLayerApplicationsAsync(ListTransportLayerApplicationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTransportLayerApplicationsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -47934,6 +48466,178 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateTieredCacheWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改四层应用</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateTransportLayerApplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTransportLayerApplicationResponse
+        /// </returns>
+        public UpdateTransportLayerApplicationResponse UpdateTransportLayerApplicationWithOptions(UpdateTransportLayerApplicationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateTransportLayerApplicationShrinkRequest request = new UpdateTransportLayerApplicationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
+            {
+                request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossBorderOptimization))
+            {
+                query["CrossBorderOptimization"] = request.CrossBorderOptimization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpAccessRule))
+            {
+                query["IpAccessRule"] = request.IpAccessRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6))
+            {
+                query["Ipv6"] = request.Ipv6;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RulesShrink))
+            {
+                query["Rules"] = request.RulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTransportLayerApplication",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTransportLayerApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改四层应用</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateTransportLayerApplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTransportLayerApplicationResponse
+        /// </returns>
+        public async Task<UpdateTransportLayerApplicationResponse> UpdateTransportLayerApplicationWithOptionsAsync(UpdateTransportLayerApplicationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateTransportLayerApplicationShrinkRequest request = new UpdateTransportLayerApplicationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
+            {
+                request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossBorderOptimization))
+            {
+                query["CrossBorderOptimization"] = request.CrossBorderOptimization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpAccessRule))
+            {
+                query["IpAccessRule"] = request.IpAccessRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6))
+            {
+                query["Ipv6"] = request.Ipv6;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RulesShrink))
+            {
+                query["Rules"] = request.RulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTransportLayerApplication",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTransportLayerApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改四层应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTransportLayerApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTransportLayerApplicationResponse
+        /// </returns>
+        public UpdateTransportLayerApplicationResponse UpdateTransportLayerApplication(UpdateTransportLayerApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateTransportLayerApplicationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改四层应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTransportLayerApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTransportLayerApplicationResponse
+        /// </returns>
+        public async Task<UpdateTransportLayerApplicationResponse> UpdateTransportLayerApplicationAsync(UpdateTransportLayerApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateTransportLayerApplicationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
