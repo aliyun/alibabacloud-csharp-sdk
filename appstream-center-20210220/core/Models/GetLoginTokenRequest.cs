@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
         [Validation(Required=false)]
         public Dictionary<string, string> AvailableFeatures { get; set; }
 
+        [NameInMap("Channel")]
+        [Validation(Required=false)]
+        public string Channel { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
