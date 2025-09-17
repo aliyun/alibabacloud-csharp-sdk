@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "";
             CheckConfig(config);
             this._endpoint = GetEndpoint("appstream-center", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -173,7 +172,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetConnectionTicketResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetConnectionTicketResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -311,7 +310,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GetConnectionTicketResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetConnectionTicketResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -445,7 +444,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListPublishedAppInfoResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListPublishedAppInfoResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -543,7 +542,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListPublishedAppInfoResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListPublishedAppInfoResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -665,7 +664,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListRunningAppsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListRunningAppsResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -751,7 +750,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ListRunningAppsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListRunningAppsResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -877,7 +876,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResetAppResourcesResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ResetAppResourcesResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -967,7 +966,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ResetAppResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ResetAppResourcesResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1093,7 +1092,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RestartAppResourcesResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<RestartAppResourcesResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1183,7 +1182,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<RestartAppResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<RestartAppResourcesResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1309,7 +1308,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartAppResourcesResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<StartAppResourcesResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1399,7 +1398,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StartAppResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<StartAppResourcesResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1557,7 +1556,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopAppResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<StopAppResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1679,7 +1678,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopAppResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<StopAppResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1805,7 +1804,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopAppResourcesResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<StopAppResourcesResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1895,7 +1894,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<StopAppResourcesResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<StopAppResourcesResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2021,7 +2020,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UnbindResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<UnbindResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2111,7 +2110,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<UnbindResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<UnbindResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
