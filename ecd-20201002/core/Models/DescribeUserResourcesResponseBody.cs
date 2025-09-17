@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
     public class DescribeUserResourcesResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>
         /// </summary>
         [NameInMap("NextToken")]
@@ -728,6 +736,14 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string Version { get; set; }
 
         }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

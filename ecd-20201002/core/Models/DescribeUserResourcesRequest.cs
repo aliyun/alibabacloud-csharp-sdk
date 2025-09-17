@@ -67,12 +67,16 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string ClientVersion { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
         [NameInMap("DualCenterForward")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? DualCenterForward { get; set; }
 
         /// <summary>
@@ -140,6 +144,22 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
+
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("QueryDesktopDurationList")]
+        [Validation(Required=false)]
+        public bool? QueryDesktopDurationList { get; set; }
+
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("QueryDesktopTimers")]
+        [Validation(Required=false)]
+        public bool? QueryDesktopTimers { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

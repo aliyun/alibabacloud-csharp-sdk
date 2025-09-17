@@ -1548,6 +1548,14 @@ namespace AlibabaCloud.SDK.Ecd20201002
             {
                 query["ProtocolType"] = request.ProtocolType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryDesktopDurationList))
+            {
+                query["QueryDesktopDurationList"] = request.QueryDesktopDurationList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryDesktopTimers))
+            {
+                query["QueryDesktopTimers"] = request.QueryDesktopTimers;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFotaUpdate))
             {
                 query["QueryFotaUpdate"] = request.QueryFotaUpdate;
@@ -1689,6 +1697,14 @@ namespace AlibabaCloud.SDK.Ecd20201002
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolType))
             {
                 query["ProtocolType"] = request.ProtocolType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryDesktopDurationList))
+            {
+                query["QueryDesktopDurationList"] = request.QueryDesktopDurationList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryDesktopTimers))
+            {
+                query["QueryDesktopTimers"] = request.QueryDesktopTimers;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFotaUpdate))
             {
