@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<OpenStructSaseDepartment> Departments { get; set; }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
