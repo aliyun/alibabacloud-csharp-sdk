@@ -507,6 +507,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string SniHost { get; set; }
 
             /// <summary>
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("WLProxyClientIp")]
+            [Validation(Required=false)]
+            public bool? WLProxyClientIp { get; set; }
+
+            /// <summary>
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("WebServerType")]
+            [Validation(Required=false)]
+            public bool? WebServerType { get; set; }
+
+            /// <summary>
             /// <para>The timeout period of write connections. Unit: seconds. Valid values: 1 to 3600.</para>
             /// 
             /// <b>Example:</b>
@@ -515,6 +531,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [NameInMap("WriteTimeout")]
             [Validation(Required=false)]
             public int? WriteTimeout { get; set; }
+
+            /// <summary>
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("XClientIp")]
+            [Validation(Required=false)]
+            public bool? XClientIp { get; set; }
+
+            /// <summary>
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("XTrueIp")]
+            [Validation(Required=false)]
+            public bool? XTrueIp { get; set; }
 
             /// <summary>
             /// <para>Specifies whether to use the X-Forward-For-Proto header field to pass the protocol used by WAF to forward requests to the origin server. Valid values:</para>

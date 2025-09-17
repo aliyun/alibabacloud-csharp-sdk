@@ -14938,6 +14938,150 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the system status of a node in a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudBasicMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudBasicMonitorResponse
+        /// </returns>
+        public DescribeHybridCloudBasicMonitorResponse DescribeHybridCloudBasicMonitorWithOptions(DescribeHybridCloudBasicMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mid))
+            {
+                query["Mid"] = request.Mid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHybridCloudBasicMonitor",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHybridCloudBasicMonitorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the system status of a node in a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudBasicMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudBasicMonitorResponse
+        /// </returns>
+        public async Task<DescribeHybridCloudBasicMonitorResponse> DescribeHybridCloudBasicMonitorWithOptionsAsync(DescribeHybridCloudBasicMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mid))
+            {
+                query["Mid"] = request.Mid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHybridCloudBasicMonitor",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHybridCloudBasicMonitorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the system status of a node in a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudBasicMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudBasicMonitorResponse
+        /// </returns>
+        public DescribeHybridCloudBasicMonitorResponse DescribeHybridCloudBasicMonitor(DescribeHybridCloudBasicMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHybridCloudBasicMonitorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the system status of a node in a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudBasicMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudBasicMonitorResponse
+        /// </returns>
+        public async Task<DescribeHybridCloudBasicMonitorResponse> DescribeHybridCloudBasicMonitorAsync(DescribeHybridCloudBasicMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHybridCloudBasicMonitorWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Obtains the rule information about a hybrid cloud cluster.</para>
         /// </summary>
         /// 
@@ -15230,6 +15374,198 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHybridCloudClusterRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群机器列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudClusterServersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudClusterServersResponse
+        /// </returns>
+        public DescribeHybridCloudClusterServersResponse DescribeHybridCloudClusterServersWithOptions(DescribeHybridCloudClusterServersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostName))
+            {
+                query["HostName"] = request.HostName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
+            {
+                query["Ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHybridCloudClusterServers",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHybridCloudClusterServersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群机器列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudClusterServersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudClusterServersResponse
+        /// </returns>
+        public async Task<DescribeHybridCloudClusterServersResponse> DescribeHybridCloudClusterServersWithOptionsAsync(DescribeHybridCloudClusterServersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostName))
+            {
+                query["HostName"] = request.HostName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
+            {
+                query["Ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHybridCloudClusterServers",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHybridCloudClusterServersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群机器列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudClusterServersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudClusterServersResponse
+        /// </returns>
+        public DescribeHybridCloudClusterServersResponse DescribeHybridCloudClusterServers(DescribeHybridCloudClusterServersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHybridCloudClusterServersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群机器列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudClusterServersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudClusterServersResponse
+        /// </returns>
+        public async Task<DescribeHybridCloudClusterServersResponse> DescribeHybridCloudClusterServersAsync(DescribeHybridCloudClusterServersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHybridCloudClusterServersWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15554,6 +15890,326 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the status of applications running on a hybrid cloud cluster node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudProcessMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudProcessMonitorResponse
+        /// </returns>
+        public DescribeHybridCloudProcessMonitorResponse DescribeHybridCloudProcessMonitorWithOptions(DescribeHybridCloudProcessMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mid))
+            {
+                query["Mid"] = request.Mid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHybridCloudProcessMonitor",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHybridCloudProcessMonitorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of applications running on a hybrid cloud cluster node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudProcessMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudProcessMonitorResponse
+        /// </returns>
+        public async Task<DescribeHybridCloudProcessMonitorResponse> DescribeHybridCloudProcessMonitorWithOptionsAsync(DescribeHybridCloudProcessMonitorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mid))
+            {
+                query["Mid"] = request.Mid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHybridCloudProcessMonitor",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHybridCloudProcessMonitorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of applications running on a hybrid cloud cluster node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudProcessMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudProcessMonitorResponse
+        /// </returns>
+        public DescribeHybridCloudProcessMonitorResponse DescribeHybridCloudProcessMonitor(DescribeHybridCloudProcessMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHybridCloudProcessMonitorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of applications running on a hybrid cloud cluster node.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudProcessMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudProcessMonitorResponse
+        /// </returns>
+        public async Task<DescribeHybridCloudProcessMonitorResponse> DescribeHybridCloudProcessMonitorAsync(DescribeHybridCloudProcessMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHybridCloudProcessMonitorWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询混合云域名详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudResourceDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudResourceDetailResponse
+        /// </returns>
+        public DescribeHybridCloudResourceDetailResponse DescribeHybridCloudResourceDetailWithOptions(DescribeHybridCloudResourceDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Backend))
+            {
+                query["Backend"] = request.Backend;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CnameEnabled))
+            {
+                query["CnameEnabled"] = request.CnameEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHybridCloudResourceDetail",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHybridCloudResourceDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询混合云域名详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudResourceDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudResourceDetailResponse
+        /// </returns>
+        public async Task<DescribeHybridCloudResourceDetailResponse> DescribeHybridCloudResourceDetailWithOptionsAsync(DescribeHybridCloudResourceDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Backend))
+            {
+                query["Backend"] = request.Backend;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CnameEnabled))
+            {
+                query["CnameEnabled"] = request.CnameEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHybridCloudResourceDetail",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHybridCloudResourceDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询混合云域名详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudResourceDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudResourceDetailResponse
+        /// </returns>
+        public DescribeHybridCloudResourceDetailResponse DescribeHybridCloudResourceDetail(DescribeHybridCloudResourceDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHybridCloudResourceDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询混合云域名详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudResourceDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudResourceDetailResponse
+        /// </returns>
+        public async Task<DescribeHybridCloudResourceDetailResponse> DescribeHybridCloudResourceDetailAsync(DescribeHybridCloudResourceDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHybridCloudResourceDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.</para>
         /// </summary>
         /// 
@@ -15730,6 +16386,118 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取SDK信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudSdkServersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudSdkServersResponse
+        /// </returns>
+        public DescribeHybridCloudSdkServersResponse DescribeHybridCloudSdkServersWithOptions(DescribeHybridCloudSdkServersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHybridCloudSdkServers",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHybridCloudSdkServersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取SDK信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudSdkServersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudSdkServersResponse
+        /// </returns>
+        public async Task<DescribeHybridCloudSdkServersResponse> DescribeHybridCloudSdkServersWithOptionsAsync(DescribeHybridCloudSdkServersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHybridCloudSdkServers",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHybridCloudSdkServersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取SDK信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudSdkServersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudSdkServersResponse
+        /// </returns>
+        public DescribeHybridCloudSdkServersResponse DescribeHybridCloudSdkServers(DescribeHybridCloudSdkServersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHybridCloudSdkServersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取SDK信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudSdkServersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudSdkServersResponse
+        /// </returns>
+        public async Task<DescribeHybridCloudSdkServersResponse> DescribeHybridCloudSdkServersAsync(DescribeHybridCloudSdkServersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHybridCloudSdkServersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.</para>
         /// </summary>
         /// 
@@ -15878,6 +16646,142 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHybridCloudServerRegionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询接入区域</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudSupportRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudSupportRegionsResponse
+        /// </returns>
+        public DescribeHybridCloudSupportRegionsResponse DescribeHybridCloudSupportRegionsWithOptions(DescribeHybridCloudSupportRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHybridCloudSupportRegions",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHybridCloudSupportRegionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询接入区域</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudSupportRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudSupportRegionsResponse
+        /// </returns>
+        public async Task<DescribeHybridCloudSupportRegionsResponse> DescribeHybridCloudSupportRegionsWithOptionsAsync(DescribeHybridCloudSupportRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHybridCloudSupportRegions",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHybridCloudSupportRegionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询接入区域</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudSupportRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudSupportRegionsResponse
+        /// </returns>
+        public DescribeHybridCloudSupportRegionsResponse DescribeHybridCloudSupportRegions(DescribeHybridCloudSupportRegionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHybridCloudSupportRegionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询接入区域</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudSupportRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudSupportRegionsResponse
+        /// </returns>
+        public async Task<DescribeHybridCloudSupportRegionsResponse> DescribeHybridCloudSupportRegionsAsync(DescribeHybridCloudSupportRegionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHybridCloudSupportRegionsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -16054,6 +16958,142 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHybridCloudUnassignedMachinesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports that are not supported by the hybrid cloud mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudUnsupportPortsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudUnsupportPortsResponse
+        /// </returns>
+        public DescribeHybridCloudUnsupportPortsResponse DescribeHybridCloudUnsupportPortsWithOptions(DescribeHybridCloudUnsupportPortsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHybridCloudUnsupportPorts",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHybridCloudUnsupportPortsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports that are not supported by the hybrid cloud mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudUnsupportPortsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudUnsupportPortsResponse
+        /// </returns>
+        public async Task<DescribeHybridCloudUnsupportPortsResponse> DescribeHybridCloudUnsupportPortsWithOptionsAsync(DescribeHybridCloudUnsupportPortsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHybridCloudUnsupportPorts",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHybridCloudUnsupportPortsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports that are not supported by the hybrid cloud mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudUnsupportPortsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudUnsupportPortsResponse
+        /// </returns>
+        public DescribeHybridCloudUnsupportPortsResponse DescribeHybridCloudUnsupportPorts(DescribeHybridCloudUnsupportPortsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHybridCloudUnsupportPortsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ports that are not supported by the hybrid cloud mode.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHybridCloudUnsupportPortsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHybridCloudUnsupportPortsResponse
+        /// </returns>
+        public async Task<DescribeHybridCloudUnsupportPortsResponse> DescribeHybridCloudUnsupportPortsAsync(DescribeHybridCloudUnsupportPortsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHybridCloudUnsupportPortsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -28206,6 +29246,254 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDomainPunishStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudClusterResponse
+        /// </returns>
+        public ModifyHybridCloudClusterResponse ModifyHybridCloudClusterWithOptions(ModifyHybridCloudClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessMode))
+            {
+                query["AccessMode"] = request.AccessMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessRegion))
+            {
+                query["AccessRegion"] = request.AccessRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
+            {
+                query["ClusterName"] = request.ClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpPorts))
+            {
+                query["HttpPorts"] = request.HttpPorts;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpsPorts))
+            {
+                query["HttpsPorts"] = request.HttpsPorts;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogFieldsNotReturned))
+            {
+                query["LogFieldsNotReturned"] = request.LogFieldsNotReturned;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtectionServerCount))
+            {
+                query["ProtectionServerCount"] = request.ProtectionServerCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyStatus))
+            {
+                query["ProxyStatus"] = request.ProxyStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyType))
+            {
+                query["ProxyType"] = request.ProxyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConfig))
+            {
+                query["RuleConfig"] = request.RuleConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleStatus))
+            {
+                query["RuleStatus"] = request.RuleStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
+            {
+                query["RuleType"] = request.RuleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyHybridCloudCluster",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyHybridCloudClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudClusterResponse
+        /// </returns>
+        public async Task<ModifyHybridCloudClusterResponse> ModifyHybridCloudClusterWithOptionsAsync(ModifyHybridCloudClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessMode))
+            {
+                query["AccessMode"] = request.AccessMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessRegion))
+            {
+                query["AccessRegion"] = request.AccessRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
+            {
+                query["ClusterName"] = request.ClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpPorts))
+            {
+                query["HttpPorts"] = request.HttpPorts;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HttpsPorts))
+            {
+                query["HttpsPorts"] = request.HttpsPorts;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogFieldsNotReturned))
+            {
+                query["LogFieldsNotReturned"] = request.LogFieldsNotReturned;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtectionServerCount))
+            {
+                query["ProtectionServerCount"] = request.ProtectionServerCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyStatus))
+            {
+                query["ProxyStatus"] = request.ProxyStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyType))
+            {
+                query["ProxyType"] = request.ProxyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleConfig))
+            {
+                query["RuleConfig"] = request.RuleConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleStatus))
+            {
+                query["RuleStatus"] = request.RuleStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleType))
+            {
+                query["RuleType"] = request.RuleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyHybridCloudCluster",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyHybridCloudClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudClusterResponse
+        /// </returns>
+        public ModifyHybridCloudClusterResponse ModifyHybridCloudCluster(ModifyHybridCloudClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyHybridCloudClusterWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies information about a hybrid cloud cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyHybridCloudClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHybridCloudClusterResponse
+        /// </returns>
+        public async Task<ModifyHybridCloudClusterResponse> ModifyHybridCloudClusterAsync(ModifyHybridCloudClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyHybridCloudClusterWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
