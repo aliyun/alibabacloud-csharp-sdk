@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.MarketplaceIntl20221230.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>ORDER20231001</para>
+            /// </summary>
+            [NameInMap("PushOrderBizId")]
+            [Validation(Required=false)]
+            public string PushOrderBizId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>1662284820000</para>
             /// </summary>
             [NameInMap("StartTime")]

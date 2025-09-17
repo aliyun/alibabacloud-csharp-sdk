@@ -39,6 +39,126 @@ namespace AlibabaCloud.SDK.MarketplaceIntl20221230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取推送计量数据结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePushMeteringDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePushMeteringDataResponse
+        /// </returns>
+        public DescribePushMeteringDataResponse DescribePushMeteringDataWithOptions(DescribePushMeteringDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushOrderBizId))
+            {
+                query["PushOrderBizId"] = request.PushOrderBizId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePushMeteringData",
+                Version = "2022-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePushMeteringDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取推送计量数据结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePushMeteringDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePushMeteringDataResponse
+        /// </returns>
+        public async Task<DescribePushMeteringDataResponse> DescribePushMeteringDataWithOptionsAsync(DescribePushMeteringDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushOrderBizId))
+            {
+                query["PushOrderBizId"] = request.PushOrderBizId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePushMeteringData",
+                Version = "2022-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePushMeteringDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取推送计量数据结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePushMeteringDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePushMeteringDataResponse
+        /// </returns>
+        public DescribePushMeteringDataResponse DescribePushMeteringData(DescribePushMeteringDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePushMeteringDataWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取推送计量数据结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePushMeteringDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePushMeteringDataResponse
+        /// </returns>
+        public async Task<DescribePushMeteringDataResponse> DescribePushMeteringDataAsync(DescribePushMeteringDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePushMeteringDataWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>卖家查询实例列表</para>
         /// </summary>
         /// 
@@ -92,14 +212,7 @@ namespace AlibabaCloud.SDK.MarketplaceIntl20221230
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeSellerInstancesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeSellerInstancesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeSellerInstancesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -157,14 +270,7 @@ namespace AlibabaCloud.SDK.MarketplaceIntl20221230
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeSellerInstancesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeSellerInstancesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeSellerInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -250,14 +356,7 @@ namespace AlibabaCloud.SDK.MarketplaceIntl20221230
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<NoticeInstanceUserResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<NoticeInstanceUserResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<NoticeInstanceUserResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -307,14 +406,7 @@ namespace AlibabaCloud.SDK.MarketplaceIntl20221230
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<NoticeInstanceUserResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<NoticeInstanceUserResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<NoticeInstanceUserResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -396,14 +488,7 @@ namespace AlibabaCloud.SDK.MarketplaceIntl20221230
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<PushMeteringDataResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<PushMeteringDataResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<PushMeteringDataResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -449,14 +534,7 @@ namespace AlibabaCloud.SDK.MarketplaceIntl20221230
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<PushMeteringDataResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<PushMeteringDataResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<PushMeteringDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
