@@ -331,6 +331,144 @@ namespace AlibabaCloud.SDK.AliGenieoauth2_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>执行场景（全屋）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteSmartHomeSceneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteSmartHomeSceneResponse
+        /// </returns>
+        public ExecuteSmartHomeSceneResponse ExecuteSmartHomeSceneWithOptions(ExecuteSmartHomeSceneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FamilyId))
+            {
+                body["FamilyId"] = request.FamilyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                body["SceneId"] = request.SceneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteSmartHomeScene",
+                Version = "oauth2_1.0",
+                Protocol = "HTTPS",
+                Pathname = "/v1.0/oauth2/iot/smart_home/scene/execute",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteSmartHomeSceneResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行场景（全屋）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteSmartHomeSceneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteSmartHomeSceneResponse
+        /// </returns>
+        public async Task<ExecuteSmartHomeSceneResponse> ExecuteSmartHomeSceneWithOptionsAsync(ExecuteSmartHomeSceneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FamilyId))
+            {
+                body["FamilyId"] = request.FamilyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                body["SceneId"] = request.SceneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteSmartHomeScene",
+                Version = "oauth2_1.0",
+                Protocol = "HTTPS",
+                Pathname = "/v1.0/oauth2/iot/smart_home/scene/execute",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteSmartHomeSceneResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行场景（全屋）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteSmartHomeSceneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteSmartHomeSceneResponse
+        /// </returns>
+        public ExecuteSmartHomeSceneResponse ExecuteSmartHomeScene(ExecuteSmartHomeSceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExecuteSmartHomeSceneWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行场景（全屋）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteSmartHomeSceneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteSmartHomeSceneResponse
+        /// </returns>
+        public async Task<ExecuteSmartHomeSceneResponse> ExecuteSmartHomeSceneAsync(ExecuteSmartHomeSceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExecuteSmartHomeSceneWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取场景列表</para>
         /// </summary>
         /// 
@@ -429,6 +567,108 @@ namespace AlibabaCloud.SDK.AliGenieoauth2_1_0
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetSceneListWithOptionsAsync(headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取场景列表（全屋）</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartHomeSceneListResponse
+        /// </returns>
+        public GetSmartHomeSceneListResponse GetSmartHomeSceneListWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSmartHomeSceneList",
+                Version = "oauth2_1.0",
+                Protocol = "HTTPS",
+                Pathname = "/v1.0/oauth2/iot/smart_home/scene/list",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSmartHomeSceneListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取场景列表（全屋）</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmartHomeSceneListResponse
+        /// </returns>
+        public async Task<GetSmartHomeSceneListResponse> GetSmartHomeSceneListWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSmartHomeSceneList",
+                Version = "oauth2_1.0",
+                Protocol = "HTTPS",
+                Pathname = "/v1.0/oauth2/iot/smart_home/scene/list",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSmartHomeSceneListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取场景列表（全屋）</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetSmartHomeSceneListResponse
+        /// </returns>
+        public GetSmartHomeSceneListResponse GetSmartHomeSceneList()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSmartHomeSceneListWithOptions(headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取场景列表（全屋）</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetSmartHomeSceneListResponse
+        /// </returns>
+        public async Task<GetSmartHomeSceneListResponse> GetSmartHomeSceneListAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSmartHomeSceneListWithOptionsAsync(headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
