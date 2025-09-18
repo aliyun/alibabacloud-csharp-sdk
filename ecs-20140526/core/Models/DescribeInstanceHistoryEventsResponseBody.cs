@@ -258,6 +258,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                     }
 
+                    [NameInMap("MetricName")]
+                    [Validation(Required=false)]
+                    public string MetricName { get; set; }
+
+                    [NameInMap("MetricValue")]
+                    [Validation(Required=false)]
+                    public string MetricValue { get; set; }
+
                     /// <summary>
                     /// <para>The migration solution of the instance. Valid value: MigrationPlan. Instances can be migrated only by using migration plans.</para>
                     /// </summary>

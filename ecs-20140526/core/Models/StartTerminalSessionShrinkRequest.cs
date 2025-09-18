@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
-    public class StartTerminalSessionRequest : TeaModel {
+    public class StartTerminalSessionShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The command to run after the session is initiated. The command length cannot exceed 512 characters.</para>
         /// <remarks>
@@ -38,21 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         [NameInMap("EncryptionOptions")]
         [Validation(Required=false)]
-        public StartTerminalSessionRequestEncryptionOptions EncryptionOptions { get; set; }
-        public class StartTerminalSessionRequestEncryptionOptions : TeaModel {
-            [NameInMap("Enabled")]
-            [Validation(Required=false)]
-            public bool? Enabled { get; set; }
-
-            [NameInMap("KMSKeyId")]
-            [Validation(Required=false)]
-            public string KMSKeyId { get; set; }
-
-            [NameInMap("Mode")]
-            [Validation(Required=false)]
-            public string Mode { get; set; }
-
-        }
+        public string EncryptionOptionsShrink { get; set; }
 
         /// <summary>
         /// <para>The instance IDs.</para>

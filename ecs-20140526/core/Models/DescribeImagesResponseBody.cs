@@ -471,6 +471,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public bool? IsSupportIoOptimized { get; set; }
 
+                [NameInMap("LicenseType")]
+                [Validation(Required=false)]
+                public string LicenseType { get; set; }
+
                 /// <summary>
                 /// <para>Indicates whether the image supports logons of non-root users. Valid values:</para>
                 /// <list type="bullet">

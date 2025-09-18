@@ -166,6 +166,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public bool? EnableJumboFrame { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
         [NameInMap("EnableNetworkEncryption")]
         [Validation(Required=false)]
         public bool? EnableNetworkEncryption { get; set; }
@@ -332,6 +336,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
+        /// <summary>
+        /// <para>Details about network options.</para>
+        /// <remarks>
+        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("NetworkOptions")]
         [Validation(Required=false)]
         public DescribeInstanceAttributeResponseBodyNetworkOptions NetworkOptions { get; set; }
@@ -340,10 +350,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string BandwidthWeighting { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("EnableJumboFrame")]
             [Validation(Required=false)]
             public bool? EnableJumboFrame { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>False</para>
+            /// </summary>
             [NameInMap("EnableNetworkEncryption")]
             [Validation(Required=false)]
             public bool? EnableNetworkEncryption { get; set; }

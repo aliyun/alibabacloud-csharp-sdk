@@ -1030,6 +1030,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> SecurityGroupIds { get; set; }
 
+        [NameInMap("SecurityOptions")]
+        [Validation(Required=false)]
+        public CreateLaunchTemplateRequestSecurityOptions SecurityOptions { get; set; }
+        public class CreateLaunchTemplateRequestSecurityOptions : TeaModel {
+            [NameInMap("TrustedSystemMode")]
+            [Validation(Required=false)]
+            public string TrustedSystemMode { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</para>
         /// <list type="bullet">
