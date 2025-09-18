@@ -516,6 +516,24 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         }
 
+        [NameInMap("ServiceLocaleConfigs")]
+        [Validation(Required=false)]
+        public List<UpdateServiceRequestServiceLocaleConfigs> ServiceLocaleConfigs { get; set; }
+        public class UpdateServiceRequestServiceLocaleConfigs : TeaModel {
+            [NameInMap("EnValue")]
+            [Validation(Required=false)]
+            public string EnValue { get; set; }
+
+            [NameInMap("OriginalValue")]
+            [Validation(Required=false)]
+            public string OriginalValue { get; set; }
+
+            [NameInMap("ZhValue")]
+            [Validation(Required=false)]
+            public string ZhValue { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The service type. Valid values:</para>
         /// <list type="bullet">
