@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         [Validation(Required=false)]
         public string Cookies { get; set; }
 
+        [NameInMap("GroupCode")]
+        [Validation(Required=false)]
+        public string GroupCode { get; set; }
+
         [NameInMap("SrcUrl")]
         [Validation(Required=false)]
         public string SrcUrl { get; set; }

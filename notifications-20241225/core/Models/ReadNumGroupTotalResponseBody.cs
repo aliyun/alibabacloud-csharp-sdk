@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         [Validation(Required=false)]
         public List<ReadNumGroupTotalResponseBodyData> Data { get; set; }
         public class ReadNumGroupTotalResponseBodyData : TeaModel {
+            [NameInMap("GroupCode")]
+            [Validation(Required=false)]
+            public string GroupCode { get; set; }
+
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }

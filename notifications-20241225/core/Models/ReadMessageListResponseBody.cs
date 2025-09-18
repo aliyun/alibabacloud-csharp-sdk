@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
             [Validation(Required=false)]
             public List<ReadMessageListResponseBodyDataRows> Rows { get; set; }
             public class ReadMessageListResponseBodyDataRows : TeaModel {
+                [NameInMap("CategoryCode")]
+                [Validation(Required=false)]
+                public string CategoryCode { get; set; }
+
                 /// <summary>
                 /// <para>CategoryName</para>
                 /// 

@@ -276,6 +276,10 @@ namespace AlibabaCloud.SDK.Notifications20241225
             {
                 body["Cookies"] = request.Cookies;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCode))
+            {
+                body["GroupCode"] = request.GroupCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcUrl))
             {
                 body["SrcUrl"] = request.SrcUrl;
@@ -353,6 +357,10 @@ namespace AlibabaCloud.SDK.Notifications20241225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cookies))
             {
                 body["Cookies"] = request.Cookies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCode))
+            {
+                body["GroupCode"] = request.GroupCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcUrl))
             {
@@ -468,6 +476,10 @@ namespace AlibabaCloud.SDK.Notifications20241225
             {
                 body["Cookies"] = request.Cookies;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCode))
+            {
+                body["GroupCode"] = request.GroupCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcUrl))
             {
                 body["SrcUrl"] = request.SrcUrl;
@@ -545,6 +557,10 @@ namespace AlibabaCloud.SDK.Notifications20241225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cookies))
             {
                 body["Cookies"] = request.Cookies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCode))
+            {
+                body["GroupCode"] = request.GroupCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcUrl))
             {
@@ -1036,6 +1052,14 @@ namespace AlibabaCloud.SDK.Notifications20241225
             {
                 body["Cookies"] = request.Cookies;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCode))
+            {
+                body["GroupCode"] = request.GroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.History))
+            {
+                body["History"] = request.History;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MsgId))
             {
                 body["MsgId"] = request.MsgId;
@@ -1121,6 +1145,14 @@ namespace AlibabaCloud.SDK.Notifications20241225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cookies))
             {
                 body["Cookies"] = request.Cookies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCode))
+            {
+                body["GroupCode"] = request.GroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.History))
+            {
+                body["History"] = request.History;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MsgId))
             {
@@ -1248,6 +1280,14 @@ namespace AlibabaCloud.SDK.Notifications20241225
             {
                 body["Cookies"] = request.Cookies;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCode))
+            {
+                body["GroupCode"] = request.GroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.History))
+            {
+                body["History"] = request.History;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Loc))
             {
                 body["Loc"] = request.Loc;
@@ -1357,6 +1397,14 @@ namespace AlibabaCloud.SDK.Notifications20241225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cookies))
             {
                 body["Cookies"] = request.Cookies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCode))
+            {
+                body["GroupCode"] = request.GroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.History))
+            {
+                body["History"] = request.History;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Loc))
             {
