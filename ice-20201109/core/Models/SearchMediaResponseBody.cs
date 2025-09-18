@@ -768,6 +768,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>Active</para>
+                /// </summary>
+                [NameInMap("StreamStatus")]
+                [Validation(Required=false)]
+                public string StreamStatus { get; set; }
+
+                /// <summary>
                 /// <para>The title of the media asset.</para>
                 /// </summary>
                 [NameInMap("Title")]

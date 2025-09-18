@@ -72,6 +72,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string Extend { get; set; }
 
+            [NameInMap("ExtendInput")]
+            [Validation(Required=false)]
+            public string ExtendInput { get; set; }
+
+            [NameInMap("ExtendOutput")]
+            [Validation(Required=false)]
+            public string ExtendOutput { get; set; }
+
             /// <summary>
             /// <para>The input configurations. For more information, see <a href="~~2692547#2faed1559549n~~">InputConfig</a>.</para>
             /// </summary>
