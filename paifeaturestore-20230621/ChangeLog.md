@@ -2,6 +2,10 @@
 - Update API ListDatasourceTables: add request parameters SchemaName.
 
 
+2025-09-18 Version: 4.0.3
+- Update API ListDatasourceTables: add request parameters SchemaName.
+
+
 2025-07-24 Version: 4.0.2
 - Generated csharp 2023-06-21 for PaiFeatureStore.
 
