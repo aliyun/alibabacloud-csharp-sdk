@@ -16,6 +16,20 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<string> AllocationId { get; set; }
 
+        [NameInMap("AllocationIds")]
+        [Validation(Required=false)]
+        public List<CreateFileSystemResponseBodyAllocationIds> AllocationIds { get; set; }
+        public class CreateFileSystemResponseBodyAllocationIds : TeaModel {
+            [NameInMap("EnsRegionId")]
+            [Validation(Required=false)]
+            public string EnsRegionId { get; set; }
+
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The status code for successful operations. Valid values:</para>
         /// <list type="bullet">

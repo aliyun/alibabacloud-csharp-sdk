@@ -1,3 +1,7 @@
+2025-09-18 Version: 8.2.3
+- Update API CreateFileSystem: add response parameters Body.AllocationIds.
+
+
 2025-09-16 Version: 8.2.2
 - Update API CreateSecurityGroup: add request parameters Permissions.$.Ipv6DestCidrIp.
 - Update API CreateSecurityGroup: add request parameters Permissions.$.Ipv6SourceCidrIp.
