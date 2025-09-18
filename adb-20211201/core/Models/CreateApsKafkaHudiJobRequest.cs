@@ -139,8 +139,6 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string IncrementalComputeUnit { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
