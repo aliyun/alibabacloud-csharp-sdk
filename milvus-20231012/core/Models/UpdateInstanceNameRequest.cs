@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class UpdateInstanceNameRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string ClusterName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

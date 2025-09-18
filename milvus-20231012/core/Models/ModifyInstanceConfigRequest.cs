@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class ModifyInstanceConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The reason for the update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string Reason { get; set; }
 
         /// <summary>
+        /// <para>User-defined configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dataCoord:\n  segment:\n    maxSize: 1024</para>
         /// </summary>

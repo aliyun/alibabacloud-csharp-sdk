@@ -9,11 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class UpdatePublicNetworkStatusRequest : TeaModel {
+        /// <summary>
+        /// <para>The CIDR blocks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><c>192.168.**.**</c>/24,<c>172.1.**.**</c>/16</para>
+        /// </summary>
         [NameInMap("Cidr")]
         [Validation(Required=false)]
         public string Cidr { get; set; }
 
         /// <summary>
+        /// <para>The component type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Proxy</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +34,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string ComponentType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +45,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Enable /disable the Internet.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为用户创建AliyunServiceRoleForMilvus</para>
+        /// <para>Create a service role for Milvus to access other cloud products</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -70,19 +70,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateDefaultRoleResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateDefaultRoleResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateDefaultRoleResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为用户创建AliyunServiceRoleForMilvus</para>
+        /// <para>Create a service role for Milvus to access other cloud products</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -113,19 +106,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateDefaultRoleResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateDefaultRoleResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateDefaultRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为用户创建AliyunServiceRoleForMilvus</para>
+        /// <para>Create a service role for Milvus to access other cloud products</para>
         /// </summary>
         /// 
         /// <returns>
@@ -140,7 +126,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为用户创建AliyunServiceRoleForMilvus</para>
+        /// <para>Create a service role for Milvus to access other cloud products</para>
         /// </summary>
         /// 
         /// <returns>
@@ -155,7 +141,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Milvus公网访问ACL信息</para>
+        /// <para>Get the public IP address whitelist of a Milvus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -196,19 +182,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeAccessControlListResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeAccessControlListResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeAccessControlListResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Milvus公网访问ACL信息</para>
+        /// <para>Get the public IP address whitelist of a Milvus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -249,19 +228,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeAccessControlListResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeAccessControlListResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeAccessControlListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Milvus公网访问ACL信息</para>
+        /// <para>Get the public IP address whitelist of a Milvus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -280,7 +252,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Milvus公网访问ACL信息</para>
+        /// <para>Get the public IP address whitelist of a Milvus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -299,7 +271,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例用户配置</para>
+        /// <para>Get information about the custom configuration of each component of Milvus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -340,19 +312,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeInstanceConfigsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeInstanceConfigsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeInstanceConfigsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例用户配置</para>
+        /// <para>Get information about the custom configuration of each component of Milvus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -393,19 +358,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DescribeInstanceConfigsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DescribeInstanceConfigsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DescribeInstanceConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例用户配置</para>
+        /// <para>Get information about the custom configuration of each component of Milvus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -424,7 +382,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例用户配置</para>
+        /// <para>Get information about the custom configuration of each component of Milvus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -443,7 +401,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID获取集群的详细信息</para>
+        /// <para>Get the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -484,19 +442,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetInstanceDetailResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetInstanceDetailResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetInstanceDetailResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID获取集群的详细信息</para>
+        /// <para>Get the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -537,19 +488,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetInstanceDetailResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetInstanceDetailResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetInstanceDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID获取集群的详细信息</para>
+        /// <para>Get the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -568,7 +512,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID获取集群的详细信息</para>
+        /// <para>Get the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -587,7 +531,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID或者名称搜索集群</para>
+        /// <para>Get the list of Milvus instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -658,19 +602,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID或者名称搜索集群</para>
+        /// <para>Get the list of Milvus instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -741,19 +678,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID或者名称搜索集群</para>
+        /// <para>Get the list of Milvus instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -772,7 +702,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID或者名称搜索集群</para>
+        /// <para>Get the list of Milvus instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -791,7 +721,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例配置</para>
+        /// <para>Update the configuration parameters of each component of Milvus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -840,19 +770,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyInstanceConfigResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyInstanceConfigResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyInstanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例配置</para>
+        /// <para>Update the configuration parameters of each component of Milvus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -901,19 +824,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ModifyInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ModifyInstanceConfigResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ModifyInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例配置</para>
+        /// <para>Update the configuration parameters of each component of Milvus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -932,7 +848,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例配置</para>
+        /// <para>Update the configuration parameters of each component of Milvus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -951,7 +867,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Milvus公网访问ACL信息</para>
+        /// <para>Configure Public IP Address Whitelist</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1000,19 +916,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateAccessControlListResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateAccessControlListResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateAccessControlListResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Milvus公网访问ACL信息</para>
+        /// <para>Configure Public IP Address Whitelist</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1061,19 +970,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateAccessControlListResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateAccessControlListResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateAccessControlListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Milvus公网访问ACL信息</para>
+        /// <para>Configure Public IP Address Whitelist</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1092,7 +994,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Milvus公网访问ACL信息</para>
+        /// <para>Configure Public IP Address Whitelist</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1111,7 +1013,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群名称</para>
+        /// <para>Modifies the name of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1156,19 +1058,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateInstanceNameResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateInstanceNameResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateInstanceNameResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群名称</para>
+        /// <para>Modifies the name of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1213,19 +1108,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateInstanceNameResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateInstanceNameResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateInstanceNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群名称</para>
+        /// <para>Modifies the name of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1244,7 +1132,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改集群名称</para>
+        /// <para>Modifies the name of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1263,7 +1151,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>该接口用于开通/关闭 Proxy的公网SLB。</para>
+        /// <para>Enable or disable Internet access for Milvus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1316,19 +1204,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdatePublicNetworkStatusResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdatePublicNetworkStatusResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdatePublicNetworkStatusResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>该接口用于开通/关闭 Proxy的公网SLB。</para>
+        /// <para>Enable or disable Internet access for Milvus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1381,19 +1262,12 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 ReqBodyType = "json",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdatePublicNetworkStatusResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdatePublicNetworkStatusResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdatePublicNetworkStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>该接口用于开通/关闭 Proxy的公网SLB。</para>
+        /// <para>Enable or disable Internet access for Milvus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1412,7 +1286,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>该接口用于开通/关闭 Proxy的公网SLB。</para>
+        /// <para>Enable or disable Internet access for Milvus.</para>
         /// </summary>
         /// 
         /// <param name="request">

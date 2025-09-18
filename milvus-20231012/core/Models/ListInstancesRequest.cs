@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-123xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The instance name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>milvus-test</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string ClusterName { get; set; }
 
         /// <summary>
+        /// <para>The page number of the returned page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-123xxx</para>
         /// </summary>
@@ -61,10 +73,18 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         [Validation(Required=false)]
         public List<ListInstancesRequestTag> Tag { get; set; }
         public class ListInstancesRequestTag : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>key1</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>value1</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class DescribeInstanceConfigsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
