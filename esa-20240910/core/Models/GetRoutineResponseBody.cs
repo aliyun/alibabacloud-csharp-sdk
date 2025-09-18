@@ -46,23 +46,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public List<GetRoutineResponseBodyEnvs> Envs { get; set; }
         public class GetRoutineResponseBodyEnvs : TeaModel {
-            /// <summary>
-            /// <para>The regions for canary release.</para>
-            /// </summary>
-            [NameInMap("CanaryAreaList")]
-            [Validation(Required=false)]
-            public List<string> CanaryAreaList { get; set; }
-
-            /// <summary>
-            /// <para>The version number for canary release.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1710120201067577628</para>
-            /// </summary>
-            [NameInMap("CanaryCodeVersion")]
-            [Validation(Required=false)]
-            public string CanaryCodeVersion { get; set; }
-
             [NameInMap("CodeDeploy")]
             [Validation(Required=false)]
             public GetRoutineResponseBodyEnvsCodeDeploy CodeDeploy { get; set; }
@@ -102,16 +85,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Strategy { get; set; }
 
             }
-
-            /// <summary>
-            /// <para>The version number of the code in the environment.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1710120201067577628</para>
-            /// </summary>
-            [NameInMap("CodeVersion")]
-            [Validation(Required=false)]
-            public string CodeVersion { get; set; }
 
             /// <summary>
             /// <para>The environment type.</para>

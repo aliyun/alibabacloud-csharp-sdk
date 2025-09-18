@@ -9790,7 +9790,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建四层应用</para>
+        /// <para>Create Transport Layer Application</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9837,6 +9837,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["SiteId"] = request.SiteId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StaticIp))
+            {
+                query["StaticIp"] = request.StaticIp;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9858,7 +9862,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建四层应用</para>
+        /// <para>Create Transport Layer Application</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9905,6 +9909,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["SiteId"] = request.SiteId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StaticIp))
+            {
+                query["StaticIp"] = request.StaticIp;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9926,7 +9934,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建四层应用</para>
+        /// <para>Create Transport Layer Application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9944,7 +9952,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建四层应用</para>
+        /// <para>Create Transport Layer Application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16638,7 +16646,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除四层应用</para>
+        /// <para>Delete Transport Layer Application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16684,7 +16692,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除四层应用</para>
+        /// <para>Delete Transport Layer Application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16730,7 +16738,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除四层应用</para>
+        /// <para>Delete Transport Layer Application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16748,7 +16756,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除四层应用</para>
+        /// <para>Delete Transport Layer Application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28068,7 +28076,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询四层应用详情</para>
+        /// <para>Query details of the transport layer application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28106,7 +28114,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询四层应用详情</para>
+        /// <para>Query details of the transport layer application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28144,7 +28152,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询四层应用详情</para>
+        /// <para>Query details of the transport layer application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28162,7 +28170,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询四层应用详情</para>
+        /// <para>Query details of the transport layer application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35234,7 +35242,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询四层应用列表</para>
+        /// <para>List of Transport Layer Applications</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35272,7 +35280,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询四层应用列表</para>
+        /// <para>List of Transport Layer Applications</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35310,7 +35318,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询四层应用列表</para>
+        /// <para>List of Transport Layer Applications</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35328,7 +35336,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询四层应用列表</para>
+        /// <para>List of Transport Layer Applications</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48470,7 +48478,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改四层应用</para>
+        /// <para>Modify Transport Layer Application</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -48517,6 +48525,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["SiteId"] = request.SiteId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StaticIp))
+            {
+                query["StaticIp"] = request.StaticIp;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -48538,7 +48550,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改四层应用</para>
+        /// <para>Modify Transport Layer Application</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -48585,6 +48597,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["SiteId"] = request.SiteId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StaticIp))
+            {
+                query["StaticIp"] = request.StaticIp;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -48606,7 +48622,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改四层应用</para>
+        /// <para>Modify Transport Layer Application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48624,7 +48640,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改四层应用</para>
+        /// <para>Modify Transport Layer Application</para>
         /// </summary>
         /// 
         /// <param name="request">

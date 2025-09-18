@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteTransportLayerApplicationResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>90510C29-1E40-5A11-93F1-B9F5EDF57EE1</para>
         /// </summary>
