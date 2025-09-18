@@ -1,3 +1,6 @@
+2025-09-18 Version: 6.5.1
+- Generated csharp 2021-10-01 for waf-openapi.
+
 2025-09-17 Version: 6.5.0
 - Support API DescribeHybridCloudBasicMonitor.
 - Support API DescribeHybridCloudClusterServers.
