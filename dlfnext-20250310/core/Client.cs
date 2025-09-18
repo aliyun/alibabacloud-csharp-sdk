@@ -4663,6 +4663,136 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取数据湖表的临时访问凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTableTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableTokenResponse
+        /// </returns>
+        public GetTableTokenResponse GetTableTokenWithOptions(string catalogId, string database, string table, GetTableTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsInternal))
+            {
+                query["isInternal"] = request.IsInternal;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTableToken",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalogId) + "/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/tables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(table) + "/token",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTableTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据湖表的临时访问凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTableTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableTokenResponse
+        /// </returns>
+        public async Task<GetTableTokenResponse> GetTableTokenWithOptionsAsync(string catalogId, string database, string table, GetTableTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsInternal))
+            {
+                query["isInternal"] = request.IsInternal;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTableToken",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalogId) + "/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/tables/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(table) + "/token",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTableTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据湖表的临时访问凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTableTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableTokenResponse
+        /// </returns>
+        public GetTableTokenResponse GetTableToken(string catalogId, string database, string table, GetTableTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetTableTokenWithOptions(catalogId, database, table, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据湖表的临时访问凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTableTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTableTokenResponse
+        /// </returns>
+        public async Task<GetTableTokenResponse> GetTableTokenAsync(string catalogId, string database, string table, GetTableTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetTableTokenWithOptionsAsync(catalogId, database, table, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取用户</para>
         /// </summary>
         /// 
@@ -7291,6 +7421,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310
             {
                 query["tableNamePattern"] = request.TableNamePattern;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7344,6 +7478,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableNamePattern))
             {
                 query["tableNamePattern"] = request.TableNamePattern;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -1,3 +1,8 @@
+2025-09-18 Version: 1.4.0
+- Support API GetTableToken.
+- Update API ListTableDetails: add request parameters type.
+
+
 2025-08-22 Version: 1.3.1
 - Update API AlterShare: add request parameters body.enableWrite.
 - Update API CreateShare: add request parameters body.enableWrite.

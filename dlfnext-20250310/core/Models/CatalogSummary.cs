@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public MoMValues TotalFileSizeInBytes { get; set; }
 
+        [NameInMap("totalMetaSizeInBytes")]
+        [Validation(Required=false)]
+        public MoMValues TotalMetaSizeInBytes { get; set; }
+
     }
 
 }

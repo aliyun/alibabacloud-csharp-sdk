@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string TableNamePattern { get; set; }
 
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
     }
 
 }

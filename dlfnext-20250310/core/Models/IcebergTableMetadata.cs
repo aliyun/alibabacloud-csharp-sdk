@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public List<IcebergNestedField> Fields { get; set; }
 
+        [NameInMap("identifierFieldIds")]
+        [Validation(Required=false)]
+        public List<int?> IdentifierFieldIds { get; set; }
+
         [NameInMap("partitionFields")]
         [Validation(Required=false)]
         public List<IcebergPartitionField> PartitionFields { get; set; }

@@ -17,12 +17,32 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public double? CuUsage { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
         [NameInMap("lastCompactedFileTime")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? LastCompactedFileTime { get; set; }
 
+        [NameInMap("latencyFileEarliestTime")]
+        [Validation(Required=false)]
+        public long? LatencyFileEarliestTime { get; set; }
+
+        /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
         [NameInMap("maxLevel0FileCount")]
         [Validation(Required=false)]
+        [Obsolete]
         public string MaxLevel0FileCount { get; set; }
 
         [NameInMap("tableId")]
