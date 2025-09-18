@@ -590,6 +590,24 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 
         }
 
+        [NameInMap("ServiceLocaleConfigs")]
+        [Validation(Required=false)]
+        public List<GetServiceResponseBodyServiceLocaleConfigs> ServiceLocaleConfigs { get; set; }
+        public class GetServiceResponseBodyServiceLocaleConfigs : TeaModel {
+            [NameInMap("EnValue")]
+            [Validation(Required=false)]
+            public string EnValue { get; set; }
+
+            [NameInMap("OriginalValue")]
+            [Validation(Required=false)]
+            public string OriginalValue { get; set; }
+
+            [NameInMap("ZhValue")]
+            [Validation(Required=false)]
+            public string ZhValue { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The URL of the service page.</para>
         /// 
