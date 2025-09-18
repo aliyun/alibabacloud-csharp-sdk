@@ -139,6 +139,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [Validation(Required=false)]
         public long? TransitRouterOwnerId { get; set; }
 
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
+
         /// <summary>
         /// <para>The VPC ID.</para>
         /// 

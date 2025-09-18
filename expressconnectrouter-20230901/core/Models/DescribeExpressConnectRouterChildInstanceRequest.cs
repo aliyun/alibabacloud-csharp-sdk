@@ -112,6 +112,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
+
     }
 
 }

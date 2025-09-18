@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
         [Validation(Required=false)]
         public string EcrId { get; set; }
 
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
+
     }
 
 }
