@@ -9,19 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetApplicationResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The application.</para>
+        /// </summary>
         [NameInMap("Application")]
         [Validation(Required=false)]
         public GetApplicationResponseBodyApplication Application { get; set; }
         public class GetApplicationResponseBodyApplication : TeaModel {
             /// <summary>
-            /// <para>操作列表。</para>
+            /// <para>The list of actions supported by the application.</para>
             /// </summary>
             [NameInMap("Actions")]
             [Validation(Required=false)]
             public List<GetApplicationResponseBodyApplicationActions> Actions { get; set; }
             public class GetApplicationResponseBodyApplicationActions : TeaModel {
                 /// <summary>
-                /// <para>操作名称。</para>
+                /// <para>The action name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>decommission</para>
@@ -31,14 +34,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public string ActionName { get; set; }
 
                 /// <summary>
-                /// <para>操作参数。</para>
+                /// <para>The list of action parameters.</para>
                 /// </summary>
                 [NameInMap("ActionParams")]
                 [Validation(Required=false)]
                 public List<GetApplicationResponseBodyApplicationActionsActionParams> ActionParams { get; set; }
                 public class GetApplicationResponseBodyApplicationActionsActionParams : TeaModel {
                     /// <summary>
-                    /// <para>动作参数描述。</para>
+                    /// <para>Description</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>start</para>
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>动作参数KEY。</para>
+                    /// <para>The parameter name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>timeout</para>
@@ -58,14 +61,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>动作参数属性。</para>
+                    /// <para>The parameter value attribute.</para>
                     /// </summary>
                     [NameInMap("ValueAttribute")]
                     [Validation(Required=false)]
                     public GetApplicationResponseBodyApplicationActionsActionParamsValueAttribute ValueAttribute { get; set; }
                     public class GetApplicationResponseBodyApplicationActionsActionParamsValueAttribute : TeaModel {
                         /// <summary>
-                        /// <para>值表述。</para>
+                        /// <para>Value description.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>描述</para>
@@ -75,7 +78,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// <para>值步长。</para>
+                        /// <para>The size of the value increment.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -85,7 +88,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                         public string ValueIncrementStep { get; set; }
 
                         /// <summary>
-                        /// <para>最大值。</para>
+                        /// <para>The maximum range of values.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>100</para>
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                         public string ValueMaximum { get; set; }
 
                         /// <summary>
-                        /// <para>最小值。</para>
+                        /// <para>The minimum range of values.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                         public string ValueMinimum { get; set; }
 
                         /// <summary>
-                        /// <para>属性值类型。</para>
+                        /// <para>The value type of the column.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>int</para>
@@ -115,7 +118,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                         public string ValueType { get; set; }
 
                         /// <summary>
-                        /// <para>值单位。</para>
+                        /// <para>The unit of the value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>number</para>
@@ -129,7 +132,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 }
 
                 /// <summary>
-                /// <para>命令。</para>
+                /// <para>The action command.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>decommission</para>
@@ -139,7 +142,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public string Command { get; set; }
 
                 /// <summary>
-                /// <para>组件名称。</para>
+                /// <para>The component name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DataNode</para>
@@ -149,7 +152,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public string ComponentName { get; set; }
 
                 /// <summary>
-                /// <para>操作描述。</para>
+                /// <para>The description of the action.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>描述</para>
@@ -159,7 +162,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>执行范围。</para>
+                /// <para>The execution scope. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>APPLICATION: the application scope.</description></item>
+                /// <item><description>COMPONENT: the component scope.</description></item>
+                /// <item><description>COMPONENT_INSTANCE: the component instance scope.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>COMPONENT_INSTANCE</para>
@@ -171,7 +179,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             }
 
             /// <summary>
-            /// <para>应用名称。</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HDFS</para>
@@ -181,7 +189,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// <para>应用操作状态。</para>
+            /// <para>The status of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -191,7 +199,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ApplicationState { get; set; }
 
             /// <summary>
-            /// <para>应用版本。</para>
+            /// <para>The application version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.8.1</para>
@@ -201,7 +209,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ApplicationVersion { get; set; }
 
             /// <summary>
-            /// <para>社区版本。</para>
+            /// <para>The community version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.8.1</para>
@@ -213,7 +221,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9E3A7161-EB7B-172B-8D18-FFB06BA3****</para>

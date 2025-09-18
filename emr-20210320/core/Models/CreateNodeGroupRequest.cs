@@ -22,7 +22,6 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// <para>The information about the node group.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeGroup")]
         [Validation(Required=false)]

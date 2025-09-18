@@ -1690,6 +1690,138 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await DeleteUsersWithOptionsAsync(request, runtime);
         }
 
+        /// <param name="request">
+        /// ExportApplicationConfigsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportApplicationConfigsResponse
+        /// </returns>
+        public ExportApplicationConfigsResponse ExportApplicationConfigsWithOptions(ExportApplicationConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationConfigFiles))
+            {
+                query["ApplicationConfigFiles"] = request.ApplicationConfigFiles;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportMode))
+            {
+                query["ExportMode"] = request.ExportMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFormat))
+            {
+                query["FileFormat"] = request.FileFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportApplicationConfigs",
+                Version = "2021-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportApplicationConfigsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// ExportApplicationConfigsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportApplicationConfigsResponse
+        /// </returns>
+        public async Task<ExportApplicationConfigsResponse> ExportApplicationConfigsWithOptionsAsync(ExportApplicationConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationConfigFiles))
+            {
+                query["ApplicationConfigFiles"] = request.ApplicationConfigFiles;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportMode))
+            {
+                query["ExportMode"] = request.ExportMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFormat))
+            {
+                query["FileFormat"] = request.FileFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportApplicationConfigs",
+                Version = "2021-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportApplicationConfigsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// ExportApplicationConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportApplicationConfigsResponse
+        /// </returns>
+        public ExportApplicationConfigsResponse ExportApplicationConfigs(ExportApplicationConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExportApplicationConfigsWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// ExportApplicationConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportApplicationConfigsResponse
+        /// </returns>
+        public async Task<ExportApplicationConfigsResponse> ExportApplicationConfigsAsync(ExportApplicationConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExportApplicationConfigsWithOptionsAsync(request, runtime);
+        }
+
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the detailed configuration information about an API operation template.</para>
@@ -1818,6 +1950,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await GetApiTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an application.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>查询应用详情。</para>
@@ -1868,6 +2005,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<GetApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an application.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>查询应用详情。</para>
@@ -1918,6 +2060,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<GetApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an application.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>查询应用详情。</para>
@@ -1936,6 +2083,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return GetApplicationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an application.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>查询应用详情。</para>
@@ -5893,6 +6045,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeTypes))
+            {
+                query["InstanceChargeTypes"] = request.InstanceChargeTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -5974,6 +6130,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeTypes))
+            {
+                query["InstanceChargeTypes"] = request.InstanceChargeTypes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -6258,6 +6418,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await ListClustersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of component instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListComponentInstancesRequest
         /// </param>
@@ -6331,6 +6496,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<ListComponentInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of component instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListComponentInstancesRequest
         /// </param>
@@ -6404,6 +6574,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<ListComponentInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of component instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListComponentInstancesRequest
         /// </param>
@@ -6417,6 +6592,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return ListComponentInstancesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of component instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListComponentInstancesRequest
         /// </param>
@@ -6430,6 +6610,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await ListComponentInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of components.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListComponentsRequest
         /// </param>
@@ -6491,6 +6676,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<ListComponentsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of components.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListComponentsRequest
         /// </param>
@@ -6552,6 +6742,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<ListComponentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of components.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListComponentsRequest
         /// </param>
@@ -6565,6 +6760,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return ListComponentsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of components.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListComponentsRequest
         /// </param>

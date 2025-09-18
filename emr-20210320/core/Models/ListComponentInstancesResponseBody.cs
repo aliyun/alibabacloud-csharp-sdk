@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListComponentInstancesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of instance component installation information.</para>
+        /// </summary>
         [NameInMap("ComponentInstances")]
         [Validation(Required=false)]
         public List<ListComponentInstancesResponseBodyComponentInstances> ComponentInstances { get; set; }
         public class ListComponentInstancesResponseBodyComponentInstances : TeaModel {
             /// <summary>
-            /// <para>应用名称。</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KNOX</para>
@@ -24,10 +27,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// <para>组件服务状态，取值如下：</para>
+            /// <para>The status of the component service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>active：主服务</description></item>
-            /// <item><description>standby：备用服务。</description></item>
+            /// <item><description>active: the primary service.</description></item>
+            /// <item><description>standby: the standby service.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -38,15 +41,15 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string BizState { get; set; }
 
             /// <summary>
-            /// <para>Commission状态，取值如下：</para>
+            /// <para>The status of the Commission. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>COMMISSIONED：已上线</description></item>
-            /// <item><description>COMMISSIONING：上线中</description></item>
-            /// <item><description>DECOMMISSIONED：已下线</description></item>
-            /// <item><description>DECOMMISSIONINPROGRESS：下线进程中</description></item>
-            /// <item><description>DECOMMISSIONFAILED：下线失败</description></item>
-            /// <item><description>INSERVICE：服务中</description></item>
-            /// <item><description>UNKNOWN：未知状态。<para></description></item>
+            /// <item><description>COMMISSIONED</description></item>
+            /// <item><description>COMMISSIONING</description></item>
+            /// <item><description>DECOMMISSIONED</description></item>
+            /// <item><description>DECOMMISSIONINPROGRESS</description></item>
+            /// <item><description>DECOMMISSIONFAILED</description></item>
+            /// <item><description>INSERVICE</description></item>
+            /// <item><description>UNKNOWN</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,18 +60,18 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string CommissionState { get; set; }
 
             /// <summary>
-            /// <para>组件实例操作状态，取值如下：</para>
+            /// <para>The status of the component. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>WAITING：等待中</description></item>
-            /// <item><description>INSTALLING：安装中</description></item>
-            /// <item><description>INSTALLED：已安装</description></item>
-            /// <item><description>INSTALL_FAILED：安装失败</description></item>
-            /// <item><description>STARTING：启动中</description></item>
-            /// <item><description>STARTED：已启动</description></item>
-            /// <item><description>START_FAILED：启动失败</description></item>
-            /// <item><description>STOPPING：停止中</description></item>
-            /// <item><description>STOPPED：已停止</description></item>
-            /// <item><description>STOP_FAILED：停止失败</description></item>
+            /// <item><description>WAITING</description></item>
+            /// <item><description>INSTALLING</description></item>
+            /// <item><description>INSTALLED</description></item>
+            /// <item><description>INSTALL_FAILED</description></item>
+            /// <item><description>STARTING</description></item>
+            /// <item><description>STARTED</description></item>
+            /// <item><description>START_FAILED</description></item>
+            /// <item><description>STOPPING</description></item>
+            /// <item><description>STOPPED</description></item>
+            /// <item><description>STOP_FAILED</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +82,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ComponentInstanceState { get; set; }
 
             /// <summary>
-            /// <para>组件名称。</para>
+            /// <para>The component name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KNOX</para>
@@ -89,7 +92,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ComponentName { get; set; }
 
             /// <summary>
-            /// <para>安装时间戳。</para>
+            /// <para>The timestamp of the installation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1628248947000</para>
@@ -99,18 +102,18 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>期望状态，取值如下：</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>WAITING：等待中</description></item>
-            /// <item><description>INSTALLING：安装中</description></item>
-            /// <item><description>INSTALLED：已安装</description></item>
-            /// <item><description>INSTALL_FAILED：安装失败</description></item>
-            /// <item><description>STARTING：启动中</description></item>
-            /// <item><description>STARTED：已启动</description></item>
-            /// <item><description>START_FAILED：启动失败</description></item>
-            /// <item><description>STOPPING：停止中</description></item>
-            /// <item><description>STOPPED：已停止</description></item>
-            /// <item><description>STOP_FAILED：停止失败。</description></item>
+            /// <item><description>WAITING</description></item>
+            /// <item><description>INSTALLING</description></item>
+            /// <item><description>INSTALLED</description></item>
+            /// <item><description>INSTALL_FAILED</description></item>
+            /// <item><description>STARTING</description></item>
+            /// <item><description>STARTED</description></item>
+            /// <item><description>START_FAILED</description></item>
+            /// <item><description>STOPPING</description></item>
+            /// <item><description>STOPPED</description></item>
+            /// <item><description>STOP_FAILED</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string DesiredState { get; set; }
 
             /// <summary>
-            /// <para>节点ID。</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp17yy050pxo01m2****</para>
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>节点名称。</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>emr-worker-1</para>
@@ -141,6 +144,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string NodeName { get; set; }
 
             /// <summary>
+            /// <para>The zone ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-i</para>
             /// </summary>
@@ -151,7 +156,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// <para>本次请求所返回的最大记录条数。</para>
+        /// <para>The maximum number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -161,7 +166,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>返回读取到的数据位置，空代表数据已经读取完毕。</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>“”</para>
@@ -171,7 +176,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7345241A-014C-17D2-A3AC-C72771188F46</para>
@@ -181,7 +186,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>本次请求条件下的数据总量。</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

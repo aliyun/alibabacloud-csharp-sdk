@@ -126,6 +126,28 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             [Validation(Required=false)]
             public int? ExpectNum { get; set; }
 
+            [NameInMap("InstanceTypeDetails")]
+            [Validation(Required=false)]
+            public List<ListAutoScalingActivitiesResponseBodyScalingActivitiesInstanceTypeDetails> InstanceTypeDetails { get; set; }
+            public class ListAutoScalingActivitiesResponseBodyScalingActivitiesInstanceTypeDetails : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>ecs.g6.xlarge</para>
+                /// </summary>
+                [NameInMap("InstanceType")]
+                [Validation(Required=false)]
+                public string InstanceType { get; set; }
+
+                [NameInMap("OnDemandInstanceIds")]
+                [Validation(Required=false)]
+                public List<string> OnDemandInstanceIds { get; set; }
+
+                [NameInMap("SpotInstanceIds")]
+                [Validation(Required=false)]
+                public List<string> SpotInstanceIds { get; set; }
+
+            }
+
             [NameInMap("InstanceTypeToNum")]
             [Validation(Required=false)]
             public Dictionary<string, int?> InstanceTypeToNum { get; set; }
@@ -160,6 +182,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             [Validation(Required=false)]
             public string OperationId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PRIORITY</para>
+            /// </summary>
             [NameInMap("PolicyType")]
             [Validation(Required=false)]
             public string PolicyType { get; set; }

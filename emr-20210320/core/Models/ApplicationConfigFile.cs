@@ -22,7 +22,6 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// <para>配置文件名称。</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>core-site.xml</para>

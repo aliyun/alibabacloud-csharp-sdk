@@ -31,6 +31,22 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>实例付费类型枚举值：</para>
+        /// <list type="bullet">
+        /// <item><description>ONDEMAND: 按量付费实例</description></item>
+        /// <item><description>SPOT: 竞价实例
+        /// 默认为null代表全选
+        /// 举例: [&quot;ONDEMAND&quot;, &quot;SPOT&quot;]</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ONDEMAND</para>
+        /// </summary>
+        [NameInMap("InstanceChargeTypes")]
+        [Validation(Required=false)]
+        public List<string> InstanceChargeTypes { get; set; }
+
+        /// <summary>
         /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
@@ -95,6 +111,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string ScalingActivityType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>MANAGED</para>
+        /// </summary>
         [NameInMap("ScalingPolicyType")]
         [Validation(Required=false)]
         public string ScalingPolicyType { get; set; }

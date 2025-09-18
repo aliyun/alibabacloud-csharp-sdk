@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class UpdateSpecNodeGroup : TeaModel {
+        [NameInMap("ModifyType")]
+        [Validation(Required=false)]
+        public string ModifyType { get; set; }
+
         /// <summary>
         /// <para>新实例类型。</para>
         /// <para>This parameter is required.</para>

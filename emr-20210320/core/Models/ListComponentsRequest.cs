@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListComponentsRequest : TeaModel {
         /// <summary>
-        /// <para>应用名称列表。</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> ApplicationNames { get; set; }
 
         /// <summary>
-        /// <para>集群ID。</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>组件名称列表。</para>
+        /// <para>The list of component names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;HDFS&quot;]</para>
@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> ComponentNames { get; set; }
 
         /// <summary>
+        /// <para>The list of component status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -49,7 +51,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> ComponentStates { get; set; }
 
         /// <summary>
-        /// <para>一次获取的最大记录数。取值范围：1~100。</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>标记当前开始读取的位置，置空表示从头开始。</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>地域ID。</para>
+        /// <para>The region ID. You can call the <a href="url">ListRegions</a> view.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

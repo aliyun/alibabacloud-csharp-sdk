@@ -96,6 +96,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public long? LocalStorageCapacity { get; set; }
 
+        [NameInMap("ModifyType")]
+        [Validation(Required=false)]
+        public string ModifyType { get; set; }
+
         /// <summary>
         /// <para>是否IO优化类型。</para>
         /// 
