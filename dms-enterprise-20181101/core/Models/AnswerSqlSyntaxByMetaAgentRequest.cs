@@ -8,34 +8,32 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class GetTableKnowledgeInfoRequest : TeaModel {
+    public class AnswerSqlSyntaxByMetaAgentRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>325</para>
+        /// <para>1***</para>
         /// </summary>
         [NameInMap("DbId")]
         [Validation(Required=false)]
-        public int? DbId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>table_name</para>
-        /// </summary>
-        [NameInMap("TableName")]
-        [Validation(Required=false)]
-        public string TableName { get; set; }
+        public string DbId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>dbo</para>
+        /// <para>qwen-plus</para>
         /// </summary>
-        [NameInMap("TableSchemaName")]
+        [NameInMap("Model")]
         [Validation(Required=false)]
-        public string TableSchemaName { get; set; }
+        public string Model { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>怎么获取当前时间的字符串</para>
+        /// </summary>
+        [NameInMap("Query")]
+        [Validation(Required=false)]
+        public string Query { get; set; }
 
     }
 

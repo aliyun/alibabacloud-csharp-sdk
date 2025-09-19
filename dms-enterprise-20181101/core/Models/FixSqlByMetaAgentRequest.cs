@@ -8,46 +8,50 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class GetTableKnowledgeInfoResponseBody : TeaModel {
+    public class FixSqlByMetaAgentRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>UnknownError</para>
+        /// <para>1***</para>
         /// </summary>
-        [NameInMap("ErrorCode")]
+        [NameInMap("DbId")]
         [Validation(Required=false)]
-        public string ErrorCode { get; set; }
+        public string DbId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>UnknownError</para>
+        /// <para>unknown column col</para>
         /// </summary>
-        [NameInMap("ErrorMessage")]
+        [NameInMap("Error")]
         [Validation(Required=false)]
-        public string ErrorMessage { get; set; }
+        public string Error { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</para>
+        /// <para>qwen-plus</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Model")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Model { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>正确字段是啥？</para>
         /// </summary>
-        [NameInMap("Success")]
+        [NameInMap("Query")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string Query { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>bill_orders</para>
+        /// <para>select * from table where col = 1</para>
         /// </summary>
-        [NameInMap("Table")]
+        [NameInMap("Sql")]
         [Validation(Required=false)]
-        public TableKnowledgeInfo Table { get; set; }
+        public string Sql { get; set; }
 
     }
 

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public List<string> Enterprise { get; set; }
 
+            [NameInMap("OpenCommunity")]
+            [Validation(Required=false)]
+            public List<string> OpenCommunity { get; set; }
+
         }
 
         [NameInMap("ErrorCode")]

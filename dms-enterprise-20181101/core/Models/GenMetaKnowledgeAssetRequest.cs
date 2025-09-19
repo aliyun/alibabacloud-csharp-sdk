@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class GenMetaKnowledgeAssetRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1860****</para>
         /// </summary>
         [NameInMap("DbId")]
         [Validation(Required=false)]

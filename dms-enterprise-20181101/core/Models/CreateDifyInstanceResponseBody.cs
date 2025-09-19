@@ -17,9 +17,17 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public CreateDifyInstanceResponseBodyData Data { get; set; }
         public class CreateDifyInstanceResponseBodyData : TeaModel {
+            [NameInMap("AppUuid")]
+            [Validation(Required=false)]
+            public string AppUuid { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
+
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
 
             [NameInMap("Replicas")]
             [Validation(Required=false)]

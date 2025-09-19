@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                [NameInMap("InstanceName")]
+                [Validation(Required=false)]
+                public string InstanceName { get; set; }
+
                 [NameInMap("InternetUrl")]
                 [Validation(Required=false)]
                 public string InternetUrl { get; set; }

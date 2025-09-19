@@ -1559,6 +1559,162 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>根据用户提供的数据库ID，回答对应引擎的语法问题</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据用户提供的数据库ID，回答对应引擎的语法问题</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AnswerSqlSyntaxByMetaAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnswerSqlSyntaxByMetaAgentResponse
+        /// </returns>
+        public AnswerSqlSyntaxByMetaAgentResponse AnswerSqlSyntaxByMetaAgentWithOptions(AnswerSqlSyntaxByMetaAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AnswerSqlSyntaxByMetaAgent",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AnswerSqlSyntaxByMetaAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户提供的数据库ID，回答对应引擎的语法问题</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据用户提供的数据库ID，回答对应引擎的语法问题</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AnswerSqlSyntaxByMetaAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnswerSqlSyntaxByMetaAgentResponse
+        /// </returns>
+        public async Task<AnswerSqlSyntaxByMetaAgentResponse> AnswerSqlSyntaxByMetaAgentWithOptionsAsync(AnswerSqlSyntaxByMetaAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AnswerSqlSyntaxByMetaAgent",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AnswerSqlSyntaxByMetaAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户提供的数据库ID，回答对应引擎的语法问题</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据用户提供的数据库ID，回答对应引擎的语法问题</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AnswerSqlSyntaxByMetaAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnswerSqlSyntaxByMetaAgentResponse
+        /// </returns>
+        public AnswerSqlSyntaxByMetaAgentResponse AnswerSqlSyntaxByMetaAgent(AnswerSqlSyntaxByMetaAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AnswerSqlSyntaxByMetaAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户提供的数据库ID，回答对应引擎的语法问题</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据用户提供的数据库ID，回答对应引擎的语法问题</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AnswerSqlSyntaxByMetaAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AnswerSqlSyntaxByMetaAgentResponse
+        /// </returns>
+        public async Task<AnswerSqlSyntaxByMetaAgentResponse> AnswerSqlSyntaxByMetaAgentAsync(AnswerSqlSyntaxByMetaAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AnswerSqlSyntaxByMetaAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Reviews a ticket.</para>
         /// </summary>
         /// 
@@ -14963,6 +15119,178 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExecuteStructSyncWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// FixSqlByMetaAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FixSqlByMetaAgentResponse
+        /// </returns>
+        public FixSqlByMetaAgentResponse FixSqlByMetaAgentWithOptions(FixSqlByMetaAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Error))
+            {
+                query["Error"] = request.Error;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sql))
+            {
+                query["Sql"] = request.Sql;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FixSqlByMetaAgent",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FixSqlByMetaAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// FixSqlByMetaAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FixSqlByMetaAgentResponse
+        /// </returns>
+        public async Task<FixSqlByMetaAgentResponse> FixSqlByMetaAgentWithOptionsAsync(FixSqlByMetaAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Error))
+            {
+                query["Error"] = request.Error;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sql))
+            {
+                query["Sql"] = request.Sql;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FixSqlByMetaAgent",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FixSqlByMetaAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// FixSqlByMetaAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FixSqlByMetaAgentResponse
+        /// </returns>
+        public FixSqlByMetaAgentResponse FixSqlByMetaAgent(FixSqlByMetaAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return FixSqlByMetaAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据用户提供的SQL，报错信息和数据库ID，分析SQL报错原因并修复</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// FixSqlByMetaAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FixSqlByMetaAgentResponse
+        /// </returns>
+        public async Task<FixSqlByMetaAgentResponse> FixSqlByMetaAgentAsync(FixSqlByMetaAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await FixSqlByMetaAgentWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -37607,6 +37935,170 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await OfflineTaskFlowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户提供的SQL数据库ID，分析SQL性能并优化</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据用户提供的SQL数据库ID，分析SQL性能并优化</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OptimizeSqlByMetaAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OptimizeSqlByMetaAgentResponse
+        /// </returns>
+        public OptimizeSqlByMetaAgentResponse OptimizeSqlByMetaAgentWithOptions(OptimizeSqlByMetaAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sql))
+            {
+                query["Sql"] = request.Sql;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OptimizeSqlByMetaAgent",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OptimizeSqlByMetaAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户提供的SQL数据库ID，分析SQL性能并优化</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据用户提供的SQL数据库ID，分析SQL性能并优化</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OptimizeSqlByMetaAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OptimizeSqlByMetaAgentResponse
+        /// </returns>
+        public async Task<OptimizeSqlByMetaAgentResponse> OptimizeSqlByMetaAgentWithOptionsAsync(OptimizeSqlByMetaAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbId))
+            {
+                query["DbId"] = request.DbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sql))
+            {
+                query["Sql"] = request.Sql;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OptimizeSqlByMetaAgent",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OptimizeSqlByMetaAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户提供的SQL数据库ID，分析SQL性能并优化</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据用户提供的SQL数据库ID，分析SQL性能并优化</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OptimizeSqlByMetaAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OptimizeSqlByMetaAgentResponse
+        /// </returns>
+        public OptimizeSqlByMetaAgentResponse OptimizeSqlByMetaAgent(OptimizeSqlByMetaAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OptimizeSqlByMetaAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据用户提供的SQL数据库ID，分析SQL性能并优化</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据用户提供的SQL数据库ID，分析SQL性能并优化</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OptimizeSqlByMetaAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OptimizeSqlByMetaAgentResponse
+        /// </returns>
+        public async Task<OptimizeSqlByMetaAgentResponse> OptimizeSqlByMetaAgentAsync(OptimizeSqlByMetaAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OptimizeSqlByMetaAgentWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
