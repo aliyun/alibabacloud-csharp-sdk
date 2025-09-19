@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public int? AndroidHonorTargetUserType { get; set; }
 
+        [NameInMap("AndroidHuaweiLiveNotificationPayload")]
+        [Validation(Required=false)]
+        public string AndroidHuaweiLiveNotificationPayload { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>RCP4C123456</para>
@@ -417,6 +421,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [NameInMap("HarmonyInboxContent")]
         [Validation(Required=false)]
         public string HarmonyInboxContent { get; set; }
+
+        [NameInMap("HarmonyLiveViewPayload")]
+        [Validation(Required=false)]
+        public string HarmonyLiveViewPayload { get; set; }
 
         [NameInMap("HarmonyNotificationSlotType")]
         [Validation(Required=false)]

@@ -1733,6 +1733,10 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidHonorTargetUserType"] = request.AndroidHonorTargetUserType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHuaweiLiveNotificationPayload))
+            {
+                query["AndroidHuaweiLiveNotificationPayload"] = request.AndroidHuaweiLiveNotificationPayload;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHuaweiReceiptId))
             {
                 query["AndroidHuaweiReceiptId"] = request.AndroidHuaweiReceiptId;
@@ -1948,6 +1952,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HarmonyInboxContent))
             {
                 query["HarmonyInboxContent"] = request.HarmonyInboxContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HarmonyLiveViewPayload))
+            {
+                query["HarmonyLiveViewPayload"] = request.HarmonyLiveViewPayload;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HarmonyNotificationSlotType))
             {
@@ -2221,6 +2229,10 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidHonorTargetUserType"] = request.AndroidHonorTargetUserType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHuaweiLiveNotificationPayload))
+            {
+                query["AndroidHuaweiLiveNotificationPayload"] = request.AndroidHuaweiLiveNotificationPayload;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidHuaweiReceiptId))
             {
                 query["AndroidHuaweiReceiptId"] = request.AndroidHuaweiReceiptId;
@@ -2436,6 +2448,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HarmonyInboxContent))
             {
                 query["HarmonyInboxContent"] = request.HarmonyInboxContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HarmonyLiveViewPayload))
+            {
+                query["HarmonyLiveViewPayload"] = request.HarmonyLiveViewPayload;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HarmonyNotificationSlotType))
             {
