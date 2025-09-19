@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             [Validation(Required=false)]
             public string IntranetDomain { get; set; }
 
+            [NameInMap("IntranetEnabled")]
+            [Validation(Required=false)]
+            public bool? IntranetEnabled { get; set; }
+
             /// <summary>
             /// <para>Indicates whether it is the default private gateway.</para>
             /// 

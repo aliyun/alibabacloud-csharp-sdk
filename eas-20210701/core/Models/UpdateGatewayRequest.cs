@@ -95,6 +95,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? Replicas { get; set; }
 
+        [NameInMap("VSwitchIds")]
+        [Validation(Required=false)]
+        public List<string> VSwitchIds { get; set; }
+
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
+
     }
 
 }

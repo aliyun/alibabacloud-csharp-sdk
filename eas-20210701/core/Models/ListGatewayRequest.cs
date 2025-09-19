@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListGatewayRequest : TeaModel {
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
         /// <summary>
         /// <para>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</para>
         /// 
@@ -28,6 +32,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("GatewayName")]
         [Validation(Required=false)]
         public string GatewayName { get; set; }
+
+        [NameInMap("GatewayType")]
+        [Validation(Required=false)]
+        public string GatewayType { get; set; }
+
+        [NameInMap("InternetEnabled")]
+        [Validation(Required=false)]
+        public bool? InternetEnabled { get; set; }
+
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
 
         /// <summary>
         /// <para>The page number. Default value: 1.</para>
@@ -58,6 +74,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
         public string ResourceName { get; set; }
+
+        [NameInMap("Sort")]
+        [Validation(Required=false)]
+        public string Sort { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

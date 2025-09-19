@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? EnableIntranet { get; set; }
 
+        [NameInMap("GatewayType")]
+        [Validation(Required=false)]
+        public string GatewayType { get; set; }
+
         /// <summary>
         /// <para>The instance type used by the private gateway. Valid values:</para>
         /// <list type="bullet">
@@ -82,7 +86,6 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <item><description>8c16g</description></item>
         /// <item><description>16c32g</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c6.4xlarge</para>
