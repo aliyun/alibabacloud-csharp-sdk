@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class CreateIpamPoolRequest : TeaModel {
         /// <summary>
-        /// <para>The default network mask assigned to the IPAM pool.</para>
-        /// <para>An IPv4 mask must be <b>0 to 32</b> bits in length.</para>
+        /// <para>The default network mask assigned by the IPAM address pool.  </para>
+        /// <remarks>
+        /// <para>The IPv4 network mask value range is 0 to 32 bits, and the IPv6 network mask value range is 0 to 128 bits.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>28</para>
@@ -21,8 +23,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public int? AllocationDefaultCidrMask { get; set; }
 
         /// <summary>
-        /// <para>The maximum network mask assigned to the IPAM pool.</para>
-        /// <para>An IPv4 mask must be <b>0 to 32</b> bits in length.</para>
+        /// <para>The maximum network mask assigned by the IPAM address pool.  </para>
+        /// <remarks>
+        /// <para>The IPv4 network mask value range is <b>0 to 32</b> bits, and the IPv6 network mask value range is <b>0 to 128</b> bits.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>
@@ -32,8 +36,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public int? AllocationMaxCidrMask { get; set; }
 
         /// <summary>
-        /// <para>The minimum network mask assigned to the IPAM pool.</para>
-        /// <para>An IPv4 mask must be <b>0 to 32</b> bits in length.</para>
+        /// <para>The minimum network mask assigned by the IPAM address pool.  </para>
+        /// <remarks>
+        /// <para>The IPv4 network mask value range is <b>0 to 32</b> bits, and the IPv6 network mask value range is <b>0 to 128</b> bits.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -80,7 +86,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The IP version. Only <b>IPv4</b> is supported.</para>
+        /// <para>IP address protocol version. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>IPv4</b>: IPv4 protocol.</description></item>
+        /// <item><description><b>IPv6</b>: IPv6 protocol.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
@@ -90,8 +100,8 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The description of the IPAM pool.</para>
-        /// <para>It must be 2 to 256 characters in length. It must start with a letter, but cannot start with a <c>http://</c> or <c>https://</c>. This parameter is empty by default.</para>
+        /// <para>Description of the IPAM address pool. 
+        /// The length should be between 1 to 256 characters, and it must start with an uppercase or lowercase English letter or a Chinese character, but cannot begin with <c>http://</c> or <c>https://</c>. If left blank, the default value is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test description</para>
@@ -122,6 +132,21 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [Validation(Required=false)]
         public string IpamScopeId { get; set; }
 
+        /// <summary>
+        /// <para>The type of the IPv6 CIDR block of the VPC. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>BGP</b> (default)</description></item>
+        /// <item><description><b>ChinaMobile</b></description></item>
+        /// <item><description><b>ChinaUnicom</b></description></item>
+        /// <item><description><b>ChinaTelecom</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you are allowed to use single-ISP bandwidth, you can set the value to <b>ChinaTelecom</b>, <b>ChinaUnicom</b>, or <b>ChinaMobile</b>.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BGP</para>
+        /// </summary>
         [NameInMap("Ipv6Isp")]
         [Validation(Required=false)]
         public string Ipv6Isp { get; set; }

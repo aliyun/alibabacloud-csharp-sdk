@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
 {
     public class AddIpamPoolCidrRequest : TeaModel {
         /// <summary>
-        /// <para>The CIDR block that you want to provision.</para>
+        /// <para>The CIDR block to be provisioned. </para>
         /// <remarks>
-        /// <para> Only IPv4 CIDR blocks are supported.</para>
+        /// <para>For private top-level pools, provisioning can only be done by entering a CIDR block.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,6 +60,15 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
         [Validation(Required=false)]
         public string IpamPoolId { get; set; }
 
+        /// <summary>
+        /// <para>Provision CIDR address segments through a mask method.  </para>
+        /// <remarks>
+        /// <para>The public IPv6 top-level pool only supports provisioning via a mask.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>24</para>
+        /// </summary>
         [NameInMap("NetmaskLength")]
         [Validation(Required=false)]
         public int? NetmaskLength { get; set; }

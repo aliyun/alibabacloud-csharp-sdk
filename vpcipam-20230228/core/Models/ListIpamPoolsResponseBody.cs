@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.VpcIpam20230228.Models
             [Validation(Required=false)]
             public bool? AutoImport { get; set; }
 
+            [NameInMap("Cidrs")]
+            [Validation(Required=false)]
+            public List<string> Cidrs { get; set; }
+
             /// <summary>
             /// <para>The time when the IPAM pool was created.</para>
             /// 

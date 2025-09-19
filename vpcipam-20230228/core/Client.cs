@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         /// <item><description>If a CIDR block is provisioned to a parent pool and allocations are created, CIDR blocks provisioned to its subpools cannot overlap with existing allocated CIDR blocks.</description></item>
         /// <item><description>You can provision CIDR blocks to a pool only in the region where the IPAM is hosted.</description></item>
         /// <item><description>CIDR blocks provisioned to an IPAM pool cannot overlap with the CIDR blocks provisioned to other pools in the same scope.</description></item>
-        /// <item><description>You can provision at most 50 CIDR blocks to each pool.</description></item>
+        /// <item><description>A maximum of 1 CIDR block can be provisioned to a public IPv6 top-level pool, while up to 50 CIDR blocks can be provisioned to other types of address pools.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         /// <item><description>If a CIDR block is provisioned to a parent pool and allocations are created, CIDR blocks provisioned to its subpools cannot overlap with existing allocated CIDR blocks.</description></item>
         /// <item><description>You can provision CIDR blocks to a pool only in the region where the IPAM is hosted.</description></item>
         /// <item><description>CIDR blocks provisioned to an IPAM pool cannot overlap with the CIDR blocks provisioned to other pools in the same scope.</description></item>
-        /// <item><description>You can provision at most 50 CIDR blocks to each pool.</description></item>
+        /// <item><description>A maximum of 1 CIDR block can be provisioned to a public IPv6 top-level pool, while up to 50 CIDR blocks can be provisioned to other types of address pools.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         /// <item><description>If a CIDR block is provisioned to a parent pool and allocations are created, CIDR blocks provisioned to its subpools cannot overlap with existing allocated CIDR blocks.</description></item>
         /// <item><description>You can provision CIDR blocks to a pool only in the region where the IPAM is hosted.</description></item>
         /// <item><description>CIDR blocks provisioned to an IPAM pool cannot overlap with the CIDR blocks provisioned to other pools in the same scope.</description></item>
-        /// <item><description>You can provision at most 50 CIDR blocks to each pool.</description></item>
+        /// <item><description>A maximum of 1 CIDR block can be provisioned to a public IPv6 top-level pool, while up to 50 CIDR blocks can be provisioned to other types of address pools.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         /// <item><description>If a CIDR block is provisioned to a parent pool and allocations are created, CIDR blocks provisioned to its subpools cannot overlap with existing allocated CIDR blocks.</description></item>
         /// <item><description>You can provision CIDR blocks to a pool only in the region where the IPAM is hosted.</description></item>
         /// <item><description>CIDR blocks provisioned to an IPAM pool cannot overlap with the CIDR blocks provisioned to other pools in the same scope.</description></item>
-        /// <item><description>You can provision at most 50 CIDR blocks to each pool.</description></item>
+        /// <item><description>A maximum of 1 CIDR block can be provisioned to a public IPv6 top-level pool, while up to 50 CIDR blocks can be provisioned to other types of address pools.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -894,6 +894,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         /// <para>Creates an IP Address Manager (IPAM) pool.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The number of public IPv6 IPAM top pool for a specific ISP that a user is allowed to create per region is limited to 1.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateIpamPoolRequest
         /// </param>
@@ -1011,6 +1016,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         /// <summary>
         /// <para>Creates an IP Address Manager (IPAM) pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The number of public IPv6 IPAM top pool for a specific ISP that a user is allowed to create per region is limited to 1.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamPoolRequest
@@ -1130,6 +1140,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         /// <para>Creates an IP Address Manager (IPAM) pool.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The number of public IPv6 IPAM top pool for a specific ISP that a user is allowed to create per region is limited to 1.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateIpamPoolRequest
         /// </param>
@@ -1147,6 +1162,11 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
         /// <summary>
         /// <para>Creates an IP Address Manager (IPAM) pool.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The number of public IPv6 IPAM top pool for a specific ISP that a user is allowed to create per region is limited to 1.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateIpamPoolRequest
