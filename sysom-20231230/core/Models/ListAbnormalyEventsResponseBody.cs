@@ -93,6 +93,24 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             [Validation(Required=false)]
             public string Pod { get; set; }
 
+            [NameInMap("raw_metrics")]
+            [Validation(Required=false)]
+            public ListAbnormalyEventsResponseBodyDataRawMetrics RawMetrics { get; set; }
+            public class ListAbnormalyEventsResponseBodyDataRawMetrics : TeaModel {
+                [NameInMap("end_time")]
+                [Validation(Required=false)]
+                public float? EndTime { get; set; }
+
+                [NameInMap("metrics")]
+                [Validation(Required=false)]
+                public List<string> Metrics { get; set; }
+
+                [NameInMap("start_time")]
+                [Validation(Required=false)]
+                public float? StartTime { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
