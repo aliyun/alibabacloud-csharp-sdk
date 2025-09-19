@@ -1076,6 +1076,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             {
                 query["Domain"] = request.Domain;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownstreamKeepalive))
+            {
+                query["DownstreamKeepalive"] = request.DownstreamKeepalive;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamKeepalive))
             {
                 query["UpstreamKeepalive"] = request.UpstreamKeepalive;
@@ -1121,6 +1125,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
             {
                 query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownstreamKeepalive))
+            {
+                query["DownstreamKeepalive"] = request.DownstreamKeepalive;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpstreamKeepalive))
             {

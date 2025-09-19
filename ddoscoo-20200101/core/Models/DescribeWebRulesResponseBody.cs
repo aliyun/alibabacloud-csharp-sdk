@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public string CcTemplate { get; set; }
 
+            [NameInMap("CertExpireTime")]
+            [Validation(Required=false)]
+            public long? CertExpireTime { get; set; }
+
             /// <summary>
             /// <para>The name of the SSL certificate.</para>
             /// 
@@ -407,6 +411,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [NameInMap("SslProtocols")]
             [Validation(Required=false)]
             public string SslProtocols { get; set; }
+
+            [NameInMap("Tls13CustomCiphers")]
+            [Validation(Required=false)]
+            public List<string> Tls13CustomCiphers { get; set; }
 
             /// <summary>
             /// <para>The name of the certificate uploaded by the user to the certificate center.</para>

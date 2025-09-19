@@ -22,6 +22,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public string Domain { get; set; }
 
+        [NameInMap("DownstreamKeepalive")]
+        [Validation(Required=false)]
+        public string DownstreamKeepalive { get; set; }
+
         /// <summary>
         /// <para>The settings for back-to-origin persistent connections. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:</para>
         /// <list type="bullet">

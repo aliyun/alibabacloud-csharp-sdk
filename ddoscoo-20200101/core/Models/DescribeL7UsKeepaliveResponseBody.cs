@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
         [Validation(Required=false)]
         public DescribeL7UsKeepaliveResponseBodyRsKeepalive RsKeepalive { get; set; }
         public class DescribeL7UsKeepaliveResponseBodyRsKeepalive : TeaModel {
+            [NameInMap("DsKeepaliveTimeout")]
+            [Validation(Required=false)]
+            public long? DsKeepaliveTimeout { get; set; }
+
             /// <summary>
             /// <para>Indicates whether Back-to-origin Persistent Connections is turned on. Valid values:</para>
             /// <list type="bullet">
