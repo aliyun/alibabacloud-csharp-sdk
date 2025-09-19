@@ -50,6 +50,24 @@ namespace AlibabaCloud.SDK.Ecs_workbench20220220.Models
             [Validation(Required=false)]
             public long? DurationSeconds { get; set; }
 
+            [NameInMap("EncryptionOptions")]
+            [Validation(Required=false)]
+            public LoginInstanceRequestInstanceLoginInfoEncryptionOptions EncryptionOptions { get; set; }
+            public class LoginInstanceRequestInstanceLoginInfoEncryptionOptions : TeaModel {
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+                [NameInMap("KMSKeyId")]
+                [Validation(Required=false)]
+                public string KMSKeyId { get; set; }
+
+                [NameInMap("Mode")]
+                [Validation(Required=false)]
+                public string Mode { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2022-11-30 00:00:00</para>
