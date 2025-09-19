@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
-    public class DescribeCustVariablePageRequest : TeaModel {
+    public class DescribeVersionPageListRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, default value is <b>zh</b>. Values:</para>
+        /// <para>Sets the language type for the request and response messages, with a default value of <b>zh</b>. Values: </para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -24,17 +24,27 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Creation type.</para>
+        /// <para>Maximum number of results to be read in this call, with a default value of 10.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>NORMAL</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("createType")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string CreateType { get; set; }
+        public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Pagination parameter, current page number.</para>
+        /// <para>Used to mark the starting position for reading. An empty value indicates starting from the beginning.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// <para>Current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,27 +54,27 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Description.</para>
+        /// <para>Name of the variable.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>累计变量描述</para>
+        /// <para>ex_OERlw0Zqfb23</para>
         /// </summary>
-        [NameInMap("description")]
+        [NameInMap("objectCode")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public string ObjectCode { get; set; }
 
         /// <summary>
-        /// <para>Event code.</para>
+        /// <para>Primary key ID of the variable.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>de_aheldm3876</para>
+        /// <para>392023</para>
         /// </summary>
-        [NameInMap("eventCode")]
+        [NameInMap("objectId")]
         [Validation(Required=false)]
-        public string EventCode { get; set; }
+        public long? ObjectId { get; set; }
 
         /// <summary>
-        /// <para>Number of records per page, default value: 10.</para>
+        /// <para>Number of items per page, with a default value of 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -72,6 +82,16 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>Pagination flag, with a default value of true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("paging")]
+        [Validation(Required=false)]
+        public bool? Paging { get; set; }
 
         /// <summary>
         /// <para>Region code.</para>
@@ -84,14 +104,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>status.</para>
+        /// <para>Type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ENABLE</para>
+        /// <para>EXPRESSION</para>
         /// </summary>
-        [NameInMap("status")]
+        [NameInMap("type")]
         [Validation(Required=false)]
-        public string Status { get; set; }
+        public string Type { get; set; }
 
     }
 

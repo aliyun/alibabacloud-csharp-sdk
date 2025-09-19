@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeSafConsoleResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Returned result.</para>
+        /// </summary>
         [NameInMap("bizData")]
         [Validation(Required=false)]
         public List<string> BizData { get; set; }

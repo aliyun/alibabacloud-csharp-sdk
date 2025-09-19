@@ -11713,6 +11713,10 @@ namespace AlibabaCloud.SDK.Xtee20210910
             {
                 query["regId"] = request.RegId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -11783,6 +11787,10 @@ namespace AlibabaCloud.SDK.Xtee20210910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegId))
             {
                 query["regId"] = request.RegId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -13451,7 +13459,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件历史列表</para>
+        /// <para>Query Event History List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13609,7 +13617,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件历史列表</para>
+        /// <para>Query Event History List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13767,7 +13775,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件历史列表</para>
+        /// <para>Query Event History List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13785,7 +13793,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件历史列表</para>
+        /// <para>Query Event History List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14675,8 +14683,13 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件变量</para>
+        /// <para>Query event variables</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cumulative Variable List Query</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEventVariableListRequest
@@ -14741,8 +14754,13 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件变量</para>
+        /// <para>Query event variables</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cumulative Variable List Query</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEventVariableListRequest
@@ -14807,8 +14825,13 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件变量</para>
+        /// <para>Query event variables</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cumulative Variable List Query</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEventVariableListRequest
@@ -14825,8 +14848,13 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件变量</para>
+        /// <para>Query event variables</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cumulative Variable List Query</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEventVariableListRequest
@@ -15305,6 +15333,11 @@ namespace AlibabaCloud.SDK.Xtee20210910
             return await DescribeEventsVariableListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Self-service call list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeExcuteNumRequest
         /// </param>
@@ -15362,6 +15395,11 @@ namespace AlibabaCloud.SDK.Xtee20210910
             return TeaModel.ToObject<DescribeExcuteNumResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Self-service call list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeExcuteNumRequest
         /// </param>
@@ -15419,6 +15457,11 @@ namespace AlibabaCloud.SDK.Xtee20210910
             return TeaModel.ToObject<DescribeExcuteNumResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Self-service call list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeExcuteNumRequest
         /// </param>
@@ -15432,6 +15475,11 @@ namespace AlibabaCloud.SDK.Xtee20210910
             return DescribeExcuteNumWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Self-service call list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeExcuteNumRequest
         /// </param>
@@ -15983,7 +16031,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query for Custom Variables</para>
+        /// <para>Paged Query for Custom Variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16053,7 +16101,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query for Custom Variables</para>
+        /// <para>Paged Query for Custom Variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16123,7 +16171,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query for Custom Variables</para>
+        /// <para>Paged Query for Custom Variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16141,7 +16189,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query for Custom Variables</para>
+        /// <para>Paged Query for Custom Variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20699,6 +20747,158 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Query Operation Log Monitoring Statistics</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOperationLogMonitoringRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOperationLogMonitoringResponse
+        /// </returns>
+        public DescribeOperationLogMonitoringResponse DescribeOperationLogMonitoringWithOptions(DescribeOperationLogMonitoringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["endDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegId))
+            {
+                query["regId"] = request.RegId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["startDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserNameSearch))
+            {
+                query["userNameSearch"] = request.UserNameSearch;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeOperationLogMonitoring",
+                Version = "2021-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeOperationLogMonitoringResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Operation Log Monitoring Statistics</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOperationLogMonitoringRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOperationLogMonitoringResponse
+        /// </returns>
+        public async Task<DescribeOperationLogMonitoringResponse> DescribeOperationLogMonitoringWithOptionsAsync(DescribeOperationLogMonitoringRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["endDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegId))
+            {
+                query["regId"] = request.RegId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["startDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserNameSearch))
+            {
+                query["userNameSearch"] = request.UserNameSearch;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeOperationLogMonitoring",
+                Version = "2021-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeOperationLogMonitoringResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Operation Log Monitoring Statistics</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOperationLogMonitoringRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOperationLogMonitoringResponse
+        /// </returns>
+        public DescribeOperationLogMonitoringResponse DescribeOperationLogMonitoring(DescribeOperationLogMonitoringRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeOperationLogMonitoringWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Operation Log Monitoring Statistics</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOperationLogMonitoringRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOperationLogMonitoringResponse
+        /// </returns>
+        public async Task<DescribeOperationLogMonitoringResponse> DescribeOperationLogMonitoringAsync(DescribeOperationLogMonitoringRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeOperationLogMonitoringWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Query event list by event name</para>
         /// </summary>
         /// 
@@ -20728,6 +20928,10 @@ namespace AlibabaCloud.SDK.Xtee20210910
             {
                 query["endDate"] = request.EndDate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationSummary))
+            {
+                query["operationSummary"] = request.OperationSummary;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
@@ -20739,6 +20943,10 @@ namespace AlibabaCloud.SDK.Xtee20210910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
             {
                 query["startDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserNameSearch))
+            {
+                query["userNameSearch"] = request.UserNameSearch;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -20790,6 +20998,10 @@ namespace AlibabaCloud.SDK.Xtee20210910
             {
                 query["endDate"] = request.EndDate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationSummary))
+            {
+                query["operationSummary"] = request.OperationSummary;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
@@ -20801,6 +21013,10 @@ namespace AlibabaCloud.SDK.Xtee20210910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
             {
                 query["startDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserNameSearch))
+            {
+                query["userNameSearch"] = request.UserNameSearch;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -25433,6 +25649,11 @@ namespace AlibabaCloud.SDK.Xtee20210910
             return await DescribeSDKDownloadListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query SAF permissions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSafConsoleRequest
         /// </param>
@@ -25478,6 +25699,11 @@ namespace AlibabaCloud.SDK.Xtee20210910
             return TeaModel.ToObject<DescribeSafConsoleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query SAF permissions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSafConsoleRequest
         /// </param>
@@ -25523,6 +25749,11 @@ namespace AlibabaCloud.SDK.Xtee20210910
             return TeaModel.ToObject<DescribeSafConsoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query SAF permissions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSafConsoleRequest
         /// </param>
@@ -25536,6 +25767,11 @@ namespace AlibabaCloud.SDK.Xtee20210910
             return DescribeSafConsoleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query SAF permissions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSafConsoleRequest
         /// </param>
@@ -33539,6 +33775,198 @@ namespace AlibabaCloud.SDK.Xtee20210910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVariableSceneListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Variable Version List Query</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVersionPageListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVersionPageListResponse
+        /// </returns>
+        public DescribeVersionPageListResponse DescribeVersionPageListWithOptions(DescribeVersionPageListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["currentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectCode))
+            {
+                query["objectCode"] = request.ObjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectId))
+            {
+                query["objectId"] = request.ObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Paging))
+            {
+                query["paging"] = request.Paging;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegId))
+            {
+                query["regId"] = request.RegId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVersionPageList",
+                Version = "2021-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVersionPageListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Variable Version List Query</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVersionPageListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVersionPageListResponse
+        /// </returns>
+        public async Task<DescribeVersionPageListResponse> DescribeVersionPageListWithOptionsAsync(DescribeVersionPageListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["currentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectCode))
+            {
+                query["objectCode"] = request.ObjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectId))
+            {
+                query["objectId"] = request.ObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Paging))
+            {
+                query["paging"] = request.Paging;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegId))
+            {
+                query["regId"] = request.RegId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVersionPageList",
+                Version = "2021-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVersionPageListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Variable Version List Query</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVersionPageListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVersionPageListResponse
+        /// </returns>
+        public DescribeVersionPageListResponse DescribeVersionPageList(DescribeVersionPageListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVersionPageListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Variable Version List Query</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVersionPageListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVersionPageListResponse
+        /// </returns>
+        public async Task<DescribeVersionPageListResponse> DescribeVersionPageListAsync(DescribeVersionPageListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVersionPageListWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

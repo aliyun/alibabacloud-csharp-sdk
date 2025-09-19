@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         /// <para>Access ID for OSS.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LTAIpeYTKEbC0v10</para>
+        /// <para>LTAxxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("AccessId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         /// <para>Address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://saf-ai.oss-cn-shanghai.aliyuncs.com">https://saf-ai.oss-cn-shanghai.aliyuncs.com</a></para>
+        /// <para><a href="https://xxxxxxxx-xxxxxxx.aliyuncs.com">https://xxxxxxxx-xxxxxxx.aliyuncs.com</a></para>
         /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]

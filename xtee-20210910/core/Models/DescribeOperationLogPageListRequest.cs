@@ -44,6 +44,16 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? EndDate { get; set; }
 
         /// <summary>
+        /// <para>Operation Summary.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Update</para>
+        /// </summary>
+        [NameInMap("operationSummary")]
+        [Validation(Required=false)]
+        public string OperationSummary { get; set; }
+
+        /// <summary>
         /// <para>Page size, default value is 10</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>Region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -72,6 +82,16 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         [NameInMap("startDate")]
         [Validation(Required=false)]
         public long? StartDate { get; set; }
+
+        /// <summary>
+        /// <para>User Name Search.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>root</para>
+        /// </summary>
+        [NameInMap("userNameSearch")]
+        [Validation(Required=false)]
+        public string UserNameSearch { get; set; }
 
     }
 

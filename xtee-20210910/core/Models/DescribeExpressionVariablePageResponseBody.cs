@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeExpressionVariablePageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Page size, with a default value of 10</para>
+        /// <para>Page size, with a default value of 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>Returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Primary key of custom variable</para>
+            /// <para>Primary key of custom variable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2793</para>
@@ -87,7 +87,17 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Variable return type</para>
+            /// <para>Query variable name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ex_OERlw0Zqfb23</para>
+            /// </summary>
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            /// <summary>
+            /// <para>Variable return type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DOUBLE</para>
@@ -95,6 +105,13 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             [NameInMap("outputs")]
             [Validation(Required=false)]
             public string Outputs { get; set; }
+
+            /// <summary>
+            /// <para>Associated Strategies.</para>
+            /// </summary>
+            [NameInMap("ruleList")]
+            [Validation(Required=false)]
+            public List<string> RuleList { get; set; }
 
             /// <summary>
             /// <para>Status.</para>
@@ -129,7 +146,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total number of items</para>
+        /// <para>Total number of items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>31</para>
