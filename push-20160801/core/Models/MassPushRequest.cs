@@ -261,6 +261,18 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public string AndroidOpenUrl { get; set; }
 
+            [NameInMap("AndroidOppoPrivateContentParameters")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> AndroidOppoPrivateContentParameters { get; set; }
+
+            [NameInMap("AndroidOppoPrivateMsgTemplateId")]
+            [Validation(Required=false)]
+            public string AndroidOppoPrivateMsgTemplateId { get; set; }
+
+            [NameInMap("AndroidOppoPrivateTitleParameters")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> AndroidOppoPrivateTitleParameters { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>com.alibaba.cloudpushdemo.bizactivity</para>
@@ -550,18 +562,6 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [NameInMap("Trim")]
             [Validation(Required=false)]
             public bool? Trim { get; set; }
-
-            [NameInMap("androidOppoPrivateContentParameters")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> AndroidOppoPrivateContentParameters { get; set; }
-
-            [NameInMap("androidOppoPrivateMsgTemplateId")]
-            [Validation(Required=false)]
-            public string AndroidOppoPrivateMsgTemplateId { get; set; }
-
-            [NameInMap("androidOppoPrivateTitleParameters")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> AndroidOppoPrivateTitleParameters { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
