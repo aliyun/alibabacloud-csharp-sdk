@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public GetVirusScanConfigResponseBodyData Data { get; set; }
         public class GetVirusScanConfigResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Extended scan types.</para>
+            /// </summary>
+            [NameInMap("AdditionType")]
+            [Validation(Required=false)]
+            public List<string> AdditionType { get; set; }
+
+            /// <summary>
             /// <para>The ID of the task configuration.</para>
             /// <remarks>
             /// <para>You can call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to query the IDs of task configurations.</para>

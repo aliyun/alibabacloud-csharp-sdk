@@ -216,6 +216,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoRegionId { get; set; }
 
         /// <summary>
+        /// <para>The tag of this vulnerability. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>AI</b>: AI-related components.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AI</para>
+        /// </summary>
+        [NameInMap("RuleTag")]
+        [Validation(Required=false)]
+        public string RuleTag { get; set; }
+
+        /// <summary>
         /// <para>An array consisting of the types of the assets that you want to scan.</para>
         /// </summary>
         [NameInMap("ScanRange")]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetContainerDefenseRuleDetailRequest : TeaModel {
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
+
         /// <summary>
         /// <para>The rule ID.</para>
         /// <remarks>

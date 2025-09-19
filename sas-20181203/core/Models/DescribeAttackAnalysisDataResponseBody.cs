@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAttackAnalysisDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The attack events. The value contains the following fields:</para>
+        /// <para>The attack events. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>client_url</b>: the URL of the attack request.</para>
         /// </description></item>
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </description></item>
         /// <item><description><para><b>instanceName</b>: the name of the asset.</para>
         /// </description></item>
-        /// <item><description><para><b>table_src</b>: the source of data.</para>
+        /// <item><description><para><b>table_src</b>: the data source.</para>
         /// </description></item>
         /// <item><description><para><b>uuid</b>: the UUID of the asset.</para>
         /// </description></item>
@@ -42,61 +42,65 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </description></item>
         /// <item><description><para><b>crack_type</b>: the type of the attack. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>113</b>: improper authorization</description></item>
-        /// <item><description><b>112</b>: redirection attack</description></item>
-        /// <item><description><b>upload</b>: vulnerability upload</description></item>
-        /// <item><description><b>other</b>: others</description></item>
-        /// <item><description><b>webshell</b>: trojan script</description></item>
-        /// <item><description><b>201</b>: suspicious connection</description></item>
-        /// <item><description><b>9</b>: brute-force attack on Microsoft SQL Server</description></item>
-        /// <item><description><b>5</b>: SSH brute-force attack</description></item>
-        /// <item><description><b>6</b>: RDP brute-force attack</description></item>
-        /// <item><description><b>lfi</b>: local file inclusion</description></item>
-        /// <item><description><b>7</b>: code execution</description></item>
-        /// <item><description><b>sqli</b>: SQL injection</description></item>
-        /// <item><description><b>209</b>: web attack</description></item>
-        /// <item><description><b>31</b>: buffer overflow</description></item>
-        /// <item><description><b>3</b>: brute-force attack on MySQL</description></item>
-        /// <item><description><b>30</b>: clickjacking</description></item>
-        /// <item><description><b>4</b>: FTP brute-force attack</description></item>
-        /// <item><description><b>bypass</b>: unauthorized access</description></item>
-        /// <item><description><b>33</b>: format string</description></item>
-        /// <item><description><b>deeplearning</b>: others</description></item>
-        /// <item><description><b>32</b>: integer overflow</description></item>
-        /// <item><description><b>203</b>: brute-force attack</description></item>
-        /// <item><description><b>34</b>: race condition</description></item>
-        /// <item><description><b>rfi</b>: remote file inclusion</description></item>
-        /// <item><description><b>0</b>: SQL injection</description></item>
-        /// <item><description><b>212</b>: mining behavior</description></item>
-        /// <item><description><b>213</b>: reverse shell</description></item>
-        /// <item><description><b>211</b>: worm</description></item>
-        /// <item><description><b>61</b>: session timeout</description></item>
-        /// <item><description><b>20</b>: directory traversal</description></item>
-        /// <item><description><b>xss</b>: XSS</description></item>
-        /// <item><description><b>22</b>: unauthorized access</description></item>
-        /// <item><description><b>21</b>: scan attack</description></item>
-        /// <item><description><b>24</b>: file modification</description></item>
-        /// <item><description><b>26</b>: file deletion</description></item>
-        /// <item><description><b>25</b>: file reading</description></item>
-        /// <item><description><b>28</b>: CRLF injection</description></item>
-        /// <item><description><b>27</b>: logic error</description></item>
-        /// <item><description><b>29</b>: template injection</description></item>
-        /// <item><description><b>csrf</b>: CSRF</description></item>
-        /// <item><description><b>path</b>: directory traversal</description></item>
-        /// <item><description><b>crlf</b>: CRLF</description></item>
-        /// <item><description><b>102</b>: CSRF</description></item>
-        /// <item><description><b>103</b>: server-side request forgery (SSRF)</description></item>
-        /// <item><description><b>101</b>: XSS</description></item>
-        /// <item><description><b>11</b>: file inclusion</description></item>
-        /// <item><description><b>10</b>: file upload</description></item>
-        /// <item><description><b>12</b>: vulnerability upload</description></item>
-        /// <item><description><b>15</b>: unauthorized access</description></item>
-        /// <item><description><b>14</b>: information leakage</description></item>
-        /// <item><description><b>17</b>: XML entity injection</description></item>
-        /// <item><description><b>16</b>: insecure configuration</description></item>
-        /// <item><description><b>19</b>: Lightweight Directory Access Protocol (LDAP) injection</description></item>
-        /// <item><description><b>18</b>: XPath injection</description></item>
-        /// <item><description><b>codei</b>: code execution</description></item>
+        /// <item><description><b>113</b>: improper authorization.</description></item>
+        /// <item><description><b>112</b>: redirection attack.</description></item>
+        /// <item><description><b>upload</b>: vulnerability upload.</description></item>
+        /// <item><description><b>other</b>: others.</description></item>
+        /// <item><description><b>webshell</b>: trojan script.</description></item>
+        /// <item><description><b>201</b>: suspicious connection.</description></item>
+        /// <item><description><b>9</b>: brute-force attack on Microsoft SQL Server.</description></item>
+        /// <item><description><b>5</b>: SSH brute-force attack.</description></item>
+        /// <item><description><b>6</b>: RDP brute-force attack.</description></item>
+        /// <item><description><b>lfi</b>: local file inclusion.</description></item>
+        /// <item><description><b>7</b>: code execution.</description></item>
+        /// <item><description><b>sqli</b>: SQL injection.</description></item>
+        /// <item><description><b>209</b>: web attack.</description></item>
+        /// <item><description><b>31</b>: buffer overflow.</description></item>
+        /// <item><description><b>3</b>: brute-force attack on MySQL.</description></item>
+        /// <item><description><b>30</b>: clickjacking.</description></item>
+        /// <item><description><b>4</b>: FTP brute-force attack.</description></item>
+        /// <item><description><b>bypass</b>: unauthorized access.</description></item>
+        /// <item><description><b>33</b>: format string.</description></item>
+        /// <item><description><b>deeplearning</b>: others.</description></item>
+        /// <item><description><b>32</b>: integer overflow.</description></item>
+        /// <item><description><b>203</b>: brute-force attack.</description></item>
+        /// <item><description><b>34</b>: race condition.</description></item>
+        /// <item><description><b>rfi</b>: remote file inclusion.</description></item>
+        /// <item><description><b>0</b>: SQL injection attack.</description></item>
+        /// <item><description><b>212</b>: mining behavior.</description></item>
+        /// <item><description><b>213</b>: reverse shell.</description></item>
+        /// <item><description><b>211</b>: worm.</description></item>
+        /// <item><description><b>61</b>: session timeout.</description></item>
+        /// <item><description><b>20</b>: directory traversal.</description></item>
+        /// <item><description><b>xss</b>: XSS attack.</description></item>
+        /// <item><description><b>22</b>: unauthorized access.</description></item>
+        /// <item><description><b>21</b>: scan attack.</description></item>
+        /// <item><description><b>24</b>: file modification.</description></item>
+        /// <item><description><b>26</b>: file deletion.</description></item>
+        /// <item><description><b>25</b>: file reading.</description></item>
+        /// <item><description><b>28</b>: CRLF injection.</description></item>
+        /// <item><description><b>27</b>: logic error.</description></item>
+        /// <item><description><b>29</b>: template injection.</description></item>
+        /// <item><description><b>csrf</b>: CSRF.</description></item>
+        /// <item><description><b>path</b>: directory traversal.</description></item>
+        /// <item><description><b>crlf</b>: CRLF.</description></item>
+        /// <item><description><b>102</b>: CSRF.</description></item>
+        /// <item><description><b>103</b>: server-side request forgery (SSRF).</description></item>
+        /// <item><description><b>101</b>: XSS.</description></item>
+        /// <item><description><b>11</b>: file inclusion.</description></item>
+        /// <item><description><b>10</b>: file upload.</description></item>
+        /// <item><description><b>12</b>: vulnerability upload.</description></item>
+        /// <item><description><b>15</b>: unauthorized access.</description></item>
+        /// <item><description><b>14</b>: information leakage.</description></item>
+        /// <item><description><b>17</b>: XML entity injection.</description></item>
+        /// <item><description><b>16</b>: insecure configuration.</description></item>
+        /// <item><description><b>19</b>: Lightweight Directory Access Protocol (LDAP) injection.</description></item>
+        /// <item><description><b>18</b>: XPath injection.</description></item>
+        /// <item><description><b>codei</b>: code execution.</description></item>
+        /// <item><description><b>ai_webshell</b>: intelligent defense against webshell upload.</description></item>
+        /// <item><description><b>alinet_webrce</b>: adaptive web attack defense.</description></item>
+        /// <item><description><b>210</b>: JSP webshell upload.</description></item>
+        /// <item><description><b>161</b>: webshell upload.</description></item>
         /// </list>
         /// </description></item>
         /// </list>

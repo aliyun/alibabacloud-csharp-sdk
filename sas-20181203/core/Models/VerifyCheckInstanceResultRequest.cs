@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        [NameInMap("TaskSource")]
+        [Validation(Required=false)]
+        public string TaskSource { get; set; }
+
     }
 
 }

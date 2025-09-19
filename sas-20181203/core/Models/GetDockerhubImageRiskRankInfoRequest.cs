@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetDockerhubImageRiskRankInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The types of image dimensions to be counted.</para>
+        /// <para>The dimension types.</para>
         /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]

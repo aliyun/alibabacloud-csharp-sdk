@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("TaskSources")]
+        [Validation(Required=false)]
+        public List<string> TaskSources { get; set; }
+
         /// <summary>
         /// <para>The cloud service providers. Valid values:</para>
         /// <list type="bullet">

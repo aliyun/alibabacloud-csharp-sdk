@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? AllowPartialBuy { get; set; }
 
+        [NameInMap("AntiRansomwareCapacity")]
+        [Validation(Required=false)]
+        public int? AntiRansomwareCapacity { get; set; }
+
         /// <summary>
         /// <para>Switch of anti-ransomware hosting service. Valid values:</para>
         /// <list type="bullet">
@@ -137,6 +141,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("ImageScanCapacity")]
         [Validation(Required=false)]
         public long? ImageScanCapacity { get; set; }
+
+        [NameInMap("InstanceBuyType")]
+        [Validation(Required=false)]
+        public int? InstanceBuyType { get; set; }
 
         /// <summary>
         /// <para>The ID of purchased Security Center.</para>
@@ -260,6 +268,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("MergedVersion")]
         [Validation(Required=false)]
         public int? MergedVersion { get; set; }
+
+        [NameInMap("MultiVersion")]
+        [Validation(Required=false)]
+        public string MultiVersion { get; set; }
 
         /// <summary>
         /// <para>Indicates whether the new version of the threat analysis and response feature is enabled. With the new version, you can purchase the amount of log data that you want to add to the feature and log storage capacity. Valid values:</para>

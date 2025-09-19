@@ -33,12 +33,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The service provider of the asset. Separate multiple service providers with commas (,). Valid values:</para>
+        /// <para>Asset vendor. Multiple asset vendors should be separated by a comma (,). Values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: an asset provided by Alibaba Cloud</description></item>
         /// <item><description><b>1</b>: an asset outside Alibaba Cloud</description></item>
         /// <item><description><b>2</b>: an asset in a data center</description></item>
-        /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, and <b>7</b>: an asset from a third-party cloud service provider</description></item>
+        /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, <b>7</b>, <b>14</b>, <b>16</b>: an asset from a third-party cloud service provider</description></item>
         /// <item><description><b>8</b>: a lightweight asset</description></item>
         /// <item><description><b>9</b>: a Serverless App Engine (SAE) instance</description></item>
         /// <item><description><b>10</b>: an instance in Platform for AI (PAI)</description></item>
@@ -95,10 +95,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string LogicalExp { get; set; }
 
         /// <summary>
-        /// <para>The type of the assets that you want to query. Valid values:</para>
+        /// <para>The type of asset to be queried. Values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ecs</b>: servers</description></item>
-        /// <item><description><b>cloud_product</b>: Alibaba Cloud service</description></item>
+        /// <item><description><b>ecs</b>: Server </description></item>
+        /// <item><description><b>cloud_product</b>: Cloud Product </description></item>
+        /// <item><description><b>eci</b>: Elastic Container Instance </description></item>
+        /// <item><description><b>rund</b>: RunD Container Instance </description></item>
+        /// <item><description><b>runc</b>: RunC Container Instance</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

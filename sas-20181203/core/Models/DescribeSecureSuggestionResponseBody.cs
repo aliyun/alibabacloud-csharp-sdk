@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSecureSuggestionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The timestamp of security score calculation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1755744253000</para>
+        /// </summary>
+        [NameInMap("CalTime")]
+        [Validation(Required=false)]
+        public long? CalTime { get; set; }
+
+        /// <summary>
         /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>

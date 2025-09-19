@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b></para>
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether the vulnerability is handled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>y</b>: handled</description></item>
-        /// <item><description><b>n</b>: unhandled</description></item>
+        /// <item><description><b>y</b>: yes</description></item>
+        /// <item><description><b>n</b>: no</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Necessity { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b></para>
+        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the image repository.</para>
+        /// <para>The name of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>libssh2</para>
@@ -233,6 +233,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoRegionId { get; set; }
 
         /// <summary>
+        /// <para>The tag of this vulnerability. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>AI</b>: AI-related components.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AI</para>
+        /// </summary>
+        [NameInMap("RuleTag")]
+        [Validation(Required=false)]
+        public string RuleTag { get; set; }
+
+        /// <summary>
         /// <para>The types of the assets that you want to scan.</para>
         /// </summary>
         [NameInMap("ScanRange")]
@@ -255,7 +268,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StatusList { get; set; }
 
         /// <summary>
-        /// <para>The tag that is added to the image.</para>
+        /// <para>The tag that is added to the image vulnerability.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oval</para>

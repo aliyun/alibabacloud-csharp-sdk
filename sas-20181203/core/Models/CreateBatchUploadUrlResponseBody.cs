@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>The AccessKey ID that is used to access the OSS bucket.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>LTAI4G1mgPbjvGQuiV1X****</para>
+                /// <para>yourAccessKeyID</para>
                 /// </summary>
                 [NameInMap("AccessId")]
                 [Validation(Required=false)]

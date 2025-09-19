@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Default value: <b>10</b></para>
+        /// <para>The number of entries returned per page. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D6B20156-49B0-5CF0-B14D-7ECA4B50DAAB</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of vulnerabilities returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The vulnerabilities.</para>
+        /// <para>An array that consists of the vulnerabilities.</para>
         /// </summary>
         [NameInMap("VulRecords")]
         [Validation(Required=false)]
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>yes</b></description></item>
-            /// <item><description><b>no</b></description></item>
+            /// <item><description><b>yes</b>: yes</description></item>
+            /// <item><description><b>no</b>: no</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CanFix { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the packages of the software that has the vulnerability can be upgraded by using Security Center. Valid values:</para>
+            /// <para>Indicates whether the package of the software that has the vulnerability can be upgraded by using Security Center. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: yes</description></item>
+            /// <item><description><b>false</b>: no</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string OsRelease { get; set; }
 
                 /// <summary>
-                /// <para>The details of the packages of the software that has the vulnerability.</para>
+                /// <para>The details of the package of the software that has the vulnerability.</para>
                 /// </summary>
                 [NameInMap("RpmEntityList")]
                 [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string MatchDetail { get; set; }
 
                     /// <summary>
-                    /// <para>The details of the rules that are used to detect the vulnerability.</para>
+                    /// <para>The details of the rule that is used to detect the vulnerability.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[&quot;libseccomp2 version less than equals 2.3.3-4&quot;]</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The path to the software that has the vulnerability.</para>
+                    /// <para>The path of the software that has the vulnerability.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/usr/lib64/libssh2.so.1</para>
@@ -430,6 +430,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoNamespace { get; set; }
 
             /// <summary>
+            /// <para>The tag of this vulnerability. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>AI</b>: AI-related components.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AI</para>
+            /// </summary>
+            [NameInMap("RuleTag")]
+            [Validation(Required=false)]
+            public string RuleTag { get; set; }
+
+            /// <summary>
             /// <para>The time at which the scan was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
@@ -454,7 +467,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The tag that is added to the vulnerability.</para>
+            /// <para>The tag that is added to the image vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oval</para>
@@ -486,8 +499,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the asset on which the vulnerability is detected. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ECS_IMAGE</b>: image</description></item>
             /// <item><description><b>ECS_SNAPSHOT</b>: snapshot</description></item>
+            /// <item><description><b>ECS_IMAGE</b>: image</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -498,7 +511,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The type of the vulnerability. The value is fixed as cve, which indicates image vulnerabilities.</para>
+            /// <para>The type of the vulnerability. The value is fixed as CVE, which indicates image vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cve</para>

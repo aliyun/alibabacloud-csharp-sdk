@@ -33,6 +33,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AttachTypes { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c88fb10da1168494091db6aafc5dd****</para>
+        /// </summary>
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
+        /// <summary>
         /// <para>The number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -139,6 +149,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the application protection feature is supported. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>0</b>: no.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: yes.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("RaspDefend")]
+        [Validation(Required=false)]
+        public int? RaspDefend { get; set; }
+
+        /// <summary>
         /// <para>The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset.</para>
         /// 
         /// <b>Example:</b>
@@ -185,6 +211,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("StatusList")]
         [Validation(Required=false)]
         public string StatusList { get; set; }
+
+        /// <summary>
+        /// <para>The type of the asset on which the vulnerability is detected. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>k8s</b>: Kubernetes component.</description></item>
+        /// <item><description><b>uuid</b>: server.</description></item>
+        /// <item><description><b>containerId</b>: container.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>k8s</para>
+        /// </summary>
+        [NameInMap("TargetType")]
+        [Validation(Required=false)]
+        public string TargetType { get; set; }
 
         /// <summary>
         /// <para>The type of the vulnerability. Valid values:</para>

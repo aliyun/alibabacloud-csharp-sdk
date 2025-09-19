@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string EuidName { get; set; }
 
+            [NameInMap("FileHash")]
+            [Validation(Required=false)]
+            public string FileHash { get; set; }
+
             /// <summary>
             /// <para>The ID of the server that is associated with the process.</para>
             /// 

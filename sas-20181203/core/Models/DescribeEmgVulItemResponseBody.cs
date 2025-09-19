@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The information about the urgent vulnerabilities.</para>
+        /// <para>An array that consists of the urgent vulnerabilities returned.</para>
         /// </summary>
         [NameInMap("GroupedVulItems")]
         [Validation(Required=false)]
@@ -47,6 +47,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CheckType { get; set; }
 
             /// <summary>
+            /// <para>The introduction to the vulnerability.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Chanjet T-Plus is an Internet business management software. There is an unauthorized access vulnerability in one of its interfaces disclosed on the Internet. Attackers can construct malicious requests to upload malicious files to execute arbitrary code and control the server.</para>
+            /// </summary>
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            /// <summary>
             /// <para>The timestamp when the urgent vulnerability was last detected. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
@@ -57,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtLastCheck { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the vulnerability was disclosed. Unit: milliseconds.</para>
+            /// <para>The timestamp when the urgent vulnerability was last disclosed. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1618887687000</para>
@@ -89,7 +99,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The progress of the urgent vulnerability detection task. Valid values: 0 to 100.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only when an urgent vulnerability is being detected.</para>
+            /// <para> This parameter is returned only when an urgent vulnerability is being detected.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -103,11 +113,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>Indicates whether the application protection feature is supported. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: no</description></item>
-            /// <item><description><b>1</b>: yes</description></item>
-            /// </list>
-            /// <remarks>
+            /// <item><description><b>1</b>: yes<remarks>
             /// <para> If this parameter is not returned, the application protection is not supported.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

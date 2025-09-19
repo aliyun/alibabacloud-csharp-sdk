@@ -77,6 +77,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>arm</para>
+            /// </summary>
+            [NameInMap("CpuArch")]
+            [Validation(Required=false)]
+            public string CpuArch { get; set; }
+
+            /// <summary>
             /// <para>The expiration time. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>

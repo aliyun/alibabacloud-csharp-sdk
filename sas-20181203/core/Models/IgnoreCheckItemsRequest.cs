@@ -46,6 +46,38 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<long?> CheckIds { get; set; }
 
         /// <summary>
+        /// <para>List of container names that need to be whitelisted.</para>
+        /// </summary>
+        [NameInMap("ContainerItems")]
+        [Validation(Required=false)]
+        public List<IgnoreCheckItemsRequestContainerItems> ContainerItems { get; set; }
+        public class IgnoreCheckItemsRequestContainerItems : TeaModel {
+            /// <summary>
+            /// <para>The names of the containers that need to be whitelisted for the current asset, separated by English commas.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;anythingllm,ChuanhuChat&quot;</para>
+            /// </summary>
+            [NameInMap("ContainerNames")]
+            [Validation(Required=false)]
+            public string ContainerNames { get; set; }
+
+            /// <summary>
+            /// <para>The UUID of the server.</para>
+            /// <remarks>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>14eb2fb6-ab02-4869-a1e1-2cdb0f7*****</para>
+            /// </summary>
+            [NameInMap("Uuid")]
+            [Validation(Required=false)]
+            public string Uuid { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>

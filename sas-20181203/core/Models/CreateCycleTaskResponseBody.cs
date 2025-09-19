@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateCycleTaskResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The ID of the task configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>00cfa8161da093089e6804ba6a33****</para>
+        /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
         public string ConfigId { get; set; }

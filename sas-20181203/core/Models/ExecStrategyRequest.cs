@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ExecStrategyRequest : TeaModel {
+        [NameInMap("ExecAction")]
+        [Validation(Required=false)]
+        public string ExecAction { get; set; }
+
         /// <summary>
         /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">

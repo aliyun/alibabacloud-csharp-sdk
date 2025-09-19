@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string GroupType { get; set; }
 
+        [NameInMap("MemberAccountSyncFlag")]
+        [Validation(Required=false)]
+        public bool? MemberAccountSyncFlag { get; set; }
+
         /// <summary>
         /// <para>The time when the report is pinned. Unit: milliseconds.</para>
         /// <remarks>

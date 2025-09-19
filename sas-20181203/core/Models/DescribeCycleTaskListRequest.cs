@@ -9,6 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCycleTaskListRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the task configuration.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~CreateCycleTask~~">CreateCycleTask</a> operation to query the IDs of task configurations.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>f93b6ee24cfd0aad44b897ad5051****</para>
+        /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
         public string ConfigId { get; set; }

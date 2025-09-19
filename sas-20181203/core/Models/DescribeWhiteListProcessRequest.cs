@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The name of the process.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>sys_creat</para>
+        /// <para>JAVA</para>
         /// </summary>
         [NameInMap("ProcessName")]
         [Validation(Required=false)]

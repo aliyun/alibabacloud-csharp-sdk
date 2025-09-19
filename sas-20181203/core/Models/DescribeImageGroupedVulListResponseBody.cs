@@ -111,6 +111,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NntfCount { get; set; }
 
             /// <summary>
+            /// <para>The tag of this vulnerability. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>AI</b>: AI-related components.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AI</para>
+            /// </summary>
+            [NameInMap("RuleTag")]
+            [Validation(Required=false)]
+            public string RuleTag { get; set; }
+
+            /// <summary>
             /// <para>The status of the vulnerability. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: unhandled</description></item>

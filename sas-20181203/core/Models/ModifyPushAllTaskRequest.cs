@@ -22,17 +22,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The check items. Separate multiple check items with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OVAL_ENTITY</b>: Common Vulnerabilities and Exposures (CVE) vulnerabilities</description></item>
-        /// <item><description><b>CMS</b>: Web-CMS vulnerabilities</description></item>
-        /// <item><description><b>SYSVUL</b>: Windows system vulnerabilities</description></item>
-        /// <item><description><b>SCA</b>: application vulnerabilities</description></item>
-        /// <item><description><b>HEALTH_CHECK</b>: baselines</description></item>
-        /// <item><description><b>WEBSHELL</b>: webshells</description></item>
-        /// <item><description><b>PROC_SNAPSHOT</b>: processes</description></item>
-        /// <item><description><b>PORT_SNAPSHOT</b>: ports</description></item>
-        /// <item><description><b>ACCOUNT_SNAPSHOT</b>: accounts</description></item>
-        /// <item><description><b>SOFTWARE_SNAPSHOT</b>: software assets</description></item>
-        /// <item><description><b>SCA_SNAPSHOT</b>: middleware</description></item>
+        /// <item><description><b>OVAL_ENTITY</b>: Common Vulnerabilities and Exposures (CVE) vulnerabilities.</description></item>
+        /// <item><description><b>CMS</b>: Web-CMS vulnerabilities.</description></item>
+        /// <item><description><b>SYSVUL</b>: Windows system vulnerabilities.</description></item>
+        /// <item><description><b>SCA</b>: application vulnerabilities.</description></item>
+        /// <item><description><b>HEALTH_CHECK</b>: baselines.</description></item>
+        /// <item><description><b>WEBSHELL</b>: webshells.</description></item>
+        /// <item><description><b>PROC_SNAPSHOT</b>: processes.</description></item>
+        /// <item><description><b>PORT_SNAPSHOT</b>: ports.</description></item>
+        /// <item><description><b>ACCOUNT_SNAPSHOT</b>: accounts.</description></item>
+        /// <item><description><b>SOFTWARE_SNAPSHOT</b>: software assets.</description></item>
+        /// <item><description><b>SCA_SNAPSHOT</b>: middleware, databases, and web services.</description></item>
+        /// <item><description><b>CROND_SNAPSHOT</b>: scheduled tasks.</description></item>
+        /// <item><description><b>AUTORUN_SNAPSHOT</b>: startup items.</description></item>
+        /// <item><description><b>LKM_SNAPSHOT</b>: kernel modules.</description></item>
+        /// <item><description><b>SCA_PROXY_SNAPSHOT</b>: websites.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

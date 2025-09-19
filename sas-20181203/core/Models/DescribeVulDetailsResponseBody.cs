@@ -65,6 +65,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The China National Vulnerability Database (CNVD) ID.</para>
             /// 
@@ -73,8 +75,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("CnvdId")]
             [Validation(Required=false)]
+            [Obsolete]
             public string CnvdId { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The difficulty level of exploiting the vulnerability. Valid values:</para>
             /// <list type="bullet">
@@ -88,8 +93,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("Complexity")]
             [Validation(Required=false)]
+            [Obsolete]
             public string Complexity { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The CVE content.</para>
             /// 
@@ -99,6 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
+            [Obsolete]
             public string Content { get; set; }
 
             /// <summary>
@@ -141,6 +150,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string CvssVector { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The name of the instance.</para>
             /// <remarks>
@@ -152,8 +163,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
+            [Obsolete]
             public string InstanceName { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The public IP address of the server.</para>
             /// <remarks>
@@ -165,8 +179,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
+            [Obsolete]
             public string InternetIp { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The private IP address of the server.</para>
             /// <remarks>
@@ -178,6 +195,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
+            [Obsolete]
             public string IntranetIp { get; set; }
 
             /// <summary>
@@ -190,13 +208,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string OtherId { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The POC content.</para>
             /// </summary>
             [NameInMap("Poc")]
             [Validation(Required=false)]
+            [Obsolete]
             public string Poc { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The UNIX timestamp when the proof of concept (POC) was created. Unit: milliseconds.</para>
             /// 
@@ -205,8 +228,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("PocCreateTime")]
             [Validation(Required=false)]
+            [Obsolete]
             public long? PocCreateTime { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The UNIX timestamp when the POC was disclosed. Unit: milliseconds.</para>
             /// 
@@ -215,8 +241,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("PocDisclosureTime")]
             [Validation(Required=false)]
+            [Obsolete]
             public long? PocDisclosureTime { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The service that is affected by the vulnerability.</para>
             /// 
@@ -225,6 +254,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("Product")]
             [Validation(Required=false)]
+            [Obsolete]
             public string Product { get; set; }
 
             /// <summary>
@@ -267,6 +297,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Summary { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The ID of the asset that is scanned.</para>
             /// <remarks>
@@ -278,8 +310,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("TargetId")]
             [Validation(Required=false)]
+            [Obsolete]
             public string TargetId { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The name of the asset that is scanned.</para>
             /// <remarks>
@@ -291,6 +326,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("TargetName")]
             [Validation(Required=false)]
+            [Obsolete]
             public string TargetName { get; set; }
 
             /// <summary>
@@ -303,6 +339,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Title { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The vendor that disclosed the vulnerability.</para>
             /// 
@@ -311,6 +349,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("Vendor")]
             [Validation(Required=false)]
+            [Obsolete]
             public string Vendor { get; set; }
 
             /// <summary>

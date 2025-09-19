@@ -154,6 +154,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Path { get; set; }
 
+        [NameInMap("RaspDefend")]
+        [Validation(Required=false)]
+        public int? RaspDefend { get; set; }
+
         /// <summary>
         /// <para>The tag that is used to search for the vulnerabilities. Valid values:</para>
         /// <list type="bullet">

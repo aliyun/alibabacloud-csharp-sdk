@@ -153,6 +153,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? ExecStatus { get; set; }
 
+            [NameInMap("ExecutionType")]
+            [Validation(Required=false)]
+            public string ExecutionType { get; set; }
+
             /// <summary>
             /// <para>The ID of the baseline check policy.</para>
             /// 

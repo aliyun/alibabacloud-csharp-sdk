@@ -77,6 +77,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? GeneralAssetCount { get; set; }
 
             /// <summary>
+            /// <para>The number of instances that are provisioned by third-party providers.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("GoogleInstanceCount")]
+            [Validation(Required=false)]
+            public int? GoogleInstanceCount { get; set; }
+
+            /// <summary>
             /// <para>The number of server groups.</para>
             /// 
             /// <b>Example:</b>
@@ -325,6 +335,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("UnprotectedInstanceCount")]
             [Validation(Required=false)]
             public int? UnprotectedInstanceCount { get; set; }
+
+            /// <summary>
+            /// <para>The number of instances that are provisioned by third-party providers.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
+            [NameInMap("VolcengineInstanceCount")]
+            [Validation(Required=false)]
+            public int? VolcengineInstanceCount { get; set; }
 
             /// <summary>
             /// <para>The number of virtual private clouds (VPCs).</para>

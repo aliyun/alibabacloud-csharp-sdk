@@ -155,6 +155,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Uuid { get; set; }
 
+            [NameInMap("Version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
+
         }
 
         /// <summary>

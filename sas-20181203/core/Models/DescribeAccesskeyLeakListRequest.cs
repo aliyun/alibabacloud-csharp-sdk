@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The AccessKey ID that you want to query. Only exact match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LTAI4Fytv7ALKzkNVBV6****</para>
+        /// <para>yourAccessKeyID</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]

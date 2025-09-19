@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public bool? IsAgree { get; set; }
 
+        [NameInMap("IsImmediate")]
+        [Validation(Required=false)]
+        public bool? IsImmediate { get; set; }
+
         /// <summary>
         /// <para>The language type for requests and responses. The default value is <b>zh</b>. Possible values:</para>
         /// <list type="bullet">

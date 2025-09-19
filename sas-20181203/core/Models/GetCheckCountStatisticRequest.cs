@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckCountStatisticRequest : TeaModel {
         /// <summary>
-        /// <para>Type of data statistics. Values:  </para>
+        /// <para>The type of the statistics. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>user</b>: Top 5 over-authorized users.  </description></item>
-        /// <item><description><b>role</b>: Top 5 over-authorized roles.  </description></item>
-        /// <item><description><b>instance</b>: Top 5 risky cloud products.</description></item>
+        /// <item><description><b>user</b>: the top five users that are granted excessive permissions.</description></item>
+        /// <item><description><b>role</b>: the top five roles that are granted excessive permissions.</description></item>
+        /// <item><description><b>instance</b>: the top five cloud services on which risks are detected.</description></item>
+        /// <item><description><b>host</b>: the top five servers on which baseline risks are detected.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,8 +25,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string StatisticType { get; set; }
 
+        [NameInMap("TaskSources")]
+        [Validation(Required=false)]
+        public List<string> TaskSources { get; set; }
+
         /// <summary>
-        /// <para>List of cloud vendors.</para>
+        /// <para>The cloud service providers.</para>
         /// </summary>
         [NameInMap("Vendors")]
         [Validation(Required=false)]

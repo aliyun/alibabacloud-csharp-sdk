@@ -194,6 +194,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskStatus { get; set; }
 
             /// <summary>
+            /// <para>The usage label of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PAI</para>
+            /// </summary>
+            [NameInMap("SourceBizTag")]
+            [Validation(Required=false)]
+            public string SourceBizTag { get; set; }
+
+            /// <summary>
             /// <para>The number of vulnerabilities detected on the image repository.</para>
             /// 
             /// <b>Example:</b>

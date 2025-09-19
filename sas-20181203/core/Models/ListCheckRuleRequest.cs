@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ScopeType { get; set; }
 
+        [NameInMap("TaskSources")]
+        [Validation(Required=false)]
+        public List<string> TaskSources { get; set; }
+
     }
 
 }

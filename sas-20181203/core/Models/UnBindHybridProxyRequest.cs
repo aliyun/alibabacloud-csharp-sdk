@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UnBindHybridProxyRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster name.</para>
-        /// <remarks>
-        /// <para>This parameter is deprecated.</para>
-        /// </remarks>
+        /// <para>The name of the proxy cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of servers that you want to add to Security Center over the proxy server.</para>
+        /// <para>The UUIDs of the servers that you want to remove from the proxy cluster.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("YundunUuids")]

@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("Override")]
+        [Validation(Required=false)]
+        public bool? Override { get; set; }
+
         /// <summary>
         /// <para>The source IP address.</para>
         /// 

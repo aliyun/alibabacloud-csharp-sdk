@@ -167,6 +167,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckShowName { get; set; }
 
             /// <summary>
+            /// <para>The source type of the situation awareness check item: </para>
+            /// <list type="bullet">
+            /// <item><description><b>CUSTOM</b>: User-defined </description></item>
+            /// <item><description><b>SYSTEM</b>: Predefined by the situation awareness platform</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SYSTEM</para>
+            /// </summary>
+            [NameInMap("CheckType")]
+            [Validation(Required=false)]
+            public string CheckType { get; set; }
+
+            /// <summary>
             /// <para>The asset subtype of the cloud service. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>If the <b>InstanceType</b> parameter is set to <b>ECS</b>, this parameter supports the following valid values:</para>

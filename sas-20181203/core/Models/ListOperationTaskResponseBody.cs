@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListOperationTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>操作任务的详细实例信息列表。</para>
+        /// <para>Detailed instance information list of operation tasks.</para>
         /// </summary>
         [NameInMap("OperationTasks")]
         [Validation(Required=false)]
         public List<ListOperationTaskResponseBodyOperationTasks> OperationTasks { get; set; }
         public class ListOperationTaskResponseBodyOperationTasks : TeaModel {
             /// <summary>
-            /// <para>检查项的ID。</para>
+            /// <para>The ID of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastCheckTime { get; set; }
 
             /// <summary>
-            /// <para>服务器所在的地域的ID。</para>
+            /// <para>The ID of the region where the server is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shenzhen</para>
@@ -126,11 +126,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RepairSupportType { get; set; }
 
             /// <summary>
-            /// <para>扫描出的告警的风险等级。取值：</para>
+            /// <para>The risk level of the detected alert. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b>：高危。</description></item>
-            /// <item><description><b>medium</b>：中危。</description></item>
-            /// <item><description><b>low</b>：低危。</description></item>
+            /// <item><description><b>high</b>: High risk.</description></item>
+            /// <item><description><b>medium</b>: Medium risk. </description></item>
+            /// <item><description><b>low</b>: Low risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

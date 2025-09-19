@@ -60,6 +60,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExposureComponent { get; set; }
 
         /// <summary>
+        /// <para>Expose component type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>system_service</para>
+        /// </summary>
+        [NameInMap("ExposureComponentBizType")]
+        [Validation(Required=false)]
+        public string ExposureComponentBizType { get; set; }
+
+        /// <summary>
         /// <para>The public IP address of the server or the public endpoint of the database.</para>
         /// 
         /// <b>Example:</b>

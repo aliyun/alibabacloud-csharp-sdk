@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The ID of the AccessKey pair that is leaked.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LTAI4G4VjkC9wenfEvgX****</para>
+        /// <para>yourAccessKeyID</para>
         /// </summary>
         [NameInMap("AccesskeyId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The code snippet that is leaked.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>\n1231 \nak=LTAI4G4VjkC9wenfEvgX**** \n12311123 \nsk1999 \nsk1999sk1999 \nsk1999sk1999 \n\n\ntest001 ak hht \nak=LTAI4G4VjkC9wenfEvgX**** \nsk=AjEhS9XmnIzllpAx2LxMTMdrTG****</para>
+        /// <para>\n1231 \nak=yourAccessKeyID \n12311123 \nsk1999 \nsk1999sk1999 \nsk1999sk1999 \n\n\ntest001 ak hht \nak=yourAccessKeyID \nsk=yourAccessKeySecret</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]

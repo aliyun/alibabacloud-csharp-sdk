@@ -112,6 +112,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Whether to enable real-time incremental detection. When this parameter is set to true, the parameters ScanDayList, StartTime, and EndTime are not effective.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("RealTimeIncr")]
+        [Validation(Required=false)]
+        public bool? RealTimeIncr { get; set; }
+
+        /// <summary>
         /// <para>The days on which the scan is executed in a week.</para>
         /// </summary>
         [NameInMap("ScanDayList")]

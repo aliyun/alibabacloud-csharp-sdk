@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IsNoticed { get; set; }
 
+            [NameInMap("NeedSwitch")]
+            [Validation(Required=false)]
+            public bool? NeedSwitch { get; set; }
+
             /// <summary>
             /// <para>The status of the switching to the region.</para>
             /// </summary>

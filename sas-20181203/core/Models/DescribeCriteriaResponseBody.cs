@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>intranetIp</b>: the private IP address.</description></item>
             /// <item><description><b>instanceName</b>: the name of the instance.</description></item>
             /// <item><description><b>instanceId</b>: the instance ID.</description></item>
-            /// <item><description><b>vpcInstanceId</b>: the ID of the virtual private cloud (VPC) to which the instance belongs.</description></item>
+            /// <item><description><b>vpcInstanceId</b>: The ID of the virtual private cloud (VPC) to which the instance belongs.</description></item>
             /// <item><description><b>osName</b>: the operating system.</description></item>
             /// <item><description><b>osType</b>: the operating system type.</description></item>
             /// <item><description><b>hcStatus</b>: indicates whether baseline risks exist.</description></item>
@@ -53,9 +53,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>exposedStatus</b>: indicates whether the server is exposed.</description></item>
             /// <item><description><b>authVersion</b>: the authorization version.</description></item>
             /// <item><description><b>flag</b>: the cloud service provider.</description></item>
-            /// <item><description><b>ipList</b>: the IP addresses.</description></item>
+            /// <item><description><b>ipList</b>: the IP address list.</description></item>
             /// <item><description><b>uuidList</b> :the UUID.</description></item>
             /// <item><description><b>tagKeyValue</b>: the ECS tag.</description></item>
+            /// <item><description><b>vendorAuthAlias</b>: the account name.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

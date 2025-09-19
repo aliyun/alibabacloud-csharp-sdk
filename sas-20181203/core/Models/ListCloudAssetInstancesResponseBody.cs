@@ -300,6 +300,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SecurityInfo { get; set; }
 
             /// <summary>
+            /// <para>Tag list.</para>
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<string> Tags { get; set; }
+
+            /// <summary>
             /// <para>The service provider (SP) of the cloud asset. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: a cloud asset provided by Alibaba Cloud</description></item>

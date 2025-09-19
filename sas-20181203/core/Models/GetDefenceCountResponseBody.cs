@@ -40,6 +40,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The number of handled security alerts of Cloud Security Center.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("SuspiciousDealtCount")]
+        [Validation(Required=false)]
+        public int? SuspiciousDealtCount { get; set; }
+
+        /// <summary>
         /// <para>The number of handled alerts of the web tamper proofing type in the last 15 days.</para>
         /// 
         /// <b>Example:</b>

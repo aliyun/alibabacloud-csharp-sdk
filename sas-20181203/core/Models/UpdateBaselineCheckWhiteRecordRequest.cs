@@ -57,6 +57,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RecordId { get; set; }
 
         /// <summary>
+        /// <para>A list of asset UUIDs from which container names need to be removed from the whitelist.</para>
+        /// </summary>
+        [NameInMap("RemoveContainerUuids")]
+        [Validation(Required=false)]
+        public List<string> RemoveContainerUuids { get; set; }
+
+        /// <summary>
         /// <para>The data source. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>default</b>: server</description></item>

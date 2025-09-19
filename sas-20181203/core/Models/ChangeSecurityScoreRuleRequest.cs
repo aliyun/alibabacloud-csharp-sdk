@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ChangeSecurityScoreRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The old or new version of the security score rule. If you set this parameter to <b>home_security_score</b>, the new version of the security score rule is changed. Otherwise, the old version of the security score rule is changed by default.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>home_security_score</para>
+        /// </summary>
+        [NameInMap("CalType")]
+        [Validation(Required=false)]
+        public string CalType { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to reset to the system default rule. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: yes</description></item>
@@ -24,20 +34,146 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? ResetSecurityScoreRule { get; set; }
 
         /// <summary>
-        /// <para>The list of deduction modules that are supported by the security score feature.</para>
+        /// <para>The information about the new version of the security score rule.</para>
+        /// </summary>
+        [NameInMap("SecurityScoreCategoryList")]
+        [Validation(Required=false)]
+        public List<ChangeSecurityScoreRuleRequestSecurityScoreCategoryList> SecurityScoreCategoryList { get; set; }
+        public class ChangeSecurityScoreRuleRequestSecurityScoreCategoryList : TeaModel {
+            /// <summary>
+            /// <para>The category of the security score rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>SS_SAS_HANDLE</b>: security governance.</description></item>
+            /// <item><description><b>SS_SAS_RESPOND</b>: security response.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SS_SAS_HANDLE</para>
+            /// </summary>
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
+            /// <summary>
+            /// <para>The threshold of deduction for the security score rule type.</para>
+            /// <remarks>
+            /// <para> Valid values: 0 to 100. The sum of the deduction thresholds for all deduction modules must be equal to 100.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
+            [NameInMap("ScoreThreshold")]
+            [Validation(Required=false)]
+            public int? ScoreThreshold { get; set; }
+
+            /// <summary>
+            /// <para>The deduction items of the security score rule.</para>
+            /// </summary>
+            [NameInMap("SecurityRuleList")]
+            [Validation(Required=false)]
+            public List<ChangeSecurityScoreRuleRequestSecurityScoreCategoryListSecurityRuleList> SecurityRuleList { get; set; }
+            public class ChangeSecurityScoreRuleRequestSecurityScoreCategoryListSecurityRuleList : TeaModel {
+                /// <summary>
+                /// <para>The deducted module that is supported by the security score feature. The type of the sub-deduction item. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>SS_SAS_WEAK_PW</b>: unhandled weak password risk.</description></item>
+                /// <item><description><b>SS_SAS_ALARM</b>: unhandled alert in Security Center.</description></item>
+                /// <item><description><b>SS_SAS_EMG_VUL</b>: unfixed urgent vulnerability.</description></item>
+                /// <item><description><b>SS_SAS_APP_VUL</b>: unfixed application vulnerability.</description></item>
+                /// <item><description><b>SS_SAS_SYS_VUL</b>: unfixed system vulnerability.</description></item>
+                /// <item><description><b>SS_SAS_CLOUD_HC</b>: unhandled cloud security posture management (CSPM) risk.</description></item>
+                /// <item><description><b>SS_SDDP_DATA_RISK</b>: unhandled data security risk.</description></item>
+                /// <item><description><b>SS_WAF_API_RISK</b>: unhandled API security risk.</description></item>
+                /// <item><description><b>SS_DDOS_BH_ASSET</b>: asset on which blackhole filtering is triggered.</description></item>
+                /// <item><description><b>SS_SAS_AK_LEAK</b>: unhandled AK/SK leak event.</description></item>
+                /// <item><description><b>SS_PRODUCT_CONNECT</b>: security service not integrated.</description></item>
+                /// <item><description><b>SS_KEY_CONFIG</b>: key feature configuration.</description></item>
+                /// <item><description><b>SS_PRODUCT_EXPIRE</b>: service that is about to expire.</description></item>
+                /// <item><description><b>SS_AI_RISK</b>: AI application risk.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SS_REINFORCE</para>
+                /// </summary>
+                [NameInMap("RuleType")]
+                [Validation(Required=false)]
+                public string RuleType { get; set; }
+
+                /// <summary>
+                /// <para>The threshold of deduction for the security score rule type.</para>
+                /// <remarks>
+                /// <para> Valid values: 0 to the deduction threshold of the deduction module.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
+                [NameInMap("Score")]
+                [Validation(Required=false)]
+                public int? Score { get; set; }
+
+                /// <summary>
+                /// <para>The sub-deduction items of the security score rule.</para>
+                /// </summary>
+                [NameInMap("SecurityScoreItemList")]
+                [Validation(Required=false)]
+                public List<ChangeSecurityScoreRuleRequestSecurityScoreCategoryListSecurityRuleListSecurityScoreItemList> SecurityScoreItemList { get; set; }
+                public class ChangeSecurityScoreRuleRequestSecurityScoreCategoryListSecurityRuleListSecurityScoreItemList : TeaModel {
+                    /// <summary>
+                    /// <para>The penalty point of the deduction item.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2</para>
+                    /// </summary>
+                    [NameInMap("Score")]
+                    [Validation(Required=false)]
+                    public int? Score { get; set; }
+
+                    /// <summary>
+                    /// <para>The threshold for the deduction item.</para>
+                    /// <remarks>
+                    /// <para> Valid values: 0 to the deduction threshold of the deduction module.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5</para>
+                    /// </summary>
+                    [NameInMap("ScoreThreshold")]
+                    [Validation(Required=false)]
+                    public int? ScoreThreshold { get; set; }
+
+                    /// <summary>
+                    /// <para>The sub-deduction item of the security score rule.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>SSI_KEY_CONFIG</para>
+                    /// </summary>
+                    [NameInMap("SubRuleType")]
+                    [Validation(Required=false)]
+                    public string SubRuleType { get; set; }
+
+                }
+
+            }
+
+        }
+
+        /// <summary>
+        /// <para>The information about the old version of the security score rule.</para>
         /// </summary>
         [NameInMap("SecurityScoreRuleList")]
         [Validation(Required=false)]
         public List<ChangeSecurityScoreRuleRequestSecurityScoreRuleList> SecurityScoreRuleList { get; set; }
         public class ChangeSecurityScoreRuleRequestSecurityScoreRuleList : TeaModel {
             /// <summary>
-            /// <para>The deduction module that is supported by the security score feature. Valid values:</para>
+            /// <para>The type of the security score rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>SS_REINFORCE: issue in key feature configuration</description></item>
             /// <item><description>SS_ALARM: unhandled alert</description></item>
             /// <item><description>SS_VUL: unfixed vulnerability</description></item>
             /// <item><description>SS_HC: baseline risk</description></item>
-            /// <item><description>SS_CLOUD_HC: Cloud platform configuration check item problem.</description></item>
+            /// <item><description>SS_CLOUD_HC: risk item of configuration assessment</description></item>
             /// <item><description>SS_AK: risk of AccessKey pair leaks</description></item>
             /// </list>
             /// 
@@ -121,7 +257,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <item><description>ERM_UNCHECK: An undetected emergency vulnerability exists.</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>SS_HC: baseline risks</para>
+                /// <item><description><para>SS_HC: baseline risk</para>
                 /// <list type="bullet">
                 /// <item><description>WEAK_EXPLOIT: Weak passwords are exposed to the Internet.</description></item>
                 /// <item><description>WEAK_PASSWORD: Weak passwords exist.</description></item>

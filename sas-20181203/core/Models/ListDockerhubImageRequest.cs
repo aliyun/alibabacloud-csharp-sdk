@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListDockerhubImageRequest : TeaModel {
         /// <summary>
-        /// <para>Image query condition, supports the format of <c>[namespace/]repoName[:version]</c>, where the conditions within <c>[]</c> are optional.</para>
+        /// <para>The query condition for images. You can query images in the <c>[namespace/]repoName[:version]</c> format. Conditions in <c>[]</c> are optional.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -495,6 +495,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? GroupId { get; set; }
 
             /// <summary>
+            /// <para>The name of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>registry-cn-<b>-vpc.ack.</b>.com/acs/ack-node-problem-detector:v0.8.16-8ed7053-**</para>
+            /// </summary>
+            [NameInMap("Image")]
+            [Validation(Required=false)]
+            public string Image { get; set; }
+
+            /// <summary>
             /// <para>The ID of the asset.</para>
             /// 
             /// <b>Example:</b>
@@ -628,6 +638,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            /// <summary>
+            /// <para>The namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>kube-system</para>
+            /// </summary>
+            [NameInMap("Namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
 
             /// <summary>
             /// <para>The priority to fix the vulnerability. Valid values:</para>
@@ -797,6 +817,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("ResultMessage")]
             [Validation(Required=false)]
             public string ResultMessage { get; set; }
+
+            /// <summary>
+            /// <para>The tag of this vulnerability. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>AI</b>: AI-related components.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AI</para>
+            /// </summary>
+            [NameInMap("RuleTag")]
+            [Validation(Required=false)]
+            public string RuleTag { get; set; }
 
             /// <summary>
             /// <para>The status of the vulnerability. Valid values:</para>

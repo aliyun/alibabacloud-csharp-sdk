@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The key ID that is required for the file upload.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>LTAI4G1mgPbjvGQuiV1X****</para>
+            /// <para>yourAccessKeyID</para>
             /// </summary>
             [NameInMap("Accessid")]
             [Validation(Required=false)]

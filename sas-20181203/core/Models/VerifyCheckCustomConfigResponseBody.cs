@@ -115,6 +115,39 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
+        /// <para>Check the error code returned by the custom check item.</para>
+        /// </summary>
+        [NameInMap("ErrorCheckCustomConfig")]
+        [Validation(Required=false)]
+        public VerifyCheckCustomConfigResponseBodyErrorCheckCustomConfig ErrorCheckCustomConfig { get; set; }
+        public class VerifyCheckCustomConfigResponseBodyErrorCheckCustomConfig : TeaModel {
+            /// <summary>
+            /// <para>Error code when failed. This parameter is not returned upon success. </para>
+            /// <list type="bullet">
+            /// <item><description><b>CspmVerifyCheckCustomItemNoPass</b>: The asset did not pass the set custom rules. </description></item>
+            /// <item><description><b>CspmVerifyCheckCustomItemError</b>: Verification error, there is an issue with the input rule.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CspmVerifyCheckCustomItemNoPass</para>
+            /// </summary>
+            [NameInMap("ErrorCode")]
+            [Validation(Required=false)]
+            public string ErrorCode { get; set; }
+
+            /// <summary>
+            /// <para>Error message</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Creation verification failed.</para>
+            /// </summary>
+            [NameInMap("ErrorMsg")]
+            [Validation(Required=false)]
+            public string ErrorMsg { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>List of repair parameters with configuration check errors.</para>
         /// </summary>
         [NameInMap("ErrorRepairConfigs")]

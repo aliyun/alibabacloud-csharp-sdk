@@ -94,6 +94,55 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExposureComponent { get; set; }
 
             /// <summary>
+            /// <para>Expose component information list.</para>
+            /// </summary>
+            [NameInMap("ExposureComponentList")]
+            [Validation(Required=false)]
+            public List<DescribeExposedInstanceListResponseBodyExposedInstancesExposureComponentList> ExposureComponentList { get; set; }
+            public class DescribeExposedInstanceListResponseBodyExposedInstancesExposureComponentList : TeaModel {
+                /// <summary>
+                /// <para>Expose component type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>system_service</para>
+                /// </summary>
+                [NameInMap("ComponentBizType")]
+                [Validation(Required=false)]
+                public string ComponentBizType { get; set; }
+
+                /// <summary>
+                /// <para>Expose components.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>openssh</para>
+                /// </summary>
+                [NameInMap("ComponentName")]
+                [Validation(Required=false)]
+                public string ComponentName { get; set; }
+
+                /// <summary>
+                /// <para>Expose component version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>8.7p1</para>
+                /// </summary>
+                [NameInMap("ComponentVersion")]
+                [Validation(Required=false)]
+                public string ComponentVersion { get; set; }
+
+                /// <summary>
+                /// <para>Exposed port.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>22</para>
+                /// </summary>
+                [NameInMap("ListenPort")]
+                [Validation(Required=false)]
+                public string ListenPort { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The public IP address that is exposed on the Internet.</para>
             /// 
             /// <b>Example:</b>

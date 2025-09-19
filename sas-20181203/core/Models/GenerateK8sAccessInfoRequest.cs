@@ -81,6 +81,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>arm</para>
+        /// </summary>
+        [NameInMap("CpuArch")]
+        [Validation(Required=false)]
+        public string CpuArch { get; set; }
+
+        /// <summary>
         /// <para>The time at which the container ends to be added.</para>
         /// <para>This parameter is required.</para>
         /// 

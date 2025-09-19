@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The ID of the AccessKey pair that is leaked.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>LTAI4Fytv7ALKzkNVBV6****</para>
+            /// <para>yourAccessKeyID</para>
             /// </summary>
             [NameInMap("AccesskeyId")]
             [Validation(Required=false)]

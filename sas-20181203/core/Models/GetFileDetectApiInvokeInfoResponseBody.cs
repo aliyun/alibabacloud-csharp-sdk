@@ -27,6 +27,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AuthCount { get; set; }
 
             /// <summary>
+            /// <para>The total number of authorizations(excluding trials).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
+            [NameInMap("AuthCountInSaleVersion")]
+            [Validation(Required=false)]
+            public long? AuthCountInSaleVersion { get; set; }
+
+            /// <summary>
             /// <para>The timestamp of the expiration date of the authorization number.</para>
             /// 
             /// <b>Example:</b>
@@ -45,6 +55,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("FlowRate")]
             [Validation(Required=false)]
             public int? FlowRate { get; set; }
+
+            /// <summary>
+            /// <para>The number of authorizations used.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("InvokeCount")]
+            [Validation(Required=false)]
+            public long? InvokeCount { get; set; }
+
+            /// <summary>
+            /// <para>The number of authorizations used(excluding trials).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
+            [NameInMap("InvokeCountInSaleVersion")]
+            [Validation(Required=false)]
+            public long? InvokeCountInSaleVersion { get; set; }
 
             /// <summary>
             /// <para>The number of remaining authorizations.</para>

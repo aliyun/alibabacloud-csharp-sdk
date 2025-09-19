@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The dimension based on which the asset is selected. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>group</b>: The asset is selected by server.</description></item>
+            /// <item><description><b>instance</b>: The asset is selected by server.</description></item>
             /// <item><description><b>group</b>: The asset is selected by group.</description></item>
             /// <item><description><b>vpc</b>: The asset is selected by VPC.</description></item>
             /// </list>

@@ -256,19 +256,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Flag { get; set; }
 
             /// <summary>
-            /// <para>The service provider of the asset. Valid values:</para>
+            /// <para>Asset vendor. Values: </para>
             /// <list type="bullet">
-            /// <item><description><b>ALIYUN</b></description></item>
+            /// <item><description><b>ALIYUN</b> </description></item>
             /// <item><description><b>OUT</b></description></item>
-            /// <item><description><b>IDC</b></description></item>
-            /// <item><description><b>Tencent</b></description></item>
-            /// <item><description><b>HUAWEICLOUD</b></description></item>
-            /// <item><description><b>Azure</b></description></item>
-            /// <item><description><b>AWS</b></description></item>
-            /// <item><description><b>ASK</b></description></item>
-            /// <item><description><b>TRIPARTITE</b></description></item>
-            /// <item><description><b>SAE</b></description></item>
-            /// <item><description><b>PAI</b></description></item>
+            /// <item><description><b>IDC</b> </description></item>
+            /// <item><description><b>Tencent</b> </description></item>
+            /// <item><description><b>HUAWEICLOUD</b> </description></item>
+            /// <item><description><b>Azure</b> </description></item>
+            /// <item><description><b>AWS</b> </description></item>
+            /// <item><description><b>ASK</b> </description></item>
+            /// <item><description><b>TRIPARTITE</b> </description></item>
+            /// <item><description><b>SAE</b> </description></item>
+            /// <item><description><b>PAI</b> </description></item>
+            /// <item><description><b>google</b> </description></item>
+            /// <item><description><b>VOLCENGINE</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -297,6 +299,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("GroupTrace")]
             [Validation(Required=false)]
             public string GroupTrace { get; set; }
+
+            /// <summary>
+            /// <para>Indicates if containers are included. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>YES</b>: yes.</description></item>
+            /// <item><description><b>NO</b>: no.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>YES</para>
+            /// </summary>
+            [NameInMap("HasContainer")]
+            [Validation(Required=false)]
+            public string HasContainer { get; set; }
 
             /// <summary>
             /// <para>Indicates whether baseline risks are detected on the asset. Valid values:</para>
@@ -586,6 +602,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? SafeEventCount { get; set; }
 
             /// <summary>
+            /// <para>Service ID. Only available for PAI instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dsw-76jlywunsif09bp15p</para>
+            /// </summary>
+            [NameInMap("ServiceId")]
+            [Validation(Required=false)]
+            public string ServiceId { get; set; }
+
+            /// <summary>
             /// <para>The status of the asset. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Running</b>: running</description></item>
@@ -640,15 +666,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// <para>The service provider of the asset. Valid values:</para>
+            /// <para>Asset vendor. Values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: an asset provided by Alibaba Cloud</description></item>
             /// <item><description><b>1</b>: an asset outside Alibaba Cloud</description></item>
             /// <item><description><b>2</b>: an asset in a data center</description></item>
-            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, and <b>7</b>: an asset from a third-party cloud service provider</description></item>
+            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, <b>7</b>, <b>14</b>, <b>16</b>: an asset from a third-party cloud service provider</description></item>
             /// <item><description><b>8</b>: a lightweight asset</description></item>
-            /// <item><description><b>9</b>: a SAE instance</description></item>
-            /// <item><description><b>10</b>: an instance in PAI</description></item>
+            /// <item><description><b>9</b>: a Serverless App Engine (SAE) instance</description></item>
+            /// <item><description><b>10</b>: an instance in Platform for AI (PAI)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -659,19 +685,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Vendor { get; set; }
 
             /// <summary>
-            /// <para>The name of the service provider for the asset.</para>
-            /// <para>Valid values:</para>
+            /// <para>The name of the service provider for the asset.
+            /// Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ALIYUN</b>: Alibaba Cloud</description></item>
+            /// <item><description><b>ALIYUN</b>: Alibaba Cloud </description></item>
             /// <item><description><b>OUT</b>: a third-party service provider</description></item>
-            /// <item><description><b>IDC</b>: a data center</description></item>
+            /// <item><description><b>IDC</b>: an asset in a data center</description></item>
             /// <item><description><b>TENCENT</b>: Tencent Cloud</description></item>
             /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud</description></item>
             /// <item><description><b>Microsoft</b>: Microsoft Azure</description></item>
             /// <item><description><b>AWS</b>: Amazon Web Services (AWS)</description></item>
             /// <item><description><b>TRIPARTITE</b>: a lightweight server</description></item>
-            /// <item><description><b>SAE</b>: a SAE instance</description></item>
-            /// <item><description><b>PAI</b>: an instance in PAI</description></item>
+            /// <item><description><b>SAE</b>: a Serverless App Engine (SAE) instance</description></item>
+            /// <item><description><b>PAI</b>: an instance in Platform for AI (PAI)</description></item>
+            /// <item><description><b>VOLCENGINE</b>: VOLCENGINE Cloud</description></item>
+            /// <item><description><b>google</b>: GOOGLE Cloud</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

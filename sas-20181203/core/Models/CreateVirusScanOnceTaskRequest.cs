@@ -10,6 +10,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateVirusScanOnceTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Additional information fields: </para>
+        /// <list type="bullet">
+        /// <item><description><b>additionType</b>: The type of extended scan</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;additionType\&quot;:[\&quot;SCAN_MEMORY\&quot;]}</para>
+        /// </summary>
+        [NameInMap("Param")]
+        [Validation(Required=false)]
+        public string Param { get; set; }
+
+        /// <summary>
         /// <para>The information about the scan path that is required for a custom scan.</para>
         /// </summary>
         [NameInMap("ScanPath")]

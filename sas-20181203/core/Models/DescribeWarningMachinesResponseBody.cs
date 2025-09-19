@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeWarningMachinesResponseBodyWarningMachines> WarningMachines { get; set; }
         public class DescribeWarningMachinesResponseBodyWarningMachines : TeaModel {
+            [NameInMap("AssetType")]
+            [Validation(Required=false)]
+            public string AssetType { get; set; }
+
             /// <summary>
             /// <para>The edition of Security Center that is authorized to protect the asset. Valid values:</para>
             /// <list type="bullet">
@@ -187,6 +191,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("MediumWarningCount")]
             [Validation(Required=false)]
             public int? MediumWarningCount { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether the agent is online. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("Online")]
+            [Validation(Required=false)]
+            public bool? Online { get; set; }
 
             /// <summary>
             /// <para>The number of the check items that passed the baseline check on the server.</para>

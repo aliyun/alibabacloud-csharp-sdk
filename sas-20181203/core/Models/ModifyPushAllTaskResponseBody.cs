@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ModifyPushAllTaskResponseBodyPushTaskRsp PushTaskRsp { get; set; }
         public class ModifyPushAllTaskResponseBodyPushTaskRsp : TeaModel {
             /// <summary>
-            /// <para>An array consisting of the servers on which security check tasks failed.</para>
+            /// <para>The information about the server on which security check tasks failed.</para>
             /// </summary>
             [NameInMap("PushTaskResultList")]
             [Validation(Required=false)]

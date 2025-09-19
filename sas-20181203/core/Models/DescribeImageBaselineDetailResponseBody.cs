@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The issue that is detected by using the baseline.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>/usr/aksk.txt:LTAI4GBEG5zaqX**********</para>
+            /// <para>/usr/aksk.txt:yourAccessKeyID</para>
             /// </summary>
             [NameInMap("Prompt")]
             [Validation(Required=false)]

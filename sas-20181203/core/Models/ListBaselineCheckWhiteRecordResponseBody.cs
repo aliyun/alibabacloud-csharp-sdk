@@ -57,6 +57,35 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckTypeDisName { get; set; }
 
             /// <summary>
+            /// <para>List of whitelisted container names in the check item.</para>
+            /// </summary>
+            [NameInMap("ContainerItems")]
+            [Validation(Required=false)]
+            public List<ListBaselineCheckWhiteRecordResponseBodyListContainerItems> ContainerItems { get; set; }
+            public class ListBaselineCheckWhiteRecordResponseBodyListContainerItems : TeaModel {
+                /// <summary>
+                /// <para>Names of the whitelisted containers for the current asset, separated by English commas.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>&quot;anythingllm,ChuanhuChat&quot;</para>
+                /// </summary>
+                [NameInMap("ContainerNames")]
+                [Validation(Required=false)]
+                public string ContainerNames { get; set; }
+
+                /// <summary>
+                /// <para>Server UUID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>beeea5c2-1857-4b2b-a794-7d21eae*****</para>
+                /// </summary>
+                [NameInMap("Uuid")]
+                [Validation(Required=false)]
+                public string Uuid { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>zh</b>: Chinese</description></item>

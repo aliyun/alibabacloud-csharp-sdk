@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? HighestVersion { get; set; }
 
+        [NameInMap("InvalidBindStatus")]
+        [Validation(Required=false)]
+        public string InvalidBindStatus { get; set; }
+
         /// <summary>
         /// <para>Indicates whether Security Center Multi-edition is purchased. Valid values:</para>
         /// <list type="bullet">

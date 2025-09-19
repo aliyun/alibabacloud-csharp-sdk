@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ResourceDirectoryAccountId { get; set; }
 
+        [NameInMap("TaskSources")]
+        [Validation(Required=false)]
+        public List<string> TaskSources { get; set; }
+
         /// <summary>
         /// <para>The cloud service providers.</para>
         /// </summary>

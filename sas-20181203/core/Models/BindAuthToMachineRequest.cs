@@ -97,8 +97,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The logical relationship that you want to use to evaluate multiple search conditions. Default value: <b>OR</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OR</b>****</description></item>
-        /// <item><description><b>AND</b>****</description></item>
+        /// <item><description><b>OR</b></description></item>
+        /// <item><description><b>AND</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

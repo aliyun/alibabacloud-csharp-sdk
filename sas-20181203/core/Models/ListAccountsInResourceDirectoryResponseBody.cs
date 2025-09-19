@@ -26,6 +26,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            [NameInMap("BuySas")]
+            [Validation(Required=false)]
+            [Obsolete]
+            public int? BuySas { get; set; }
+
+            [NameInMap("BuySasNew")]
+            [Validation(Required=false)]
+            public bool? BuySasNew { get; set; }
+
+            [NameInMap("ChargeType")]
+            [Validation(Required=false)]
+            public int? ChargeType { get; set; }
+
             /// <summary>
             /// <para>The name of the member.</para>
             /// 
@@ -45,6 +59,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("FolderId")]
             [Validation(Required=false)]
             public string FolderId { get; set; }
+
+            [NameInMap("InstanceBuyType")]
+            [Validation(Required=false)]
+            public int? InstanceBuyType { get; set; }
 
             /// <summary>
             /// <para>Indicates whether the member is an administrator account of the resource directory. Valid values:</para>
@@ -111,6 +129,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("IsSiemDaAccount")]
             [Validation(Required=false)]
             public string IsSiemDaAccount { get; set; }
+
+            [NameInMap("PostPayModuleSwitch")]
+            [Validation(Required=false)]
+            public string PostPayModuleSwitch { get; set; }
+
+            [NameInMap("SaleInstance")]
+            [Validation(Required=false)]
+            public string SaleInstance { get; set; }
 
             /// <summary>
             /// <para>The edition of Security Center that you use. Valid value:</para>

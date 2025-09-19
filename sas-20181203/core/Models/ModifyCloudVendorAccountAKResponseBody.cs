@@ -121,6 +121,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            [NameInMap("CtdrCloudUserId")]
+            [Validation(Required=false)]
+            public string CtdrCloudUserId { get; set; }
+
             /// <summary>
             /// <para>The error message of the AccessKey pair.</para>
             /// 

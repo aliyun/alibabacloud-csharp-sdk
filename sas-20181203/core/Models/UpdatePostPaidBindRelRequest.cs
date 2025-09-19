@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        [NameInMap("UpdateIfNecessary")]
+        [Validation(Required=false)]
+        public bool? UpdateIfNecessary { get; set; }
+
     }
 
 }

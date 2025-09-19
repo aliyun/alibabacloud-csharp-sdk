@@ -88,6 +88,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            [NameInMap("MiddlewareName")]
+            [Validation(Required=false)]
+            public string MiddlewareName { get; set; }
+
+            [NameInMap("ModelName")]
+            [Validation(Required=false)]
+            public string ModelName { get; set; }
+
             /// <summary>
             /// <para>The name of the module.</para>
             /// <remarks>

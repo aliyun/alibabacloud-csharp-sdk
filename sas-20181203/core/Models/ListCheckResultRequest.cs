@@ -27,6 +27,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CheckKey { get; set; }
 
         /// <summary>
+        /// <para>Source type of the situation awareness check item.</para>
+        /// </summary>
+        [NameInMap("CheckTypes")]
+        [Validation(Required=false)]
+        public List<string> CheckTypes { get; set; }
+
+        /// <summary>
         /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
@@ -187,6 +194,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Statuses")]
         [Validation(Required=false)]
         public List<string> Statuses { get; set; }
+
+        /// <summary>
+        /// <para>Delete the custom category in a custom inspection item.</para>
+        /// </summary>
+        [NameInMap("TaskSources")]
+        [Validation(Required=false)]
+        public List<string> TaskSources { get; set; }
 
         /// <summary>
         /// <para>The types of check standards.</para>

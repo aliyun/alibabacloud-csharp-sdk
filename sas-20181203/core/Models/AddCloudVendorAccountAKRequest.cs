@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> AuthModules { get; set; }
 
+        [NameInMap("CtdrCloudUserId")]
+        [Validation(Required=false)]
+        public string CtdrCloudUserId { get; set; }
+
         /// <summary>
         /// <para>The Active Directory (AD) domain. This parameter takes effect only when Vendor is set to Azure. Valid values:</para>
         /// <list type="bullet">
@@ -44,6 +48,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
+
+        [NameInMap("ExtendInfo")]
+        [Validation(Required=false)]
+        public string ExtendInfo { get; set; }
 
         /// <summary>
         /// <para>The language of the content in the request and response messages. Default value: <b>zh</b>. Valid values:</para>

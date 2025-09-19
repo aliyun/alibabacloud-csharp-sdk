@@ -34,7 +34,154 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of deduction modules that are supported by the security score feature.</para>
+        /// <para>The information about the new version of the security score rule.</para>
+        /// </summary>
+        [NameInMap("SecurityScoreCategoryList")]
+        [Validation(Required=false)]
+        public List<GetSecurityScoreRuleResponseBodySecurityScoreCategoryList> SecurityScoreCategoryList { get; set; }
+        public class GetSecurityScoreRuleResponseBodySecurityScoreCategoryList : TeaModel {
+            /// <summary>
+            /// <para>The category of the security score rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>SS_SAS_HANDLE</b>: security governance.</description></item>
+            /// <item><description><b>SS_SAS_RESPOND</b>: security response.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SS_SAS_HANDLE</para>
+            /// </summary>
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
+            /// <summary>
+            /// <para>The threshold of deduction for the security score rule type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
+            [NameInMap("Score")]
+            [Validation(Required=false)]
+            public int? Score { get; set; }
+
+            /// <summary>
+            /// <para>The deduction items of the security score rule.</para>
+            /// </summary>
+            [NameInMap("SecurityRuleList")]
+            [Validation(Required=false)]
+            public List<GetSecurityScoreRuleResponseBodySecurityScoreCategoryListSecurityRuleList> SecurityRuleList { get; set; }
+            public class GetSecurityScoreRuleResponseBodySecurityScoreCategoryListSecurityRuleList : TeaModel {
+                /// <summary>
+                /// <para>The type of the security score rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SS_AI_RISK</para>
+                /// </summary>
+                [NameInMap("RuleType")]
+                [Validation(Required=false)]
+                public string RuleType { get; set; }
+
+                /// <summary>
+                /// <para>The threshold of deduction for the security score rule type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
+                [NameInMap("Score")]
+                [Validation(Required=false)]
+                public int? Score { get; set; }
+
+                /// <summary>
+                /// <para>The sub-deduction items of the security score rule.</para>
+                /// </summary>
+                [NameInMap("SecurityScoreItemList")]
+                [Validation(Required=false)]
+                public List<GetSecurityScoreRuleResponseBodySecurityScoreCategoryListSecurityRuleListSecurityScoreItemList> SecurityScoreItemList { get; set; }
+                public class GetSecurityScoreRuleResponseBodySecurityScoreCategoryListSecurityRuleListSecurityScoreItemList : TeaModel {
+                    /// <summary>
+                    /// <para>The deduction score for the item.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5</para>
+                    /// </summary>
+                    [NameInMap("Score")]
+                    [Validation(Required=false)]
+                    public int? Score { get; set; }
+
+                    /// <summary>
+                    /// <para>The threshold of the deduction score for the item.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10</para>
+                    /// </summary>
+                    [NameInMap("ScoreThreshold")]
+                    [Validation(Required=false)]
+                    public int? ScoreThreshold { get; set; }
+
+                    /// <summary>
+                    /// <para>The type of the sub-deduction item. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>SS_SAS_WEAK_PW</b>: unhandled weak password risk.</description></item>
+                    /// <item><description><b>SS_SAS_ALARM</b>: unhandled alert in Security Center.</description></item>
+                    /// <item><description><b>SS_SAS_EMG_VUL</b>: unfixed urgent vulnerability.</description></item>
+                    /// <item><description><b>SS_SAS_APP_VUL</b>: unfixed application vulnerability.</description></item>
+                    /// <item><description><b>SS_SAS_SYS_VUL</b>: unfixed system vulnerability.</description></item>
+                    /// <item><description><b>SS_SAS_CLOUD_HC</b>: unhandled cloud security posture management (CSPM) risk.</description></item>
+                    /// <item><description><b>SS_SDDP_DATA_RISK</b>: unhandled data security risk.</description></item>
+                    /// <item><description><b>SS_WAF_API_RISK</b>: unhandled API security risk.</description></item>
+                    /// <item><description><b>SS_DDOS_BH_ASSET</b>: asset on which blackhole filtering is triggered.</description></item>
+                    /// <item><description><b>SS_SAS_AK_LEAK</b>: unhandled AK/SK leak event.</description></item>
+                    /// <item><description><b>SS_PRODUCT_CONNECT</b>: security service not integrated.</description></item>
+                    /// <item><description><b>SS_KEY_CONFIG</b>: key feature configuration.</description></item>
+                    /// <item><description><b>SS_PRODUCT_EXPIRE</b>: service that is about to expire.</description></item>
+                    /// <item><description><b>SS_AI_RISK</b>: AI application risk.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>SSI_AI_VUL_RISK</para>
+                    /// </summary>
+                    [NameInMap("SubRuleType")]
+                    [Validation(Required=false)]
+                    public string SubRuleType { get; set; }
+
+                    /// <summary>
+                    /// <para>The name of the sub-deduction item of the security score rule.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Unfixed application vulnerabilities</para>
+                    /// </summary>
+                    [NameInMap("Title")]
+                    [Validation(Required=false)]
+                    public string Title { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The name of the security score rule type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>AI application risks</para>
+                /// </summary>
+                [NameInMap("Title")]
+                [Validation(Required=false)]
+                public string Title { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The category of the security score rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Security governance</para>
+            /// </summary>
+            [NameInMap("Title")]
+            [Validation(Required=false)]
+            public string Title { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The information about the old version of the security score rule.</para>
         /// </summary>
         [NameInMap("SecurityScoreRuleList")]
         [Validation(Required=false)]

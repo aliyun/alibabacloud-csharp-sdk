@@ -24,6 +24,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to filter the assets that support custom checks. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Filter assets that support custom checks.</description></item>
+        /// <item><description><b>false</b>: All assets are selected. This is the default value.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("OnlyCustom")]
+        [Validation(Required=false)]
+        public bool? OnlyCustom { get; set; }
+
+        /// <summary>
         /// <para>The ID of the region in which the asset resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cn-hangzhou</b>: International</description></item>
@@ -50,6 +64,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("StandardIds")]
         [Validation(Required=false)]
         public List<long?> StandardIds { get; set; }
+
+        [NameInMap("TaskSources")]
+        [Validation(Required=false)]
+        public List<string> TaskSources { get; set; }
 
         /// <summary>
         /// <para>The types of check standards.</para>

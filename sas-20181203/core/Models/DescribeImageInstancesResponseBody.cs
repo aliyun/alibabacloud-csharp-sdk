@@ -294,6 +294,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ScaStatus { get; set; }
 
             /// <summary>
+            /// <para>The usage label of the image.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PAI</para>
+            /// </summary>
+            [NameInMap("SourceBizTag")]
+            [Validation(Required=false)]
+            public string SourceBizTag { get; set; }
+
+            /// <summary>
             /// <para>The status of the image. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>NORMAL</b></description></item>

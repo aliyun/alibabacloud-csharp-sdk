@@ -98,6 +98,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            [NameInMap("EndPoint")]
+            [Validation(Required=false)]
+            public string EndPoint { get; set; }
+
+            [NameInMap("File")]
+            [Validation(Required=false)]
+            public string File { get; set; }
+
             /// <summary>
             /// <para>The path to the kernel module file.</para>
             /// <remarks>
@@ -120,6 +128,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public string ImageName { get; set; }
+
+            [NameInMap("InstallationPath")]
+            [Validation(Required=false)]
+            public string InstallationPath { get; set; }
 
             /// <summary>
             /// <para>The ID of the server.</para>
@@ -183,6 +195,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("ListenProtocol")]
             [Validation(Required=false)]
             public string ListenProtocol { get; set; }
+
+            [NameInMap("MiddlewareName")]
+            [Validation(Required=false)]
+            public string MiddlewareName { get; set; }
+
+            [NameInMap("MiddlewareVersion")]
+            [Validation(Required=false)]
+            public string MiddlewareVersion { get; set; }
+
+            [NameInMap("ModelName")]
+            [Validation(Required=false)]
+            public string ModelName { get; set; }
 
             /// <summary>
             /// <para>The name of the module.</para>

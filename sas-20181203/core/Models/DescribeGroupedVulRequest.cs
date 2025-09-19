@@ -48,6 +48,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AttachTypes { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c88fb10da1168494091db6aafc5dd****</para>
+        /// </summary>
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
+        /// <summary>
         /// <para>The key of the condition that is used to query containers. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>instanceId</b>: the ID of the asset</description></item>
@@ -72,6 +82,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerFieldName { get; set; }
 
         /// <summary>
+        /// <para>The value specified by <b>ContainerFieldName</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc914b0df156d40148412afe4a581****</para>
+        /// </summary>
+        [NameInMap("ContainerFieldValue")]
+        [Validation(Required=false)]
+        public string ContainerFieldValue { get; set; }
+
+        /// <summary>
         /// <para>The number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +100,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
+
+        /// <summary>
+        /// <para>The CVE ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeVulListPage~~">DescribeVulListPage</a> operation to query the CVE ID.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CVE-2017-15420</para>
+        /// </summary>
+        [NameInMap("CveId")]
+        [Validation(Required=false)]
+        public string CveId { get; set; }
 
         /// <summary>
         /// <para>Specifies whether the vulnerability is handled. Valid values:</para>
@@ -143,6 +176,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("RaspDefend")]
+        [Validation(Required=false)]
+        public int? RaspDefend { get; set; }
 
         /// <summary>
         /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>

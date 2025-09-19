@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public List<string> AffiliatedRisks { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The alias of the baseline type.</para>
             /// 
@@ -48,6 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("Alias")]
             [Validation(Required=false)]
+            [Obsolete]
             public string Alias { get; set; }
 
             /// <summary>
@@ -126,6 +129,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public List<string> EnableRisks { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The type of the baseline.</para>
             /// 
@@ -134,6 +139,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("RiskType")]
             [Validation(Required=false)]
+            [Obsolete]
             public string RiskType { get; set; }
 
             /// <summary>

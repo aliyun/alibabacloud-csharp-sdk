@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyCountResponseBody : TeaModel {
+        [NameInMap("AgentlessLlmService")]
+        [Validation(Required=false)]
+        public int? AgentlessLlmService { get; set; }
+
+        [NameInMap("AgentlessScaAiComponent")]
+        [Validation(Required=false)]
+        public int? AgentlessScaAiComponent { get; set; }
+
         /// <summary>
         /// <para>The number of startup items.</para>
         /// 

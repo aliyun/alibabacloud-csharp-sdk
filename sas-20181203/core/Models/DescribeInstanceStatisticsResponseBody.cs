@@ -117,6 +117,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CmsNum { get; set; }
 
             /// <summary>
+            /// <para>Number of high-risk CSPM issues in the system</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("CspmHighRiskNum")]
+            [Validation(Required=false)]
+            public string CspmHighRiskNum { get; set; }
+
+            /// <summary>
             /// <para>The number of configuration risks detected on the asset.</para>
             /// 
             /// <b>Example:</b>
@@ -157,6 +167,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Health { get; set; }
 
             /// <summary>
+            /// <para>Number of security alerts for asset existence reminders.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("RemindSuspiciousNum")]
+            [Validation(Required=false)]
+            public string RemindSuspiciousNum { get; set; }
+
+            /// <summary>
             /// <para>The number of middleware vulnerabilities detected on the asset.</para>
             /// 
             /// <b>Example:</b>
@@ -167,6 +187,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ScaNum { get; set; }
 
             /// <summary>
+            /// <para>Number of high-risk security alerts for the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("SeriousSuspiciousNum")]
+            [Validation(Required=false)]
+            public string SeriousSuspiciousNum { get; set; }
+
+            /// <summary>
+            /// <para>Number of suspicious security alerts for the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("SuspectSuspiciousNum")]
+            [Validation(Required=false)]
+            public string SuspectSuspiciousNum { get; set; }
+
+            /// <summary>
             /// <para>The number of alerts generated for the asset.</para>
             /// 
             /// <b>Example:</b>
@@ -175,6 +215,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Suspicious")]
             [Validation(Required=false)]
             public int? Suspicious { get; set; }
+
+            /// <summary>
+            /// <para>Number of system vulnerabilities in the asset.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("SysAsapVulCount")]
+            [Validation(Required=false)]
+            public string SysAsapVulCount { get; set; }
 
             /// <summary>
             /// <para>The number of Windows system vulnerabilities detected on the asset.</para>

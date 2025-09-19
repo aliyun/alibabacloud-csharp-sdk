@@ -75,6 +75,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            [NameInMap("DetailTaskReadyCount")]
+            [Validation(Required=false)]
+            public int? DetailTaskReadyCount { get; set; }
+
+            [NameInMap("DetailTaskTotalCount")]
+            [Validation(Required=false)]
+            public int? DetailTaskTotalCount { get; set; }
+
             /// <summary>
             /// <para>The end time of the task. Unit: milliseconds.</para>
             /// 
@@ -130,6 +138,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
+
+            [NameInMap("TaskSource")]
+            [Validation(Required=false)]
+            public string TaskSource { get; set; }
 
             /// <summary>
             /// <para>The task type. Valid values:</para>
