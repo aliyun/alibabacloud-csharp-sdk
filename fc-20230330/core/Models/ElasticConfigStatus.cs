@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public List<ScheduledPolicy> ScheduledPolicies { get; set; }
 
+        [NameInMap("targetInstances")]
+        [Validation(Required=false)]
+        public long? TargetInstances { get; set; }
+
     }
 
 }

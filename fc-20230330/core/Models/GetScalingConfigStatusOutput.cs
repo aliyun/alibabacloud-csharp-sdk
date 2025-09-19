@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class GetScalingConfigStatusOutput : TeaModel {
-        [NameInMap("scalingConfigStatus")]
-        [Validation(Required=false)]
-        public ScalingConfigStatus ScalingConfigStatus { get; set; }
-
     }
 
 }

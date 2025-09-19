@@ -9,25 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ScalingConfigStatus : TeaModel {
-        [NameInMap("functionName")]
+        [NameInMap("currentError")]
         [Validation(Required=false)]
-        public string FunctionName { get; set; }
+        public string CurrentError { get; set; }
 
-        [NameInMap("qualifier")]
+        [NameInMap("currentInstances")]
         [Validation(Required=false)]
-        public string Qualifier { get; set; }
+        public long? CurrentInstances { get; set; }
 
-        [NameInMap("residentConfig")]
+        [NameInMap("functionArn")]
         [Validation(Required=false)]
-        public ResidentConfig ResidentConfig { get; set; }
+        public string FunctionArn { get; set; }
 
-        [NameInMap("resourceType")]
+        [NameInMap("horizontalScalingPolicies")]
         [Validation(Required=false)]
-        public string ResourceType { get; set; }
+        public List<ScalingPolicy> HorizontalScalingPolicies { get; set; }
 
-        [NameInMap("scalingStatus")]
+        [NameInMap("minInstances")]
         [Validation(Required=false)]
-        public ScalingStatus ScalingStatus { get; set; }
+        public long? MinInstances { get; set; }
+
+        [NameInMap("residentPoolId")]
+        [Validation(Required=false)]
+        public string ResidentPoolId { get; set; }
+
+        [NameInMap("scheduledPolicies")]
+        [Validation(Required=false)]
+        public List<ScheduledPolicy> ScheduledPolicies { get; set; }
+
+        [NameInMap("targetInstances")]
+        [Validation(Required=false)]
+        public long? TargetInstances { get; set; }
 
     }
 

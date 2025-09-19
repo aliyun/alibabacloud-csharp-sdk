@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
-    public class UpdateResidentResourcePoolInput : TeaModel {
-        [NameInMap("name")]
+    public class DeleteScalingConfigResponse : TeaModel {
+        [NameInMap("headers")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public Dictionary<string, string> Headers { get; set; }
 
-        [NameInMap("useScaling")]
+        [NameInMap("statusCode")]
         [Validation(Required=false)]
-        public bool? UseScaling { get; set; }
+        public int? StatusCode { get; set; }
 
     }
 

@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         [NameInMap("lastAllocation")]
         [Validation(Required=false)]
-        public ResidentResourceAllocation LastAllocation { get; set; }
+        public List<ResidentResourceAllocation> LastAllocation { get; set; }
 
     }
 

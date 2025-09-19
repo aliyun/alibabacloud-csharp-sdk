@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutScalingConfigInput : TeaModel {
-        [NameInMap("residentConfig")]
+        [NameInMap("horizontalScalingPolicies")]
         [Validation(Required=false)]
-        public ResidentConfig ResidentConfig { get; set; }
+        public List<ScalingPolicy> HorizontalScalingPolicies { get; set; }
 
-        [NameInMap("resourceType")]
+        [NameInMap("minInstances")]
         [Validation(Required=false)]
-        public string ResourceType { get; set; }
+        public long? MinInstances { get; set; }
+
+        [NameInMap("residentPoolId")]
+        [Validation(Required=false)]
+        public string ResidentPoolId { get; set; }
+
+        [NameInMap("scheduledPolicies")]
+        [Validation(Required=false)]
+        public List<ScheduledPolicy> ScheduledPolicies { get; set; }
 
     }
 
