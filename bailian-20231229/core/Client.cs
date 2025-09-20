@@ -819,6 +819,172 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改类目解析配置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ChangeParseSettingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeParseSettingResponse
+        /// </returns>
+        public ChangeParseSettingResponse ChangeParseSettingWithOptions(string WorkspaceId, ChangeParseSettingRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ChangeParseSettingShrinkRequest request = new ChangeParseSettingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ParserConfig))
+            {
+                request.ParserConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ParserConfig, "ParserConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                body["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                body["FileType"] = request.FileType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parser))
+            {
+                body["Parser"] = request.Parser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParserConfigShrink))
+            {
+                body["ParserConfig"] = request.ParserConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeParseSetting",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/datacenter/parser/settings",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeParseSettingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改类目解析配置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ChangeParseSettingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeParseSettingResponse
+        /// </returns>
+        public async Task<ChangeParseSettingResponse> ChangeParseSettingWithOptionsAsync(string WorkspaceId, ChangeParseSettingRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ChangeParseSettingShrinkRequest request = new ChangeParseSettingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ParserConfig))
+            {
+                request.ParserConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ParserConfig, "ParserConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                body["CategoryId"] = request.CategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                body["FileType"] = request.FileType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parser))
+            {
+                body["Parser"] = request.Parser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParserConfigShrink))
+            {
+                body["ParserConfig"] = request.ParserConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeParseSetting",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/datacenter/parser/settings",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeParseSettingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改类目解析配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeParseSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeParseSettingResponse
+        /// </returns>
+        public ChangeParseSettingResponse ChangeParseSetting(string WorkspaceId, ChangeParseSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ChangeParseSettingWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改类目解析配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeParseSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeParseSettingResponse
+        /// </returns>
+        public async Task<ChangeParseSettingResponse> ChangeParseSettingAsync(string WorkspaceId, ChangeParseSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ChangeParseSettingWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建并发布智能体应用</para>
         /// </summary>
         /// 
@@ -3341,6 +3507,136 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取文件支持的解析器类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAvailableParserTypesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAvailableParserTypesResponse
+        /// </returns>
+        public GetAvailableParserTypesResponse GetAvailableParserTypesWithOptions(string WorkspaceId, GetAvailableParserTypesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                query["FileType"] = request.FileType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAvailableParserTypes",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/datacenter/parser/parsertype",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAvailableParserTypesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文件支持的解析器类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAvailableParserTypesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAvailableParserTypesResponse
+        /// </returns>
+        public async Task<GetAvailableParserTypesResponse> GetAvailableParserTypesWithOptionsAsync(string WorkspaceId, GetAvailableParserTypesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                query["FileType"] = request.FileType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAvailableParserTypes",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/datacenter/parser/parsertype",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAvailableParserTypesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文件支持的解析器类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAvailableParserTypesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAvailableParserTypesResponse
+        /// </returns>
+        public GetAvailableParserTypesResponse GetAvailableParserTypes(string WorkspaceId, GetAvailableParserTypesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAvailableParserTypesWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文件支持的解析器类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAvailableParserTypesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAvailableParserTypesResponse
+        /// </returns>
+        public async Task<GetAvailableParserTypesResponse> GetAvailableParserTypesAsync(string WorkspaceId, GetAvailableParserTypesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAvailableParserTypesWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the current status of a specified knowledge base creation or add document job.</para>
         /// </summary>
         /// 
@@ -3735,6 +4031,136 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取类目解析配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetParseSettingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetParseSettingsResponse
+        /// </returns>
+        public GetParseSettingsResponse GetParseSettingsWithOptions(string WorkspaceId, GetParseSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                query["CategoryId"] = request.CategoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetParseSettings",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/datacenter/parser/settings",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetParseSettingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取类目解析配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetParseSettingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetParseSettingsResponse
+        /// </returns>
+        public async Task<GetParseSettingsResponse> GetParseSettingsWithOptionsAsync(string WorkspaceId, GetParseSettingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
+            {
+                query["CategoryId"] = request.CategoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetParseSettings",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/datacenter/parser/settings",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetParseSettingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取类目解析配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetParseSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetParseSettingsResponse
+        /// </returns>
+        public GetParseSettingsResponse GetParseSettings(string WorkspaceId, GetParseSettingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetParseSettingsWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取类目解析配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetParseSettingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetParseSettingsResponse
+        /// </returns>
+        public async Task<GetParseSettingsResponse> GetParseSettingsAsync(string WorkspaceId, GetParseSettingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetParseSettingsWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Obtains a prompt template based on the template ID.</para>
         /// </summary>
         /// 
@@ -3935,6 +4361,176 @@ namespace AlibabaCloud.SDK.Bailian20231229
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetPublishedAgentWithOptionsAsync(workspaceId, appCode, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>高代码部署服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HighCodeDeployRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// HighCodeDeployResponse
+        /// </returns>
+        public HighCodeDeployResponse HighCodeDeployWithOptions(string workspaceId, HighCodeDeployRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentDesc))
+            {
+                body["agentDesc"] = request.AgentDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                body["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                body["agentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCodeName))
+            {
+                body["sourceCodeName"] = request.SourceCodeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCodeOssUrl))
+            {
+                body["sourceCodeOssUrl"] = request.SourceCodeOssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TelemetryEnabled))
+            {
+                body["telemetryEnabled"] = request.TelemetryEnabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "HighCodeDeploy",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/highCode/publish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<HighCodeDeployResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>高代码部署服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HighCodeDeployRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// HighCodeDeployResponse
+        /// </returns>
+        public async Task<HighCodeDeployResponse> HighCodeDeployWithOptionsAsync(string workspaceId, HighCodeDeployRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentDesc))
+            {
+                body["agentDesc"] = request.AgentDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                body["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                body["agentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCodeName))
+            {
+                body["sourceCodeName"] = request.SourceCodeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCodeOssUrl))
+            {
+                body["sourceCodeOssUrl"] = request.SourceCodeOssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TelemetryEnabled))
+            {
+                body["telemetryEnabled"] = request.TelemetryEnabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "HighCodeDeploy",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/highCode/publish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<HighCodeDeployResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>高代码部署服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HighCodeDeployRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// HighCodeDeployResponse
+        /// </returns>
+        public HighCodeDeployResponse HighCodeDeploy(string workspaceId, HighCodeDeployRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return HighCodeDeployWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>高代码部署服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HighCodeDeployRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// HighCodeDeployResponse
+        /// </returns>
+        public async Task<HighCodeDeployResponse> HighCodeDeployAsync(string workspaceId, HighCodeDeployRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await HighCodeDeployWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
