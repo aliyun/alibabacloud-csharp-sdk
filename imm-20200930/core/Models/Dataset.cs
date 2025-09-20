@@ -65,6 +65,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("WorkflowParameters")]
+        [Validation(Required=false)]
+        public List<WorkflowParameter> WorkflowParameters { get; set; }
+
     }
 
 }

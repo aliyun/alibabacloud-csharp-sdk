@@ -61,7 +61,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The content of the query that you input.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]

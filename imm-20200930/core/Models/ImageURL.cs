@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
-    public class StreamOptions : TeaModel {
-        [NameInMap("IncrementalOutput")]
+    public class ImageURL : TeaModel {
+        [NameInMap("Thumbnail")]
         [Validation(Required=false)]
-        public bool? IncrementalOutput { get; set; }
+        public string Thumbnail { get; set; }
 
-        [NameInMap("NeedReturnFinalResult")]
+        [NameInMap("URL")]
         [Validation(Required=false)]
-        public bool? NeedReturnFinalResult { get; set; }
+        public string URL { get; set; }
 
     }
 
