@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Marketing_event20210101.Models
 {
     public class QuerySingleActivityInfoResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>200</para>
@@ -102,6 +106,10 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
             public string ReportFields { get; set; }
 
         }
+
+        [NameInMap("HttpStatusCode")]
+        [Validation(Required=false)]
+        public string HttpStatusCode { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

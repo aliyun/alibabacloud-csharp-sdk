@@ -193,6 +193,10 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
             [Validation(Required=false)]
             public string TicketName { get; set; }
 
+            [NameInMap("TicketReceiveDates")]
+            [Validation(Required=false)]
+            public string TicketReceiveDates { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
