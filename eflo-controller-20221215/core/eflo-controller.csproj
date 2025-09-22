@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Eflo-controller20221215</AssemblyName>
-    <Version>2.8.5</Version>
+    <Version>2.8.6</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud eflo-controller (20221215) SDK Library for .NET</Description>

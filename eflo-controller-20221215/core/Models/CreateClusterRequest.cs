@@ -624,6 +624,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 [Validation(Required=false)]
                 public List<CreateClusterRequestNodeGroupsNodesDataDisk> DataDisk { get; set; }
                 public class CreateClusterRequestNodeGroupsNodesDataDisk : TeaModel {
+                    [NameInMap("BurstingEnabled")]
+                    [Validation(Required=false)]
+                    public bool? BurstingEnabled { get; set; }
+
                     /// <summary>
                     /// <para>Type</para>
                     /// 
@@ -653,6 +657,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     [NameInMap("PerformanceLevel")]
                     [Validation(Required=false)]
                     public string PerformanceLevel { get; set; }
+
+                    [NameInMap("ProvisionedIops")]
+                    [Validation(Required=false)]
+                    public long? ProvisionedIops { get; set; }
 
                     /// <summary>
                     /// <para>Disk size</para>
