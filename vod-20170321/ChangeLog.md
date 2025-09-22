@@ -1,3 +1,7 @@
+2025-09-22 Version: 3.10.0
+- Support API DescribeVodUserVipsByDomain.
+
+
 2025-08-20 Version: 3.9.2
 - Generated csharp 2017-03-21 for vod.
 

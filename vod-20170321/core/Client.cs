@@ -16366,6 +16366,142 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取域名Vip</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVodUserVipsByDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVodUserVipsByDomainResponse
+        /// </returns>
+        public DescribeVodUserVipsByDomainResponse DescribeVodUserVipsByDomainWithOptions(DescribeVodUserVipsByDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Available))
+            {
+                query["Available"] = request.Available;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodUserVipsByDomain",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodUserVipsByDomainResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取域名Vip</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVodUserVipsByDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVodUserVipsByDomainResponse
+        /// </returns>
+        public async Task<DescribeVodUserVipsByDomainResponse> DescribeVodUserVipsByDomainWithOptionsAsync(DescribeVodUserVipsByDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Available))
+            {
+                query["Available"] = request.Available;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVodUserVipsByDomain",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVodUserVipsByDomainResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取域名Vip</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVodUserVipsByDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVodUserVipsByDomainResponse
+        /// </returns>
+        public DescribeVodUserVipsByDomainResponse DescribeVodUserVipsByDomain(DescribeVodUserVipsByDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVodUserVipsByDomainWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取域名Vip</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVodUserVipsByDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVodUserVipsByDomainResponse
+        /// </returns>
+        public async Task<DescribeVodUserVipsByDomainResponse> DescribeVodUserVipsByDomainAsync(DescribeVodUserVipsByDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVodUserVipsByDomainWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the ownership verification content.</para>
         /// </summary>
         /// 
