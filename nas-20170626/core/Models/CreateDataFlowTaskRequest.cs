@@ -238,6 +238,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string TaskAction { get; set; }
 
+        [NameInMap("TransferFileListPath")]
+        [Validation(Required=false)]
+        public string TransferFileListPath { get; set; }
+
     }
 
 }
