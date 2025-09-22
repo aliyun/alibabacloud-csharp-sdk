@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
 {
     public class SubmitDocExtractionTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Document parsing type:
+        /// <para>Document extraction type:
         /// Supports rag and long text understanding types, default is rag.</para>
         /// 
         /// <b>Example:</b>
@@ -40,11 +40,11 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>The relationship between file parsing methods and supported document types</para>
+        /// <para>The relationship between file extraction methods and supported document types</para>
         /// <list type="bullet">
-        /// <item><description>Long text RAG: Supports pdf, doc/docx, up to 1000 pages</description></item>
-        /// <item><description>Image processing: Supports pdf, jpg, jpeg, png, bmp</description></item>
-        /// <item><description>Long text understanding: Supports pdf, doc/docx, xls/xlsx</description></item>
+        /// <item><description>Long text RAG: Supports pdf, doc/docx, xlsx, csv, txt, up to 1000 pages</description></item>
+        /// <item><description>Image processing: Supports pdf, jpg, jpeg, png, bmp, jpe, tif, tiff, webp, heic</description></item>
+        /// <item><description>Long text understanding: Supports doc/docx, xlsx, pdf, csv, txt</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         public string FolderId { get; set; }
 
         /// <summary>
-        /// <para>A unique parsing template ID used to specify the key-value pairs to be extracted from the document. You need to log in to the template management page to configure the template and obtain the corresponding template ID.</para>
+        /// <para>A unique extraction template ID used to specify the content to be extracted from the document. You need to log in to the template management page to configure the template and obtain the corresponding template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

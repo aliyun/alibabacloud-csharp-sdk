@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.EnergyExpertExternal20220923.Models
         public GetDocExtractionResultResponseBodyData Data { get; set; }
         public class GetDocExtractionResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Details of document parsing results</para>
+            /// <para>Details of document extraction results</para>
             /// </summary>
             [NameInMap("kvListInfo")]
             [Validation(Required=false)]
