@@ -1,3 +1,9 @@
+2025-09-22 Version: 2.32.0
+- Support API GetRoutineCodeVersion.
+- Support API UpdateRoutineConfigDescription.
+- Update API PurchaseRatePlan: add request parameters Channel.
+
+
 2025-09-18 Version: 2.31.1
 - Update API CreateTransportLayerApplication: add request parameters StaticIp.
 - Update API GetTransportLayerApplication: add response parameters Body.StaticIp.

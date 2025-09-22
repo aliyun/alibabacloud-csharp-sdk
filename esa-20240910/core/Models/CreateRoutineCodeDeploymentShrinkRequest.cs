@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>production</para>
+        /// <para>staging</para>
         /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]
@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

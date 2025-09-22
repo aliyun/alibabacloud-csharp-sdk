@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public class CreateRoutineCodeDeploymentRequestCodeVersions : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1723599747213377175</para>
             /// </summary>
             [NameInMap("CodeVersion")]
             [Validation(Required=false)]
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("Percentage")]
             [Validation(Required=false)]
@@ -36,7 +42,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>production</para>
+        /// <para>staging</para>
         /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]
@@ -44,6 +50,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

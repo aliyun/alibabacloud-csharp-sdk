@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        [NameInMap("Channel")]
+        [Validation(Required=false)]
+        public string Channel { get; set; }
+
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
