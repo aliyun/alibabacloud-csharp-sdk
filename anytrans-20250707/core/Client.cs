@@ -237,6 +237,144 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>通义多模态翻译获文档翻译任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocTranslateTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocTranslateTaskResponse
+        /// </returns>
+        public GetDocTranslateTaskResponse GetDocTranslateTaskWithOptions(GetDocTranslateTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDocTranslateTask",
+                Version = "2025-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/anytrans/translate/doc/get",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDocTranslateTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通义多模态翻译获文档翻译任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocTranslateTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocTranslateTaskResponse
+        /// </returns>
+        public async Task<GetDocTranslateTaskResponse> GetDocTranslateTaskWithOptionsAsync(GetDocTranslateTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDocTranslateTask",
+                Version = "2025-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/anytrans/translate/doc/get",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDocTranslateTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通义多模态翻译获文档翻译任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocTranslateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocTranslateTaskResponse
+        /// </returns>
+        public GetDocTranslateTaskResponse GetDocTranslateTask(GetDocTranslateTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetDocTranslateTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通义多模态翻译获文档翻译任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDocTranslateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDocTranslateTaskResponse
+        /// </returns>
+        public async Task<GetDocTranslateTaskResponse> GetDocTranslateTaskAsync(GetDocTranslateTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetDocTranslateTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>通义多模态翻译获取html翻译结果</para>
         /// </summary>
         /// 
@@ -647,6 +785,196 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetLongTextTranslateTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通义多模态翻译提交文档翻译任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitDocTranslateTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocTranslateTaskResponse
+        /// </returns>
+        public SubmitDocTranslateTaskResponse SubmitDocTranslateTaskWithOptions(SubmitDocTranslateTaskRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitDocTranslateTaskShrinkRequest request = new SubmitDocTranslateTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
+            {
+                request.ExtShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ext, "ext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
+            {
+                body["ext"] = request.ExtShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Format))
+            {
+                body["format"] = request.Format;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                body["scene"] = request.Scene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["sourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["targetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                body["text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitDocTranslateTask",
+                Version = "2025-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/anytrans/translate/doc/submit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitDocTranslateTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通义多模态翻译提交文档翻译任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitDocTranslateTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocTranslateTaskResponse
+        /// </returns>
+        public async Task<SubmitDocTranslateTaskResponse> SubmitDocTranslateTaskWithOptionsAsync(SubmitDocTranslateTaskRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitDocTranslateTaskShrinkRequest request = new SubmitDocTranslateTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
+            {
+                request.ExtShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ext, "ext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
+            {
+                body["ext"] = request.ExtShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Format))
+            {
+                body["format"] = request.Format;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                body["scene"] = request.Scene;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["sourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["targetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
+            {
+                body["text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitDocTranslateTask",
+                Version = "2025-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/anytrans/translate/doc/submit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitDocTranslateTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通义多模态翻译提交文档翻译任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocTranslateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocTranslateTaskResponse
+        /// </returns>
+        public SubmitDocTranslateTaskResponse SubmitDocTranslateTask(SubmitDocTranslateTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SubmitDocTranslateTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通义多模态翻译提交文档翻译任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitDocTranslateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitDocTranslateTaskResponse
+        /// </returns>
+        public async Task<SubmitDocTranslateTaskResponse> SubmitDocTranslateTaskAsync(SubmitDocTranslateTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SubmitDocTranslateTaskWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
