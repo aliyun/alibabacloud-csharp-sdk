@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
         [Validation(Required=false)]
         public SetUserSsoSettingsResponseBodyUserSsoSettings UserSsoSettings { get; set; }
         public class SetUserSsoSettingsResponseBodyUserSsoSettings : TeaModel {
+            [NameInMap("AuthnSignAlgo")]
+            [Validation(Required=false)]
+            public string AuthnSignAlgo { get; set; }
+
             /// <summary>
             /// <para>The auxiliary domain name.</para>
             /// 

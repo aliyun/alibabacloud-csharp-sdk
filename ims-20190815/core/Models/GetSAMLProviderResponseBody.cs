@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public string Arn { get; set; }
 
+            [NameInMap("AuthnSignAlgo")]
+            [Validation(Required=false)]
+            public string AuthnSignAlgo { get; set; }
+
             /// <summary>
             /// <para>The creation time.</para>
             /// 

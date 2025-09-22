@@ -1708,6 +1708,10 @@ namespace AlibabaCloud.SDK.Ims20190815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthnSignAlgo))
+            {
+                query["AuthnSignAlgo"] = request.AuthnSignAlgo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -1758,6 +1762,10 @@ namespace AlibabaCloud.SDK.Ims20190815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthnSignAlgo))
+            {
+                query["AuthnSignAlgo"] = request.AuthnSignAlgo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -11038,6 +11046,10 @@ namespace AlibabaCloud.SDK.Ims20190815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthnSignAlgo))
+            {
+                query["AuthnSignAlgo"] = request.AuthnSignAlgo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuxiliaryDomain))
             {
                 query["AuxiliaryDomain"] = request.AuxiliaryDomain;
@@ -11092,6 +11104,10 @@ namespace AlibabaCloud.SDK.Ims20190815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthnSignAlgo))
+            {
+                query["AuthnSignAlgo"] = request.AuthnSignAlgo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuxiliaryDomain))
             {
                 query["AuxiliaryDomain"] = request.AuxiliaryDomain;
@@ -12811,6 +12827,10 @@ namespace AlibabaCloud.SDK.Ims20190815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthnSignAlgo))
+            {
+                query["AuthnSignAlgo"] = request.AuthnSignAlgo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewDescription))
             {
                 query["NewDescription"] = request.NewDescription;
@@ -12866,6 +12886,10 @@ namespace AlibabaCloud.SDK.Ims20190815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthnSignAlgo))
+            {
+                query["AuthnSignAlgo"] = request.AuthnSignAlgo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewDescription))
             {
                 query["NewDescription"] = request.NewDescription;

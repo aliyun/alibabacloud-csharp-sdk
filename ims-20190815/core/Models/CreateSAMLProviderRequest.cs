@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ims20190815.Models
 {
     public class CreateSAMLProviderRequest : TeaModel {
+        [NameInMap("AuthnSignAlgo")]
+        [Validation(Required=false)]
+        public string AuthnSignAlgo { get; set; }
+
         /// <summary>
         /// <para>The description.</para>
         /// 
