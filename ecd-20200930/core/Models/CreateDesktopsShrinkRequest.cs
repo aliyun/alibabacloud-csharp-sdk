@@ -148,6 +148,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         }
 
+        [NameInMap("ChannelCookie")]
+        [Validation(Required=false)]
+        public string ChannelCookie { get; set; }
+
         /// <summary>
         /// <para>The billing method of the cloud computers.</para>
         /// <para>Default value: PostPaid. Valid values:</para>

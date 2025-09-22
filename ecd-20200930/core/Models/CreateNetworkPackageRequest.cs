@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
+        [NameInMap("ChannelCookie")]
+        [Validation(Required=false)]
+        public string ChannelCookie { get; set; }
+
         /// <summary>
         /// <para>The charge type of the premium bandwidth plan.</para>
         /// <list type="bullet">

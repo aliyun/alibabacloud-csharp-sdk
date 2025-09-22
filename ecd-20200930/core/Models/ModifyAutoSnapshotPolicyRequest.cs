@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string CronExpression { get; set; }
 
+        [NameInMap("DiskType")]
+        [Validation(Required=false)]
+        public string DiskType { get; set; }
+
         /// <summary>
         /// <para>The ID of the automatic snapshot policy.</para>
         /// <para>This parameter is required.</para>
