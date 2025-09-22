@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyTemplateResourcesRequest : TeaModel {
+        [NameInMap("BindAssets")]
+        [Validation(Required=false)]
+        public List<string> BindAssets { get; set; }
+
         /// <summary>
         /// <para>The protected object groups that you want to associate with the template. Specify the value in the [<b>&quot;group1&quot;,&quot;group2&quot;,...</b>] format.</para>
         /// </summary>
@@ -71,6 +75,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public long? TemplateId { get; set; }
+
+        [NameInMap("UnbindAssets")]
+        [Validation(Required=false)]
+        public List<string> UnbindAssets { get; set; }
 
         /// <summary>
         /// <para>The protected object groups that you want to disassociate from the template. Specify the value in the [<b>&quot;group1&quot;,&quot;group2&quot;,...</b>] format.</para>

@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeTemplateResourceCountResponseBodyResourceCount> ResourceCount { get; set; }
         public class DescribeTemplateResourceCountResponseBodyResourceCount : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("AssetCount")]
+            [Validation(Required=false)]
+            public int? AssetCount { get; set; }
+
+            /// <summary>
             /// <para>The number of protected object groups.</para>
             /// 
             /// <b>Example:</b>

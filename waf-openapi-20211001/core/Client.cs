@@ -23639,6 +23639,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetApi))
+            {
+                query["AssetApi"] = request.AssetApi;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -23709,6 +23713,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetApi))
+            {
+                query["AssetApi"] = request.AssetApi;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -31275,6 +31283,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BindAssets))
+            {
+                query["BindAssets"] = request.BindAssets;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BindResourceGroups))
             {
                 query["BindResourceGroups"] = request.BindResourceGroups;
@@ -31298,6 +31310,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnbindAssets))
+            {
+                query["UnbindAssets"] = request.UnbindAssets;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnbindResourceGroups))
             {
@@ -31345,6 +31361,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BindAssets))
+            {
+                query["BindAssets"] = request.BindAssets;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BindResourceGroups))
             {
                 query["BindResourceGroups"] = request.BindResourceGroups;
@@ -31368,6 +31388,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnbindAssets))
+            {
+                query["UnbindAssets"] = request.UnbindAssets;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnbindResourceGroups))
             {
