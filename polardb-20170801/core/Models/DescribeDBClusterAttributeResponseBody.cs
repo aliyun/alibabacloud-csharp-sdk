@@ -227,6 +227,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            [NameInMap("DBNodeCXLRemoteMemory")]
+            [Validation(Required=false)]
+            public string DBNodeCXLRemoteMemory { get; set; }
+
             /// <summary>
             /// <para>Node specification.</para>
             /// 
