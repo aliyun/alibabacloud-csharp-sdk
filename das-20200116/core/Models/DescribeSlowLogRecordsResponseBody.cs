@@ -92,6 +92,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public double? CPUTimeSeconds { get; set; }
 
+                [NameInMap("ClientIp")]
+                [Validation(Required=false)]
+                public string ClientIp { get; set; }
+
+                [NameInMap("Cmd")]
+                [Validation(Required=false)]
+                public string Cmd { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>SELECT</para>
@@ -107,6 +115,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [NameInMap("DBName")]
                 [Validation(Required=false)]
                 public string DBName { get; set; }
+
+                [NameInMap("DbId")]
+                [Validation(Required=false)]
+                public string DbId { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -204,6 +216,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
+                [NameInMap("NodeId")]
+                [Validation(Required=false)]
+                public string NodeId { get; set; }
+
+                [NameInMap("OriginTime")]
+                [Validation(Required=false)]
+                public string OriginTime { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -252,6 +272,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public double? QueryTimeSeconds { get; set; }
 
+                [NameInMap("RequestSize")]
+                [Validation(Required=false)]
+                public long? RequestSize { get; set; }
+
+                [NameInMap("ResponseSize")]
+                [Validation(Required=false)]
+                public long? ResponseSize { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -299,6 +327,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [NameInMap("RowsSent")]
                 [Validation(Required=false)]
                 public long? RowsSent { get; set; }
+
+                [NameInMap("Rt")]
+                [Validation(Required=false)]
+                public long? Rt { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

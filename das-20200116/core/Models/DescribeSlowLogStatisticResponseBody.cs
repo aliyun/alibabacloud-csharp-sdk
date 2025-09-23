@@ -174,6 +174,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [Validation(Required=false)]
                     public double? AvgQueryTimeSeconds { get; set; }
 
+                    [NameInMap("AvgRequestSize")]
+                    [Validation(Required=false)]
+                    public double? AvgRequestSize { get; set; }
+
+                    [NameInMap("AvgResponseSize")]
+                    [Validation(Required=false)]
+                    public double? AvgResponseSize { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -210,6 +218,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [Validation(Required=false)]
                     public double? AvgRowsSent { get; set; }
 
+                    [NameInMap("AvgRt")]
+                    [Validation(Required=false)]
+                    public double? AvgRt { get; set; }
+
                     [NameInMap("AvgScnt")]
                     [Validation(Required=false)]
                     public double? AvgScnt { get; set; }
@@ -227,6 +239,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [NameInMap("CPUTimeSeconds")]
                     [Validation(Required=false)]
                     public double? CPUTimeSeconds { get; set; }
+
+                    [NameInMap("ClientIp")]
+                    [Validation(Required=false)]
+                    public string ClientIp { get; set; }
+
+                    [NameInMap("Cmd")]
+                    [Validation(Required=false)]
+                    public string Cmd { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -267,6 +287,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [NameInMap("Database")]
                     [Validation(Required=false)]
                     public string Database { get; set; }
+
+                    [NameInMap("DbId")]
+                    [Validation(Required=false)]
+                    public string DbId { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -572,6 +596,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [Validation(Required=false)]
                     public double? MaxQueryTimeSeconds { get; set; }
 
+                    [NameInMap("MaxRequestSize")]
+                    [Validation(Required=false)]
+                    public double? MaxRequestSize { get; set; }
+
+                    [NameInMap("MaxResponseSize")]
+                    [Validation(Required=false)]
+                    public double? MaxResponseSize { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -607,6 +639,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [NameInMap("MaxRowsSent")]
                     [Validation(Required=false)]
                     public long? MaxRowsSent { get; set; }
+
+                    [NameInMap("MaxRt")]
+                    [Validation(Required=false)]
+                    public double? MaxRt { get; set; }
 
                     [NameInMap("MaxScnt")]
                     [Validation(Required=false)]
@@ -841,6 +877,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [NameInMap("Timestamp")]
                     [Validation(Required=false)]
                     public long? Timestamp { get; set; }
+
+                    [NameInMap("TotalCount")]
+                    [Validation(Required=false)]
+                    public long? TotalCount { get; set; }
 
                     [NameInMap("Trend")]
                     [Validation(Required=false)]
