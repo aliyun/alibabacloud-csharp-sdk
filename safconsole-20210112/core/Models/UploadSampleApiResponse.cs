@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Safconsole20210112.Models
 {
     public class UploadSampleApiResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public UploadSampleApiResponseBody Body { get; set; }
 
     }

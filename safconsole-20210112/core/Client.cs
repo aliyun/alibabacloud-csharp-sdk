@@ -37,6 +37,21 @@ namespace AlibabaCloud.SDK.Safconsole20210112
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Used for external deletion of community samples in risk identification services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeFeedbackRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeFeedbackResponse
+        /// </returns>
         public RevokeFeedbackResponse RevokeFeedbackWithOptions(RevokeFeedbackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -68,6 +83,21 @@ namespace AlibabaCloud.SDK.Safconsole20210112
             return TeaModel.ToObject<RevokeFeedbackResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Used for external deletion of community samples in risk identification services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeFeedbackRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeFeedbackResponse
+        /// </returns>
         public async Task<RevokeFeedbackResponse> RevokeFeedbackWithOptionsAsync(RevokeFeedbackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -99,22 +129,65 @@ namespace AlibabaCloud.SDK.Safconsole20210112
             return TeaModel.ToObject<RevokeFeedbackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Used for external deletion of community samples in risk identification services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeFeedbackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeFeedbackResponse
+        /// </returns>
         public RevokeFeedbackResponse RevokeFeedback(RevokeFeedbackRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RevokeFeedbackWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Used for external deletion of community samples in risk identification services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeFeedbackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeFeedbackResponse
+        /// </returns>
         public async Task<RevokeFeedbackResponse> RevokeFeedbackAsync(RevokeFeedbackRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RevokeFeedbackWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Used for the external creation of community samples in risk identification services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendFeedbackRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendFeedbackResponse
+        /// </returns>
         public SendFeedbackResponse SendFeedbackWithOptions(SendFeedbackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                query["Reason"] = request.Reason;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLabel))
             {
                 query["RiskLabel"] = request.RiskLabel;
@@ -146,10 +219,29 @@ namespace AlibabaCloud.SDK.Safconsole20210112
             return TeaModel.ToObject<SendFeedbackResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Used for the external creation of community samples in risk identification services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendFeedbackRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendFeedbackResponse
+        /// </returns>
         public async Task<SendFeedbackResponse> SendFeedbackWithOptionsAsync(SendFeedbackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                query["Reason"] = request.Reason;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RiskLabel))
             {
                 query["RiskLabel"] = request.RiskLabel;
@@ -181,18 +273,57 @@ namespace AlibabaCloud.SDK.Safconsole20210112
             return TeaModel.ToObject<SendFeedbackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Used for the external creation of community samples in risk identification services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendFeedbackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendFeedbackResponse
+        /// </returns>
         public SendFeedbackResponse SendFeedback(SendFeedbackRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return SendFeedbackWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Used for the external creation of community samples in risk identification services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendFeedbackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendFeedbackResponse
+        /// </returns>
         public async Task<SendFeedbackResponse> SendFeedbackAsync(SendFeedbackRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SendFeedbackWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Single User API for Sample Creation</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UploadSampleApiRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadSampleApiResponse
+        /// </returns>
         public UploadSampleApiResponse UploadSampleApiWithOptions(UploadSampleApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -232,6 +363,21 @@ namespace AlibabaCloud.SDK.Safconsole20210112
             return TeaModel.ToObject<UploadSampleApiResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Single User API for Sample Creation</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UploadSampleApiRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadSampleApiResponse
+        /// </returns>
         public async Task<UploadSampleApiResponse> UploadSampleApiWithOptionsAsync(UploadSampleApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -271,12 +417,36 @@ namespace AlibabaCloud.SDK.Safconsole20210112
             return TeaModel.ToObject<UploadSampleApiResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Single User API for Sample Creation</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UploadSampleApiRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadSampleApiResponse
+        /// </returns>
         public UploadSampleApiResponse UploadSampleApi(UploadSampleApiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UploadSampleApiWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Single User API for Sample Creation</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UploadSampleApiRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadSampleApiResponse
+        /// </returns>
         public async Task<UploadSampleApiResponse> UploadSampleApiAsync(UploadSampleApiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
