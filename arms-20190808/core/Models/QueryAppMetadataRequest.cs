@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class QueryAppMetadataRequest : TeaModel {
+        [NameInMap("EndTimeMs")]
+        [Validation(Required=false)]
+        public long? EndTimeMs { get; set; }
+
         /// <summary>
         /// <para>The metadata IDs. Separate multiple IDs with commas (,).</para>
         /// <para>You can obtain the exception ID on the <b>Exception Analysis</b> page of your application in the ARMS console.</para>
@@ -57,6 +61,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("StartTimeMs")]
+        [Validation(Required=false)]
+        public long? StartTimeMs { get; set; }
 
     }
 
