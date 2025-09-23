@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20171228.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("Module")]
+        [Validation(Required=false)]
+        public string Module { get; set; }
+
     }
 
 }
