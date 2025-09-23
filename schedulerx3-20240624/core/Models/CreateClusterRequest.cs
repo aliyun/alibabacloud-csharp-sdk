@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>POSTPAY</para>
+        /// </summary>
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +38,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterSpec { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
+        [NameInMap("Duration")]
+        [Validation(Required=false)]
+        public int? Duration { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +54,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [NameInMap("EngineType")]
         [Validation(Required=false)]
         public string EngineType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Year</para>
+        /// </summary>
+        [NameInMap("PricingCycle")]
+        [Validation(Required=false)]
+        public string PricingCycle { get; set; }
 
         [NameInMap("Tag")]
         [Validation(Required=false)]

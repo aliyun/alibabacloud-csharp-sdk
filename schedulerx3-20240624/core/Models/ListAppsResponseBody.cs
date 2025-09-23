@@ -157,6 +157,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [Validation(Required=false)]
                 public string Updater { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>k8s_service</para>
+                /// </summary>
+                [NameInMap("WorkerRegistry")]
+                [Validation(Required=false)]
+                public string WorkerRegistry { get; set; }
+
             }
 
             /// <summary>

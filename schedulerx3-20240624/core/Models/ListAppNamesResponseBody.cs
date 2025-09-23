@@ -42,6 +42,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("AppType")]
+            [Validation(Required=false)]
+            public int? AppType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>15</para>
             /// </summary>
             [NameInMap("Id")]
@@ -51,6 +59,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>k8s_service</para>
+            /// </summary>
+            [NameInMap("WorkerRegistry")]
+            [Validation(Required=false)]
+            public string WorkerRegistry { get; set; }
 
         }
 

@@ -243,6 +243,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
                 query["Tag"] = request.Tag;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                body["ChargeType"] = request.ChargeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
             {
                 body["ClusterName"] = request.ClusterName;
@@ -251,9 +255,17 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["ClusterSpec"] = request.ClusterSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
+            {
+                body["Duration"] = request.Duration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineType))
             {
                 body["EngineType"] = request.EngineType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingCycle))
+            {
+                body["PricingCycle"] = request.PricingCycle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchesShrink))
             {
@@ -313,6 +325,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
                 query["Tag"] = request.Tag;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                body["ChargeType"] = request.ChargeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
             {
                 body["ClusterName"] = request.ClusterName;
@@ -321,9 +337,17 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["ClusterSpec"] = request.ClusterSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
+            {
+                body["Duration"] = request.Duration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineType))
             {
                 body["EngineType"] = request.EngineType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingCycle))
+            {
+                body["PricingCycle"] = request.PricingCycle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchesShrink))
             {

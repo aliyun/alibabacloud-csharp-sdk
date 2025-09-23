@@ -26,6 +26,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public GetJobExecutionProgressResponseBodyData Data { get; set; }
         public class GetJobExecutionProgressResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1758594961000</para>
+            /// </summary>
+            [NameInMap("EndTime")]
+            [Validation(Required=false)]
+            public string EndTime { get; set; }
+
             [NameInMap("JobDescription")]
             [Validation(Required=false)]
             public string JobDescription { get; set; }
@@ -130,6 +138,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string WorkerAddr { get; set; }
 
             }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1758506761000</para>
+            /// </summary>
+            [NameInMap("StartTime")]
+            [Validation(Required=false)]
+            public string StartTime { get; set; }
 
             [NameInMap("TaskProgress")]
             [Validation(Required=false)]
