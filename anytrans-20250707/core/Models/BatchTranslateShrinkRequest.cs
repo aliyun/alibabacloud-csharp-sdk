@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 {
     public class BatchTranslateShrinkRequest : TeaModel {
+        [NameInMap("appName")]
+        [Validation(Required=false)]
+        public string AppName { get; set; }
+
         [NameInMap("ext")]
         [Validation(Required=false)]
         public string ExtShrink { get; set; }

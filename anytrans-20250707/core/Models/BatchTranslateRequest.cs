@@ -9,10 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 {
     public class BatchTranslateRequest : TeaModel {
+        [NameInMap("appName")]
+        [Validation(Required=false)]
+        public string AppName { get; set; }
+
         [NameInMap("ext")]
         [Validation(Required=false)]
         public BatchTranslateRequestExt Ext { get; set; }
         public class BatchTranslateRequestExt : TeaModel {
+            [NameInMap("config")]
+            [Validation(Required=false)]
+            public BatchTranslateRequestExtConfig Config { get; set; }
+            public class BatchTranslateRequestExtConfig : TeaModel {
+                [NameInMap("skipCsiCheck")]
+                [Validation(Required=false)]
+                public bool? SkipCsiCheck { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>technology</para>

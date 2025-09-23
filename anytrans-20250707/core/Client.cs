@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
                 request.TextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Text, "text", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["appName"] = request.AppName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
             {
                 body["ext"] = request.ExtShrink;
@@ -149,6 +153,10 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
                 request.TextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Text, "text", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["appName"] = request.AppName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
             {
                 body["ext"] = request.ExtShrink;

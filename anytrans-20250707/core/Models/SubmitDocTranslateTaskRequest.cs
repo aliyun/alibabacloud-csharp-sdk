@@ -21,28 +21,6 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
             [Validation(Required=false)]
             public string DomainHint { get; set; }
 
-            [NameInMap("examples")]
-            [Validation(Required=false)]
-            public List<SubmitDocTranslateTaskRequestExtExamples> Examples { get; set; }
-            public class SubmitDocTranslateTaskRequestExtExamples : TeaModel {
-                [NameInMap("src")]
-                [Validation(Required=false)]
-                public string Src { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>llm</para>
-                /// </summary>
-                [NameInMap("tgt")]
-                [Validation(Required=false)]
-                public string Tgt { get; set; }
-
-            }
-
-            [NameInMap("sensitives")]
-            [Validation(Required=false)]
-            public List<string> Sensitives { get; set; }
-
             [NameInMap("terminologies")]
             [Validation(Required=false)]
             public List<SubmitDocTranslateTaskRequestExtTerminologies> Terminologies { get; set; }
@@ -58,36 +36,6 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
                 [NameInMap("tgt")]
                 [Validation(Required=false)]
                 public string Tgt { get; set; }
-
-            }
-
-            [NameInMap("textTransform")]
-            [Validation(Required=false)]
-            public SubmitDocTranslateTaskRequestExtTextTransform TextTransform { get; set; }
-            public class SubmitDocTranslateTaskRequestExtTextTransform : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
-                [NameInMap("toLower")]
-                [Validation(Required=false)]
-                public bool? ToLower { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
-                [NameInMap("toTitle")]
-                [Validation(Required=false)]
-                public bool? ToTitle { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
-                [NameInMap("toUpper")]
-                [Validation(Required=false)]
-                public bool? ToUpper { get; set; }
 
             }
 

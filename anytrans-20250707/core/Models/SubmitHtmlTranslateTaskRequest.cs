@@ -13,6 +13,16 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         [Validation(Required=false)]
         public SubmitHtmlTranslateTaskRequestExt Ext { get; set; }
         public class SubmitHtmlTranslateTaskRequestExt : TeaModel {
+            [NameInMap("config")]
+            [Validation(Required=false)]
+            public SubmitHtmlTranslateTaskRequestExtConfig Config { get; set; }
+            public class SubmitHtmlTranslateTaskRequestExtConfig : TeaModel {
+                [NameInMap("skipCsiCheck")]
+                [Validation(Required=false)]
+                public bool? SkipCsiCheck { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>technology</para>
