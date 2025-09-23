@@ -21,32 +21,60 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
                 [Validation(Required=false)]
                 public List<DetectVehicleICongestionResponseBodyDataElementsBoxes> Boxes { get; set; }
                 public class DetectVehicleICongestionResponseBodyDataElementsBoxes : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>576</para>
+                    /// </summary>
                     [NameInMap("Bottom")]
                     [Validation(Required=false)]
                     public long? Bottom { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>341</para>
+                    /// </summary>
                     [NameInMap("Left")]
                     [Validation(Required=false)]
                     public long? Left { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>589</para>
+                    /// </summary>
                     [NameInMap("Right")]
                     [Validation(Required=false)]
                     public long? Right { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>434</para>
+                    /// </summary>
                     [NameInMap("Top")]
                     [Validation(Required=false)]
                     public long? Top { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.962890625</para>
+                /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public float? Score { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>vehicle</para>
+                /// </summary>
                 [NameInMap("TypeName")]
                 [Validation(Required=false)]
                 public string TypeName { get; set; }
@@ -85,6 +113,10 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4FC381BB-04F2-50F4-B54B-593042BCF3C6</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

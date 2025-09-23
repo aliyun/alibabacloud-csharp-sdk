@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Objectdet20191230.Models
 {
     public class DetectIPCObjectAdvanceRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/objectdet/detect-ipc-xxxx.jpg">https://viapi-test.oss-cn-shanghai.aliyuncs.com/objectdet/detect-ipc-xxxx.jpg</a></para>
+        /// </summary>
         [NameInMap("ImageURL")]
         [Validation(Required=false)]
         public Stream ImageURLObject { get; set; }

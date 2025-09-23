@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
             [Validation(Required=false)]
             public List<DetectWhiteBaseImageResponseBodyDataElements> Elements { get; set; }
             public class DetectWhiteBaseImageResponseBodyDataElements : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("WhiteBase")]
                 [Validation(Required=false)]
                 public int? WhiteBase { get; set; }
@@ -25,6 +29,10 @@ namespace AlibabaCloud.SDK.Objectdet20191230.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>7A7F9EEB-44C4-4592-9089-A6185B222B23</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
