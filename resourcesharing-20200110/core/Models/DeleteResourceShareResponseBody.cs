@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class DeleteResourceShareResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A627EE2A-223D-4E1F-A954-394686AEA916</para>

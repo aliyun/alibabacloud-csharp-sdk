@@ -225,6 +225,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             {
                 query["PermissionNames"] = request.PermissionNames;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceArns))
+            {
+                query["ResourceArns"] = request.ResourceArns;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareId))
             {
                 query["ResourceShareId"] = request.ResourceShareId;
@@ -287,6 +291,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionNames))
             {
                 query["PermissionNames"] = request.PermissionNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceArns))
+            {
+                query["ResourceArns"] = request.ResourceArns;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceShareId))
             {
@@ -788,6 +796,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             {
                 query["PermissionNames"] = request.PermissionNames;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceArns))
+            {
+                query["ResourceArns"] = request.ResourceArns;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -863,6 +875,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionNames))
             {
                 query["PermissionNames"] = request.PermissionNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceArns))
+            {
+                query["ResourceArns"] = request.ResourceArns;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
@@ -957,7 +973,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DeleteResourceShare删除共享单元。</para>
+        /// <para>Deletes a resource share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1006,7 +1022,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DeleteResourceShare删除共享单元。</para>
+        /// <para>Deletes a resource share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1055,7 +1071,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DeleteResourceShare删除共享单元。</para>
+        /// <para>Deletes a resource share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1080,7 +1096,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DeleteResourceShare删除共享单元。</para>
+        /// <para>Deletes a resource share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1251,6 +1267,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceArns))
+            {
+                query["ResourceArns"] = request.ResourceArns;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwner))
             {
                 query["ResourceOwner"] = request.ResourceOwner;
@@ -1314,6 +1334,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceArns))
+            {
+                query["ResourceArns"] = request.ResourceArns;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwner))
             {
                 query["ResourceOwner"] = request.ResourceOwner;
@@ -2173,6 +2197,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceArn))
+            {
+                query["ResourceArn"] = request.ResourceArn;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
                 query["ResourceId"] = request.ResourceId;
@@ -2247,6 +2275,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceArn))
+            {
+                query["ResourceArn"] = request.ResourceArn;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
@@ -2672,7 +2704,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <c>cn-hangzhou</c> region. The response shows that the following resource shares are created by using the account whose ID is <c>151266687691****</c>:</para>
+        /// <para>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <c>cn-hangzhou</c> region. The response shows that the following resource shares are created within the account <c>151266687691****</c>:</para>
         /// <list type="bullet">
         /// <item><description><c>rs-hX9wC5jO****</c>, which is in the <c>Deleted</c> state</description></item>
         /// <item><description><c>rs-PqysnzIj****</c>, which is in the <c>Active</c> state</description></item>
@@ -2755,7 +2787,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <c>cn-hangzhou</c> region. The response shows that the following resource shares are created by using the account whose ID is <c>151266687691****</c>:</para>
+        /// <para>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <c>cn-hangzhou</c> region. The response shows that the following resource shares are created within the account <c>151266687691****</c>:</para>
         /// <list type="bullet">
         /// <item><description><c>rs-hX9wC5jO****</c>, which is in the <c>Deleted</c> state</description></item>
         /// <item><description><c>rs-PqysnzIj****</c>, which is in the <c>Active</c> state</description></item>
@@ -2838,7 +2870,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <c>cn-hangzhou</c> region. The response shows that the following resource shares are created by using the account whose ID is <c>151266687691****</c>:</para>
+        /// <para>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <c>cn-hangzhou</c> region. The response shows that the following resource shares are created within the account <c>151266687691****</c>:</para>
         /// <list type="bullet">
         /// <item><description><c>rs-hX9wC5jO****</c>, which is in the <c>Deleted</c> state</description></item>
         /// <item><description><c>rs-PqysnzIj****</c>, which is in the <c>Active</c> state</description></item>
@@ -2865,7 +2897,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <c>cn-hangzhou</c> region. The response shows that the following resource shares are created by using the account whose ID is <c>151266687691****</c>:</para>
+        /// <para>This topic provides an example on how to call the API operation to query the resource shares that are created by using the current Alibaba Cloud account in the <c>cn-hangzhou</c> region. The response shows that the following resource shares are created within the account <c>151266687691****</c>:</para>
         /// <list type="bullet">
         /// <item><description><c>rs-hX9wC5jO****</c>, which is in the <c>Deleted</c> state</description></item>
         /// <item><description><c>rs-PqysnzIj****</c>, which is in the <c>Active</c> state</description></item>
@@ -2916,6 +2948,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceArns))
+            {
+                query["ResourceArns"] = request.ResourceArns;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
             {
@@ -2987,6 +3023,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceArns))
+            {
+                query["ResourceArns"] = request.ResourceArns;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
             {
@@ -3106,6 +3146,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceArn))
+            {
+                query["ResourceArn"] = request.ResourceArn;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
                 query["ResourceId"] = request.ResourceId;
@@ -3177,6 +3221,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceArn))
+            {
+                query["ResourceArn"] = request.ResourceArn;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
@@ -3267,7 +3315,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签</para>
+        /// <para>Queries the tags that are added to resource shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3325,7 +3373,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签</para>
+        /// <para>Queries the tags that are added to resource shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3383,7 +3431,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签</para>
+        /// <para>Queries the tags that are added to resource shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3401,7 +3449,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源标签</para>
+        /// <para>Queries the tags that are added to resource shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3559,7 +3607,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源打用户标签</para>
+        /// <para>Adds tags to a resource share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3613,7 +3661,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源打用户标签</para>
+        /// <para>Adds tags to a resource share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3667,7 +3715,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源打用户标签</para>
+        /// <para>Adds tags to a resource share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3685,7 +3733,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源打用户标签</para>
+        /// <para>Adds tags to a resource share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3703,7 +3751,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源去除用户标签</para>
+        /// <para>Removes tags from resource shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3761,7 +3809,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源去除用户标签</para>
+        /// <para>Removes tags from resource shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3819,7 +3867,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源去除用户标签</para>
+        /// <para>Removes tags from resource shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3837,7 +3885,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源去除用户标签</para>
+        /// <para>Removes tags from resource shares.</para>
         /// </summary>
         /// 
         /// <param name="request">

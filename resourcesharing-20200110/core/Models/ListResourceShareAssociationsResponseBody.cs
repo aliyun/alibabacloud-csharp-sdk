@@ -122,6 +122,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
                 [Validation(Required=false)]
                 public string OperationType { get; set; }
 
+                [NameInMap("ResourceArn")]
+                [Validation(Required=false)]
+                public string ResourceArn { get; set; }
+
                 /// <summary>
                 /// <para>This parameter is deprecated. The FailureReason parameter is used instead.</para>
                 /// 
@@ -243,6 +247,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             [NameInMap("External")]
             [Validation(Required=false)]
             public bool? External { get; set; }
+
+            [NameInMap("ResourceArn")]
+            [Validation(Required=false)]
+            public string ResourceArn { get; set; }
 
             /// <summary>
             /// <para>The ID of the resource share.</para>

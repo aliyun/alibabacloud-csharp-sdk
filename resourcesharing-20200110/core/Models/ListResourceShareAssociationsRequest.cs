@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("ResourceArn")]
+        [Validation(Required=false)]
+        public string ResourceArn { get; set; }
+
         /// <summary>
         /// <para>The ID of the resource.</para>
         /// <remarks>

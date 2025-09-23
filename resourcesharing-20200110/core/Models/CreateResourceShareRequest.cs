@@ -30,6 +30,16 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public List<string> PermissionNames { get; set; }
 
+        [NameInMap("ResourceArns")]
+        [Validation(Required=false)]
+        public List<string> ResourceArns { get; set; }
+
+        /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekz5nlvlak****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -85,14 +95,35 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 
         }
 
+        /// <summary>
+        /// <para>The tags. You can specify up to 20 tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateResourceShareRequestTag> Tag { get; set; }
         public class CreateResourceShareRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// <remarks>
+            /// <para> The tag key can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>k1</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// <remarks>
+            /// <para> The tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v1</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

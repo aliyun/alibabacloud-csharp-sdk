@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class DisassociateResourceShareRequest : TeaModel {
+        [NameInMap("ResourceArns")]
+        [Validation(Required=false)]
+        public List<string> ResourceArns { get; set; }
+
         /// <summary>
         /// <para>The owner of the resource share. Valid values:</para>
         /// <list type="bullet">

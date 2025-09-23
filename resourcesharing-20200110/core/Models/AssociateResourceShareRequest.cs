@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public List<string> PermissionNames { get; set; }
 
+        [NameInMap("ResourceArns")]
+        [Validation(Required=false)]
+        public List<string> ResourceArns { get; set; }
+
         /// <summary>
         /// <para>The ID of the resource share.</para>
         /// <para>This parameter is required.</para>

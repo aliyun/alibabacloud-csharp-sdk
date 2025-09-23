@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
 {
     public class ListResourceSharesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The <c>token</c> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</para>
+        /// <para>The <c>token</c> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cm****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2F23CFB6-A721-4E90-AC1E-0E30FA8B45DA</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the resource shares.</para>
+        /// <para>The information about the resource shares.</para>
         /// </summary>
         [NameInMap("ResourceShares")]
         [Validation(Required=false)]
@@ -60,6 +60,12 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-aekz5nlvlak****</para>
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
@@ -97,13 +103,13 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             /// <summary>
             /// <para>The status of the resource share. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Active: The resource share is enabled.</description></item>
-            /// <item><description>Pending: The resource share is associated with one or more resource sharing invitations that are waiting for confirmation.</description></item>
-            /// <item><description>Deleting: The resource share is being deleted.</description></item>
-            /// <item><description>Deleted: The resource share is deleted.</description></item>
+            /// <item><description>Active</description></item>
+            /// <item><description>Pending</description></item>
+            /// <item><description>Deleting</description></item>
+            /// <item><description>Deleted</description></item>
             /// </list>
             /// <remarks>
-            /// <para> The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</para>
+            /// <para> The system automatically deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -113,14 +119,29 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
             [Validation(Required=false)]
             public string ResourceShareStatus { get; set; }
 
+            /// <summary>
+            /// <para>The tags.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListResourceSharesResponseBodyResourceSharesTags> Tags { get; set; }
             public class ListResourceSharesResponseBodyResourceSharesTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>k1</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>v1</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

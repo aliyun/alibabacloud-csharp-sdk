@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The <c>token</c> that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</para>
+        /// <para>The <c>token</c> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cm****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the permission. For more information, see <a href="https://help.aliyun.com/document_detail/465474.html">Permission library</a>.</para>
+        /// <para>The information about the permissions. For more information, see <a href="https://help.aliyun.com/document_detail/465474.html">Permission library</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunRSDefaultPermissionVSwitch</para>
@@ -40,6 +40,12 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public string PermissionName { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekz5nlvlak****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -60,7 +66,8 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         public string ResourceOwner { get; set; }
 
         /// <summary>
-        /// <para>The ID of a resource share.</para>
+        /// <para>The IDs of the resource shares.</para>
+        /// <para>Valid values of N: 1 to 5. This indicates that a maximum of five resource shares can be specified at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rs-PqysnzIj****</para>
@@ -80,15 +87,15 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         public string ResourceShareName { get; set; }
 
         /// <summary>
-        /// <para>The status of the resource share. Valid values:</para>
+        /// <para>The status of the resource shares. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Active: The resource share is enabled.</description></item>
-        /// <item><description>Pending: The resource share is associated with one or more resource sharing invitations that are waiting for confirmation.</description></item>
-        /// <item><description>Deleting: The resource share is being deleted.</description></item>
-        /// <item><description>Deleted: The resource share is deleted.</description></item>
+        /// <item><description>Active</description></item>
+        /// <item><description>Pending</description></item>
+        /// <item><description>Deleting</description></item>
+        /// <item><description>Deleted</description></item>
         /// </list>
         /// <remarks>
-        /// <para> The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</para>
+        /// <para> The system automatically deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -98,14 +105,35 @@ namespace AlibabaCloud.SDK.ResourceSharing20200110.Models
         [Validation(Required=false)]
         public string ResourceShareStatus { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListResourceSharesRequestTag> Tag { get; set; }
         public class ListResourceSharesRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// <remarks>
+            /// <para> The tag key can be 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>k1</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// <remarks>
+            /// <para> The tag value can be 128 characters in length and cannot start with <c>acs:</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v1</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
