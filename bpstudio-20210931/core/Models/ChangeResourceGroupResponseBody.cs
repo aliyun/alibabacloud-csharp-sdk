@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public long? Code { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// <para>No business data is returned for this parameter.</para>

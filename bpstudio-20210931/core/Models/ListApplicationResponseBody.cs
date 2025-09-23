@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// <para>App listing information</para>

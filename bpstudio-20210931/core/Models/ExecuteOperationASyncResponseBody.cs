@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.BPStudio20210931.Models
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
-        public int? Code { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// <para>The operation ID. You can call the GetExecuteOperationResult operation to asynchronously query the result of an operation. The ID expires after one hour.</para>
