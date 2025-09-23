@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string Handler { get; set; }
 
+        [NameInMap("idleTimeout")]
+        [Validation(Required=false)]
+        public int? IdleTimeout { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
@@ -227,6 +231,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string SessionAffinity { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;sseEndpointPath&quot;:&quot;/sse&quot;, &quot;sessionConcurrencyPerInstance&quot;:20}</para>
+        /// </summary>
         [NameInMap("sessionAffinityConfig")]
         [Validation(Required=false)]
         public string SessionAffinityConfig { get; set; }

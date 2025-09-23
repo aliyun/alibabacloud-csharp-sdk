@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string Handler { get; set; }
 
+        [NameInMap("idleTimeout")]
+        [Validation(Required=false)]
+        public int? IdleTimeout { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
