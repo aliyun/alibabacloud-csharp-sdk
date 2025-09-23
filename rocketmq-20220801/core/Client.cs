@@ -2691,6 +2691,278 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>执行迁移操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteMigrationOperationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteMigrationOperationResponse
+        /// </returns>
+        public ExecuteMigrationOperationResponse ExecuteMigrationOperationWithOptions(string migrationId, string stageType, string operationId, ExecuteMigrationOperationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["instanceId"] = request.InstanceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationParam))
+            {
+                body["operationParam"] = request.OperationParam;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteMigrationOperation",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/migrations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(migrationId) + "/stages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(stageType) + "/operations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(operationId) + "/execute",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteMigrationOperationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行迁移操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteMigrationOperationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteMigrationOperationResponse
+        /// </returns>
+        public async Task<ExecuteMigrationOperationResponse> ExecuteMigrationOperationWithOptionsAsync(string migrationId, string stageType, string operationId, ExecuteMigrationOperationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["instanceId"] = request.InstanceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationParam))
+            {
+                body["operationParam"] = request.OperationParam;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteMigrationOperation",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/migrations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(migrationId) + "/stages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(stageType) + "/operations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(operationId) + "/execute",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteMigrationOperationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行迁移操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteMigrationOperationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteMigrationOperationResponse
+        /// </returns>
+        public ExecuteMigrationOperationResponse ExecuteMigrationOperation(string migrationId, string stageType, string operationId, ExecuteMigrationOperationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExecuteMigrationOperationWithOptions(migrationId, stageType, operationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行迁移操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteMigrationOperationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteMigrationOperationResponse
+        /// </returns>
+        public async Task<ExecuteMigrationOperationResponse> ExecuteMigrationOperationAsync(string migrationId, string stageType, string operationId, ExecuteMigrationOperationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExecuteMigrationOperationWithOptionsAsync(migrationId, stageType, operationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>完成当前迁移阶段</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FinishMigrationStageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FinishMigrationStageResponse
+        /// </returns>
+        public FinishMigrationStageResponse FinishMigrationStageWithOptions(string migrationId, string stageType, FinishMigrationStageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["instanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FinishMigrationStage",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/migrations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(migrationId) + "/stages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(stageType) + "/finish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FinishMigrationStageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>完成当前迁移阶段</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FinishMigrationStageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FinishMigrationStageResponse
+        /// </returns>
+        public async Task<FinishMigrationStageResponse> FinishMigrationStageWithOptionsAsync(string migrationId, string stageType, FinishMigrationStageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["instanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FinishMigrationStage",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/migrations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(migrationId) + "/stages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(stageType) + "/finish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FinishMigrationStageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>完成当前迁移阶段</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FinishMigrationStageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FinishMigrationStageResponse
+        /// </returns>
+        public FinishMigrationStageResponse FinishMigrationStage(string migrationId, string stageType, FinishMigrationStageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return FinishMigrationStageWithOptions(migrationId, stageType, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>完成当前迁移阶段</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FinishMigrationStageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FinishMigrationStageResponse
+        /// </returns>
+        public async Task<FinishMigrationStageResponse> FinishMigrationStageAsync(string migrationId, string stageType, FinishMigrationStageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await FinishMigrationStageWithOptionsAsync(migrationId, stageType, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a specified consumer group.</para>
         /// </summary>
         /// 
@@ -6223,6 +6495,168 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListMetricMetaWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询迁移操作列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMigrationOperationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMigrationOperationsResponse
+        /// </returns>
+        public ListMigrationOperationsResponse ListMigrationOperationsWithOptions(string migrationId, string stageType, ListMigrationOperationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationType))
+            {
+                query["operationType"] = request.OperationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMigrationOperations",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/migrations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(migrationId) + "/stages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(stageType) + "/operations",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMigrationOperationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询迁移操作列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMigrationOperationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMigrationOperationsResponse
+        /// </returns>
+        public async Task<ListMigrationOperationsResponse> ListMigrationOperationsWithOptionsAsync(string migrationId, string stageType, ListMigrationOperationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationType))
+            {
+                query["operationType"] = request.OperationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMigrationOperations",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/migrations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(migrationId) + "/stages/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(stageType) + "/operations",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMigrationOperationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询迁移操作列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMigrationOperationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMigrationOperationsResponse
+        /// </returns>
+        public ListMigrationOperationsResponse ListMigrationOperations(string migrationId, string stageType, ListMigrationOperationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMigrationOperationsWithOptions(migrationId, stageType, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询迁移操作列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMigrationOperationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMigrationOperationsResponse
+        /// </returns>
+        public async Task<ListMigrationOperationsResponse> ListMigrationOperationsAsync(string migrationId, string stageType, ListMigrationOperationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMigrationOperationsWithOptionsAsync(migrationId, stageType, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
