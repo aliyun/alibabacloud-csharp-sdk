@@ -82,6 +82,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [Validation(Required=false)]
                 public string Voice { get; set; }
 
+                [NameInMap("VoiceSource")]
+                [Validation(Required=false)]
+                public string VoiceSource { get; set; }
+
                 /// <summary>
                 /// <para>The speaker type.</para>
                 /// <para>Valid values:</para>
