@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Videoseg20200320.Models
 {
     public class SegmentVideoBodyResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public SegmentVideoBodyResponseBody Body { get; set; }
 
     }
