@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string LastRunAt { get; set; }
 
+        [NameInMap("MinRewriteQueryCount")]
+        [Validation(Required=false)]
+        public int? MinRewriteQueryCount { get; set; }
+
+        [NameInMap("MinRewriteQueryPattern")]
+        [Validation(Required=false)]
+        public int? MinRewriteQueryPattern { get; set; }
+
         [NameInMap("ScanQueriesRange")]
         [Validation(Required=false)]
         public int? ScanQueriesRange { get; set; }
@@ -28,6 +36,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("SchedulingSettings")]
         [Validation(Required=false)]
         public string SchedulingSettings { get; set; }
+
+        [NameInMap("SlowQueryThreshold")]
+        [Validation(Required=false)]
+        public int? SlowQueryThreshold { get; set; }
 
         [NameInMap("TaskName")]
         [Validation(Required=false)]

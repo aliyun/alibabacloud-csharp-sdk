@@ -13,9 +13,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("MinRewriteQueryCount")]
+        [Validation(Required=false)]
+        public int? MinRewriteQueryCount { get; set; }
+
+        [NameInMap("MinRewriteQueryPattern")]
+        [Validation(Required=false)]
+        public int? MinRewriteQueryPattern { get; set; }
+
         [NameInMap("ScanQueriesCount")]
         [Validation(Required=false)]
         public long? ScanQueriesCount { get; set; }
+
+        [NameInMap("SlowQueryThreshold")]
+        [Validation(Required=false)]
+        public int? SlowQueryThreshold { get; set; }
 
         [NameInMap("StartTime")]
         [Validation(Required=false)]

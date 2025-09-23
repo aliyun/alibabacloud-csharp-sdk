@@ -35,6 +35,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public List<List<string>> BaseTableNames { get; set; }
 
+        [NameInMap("EnableDelayAlert")]
+        [Validation(Required=false)]
+        public int? EnableDelayAlert { get; set; }
+
+        [NameInMap("EnableFailureAlert")]
+        [Validation(Required=false)]
+        public int? EnableFailureAlert { get; set; }
+
         [NameInMap("ExplicitHit")]
         [Validation(Required=false)]
         public long? ExplicitHit { get; set; }
@@ -50,6 +58,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("IsInactive")]
         [Validation(Required=false)]
         public bool? IsInactive { get; set; }
+
+        [NameInMap("LatencyTolerance")]
+        [Validation(Required=false)]
+        public int? LatencyTolerance { get; set; }
 
         [NameInMap("LocalSize")]
         [Validation(Required=false)]

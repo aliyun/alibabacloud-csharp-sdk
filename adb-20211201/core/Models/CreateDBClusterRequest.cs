@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public bool? EnableDefaultResourcePool { get; set; }
 
+        [NameInMap("EnableSSL")]
+        [Validation(Required=false)]
+        public bool? EnableSSL { get; set; }
+
         /// <summary>
         /// <para>The ID of the key that is used to encrypt disk data.</para>
         /// <remarks>
