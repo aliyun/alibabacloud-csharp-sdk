@@ -54,6 +54,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Options { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("SharingConfig")]
+        [Validation(Required=false)]
+        public UpdateDatasetRequestSharingConfig SharingConfig { get; set; }
+        public class UpdateDatasetRequestSharingConfig : TeaModel {
+            [NameInMap("SharedTo")]
+            [Validation(Required=false)]
+            public List<DatasetShareRelationship> SharedTo { get; set; }
+
+        }
+
     }
 
 }

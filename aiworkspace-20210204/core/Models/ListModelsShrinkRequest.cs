@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Collections { get; set; }
 
+        [NameInMap("Conditions")]
+        [Validation(Required=false)]
+        public string ConditionsShrink { get; set; }
+
         /// <summary>
         /// <para>The domain. Only models in the domain are returned. Valid values: nlp (Natural Language Processing) and cv (Computer Vision).</para>
         /// 

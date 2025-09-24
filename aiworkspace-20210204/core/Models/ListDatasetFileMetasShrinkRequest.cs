@@ -89,6 +89,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Obsolete]
         public int? PageSize { get; set; }
 
+        [NameInMap("QueryContentTypeIncludeAny")]
+        [Validation(Required=false)]
+        public string QueryContentTypeIncludeAnyShrink { get; set; }
+
+        [NameInMap("QueryExpression")]
+        [Validation(Required=false)]
+        public string QueryExpression { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cars/20250221/</para>

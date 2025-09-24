@@ -177,6 +177,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public GetConnectionResponseBodyResourceMeta ResourceMeta { get; set; }
         public class GetConnectionResponseBodyResourceMeta : TeaModel {
+            [NameInMap("Extra")]
+            [Validation(Required=false)]
+            public string Extra { get; set; }
+
             /// <summary>
             /// <para>The instance ID.</para>
             /// 

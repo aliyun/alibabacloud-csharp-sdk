@@ -140,6 +140,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string ImportInfo { get; set; }
 
+        [NameInMap("IsShared")]
+        [Validation(Required=false)]
+        public bool? IsShared { get; set; }
+
         /// <summary>
         /// <para>The tags.</para>
         /// </summary>
@@ -254,6 +258,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("SharedFrom")]
+        [Validation(Required=false)]
+        public DatasetShareRelationship SharedFrom { get; set; }
+
+        [NameInMap("SharingConfig")]
+        [Validation(Required=false)]
+        public GetDatasetResponseBodySharingConfig SharingConfig { get; set; }
+        public class GetDatasetResponseBodySharingConfig : TeaModel {
+            [NameInMap("SharedTo")]
+            [Validation(Required=false)]
+            public List<DatasetShareRelationship> SharedTo { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The ID of the source dataset generated from a labeling job of iTAG.</para>

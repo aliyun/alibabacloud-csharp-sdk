@@ -41,6 +41,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35Z</para>
         /// </summary>
+        [NameInMap("GmtLatestVersionModifiedTime")]
+        [Validation(Required=false)]
+        public string GmtLatestVersionModifiedTime { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2021-01-21T17:12:35Z</para>
+        /// </summary>
         [NameInMap("GmtModifiedTime")]
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
@@ -108,6 +116,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1024</para>
+        /// </summary>
+        [NameInMap("ParameterSize")]
+        [Validation(Required=false)]
+        public long? ParameterSize { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

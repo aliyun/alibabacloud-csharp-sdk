@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string ImportInfo { get; set; }
 
+        [NameInMap("IsShared")]
+        [Validation(Required=false)]
+        public bool? IsShared { get; set; }
+
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
@@ -136,6 +140,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("ProviderType")]
         [Validation(Required=false)]
         public string ProviderType { get; set; }
+
+        [NameInMap("SharedFrom")]
+        [Validation(Required=false)]
+        public DatasetShareRelationship SharedFrom { get; set; }
+
+        [NameInMap("SharingConfig")]
+        [Validation(Required=false)]
+        public DatasetSharingConfig SharingConfig { get; set; }
+        public class DatasetSharingConfig : TeaModel {
+            [NameInMap("SharedTo")]
+            [Validation(Required=false)]
+            public List<DatasetShareRelationship> SharedTo { get; set; }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>

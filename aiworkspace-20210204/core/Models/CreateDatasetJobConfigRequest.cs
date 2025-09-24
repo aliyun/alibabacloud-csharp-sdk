@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string ConfigType { get; set; }
 
+        [NameInMap("DatasetVersion")]
+        [Validation(Required=false)]
+        public string DatasetVersion { get; set; }
+
         /// <summary>
         /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>

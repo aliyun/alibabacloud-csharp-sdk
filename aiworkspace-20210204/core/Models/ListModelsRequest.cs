@@ -19,6 +19,24 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Collections { get; set; }
 
+        [NameInMap("Conditions")]
+        [Validation(Required=false)]
+        public List<ListModelsRequestConditions> Conditions { get; set; }
+        public class ListModelsRequestConditions : TeaModel {
+            [NameInMap("Column")]
+            [Validation(Required=false)]
+            public string Column { get; set; }
+
+            [NameInMap("Operator")]
+            [Validation(Required=false)]
+            public string Operator { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The domain. Only models in the domain are returned. Valid values: nlp (Natural Language Processing) and cv (Computer Vision).</para>
         /// 

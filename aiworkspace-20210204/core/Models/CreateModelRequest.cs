@@ -116,6 +116,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Origin { get; set; }
 
+        [NameInMap("ParameterSize")]
+        [Validation(Required=false)]
+        public long? ParameterSize { get; set; }
+
         /// <summary>
         /// <para>The tags.</para>
         /// </summary>

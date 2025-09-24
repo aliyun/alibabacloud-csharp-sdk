@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string JobAction { get; set; }
 
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
         /// <summary>
         /// <para>The page number. Pages start from page 1. Default value: 1.</para>
         /// 
@@ -48,6 +52,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("SortBy")]
+        [Validation(Required=false)]
+        public string SortBy { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
         /// <summary>
         /// <para>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>

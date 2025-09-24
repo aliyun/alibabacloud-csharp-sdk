@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public Dictionary<string, object> CompressionSpec { get; set; }
 
+        [NameInMap("DistillationSpec")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> DistillationSpec { get; set; }
+
         [NameInMap("EvaluationSpec")]
         [Validation(Required=false)]
         public Dictionary<string, object> EvaluationSpec { get; set; }
@@ -63,7 +67,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         [NameInMap("Labels")]
         [Validation(Required=false)]
-        public List<Label> Labels { get; set; }
+        public List<ModelVersionLabels> Labels { get; set; }
+        public class ModelVersionLabels : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         [NameInMap("Metrics")]
         [Validation(Required=false)]

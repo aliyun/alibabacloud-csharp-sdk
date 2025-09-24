@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListDatasetsRequest : TeaModel {
+        [NameInMap("Accessibility")]
+        [Validation(Required=false)]
+        public string Accessibility { get; set; }
+
         /// <summary>
         /// <para>The storage types of the data source. Multiple data source types are separated by commas (,). Valid values:</para>
         /// <list type="bullet">
@@ -39,6 +43,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("DataTypes")]
         [Validation(Required=false)]
         public string DataTypes { get; set; }
+
+        [NameInMap("Edition")]
+        [Validation(Required=false)]
+        public string Edition { get; set; }
 
         /// <summary>
         /// <para>The dataset tag, which is used to filter datasets. Datasets whose tag key or tag value contains a specified string are filtered.</para>
@@ -117,6 +125,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("Provider")]
         [Validation(Required=false)]
         public string Provider { get; set; }
+
+        [NameInMap("ShareScope")]
+        [Validation(Required=false)]
+        public string ShareScope { get; set; }
 
         /// <summary>
         /// <para>The field used for sorting.</para>

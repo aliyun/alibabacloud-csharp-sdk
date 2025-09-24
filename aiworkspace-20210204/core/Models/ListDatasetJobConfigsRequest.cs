@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string ConfigType { get; set; }
 
+        [NameInMap("DatasetVersion")]
+        [Validation(Required=false)]
+        public string DatasetVersion { get; set; }
+
         /// <summary>
         /// <para>The page number. Pages start from page 1. Default value: 1.</para>
         /// 

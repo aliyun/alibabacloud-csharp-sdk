@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public ConnectionResourceMeta ResourceMeta { get; set; }
         public class ConnectionResourceMeta : TeaModel {
+            [NameInMap("Extra")]
+            [Validation(Required=false)]
+            public string Extra { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }

@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             [Validation(Required=false)]
             public string ProductCode { get; set; }
 
-            [NameInMap("ProductInstanceId")]
+            [NameInMap("ProductId")]
             [Validation(Required=false)]
-            public string ProductInstanceId { get; set; }
+            public string ProductId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Origin { get; set; }
 
+        [NameInMap("ParameterSize")]
+        [Validation(Required=false)]
+        public long? ParameterSize { get; set; }
+
         /// <summary>
         /// <para>The task. This parameter specifies the specific issue that the model resolves. Example: text-classification.</para>
         /// 

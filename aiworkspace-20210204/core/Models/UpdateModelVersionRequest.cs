@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public Dictionary<string, object> CompressionSpec { get; set; }
 
+        [NameInMap("DistillationSpec")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> DistillationSpec { get; set; }
+
         /// <summary>
         /// <para>The evaluation configuration.</para>
         /// 

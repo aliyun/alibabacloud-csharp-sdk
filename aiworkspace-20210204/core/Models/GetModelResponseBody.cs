@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string GmtCreateTime { get; set; }
 
+        [NameInMap("GmtLatestVersionModifiedTime")]
+        [Validation(Required=false)]
+        public string GmtLatestVersionModifiedTime { get; set; }
+
         /// <summary>
         /// <para>The time when the model is last modified, in UTC. The time follows the ISO 8601 standard.</para>
         /// 
@@ -158,6 +162,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
+
+        [NameInMap("ParameterSize")]
+        [Validation(Required=false)]
+        public long? ParameterSize { get; set; }
 
         /// <summary>
         /// <para>The provider.</para>

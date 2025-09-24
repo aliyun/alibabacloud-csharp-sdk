@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
+        [NameInMap("ProductIds")]
+        [Validation(Required=false)]
+        public List<string> ProductIds { get; set; }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 

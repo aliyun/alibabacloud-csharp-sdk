@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public List<string> ConnectionTypes { get; set; }
 
+        [NameInMap("Creator")]
+        [Validation(Required=false)]
+        public string Creator { get; set; }
+
         /// <summary>
         /// <para>The encryption settings. Valid values:</para>
         /// <list type="bullet">

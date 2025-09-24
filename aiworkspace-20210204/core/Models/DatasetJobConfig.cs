@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string DatasetJobConfigId { get; set; }
 
+        [NameInMap("DatasetVersion")]
+        [Validation(Required=false)]
+        public string DatasetVersion { get; set; }
+
         [NameInMap("ModifyTime")]
         [Validation(Required=false)]
         public string ModifyTime { get; set; }
