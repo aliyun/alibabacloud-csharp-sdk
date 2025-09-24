@@ -1,3 +1,25 @@
+2025-09-24 Version: 3.10.0
+- Support API CredentialRecognitionIntl.
+- Support API DeleteFaceGroup.
+- Support API DeleteFaceRecord.
+- Support API FaceDuplicationCheckIntl.
+- Support API ModifyFaceGroup.
+- Support API ModifyFaceRecord.
+- Support API QueryFaceGroup.
+- Support API QueryFaceRecord.
+- Support API TempAccessTokenIntl.
+- Update API FaceCompare: add request parameters FacePictureQualityCheck.
+- Update API Initialize: add request parameters AutoRegistration.
+- Update API Initialize: add request parameters FaceGroupCodes.
+- Update API Initialize: add request parameters FaceRegisterGroupCode.
+- Update API Initialize: add request parameters FaceVerifyThreshold.
+- Update API Initialize: add request parameters ReturnFaces.
+- Update API Initialize: add request parameters SaveFacePicture.
+- Update API Initialize: add request parameters TargetFacePicture.
+- Update API Initialize: add request parameters TargetFacePictureUrl.
+- Update API Initialize: add request parameters VerifyModel.
+
+
 2025-08-23 Version: 3.8.5
 - Update API Initialize: add request parameters EditOcrResult.
 

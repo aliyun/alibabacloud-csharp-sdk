@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
-    public class FraudResultCallBackResponseBody : TeaModel {
+    public class DeleteFaceGroupResponseBody : TeaModel {
         /// <summary>
         /// <para>Return code</para>
         /// 
@@ -18,6 +18,16 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
+
+        /// <summary>
+        /// <para>Return result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public int? Data { get; set; }
 
         /// <summary>
         /// <para>Return message</para>
@@ -30,28 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4EB35****87EBA1</para>
+        /// <para>595E387B-3F0E-5C52-BD02-8EFE63D41FD5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// <para>Whether the call was successful.</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: Call succeeded.</description></item>
-        /// <item><description><b>false</b>: Call failed.</description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
-        [NameInMap("Success")]
-        [Validation(Required=false)]
-        public bool? Success { get; set; }
 
     }
 

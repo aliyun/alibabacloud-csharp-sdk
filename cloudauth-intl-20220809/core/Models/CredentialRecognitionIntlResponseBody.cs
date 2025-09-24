@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
-    public class InitializeResponseBody : TeaModel {
+    public class CredentialRecognitionIntlResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code</para>
+        /// <para>Return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message</para>
+        /// <para>Response message for the returned information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EB35****87EBA1</para>
@@ -40,54 +40,48 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result</para>
+        /// <para>Returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public InitializeResponseBodyResult Result { get; set; }
-        public class InitializeResponseBodyResult : TeaModel {
+        public CredentialRecognitionIntlResponseBodyResult Result { get; set; }
+        public class CredentialRecognitionIntlResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Client configuration</para>
+            /// <para>Identified key information in JSON format.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>{
+            ///   &quot;address&quot;: &quot;&quot;,
+            ///   &quot;name&quot;:&quot;&quot;
+            /// }</para>
             /// </summary>
-            [NameInMap("ClientCfg")]
+            [NameInMap("ExtIdInfo")]
             [Validation(Required=false)]
-            public string ClientCfg { get; set; }
+            public string ExtIdInfo { get; set; }
 
             /// <summary>
-            /// <para>Standard encryption protocol for authentication.</para>
-            /// <remarks>
-            /// <para>This field is required when integrating with H5 web pages using iframe embedding.</para>
-            /// </remarks>
+            /// <para>Authentication result description</para>
             /// 
             /// <b>Example:</b>
-            /// <para>hksb7ba1b28130d24e015d*********</para>
+            /// <para>200</para>
             /// </summary>
-            [NameInMap("Protocol")]
+            [NameInMap("SubCode")]
             [Validation(Required=false)]
-            public string Protocol { get; set; }
+            public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>Authentication ID</para>
+            /// <para>Extraction result. Values:</para>
+            /// <list type="bullet">
+            /// <item><description>S: Success.</description></item>
+            /// <item><description>F: Failure.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>08573be80f944d95ac812e019e3655a8</para>
+            /// <para>S</para>
             /// </summary>
-            [NameInMap("TransactionId")]
+            [NameInMap("Success")]
             [Validation(Required=false)]
-            public string TransactionId { get; set; }
-
-            /// <summary>
-            /// <para>Web authentication URL</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>http****</para>
-            /// </summary>
-            [NameInMap("TransactionUrl")]
-            [Validation(Required=false)]
-            public string TransactionUrl { get; set; }
+            public string Success { get; set; }
 
         }
 

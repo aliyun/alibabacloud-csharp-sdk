@@ -126,8 +126,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地址相似比对</para>
+        /// <para>Address Similarity Comparison</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>API for comparing two addresses, standardizing and checking address consistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddressCompareIntlRequest
@@ -180,8 +185,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地址相似比对</para>
+        /// <para>Address Similarity Comparison</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>API for comparing two addresses, standardizing and checking address consistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddressCompareIntlRequest
@@ -234,8 +244,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地址相似比对</para>
+        /// <para>Address Similarity Comparison</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>API for comparing two addresses, standardizing and checking address consistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddressCompareIntlRequest
@@ -252,8 +267,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地址相似比对</para>
+        /// <para>Address Similarity Comparison</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>API for comparing two addresses, standardizing and checking address consistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddressCompareIntlRequest
@@ -490,7 +510,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地址核验</para>
+        /// <para>This topic describes the address verification API operation, which verifies the region and address of a device using device data and carrier big data capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -552,7 +572,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地址核验</para>
+        /// <para>This topic describes the address verification API operation, which verifies the region and address of a device using device data and carrier big data capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -614,7 +634,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地址核验</para>
+        /// <para>This topic describes the address verification API operation, which verifies the region and address of a device using device data and carrier big data capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -632,7 +652,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>地址核验</para>
+        /// <para>This topic describes the address verification API operation, which verifies the region and address of a device using device data and carrier big data capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1346,6 +1366,190 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Credential Recognition</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Detects whether a voucher (such as water, electricity, gas, credit card, etc., e-bills) is forged using AI technology and extracts key information from the voucher.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CredentialRecognitionIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialRecognitionIntlResponse
+        /// </returns>
+        public CredentialRecognitionIntlResponse CredentialRecognitionIntlWithOptions(CredentialRecognitionIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FraudCheck))
+            {
+                query["FraudCheck"] = request.FraudCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrArea))
+            {
+                query["OcrArea"] = request.OcrArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureBase64))
+            {
+                body["CredentialOcrPictureBase64"] = request.CredentialOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureUrl))
+            {
+                body["CredentialOcrPictureUrl"] = request.CredentialOcrPictureUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CredentialRecognitionIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CredentialRecognitionIntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Credential Recognition</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Detects whether a voucher (such as water, electricity, gas, credit card, etc., e-bills) is forged using AI technology and extracts key information from the voucher.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CredentialRecognitionIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialRecognitionIntlResponse
+        /// </returns>
+        public async Task<CredentialRecognitionIntlResponse> CredentialRecognitionIntlWithOptionsAsync(CredentialRecognitionIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FraudCheck))
+            {
+                query["FraudCheck"] = request.FraudCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrArea))
+            {
+                query["OcrArea"] = request.OcrArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureBase64))
+            {
+                body["CredentialOcrPictureBase64"] = request.CredentialOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureUrl))
+            {
+                body["CredentialOcrPictureUrl"] = request.CredentialOcrPictureUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CredentialRecognitionIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CredentialRecognitionIntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Credential Recognition</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Detects whether a voucher (such as water, electricity, gas, credit card, etc., e-bills) is forged using AI technology and extracts key information from the voucher.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CredentialRecognitionIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialRecognitionIntlResponse
+        /// </returns>
+        public CredentialRecognitionIntlResponse CredentialRecognitionIntl(CredentialRecognitionIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CredentialRecognitionIntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Credential Recognition</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Detects whether a voucher (such as water, electricity, gas, credit card, etc., e-bills) is forged using AI technology and extracts key information from the voucher.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CredentialRecognitionIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialRecognitionIntlResponse
+        /// </returns>
+        public async Task<CredentialRecognitionIntlResponse> CredentialRecognitionIntlAsync(CredentialRecognitionIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CredentialRecognitionIntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Credential Verification</para>
         /// </summary>
         /// 
@@ -1714,8 +1918,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸凭证核验</para>
+        /// <para>Face Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input a face image and use the algorithm to detect if there is a risk of deep forgery. This includes risk scenarios such as AIGC-generated faces, deepfake face swapping, template faces, and rephotographed faces, and outputs risk labels and confidence levels.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeepfakeDetectIntlRequest
@@ -1778,8 +1987,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸凭证核验</para>
+        /// <para>Face Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input a face image and use the algorithm to detect if there is a risk of deep forgery. This includes risk scenarios such as AIGC-generated faces, deepfake face swapping, template faces, and rephotographed faces, and outputs risk labels and confidence levels.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeepfakeDetectIntlRequest
@@ -1842,8 +2056,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸凭证核验</para>
+        /// <para>Face Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input a face image and use the algorithm to detect if there is a risk of deep forgery. This includes risk scenarios such as AIGC-generated faces, deepfake face swapping, template faces, and rephotographed faces, and outputs risk labels and confidence levels.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeepfakeDetectIntlRequest
@@ -1860,8 +2079,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸凭证核验</para>
+        /// <para>Face Credential Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input a face image and use the algorithm to detect if there is a risk of deep forgery. This includes risk scenarios such as AIGC-generated faces, deepfake face swapping, template faces, and rephotographed faces, and outputs risk labels and confidence levels.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeepfakeDetectIntlRequest
@@ -1874,6 +2098,246 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeepfakeDetectIntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Face Group</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceGroupResponse
+        /// </returns>
+        public DeleteFaceGroupResponse DeleteFaceGroupWithOptions(DeleteFaceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFaceGroup",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFaceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Face Group</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceGroupResponse
+        /// </returns>
+        public async Task<DeleteFaceGroupResponse> DeleteFaceGroupWithOptionsAsync(DeleteFaceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFaceGroup",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFaceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Face Group</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceGroupResponse
+        /// </returns>
+        public DeleteFaceGroupResponse DeleteFaceGroup(DeleteFaceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteFaceGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Face Group</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceGroupResponse
+        /// </returns>
+        public async Task<DeleteFaceGroupResponse> DeleteFaceGroupAsync(DeleteFaceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteFaceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Face</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceRecordResponse
+        /// </returns>
+        public DeleteFaceRecordResponse DeleteFaceRecordWithOptions(DeleteFaceRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFaceRecord",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFaceRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Face</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceRecordResponse
+        /// </returns>
+        public async Task<DeleteFaceRecordResponse> DeleteFaceRecordWithOptionsAsync(DeleteFaceRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFaceRecord",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFaceRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Face</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceRecordResponse
+        /// </returns>
+        public DeleteFaceRecordResponse DeleteFaceRecord(DeleteFaceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteFaceRecordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Face</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFaceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaceRecordResponse
+        /// </returns>
+        public async Task<DeleteFaceRecordResponse> DeleteFaceRecordAsync(DeleteFaceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteFaceRecordWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2218,7 +2682,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全球证件ocr识别接口</para>
+        /// <para>Global Document OCR Recognition Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2308,7 +2772,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全球证件ocr识别接口</para>
+        /// <para>Global Document OCR Recognition Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2398,7 +2862,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全球证件ocr识别接口</para>
+        /// <para>Global Document OCR Recognition Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2416,7 +2880,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全球证件ocr识别接口</para>
+        /// <para>Global Document OCR Recognition Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2434,7 +2898,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ekyc纯服务端接口</para>
+        /// <para>This topic describes how to integrate with ID Verification using only the server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2526,7 +2990,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ekyc纯服务端接口</para>
+        /// <para>This topic describes how to integrate with ID Verification using only the server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2618,7 +3082,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ekyc纯服务端接口</para>
+        /// <para>This topic describes how to integrate with ID Verification using only the server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2636,7 +3100,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ekyc纯服务端接口</para>
+        /// <para>This topic describes how to integrate with ID Verification using only the server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2654,7 +3118,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸比对</para>
+        /// <para>This topic describes how to integrate FaceCompare using only the server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2671,6 +3135,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureQualityCheck))
+            {
+                query["FacePictureQualityCheck"] = request.FacePictureQualityCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
                 query["MerchantBizId"] = request.MerchantBizId;
@@ -2714,7 +3182,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸比对</para>
+        /// <para>This topic describes how to integrate FaceCompare using only the server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2731,6 +3199,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureQualityCheck))
+            {
+                query["FacePictureQualityCheck"] = request.FacePictureQualityCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
                 query["MerchantBizId"] = request.MerchantBizId;
@@ -2774,7 +3246,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸比对</para>
+        /// <para>This topic describes how to integrate FaceCompare using only the server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2792,7 +3264,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸比对</para>
+        /// <para>This topic describes how to integrate FaceCompare using only the server-side API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2810,7 +3282,251 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际人脸保镖纯服务端接口</para>
+        /// <para>Face Duplication Detection API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FaceDuplicationCheckIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FaceDuplicationCheckIntlResponse
+        /// </returns>
+        public FaceDuplicationCheckIntlResponse FaceDuplicationCheckIntlWithOptions(FaceDuplicationCheckIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRegistration))
+            {
+                body["AutoRegistration"] = request.AutoRegistration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceGroupCodes))
+            {
+                body["FaceGroupCodes"] = request.FaceGroupCodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceRegisterGroupCode))
+            {
+                body["FaceRegisterGroupCode"] = request.FaceRegisterGroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceVerifyThreshold))
+            {
+                body["FaceVerifyThreshold"] = request.FaceVerifyThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
+            {
+                body["Liveness"] = request.Liveness;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                body["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                body["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnFaces))
+            {
+                body["ReturnFaces"] = request.ReturnFaces;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaveFacePicture))
+            {
+                body["SaveFacePicture"] = request.SaveFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                body["SceneCode"] = request.SceneCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePicture))
+            {
+                body["SourceFacePicture"] = request.SourceFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePictureUrl))
+            {
+                body["SourceFacePictureUrl"] = request.SourceFacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFacePicture))
+            {
+                body["TargetFacePicture"] = request.TargetFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFacePictureUrl))
+            {
+                body["TargetFacePictureUrl"] = request.TargetFacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyModel))
+            {
+                body["VerifyModel"] = request.VerifyModel;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FaceDuplicationCheckIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FaceDuplicationCheckIntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Face Duplication Detection API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FaceDuplicationCheckIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FaceDuplicationCheckIntlResponse
+        /// </returns>
+        public async Task<FaceDuplicationCheckIntlResponse> FaceDuplicationCheckIntlWithOptionsAsync(FaceDuplicationCheckIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRegistration))
+            {
+                body["AutoRegistration"] = request.AutoRegistration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceGroupCodes))
+            {
+                body["FaceGroupCodes"] = request.FaceGroupCodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceRegisterGroupCode))
+            {
+                body["FaceRegisterGroupCode"] = request.FaceRegisterGroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceVerifyThreshold))
+            {
+                body["FaceVerifyThreshold"] = request.FaceVerifyThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
+            {
+                body["Liveness"] = request.Liveness;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                body["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                body["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnFaces))
+            {
+                body["ReturnFaces"] = request.ReturnFaces;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaveFacePicture))
+            {
+                body["SaveFacePicture"] = request.SaveFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                body["SceneCode"] = request.SceneCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePicture))
+            {
+                body["SourceFacePicture"] = request.SourceFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceFacePictureUrl))
+            {
+                body["SourceFacePictureUrl"] = request.SourceFacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFacePicture))
+            {
+                body["TargetFacePicture"] = request.TargetFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFacePictureUrl))
+            {
+                body["TargetFacePictureUrl"] = request.TargetFacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyModel))
+            {
+                body["VerifyModel"] = request.VerifyModel;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FaceDuplicationCheckIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FaceDuplicationCheckIntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Face Duplication Detection API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FaceDuplicationCheckIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FaceDuplicationCheckIntlResponse
+        /// </returns>
+        public FaceDuplicationCheckIntlResponse FaceDuplicationCheckIntl(FaceDuplicationCheckIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return FaceDuplicationCheckIntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Face Duplication Detection API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FaceDuplicationCheckIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FaceDuplicationCheckIntlResponse
+        /// </returns>
+        public async Task<FaceDuplicationCheckIntlResponse> FaceDuplicationCheckIntlAsync(FaceDuplicationCheckIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await FaceDuplicationCheckIntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This topic describes how to set up the server for FACE_GUARD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2864,7 +3580,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际人脸保镖纯服务端接口</para>
+        /// <para>This topic describes how to set up the server for FACE_GUARD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2918,7 +3634,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际人脸保镖纯服务端接口</para>
+        /// <para>This topic describes how to set up the server for FACE_GUARD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2936,7 +3652,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际人脸保镖纯服务端接口</para>
+        /// <para>This topic describes how to set up the server for FACE_GUARD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2954,7 +3670,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>静默活体API 纯服务端</para>
+        /// <para>Passive liveness detection (FaceLiveness) is a service that detects whether a pre-captured facial image, submitted to an API operation, is a real face. The algorithm primarily detects presentation attacks, such as screen replays and printed photos. This service is suitable for low-risk business scen</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3026,7 +3742,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>静默活体API 纯服务端</para>
+        /// <para>Passive liveness detection (FaceLiveness) is a service that detects whether a pre-captured facial image, submitted to an API operation, is a real face. The algorithm primarily detects presentation attacks, such as screen replays and printed photos. This service is suitable for low-risk business scen</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3098,7 +3814,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>静默活体API 纯服务端</para>
+        /// <para>Passive liveness detection (FaceLiveness) is a service that detects whether a pre-captured facial image, submitted to an API operation, is a real face. The algorithm primarily detects presentation attacks, such as screen replays and printed photos. This service is suitable for low-risk business scen</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3116,7 +3832,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>静默活体API 纯服务端</para>
+        /// <para>Passive liveness detection (FaceLiveness) is a service that detects whether a pre-captured facial image, submitted to an API operation, is a real face. The algorithm primarily detects presentation attacks, such as screen replays and printed photos. This service is suitable for low-risk business scen</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3134,7 +3850,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>防伪回调接口</para>
+        /// <para>Anti-Fraud Callback Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3188,7 +3904,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>防伪回调接口</para>
+        /// <para>Anti-Fraud Callback Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3242,7 +3958,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>防伪回调接口</para>
+        /// <para>Anti-Fraud Callback Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3260,7 +3976,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>防伪回调接口</para>
+        /// <para>Anti-Fraud Callback Interface</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3278,7 +3994,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素有效期核验</para>
+        /// <para>This operation verifies the authenticity and consistency of a name, ID card number, and the start and end dates of the ID card\&quot;s validity period against an authoritative source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3352,7 +4068,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素有效期核验</para>
+        /// <para>This operation verifies the authenticity and consistency of a name, ID card number, and the start and end dates of the ID card\&quot;s validity period against an authoritative source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3426,7 +4142,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素有效期核验</para>
+        /// <para>This operation verifies the authenticity and consistency of a name, ID card number, and the start and end dates of the ID card\&quot;s validity period against an authoritative source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3444,7 +4160,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素有效期核验</para>
+        /// <para>This operation verifies the authenticity and consistency of a name, ID card number, and the start and end dates of the ID card\&quot;s validity period against an authoritative source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3462,7 +4178,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素国际版接口</para>
+        /// <para>Verifies that a name and an ID card number are consistent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3516,7 +4232,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素国际版接口</para>
+        /// <para>Verifies that a name and an ID card number are consistent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3570,7 +4286,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素国际版接口</para>
+        /// <para>Verifies that a name and an ID card number are consistent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3588,7 +4304,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份二要素国际版接口</para>
+        /// <para>Verifies that a name and an ID card number are consistent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3606,7 +4322,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认证初始化</para>
+        /// <para>Authentication Initialization</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3637,6 +4353,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["Authorize"] = request.Authorize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRegistration))
+            {
+                query["AutoRegistration"] = request.AutoRegistration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackToken))
             {
                 query["CallbackToken"] = request.CallbackToken;
@@ -3697,9 +4417,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["ExperienceCode"] = request.ExperienceCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceGroupCodes))
+            {
+                query["FaceGroupCodes"] = request.FaceGroupCodes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureUrl))
             {
                 query["FacePictureUrl"] = request.FacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceRegisterGroupCode))
+            {
+                query["FaceRegisterGroupCode"] = request.FaceRegisterGroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceVerifyThreshold))
+            {
+                query["FaceVerifyThreshold"] = request.FaceVerifyThreshold;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdFaceQuality))
             {
@@ -3757,9 +4489,17 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["ProductFlow"] = request.ProductFlow;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnFaces))
+            {
+                query["ReturnFaces"] = request.ReturnFaces;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnUrl))
             {
                 query["ReturnUrl"] = request.ReturnUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaveFacePicture))
+            {
+                query["SaveFacePicture"] = request.SaveFacePicture;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
             {
@@ -3785,9 +4525,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["StyleConfig"] = request.StyleConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFacePicture))
+            {
+                query["TargetFacePicture"] = request.TargetFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFacePictureUrl))
+            {
+                query["TargetFacePictureUrl"] = request.TargetFacePictureUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseNFC))
             {
                 query["UseNFC"] = request.UseNFC;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyModel))
+            {
+                query["VerifyModel"] = request.VerifyModel;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureBase64))
@@ -3816,7 +4568,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认证初始化</para>
+        /// <para>Authentication Initialization</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3847,6 +4599,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["Authorize"] = request.Authorize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRegistration))
+            {
+                query["AutoRegistration"] = request.AutoRegistration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackToken))
             {
                 query["CallbackToken"] = request.CallbackToken;
@@ -3907,9 +4663,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["ExperienceCode"] = request.ExperienceCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceGroupCodes))
+            {
+                query["FaceGroupCodes"] = request.FaceGroupCodes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureUrl))
             {
                 query["FacePictureUrl"] = request.FacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceRegisterGroupCode))
+            {
+                query["FaceRegisterGroupCode"] = request.FaceRegisterGroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceVerifyThreshold))
+            {
+                query["FaceVerifyThreshold"] = request.FaceVerifyThreshold;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdFaceQuality))
             {
@@ -3967,9 +4735,17 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["ProductFlow"] = request.ProductFlow;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnFaces))
+            {
+                query["ReturnFaces"] = request.ReturnFaces;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnUrl))
             {
                 query["ReturnUrl"] = request.ReturnUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaveFacePicture))
+            {
+                query["SaveFacePicture"] = request.SaveFacePicture;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
             {
@@ -3995,9 +4771,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["StyleConfig"] = request.StyleConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFacePicture))
+            {
+                query["TargetFacePicture"] = request.TargetFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFacePictureUrl))
+            {
+                query["TargetFacePictureUrl"] = request.TargetFacePictureUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseNFC))
             {
                 query["UseNFC"] = request.UseNFC;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyModel))
+            {
+                query["VerifyModel"] = request.VerifyModel;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureBase64))
@@ -4026,7 +4814,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认证初始化</para>
+        /// <para>Authentication Initialization</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4044,7 +4832,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认证初始化</para>
+        /// <para>Authentication Initialization</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4062,7 +4850,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户端连接保持</para>
+        /// <para>If your server makes infrequent calls to the ID Verification API, you can call the KeepaliveIntl operation to maintain the client connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4095,7 +4883,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户端连接保持</para>
+        /// <para>If your server makes infrequent calls to the ID Verification API, you can call the KeepaliveIntl operation to maintain the client connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4128,7 +4916,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户端连接保持</para>
+        /// <para>If your server makes infrequent calls to the ID Verification API, you can call the KeepaliveIntl operation to maintain the client connection.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4142,7 +4930,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户端连接保持</para>
+        /// <para>If your server makes infrequent calls to the ID Verification API, you can call the KeepaliveIntl operation to maintain the client connection.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4156,7 +4944,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号二要素核验API</para>
+        /// <para>Verifies the authenticity and consistency of a mobile number and name against an authoritative data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4210,7 +4998,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号二要素核验API</para>
+        /// <para>Verifies the authenticity and consistency of a mobile number and name against an authoritative data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4264,7 +5052,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号二要素核验API</para>
+        /// <para>Verifies the authenticity and consistency of a mobile number and name against an authoritative data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4282,7 +5070,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手机号二要素核验API</para>
+        /// <para>Verifies the authenticity and consistency of a mobile number and name against an authoritative data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4448,6 +5236,726 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await Mobile3MetaVerifyIntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改人脸库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFaceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFaceGroupResponse
+        /// </returns>
+        public ModifyFaceGroupResponse ModifyFaceGroupWithOptions(ModifyFaceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyFaceGroup",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyFaceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改人脸库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFaceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFaceGroupResponse
+        /// </returns>
+        public async Task<ModifyFaceGroupResponse> ModifyFaceGroupWithOptionsAsync(ModifyFaceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyFaceGroup",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyFaceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改人脸库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFaceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFaceGroupResponse
+        /// </returns>
+        public ModifyFaceGroupResponse ModifyFaceGroup(ModifyFaceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyFaceGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改人脸库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFaceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFaceGroupResponse
+        /// </returns>
+        public async Task<ModifyFaceGroupResponse> ModifyFaceGroupAsync(ModifyFaceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyFaceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增人脸</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFaceRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFaceRecordResponse
+        /// </returns>
+        public ModifyFaceRecordResponse ModifyFaceRecordWithOptions(ModifyFaceRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceGroupCode))
+            {
+                body["FaceGroupCode"] = request.FaceGroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImgOssInfos))
+            {
+                body["ImgOssInfos"] = request.ImgOssInfos;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyFaceRecord",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyFaceRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增人脸</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFaceRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFaceRecordResponse
+        /// </returns>
+        public async Task<ModifyFaceRecordResponse> ModifyFaceRecordWithOptionsAsync(ModifyFaceRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceGroupCode))
+            {
+                body["FaceGroupCode"] = request.FaceGroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImgOssInfos))
+            {
+                body["ImgOssInfos"] = request.ImgOssInfos;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyFaceRecord",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyFaceRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增人脸</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFaceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFaceRecordResponse
+        /// </returns>
+        public ModifyFaceRecordResponse ModifyFaceRecord(ModifyFaceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyFaceRecordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增人脸</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyFaceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyFaceRecordResponse
+        /// </returns>
+        public async Task<ModifyFaceRecordResponse> ModifyFaceRecordAsync(ModifyFaceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyFaceRecordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询人脸库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryFaceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryFaceGroupResponse
+        /// </returns>
+        public QueryFaceGroupResponse QueryFaceGroupWithOptions(QueryFaceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCode))
+            {
+                query["GroupCode"] = request.GroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryFaceGroup",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryFaceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询人脸库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryFaceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryFaceGroupResponse
+        /// </returns>
+        public async Task<QueryFaceGroupResponse> QueryFaceGroupWithOptionsAsync(QueryFaceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCode))
+            {
+                query["GroupCode"] = request.GroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryFaceGroup",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryFaceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询人脸库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryFaceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryFaceGroupResponse
+        /// </returns>
+        public QueryFaceGroupResponse QueryFaceGroup(QueryFaceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryFaceGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询人脸库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryFaceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryFaceGroupResponse
+        /// </returns>
+        public async Task<QueryFaceGroupResponse> QueryFaceGroupAsync(QueryFaceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryFaceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询人脸记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryFaceRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryFaceRecordResponse
+        /// </returns>
+        public QueryFaceRecordResponse QueryFaceRecordWithOptions(QueryFaceRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceGroupCode))
+            {
+                query["FaceGroupCode"] = request.FaceGroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceId))
+            {
+                query["FaceId"] = request.FaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegistrationType))
+            {
+                query["RegistrationType"] = request.RegistrationType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryFaceRecord",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryFaceRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询人脸记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryFaceRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryFaceRecordResponse
+        /// </returns>
+        public async Task<QueryFaceRecordResponse> QueryFaceRecordWithOptionsAsync(QueryFaceRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceGroupCode))
+            {
+                query["FaceGroupCode"] = request.FaceGroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceId))
+            {
+                query["FaceId"] = request.FaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantUserId))
+            {
+                query["MerchantUserId"] = request.MerchantUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegistrationType))
+            {
+                query["RegistrationType"] = request.RegistrationType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryFaceRecord",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryFaceRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询人脸记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryFaceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryFaceRecordResponse
+        /// </returns>
+        public QueryFaceRecordResponse QueryFaceRecord(QueryFaceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryFaceRecordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询人脸记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryFaceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryFaceRecordResponse
+        /// </returns>
+        public async Task<QueryFaceRecordResponse> QueryFaceRecordAsync(QueryFaceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryFaceRecordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取临时token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TempAccessTokenIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TempAccessTokenIntlResponse
+        /// </returns>
+        public TempAccessTokenIntlResponse TempAccessTokenIntlWithOptions(TempAccessTokenIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TempAccessTokenIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TempAccessTokenIntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取临时token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TempAccessTokenIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TempAccessTokenIntlResponse
+        /// </returns>
+        public async Task<TempAccessTokenIntlResponse> TempAccessTokenIntlWithOptionsAsync(TempAccessTokenIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TempAccessTokenIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TempAccessTokenIntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取临时token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TempAccessTokenIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TempAccessTokenIntlResponse
+        /// </returns>
+        public TempAccessTokenIntlResponse TempAccessTokenIntl(TempAccessTokenIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TempAccessTokenIntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取临时token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TempAccessTokenIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TempAccessTokenIntlResponse
+        /// </returns>
+        public async Task<TempAccessTokenIntlResponse> TempAccessTokenIntlAsync(TempAccessTokenIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TempAccessTokenIntlWithOptionsAsync(request, runtime);
         }
 
     }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DocOcrMaxResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Return message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EB35****87EBA1</para>
@@ -35,11 +39,16 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Return result</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DocOcrMaxResponseBodyResult Result { get; set; }
         public class DocOcrMaxResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>Card and document recognition result	Only returned when the interface response is successful</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///   &quot;docType&quot;: &quot;PPTW01&quot;,
@@ -62,6 +71,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtIdInfo { get; set; }
 
             /// <summary>
+            /// <para>Whether the authentication passed.</para>
+            /// <list type="bullet">
+            /// <item><description>Y: Passed.</description></item>
+            /// <item><description>N: Not passed.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Y</para>
             /// </summary>
@@ -70,6 +85,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
+            /// <para>Sub-result code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200</para>
             /// </summary>
@@ -78,6 +95,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
+            /// <para>Authentication ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hk573be80f944d95ac812e0*******a8</para>
             /// </summary>

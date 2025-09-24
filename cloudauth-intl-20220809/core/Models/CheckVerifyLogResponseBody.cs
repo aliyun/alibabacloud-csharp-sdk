@@ -81,6 +81,29 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             [Validation(Required=false)]
             public string InterruptPage { get; set; }
 
+            /// <summary>
+            /// <para>The page where the authentication process stops. Possible English values:</para>
+            /// <para>The following are the values in an unordered list:</para>
+            /// <list type="bullet">
+            /// <item><description><para>LOADING</para>
+            /// </description></item>
+            /// <item><description><para>GUIDE</para>
+            /// </description></item>
+            /// <item><description><para>FACE</para>
+            /// </description></item>
+            /// <item><description><para>OCR_SCAN</para>
+            /// </description></item>
+            /// <item><description><para>OCR_RESULT</para>
+            /// </description></item>
+            /// <item><description><para>NFC_INPUT</para>
+            /// </description></item>
+            /// <item><description><para>NFC_READ</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>LOADING</para>
+            /// </summary>
             [NameInMap("InterruptPageEn")]
             [Validation(Required=false)]
             public string InterruptPageEn { get; set; }
@@ -92,6 +115,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             [Validation(Required=false)]
             public List<string> LogInfo { get; set; }
 
+            /// <summary>
+            /// <para>SDK Operation Log Details (English Version)</para>
+            /// </summary>
             [NameInMap("LogInfoEn")]
             [Validation(Required=false)]
             public List<string> LogInfoEn { get; set; }

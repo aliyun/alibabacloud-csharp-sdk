@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DeepfakeDetectIntlRequest : TeaModel {
         /// <summary>
+        /// <para>Input the Base64 encoded format of the face image.</para>
+        /// <remarks>
+        /// <para>Choose one of FaceUrl or FaceBase64 to input.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>/9j/4AAQSkZJRgABAQAASxxxxxxx</para>
         /// </summary>
@@ -18,6 +23,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceBase64 { get; set; }
 
         /// <summary>
+        /// <para>Input <b>IMAGE</b>, indicating a face image.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>IMAGE</para>
         /// </summary>
@@ -26,6 +33,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceInputType { get; set; }
 
         /// <summary>
+        /// <para>Input the URL address of the face image.</para>
+        /// <remarks>
+        /// <para>Choose one of FaceUrl or FaceBase64 to input.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg</a></para>
         /// </summary>
@@ -34,6 +46,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceUrl { get; set; }
 
         /// <summary>
+        /// <para>A unique identifier for the merchant\&quot;s request, consisting of a 32-character alphanumeric combination. The first few characters are composed of a custom abbreviation defined by the merchant, the middle part can include a period of time, and the latter part can use a random or incremental sequence.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
+        /// <para>The product solution to be integrated. Value: <b>FACE_DEEPFAKE</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +68,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
+        /// <para>Your custom authentication scenario ID, used for querying related records by entering this scenario ID in the console later. Supports a combination of 10 characters, including letters, numbers, or underscores.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
         /// </summary>
