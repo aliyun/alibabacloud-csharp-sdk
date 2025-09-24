@@ -1,3 +1,6 @@
+2025-09-24 Version: 4.0.1
+- Generated csharp 2017-05-25 for Dysmsapi.
+
 2025-09-17 Version: 3.3.0
 - Support API SendLogisticsSms.
 - Support API VerifyLogisticsSmsMailNo.
