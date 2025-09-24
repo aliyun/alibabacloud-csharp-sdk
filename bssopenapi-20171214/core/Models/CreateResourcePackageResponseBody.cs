@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class CreateResourcePackageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -19,16 +17,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The data returned.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateResourcePackageResponseBodyData Data { get; set; }
         public class CreateResourcePackageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the resource plan.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>OSSBAG-cn-****s</para>
             /// </summary>
@@ -37,8 +30,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the order.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>202407022550621</para>
             /// </summary>
@@ -49,8 +40,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Successful!</para>
         /// </summary>
@@ -59,8 +48,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>202407022550621</para>
         /// </summary>
@@ -69,8 +56,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>6000EE23-274B-4E07-A697-FF2E999520A4</para>
         /// </summary>
@@ -79,8 +64,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

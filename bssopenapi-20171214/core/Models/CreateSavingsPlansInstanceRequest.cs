@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
 {
     public class CreateSavingsPlansInstanceRequest : TeaModel {
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
         /// <summary>
         /// <para>The code of the service.</para>
         /// <para>This parameter is required.</para>

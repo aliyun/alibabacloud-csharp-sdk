@@ -501,6 +501,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             {
                 query["UserRemark"] = request.UserRemark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Emails))
+            {
+                query["emails"] = request.Emails;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -578,6 +582,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserRemark))
             {
                 query["UserRemark"] = request.UserRemark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Emails))
+            {
+                query["emails"] = request.Emails;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2127,6 +2135,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
                 request.ExtendMapShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExtendMap, "ExtendMap", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
             {
                 query["CommodityCode"] = request.CommodityCode;
@@ -2215,6 +2227,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
                 request.ExtendMapShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExtendMap, "ExtendMap", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
             {
                 query["CommodityCode"] = request.CommodityCode;
@@ -7034,7 +7050,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <ol>
         /// <item><description><b>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</b></description></item>
         /// <item><description>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</description></item>
-        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
+        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -7097,7 +7113,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <ol>
         /// <item><description><b>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</b></description></item>
         /// <item><description>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</description></item>
-        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
+        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -7160,7 +7176,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <ol>
         /// <item><description><b>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</b></description></item>
         /// <item><description>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</description></item>
-        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
+        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -7187,7 +7203,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <ol>
         /// <item><description><b>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</b></description></item>
         /// <item><description>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</description></item>
-        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
+        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -7682,6 +7698,174 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对客订单支付接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PayOrderResponse
+        /// </returns>
+        public PayOrderResponse PayOrderWithOptions(PayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuyerId))
+            {
+                query["BuyerId"] = request.BuyerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIds))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaySubmitUid))
+            {
+                query["PaySubmitUid"] = request.PaySubmitUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayerId))
+            {
+                query["PayerId"] = request.PayerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PayOrder",
+                Version = "2017-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PayOrderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对客订单支付接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PayOrderResponse
+        /// </returns>
+        public async Task<PayOrderResponse> PayOrderWithOptionsAsync(PayOrderRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuyerId))
+            {
+                query["BuyerId"] = request.BuyerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIds))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["OrderId"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaySubmitUid))
+            {
+                query["PaySubmitUid"] = request.PaySubmitUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayerId))
+            {
+                query["PayerId"] = request.PayerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PayOrder",
+                Version = "2017-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PayOrderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对客订单支付接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PayOrderResponse
+        /// </returns>
+        public PayOrderResponse PayOrder(PayOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PayOrderWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对客订单支付接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PayOrderResponse
+        /// </returns>
+        public async Task<PayOrderResponse> PayOrderAsync(PayOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PayOrderWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13762,7 +13946,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <ol>
         /// <item><description>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</description></item>
         /// <item><description>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</description></item>
-        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
+        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -13829,7 +14013,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <ol>
         /// <item><description>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</description></item>
         /// <item><description>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</description></item>
-        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
+        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -13896,7 +14080,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <ol>
         /// <item><description>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</description></item>
         /// <item><description>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</description></item>
-        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
+        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -13923,7 +14107,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214
         /// <ol>
         /// <item><description>Refunds are applicable only for the actual paid amount. Vouchers used for the purchase are non-refundable.</description></item>
         /// <item><description>Check the information about unsubscription and confirm the unsubscription terms and refundable amount. The resource that is unsubscribed cannot be restored.</description></item>
-        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/zh/user-center/user-guide/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
+        /// <item><description>For more information, see <a href="https://www.alibabacloud.com/help/en/user-center/refund-rules">Rules for unsubscribing from resources</a>.</description></item>
         /// </ol>
         /// </description>
         /// 

@@ -89,13 +89,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
             /// <summary>
             /// <para>The status of the financial relationship between the management account and the member.</para>
             /// <list type="bullet">
-            /// <item><description>RELATED 【Association established】</description></item>
-            /// <item><description>CONFIRMING 【To be confirmed by the other party】</description></item>
-            /// <item><description>REJECTED 【Refused by the other party】</description></item>
-            /// <item><description>CONNECTION_CANCELED 【Financial sub-account cancel request】</description></item>
-            /// <item><description>CONNECTION_MASTER_CANCEL 【Financial master account cancel invitation】</description></item>
-            /// <item><description>CHANGE_CONFIRMING 【Relationship change to be confirmed】</description></item>
-            /// <item><description>INITIAL 【Initial new relationship status】</description></item>
+            /// <item><description>RELATED [Association established]</description></item>
+            /// <item><description>CONFIRMING [To be confirmed by the other party]</description></item>
+            /// <item><description>REJECTED [Refused by the other party]</description></item>
+            /// <item><description>CONNECTION_CANCELED [Financial sub-account cancel request]</description></item>
+            /// <item><description>CONNECTION_MASTER_CANCEL [Financial master account cancel invitation]</description></item>
+            /// <item><description>CHANGE_CONFIRMING [Relationship change to be confirmed]</description></item>
+            /// <item><description>INITIAL [Initial new relationship status]</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

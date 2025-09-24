@@ -112,6 +112,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public string UserRemark { get; set; }
 
+        [NameInMap("emails")]
+        [Validation(Required=false)]
+        public string Emails { get; set; }
+
     }
 
 }

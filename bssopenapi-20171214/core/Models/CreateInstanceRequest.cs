@@ -77,6 +77,19 @@ namespace AlibabaCloud.SDK.BssOpenApi20171214.Models
         [Validation(Required=false)]
         public int? Period { get; set; }
 
+        /// <summary>
+        /// <para>The cycle type of the prepaid period</para>
+        /// <list type="bullet">
+        /// <item><description>PricingCycle=1 indicates that the unit of the prepaid period is in years; </description></item>
+        /// <item><description>PricingCycle=2 indicates that the unit of the prepaid period is in months; </description></item>
+        /// <item><description>PricingCycle=3 indicates that the unit of the prepaid period is in days;</description></item>
+        /// <item><description>Default value: PricingCycle=2</description></item>
+        /// </list>
+        /// <para>Applicable only to certain product types (ProductType being ddos_originpre_public_cn, ddosDip, ddoscoo, ddos_originpre_public_intl, ddosDip_intl, ddoscoo_intl)</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
         public long? PricingCycle { get; set; }
