@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeSmartStatisticsPageListResponseBody : TeaModel {
         /// <summary>
+        /// <para>Current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>Returned data list.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeSmartStatisticsPageListResponseBodyItems> Items { get; set; }
         public class DescribeSmartStatisticsPageListResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>Date. Format: <i>month/day</i></para>
+            /// 
             /// <b>Example:</b>
             /// <para>11/8</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Date { get; set; }
 
             /// <summary>
+            /// <para>Pass rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>25</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string PassRate { get; set; }
 
             /// <summary>
+            /// <para>Product solution Code, please refer to the Enhanced Real Person Help Documentation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SMART_VERIFY</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string ProductCode { get; set; }
 
             /// <summary>
+            /// <para>Scene ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20**40</para>
             /// </summary>
@@ -53,11 +66,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [Validation(Required=false)]
             public long? SceneId { get; set; }
 
+            /// <summary>
+            /// <para>Scene name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>****实名认证</para>
+            /// </summary>
             [NameInMap("SceneName")]
             [Validation(Required=false)]
             public string SceneName { get; set; }
 
             /// <summary>
+            /// <para>Number of successful calls.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -66,6 +87,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
+            /// <para>Total count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4</para>
             /// </summary>
@@ -76,6 +99,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
+        /// <para>Number of items displayed per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -84,6 +109,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>96943***4E39F805</para>
         /// </summary>
@@ -92,6 +119,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>29</para>
         /// </summary>
@@ -100,6 +129,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
+        /// <para>Total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>

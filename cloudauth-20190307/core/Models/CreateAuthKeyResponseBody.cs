@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CreateAuthKeyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The key that can be used for authorization activation. The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>auth.1KQMcnLd4m37LN2D0F0WCD-1qtQI$</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string AuthKey { get; set; }
 
         /// <summary>
+        /// <para>The ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>

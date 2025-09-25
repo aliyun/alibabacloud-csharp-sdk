@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeSmartStatisticsPageListRequest : TeaModel {
         /// <summary>
+        /// <para>Current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>End time, using UTC format, in the form of yyyy-MM-ddTHH:mm:ssZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>Scene ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SceneId { get; set; }
 
         /// <summary>
+        /// <para>ServiceCode for the real person cloud product, only value: <b>cloudauthst</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cloudauthst</para>
         /// </summary>
@@ -58,6 +64,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
+        /// <para>Start time, using UTC format, in the form of yyyy-MM-ddTHH:mm:ssZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

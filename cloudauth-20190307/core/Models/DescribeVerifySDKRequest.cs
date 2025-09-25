@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeVerifySDKRequest : TeaModel {
         /// <summary>
+        /// <para>The task ID for generating the SDK.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

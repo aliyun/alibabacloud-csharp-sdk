@@ -1048,6 +1048,30 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await CompareFacesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to submit authentication materials for verification and comparison, and it synchronously returns the authentication result.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Interface Name: ContrastFaceVerify.</description></item>
+        /// <item><description>Service Address: cloudauth.aliyuncs.com.</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// <item><description>Interface Description: An interface for real person authentication through server-side integration.</description></item>
+        /// </list>
+        /// <h4>Image Format Requirements</h4>
+        /// <para>When performing real person authentication, please ensure that the images you upload meet all of the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>Recent photo with a clear, unobstructed, and natural expression, facing the camera directly.</description></item>
+        /// <item><description>Clear and properly exposed photo, without overly dark, bright, or haloed faces, and with minimal angle deviation.</description></item>
+        /// <item><description>Resolution not exceeding 1920<em>1080, at least 640</em>480, with the shorter side recommended to be resized to 720 pixels, and a compression ratio greater than 0.9.</description></item>
+        /// <item><description>Photo size: &lt;1MB.</description></item>
+        /// <item><description>Supports 90, 180, and 270-degree photos; in cases of multiple faces, the largest face will be selected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ContrastFaceVerifyRequest
         /// </param>
@@ -1159,6 +1183,30 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<ContrastFaceVerifyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to submit authentication materials for verification and comparison, and it synchronously returns the authentication result.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Interface Name: ContrastFaceVerify.</description></item>
+        /// <item><description>Service Address: cloudauth.aliyuncs.com.</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// <item><description>Interface Description: An interface for real person authentication through server-side integration.</description></item>
+        /// </list>
+        /// <h4>Image Format Requirements</h4>
+        /// <para>When performing real person authentication, please ensure that the images you upload meet all of the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>Recent photo with a clear, unobstructed, and natural expression, facing the camera directly.</description></item>
+        /// <item><description>Clear and properly exposed photo, without overly dark, bright, or haloed faces, and with minimal angle deviation.</description></item>
+        /// <item><description>Resolution not exceeding 1920<em>1080, at least 640</em>480, with the shorter side recommended to be resized to 720 pixels, and a compression ratio greater than 0.9.</description></item>
+        /// <item><description>Photo size: &lt;1MB.</description></item>
+        /// <item><description>Supports 90, 180, and 270-degree photos; in cases of multiple faces, the largest face will be selected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ContrastFaceVerifyRequest
         /// </param>
@@ -1270,6 +1318,30 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<ContrastFaceVerifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to submit authentication materials for verification and comparison, and it synchronously returns the authentication result.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Interface Name: ContrastFaceVerify.</description></item>
+        /// <item><description>Service Address: cloudauth.aliyuncs.com.</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// <item><description>Interface Description: An interface for real person authentication through server-side integration.</description></item>
+        /// </list>
+        /// <h4>Image Format Requirements</h4>
+        /// <para>When performing real person authentication, please ensure that the images you upload meet all of the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>Recent photo with a clear, unobstructed, and natural expression, facing the camera directly.</description></item>
+        /// <item><description>Clear and properly exposed photo, without overly dark, bright, or haloed faces, and with minimal angle deviation.</description></item>
+        /// <item><description>Resolution not exceeding 1920<em>1080, at least 640</em>480, with the shorter side recommended to be resized to 720 pixels, and a compression ratio greater than 0.9.</description></item>
+        /// <item><description>Photo size: &lt;1MB.</description></item>
+        /// <item><description>Supports 90, 180, and 270-degree photos; in cases of multiple faces, the largest face will be selected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ContrastFaceVerifyRequest
         /// </param>
@@ -1283,6 +1355,30 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return ContrastFaceVerifyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This interface is used to submit authentication materials for verification and comparison, and it synchronously returns the authentication result.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Interface Name: ContrastFaceVerify.</description></item>
+        /// <item><description>Service Address: cloudauth.aliyuncs.com.</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// <item><description>Interface Description: An interface for real person authentication through server-side integration.</description></item>
+        /// </list>
+        /// <h4>Image Format Requirements</h4>
+        /// <para>When performing real person authentication, please ensure that the images you upload meet all of the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>Recent photo with a clear, unobstructed, and natural expression, facing the camera directly.</description></item>
+        /// <item><description>Clear and properly exposed photo, without overly dark, bright, or haloed faces, and with minimal angle deviation.</description></item>
+        /// <item><description>Resolution not exceeding 1920<em>1080, at least 640</em>480, with the shorter side recommended to be resized to 720 pixels, and a compression ratio greater than 0.9.</description></item>
+        /// <item><description>Photo size: &lt;1MB.</description></item>
+        /// <item><description>Supports 90, 180, and 270-degree photos; in cases of multiple faces, the largest face will be selected.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ContrastFaceVerifyRequest
         /// </param>
@@ -1488,6 +1584,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return contrastFaceVerifyResp;
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CreateAuthKey to get the authorization key, which is used for offline face recognition SDK activation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests via HTTPS POST and GET methods.</para>
+        /// <remarks>
+        /// <para>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAuthKeyRequest
         /// </param>
@@ -1537,6 +1646,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<CreateAuthKeyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CreateAuthKey to get the authorization key, which is used for offline face recognition SDK activation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests via HTTPS POST and GET methods.</para>
+        /// <remarks>
+        /// <para>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAuthKeyRequest
         /// </param>
@@ -1586,6 +1708,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<CreateAuthKeyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CreateAuthKey to get the authorization key, which is used for offline face recognition SDK activation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests via HTTPS POST and GET methods.</para>
+        /// <remarks>
+        /// <para>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAuthKeyRequest
         /// </param>
@@ -1599,6 +1734,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return CreateAuthKeyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CreateAuthKey to get the authorization key, which is used for offline face recognition SDK activation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests via HTTPS POST and GET methods.</para>
+        /// <remarks>
+        /// <para>The authorization key is valid for 30 minutes and cannot be reused. It is recommended to re-obtain it before each activation.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAuthKeyRequest
         /// </param>
@@ -1612,6 +1760,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await CreateAuthKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CreateVerifySetting to create a verification scenario configuration. This operation is equivalent to creating a new verification scenario on the console.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Only supports sending requests via HTTPS POST.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateVerifySettingRequest
         /// </param>
@@ -1669,6 +1827,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<CreateVerifySettingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CreateVerifySetting to create a verification scenario configuration. This operation is equivalent to creating a new verification scenario on the console.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Only supports sending requests via HTTPS POST.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateVerifySettingRequest
         /// </param>
@@ -1726,6 +1894,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<CreateVerifySettingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CreateVerifySetting to create a verification scenario configuration. This operation is equivalent to creating a new verification scenario on the console.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Only supports sending requests via HTTPS POST.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateVerifySettingRequest
         /// </param>
@@ -1739,6 +1917,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return CreateVerifySettingWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call CreateVerifySetting to create a verification scenario configuration. This operation is equivalent to creating a new verification scenario on the console.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Only supports sending requests via HTTPS POST.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateVerifySettingRequest
         /// </param>
@@ -2130,7 +2318,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证核验</para>
+        /// <para>Credential verification</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2232,7 +2420,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证核验</para>
+        /// <para>Credential verification</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2334,7 +2522,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证核验</para>
+        /// <para>Credential verification</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2352,7 +2540,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证核验</para>
+        /// <para>Credential verification</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3174,8 +3362,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片要素核验获取认证结果</para>
+        /// <para>Obtain Authentication Results from Image Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After receiving the callback notification, you can use this interface on the server side to obtain the corresponding authentication status and information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCardVerifyRequest
@@ -3216,8 +3409,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片要素核验获取认证结果</para>
+        /// <para>Obtain Authentication Results from Image Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After receiving the callback notification, you can use this interface on the server side to obtain the corresponding authentication status and information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCardVerifyRequest
@@ -3258,8 +3456,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片要素核验获取认证结果</para>
+        /// <para>Obtain Authentication Results from Image Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After receiving the callback notification, you can use this interface on the server side to obtain the corresponding authentication status and information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCardVerifyRequest
@@ -3276,8 +3479,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片要素核验获取认证结果</para>
+        /// <para>Obtain Authentication Results from Image Element Verification</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After receiving the callback notification, you can use this interface on the server side to obtain the corresponding authentication status and information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCardVerifyRequest
@@ -3292,6 +3500,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await DescribeCardVerifyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeDeviceInfo to query device-related information, such as the validity period of authorization, business identifiers customized by the access party, and device ID, etc.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests using HTTPS POST and GET methods.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDeviceInfoRequest
         /// </param>
@@ -3353,6 +3571,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DescribeDeviceInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeDeviceInfo to query device-related information, such as the validity period of authorization, business identifiers customized by the access party, and device ID, etc.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests using HTTPS POST and GET methods.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDeviceInfoRequest
         /// </param>
@@ -3414,6 +3642,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DescribeDeviceInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeDeviceInfo to query device-related information, such as the validity period of authorization, business identifiers customized by the access party, and device ID, etc.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests using HTTPS POST and GET methods.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDeviceInfoRequest
         /// </param>
@@ -3427,6 +3665,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return DescribeDeviceInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeDeviceInfo to query device-related information, such as the validity period of authorization, business identifiers customized by the access party, and device ID, etc.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests using HTTPS POST and GET methods.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDeviceInfoRequest
         /// </param>
@@ -3442,7 +3690,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>金融级人脸保镖服务</para>
+        /// <para>Financial-Grade Face Guard Service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3496,7 +3744,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>金融级人脸保镖服务</para>
+        /// <para>Financial-Grade Face Guard Service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3550,7 +3798,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>金融级人脸保镖服务</para>
+        /// <para>Financial-Grade Face Guard Service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3568,7 +3816,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>金融级人脸保镖服务</para>
+        /// <para>Financial-Grade Face Guard Service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3584,6 +3832,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await DescribeFaceGuardRiskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After the mobile end of the integrator receives the callback, its server can call this interface to obtain the corresponding authentication status and authentication information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service Address: cloudauth.aliyuncs.com.</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeFaceVerifyRequest
         /// </param>
@@ -3629,6 +3890,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DescribeFaceVerifyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After the mobile end of the integrator receives the callback, its server can call this interface to obtain the corresponding authentication status and authentication information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service Address: cloudauth.aliyuncs.com.</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeFaceVerifyRequest
         /// </param>
@@ -3674,6 +3948,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DescribeFaceVerifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After the mobile end of the integrator receives the callback, its server can call this interface to obtain the corresponding authentication status and authentication information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service Address: cloudauth.aliyuncs.com.</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeFaceVerifyRequest
         /// </param>
@@ -3687,6 +3974,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return DescribeFaceVerifyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After the mobile end of the integrator receives the callback, its server can call this interface to obtain the corresponding authentication status and authentication information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service Address: cloudauth.aliyuncs.com.</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeFaceVerifyRequest
         /// </param>
@@ -3700,6 +4000,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await DescribeFaceVerifyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeOssUploadToken to get the Token required for uploading photos to OSS.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeOssUploadTokenRequest
         /// </param>
@@ -3728,6 +4033,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DescribeOssUploadTokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeOssUploadToken to get the Token required for uploading photos to OSS.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeOssUploadTokenRequest
         /// </param>
@@ -3756,6 +4066,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DescribeOssUploadTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeOssUploadToken to get the Token required for uploading photos to OSS.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DescribeOssUploadTokenResponse
         /// </returns>
@@ -3765,6 +4080,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return DescribeOssUploadTokenWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeOssUploadToken to get the Token required for uploading photos to OSS.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DescribeOssUploadTokenResponse
         /// </returns>
@@ -3776,7 +4096,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Open API新增金融级数据统计API</para>
+        /// <para>Open API adds financial-grade data statistics API</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3838,7 +4158,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Open API新增金融级数据统计API</para>
+        /// <para>Open API adds financial-grade data statistics API</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3900,7 +4220,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Open API新增金融级数据统计API</para>
+        /// <para>Open API adds financial-grade data statistics API</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3918,7 +4238,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Open API新增金融级数据统计API</para>
+        /// <para>Open API adds financial-grade data statistics API</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3934,6 +4254,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await DescribePageFaceVerifyDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enhanced Real Person Authentication Call Statistics Pagination Query Interface</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSmartStatisticsPageListRequest
         /// </param>
@@ -3991,6 +4316,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DescribeSmartStatisticsPageListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enhanced Real Person Authentication Call Statistics Pagination Query Interface</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSmartStatisticsPageListRequest
         /// </param>
@@ -4048,6 +4378,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DescribeSmartStatisticsPageListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enhanced Real Person Authentication Call Statistics Pagination Query Interface</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSmartStatisticsPageListRequest
         /// </param>
@@ -4061,6 +4396,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return DescribeSmartStatisticsPageListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enhanced Real Person Authentication Call Statistics Pagination Query Interface</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSmartStatisticsPageListRequest
         /// </param>
@@ -4074,6 +4414,22 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await DescribeSmartStatisticsPageListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the result of real-person authentication.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites: Before accessing this API, please ensure that you have completed the necessary preparations. For more details, see <a href="https://help.aliyun.com/document_detail/127471.html">Real Person Authentication Server-side Preparation</a> and <a href="https://help.aliyun.com/document_detail/127717.html">Liveness Face Verification Server-side Preparation</a>.</para>
+        /// <remarks>
+        /// <para>Alibaba Cloud Real Person Authentication only stores authentication data for the last 180 days. For any subsequent business use, please call this interface in a timely manner to retrieve and store the data yourself to avoid any impact on usage.
+        /// Request Method: HTTPS POST and GET.
+        /// Interface Description: After the mobile end of the access party receives the callback, its server can call this interface to obtain the corresponding authentication status and authentication information.
+        /// Applicable Scope: This interface is applicable to the authentication solution with SDK + server-side integration.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVerifyResultRequest
         /// </param>
@@ -4115,6 +4471,22 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DescribeVerifyResultResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the result of real-person authentication.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites: Before accessing this API, please ensure that you have completed the necessary preparations. For more details, see <a href="https://help.aliyun.com/document_detail/127471.html">Real Person Authentication Server-side Preparation</a> and <a href="https://help.aliyun.com/document_detail/127717.html">Liveness Face Verification Server-side Preparation</a>.</para>
+        /// <remarks>
+        /// <para>Alibaba Cloud Real Person Authentication only stores authentication data for the last 180 days. For any subsequent business use, please call this interface in a timely manner to retrieve and store the data yourself to avoid any impact on usage.
+        /// Request Method: HTTPS POST and GET.
+        /// Interface Description: After the mobile end of the access party receives the callback, its server can call this interface to obtain the corresponding authentication status and authentication information.
+        /// Applicable Scope: This interface is applicable to the authentication solution with SDK + server-side integration.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVerifyResultRequest
         /// </param>
@@ -4156,6 +4528,22 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DescribeVerifyResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the result of real-person authentication.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites: Before accessing this API, please ensure that you have completed the necessary preparations. For more details, see <a href="https://help.aliyun.com/document_detail/127471.html">Real Person Authentication Server-side Preparation</a> and <a href="https://help.aliyun.com/document_detail/127717.html">Liveness Face Verification Server-side Preparation</a>.</para>
+        /// <remarks>
+        /// <para>Alibaba Cloud Real Person Authentication only stores authentication data for the last 180 days. For any subsequent business use, please call this interface in a timely manner to retrieve and store the data yourself to avoid any impact on usage.
+        /// Request Method: HTTPS POST and GET.
+        /// Interface Description: After the mobile end of the access party receives the callback, its server can call this interface to obtain the corresponding authentication status and authentication information.
+        /// Applicable Scope: This interface is applicable to the authentication solution with SDK + server-side integration.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVerifyResultRequest
         /// </param>
@@ -4169,6 +4557,22 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return DescribeVerifyResultWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the result of real-person authentication.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites: Before accessing this API, please ensure that you have completed the necessary preparations. For more details, see <a href="https://help.aliyun.com/document_detail/127471.html">Real Person Authentication Server-side Preparation</a> and <a href="https://help.aliyun.com/document_detail/127717.html">Liveness Face Verification Server-side Preparation</a>.</para>
+        /// <remarks>
+        /// <para>Alibaba Cloud Real Person Authentication only stores authentication data for the last 180 days. For any subsequent business use, please call this interface in a timely manner to retrieve and store the data yourself to avoid any impact on usage.
+        /// Request Method: HTTPS POST and GET.
+        /// Interface Description: After the mobile end of the access party receives the callback, its server can call this interface to obtain the corresponding authentication status and authentication information.
+        /// Applicable Scope: This interface is applicable to the authentication solution with SDK + server-side integration.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVerifyResultRequest
         /// </param>
@@ -4182,6 +4586,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await DescribeVerifyResultWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeVerifySDK to get the offline SDK download address.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests via HTTPS POST and GET methods.
+        /// Interface Description: Obtain the SDK generation result based on the task ID for generating an offline facial recognition SDK.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVerifySDKRequest
         /// </param>
@@ -4219,6 +4634,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DescribeVerifySDKResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeVerifySDK to get the offline SDK download address.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests via HTTPS POST and GET methods.
+        /// Interface Description: Obtain the SDK generation result based on the task ID for generating an offline facial recognition SDK.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVerifySDKRequest
         /// </param>
@@ -4256,6 +4682,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DescribeVerifySDKResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeVerifySDK to get the offline SDK download address.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests via HTTPS POST and GET methods.
+        /// Interface Description: Obtain the SDK generation result based on the task ID for generating an offline facial recognition SDK.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVerifySDKRequest
         /// </param>
@@ -4269,6 +4706,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return DescribeVerifySDKWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeVerifySDK to get the offline SDK download address.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Supports sending requests via HTTPS POST and GET methods.
+        /// Interface Description: Obtain the SDK generation result based on the task ID for generating an offline facial recognition SDK.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVerifySDKRequest
         /// </param>
@@ -4282,6 +4730,27 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await DescribeVerifySDKWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeVerifyToken to initiate an authentication request and obtain an authentication Token. This interface is suitable for authentication solutions using SDK + server-side integration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Preparation for Access: When integrating this API, please ensure that the corresponding preparations have been completed. For details, see <a href="https://help.aliyun.com/document_detail/127536.html">Overview of Real Person Authentication Solution Integration Process</a> and <a href="https://help.aliyun.com/document_detail/127687.html">Overview of Live Face Verification Solution (Liveness Detection Solution) Integration Process</a>.
+        /// Request Method: HTTPS POST and GET
+        /// API Description: Before each authentication, use this interface to obtain an authentication Token (VerifyToken), which is used to link various interfaces in the authentication request.
+        /// Applicable Scope: This interface is suitable for wireless SDK integration.
+        /// Image Address: Use HTTP or HTTPS addresses that are publicly accessible over the Internet. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.
+        /// Image Restrictions:</para>
+        /// <list type="bullet">
+        /// <item><description>Relative or absolute paths of local images are not supported.</description></item>
+        /// <item><description>The size of a single image should be controlled within 2 MB to avoid algorithm retrieval timeout.</description></item>
+        /// <item><description>The face area in the image must be at least 64*64 pixels (px).</description></item>
+        /// <item><description>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request to ensure it does not exceed the limit.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVerifyTokenRequest
         /// </param>
@@ -4375,6 +4844,27 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DescribeVerifyTokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeVerifyToken to initiate an authentication request and obtain an authentication Token. This interface is suitable for authentication solutions using SDK + server-side integration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Preparation for Access: When integrating this API, please ensure that the corresponding preparations have been completed. For details, see <a href="https://help.aliyun.com/document_detail/127536.html">Overview of Real Person Authentication Solution Integration Process</a> and <a href="https://help.aliyun.com/document_detail/127687.html">Overview of Live Face Verification Solution (Liveness Detection Solution) Integration Process</a>.
+        /// Request Method: HTTPS POST and GET
+        /// API Description: Before each authentication, use this interface to obtain an authentication Token (VerifyToken), which is used to link various interfaces in the authentication request.
+        /// Applicable Scope: This interface is suitable for wireless SDK integration.
+        /// Image Address: Use HTTP or HTTPS addresses that are publicly accessible over the Internet. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.
+        /// Image Restrictions:</para>
+        /// <list type="bullet">
+        /// <item><description>Relative or absolute paths of local images are not supported.</description></item>
+        /// <item><description>The size of a single image should be controlled within 2 MB to avoid algorithm retrieval timeout.</description></item>
+        /// <item><description>The face area in the image must be at least 64*64 pixels (px).</description></item>
+        /// <item><description>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request to ensure it does not exceed the limit.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVerifyTokenRequest
         /// </param>
@@ -4468,6 +4958,27 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DescribeVerifyTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeVerifyToken to initiate an authentication request and obtain an authentication Token. This interface is suitable for authentication solutions using SDK + server-side integration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Preparation for Access: When integrating this API, please ensure that the corresponding preparations have been completed. For details, see <a href="https://help.aliyun.com/document_detail/127536.html">Overview of Real Person Authentication Solution Integration Process</a> and <a href="https://help.aliyun.com/document_detail/127687.html">Overview of Live Face Verification Solution (Liveness Detection Solution) Integration Process</a>.
+        /// Request Method: HTTPS POST and GET
+        /// API Description: Before each authentication, use this interface to obtain an authentication Token (VerifyToken), which is used to link various interfaces in the authentication request.
+        /// Applicable Scope: This interface is suitable for wireless SDK integration.
+        /// Image Address: Use HTTP or HTTPS addresses that are publicly accessible over the Internet. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.
+        /// Image Restrictions:</para>
+        /// <list type="bullet">
+        /// <item><description>Relative or absolute paths of local images are not supported.</description></item>
+        /// <item><description>The size of a single image should be controlled within 2 MB to avoid algorithm retrieval timeout.</description></item>
+        /// <item><description>The face area in the image must be at least 64*64 pixels (px).</description></item>
+        /// <item><description>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request to ensure it does not exceed the limit.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVerifyTokenRequest
         /// </param>
@@ -4481,6 +4992,27 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return DescribeVerifyTokenWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call DescribeVerifyToken to initiate an authentication request and obtain an authentication Token. This interface is suitable for authentication solutions using SDK + server-side integration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Preparation for Access: When integrating this API, please ensure that the corresponding preparations have been completed. For details, see <a href="https://help.aliyun.com/document_detail/127536.html">Overview of Real Person Authentication Solution Integration Process</a> and <a href="https://help.aliyun.com/document_detail/127687.html">Overview of Live Face Verification Solution (Liveness Detection Solution) Integration Process</a>.
+        /// Request Method: HTTPS POST and GET
+        /// API Description: Before each authentication, use this interface to obtain an authentication Token (VerifyToken), which is used to link various interfaces in the authentication request.
+        /// Applicable Scope: This interface is suitable for wireless SDK integration.
+        /// Image Address: Use HTTP or HTTPS addresses that are publicly accessible over the Internet. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.
+        /// Image Restrictions:</para>
+        /// <list type="bullet">
+        /// <item><description>Relative or absolute paths of local images are not supported.</description></item>
+        /// <item><description>The size of a single image should be controlled within 2 MB to avoid algorithm retrieval timeout.</description></item>
+        /// <item><description>The face area in the image must be at least 64*64 pixels (px).</description></item>
+        /// <item><description>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request to ensure it does not exceed the limit.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVerifyTokenRequest
         /// </param>
@@ -4494,6 +5026,27 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await DescribeVerifyTokenWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detect Validity Attributes in Face Photos</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Only supports sending requests via HTTPS POST.
+        /// Interface Description: Detects the validity-related attributes of faces in the input photo, which helps the business side to determine whether the photo meets their own business retention or comparison requirements. The currently supported face validity-related attributes include: whether it is a face, whether it is blurry, whether glasses are worn, face pose, whether it is a smile, etc.
+        /// Instructions for Uploading Image Addresses: When passing in images, you need to upload their corresponding HTTP, OSS addresses, or Base64 encoding.</para>
+        /// <list type="bullet">
+        /// <item><description>HTTP Address: A publicly accessible HTTP address. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.</description></item>
+        /// <item><description>Base64 Encoding: An image encoded through base64, with the format being <c>base64://&lt;image base64 string&gt;</c>.
+        /// Image Limitations:</description></item>
+        /// <item><description>Does not support relative or absolute paths of local images.</description></item>
+        /// <item><description>Please keep the size of a single image within 2 MB to avoid algorithm timeout.</description></item>
+        /// <item><description>There is an 8 MB size limit for the Body of a single request; please calculate the total size of all images and other information in the request and do not exceed the limit.</description></item>
+        /// <item><description>When using Base64 to pass images, the request method needs to be changed to POST; the header description of the image Base64 string, such as <c>data:image/png;base64</c>, should be removed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DetectFaceAttributesRequest
         /// </param>
@@ -4535,6 +5088,27 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DetectFaceAttributesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detect Validity Attributes in Face Photos</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Only supports sending requests via HTTPS POST.
+        /// Interface Description: Detects the validity-related attributes of faces in the input photo, which helps the business side to determine whether the photo meets their own business retention or comparison requirements. The currently supported face validity-related attributes include: whether it is a face, whether it is blurry, whether glasses are worn, face pose, whether it is a smile, etc.
+        /// Instructions for Uploading Image Addresses: When passing in images, you need to upload their corresponding HTTP, OSS addresses, or Base64 encoding.</para>
+        /// <list type="bullet">
+        /// <item><description>HTTP Address: A publicly accessible HTTP address. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.</description></item>
+        /// <item><description>Base64 Encoding: An image encoded through base64, with the format being <c>base64://&lt;image base64 string&gt;</c>.
+        /// Image Limitations:</description></item>
+        /// <item><description>Does not support relative or absolute paths of local images.</description></item>
+        /// <item><description>Please keep the size of a single image within 2 MB to avoid algorithm timeout.</description></item>
+        /// <item><description>There is an 8 MB size limit for the Body of a single request; please calculate the total size of all images and other information in the request and do not exceed the limit.</description></item>
+        /// <item><description>When using Base64 to pass images, the request method needs to be changed to POST; the header description of the image Base64 string, such as <c>data:image/png;base64</c>, should be removed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DetectFaceAttributesRequest
         /// </param>
@@ -4576,6 +5150,27 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<DetectFaceAttributesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detect Validity Attributes in Face Photos</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Only supports sending requests via HTTPS POST.
+        /// Interface Description: Detects the validity-related attributes of faces in the input photo, which helps the business side to determine whether the photo meets their own business retention or comparison requirements. The currently supported face validity-related attributes include: whether it is a face, whether it is blurry, whether glasses are worn, face pose, whether it is a smile, etc.
+        /// Instructions for Uploading Image Addresses: When passing in images, you need to upload their corresponding HTTP, OSS addresses, or Base64 encoding.</para>
+        /// <list type="bullet">
+        /// <item><description>HTTP Address: A publicly accessible HTTP address. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.</description></item>
+        /// <item><description>Base64 Encoding: An image encoded through base64, with the format being <c>base64://&lt;image base64 string&gt;</c>.
+        /// Image Limitations:</description></item>
+        /// <item><description>Does not support relative or absolute paths of local images.</description></item>
+        /// <item><description>Please keep the size of a single image within 2 MB to avoid algorithm timeout.</description></item>
+        /// <item><description>There is an 8 MB size limit for the Body of a single request; please calculate the total size of all images and other information in the request and do not exceed the limit.</description></item>
+        /// <item><description>When using Base64 to pass images, the request method needs to be changed to POST; the header description of the image Base64 string, such as <c>data:image/png;base64</c>, should be removed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DetectFaceAttributesRequest
         /// </param>
@@ -4589,6 +5184,27 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return DetectFaceAttributesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detect Validity Attributes in Face Photos</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Request Method: Only supports sending requests via HTTPS POST.
+        /// Interface Description: Detects the validity-related attributes of faces in the input photo, which helps the business side to determine whether the photo meets their own business retention or comparison requirements. The currently supported face validity-related attributes include: whether it is a face, whether it is blurry, whether glasses are worn, face pose, whether it is a smile, etc.
+        /// Instructions for Uploading Image Addresses: When passing in images, you need to upload their corresponding HTTP, OSS addresses, or Base64 encoding.</para>
+        /// <list type="bullet">
+        /// <item><description>HTTP Address: A publicly accessible HTTP address. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.</description></item>
+        /// <item><description>Base64 Encoding: An image encoded through base64, with the format being <c>base64://&lt;image base64 string&gt;</c>.
+        /// Image Limitations:</description></item>
+        /// <item><description>Does not support relative or absolute paths of local images.</description></item>
+        /// <item><description>Please keep the size of a single image within 2 MB to avoid algorithm timeout.</description></item>
+        /// <item><description>There is an 8 MB size limit for the Body of a single request; please calculate the total size of all images and other information in the request and do not exceed the limit.</description></item>
+        /// <item><description>When using Base64 to pass images, the request method needs to be changed to POST; the header description of the image Base64 string, such as <c>data:image/png;base64</c>, should be removed.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DetectFaceAttributesRequest
         /// </param>
@@ -5472,6 +6088,378 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Identity Three Elements Verification</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input name, ID number, and face photo to verify their authenticity and consistency through authoritative sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// Id3MetaVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id3MetaVerifyResponse
+        /// </returns>
+        public Id3MetaVerifyResponse Id3MetaVerifyWithOptions(Id3MetaVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Crop))
+            {
+                body["Crop"] = request.Crop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceFile))
+            {
+                body["FaceFile"] = request.FaceFile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceUrl))
+            {
+                body["FaceUrl"] = request.FaceUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                body["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                body["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Id3MetaVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Id3MetaVerifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Identity Three Elements Verification</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input name, ID number, and face photo to verify their authenticity and consistency through authoritative sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// Id3MetaVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id3MetaVerifyResponse
+        /// </returns>
+        public async Task<Id3MetaVerifyResponse> Id3MetaVerifyWithOptionsAsync(Id3MetaVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Crop))
+            {
+                body["Crop"] = request.Crop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceFile))
+            {
+                body["FaceFile"] = request.FaceFile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceUrl))
+            {
+                body["FaceUrl"] = request.FaceUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyNum))
+            {
+                body["IdentifyNum"] = request.IdentifyNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                body["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Id3MetaVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<Id3MetaVerifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Identity Three Elements Verification</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input name, ID number, and face photo to verify their authenticity and consistency through authoritative sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// Id3MetaVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id3MetaVerifyResponse
+        /// </returns>
+        public Id3MetaVerifyResponse Id3MetaVerify(Id3MetaVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return Id3MetaVerifyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Identity Three Elements Verification</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input name, ID number, and face photo to verify their authenticity and consistency through authoritative sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// Id3MetaVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// Id3MetaVerifyResponse
+        /// </returns>
+        public async Task<Id3MetaVerifyResponse> Id3MetaVerifyAsync(Id3MetaVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await Id3MetaVerifyWithOptionsAsync(request, runtime);
+        }
+
+        public Id3MetaVerifyResponse Id3MetaVerifyAdvance(Id3MetaVerifyAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            // Step 0: init client
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = this._credential.GetCredential();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
+            {
+                credentialType = "access_key";
+            }
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                SecurityToken = securityToken,
+                Type = credentialType,
+                Endpoint = openPlatformEndpoint,
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
+            {
+                {"Product", "Cloudauth"},
+                {"RegionId", _regionId},
+            };
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
+            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
+            Id3MetaVerifyRequest id3MetaVerifyReq = new Id3MetaVerifyRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, id3MetaVerifyReq);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceFileObject))
+            {
+                object tmpResp0 = authClient.CallApi(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponseBody.Get("ObjectKey"),
+                    Content = request.FaceFileObject,
+                    ContentType = "",
+                };
+                ossHeader = new Dictionary<string, object>
+                {
+                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
+                };
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                id3MetaVerifyReq.FaceFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
+            }
+            Id3MetaVerifyResponse id3MetaVerifyResp = Id3MetaVerifyWithOptions(id3MetaVerifyReq, runtime);
+            return id3MetaVerifyResp;
+        }
+
+        public async Task<Id3MetaVerifyResponse> Id3MetaVerifyAdvanceAsync(Id3MetaVerifyAdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            // Step 0: init client
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = await this._credential.GetCredentialAsync();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
+            {
+                credentialType = "access_key";
+            }
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                SecurityToken = securityToken,
+                Type = credentialType,
+                Endpoint = openPlatformEndpoint,
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
+            {
+                {"Product", "Cloudauth"},
+                {"RegionId", _regionId},
+            };
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
+            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
+            Id3MetaVerifyRequest id3MetaVerifyReq = new Id3MetaVerifyRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, id3MetaVerifyReq);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceFileObject))
+            {
+                object tmpResp0 = await authClient.CallApiAsync(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponseBody.Get("ObjectKey"),
+                    Content = request.FaceFileObject,
+                    ContentType = "",
+                };
+                ossHeader = new Dictionary<string, object>
+                {
+                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
+                };
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                id3MetaVerifyReq.FaceFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
+            }
+            Id3MetaVerifyResponse id3MetaVerifyResp = await Id3MetaVerifyWithOptionsAsync(id3MetaVerifyReq, runtime);
+            return id3MetaVerifyResp;
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Initiate an authentication request for image verification</para>
         /// </summary>
         /// 
@@ -5684,8 +6672,26 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实人服务端初始化接口</para>
+        /// <para>Real-Person Server Initialization Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service Address: cloudauth.aliyuncs.com</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// <item><description>This interface uses different parameters for different product solutions. For details, please refer to the <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/product-overview/introduction/?spm=a2c4g.11186623.help-menu-2401581.d_0_0.13f644ecRzFHfm&scm=20140722.H_99169._.OR_help-T_cn~zh-V_1">official documentation</a>.</description></item>
+        /// </list>
+        /// <h4>Image Format Requirements</h4>
+        /// <para>When performing real-person authentication, please provide images that meet all of the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>Recent photo with a clear, unobstructed face, natural expression, and facing the camera directly.</description></item>
+        /// <item><description>Clear photo with normal exposure, no overexposure, underexposure, or halo effects, and no significant angle deviation.</description></item>
+        /// <item><description>Resolution not exceeding 1920<em>1080, at least 640</em>480, recommended short side scaled to 720 pixels, compression ratio greater than 0.9.</description></item>
+        /// <item><description>Photo size: &lt;1MB.</description></item>
+        /// <item><description>Supports 90, 180, and 270-degree photos; in the case of multiple faces, the largest face will be selected.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// InitFaceVerifyRequest
@@ -5876,8 +6882,26 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实人服务端初始化接口</para>
+        /// <para>Real-Person Server Initialization Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service Address: cloudauth.aliyuncs.com</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// <item><description>This interface uses different parameters for different product solutions. For details, please refer to the <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/product-overview/introduction/?spm=a2c4g.11186623.help-menu-2401581.d_0_0.13f644ecRzFHfm&scm=20140722.H_99169._.OR_help-T_cn~zh-V_1">official documentation</a>.</description></item>
+        /// </list>
+        /// <h4>Image Format Requirements</h4>
+        /// <para>When performing real-person authentication, please provide images that meet all of the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>Recent photo with a clear, unobstructed face, natural expression, and facing the camera directly.</description></item>
+        /// <item><description>Clear photo with normal exposure, no overexposure, underexposure, or halo effects, and no significant angle deviation.</description></item>
+        /// <item><description>Resolution not exceeding 1920<em>1080, at least 640</em>480, recommended short side scaled to 720 pixels, compression ratio greater than 0.9.</description></item>
+        /// <item><description>Photo size: &lt;1MB.</description></item>
+        /// <item><description>Supports 90, 180, and 270-degree photos; in the case of multiple faces, the largest face will be selected.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// InitFaceVerifyRequest
@@ -6068,8 +7092,26 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实人服务端初始化接口</para>
+        /// <para>Real-Person Server Initialization Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service Address: cloudauth.aliyuncs.com</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// <item><description>This interface uses different parameters for different product solutions. For details, please refer to the <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/product-overview/introduction/?spm=a2c4g.11186623.help-menu-2401581.d_0_0.13f644ecRzFHfm&scm=20140722.H_99169._.OR_help-T_cn~zh-V_1">official documentation</a>.</description></item>
+        /// </list>
+        /// <h4>Image Format Requirements</h4>
+        /// <para>When performing real-person authentication, please provide images that meet all of the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>Recent photo with a clear, unobstructed face, natural expression, and facing the camera directly.</description></item>
+        /// <item><description>Clear photo with normal exposure, no overexposure, underexposure, or halo effects, and no significant angle deviation.</description></item>
+        /// <item><description>Resolution not exceeding 1920<em>1080, at least 640</em>480, recommended short side scaled to 720 pixels, compression ratio greater than 0.9.</description></item>
+        /// <item><description>Photo size: &lt;1MB.</description></item>
+        /// <item><description>Supports 90, 180, and 270-degree photos; in the case of multiple faces, the largest face will be selected.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// InitFaceVerifyRequest
@@ -6086,8 +7128,26 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实人服务端初始化接口</para>
+        /// <para>Real-Person Server Initialization Interface</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Service Address: cloudauth.aliyuncs.com</description></item>
+        /// <item><description>Request Method: HTTPS POST and GET.</description></item>
+        /// <item><description>This interface uses different parameters for different product solutions. For details, please refer to the <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/product-overview/introduction/?spm=a2c4g.11186623.help-menu-2401581.d_0_0.13f644ecRzFHfm&scm=20140722.H_99169._.OR_help-T_cn~zh-V_1">official documentation</a>.</description></item>
+        /// </list>
+        /// <h4>Image Format Requirements</h4>
+        /// <para>When performing real-person authentication, please provide images that meet all of the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>Recent photo with a clear, unobstructed face, natural expression, and facing the camera directly.</description></item>
+        /// <item><description>Clear photo with normal exposure, no overexposure, underexposure, or halo effects, and no significant angle deviation.</description></item>
+        /// <item><description>Resolution not exceeding 1920<em>1080, at least 640</em>480, recommended short side scaled to 720 pixels, compression ratio greater than 0.9.</description></item>
+        /// <item><description>Photo size: &lt;1MB.</description></item>
+        /// <item><description>Supports 90, 180, and 270-degree photos; in the case of multiple faces, the largest face will be selected.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// InitFaceVerifyRequest
@@ -6262,6 +7322,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await InsertWhiteListSettingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Silent Liveness Face (LivenessFaceVerify) refers to a service that performs real face detection by inputting pre-obtained face images through an API. The algorithm primarily identifies whether the face is from a screen recording, printed picture, or other types of liveness attacks. This service is suitable for low-risk business scenarios or in conjunction with offline facial recognition SDKs. If your business has higher requirements for real face security, it is recommended to integrate App or WebSDK mode, or integrate with Deepfake face detection services to assist in identifying more dimensions of face forgery risks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invoke the LivenessFaceVerify interface to perform liveness detection on a face image.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// LivenessFaceVerifyRequest
         /// </param>
@@ -6353,6 +7423,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<LivenessFaceVerifyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Silent Liveness Face (LivenessFaceVerify) refers to a service that performs real face detection by inputting pre-obtained face images through an API. The algorithm primarily identifies whether the face is from a screen recording, printed picture, or other types of liveness attacks. This service is suitable for low-risk business scenarios or in conjunction with offline facial recognition SDKs. If your business has higher requirements for real face security, it is recommended to integrate App or WebSDK mode, or integrate with Deepfake face detection services to assist in identifying more dimensions of face forgery risks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invoke the LivenessFaceVerify interface to perform liveness detection on a face image.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// LivenessFaceVerifyRequest
         /// </param>
@@ -6444,6 +7524,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<LivenessFaceVerifyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Silent Liveness Face (LivenessFaceVerify) refers to a service that performs real face detection by inputting pre-obtained face images through an API. The algorithm primarily identifies whether the face is from a screen recording, printed picture, or other types of liveness attacks. This service is suitable for low-risk business scenarios or in conjunction with offline facial recognition SDKs. If your business has higher requirements for real face security, it is recommended to integrate App or WebSDK mode, or integrate with Deepfake face detection services to assist in identifying more dimensions of face forgery risks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invoke the LivenessFaceVerify interface to perform liveness detection on a face image.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// LivenessFaceVerifyRequest
         /// </param>
@@ -6457,6 +7547,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return LivenessFaceVerifyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Silent Liveness Face (LivenessFaceVerify) refers to a service that performs real face detection by inputting pre-obtained face images through an API. The algorithm primarily identifies whether the face is from a screen recording, printed picture, or other types of liveness attacks. This service is suitable for low-risk business scenarios or in conjunction with offline facial recognition SDKs. If your business has higher requirements for real face security, it is recommended to integrate App or WebSDK mode, or integrate with Deepfake face detection services to assist in identifying more dimensions of face forgery risks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Invoke the LivenessFaceVerify interface to perform liveness detection on a face image.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// LivenessFaceVerifyRequest
         /// </param>
@@ -9030,6 +10130,29 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return await VehicleQueryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call VerifyMaterial, in a pure server-side access authentication solution, input name, ID number, portrait photo, and front and back photos of the ID card (optional) for real-person authentication, and return the authentication result synchronously.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Preparation for Access: When integrating this API, please ensure that the corresponding preparatory work has been completed. For details, please refer to <a href="https://help.aliyun.com/document_detail/127471.html">Server-side Access Preparation</a>.
+        /// Request Method: HTTPS POST and GET.
+        /// API Description: The server of the access party submits the authentication materials to the real-person authentication service for verification and comparison, with the results returned synchronously.
+        /// Applicable Scope: This interface is only applicable to pure server-side access authentication solutions.
+        /// Image Upload Address Explanation:</para>
+        /// <list type="bullet">
+        /// <item><description>HTTP or HTTPS address: Supports publicly accessible HTTP or HTTPS addresses. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.</description></item>
+        /// <item><description>OSS address: If the images from the access party are local files, Alibaba Cloud also provides an upload SDK, supporting the business party to upload the images to the specified OSS bucket of the real-person authentication service, and use the obtained OSS address as the image address parameter in the interface. If your business needs to use the upload SDK, please submit a <a href="https://selfservice.console.aliyun.com/ticket/category/cloudauth/today">ticket</a> to contact us for acquisition.
+        /// Image Limitations:</description></item>
+        /// <item><description>Does not support relative or absolute paths of local images.</description></item>
+        /// <item><description>Please keep the size of a single image within 2 MB to avoid algorithm retrieval timeout.</description></item>
+        /// <item><description>The face area in the image should be at least 64*64 pixels.</description></item>
+        /// <item><description>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request, and do not exceed the limit.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// VerifyMaterialRequest
         /// </param>
@@ -9095,6 +10218,29 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<VerifyMaterialResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call VerifyMaterial, in a pure server-side access authentication solution, input name, ID number, portrait photo, and front and back photos of the ID card (optional) for real-person authentication, and return the authentication result synchronously.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Preparation for Access: When integrating this API, please ensure that the corresponding preparatory work has been completed. For details, please refer to <a href="https://help.aliyun.com/document_detail/127471.html">Server-side Access Preparation</a>.
+        /// Request Method: HTTPS POST and GET.
+        /// API Description: The server of the access party submits the authentication materials to the real-person authentication service for verification and comparison, with the results returned synchronously.
+        /// Applicable Scope: This interface is only applicable to pure server-side access authentication solutions.
+        /// Image Upload Address Explanation:</para>
+        /// <list type="bullet">
+        /// <item><description>HTTP or HTTPS address: Supports publicly accessible HTTP or HTTPS addresses. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.</description></item>
+        /// <item><description>OSS address: If the images from the access party are local files, Alibaba Cloud also provides an upload SDK, supporting the business party to upload the images to the specified OSS bucket of the real-person authentication service, and use the obtained OSS address as the image address parameter in the interface. If your business needs to use the upload SDK, please submit a <a href="https://selfservice.console.aliyun.com/ticket/category/cloudauth/today">ticket</a> to contact us for acquisition.
+        /// Image Limitations:</description></item>
+        /// <item><description>Does not support relative or absolute paths of local images.</description></item>
+        /// <item><description>Please keep the size of a single image within 2 MB to avoid algorithm retrieval timeout.</description></item>
+        /// <item><description>The face area in the image should be at least 64*64 pixels.</description></item>
+        /// <item><description>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request, and do not exceed the limit.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// VerifyMaterialRequest
         /// </param>
@@ -9160,6 +10306,29 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return TeaModel.ToObject<VerifyMaterialResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call VerifyMaterial, in a pure server-side access authentication solution, input name, ID number, portrait photo, and front and back photos of the ID card (optional) for real-person authentication, and return the authentication result synchronously.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Preparation for Access: When integrating this API, please ensure that the corresponding preparatory work has been completed. For details, please refer to <a href="https://help.aliyun.com/document_detail/127471.html">Server-side Access Preparation</a>.
+        /// Request Method: HTTPS POST and GET.
+        /// API Description: The server of the access party submits the authentication materials to the real-person authentication service for verification and comparison, with the results returned synchronously.
+        /// Applicable Scope: This interface is only applicable to pure server-side access authentication solutions.
+        /// Image Upload Address Explanation:</para>
+        /// <list type="bullet">
+        /// <item><description>HTTP or HTTPS address: Supports publicly accessible HTTP or HTTPS addresses. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.</description></item>
+        /// <item><description>OSS address: If the images from the access party are local files, Alibaba Cloud also provides an upload SDK, supporting the business party to upload the images to the specified OSS bucket of the real-person authentication service, and use the obtained OSS address as the image address parameter in the interface. If your business needs to use the upload SDK, please submit a <a href="https://selfservice.console.aliyun.com/ticket/category/cloudauth/today">ticket</a> to contact us for acquisition.
+        /// Image Limitations:</description></item>
+        /// <item><description>Does not support relative or absolute paths of local images.</description></item>
+        /// <item><description>Please keep the size of a single image within 2 MB to avoid algorithm retrieval timeout.</description></item>
+        /// <item><description>The face area in the image should be at least 64*64 pixels.</description></item>
+        /// <item><description>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request, and do not exceed the limit.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// VerifyMaterialRequest
         /// </param>
@@ -9173,6 +10342,29 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             return VerifyMaterialWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call VerifyMaterial, in a pure server-side access authentication solution, input name, ID number, portrait photo, and front and back photos of the ID card (optional) for real-person authentication, and return the authentication result synchronously.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Preparation for Access: When integrating this API, please ensure that the corresponding preparatory work has been completed. For details, please refer to <a href="https://help.aliyun.com/document_detail/127471.html">Server-side Access Preparation</a>.
+        /// Request Method: HTTPS POST and GET.
+        /// API Description: The server of the access party submits the authentication materials to the real-person authentication service for verification and comparison, with the results returned synchronously.
+        /// Applicable Scope: This interface is only applicable to pure server-side access authentication solutions.
+        /// Image Upload Address Explanation:</para>
+        /// <list type="bullet">
+        /// <item><description>HTTP or HTTPS address: Supports publicly accessible HTTP or HTTPS addresses. For example, <c>http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</c>.</description></item>
+        /// <item><description>OSS address: If the images from the access party are local files, Alibaba Cloud also provides an upload SDK, supporting the business party to upload the images to the specified OSS bucket of the real-person authentication service, and use the obtained OSS address as the image address parameter in the interface. If your business needs to use the upload SDK, please submit a <a href="https://selfservice.console.aliyun.com/ticket/category/cloudauth/today">ticket</a> to contact us for acquisition.
+        /// Image Limitations:</description></item>
+        /// <item><description>Does not support relative or absolute paths of local images.</description></item>
+        /// <item><description>Please keep the size of a single image within 2 MB to avoid algorithm retrieval timeout.</description></item>
+        /// <item><description>The face area in the image should be at least 64*64 pixels.</description></item>
+        /// <item><description>There is an 8 MB size limit for the Body of a single request. Please calculate the total size of all images and other information in the request, and do not exceed the limit.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// VerifyMaterialRequest
         /// </param>
