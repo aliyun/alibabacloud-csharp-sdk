@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 [Validation(Required=false)]
                 public string SelfDirectedScriptFullContent { get; set; }
 
+                [NameInMap("skipCurrentRecognize")]
+                [Validation(Required=false)]
+                public bool? SkipCurrentRecognize { get; set; }
+
             }
 
             /// <summary>
@@ -182,6 +186,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 [NameInMap("selfDirectedScriptFullContent")]
                 [Validation(Required=false)]
                 public string SelfDirectedScriptFullContent { get; set; }
+
+                [NameInMap("skipCurrentRecognize")]
+                [Validation(Required=false)]
+                public bool? SkipCurrentRecognize { get; set; }
 
             }
 
