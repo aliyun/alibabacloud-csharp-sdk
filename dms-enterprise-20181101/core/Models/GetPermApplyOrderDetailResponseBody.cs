@@ -288,6 +288,50 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
                 }
 
+                [NameInMap("RowInfo")]
+                [Validation(Required=false)]
+                public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo RowInfo { get; set; }
+                public class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowInfo : TeaModel {
+                    [NameInMap("ColumnName")]
+                    [Validation(Required=false)]
+                    public string ColumnName { get; set; }
+
+                    [NameInMap("DbId")]
+                    [Validation(Required=false)]
+                    public long? DbId { get; set; }
+
+                    [NameInMap("Logic")]
+                    [Validation(Required=false)]
+                    public bool? Logic { get; set; }
+
+                    [NameInMap("MatchMode")]
+                    [Validation(Required=false)]
+                    public string MatchMode { get; set; }
+
+                    [NameInMap("RowGroupId")]
+                    [Validation(Required=false)]
+                    public long? RowGroupId { get; set; }
+
+                    [NameInMap("SchemaName")]
+                    [Validation(Required=false)]
+                    public string SchemaName { get; set; }
+
+                    [NameInMap("TableName")]
+                    [Validation(Required=false)]
+                    public string TableName { get; set; }
+
+                }
+
+                [NameInMap("RowValueInfo")]
+                [Validation(Required=false)]
+                public GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowValueInfo RowValueInfo { get; set; }
+                public class GetPermApplyOrderDetailResponseBodyPermApplyOrderDetailResourcesRowValueInfo : TeaModel {
+                    [NameInMap("RowValue")]
+                    [Validation(Required=false)]
+                    public string RowValue { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The information about the table.</para>
                 /// </summary>
