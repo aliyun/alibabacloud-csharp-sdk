@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     [Validation(Required=false)]
                     public string DisplayField { get; set; }
 
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>名称</para>
@@ -89,6 +93,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     [Validation(Required=false)]
                     public string DisplayField { get; set; }
 
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
                     [NameInMap("SystemField")]
                     [Validation(Required=false)]
                     public string SystemField { get; set; }
@@ -124,6 +132,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     [NameInMap("DisplayField")]
                     [Validation(Required=false)]
                     public string DisplayField { get; set; }
+
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
 
                     [NameInMap("SystemField")]
                     [Validation(Required=false)]
@@ -161,6 +173,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     [Validation(Required=false)]
                     public string DisplayField { get; set; }
 
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
                     [NameInMap("SystemField")]
                     [Validation(Required=false)]
                     public string SystemField { get; set; }
@@ -197,6 +213,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     [Validation(Required=false)]
                     public string DisplayField { get; set; }
 
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
                     [NameInMap("SystemField")]
                     [Validation(Required=false)]
                     public string SystemField { get; set; }
@@ -232,6 +252,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     [NameInMap("DisplayField")]
                     [Validation(Required=false)]
                     public string DisplayField { get; set; }
+
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
 
                     [NameInMap("SystemField")]
                     [Validation(Required=false)]
@@ -272,6 +296,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     [NameInMap("DisplayField")]
                     [Validation(Required=false)]
                     public string DisplayField { get; set; }
+
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
 
                     [NameInMap("SystemField")]
                     [Validation(Required=false)]
@@ -339,6 +367,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     [Validation(Required=false)]
                     public string DisplayField { get; set; }
 
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
                     [NameInMap("SystemField")]
                     [Validation(Required=false)]
                     public string SystemField { get; set; }
@@ -374,6 +406,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     [NameInMap("DisplayField")]
                     [Validation(Required=false)]
                     public string DisplayField { get; set; }
+
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
 
                     [NameInMap("SystemField")]
                     [Validation(Required=false)]
