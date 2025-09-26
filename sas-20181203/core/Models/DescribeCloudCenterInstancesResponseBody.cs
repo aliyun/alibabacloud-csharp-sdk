@@ -710,6 +710,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string VendorName { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>123</para>
+            /// </summary>
+            [NameInMap("VendorUid")]
+            [Validation(Required=false)]
+            public string VendorUid { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>VendorUserName</para>
+            /// </summary>
+            [NameInMap("VendorUserName")]
+            [Validation(Required=false)]
+            public string VendorUserName { get; set; }
+
+            /// <summary>
             /// <para>The ID of the VPC to which the asset belongs.</para>
             /// 
             /// <b>Example:</b>

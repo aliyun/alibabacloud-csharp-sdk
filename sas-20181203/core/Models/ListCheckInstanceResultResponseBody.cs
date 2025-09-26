@@ -151,6 +151,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string StatusMessage { get; set; }
 
+            [NameInMap("VendorUserName")]
+            [Validation(Required=false)]
+            public string VendorUserName { get; set; }
+
         }
 
         /// <summary>

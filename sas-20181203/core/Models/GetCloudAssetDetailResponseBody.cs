@@ -154,6 +154,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
+            [NameInMap("OriginalAssetInfo")]
+            [Validation(Required=false)]
+            public string OriginalAssetInfo { get; set; }
+
             /// <summary>
             /// <para>The region in which the cloud asset resides.</para>
             /// <remarks>
@@ -207,6 +211,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Vendor")]
             [Validation(Required=false)]
             public int? Vendor { get; set; }
+
+            [NameInMap("VendorUid")]
+            [Validation(Required=false)]
+            public string VendorUid { get; set; }
+
+            [NameInMap("VendorUserName")]
+            [Validation(Required=false)]
+            public string VendorUserName { get; set; }
 
         }
 

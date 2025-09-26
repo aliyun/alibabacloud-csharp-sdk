@@ -23,28 +23,36 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExportFileType { get; set; }
 
         /// <summary>
-        /// <para>The type of the check result list that you want to export. Valid values:</para>
+        /// <para>The type of detection result list to be exported. Values:</para>
         /// <list type="bullet">
-        /// <item><description><b>assetInstance</b>: the list of servers displayed on the Host page</description></item>
-        /// <item><description><b>user</b>: the list of fingerprints for accounts</description></item>
-        /// <item><description><b>port</b>: the list of fingerprints for ports</description></item>
-        /// <item><description><b>process</b>: the list of fingerprints for processes</description></item>
-        /// <item><description><b>sca</b>: the list of fingerprints for middleware assets</description></item>
-        /// <item><description><b>database</b>: the list of fingerprints for databases</description></item>
-        /// <item><description><b>web</b>: the list of fingerprints for web services</description></item>
-        /// <item><description><b>software</b>: the list of fingerprints for software assets</description></item>
-        /// <item><description><b>cron</b>: the list of fingerprints for scheduled tasks</description></item>
-        /// <item><description><b>autorun</b>: the list of fingerprints for startup items</description></item>
-        /// <item><description><b>lkm</b>: the list of fingerprints for kernel modules</description></item>
-        /// <item><description><b>webserver</b>: the list of fingerprints for websites</description></item>
-        /// <item><description><b>virusScanExport</b>: the details of the virus scan tasks</description></item>
-        /// <item><description><b>imageVulExport</b>: the list of image system vulnerabilities</description></item>
-        /// <item><description><b>imageBaseLineExport</b>: the list of check results for image baselines</description></item>
-        /// <item><description><b>imageAffectedMaliciousExport</b>: the list of check results for malicious image samples</description></item>
-        /// <item><description><b>baselineCspm</b>: the list of check results for configuration assessment</description></item>
-        /// <item><description><b>attack</b>: the list of alert events for attack analysis</description></item>
-        /// <item><description><b>accessKey</b>: the list of alerts that are generated for AccessKey pair leaks</description></item>
-        /// <item><description><b>exportObjectScanEvents</b>: the list of alerts generated for malicious files</description></item>
+        /// <item><description><b>assetInstance</b>: List of servers in the asset center </description></item>
+        /// <item><description><b>user</b>: List of asset fingerprints for accounts </description></item>
+        /// <item><description><b>port</b>: List of asset fingerprints for ports </description></item>
+        /// <item><description><b>process</b>: List of asset fingerprints for processes </description></item>
+        /// <item><description><b>sca</b>: List of asset fingerprints for middleware </description></item>
+        /// <item><description><b>database</b>: List of asset fingerprints for databases </description></item>
+        /// <item><description><b>web</b>: List of asset fingerprints for web services </description></item>
+        /// <item><description><b>software</b>: List of asset fingerprints for software </description></item>
+        /// <item><description><b>cron</b>: List of asset fingerprints for scheduled tasks </description></item>
+        /// <item><description><b>autorun</b>: List of asset fingerprints for startup items </description></item>
+        /// <item><description><b>lkm</b>: List of asset fingerprints for kernel modules </description></item>
+        /// <item><description><b>webserver</b>: List of asset fingerprints for web sites </description></item>
+        /// <item><description><b>virusScanExport</b>: List of details for virus scan tasks </description></item>
+        /// <item><description><b>imageVulExport</b>: List of system vulnerabilities in images </description></item>
+        /// <item><description><b>imageBaseLineExport</b>: List of baseline check results in images </description></item>
+        /// <item><description><b>imageAffectedMaliciousExport</b>: List of malicious sample check results in images </description></item>
+        /// <item><description><b>baselineCspm</b>: List of detection results for cloud platform configuration checks </description></item>
+        /// <item><description><b>attack</b>: List of alert events for attack analysis </description></item>
+        /// <item><description><b>accessKey</b>: List of alert events for AK leak detection </description></item>
+        /// <item><description><b>exportObjectScanEvents</b>: List of alert events for malicious file detection </description></item>
+        /// <item><description><b>domainDetail</b>: Website assets </description></item>
+        /// <item><description><b>assetsPropertyScaProcessDetail</b>: RASP protection process for application protection </description></item>
+        /// <item><description><b>exportHcWarning</b>: List of system baseline risks </description></item>
+        /// <item><description><b>raspAttackAlert</b>: List of attack alerts for Application Protection</description></item>
+        /// <item><description><b>raspApplicationConfiguration</b>: List of application configurations for Application Protection</description></item>
+        /// <item><description><b>raspWeaknessDetection</b>: List of weakness detections for Application Protection</description></item>
+        /// <item><description><b>raspInMemoryWebshellDetection</b>: List of in-memory webshell detection alerts for Application Protection</description></item>
+        /// <item><description><b>raspInMemoryWebshellInsertion</b>: List of in-memory webshell insertion alerts for Application Protection</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
