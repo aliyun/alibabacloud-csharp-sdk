@@ -88,6 +88,10 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 
         }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">

@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "central";
             CheckConfig(config);
             this._endpoint = GetEndpoint("dypnsapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -2310,406 +2309,6 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525
             return await GetSmsAuthTokensWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.
-        /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建方案号（为极意临时定制）</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// JyCreateVerifySchemeRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// JyCreateVerifySchemeResponse
-        /// </returns>
-        [Obsolete("OpenAPI JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.\n")]
-        // Deprecated
-        public JyCreateVerifySchemeResponse JyCreateVerifySchemeWithOptions(JyCreateVerifySchemeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
-            {
-                query["AppName"] = request.AppName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BundleId))
-            {
-                query["BundleId"] = request.BundleId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmApiCode))
-            {
-                query["CmApiCode"] = request.CmApiCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CtApiCode))
-            {
-                query["CtApiCode"] = request.CtApiCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CuApiCode))
-            {
-                query["CuApiCode"] = request.CuApiCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
-            {
-                query["OsType"] = request.OsType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackName))
-            {
-                query["PackName"] = request.PackName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackSign))
-            {
-                query["PackSign"] = request.PackSign;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemeName))
-            {
-                query["SchemeName"] = request.SchemeName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "JyCreateVerifyScheme",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<JyCreateVerifySchemeResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.
-        /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建方案号（为极意临时定制）</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// JyCreateVerifySchemeRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// JyCreateVerifySchemeResponse
-        /// </returns>
-        [Obsolete("OpenAPI JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.\n")]
-        // Deprecated
-        public async Task<JyCreateVerifySchemeResponse> JyCreateVerifySchemeWithOptionsAsync(JyCreateVerifySchemeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
-            {
-                query["AppName"] = request.AppName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BundleId))
-            {
-                query["BundleId"] = request.BundleId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmApiCode))
-            {
-                query["CmApiCode"] = request.CmApiCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CtApiCode))
-            {
-                query["CtApiCode"] = request.CtApiCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CuApiCode))
-            {
-                query["CuApiCode"] = request.CuApiCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
-            {
-                query["OsType"] = request.OsType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackName))
-            {
-                query["PackName"] = request.PackName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackSign))
-            {
-                query["PackSign"] = request.PackSign;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemeName))
-            {
-                query["SchemeName"] = request.SchemeName;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "JyCreateVerifyScheme",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<JyCreateVerifySchemeResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.
-        /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建方案号（为极意临时定制）</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// JyCreateVerifySchemeRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// JyCreateVerifySchemeResponse
-        /// </returns>
-        [Obsolete("OpenAPI JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.\n")]
-        // Deprecated
-        public JyCreateVerifySchemeResponse JyCreateVerifyScheme(JyCreateVerifySchemeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return JyCreateVerifySchemeWithOptions(request, runtime);
-        }
-
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.
-        /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建方案号（为极意临时定制）</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// JyCreateVerifySchemeRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// JyCreateVerifySchemeResponse
-        /// </returns>
-        [Obsolete("OpenAPI JyCreateVerifyScheme is deprecated, please use Dypnsapi::2017-05-25::CreateVerifyScheme instead.\n")]
-        // Deprecated
-        public async Task<JyCreateVerifySchemeResponse> JyCreateVerifySchemeAsync(JyCreateVerifySchemeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await JyCreateVerifySchemeWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.
-        /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>根据方案号查询运营商APP信（为极意临时定制）</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// JyQueryAppInfoBySceneCodeRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// JyQueryAppInfoBySceneCodeResponse
-        /// </returns>
-        [Obsolete("OpenAPI JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.\n")]
-        // Deprecated
-        public JyQueryAppInfoBySceneCodeResponse JyQueryAppInfoBySceneCodeWithOptions(JyQueryAppInfoBySceneCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
-            {
-                query["SceneCode"] = request.SceneCode;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "JyQueryAppInfoBySceneCode",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<JyQueryAppInfoBySceneCodeResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.
-        /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>根据方案号查询运营商APP信（为极意临时定制）</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// JyQueryAppInfoBySceneCodeRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// JyQueryAppInfoBySceneCodeResponse
-        /// </returns>
-        [Obsolete("OpenAPI JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.\n")]
-        // Deprecated
-        public async Task<JyQueryAppInfoBySceneCodeResponse> JyQueryAppInfoBySceneCodeWithOptionsAsync(JyQueryAppInfoBySceneCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
-            {
-                query["SceneCode"] = request.SceneCode;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "JyQueryAppInfoBySceneCode",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<JyQueryAppInfoBySceneCodeResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.
-        /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>根据方案号查询运营商APP信（为极意临时定制）</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// JyQueryAppInfoBySceneCodeRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// JyQueryAppInfoBySceneCodeResponse
-        /// </returns>
-        [Obsolete("OpenAPI JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.\n")]
-        // Deprecated
-        public JyQueryAppInfoBySceneCodeResponse JyQueryAppInfoBySceneCode(JyQueryAppInfoBySceneCodeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return JyQueryAppInfoBySceneCodeWithOptions(request, runtime);
-        }
-
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.
-        /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>根据方案号查询运营商APP信（为极意临时定制）</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// JyQueryAppInfoBySceneCodeRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// JyQueryAppInfoBySceneCodeResponse
-        /// </returns>
-        [Obsolete("OpenAPI JyQueryAppInfoBySceneCode is deprecated, please use Dypnsapi::2017-05-25::QueryAppInfoBySceneCode instead.\n")]
-        // Deprecated
-        public async Task<JyQueryAppInfoBySceneCodeResponse> JyQueryAppInfoBySceneCodeAsync(JyQueryAppInfoBySceneCodeRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await JyQueryAppInfoBySceneCodeWithOptionsAsync(request, runtime);
-        }
-
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the fees generated by a verification service.</para>
@@ -3089,7 +2688,7 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525
         /// <returns>
         /// QuerySendDetailsResponse
         /// </returns>
-        [Obsolete("OpenAPI QuerySendDetails is deprecated\n")]
+        [Obsolete("OpenAPI QuerySendDetails is deprecated")]
         // Deprecated
         public QuerySendDetailsResponse QuerySendDetailsWithOptions(QuerySendDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3165,7 +2764,7 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525
         /// <returns>
         /// QuerySendDetailsResponse
         /// </returns>
-        [Obsolete("OpenAPI QuerySendDetails is deprecated\n")]
+        [Obsolete("OpenAPI QuerySendDetails is deprecated")]
         // Deprecated
         public async Task<QuerySendDetailsResponse> QuerySendDetailsWithOptionsAsync(QuerySendDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -3238,7 +2837,7 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525
         /// <returns>
         /// QuerySendDetailsResponse
         /// </returns>
-        [Obsolete("OpenAPI QuerySendDetails is deprecated\n")]
+        [Obsolete("OpenAPI QuerySendDetails is deprecated")]
         // Deprecated
         public QuerySendDetailsResponse QuerySendDetails(QuerySendDetailsRequest request)
         {
@@ -3262,7 +2861,7 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525
         /// <returns>
         /// QuerySendDetailsResponse
         /// </returns>
-        [Obsolete("OpenAPI QuerySendDetails is deprecated\n")]
+        [Obsolete("OpenAPI QuerySendDetails is deprecated")]
         // Deprecated
         public async Task<QuerySendDetailsResponse> QuerySendDetailsAsync(QuerySendDetailsRequest request)
         {
@@ -3289,6 +2888,10 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRetry))
+            {
+                query["AutoRetry"] = request.AutoRetry;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeLength))
             {
                 query["CodeLength"] = request.CodeLength;
@@ -3395,6 +2998,10 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRetry))
+            {
+                query["AutoRetry"] = request.AutoRetry;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeLength))
             {
                 query["CodeLength"] = request.CodeLength;

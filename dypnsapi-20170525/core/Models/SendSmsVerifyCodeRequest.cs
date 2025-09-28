@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Dypnsapi20170525.Models
 {
     public class SendSmsVerifyCodeRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>是否自动重试</para>
+        /// </summary>
+        [NameInMap("AutoRetry")]
+        [Validation(Required=false)]
+        public long? AutoRetry { get; set; }
+
+        /// <summary>
         /// <para>The length of the verification code. Default value: 4. Valid values: 4 to 8.</para>
         /// 
         /// <b>Example:</b>
