@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public List<ListExecutorsResponseBodyExecutors> Executors { get; set; }
         public class ListExecutorsResponseBodyExecutors : TeaModel {
+            [NameInMap("AllocationSpec")]
+            [Validation(Required=false)]
+            public string AllocationSpec { get; set; }
+
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }

@@ -295,6 +295,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 
                         }
 
+                        [NameInMap("EnableHT")]
+                        [Validation(Required=false)]
+                        public bool? EnableHT { get; set; }
+
+                        [NameInMap("HostNamePrefix")]
+                        [Validation(Required=false)]
+                        public string HostNamePrefix { get; set; }
+
                         [NameInMap("InstanceTypes")]
                         [Validation(Required=false)]
                         public List<string> InstanceTypes { get; set; }
