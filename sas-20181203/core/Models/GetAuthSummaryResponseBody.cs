@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? AutoBind { get; set; }
 
+        [NameInMap("ClusterNodeCheck")]
+        [Validation(Required=false)]
+        public int? ClusterNodeCheck { get; set; }
+
         /// <summary>
         /// <para>Indicates whether the protection quota is supported for all assets. Valid values:</para>
         /// <list type="bullet">

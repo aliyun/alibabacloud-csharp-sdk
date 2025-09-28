@@ -130,6 +130,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IsSiemDaAccount { get; set; }
 
+            [NameInMap("PostBasicService")]
+            [Validation(Required=false)]
+            public int? PostBasicService { get; set; }
+
             [NameInMap("PostPayModuleSwitch")]
             [Validation(Required=false)]
             public string PostPayModuleSwitch { get; set; }
