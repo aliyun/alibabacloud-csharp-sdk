@@ -17,9 +17,45 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public List<Dictionary<string, string>> Dimensions { get; set; }
 
+        [NameInMap("domain")]
+        [Validation(Required=false)]
+        public string Domain { get; set; }
+
         [NameInMap("duration")]
         [Validation(Required=false)]
         public long? Duration { get; set; }
+
+        [NameInMap("entityFilter")]
+        [Validation(Required=false)]
+        public AlertRuleQueryEntityFilter EntityFilter { get; set; }
+        public class AlertRuleQueryEntityFilter : TeaModel {
+            [NameInMap("domain")]
+            [Validation(Required=false)]
+            public string Domain { get; set; }
+
+            [NameInMap("filters")]
+            [Validation(Required=false)]
+            public List<AlertRuleQueryEntityFilterFilters> Filters { get; set; }
+            public class AlertRuleQueryEntityFilterFilters : TeaModel {
+                [NameInMap("field")]
+                [Validation(Required=false)]
+                public string Field { get; set; }
+
+                [NameInMap("operator")]
+                [Validation(Required=false)]
+                public string Operator { get; set; }
+
+                [NameInMap("value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
 
         [NameInMap("expr")]
         [Validation(Required=false)]
@@ -40,6 +76,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("groupType")]
         [Validation(Required=false)]
         public string GroupType { get; set; }
+
+        [NameInMap("metric")]
+        [Validation(Required=false)]
+        public string Metric { get; set; }
+
+        [NameInMap("metricSet")]
+        [Validation(Required=false)]
+        public string MetricSet { get; set; }
 
         [NameInMap("namespace")]
         [Validation(Required=false)]

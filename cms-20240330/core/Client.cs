@@ -4815,6 +4815,244 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询接入中心策略列表信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListIntegrationPoliciesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIntegrationPoliciesResponse
+        /// </returns>
+        public ListIntegrationPoliciesResponse ListIntegrationPoliciesWithOptions(ListIntegrationPoliciesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListIntegrationPoliciesShrinkRequest request = new ListIntegrationPoliciesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "tag", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonName))
+            {
+                query["addonName"] = request.AddonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityGroupIds))
+            {
+                query["entityGroupIds"] = request.EntityGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterRegionIds))
+            {
+                query["filterRegionIds"] = request.FilterRegionIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                query["policyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                query["policyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                query["policyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrometheusInstanceId))
+            {
+                query["prometheusInstanceId"] = request.PrometheusInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["tag"] = request.TagShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIntegrationPolicies",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/integration-policies",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIntegrationPoliciesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询接入中心策略列表信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListIntegrationPoliciesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIntegrationPoliciesResponse
+        /// </returns>
+        public async Task<ListIntegrationPoliciesResponse> ListIntegrationPoliciesWithOptionsAsync(ListIntegrationPoliciesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListIntegrationPoliciesShrinkRequest request = new ListIntegrationPoliciesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tag))
+            {
+                request.TagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tag, "tag", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonName))
+            {
+                query["addonName"] = request.AddonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityGroupIds))
+            {
+                query["entityGroupIds"] = request.EntityGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterRegionIds))
+            {
+                query["filterRegionIds"] = request.FilterRegionIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
+            {
+                query["policyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                query["policyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                query["policyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrometheusInstanceId))
+            {
+                query["prometheusInstanceId"] = request.PrometheusInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
+            {
+                query["tag"] = request.TagShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIntegrationPolicies",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/integration-policies",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIntegrationPoliciesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询接入中心策略列表信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIntegrationPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIntegrationPoliciesResponse
+        /// </returns>
+        public ListIntegrationPoliciesResponse ListIntegrationPolicies(ListIntegrationPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListIntegrationPoliciesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询接入中心策略列表信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIntegrationPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIntegrationPoliciesResponse
+        /// </returns>
+        public async Task<ListIntegrationPoliciesResponse> ListIntegrationPoliciesAsync(ListIntegrationPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListIntegrationPoliciesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取接入中心策略的存储要求信息</para>
         /// </summary>
         /// 
@@ -4957,6 +5195,144 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListIntegrationPolicyCustomScrapeJobRulesWithOptionsAsync(policyId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>策略大盘列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIntegrationPolicyDashboardsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIntegrationPolicyDashboardsResponse
+        /// </returns>
+        public ListIntegrationPolicyDashboardsResponse ListIntegrationPolicyDashboardsWithOptions(string policyId, ListIntegrationPolicyDashboardsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonName))
+            {
+                query["addonName"] = request.AddonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                query["scene"] = request.Scene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIntegrationPolicyDashboards",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/integration-policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyId) + "/dashboards",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIntegrationPolicyDashboardsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>策略大盘列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIntegrationPolicyDashboardsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIntegrationPolicyDashboardsResponse
+        /// </returns>
+        public async Task<ListIntegrationPolicyDashboardsResponse> ListIntegrationPolicyDashboardsWithOptionsAsync(string policyId, ListIntegrationPolicyDashboardsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonName))
+            {
+                query["addonName"] = request.AddonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
+            {
+                query["scene"] = request.Scene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIntegrationPolicyDashboards",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/integration-policies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(policyId) + "/dashboards",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIntegrationPolicyDashboardsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>策略大盘列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIntegrationPolicyDashboardsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIntegrationPolicyDashboardsResponse
+        /// </returns>
+        public ListIntegrationPolicyDashboardsResponse ListIntegrationPolicyDashboards(string policyId, ListIntegrationPolicyDashboardsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListIntegrationPolicyDashboardsWithOptions(policyId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>策略大盘列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIntegrationPolicyDashboardsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIntegrationPolicyDashboardsResponse
+        /// </returns>
+        public async Task<ListIntegrationPolicyDashboardsResponse> ListIntegrationPolicyDashboardsAsync(string policyId, ListIntegrationPolicyDashboardsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListIntegrationPolicyDashboardsWithOptionsAsync(policyId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
