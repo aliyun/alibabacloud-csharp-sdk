@@ -2119,6 +2119,454 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>因底层升级批量迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchEventMigrateInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchEventMigrateInstanceResponse
+        /// </returns>
+        public BatchEventMigrateInstanceResponse BatchEventMigrateInstanceWithOptions(BatchEventMigrateInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchEventMigrateInstanceShrinkRequest request = new BatchEventMigrateInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventInfos))
+            {
+                request.EventInfosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventInfos, "EventInfos", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventInfosShrink))
+            {
+                query["EventInfos"] = request.EventInfosShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchEventMigrateInstance",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchEventMigrateInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>因底层升级批量迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchEventMigrateInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchEventMigrateInstanceResponse
+        /// </returns>
+        public async Task<BatchEventMigrateInstanceResponse> BatchEventMigrateInstanceWithOptionsAsync(BatchEventMigrateInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchEventMigrateInstanceShrinkRequest request = new BatchEventMigrateInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventInfos))
+            {
+                request.EventInfosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventInfos, "EventInfos", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventInfosShrink))
+            {
+                query["EventInfos"] = request.EventInfosShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchEventMigrateInstance",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchEventMigrateInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>因底层升级批量迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchEventMigrateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchEventMigrateInstanceResponse
+        /// </returns>
+        public BatchEventMigrateInstanceResponse BatchEventMigrateInstance(BatchEventMigrateInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchEventMigrateInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>因底层升级批量迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchEventMigrateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchEventMigrateInstanceResponse
+        /// </returns>
+        public async Task<BatchEventMigrateInstanceResponse> BatchEventMigrateInstanceAsync(BatchEventMigrateInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchEventMigrateInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量因系统维护实例重启</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>Action</c> 参数固定为 <c>BatchEventRebootInstance</c>。</description></item>
+        /// <item><description><c>Version</c> 参数固定为 <c>2017-11-10</c>。</description></item>
+        /// <item><description><c>EventInfos</c> 是一个数组，每个元素包含需要重启实例的信息，包括事件ID、资源ID、操作类型（立即执行或预约执行）以及可选的计划时间戳（毫秒）。</description></item>
+        /// <item><description>如果选择预约执行，则必须提供 <c>PlanTime</c> 字段的时间戳。</description></item>
+        /// <item><description>返回结果中，<c>Results</c> 数组包含了每个请求的结果信息，包括消息、资源ID、事件ID和状态码。</description></item>
+        /// <item><description>错误情况下，返回相应的错误代码和消息。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchEventRebootInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchEventRebootInstanceResponse
+        /// </returns>
+        public BatchEventRebootInstanceResponse BatchEventRebootInstanceWithOptions(BatchEventRebootInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchEventRebootInstanceShrinkRequest request = new BatchEventRebootInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventInfos))
+            {
+                request.EventInfosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventInfos, "EventInfos", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventInfosShrink))
+            {
+                query["EventInfos"] = request.EventInfosShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchEventRebootInstance",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchEventRebootInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量因系统维护实例重启</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>Action</c> 参数固定为 <c>BatchEventRebootInstance</c>。</description></item>
+        /// <item><description><c>Version</c> 参数固定为 <c>2017-11-10</c>。</description></item>
+        /// <item><description><c>EventInfos</c> 是一个数组，每个元素包含需要重启实例的信息，包括事件ID、资源ID、操作类型（立即执行或预约执行）以及可选的计划时间戳（毫秒）。</description></item>
+        /// <item><description>如果选择预约执行，则必须提供 <c>PlanTime</c> 字段的时间戳。</description></item>
+        /// <item><description>返回结果中，<c>Results</c> 数组包含了每个请求的结果信息，包括消息、资源ID、事件ID和状态码。</description></item>
+        /// <item><description>错误情况下，返回相应的错误代码和消息。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchEventRebootInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchEventRebootInstanceResponse
+        /// </returns>
+        public async Task<BatchEventRebootInstanceResponse> BatchEventRebootInstanceWithOptionsAsync(BatchEventRebootInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchEventRebootInstanceShrinkRequest request = new BatchEventRebootInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventInfos))
+            {
+                request.EventInfosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventInfos, "EventInfos", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventInfosShrink))
+            {
+                query["EventInfos"] = request.EventInfosShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchEventRebootInstance",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchEventRebootInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量因系统维护实例重启</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>Action</c> 参数固定为 <c>BatchEventRebootInstance</c>。</description></item>
+        /// <item><description><c>Version</c> 参数固定为 <c>2017-11-10</c>。</description></item>
+        /// <item><description><c>EventInfos</c> 是一个数组，每个元素包含需要重启实例的信息，包括事件ID、资源ID、操作类型（立即执行或预约执行）以及可选的计划时间戳（毫秒）。</description></item>
+        /// <item><description>如果选择预约执行，则必须提供 <c>PlanTime</c> 字段的时间戳。</description></item>
+        /// <item><description>返回结果中，<c>Results</c> 数组包含了每个请求的结果信息，包括消息、资源ID、事件ID和状态码。</description></item>
+        /// <item><description>错误情况下，返回相应的错误代码和消息。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchEventRebootInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchEventRebootInstanceResponse
+        /// </returns>
+        public BatchEventRebootInstanceResponse BatchEventRebootInstance(BatchEventRebootInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchEventRebootInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量因系统维护实例重启</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><c>Action</c> 参数固定为 <c>BatchEventRebootInstance</c>。</description></item>
+        /// <item><description><c>Version</c> 参数固定为 <c>2017-11-10</c>。</description></item>
+        /// <item><description><c>EventInfos</c> 是一个数组，每个元素包含需要重启实例的信息，包括事件ID、资源ID、操作类型（立即执行或预约执行）以及可选的计划时间戳（毫秒）。</description></item>
+        /// <item><description>如果选择预约执行，则必须提供 <c>PlanTime</c> 字段的时间戳。</description></item>
+        /// <item><description>返回结果中，<c>Results</c> 数组包含了每个请求的结果信息，包括消息、资源ID、事件ID和状态码。</description></item>
+        /// <item><description>错误情况下，返回相应的错误代码和消息。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchEventRebootInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchEventRebootInstanceResponse
+        /// </returns>
+        public async Task<BatchEventRebootInstanceResponse> BatchEventRebootInstanceAsync(BatchEventRebootInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchEventRebootInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量操作重新部署</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchEventRedeployInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchEventRedeployInstanceResponse
+        /// </returns>
+        public BatchEventRedeployInstanceResponse BatchEventRedeployInstanceWithOptions(BatchEventRedeployInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchEventRedeployInstanceShrinkRequest request = new BatchEventRedeployInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventInfos))
+            {
+                request.EventInfosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventInfos, "EventInfos", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventInfosShrink))
+            {
+                query["EventInfos"] = request.EventInfosShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchEventRedeployInstance",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchEventRedeployInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量操作重新部署</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchEventRedeployInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchEventRedeployInstanceResponse
+        /// </returns>
+        public async Task<BatchEventRedeployInstanceResponse> BatchEventRedeployInstanceWithOptionsAsync(BatchEventRedeployInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchEventRedeployInstanceShrinkRequest request = new BatchEventRedeployInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventInfos))
+            {
+                request.EventInfosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventInfos, "EventInfos", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventInfosShrink))
+            {
+                query["EventInfos"] = request.EventInfosShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchEventRedeployInstance",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchEventRedeployInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量操作重新部署</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchEventRedeployInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchEventRedeployInstanceResponse
+        /// </returns>
+        public BatchEventRedeployInstanceResponse BatchEventRedeployInstance(BatchEventRedeployInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchEventRedeployInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量操作重新部署</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchEventRedeployInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchEventRedeployInstanceResponse
+        /// </returns>
+        public async Task<BatchEventRedeployInstanceResponse> BatchEventRedeployInstanceAsync(BatchEventRedeployInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchEventRedeployInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>清理分发数据</para>
         /// </summary>
         /// 
@@ -16318,6 +16766,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["NetDistrictCode"] = request.NetDistrictCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetDistrictCodeNode))
+            {
+                query["NetDistrictCodeNode"] = request.NetDistrictCodeNode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetLevelCode))
             {
                 query["NetLevelCode"] = request.NetLevelCode;
@@ -16363,6 +16815,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetDistrictCode))
             {
                 query["NetDistrictCode"] = request.NetDistrictCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetDistrictCodeNode))
+            {
+                query["NetDistrictCodeNode"] = request.NetDistrictCodeNode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetLevelCode))
             {
@@ -19423,6 +19879,202 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeHaVipsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeHistoryEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHistoryEventsResponse
+        /// </returns>
+        public DescribeHistoryEventsResponse DescribeHistoryEventsWithOptions(DescribeHistoryEventsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeHistoryEventsShrinkRequest request = new DescribeHistoryEventsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventLevels))
+            {
+                request.EventLevelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventLevels, "EventLevels", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventStatus))
+            {
+                request.EventStatusShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventStatus, "EventStatus", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventTypes))
+            {
+                request.EventTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventTypes, "EventTypes", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceIds))
+            {
+                request.ResourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceIds, "ResourceIds", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLevelsShrink))
+            {
+                query["EventLevels"] = request.EventLevelsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventStatusShrink))
+            {
+                query["EventStatus"] = request.EventStatusShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventTypesShrink))
+            {
+                query["EventTypes"] = request.EventTypesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsShrink))
+            {
+                query["ResourceIds"] = request.ResourceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHistoryEvents",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHistoryEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeHistoryEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHistoryEventsResponse
+        /// </returns>
+        public async Task<DescribeHistoryEventsResponse> DescribeHistoryEventsWithOptionsAsync(DescribeHistoryEventsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeHistoryEventsShrinkRequest request = new DescribeHistoryEventsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventLevels))
+            {
+                request.EventLevelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventLevels, "EventLevels", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventStatus))
+            {
+                request.EventStatusShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventStatus, "EventStatus", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventTypes))
+            {
+                request.EventTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventTypes, "EventTypes", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceIds))
+            {
+                request.ResourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceIds, "ResourceIds", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventLevelsShrink))
+            {
+                query["EventLevels"] = request.EventLevelsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventStatusShrink))
+            {
+                query["EventStatus"] = request.EventStatusShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventTypesShrink))
+            {
+                query["EventTypes"] = request.EventTypesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIdsShrink))
+            {
+                query["ResourceIds"] = request.ResourceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeHistoryEvents",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeHistoryEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHistoryEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHistoryEventsResponse
+        /// </returns>
+        public DescribeHistoryEventsResponse DescribeHistoryEvents(DescribeHistoryEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeHistoryEventsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeHistoryEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeHistoryEventsResponse
+        /// </returns>
+        public async Task<DescribeHistoryEventsResponse> DescribeHistoryEventsAsync(DescribeHistoryEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeHistoryEventsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -28007,6 +28659,498 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DistApplicationDataWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>因底层升级需要迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EventMigrateInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventMigrateInstanceResponse
+        /// </returns>
+        public EventMigrateInstanceResponse EventMigrateInstanceWithOptions(EventMigrateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataPolicy))
+            {
+                query["DataPolicy"] = request.DataPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsType))
+            {
+                query["OpsType"] = request.OpsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanTime))
+            {
+                query["PlanTime"] = request.PlanTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EventMigrateInstance",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EventMigrateInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>因底层升级需要迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EventMigrateInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventMigrateInstanceResponse
+        /// </returns>
+        public async Task<EventMigrateInstanceResponse> EventMigrateInstanceWithOptionsAsync(EventMigrateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataPolicy))
+            {
+                query["DataPolicy"] = request.DataPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsType))
+            {
+                query["OpsType"] = request.OpsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanTime))
+            {
+                query["PlanTime"] = request.PlanTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EventMigrateInstance",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EventMigrateInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>因底层升级需要迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EventMigrateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventMigrateInstanceResponse
+        /// </returns>
+        public EventMigrateInstanceResponse EventMigrateInstance(EventMigrateInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EventMigrateInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>因底层升级需要迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EventMigrateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventMigrateInstanceResponse
+        /// </returns>
+        public async Task<EventMigrateInstanceResponse> EventMigrateInstanceAsync(EventMigrateInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EventMigrateInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>因系统维护实例重启</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于触发一个实例的重启事件。</description></item>
+        /// <item><description><c>OpsType</c>参数可选，若不提供，默认为<c>scheduled</c>（预约执行）。</description></item>
+        /// <item><description>当选择<c>scheduled</c>时，必须提供<c>PlanTime</c>参数，格式为时间戳（毫秒）。</description></item>
+        /// <item><description>如果需要立即执行重启，请设置<c>OpsType</c>为<c>immediate</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EventRebootInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventRebootInstanceResponse
+        /// </returns>
+        public EventRebootInstanceResponse EventRebootInstanceWithOptions(EventRebootInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsType))
+            {
+                query["OpsType"] = request.OpsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanTime))
+            {
+                query["PlanTime"] = request.PlanTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EventRebootInstance",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EventRebootInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>因系统维护实例重启</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于触发一个实例的重启事件。</description></item>
+        /// <item><description><c>OpsType</c>参数可选，若不提供，默认为<c>scheduled</c>（预约执行）。</description></item>
+        /// <item><description>当选择<c>scheduled</c>时，必须提供<c>PlanTime</c>参数，格式为时间戳（毫秒）。</description></item>
+        /// <item><description>如果需要立即执行重启，请设置<c>OpsType</c>为<c>immediate</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EventRebootInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventRebootInstanceResponse
+        /// </returns>
+        public async Task<EventRebootInstanceResponse> EventRebootInstanceWithOptionsAsync(EventRebootInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsType))
+            {
+                query["OpsType"] = request.OpsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanTime))
+            {
+                query["PlanTime"] = request.PlanTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EventRebootInstance",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EventRebootInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>因系统维护实例重启</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于触发一个实例的重启事件。</description></item>
+        /// <item><description><c>OpsType</c>参数可选，若不提供，默认为<c>scheduled</c>（预约执行）。</description></item>
+        /// <item><description>当选择<c>scheduled</c>时，必须提供<c>PlanTime</c>参数，格式为时间戳（毫秒）。</description></item>
+        /// <item><description>如果需要立即执行重启，请设置<c>OpsType</c>为<c>immediate</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EventRebootInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventRebootInstanceResponse
+        /// </returns>
+        public EventRebootInstanceResponse EventRebootInstance(EventRebootInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EventRebootInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>因系统维护实例重启</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于触发一个实例的重启事件。</description></item>
+        /// <item><description><c>OpsType</c>参数可选，若不提供，默认为<c>scheduled</c>（预约执行）。</description></item>
+        /// <item><description>当选择<c>scheduled</c>时，必须提供<c>PlanTime</c>参数，格式为时间戳（毫秒）。</description></item>
+        /// <item><description>如果需要立即执行重启，请设置<c>OpsType</c>为<c>immediate</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EventRebootInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventRebootInstanceResponse
+        /// </returns>
+        public async Task<EventRebootInstanceResponse> EventRebootInstanceAsync(EventRebootInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EventRebootInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>节点内迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EventRedeployInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventRedeployInstanceResponse
+        /// </returns>
+        public EventRedeployInstanceResponse EventRedeployInstanceWithOptions(EventRedeployInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsType))
+            {
+                query["OpsType"] = request.OpsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanTime))
+            {
+                query["PlanTime"] = request.PlanTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EventRedeployInstance",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EventRedeployInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>节点内迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EventRedeployInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventRedeployInstanceResponse
+        /// </returns>
+        public async Task<EventRedeployInstanceResponse> EventRedeployInstanceWithOptionsAsync(EventRedeployInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsType))
+            {
+                query["OpsType"] = request.OpsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanTime))
+            {
+                query["PlanTime"] = request.PlanTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EventRedeployInstance",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EventRedeployInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>节点内迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EventRedeployInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventRedeployInstanceResponse
+        /// </returns>
+        public EventRedeployInstanceResponse EventRedeployInstance(EventRedeployInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EventRedeployInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>节点内迁移</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EventRedeployInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EventRedeployInstanceResponse
+        /// </returns>
+        public async Task<EventRedeployInstanceResponse> EventRedeployInstanceAsync(EventRedeployInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EventRedeployInstanceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

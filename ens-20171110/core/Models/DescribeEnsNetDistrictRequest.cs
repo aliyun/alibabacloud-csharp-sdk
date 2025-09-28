@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string NetDistrictCode { get; set; }
 
+        [NameInMap("NetDistrictCodeNode")]
+        [Validation(Required=false)]
+        public bool? NetDistrictCodeNode { get; set; }
+
         /// <summary>
         /// <para>The level of the region.</para>
         /// <list type="bullet">
