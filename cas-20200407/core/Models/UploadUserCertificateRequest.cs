@@ -60,6 +60,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <remarks>
         /// <para> The name must be unique within an Alibaba Cloud account.</para>
         /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cert-1</para>
