@@ -127,10 +127,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public string Bucket { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>test-catalog</para>
+                /// </summary>
                 [NameInMap("catalog")]
                 [Validation(Required=false)]
                 public string Catalog { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>test-database</para>
+                /// </summary>
                 [NameInMap("database")]
                 [Validation(Required=false)]
                 public string Database { get; set; }
@@ -145,6 +153,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>ha3</para>
+                /// </summary>
                 [NameInMap("format")]
                 [Validation(Required=false)]
                 public string Format { get; set; }
@@ -209,10 +221,20 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public string Table { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>paimon
+                /// lance
+                /// object</para>
+                /// </summary>
                 [NameInMap("tableFormat")]
                 [Validation(Required=false)]
                 public string TableFormat { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>test-tag</para>
+                /// </summary>
                 [NameInMap("tag")]
                 [Validation(Required=false)]
                 public string Tag { get; set; }
@@ -259,10 +281,18 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>/opensearch/oss.json</para>
+            /// </summary>
             [NameInMap("ossDataPath")]
             [Validation(Required=false)]
             public string OssDataPath { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ds=20230114</para>
+            /// </summary>
             [NameInMap("partition")]
             [Validation(Required=false)]
             public string Partition { get; set; }
@@ -348,6 +378,21 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
         [Validation(Required=false)]
         public string Domain { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{
+        ///         &quot;vector&quot;:
+        ///         [
+        ///             &quot;source_image_vector&quot;
+        ///         ],
+        ///         &quot;embeding&quot;:
+        ///         [
+        ///             &quot;source_image&quot;
+        ///         ],
+        ///         &quot;description&quot;:
+        ///         []
+        ///     }</para>
+        /// </summary>
         [NameInMap("extend")]
         [Validation(Required=false)]
         public Dictionary<string, object> Extend { get; set; }

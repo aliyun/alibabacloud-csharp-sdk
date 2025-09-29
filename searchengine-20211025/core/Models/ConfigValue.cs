@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
             /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>/intervene_dict/中文-通用分析器.dict</para>
+            /// <para>/intervene_dict/example.dict</para>
             /// </summary>
             [NameInMap("fileName")]
             [Validation(Required=false)]

@@ -198,6 +198,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
+                [NameInMap("format")]
+                [Validation(Required=false)]
+                public string Format { get; set; }
+
                 /// <summary>
                 /// <para>The Object Storage Service (OSS) path.</para>
                 /// 
@@ -217,6 +221,10 @@ namespace AlibabaCloud.SDK.Searchengine20211025.Models
                 [NameInMap("partition")]
                 [Validation(Required=false)]
                 public string Partition { get; set; }
+
+                [NameInMap("path")]
+                [Validation(Required=false)]
+                public string Path { get; set; }
 
                 /// <summary>
                 /// <para>The name of the MaxCompute project that is used as the data source.</para>
