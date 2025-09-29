@@ -1,3 +1,7 @@
+2025-09-29 Version: 4.10.11
+- Update API DescribeDesktops: add response parameters Body.Desktops.$.SerialNumber.
+
+
 2025-09-22 Version: 4.10.10
 - Update API CreateAutoSnapshotPolicy: add request parameters DiskType.
 - Update API CreateDesktops: add request parameters ChannelCookie.

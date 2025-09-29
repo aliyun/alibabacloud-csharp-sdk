@@ -803,6 +803,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             }
 
+            [NameInMap("SerialNumber")]
+            [Validation(Required=false)]
+            public string SerialNumber { get; set; }
+
             /// <summary>
             /// <para>The type of the session.</para>
             /// <para>Valid values:</para>
