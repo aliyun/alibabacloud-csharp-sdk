@@ -32417,6 +32417,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["IncludeMetadataFields"] = request.IncludeMetadataFields;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeSparseValues))
+            {
+                query["IncludeSparseValues"] = request.IncludeSparseValues;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeValues))
             {
                 query["IncludeValues"] = request.IncludeValues;
@@ -32554,6 +32558,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeMetadataFields))
             {
                 query["IncludeMetadataFields"] = request.IncludeMetadataFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeSparseValues))
+            {
+                query["IncludeSparseValues"] = request.IncludeSparseValues;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeValues))
             {

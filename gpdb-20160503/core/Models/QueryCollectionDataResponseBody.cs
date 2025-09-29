@@ -51,6 +51,32 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public double? Score { get; set; }
 
+                [NameInMap("SparseValues")]
+                [Validation(Required=false)]
+                public QueryCollectionDataResponseBodyMatchesMatchSparseValues SparseValues { get; set; }
+                public class QueryCollectionDataResponseBodyMatchesMatchSparseValues : TeaModel {
+                    [NameInMap("Indices")]
+                    [Validation(Required=false)]
+                    public QueryCollectionDataResponseBodyMatchesMatchSparseValuesIndices Indices { get; set; }
+                    public class QueryCollectionDataResponseBodyMatchesMatchSparseValuesIndices : TeaModel {
+                        [NameInMap("Indice")]
+                        [Validation(Required=false)]
+                        public List<int?> Indice { get; set; }
+
+                    }
+
+                    [NameInMap("Values")]
+                    [Validation(Required=false)]
+                    public QueryCollectionDataResponseBodyMatchesMatchSparseValuesValues Values { get; set; }
+                    public class QueryCollectionDataResponseBodyMatchesMatchSparseValuesValues : TeaModel {
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public List<float?> Value { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>List of vector data.</para>
                 /// </summary>

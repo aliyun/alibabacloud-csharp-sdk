@@ -108,6 +108,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string IncludeMetadataFields { get; set; }
 
+        [NameInMap("IncludeSparseValues")]
+        [Validation(Required=false)]
+        public bool? IncludeSparseValues { get; set; }
+
         /// <summary>
         /// <para>Whether to return vector data. Value descriptions:</para>
         /// <list type="bullet">
