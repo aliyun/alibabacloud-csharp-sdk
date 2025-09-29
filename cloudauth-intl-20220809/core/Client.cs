@@ -1366,6 +1366,126 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>凭证识别查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CredentialGetResultIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialGetResultIntlResponse
+        /// </returns>
+        public CredentialGetResultIntlResponse CredentialGetResultIntlWithOptions(CredentialGetResultIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransactionId))
+            {
+                query["TransactionId"] = request.TransactionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CredentialGetResultIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CredentialGetResultIntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>凭证识别查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CredentialGetResultIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialGetResultIntlResponse
+        /// </returns>
+        public async Task<CredentialGetResultIntlResponse> CredentialGetResultIntlWithOptionsAsync(CredentialGetResultIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransactionId))
+            {
+                query["TransactionId"] = request.TransactionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CredentialGetResultIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CredentialGetResultIntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>凭证识别查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CredentialGetResultIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialGetResultIntlResponse
+        /// </returns>
+        public CredentialGetResultIntlResponse CredentialGetResultIntl(CredentialGetResultIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CredentialGetResultIntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>凭证识别查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CredentialGetResultIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialGetResultIntlResponse
+        /// </returns>
+        public async Task<CredentialGetResultIntlResponse> CredentialGetResultIntlAsync(CredentialGetResultIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CredentialGetResultIntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Credential Recognition</para>
         /// </summary>
         /// 
@@ -1546,6 +1666,186 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CredentialRecognitionIntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>凭证识别提交</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CredentialSubmitIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialSubmitIntlResponse
+        /// </returns>
+        public CredentialSubmitIntlResponse CredentialSubmitIntlWithOptions(CredentialSubmitIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FraudCheck))
+            {
+                query["FraudCheck"] = request.FraudCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrArea))
+            {
+                query["OcrArea"] = request.OcrArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureBase64))
+            {
+                body["CredentialOcrPictureBase64"] = request.CredentialOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureUrl))
+            {
+                body["CredentialOcrPictureUrl"] = request.CredentialOcrPictureUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CredentialSubmitIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CredentialSubmitIntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>凭证识别提交</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CredentialSubmitIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialSubmitIntlResponse
+        /// </returns>
+        public async Task<CredentialSubmitIntlResponse> CredentialSubmitIntlWithOptionsAsync(CredentialSubmitIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FraudCheck))
+            {
+                query["FraudCheck"] = request.FraudCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrArea))
+            {
+                query["OcrArea"] = request.OcrArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureBase64))
+            {
+                body["CredentialOcrPictureBase64"] = request.CredentialOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureUrl))
+            {
+                body["CredentialOcrPictureUrl"] = request.CredentialOcrPictureUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CredentialSubmitIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CredentialSubmitIntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>凭证识别提交</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CredentialSubmitIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialSubmitIntlResponse
+        /// </returns>
+        public CredentialSubmitIntlResponse CredentialSubmitIntl(CredentialSubmitIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CredentialSubmitIntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>凭证识别提交</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CredentialSubmitIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialSubmitIntlResponse
+        /// </returns>
+        public async Task<CredentialSubmitIntlResponse> CredentialSubmitIntlAsync(CredentialSubmitIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CredentialSubmitIntlWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3278,6 +3578,206 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await FaceCompareWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>人脸交叉比对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FaceCrossCompareIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FaceCrossCompareIntlResponse
+        /// </returns>
+        public FaceCrossCompareIntlResponse FaceCrossCompareIntlWithOptions(FaceCrossCompareIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompareModel))
+            {
+                query["CompareModel"] = request.CompareModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceVerifyThreshold))
+            {
+                query["FaceVerifyThreshold"] = request.FaceVerifyThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAFacePicture))
+            {
+                query["SourceAFacePicture"] = request.SourceAFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAFacePictureUrl))
+            {
+                query["SourceAFacePictureUrl"] = request.SourceAFacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceBFacePicture))
+            {
+                query["SourceBFacePicture"] = request.SourceBFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceBFacePictureUrl))
+            {
+                query["SourceBFacePictureUrl"] = request.SourceBFacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCFacePicture))
+            {
+                query["SourceCFacePicture"] = request.SourceCFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCFacePictureUrl))
+            {
+                query["SourceCFacePictureUrl"] = request.SourceCFacePictureUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FaceCrossCompareIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FaceCrossCompareIntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>人脸交叉比对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FaceCrossCompareIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FaceCrossCompareIntlResponse
+        /// </returns>
+        public async Task<FaceCrossCompareIntlResponse> FaceCrossCompareIntlWithOptionsAsync(FaceCrossCompareIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompareModel))
+            {
+                query["CompareModel"] = request.CompareModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceVerifyThreshold))
+            {
+                query["FaceVerifyThreshold"] = request.FaceVerifyThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAFacePicture))
+            {
+                query["SourceAFacePicture"] = request.SourceAFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAFacePictureUrl))
+            {
+                query["SourceAFacePictureUrl"] = request.SourceAFacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceBFacePicture))
+            {
+                query["SourceBFacePicture"] = request.SourceBFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceBFacePictureUrl))
+            {
+                query["SourceBFacePictureUrl"] = request.SourceBFacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCFacePicture))
+            {
+                query["SourceCFacePicture"] = request.SourceCFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCFacePictureUrl))
+            {
+                query["SourceCFacePictureUrl"] = request.SourceCFacePictureUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FaceCrossCompareIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FaceCrossCompareIntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>人脸交叉比对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FaceCrossCompareIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FaceCrossCompareIntlResponse
+        /// </returns>
+        public FaceCrossCompareIntlResponse FaceCrossCompareIntl(FaceCrossCompareIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return FaceCrossCompareIntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>人脸交叉比对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FaceCrossCompareIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FaceCrossCompareIntlResponse
+        /// </returns>
+        public async Task<FaceCrossCompareIntlResponse> FaceCrossCompareIntlAsync(FaceCrossCompareIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await FaceCrossCompareIntlWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5956,6 +6456,126 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TempAccessTokenIntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文件临时地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TempOssUrlIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TempOssUrlIntlResponse
+        /// </returns>
+        public TempOssUrlIntlResponse TempOssUrlIntlWithOptions(TempOssUrlIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectName))
+            {
+                body["ObjectName"] = request.ObjectName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TempOssUrlIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TempOssUrlIntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文件临时地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TempOssUrlIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TempOssUrlIntlResponse
+        /// </returns>
+        public async Task<TempOssUrlIntlResponse> TempOssUrlIntlWithOptionsAsync(TempOssUrlIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectName))
+            {
+                body["ObjectName"] = request.ObjectName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TempOssUrlIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TempOssUrlIntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文件临时地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TempOssUrlIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TempOssUrlIntlResponse
+        /// </returns>
+        public TempOssUrlIntlResponse TempOssUrlIntl(TempOssUrlIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TempOssUrlIntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文件临时地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TempOssUrlIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TempOssUrlIntlResponse
+        /// </returns>
+        public async Task<TempOssUrlIntlResponse> TempOssUrlIntlAsync(TempOssUrlIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TempOssUrlIntlWithOptionsAsync(request, runtime);
         }
 
     }
