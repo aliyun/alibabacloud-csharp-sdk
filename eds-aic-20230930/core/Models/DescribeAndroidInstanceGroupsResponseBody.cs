@@ -168,6 +168,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
+            [NameInMap("ImageVersion")]
+            [Validation(Required=false)]
+            public string ImageVersion { get; set; }
+
             /// <summary>
             /// <para>The list of installed applications.</para>
             /// 

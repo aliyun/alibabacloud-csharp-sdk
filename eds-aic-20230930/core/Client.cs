@@ -401,6 +401,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeSourceFilePathList))
+            {
+                query["ExcludeSourceFilePathList"] = request.ExcludeSourceFilePathList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAppList))
             {
                 query["SourceAppList"] = request.SourceAppList;
@@ -479,6 +483,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeSourceFilePathList))
+            {
+                query["ExcludeSourceFilePathList"] = request.ExcludeSourceFilePathList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAppList))
             {

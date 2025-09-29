@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("ExcludeSourceFilePathList")]
+        [Validation(Required=false)]
+        public List<string> ExcludeSourceFilePathList { get; set; }
+
         /// <summary>
         /// <para>The names of the application packages that you want to back up.</para>
         /// </summary>
