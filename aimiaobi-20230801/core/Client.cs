@@ -21886,6 +21886,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["ChatConfig"] = request.ChatConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["FileUrl"] = request.FileUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
             {
                 body["ModelId"] = request.ModelId;
@@ -21961,6 +21965,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatConfigShrink))
             {
                 body["ChatConfig"] = request.ChatConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["FileUrl"] = request.FileUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
             {

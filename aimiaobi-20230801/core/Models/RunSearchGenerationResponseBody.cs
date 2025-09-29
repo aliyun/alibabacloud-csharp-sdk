@@ -127,6 +127,142 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                         [Validation(Required=false)]
                         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContent GeneratedContent { get; set; }
                         public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContent : TeaModel {
+                            [NameInMap("AudioSearchResult")]
+                            [Validation(Required=false)]
+                            public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResult AudioSearchResult { get; set; }
+                            public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResult : TeaModel {
+                                [NameInMap("SearchResult")]
+                                [Validation(Required=false)]
+                                public List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResult> SearchResult { get; set; }
+                                public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResult : TeaModel {
+                                    [NameInMap("Article")]
+                                    [Validation(Required=false)]
+                                    public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle Article { get; set; }
+                                    public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultArticle : TeaModel {
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>xx</para>
+                                        /// </summary>
+                                        [NameInMap("DocId")]
+                                        [Validation(Required=false)]
+                                        public string DocId { get; set; }
+
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>xx</para>
+                                        /// </summary>
+                                        [NameInMap("DocUuid")]
+                                        [Validation(Required=false)]
+                                        public string DocUuid { get; set; }
+
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>xx</para>
+                                        /// </summary>
+                                        [NameInMap("SearchSourceName")]
+                                        [Validation(Required=false)]
+                                        public string SearchSourceName { get; set; }
+
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>xxx</para>
+                                        /// </summary>
+                                        [NameInMap("Summary")]
+                                        [Validation(Required=false)]
+                                        public string Summary { get; set; }
+
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>xx</para>
+                                        /// </summary>
+                                        [NameInMap("Title")]
+                                        [Validation(Required=false)]
+                                        public string Title { get; set; }
+
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para><a href="http://xxx">http://xxx</a></para>
+                                        /// </summary>
+                                        [NameInMap("Url")]
+                                        [Validation(Required=false)]
+                                        public string Url { get; set; }
+
+                                    }
+
+                                    [NameInMap("ClipInfos")]
+                                    [Validation(Required=false)]
+                                    public List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultClipInfos> ClipInfos { get; set; }
+                                    public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentAudioSearchResultSearchResultClipInfos : TeaModel {
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>1</para>
+                                        /// </summary>
+                                        [NameInMap("From")]
+                                        [Validation(Required=false)]
+                                        public double? From { get; set; }
+
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>0.9</para>
+                                        /// </summary>
+                                        [NameInMap("Score")]
+                                        [Validation(Required=false)]
+                                        public double? Score { get; set; }
+
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>xx</para>
+                                        /// </summary>
+                                        [NameInMap("Text")]
+                                        [Validation(Required=false)]
+                                        public string Text { get; set; }
+
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>2</para>
+                                        /// </summary>
+                                        [NameInMap("To")]
+                                        [Validation(Required=false)]
+                                        public double? To { get; set; }
+
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>asr</para>
+                                        /// </summary>
+                                        [NameInMap("Type")]
+                                        [Validation(Required=false)]
+                                        public string Type { get; set; }
+
+                                    }
+
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para><a href="http://xxx">http://xxx</a></para>
+                                    /// </summary>
+                                    [NameInMap("FileUrl")]
+                                    [Validation(Required=false)]
+                                    public string FileUrl { get; set; }
+
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>xxx</para>
+                                    /// </summary>
+                                    [NameInMap("MediaId")]
+                                    [Validation(Required=false)]
+                                    public string MediaId { get; set; }
+
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>1</para>
+                                    /// </summary>
+                                    [NameInMap("TraceabilityId")]
+                                    [Validation(Required=false)]
+                                    public string TraceabilityId { get; set; }
+
+                                }
+
+                            }
+
                             [NameInMap("ClusterTopicResult")]
                             [Validation(Required=false)]
                             public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResult ClusterTopicResult { get; set; }
@@ -135,6 +271,158 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                 [Validation(Required=false)]
                                 public List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopics> ClusterTopics { get; set; }
                                 public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopics : TeaModel {
+                                    [NameInMap("AudioSearchResult")]
+                                    [Validation(Required=false)]
+                                    public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResult AudioSearchResult { get; set; }
+                                    public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResult : TeaModel {
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>1</para>
+                                        /// </summary>
+                                        [NameInMap("Current")]
+                                        [Validation(Required=false)]
+                                        public int? Current { get; set; }
+
+                                        [NameInMap("SearchResult")]
+                                        [Validation(Required=false)]
+                                        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResult SearchResult { get; set; }
+                                        public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResult : TeaModel {
+                                            [NameInMap("Article")]
+                                            [Validation(Required=false)]
+                                            public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle Article { get; set; }
+                                            public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultArticle : TeaModel {
+                                                /// <summary>
+                                                /// <b>Example:</b>
+                                                /// <para>xx</para>
+                                                /// </summary>
+                                                [NameInMap("DocId")]
+                                                [Validation(Required=false)]
+                                                public string DocId { get; set; }
+
+                                                /// <summary>
+                                                /// <b>Example:</b>
+                                                /// <para>xx</para>
+                                                /// </summary>
+                                                [NameInMap("DocUuid")]
+                                                [Validation(Required=false)]
+                                                public string DocUuid { get; set; }
+
+                                                /// <summary>
+                                                /// <b>Example:</b>
+                                                /// <para>xx</para>
+                                                /// </summary>
+                                                [NameInMap("SearchSourceName")]
+                                                [Validation(Required=false)]
+                                                public string SearchSourceName { get; set; }
+
+                                                /// <summary>
+                                                /// <b>Example:</b>
+                                                /// <para>xx</para>
+                                                /// </summary>
+                                                [NameInMap("Summary")]
+                                                [Validation(Required=false)]
+                                                public string Summary { get; set; }
+
+                                                /// <summary>
+                                                /// <b>Example:</b>
+                                                /// <para>xx</para>
+                                                /// </summary>
+                                                [NameInMap("Title")]
+                                                [Validation(Required=false)]
+                                                public string Title { get; set; }
+
+                                                /// <summary>
+                                                /// <b>Example:</b>
+                                                /// <para><a href="http://xx">http://xx</a></para>
+                                                /// </summary>
+                                                [NameInMap("Url")]
+                                                [Validation(Required=false)]
+                                                public string Url { get; set; }
+
+                                            }
+
+                                            [NameInMap("ClipInfos")]
+                                            [Validation(Required=false)]
+                                            public List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultClipInfos> ClipInfos { get; set; }
+                                            public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsAudioSearchResultSearchResultClipInfos : TeaModel {
+                                                /// <summary>
+                                                /// <b>Example:</b>
+                                                /// <para>1</para>
+                                                /// </summary>
+                                                [NameInMap("From")]
+                                                [Validation(Required=false)]
+                                                public double? From { get; set; }
+
+                                                /// <summary>
+                                                /// <b>Example:</b>
+                                                /// <para>1</para>
+                                                /// </summary>
+                                                [NameInMap("Score")]
+                                                [Validation(Required=false)]
+                                                public double? Score { get; set; }
+
+                                                /// <summary>
+                                                /// <b>Example:</b>
+                                                /// <para>xx</para>
+                                                /// </summary>
+                                                [NameInMap("Text")]
+                                                [Validation(Required=false)]
+                                                public string Text { get; set; }
+
+                                                /// <summary>
+                                                /// <b>Example:</b>
+                                                /// <para>1</para>
+                                                /// </summary>
+                                                [NameInMap("To")]
+                                                [Validation(Required=false)]
+                                                public double? To { get; set; }
+
+                                                /// <summary>
+                                                /// <b>Example:</b>
+                                                /// <para>asr</para>
+                                                /// </summary>
+                                                [NameInMap("Type")]
+                                                [Validation(Required=false)]
+                                                public string Type { get; set; }
+
+                                            }
+
+                                            /// <summary>
+                                            /// <b>Example:</b>
+                                            /// <para><a href="http://xx">http://xx</a></para>
+                                            /// </summary>
+                                            [NameInMap("FileUrl")]
+                                            [Validation(Required=false)]
+                                            public string FileUrl { get; set; }
+
+                                            /// <summary>
+                                            /// <b>Example:</b>
+                                            /// <para>xxx</para>
+                                            /// </summary>
+                                            [NameInMap("MediaId")]
+                                            [Validation(Required=false)]
+                                            public string MediaId { get; set; }
+
+                                        }
+
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>1</para>
+                                        /// </summary>
+                                        [NameInMap("Size")]
+                                        [Validation(Required=false)]
+                                        public int? Size { get; set; }
+
+                                        /// <summary>
+                                        /// <b>Example:</b>
+                                        /// <para>1</para>
+                                        /// </summary>
+                                        [NameInMap("Total")]
+                                        [Validation(Required=false)]
+                                        public int? Total { get; set; }
+
+                                    }
+
                                     [NameInMap("ImageSearchResult")]
                                     [Validation(Required=false)]
                                     public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentClusterTopicResultClusterTopicsImageSearchResult ImageSearchResult { get; set; }
@@ -929,6 +1217,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                     [Validation(Required=false)]
                                     public string MediaId { get; set; }
 
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>1</para>
+                                    /// </summary>
+                                    [NameInMap("TraceabilityId")]
+                                    [Validation(Required=false)]
+                                    public string TraceabilityId { get; set; }
+
                                 }
 
                             }
@@ -1185,6 +1481,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                         [Validation(Required=false)]
                                         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultGenerateTraceabilityCoordinatesNewsCoordinate NewsCoordinate { get; set; }
                                         public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultGenerateTraceabilityCoordinatesNewsCoordinate : TeaModel {
+                                            /// <summary>
+                                            /// <b>Example:</b>
+                                            /// <para>image</para>
+                                            /// </summary>
+                                            [NameInMap("MediaType")]
+                                            [Validation(Required=false)]
+                                            public string MediaType { get; set; }
+
                                             /// <summary>
                                             /// <b>Example:</b>
                                             /// <para>1</para>
@@ -1735,6 +2039,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
                                     /// <summary>
                                     /// <b>Example:</b>
+                                    /// <para>1</para>
+                                    /// </summary>
+                                    [NameInMap("TraceabilityId")]
+                                    [Validation(Required=false)]
+                                    public string TraceabilityId { get; set; }
+
+                                    /// <summary>
+                                    /// <b>Example:</b>
                                     /// <para>xx</para>
                                     /// </summary>
                                     [NameInMap("Url")]
@@ -1807,6 +2119,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                         [Validation(Required=false)]
                                         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultGenerateTraceabilityCoordinatesNewsCoordinate NewsCoordinate { get; set; }
                                         public class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultGenerateTraceabilityCoordinatesNewsCoordinate : TeaModel {
+                                            /// <summary>
+                                            /// <b>Example:</b>
+                                            /// <para>image</para>
+                                            /// </summary>
+                                            [NameInMap("MediaType")]
+                                            [Validation(Required=false)]
+                                            public string MediaType { get; set; }
+
                                             /// <summary>
                                             /// <b>Example:</b>
                                             /// <para>1</para>
@@ -2355,6 +2675,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                                     [Validation(Required=false)]
                                     public string MediaId { get; set; }
 
+                                    /// <summary>
+                                    /// <b>Example:</b>
+                                    /// <para>1</para>
+                                    /// </summary>
+                                    [NameInMap("TraceabilityId")]
+                                    [Validation(Required=false)]
+                                    public string TraceabilityId { get; set; }
+
                                 }
 
                             }
@@ -2424,6 +2752,126 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                             [NameInMap("TotalTokens")]
                             [Validation(Required=false)]
                             public long? TotalTokens { get; set; }
+
+                        }
+
+                    }
+
+                }
+
+                [NameInMap("Messages")]
+                [Validation(Required=false)]
+                public List<RunSearchGenerationResponseBodyPayloadOutputMessages> Messages { get; set; }
+                public class RunSearchGenerationResponseBodyPayloadOutputMessages : TeaModel {
+                    [NameInMap("Clarifications")]
+                    [Validation(Required=false)]
+                    public bool? Clarifications { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>xx</para>
+                    /// </summary>
+                    [NameInMap("Content")]
+                    [Validation(Required=false)]
+                    public string Content { get; set; }
+
+                    [NameInMap("GenerateFinished")]
+                    [Validation(Required=false)]
+                    public bool? GenerateFinished { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>xx</para>
+                    /// </summary>
+                    [NameInMap("Id")]
+                    [Validation(Required=false)]
+                    public string Id { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>generateStartStatement</para>
+                    /// </summary>
+                    [NameInMap("NodeCode")]
+                    [Validation(Required=false)]
+                    public string NodeCode { get; set; }
+
+                    [NameInMap("SearchQueries")]
+                    [Validation(Required=false)]
+                    public List<string> SearchQueries { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>xx</para>
+                    /// </summary>
+                    [NameInMap("SearchQuery")]
+                    [Validation(Required=false)]
+                    public string SearchQuery { get; set; }
+
+                    [NameInMap("SearchResult")]
+                    [Validation(Required=false)]
+                    public List<RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResult> SearchResult { get; set; }
+                    public class RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResult : TeaModel {
+                        [NameInMap("Audios")]
+                        [Validation(Required=false)]
+                        public List<RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultAudios> Audios { get; set; }
+                        public class RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultAudios : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>xx</para>
+                            /// </summary>
+                            [NameInMap("MediaId")]
+                            [Validation(Required=false)]
+                            public string MediaId { get; set; }
+
+                        }
+
+                        [NameInMap("Images")]
+                        [Validation(Required=false)]
+                        public List<RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultImages> Images { get; set; }
+                        public class RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultImages : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>xx</para>
+                            /// </summary>
+                            [NameInMap("MediaId")]
+                            [Validation(Required=false)]
+                            public string MediaId { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>xx</para>
+                        /// </summary>
+                        [NameInMap("MultimodalSearchQuery")]
+                        [Validation(Required=false)]
+                        public string MultimodalSearchQuery { get; set; }
+
+                        [NameInMap("Texts")]
+                        [Validation(Required=false)]
+                        public List<RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultTexts> Texts { get; set; }
+                        public class RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultTexts : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>xx</para>
+                            /// </summary>
+                            [NameInMap("DocUuid")]
+                            [Validation(Required=false)]
+                            public string DocUuid { get; set; }
+
+                        }
+
+                        [NameInMap("Videos")]
+                        [Validation(Required=false)]
+                        public List<RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultVideos> Videos { get; set; }
+                        public class RunSearchGenerationResponseBodyPayloadOutputMessagesSearchResultVideos : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>1</para>
+                            /// </summary>
+                            [NameInMap("MediaId")]
+                            [Validation(Required=false)]
+                            public string MediaId { get; set; }
 
                         }
 

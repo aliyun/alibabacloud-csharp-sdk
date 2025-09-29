@@ -303,6 +303,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para><a href="http://xxxx">http://xxxx</a></para>
+        /// </summary>
+        [NameInMap("FileUrl")]
+        [Validation(Required=false)]
+        public string FileUrl { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>qwen-max-latest</para>
         /// </summary>
         [NameInMap("ModelId")]

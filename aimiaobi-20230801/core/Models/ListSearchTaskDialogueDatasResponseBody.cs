@@ -157,6 +157,28 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        [NameInMap("Audios")]
+        [Validation(Required=false)]
+        public List<ListSearchTaskDialogueDatasResponseBodyAudios> Audios { get; set; }
+        public class ListSearchTaskDialogueDatasResponseBodyAudios : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="http://xxx">http://xxx</a></para>
+            /// </summary>
+            [NameInMap("FileUrl")]
+            [Validation(Required=false)]
+            public string FileUrl { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>xxxx</para>
+            /// </summary>
+            [NameInMap("MediaId")]
+            [Validation(Required=false)]
+            public string MediaId { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>NoData</para>
