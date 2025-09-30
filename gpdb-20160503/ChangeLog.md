@@ -1,3 +1,8 @@
+2025-09-30 Version: 2.7.0
+- Support API ChatWithKnowledgeBase.
+- Support API ChatWithKnowledgeBaseStream.
+
+
 2025-09-29 Version: 2.6.1
 - Update API QueryCollectionData: add request parameters IncludeSparseValues.
 - Update API QueryCollectionData: add response parameters Body.Matches.$.SparseValues.

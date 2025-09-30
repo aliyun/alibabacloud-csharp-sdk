@@ -1222,6 +1222,406 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ChatWithKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatWithKnowledgeBaseResponse
+        /// </returns>
+        public ChatWithKnowledgeBaseResponse ChatWithKnowledgeBaseWithOptions(ChatWithKnowledgeBaseRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ChatWithKnowledgeBaseShrinkRequest request = new ChatWithKnowledgeBaseShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KnowledgeParams))
+            {
+                request.KnowledgeParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeParams, "KnowledgeParams", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ModelParams))
+            {
+                request.ModelParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ModelParams, "ModelParams", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeKnowledgeBaseResults))
+            {
+                query["IncludeKnowledgeBaseResults"] = request.IncludeKnowledgeBaseResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeParamsShrink))
+            {
+                query["KnowledgeParams"] = request.KnowledgeParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelParamsShrink))
+            {
+                query["ModelParams"] = request.ModelParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptParams))
+            {
+                query["PromptParams"] = request.PromptParams;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChatWithKnowledgeBase",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChatWithKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ChatWithKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatWithKnowledgeBaseResponse
+        /// </returns>
+        public async Task<ChatWithKnowledgeBaseResponse> ChatWithKnowledgeBaseWithOptionsAsync(ChatWithKnowledgeBaseRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ChatWithKnowledgeBaseShrinkRequest request = new ChatWithKnowledgeBaseShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KnowledgeParams))
+            {
+                request.KnowledgeParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeParams, "KnowledgeParams", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ModelParams))
+            {
+                request.ModelParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ModelParams, "ModelParams", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeKnowledgeBaseResults))
+            {
+                query["IncludeKnowledgeBaseResults"] = request.IncludeKnowledgeBaseResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeParamsShrink))
+            {
+                query["KnowledgeParams"] = request.KnowledgeParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelParamsShrink))
+            {
+                query["ModelParams"] = request.ModelParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptParams))
+            {
+                query["PromptParams"] = request.PromptParams;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChatWithKnowledgeBase",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChatWithKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ChatWithKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatWithKnowledgeBaseResponse
+        /// </returns>
+        public ChatWithKnowledgeBaseResponse ChatWithKnowledgeBase(ChatWithKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChatWithKnowledgeBaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ChatWithKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatWithKnowledgeBaseResponse
+        /// </returns>
+        public async Task<ChatWithKnowledgeBaseResponse> ChatWithKnowledgeBaseAsync(ChatWithKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChatWithKnowledgeBaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ChatWithKnowledgeBaseStreamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatWithKnowledgeBaseStreamResponse
+        /// </returns>
+        public ChatWithKnowledgeBaseStreamResponse ChatWithKnowledgeBaseStreamWithOptions(ChatWithKnowledgeBaseStreamRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ChatWithKnowledgeBaseStreamShrinkRequest request = new ChatWithKnowledgeBaseStreamShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KnowledgeParams))
+            {
+                request.KnowledgeParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeParams, "KnowledgeParams", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ModelParams))
+            {
+                request.ModelParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ModelParams, "ModelParams", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeKnowledgeBaseResults))
+            {
+                query["IncludeKnowledgeBaseResults"] = request.IncludeKnowledgeBaseResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeParamsShrink))
+            {
+                query["KnowledgeParams"] = request.KnowledgeParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelParamsShrink))
+            {
+                query["ModelParams"] = request.ModelParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptParams))
+            {
+                query["PromptParams"] = request.PromptParams;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChatWithKnowledgeBaseStream",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChatWithKnowledgeBaseStreamResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ChatWithKnowledgeBaseStreamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatWithKnowledgeBaseStreamResponse
+        /// </returns>
+        public async Task<ChatWithKnowledgeBaseStreamResponse> ChatWithKnowledgeBaseStreamWithOptionsAsync(ChatWithKnowledgeBaseStreamRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ChatWithKnowledgeBaseStreamShrinkRequest request = new ChatWithKnowledgeBaseStreamShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KnowledgeParams))
+            {
+                request.KnowledgeParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeParams, "KnowledgeParams", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ModelParams))
+            {
+                request.ModelParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ModelParams, "ModelParams", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeKnowledgeBaseResults))
+            {
+                query["IncludeKnowledgeBaseResults"] = request.IncludeKnowledgeBaseResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeParamsShrink))
+            {
+                query["KnowledgeParams"] = request.KnowledgeParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelParamsShrink))
+            {
+                query["ModelParams"] = request.ModelParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptParams))
+            {
+                query["PromptParams"] = request.PromptParams;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChatWithKnowledgeBaseStream",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChatWithKnowledgeBaseStreamResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ChatWithKnowledgeBaseStreamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatWithKnowledgeBaseStreamResponse
+        /// </returns>
+        public ChatWithKnowledgeBaseStreamResponse ChatWithKnowledgeBaseStream(ChatWithKnowledgeBaseStreamRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChatWithKnowledgeBaseStreamWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ChatWithKnowledgeBaseStreamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatWithKnowledgeBaseStreamResponse
+        /// </returns>
+        public async Task<ChatWithKnowledgeBaseStreamResponse> ChatWithKnowledgeBaseStreamAsync(ChatWithKnowledgeBaseStreamRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChatWithKnowledgeBaseStreamWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Checks the configurations of a Hadoop data source.</para>
         /// </summary>
         /// 
