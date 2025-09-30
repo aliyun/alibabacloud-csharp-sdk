@@ -5901,5 +5901,155 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             return await UpdateVideoAnalysisTaskWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视频理解-批量修改任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateVideoAnalysisTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVideoAnalysisTasksResponse
+        /// </returns>
+        public UpdateVideoAnalysisTasksResponse UpdateVideoAnalysisTasksWithOptions(string workspaceId, UpdateVideoAnalysisTasksRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateVideoAnalysisTasksShrinkRequest request = new UpdateVideoAnalysisTasksShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIds))
+            {
+                request.TaskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIds, "taskIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdsShrink))
+            {
+                body["taskIds"] = request.TaskIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskStatus))
+            {
+                body["taskStatus"] = request.TaskStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVideoAnalysisTasks",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/videoAnalysis/updateVideoAnalysisTasks",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVideoAnalysisTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视频理解-批量修改任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateVideoAnalysisTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVideoAnalysisTasksResponse
+        /// </returns>
+        public async Task<UpdateVideoAnalysisTasksResponse> UpdateVideoAnalysisTasksWithOptionsAsync(string workspaceId, UpdateVideoAnalysisTasksRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateVideoAnalysisTasksShrinkRequest request = new UpdateVideoAnalysisTasksShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIds))
+            {
+                request.TaskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIds, "taskIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdsShrink))
+            {
+                body["taskIds"] = request.TaskIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskStatus))
+            {
+                body["taskStatus"] = request.TaskStatus;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVideoAnalysisTasks",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/videoAnalysis/updateVideoAnalysisTasks",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVideoAnalysisTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视频理解-批量修改任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVideoAnalysisTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVideoAnalysisTasksResponse
+        /// </returns>
+        public UpdateVideoAnalysisTasksResponse UpdateVideoAnalysisTasks(string workspaceId, UpdateVideoAnalysisTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateVideoAnalysisTasksWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视频理解-批量修改任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVideoAnalysisTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVideoAnalysisTasksResponse
+        /// </returns>
+        public async Task<UpdateVideoAnalysisTasksResponse> UpdateVideoAnalysisTasksAsync(string workspaceId, UpdateVideoAnalysisTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateVideoAnalysisTasksWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
     }
 }
