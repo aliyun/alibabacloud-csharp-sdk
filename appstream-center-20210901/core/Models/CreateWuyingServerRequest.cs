@@ -81,6 +81,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>6a1b8c3d</para>
+        /// </summary>
+        [NameInMap("IdempotenceToken")]
+        [Validation(Required=false)]
+        public string IdempotenceToken { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>img-bp13mu****</para>
         /// </summary>
         [NameInMap("ImageId")]

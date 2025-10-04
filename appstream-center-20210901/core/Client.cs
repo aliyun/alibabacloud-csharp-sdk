@@ -977,6 +977,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 bodyFlat["DataDisk"] = request.DataDisk;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdempotenceToken))
+            {
+                body["IdempotenceToken"] = request.IdempotenceToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 body["ImageId"] = request.ImageId;
@@ -1096,6 +1100,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDisk))
             {
                 bodyFlat["DataDisk"] = request.DataDisk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdempotenceToken))
+            {
+                body["IdempotenceToken"] = request.IdempotenceToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
@@ -1519,6 +1527,126 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAppInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作站</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWuyingServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWuyingServerResponse
+        /// </returns>
+        public DeleteWuyingServerResponse DeleteWuyingServerWithOptions(DeleteWuyingServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerId))
+            {
+                body["WuyingServerId"] = request.WuyingServerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWuyingServer",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWuyingServerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作站</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWuyingServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWuyingServerResponse
+        /// </returns>
+        public async Task<DeleteWuyingServerResponse> DeleteWuyingServerWithOptionsAsync(DeleteWuyingServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerId))
+            {
+                body["WuyingServerId"] = request.WuyingServerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWuyingServer",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWuyingServerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作站</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWuyingServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWuyingServerResponse
+        /// </returns>
+        public DeleteWuyingServerResponse DeleteWuyingServer(DeleteWuyingServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteWuyingServerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作站</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWuyingServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWuyingServerResponse
+        /// </returns>
+        public async Task<DeleteWuyingServerResponse> DeleteWuyingServerAsync(DeleteWuyingServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteWuyingServerWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
