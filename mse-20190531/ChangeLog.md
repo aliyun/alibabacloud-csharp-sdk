@@ -1,3 +1,9 @@
+2025-10-09 Version: 6.20.2
+- Update API CreateNacosMcpServer: add request parameters EncryptToolSpec.
+- Update API GetNacosMcpServer: add response parameters Body.Data.ToolSpec.SecuritySchemes.
+- Update API GetNacosMcpServer: add response parameters Body.Data.ToolSpec.SpecificationType.
+
+
 2025-08-22 Version: 6.20.1
 - Update API GetAppMessageQueueRoute: add response parameters Body.Data.GrayBaseTags.
 - Update API UpdateMessageQueueRoute: add request parameters GrayBaseTags.

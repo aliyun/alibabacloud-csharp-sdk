@@ -175,6 +175,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public GetNacosMcpServerResponseBodyDataToolSpec ToolSpec { get; set; }
             public class GetNacosMcpServerResponseBodyDataToolSpec : TeaModel {
+                [NameInMap("SecuritySchemes")]
+                [Validation(Required=false)]
+                public object SecuritySchemes { get; set; }
+
+                [NameInMap("SpecificationType")]
+                [Validation(Required=false)]
+                public string SpecificationType { get; set; }
+
                 [NameInMap("Tools")]
                 [Validation(Required=false)]
                 public List<GetNacosMcpServerResponseBodyDataToolSpecTools> Tools { get; set; }
