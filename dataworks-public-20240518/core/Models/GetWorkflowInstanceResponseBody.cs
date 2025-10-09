@@ -160,6 +160,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<GetWorkflowInstanceResponseBodyWorkflowInstanceTags> Tags { get; set; }
+            public class GetWorkflowInstanceResponseBodyWorkflowInstanceTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The type of the workflow instance. Valid values:</para>
             /// <list type="bullet">

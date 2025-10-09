@@ -19,12 +19,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? ContainerId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the node. Fuzzy search is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the data to retrieve, used for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default is 10, and the maximum is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

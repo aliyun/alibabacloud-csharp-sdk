@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDataQualityTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The data quality rule template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a7ef0634-20ec-4a7c-a214-54020f91XXXX</para>
         /// </summary>

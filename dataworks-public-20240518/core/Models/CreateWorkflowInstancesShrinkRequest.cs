@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DefaultRunPropertiesShrink { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. Valid values:</para>
+        /// <para>The project environment.</para>
         /// <list type="bullet">
         /// <item><description>Prod</description></item>
         /// <item><description>Dev</description></item>
@@ -79,10 +79,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        /// <summary>
+        /// <para>The tag creation policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Append: New tags are added on top of the existing tags of the manual workflow.</description></item>
+        /// <item><description>Overwrite: Existing tags of the manual workflow are not inherited. New tags are created directly.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Append</para>
+        /// </summary>
         [NameInMap("TagCreationPolicy")]
         [Validation(Required=false)]
         public string TagCreationPolicy { get; set; }
 
+        /// <summary>
+        /// <para>The task tag list.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
@@ -103,10 +116,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SupplementData: The values of the RootTaskIds and IncludeTaskIds parameters vary based on the value of the Mode parameter. For more information, see the Mode parameter in this API operation.</description></item>
-        /// <item><description>ManualWorkflow: If you set the Type parameter to ManualWorkflow, you must set the WorkflowId parameter to the ID of the manually triggered workflow. The RootTaskIds parameter is optional. If you do not configure the RootTaskIds parameter, the IDs of the default root nodes of the manually triggered workflow are used.</description></item>
-        /// <item><description>Manual: You need to configure only the RootTaskIds parameter. The RootTaskIds parameter specifies the IDs of the manually triggered tasks that need to be run.</description></item>
-        /// <item><description>SmokeTest: You need to configure only the RootTaskIds parameter. The RootTaskIds parameter specifies the IDs of the test tasks that need to be run.</description></item>
+        /// <item><description>SupplementData: Data backfill. The usage of RootTaskIds and IncludeTaskIds varies based on the backfill mode. See the description of the DefaultRunProperties.Mode parameter.</description></item>
+        /// <item><description>ManualWorkflow: Manual workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</description></item>
+        /// <item><description>Manual: Manual task. You only need to specify RootTaskIds. This is the list of manual tasks to run.</description></item>
+        /// <item><description>SmokeTest: Smoke test. You only need to specify RootTaskIds. This is the list of test tasks to run.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteDataQualityScanRequest : TeaModel {
+        /// <summary>
+        /// <para>The deprecated parameter. No configuration is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ID of the data quality monitor.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123123</para>
         /// </summary>

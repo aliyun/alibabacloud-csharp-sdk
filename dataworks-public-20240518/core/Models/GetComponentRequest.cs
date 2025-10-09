@@ -8,26 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class UpdateDataQualityAlertRuleResponseBody : TeaModel {
+    public class GetComponentRequest : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0bc14115***159376359</para>
+        /// <para>1112312312312</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("ComponentId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ComponentId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the alert rule was updated.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>10000</para>
         /// </summary>
-        [NameInMap("Success")]
+        [NameInMap("ProjectId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public long? ProjectId { get; set; }
 
     }
 

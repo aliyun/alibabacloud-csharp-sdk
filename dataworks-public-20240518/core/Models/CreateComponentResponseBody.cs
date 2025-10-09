@@ -8,22 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class CreateDataQualityScanResponseBody : TeaModel {
+    public class CreateComponentResponseBody : TeaModel {
         /// <summary>
-        /// <para>Returns the ID of the created data source sharing rule, which uniquely identifies the rule.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>676303114031776</para>
+        /// <para>123123123123123</para>
         /// </summary>
-        [NameInMap("Id")]
+        [NameInMap("ComponentId")]
         [Validation(Required=false)]
-        public long? Id { get; set; }
+        public string ComponentId { get; set; }
 
         /// <summary>
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0000-ABCD-EFG****</para>
+        /// <para>adssd****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

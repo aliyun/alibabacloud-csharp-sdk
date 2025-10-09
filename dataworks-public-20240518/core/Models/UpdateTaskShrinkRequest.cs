@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. Valid values:</para>
+        /// <para>The project environment.</para>
         /// <list type="bullet">
-        /// <item><description>Prod: production environment</description></item>
-        /// <item><description>Dev: development environment</description></item>
+        /// <item><description>Prod</description></item>
+        /// <item><description>Dev</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The instance generation mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T+1</description></item>
+        /// <item><description>T+1: the next day</description></item>
         /// <item><description>Immediately</description></item>
         /// </list>
         /// 
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string InstanceMode { get; set; }
 
         /// <summary>
-        /// <para>The name.</para>
+        /// <para>Name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SQL node</para>
@@ -129,9 +129,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The rerun mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</description></item>
-        /// <item><description>FailureAllowed: The task can be rerun only after it fails to run.</description></item>
-        /// <item><description>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</description></item>
+        /// <item><description>AllDenied: The task cannot be rerun.</description></item>
+        /// <item><description>FailureAllowed: The task can be rerun only after it fails.</description></item>
+        /// <item><description>AllAllowed: The task can always be rerun.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -152,14 +152,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? RerunTimes { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the runtime environment, such as the resource group information.</para>
+        /// <para>Runtime environment configurations, such as resource group information.</para>
         /// </summary>
         [NameInMap("RuntimeResource")]
         [Validation(Required=false)]
         public string RuntimeResourceShrink { get; set; }
 
         /// <summary>
-        /// <para>The script information.</para>
+        /// <para>The run script information.</para>
         /// </summary>
         [NameInMap("Script")]
         [Validation(Required=false)]
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? Timeout { get; set; }
 
         /// <summary>
-        /// <para>The trigger method.</para>
+        /// <para>The triggering method.</para>
         /// </summary>
         [NameInMap("Trigger")]
         [Validation(Required=false)]

@@ -8,30 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class ListDataQualityTemplatesRequest : TeaModel {
+    public class ListComponentsRequest : TeaModel {
         /// <summary>
-        /// <para>The directory path to which the data quality template belongs.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>/timeliness/ods_layer</para>
-        /// </summary>
-        [NameInMap("Catalog")]
-        [Validation(Required=false)]
-        public string Catalog { get; set; }
-
-        /// <summary>
-        /// <para>Fuzzy match for the template rule name.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>table_rows</para>
+        /// <para>xm_create_test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Default value: 10.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -40,20 +26,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number of the results. Default value: 1.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The project ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>100001</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

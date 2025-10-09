@@ -185,6 +185,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public List<ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags> Tags { get; set; }
+                public class ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags : TeaModel {
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>Normal</para>

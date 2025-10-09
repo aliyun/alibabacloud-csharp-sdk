@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityScanRunResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The RunId that was successfully triggered.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>248840</para>
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0bc14115***159376359</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDataQualityScanRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the monitor.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10001</para>
         /// </summary>

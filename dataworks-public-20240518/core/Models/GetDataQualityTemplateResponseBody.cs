@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDataQualityTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data quality rule template.</para>
+        /// </summary>
         [NameInMap("DataQualityTemplate")]
         [Validation(Required=false)]
         public GetDataQualityTemplateResponseBodyDataQualityTemplate DataQualityTemplate { get; set; }
         public class GetDataQualityTemplateResponseBodyDataQualityTemplate : TeaModel {
             /// <summary>
+            /// <para>The time when the data quality rule template was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1606724043000</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The creator of the data quality rule template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>238428342865</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string CreateUser { get; set; }
 
             /// <summary>
+            /// <para>The ID of the data quality rule template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10001</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The time when the data quality rule template was updated.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1606724043000</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>The last updater of the data quality rule template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>238428342865</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ModifyUser { get; set; }
 
             /// <summary>
+            /// <para>The owner of the data quality rule template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>238428342865</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Owner { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>97535</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
+            /// <para>Specific configurations of the data quality rule template. For more information, see <a href="~2963394~">Data quality Spec configuration description</a>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///     &quot;assertion&quot;: &quot;anomaly detection fro id_not_null_cnt&quot;,
@@ -86,6 +105,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The API request ID, which is generated as a UUID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0bc14115***159376359</para>
         /// </summary>

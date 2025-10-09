@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DstEntityId { get; set; }
 
         /// <summary>
+        /// <para>The destination entity name. Supports fuzzy matching.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dstName</para>
         /// </summary>
@@ -34,6 +36,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DstEntityName { get; set; }
 
         /// <summary>
+        /// <para>The order in which schemas are sorted. Default value: Asc. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Asc: ascending.</description></item>
+        /// <item><description>Desc: descending.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Asc</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Order { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The sort field. Default value: Name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Name</para>
         /// </summary>
@@ -82,6 +96,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SrcEntityId { get; set; }
 
         /// <summary>
+        /// <para>The source entity name. Supports fuzzy matching.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>srcName</para>
         /// </summary>

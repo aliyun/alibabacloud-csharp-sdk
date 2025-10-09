@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDataQualityAlertRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The data quality monitoring alert rule ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>113642</para>
         /// </summary>

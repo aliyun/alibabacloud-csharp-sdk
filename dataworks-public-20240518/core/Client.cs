@@ -1381,6 +1381,142 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComponentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComponentResponse
+        /// </returns>
+        public CreateComponentResponse CreateComponentWithOptions(CreateComponentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spec))
+            {
+                body["Spec"] = request.Spec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateComponent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateComponentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComponentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComponentResponse
+        /// </returns>
+        public async Task<CreateComponentResponse> CreateComponentWithOptionsAsync(CreateComponentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spec))
+            {
+                body["Spec"] = request.Spec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateComponent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateComponentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComponentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComponentResponse
+        /// </returns>
+        public CreateComponentResponse CreateComponent(CreateComponentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateComponentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建组件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComponentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComponentResponse
+        /// </returns>
+        public async Task<CreateComponentResponse> CreateComponentAsync(CreateComponentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateComponentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an alert rule for a synchronization task.</para>
         /// </summary>
         /// 
@@ -2017,8 +2153,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量告警规则</para>
+        /// <para>Creates a data quality monitoring alert rule in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateDataQualityAlertRuleRequest
@@ -2081,8 +2222,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量告警规则</para>
+        /// <para>Creates a data quality monitoring alert rule in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateDataQualityAlertRuleRequest
@@ -2145,8 +2291,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量告警规则</para>
+        /// <para>Creates a data quality monitoring alert rule in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataQualityAlertRuleRequest
@@ -2163,8 +2314,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量告警规则</para>
+        /// <para>Creates a data quality monitoring alert rule in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataQualityAlertRuleRequest
@@ -3001,8 +3157,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控</para>
+        /// <para>Creates a data quality monitor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateDataQualityScanRequest
@@ -3105,8 +3266,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控</para>
+        /// <para>Creates a data quality monitor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateDataQualityScanRequest
@@ -3209,8 +3375,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控</para>
+        /// <para>Creates a data quality monitor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataQualityScanRequest
@@ -3227,8 +3398,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控</para>
+        /// <para>Creates a data quality monitor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataQualityScanRequest
@@ -3245,8 +3421,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控运行实例</para>
+        /// <para>Triggers a data quality monitoring task and returns the run instance ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateDataQualityScanRunRequest
@@ -3309,8 +3490,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控运行实例</para>
+        /// <para>Triggers a data quality monitoring task and returns the run instance ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateDataQualityScanRunRequest
@@ -3373,8 +3559,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控运行实例</para>
+        /// <para>Triggers a data quality monitoring task and returns the run instance ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataQualityScanRunRequest
@@ -3391,8 +3582,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控运行实例</para>
+        /// <para>Triggers a data quality monitoring task and returns the run instance ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataQualityScanRunRequest
@@ -3409,8 +3605,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量模板</para>
+        /// <para>Creates a data quality template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataQualityTemplateRequest
@@ -3459,8 +3660,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量模板</para>
+        /// <para>Creates a data quality template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataQualityTemplateRequest
@@ -3509,8 +3715,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量模板</para>
+        /// <para>Creates a data quality template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataQualityTemplateRequest
@@ -3527,8 +3738,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量模板</para>
+        /// <para>Creates a data quality template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataQualityTemplateRequest
@@ -7913,6 +8129,162 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a component.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteComponentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComponentResponse
+        /// </returns>
+        public DeleteComponentResponse DeleteComponentWithOptions(DeleteComponentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentId))
+            {
+                body["ComponentId"] = request.ComponentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteComponent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteComponentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a component.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteComponentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComponentResponse
+        /// </returns>
+        public async Task<DeleteComponentResponse> DeleteComponentWithOptionsAsync(DeleteComponentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentId))
+            {
+                body["ComponentId"] = request.ComponentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteComponent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteComponentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a component.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteComponentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComponentResponse
+        /// </returns>
+        public DeleteComponentResponse DeleteComponent(DeleteComponentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteComponentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a component.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> A UDF that is deployed cannot be deleted. If you want to delete such a UDF, you must first undeploy the UDF.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteComponentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComponentResponse
+        /// </returns>
+        public async Task<DeleteComponentResponse> DeleteComponentAsync(DeleteComponentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteComponentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an alert rule configured for a synchronization task.</para>
         /// </summary>
         /// 
@@ -8317,8 +8689,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据质量告警规则</para>
+        /// <para>Deletes a data quality alert rule by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscribe to DataWorks Basic Edition or a higher version to use this API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityAlertRuleRequest
@@ -8359,8 +8736,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据质量告警规则</para>
+        /// <para>Deletes a data quality alert rule by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscribe to DataWorks Basic Edition or a higher version to use this API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityAlertRuleRequest
@@ -8401,8 +8783,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据质量告警规则</para>
+        /// <para>Deletes a data quality alert rule by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscribe to DataWorks Basic Edition or a higher version to use this API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityAlertRuleRequest
@@ -8419,8 +8806,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据质量告警规则</para>
+        /// <para>Deletes a data quality alert rule by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscribe to DataWorks Basic Edition or a higher version to use this API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityAlertRuleRequest
@@ -8821,8 +9213,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据质量监控</para>
+        /// <para>Deletes a data quality monitor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityScanRequest
@@ -8867,8 +9264,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据质量监控</para>
+        /// <para>Deletes a data quality monitor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityScanRequest
@@ -8913,8 +9315,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据质量监控</para>
+        /// <para>Deletes a data quality monitor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityScanRequest
@@ -8931,8 +9338,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据质量监控</para>
+        /// <para>Deletes a data quality monitor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityScanRequest
@@ -8949,8 +9361,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据质量模板</para>
+        /// <para>Deletes a data quality rule template by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Id</b>: the unique identifier of the user-defined rule template, in the format <c>USER_DEFINED:&lt;template_id&gt;</c>.</description></item>
+        /// <item><description><b>ProjectId</b>: The ID of the DataWorks project to which the rule template belongs.
+        /// This API is used to remove data quality rule templates that are no longer needed from the system. Make sure the provided <c>Id</c> and <c>ProjectId</c> are correct when calling this API operation; otherwise, the deletion may fail or lead to unexpected data loss. Use this function with caution and verify the exact information of the template before performing the operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityTemplateRequest
@@ -8991,8 +9413,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据质量模板</para>
+        /// <para>Deletes a data quality rule template by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Id</b>: the unique identifier of the user-defined rule template, in the format <c>USER_DEFINED:&lt;template_id&gt;</c>.</description></item>
+        /// <item><description><b>ProjectId</b>: The ID of the DataWorks project to which the rule template belongs.
+        /// This API is used to remove data quality rule templates that are no longer needed from the system. Make sure the provided <c>Id</c> and <c>ProjectId</c> are correct when calling this API operation; otherwise, the deletion may fail or lead to unexpected data loss. Use this function with caution and verify the exact information of the template before performing the operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityTemplateRequest
@@ -9033,8 +9465,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据质量模板</para>
+        /// <para>Deletes a data quality rule template by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Id</b>: the unique identifier of the user-defined rule template, in the format <c>USER_DEFINED:&lt;template_id&gt;</c>.</description></item>
+        /// <item><description><b>ProjectId</b>: The ID of the DataWorks project to which the rule template belongs.
+        /// This API is used to remove data quality rule templates that are no longer needed from the system. Make sure the provided <c>Id</c> and <c>ProjectId</c> are correct when calling this API operation; otherwise, the deletion may fail or lead to unexpected data loss. Use this function with caution and verify the exact information of the template before performing the operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityTemplateRequest
@@ -9051,8 +9493,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据质量模板</para>
+        /// <para>Deletes a data quality rule template by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Id</b>: the unique identifier of the user-defined rule template, in the format <c>USER_DEFINED:&lt;template_id&gt;</c>.</description></item>
+        /// <item><description><b>ProjectId</b>: The ID of the DataWorks project to which the rule template belongs.
+        /// This API is used to remove data quality rule templates that are no longer needed from the system. Make sure the provided <c>Id</c> and <c>ProjectId</c> are correct when calling this API operation; otherwise, the deletion may fail or lead to unexpected data loss. Use this function with caution and verify the exact information of the template before performing the operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityTemplateRequest
@@ -13057,6 +13509,134 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取组件信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetComponentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComponentResponse
+        /// </returns>
+        public GetComponentResponse GetComponentWithOptions(GetComponentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentId))
+            {
+                query["ComponentId"] = request.ComponentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetComponent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetComponentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取组件信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetComponentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComponentResponse
+        /// </returns>
+        public async Task<GetComponentResponse> GetComponentWithOptionsAsync(GetComponentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentId))
+            {
+                query["ComponentId"] = request.ComponentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetComponent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetComponentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取组件信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetComponentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComponentResponse
+        /// </returns>
+        public GetComponentResponse GetComponent(GetComponentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetComponentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取组件信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetComponentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComponentResponse
+        /// </returns>
+        public async Task<GetComponentResponse> GetComponentAsync(GetComponentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetComponentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the result of asynchronously creating a workflow instance.</para>
         /// </summary>
         /// 
@@ -13453,8 +14033,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量告警规则详情</para>
+        /// <para>Queries the details of a data quality monitoring and alerting rule by alert rule ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityAlertRuleRequest
@@ -13495,8 +14080,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量告警规则详情</para>
+        /// <para>Queries the details of a data quality monitoring and alerting rule by alert rule ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityAlertRuleRequest
@@ -13537,8 +14127,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量告警规则详情</para>
+        /// <para>Queries the details of a data quality monitoring and alerting rule by alert rule ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityAlertRuleRequest
@@ -13555,8 +14150,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量告警规则详情</para>
+        /// <para>Queries the details of a data quality monitoring and alerting rule by alert rule ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityAlertRuleRequest
@@ -14061,8 +14661,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据质量监控详情</para>
+        /// <para>Gets data quality monitoring details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityScanRequest
@@ -14103,8 +14708,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据质量监控详情</para>
+        /// <para>Gets data quality monitoring details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityScanRequest
@@ -14145,8 +14755,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据质量监控详情</para>
+        /// <para>Gets data quality monitoring details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityScanRequest
@@ -14163,8 +14778,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据质量监控详情</para>
+        /// <para>Gets data quality monitoring details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityScanRequest
@@ -14181,8 +14801,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控运行实例</para>
+        /// <para>Creates a data quality monitoring run instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityScanRunRequest
@@ -14223,8 +14848,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控运行实例</para>
+        /// <para>Creates a data quality monitoring run instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityScanRunRequest
@@ -14265,8 +14895,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控运行实例</para>
+        /// <para>Creates a data quality monitoring run instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityScanRunRequest
@@ -14283,8 +14918,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控运行实例</para>
+        /// <para>Creates a data quality monitoring run instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityScanRunRequest
@@ -14301,8 +14941,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控运行实例</para>
+        /// <para>Queries the log of a specific task instance that monitors data quality.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityScanRunLogRequest
@@ -14347,8 +14992,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控运行实例</para>
+        /// <para>Queries the log of a specific task instance that monitors data quality.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityScanRunLogRequest
@@ -14393,8 +15043,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控运行实例</para>
+        /// <para>Queries the log of a specific task instance that monitors data quality.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityScanRunLogRequest
@@ -14411,8 +15066,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据质量监控运行实例</para>
+        /// <para>Queries the log of a specific task instance that monitors data quality.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityScanRunLogRequest
@@ -14429,8 +15089,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量模板详情</para>
+        /// <para>Queries the details of a data quality rule template by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityTemplateRequest
@@ -14471,8 +15136,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量模板详情</para>
+        /// <para>Queries the details of a data quality rule template by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityTemplateRequest
@@ -14513,8 +15183,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量模板详情</para>
+        /// <para>Queries the details of a data quality rule template by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityTemplateRequest
@@ -14531,8 +15206,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量模板详情</para>
+        /// <para>Queries the details of a data quality rule template by ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDataQualityTemplateRequest
@@ -19693,6 +20373,150 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取组件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComponentsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComponentsResponse
+        /// </returns>
+        public ListComponentsResponse ListComponentsWithOptions(ListComponentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListComponents",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListComponentsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取组件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComponentsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComponentsResponse
+        /// </returns>
+        public async Task<ListComponentsResponse> ListComponentsWithOptionsAsync(ListComponentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListComponents",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListComponentsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取组件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComponentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComponentsResponse
+        /// </returns>
+        public ListComponentsResponse ListComponents(ListComponentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListComponentsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取组件列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComponentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComponentsResponse
+        /// </returns>
+        public async Task<ListComponentsResponse> ListComponentsAsync(ListComponentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListComponentsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询元数据采集器类型列表</para>
         /// </summary>
         /// 
@@ -20723,8 +21547,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量告警规则列表</para>
+        /// <para>Queries the list of data quality alert rules in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityAlertRulesRequest
@@ -20781,8 +21610,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量告警规则列表</para>
+        /// <para>Queries the list of data quality alert rules in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityAlertRulesRequest
@@ -20839,8 +21673,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量告警规则列表</para>
+        /// <para>Queries the list of data quality alert rules in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityAlertRulesRequest
@@ -20857,8 +21696,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量告警规则列表</para>
+        /// <para>Queries the list of data quality alert rules in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityAlertRulesRequest
@@ -21495,8 +22339,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量监控运行实例列表</para>
+        /// <para>Queries the execution records of data quality scans in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityScanRunsRequest
@@ -21565,8 +22414,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量监控运行实例列表</para>
+        /// <para>Queries the execution records of data quality scans in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityScanRunsRequest
@@ -21635,8 +22489,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量监控运行实例列表</para>
+        /// <para>Queries the execution records of data quality scans in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityScanRunsRequest
@@ -21653,8 +22512,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量监控运行实例列表</para>
+        /// <para>Queries the execution records of data quality scans in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityScanRunsRequest
@@ -21671,8 +22535,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据质量监控详情</para>
+        /// <para>Queries the list of data quality scan tasks in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityScansRequest
@@ -21733,8 +22602,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据质量监控详情</para>
+        /// <para>Queries the list of data quality scan tasks in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityScansRequest
@@ -21795,8 +22669,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据质量监控详情</para>
+        /// <para>Queries the list of data quality scan tasks in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityScansRequest
@@ -21813,8 +22692,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据质量监控详情</para>
+        /// <para>Queries the list of data quality scan tasks in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityScansRequest
@@ -21831,8 +22715,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量模板详情</para>
+        /// <para>Queries the list of data quality rule templates in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityTemplatesRequest
@@ -21889,8 +22778,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量模板详情</para>
+        /// <para>Queries the list of data quality rule templates in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityTemplatesRequest
@@ -21947,8 +22841,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量模板详情</para>
+        /// <para>Queries the list of data quality rule templates in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityTemplatesRequest
@@ -21965,8 +22864,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据质量模板详情</para>
+        /// <para>Queries the list of data quality rule templates in a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDataQualityTemplatesRequest
@@ -32155,6 +33059,166 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Updates components.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is currently in beta. To join the beta testing, please submit a request. You can call this operation after we add you to the beta program.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateComponentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateComponentResponse
+        /// </returns>
+        public UpdateComponentResponse UpdateComponentWithOptions(UpdateComponentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentId))
+            {
+                body["ComponentId"] = request.ComponentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spec))
+            {
+                body["Spec"] = request.Spec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateComponent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateComponentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates components.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is currently in beta. To join the beta testing, please submit a request. You can call this operation after we add you to the beta program.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateComponentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateComponentResponse
+        /// </returns>
+        public async Task<UpdateComponentResponse> UpdateComponentWithOptionsAsync(UpdateComponentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentId))
+            {
+                body["ComponentId"] = request.ComponentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spec))
+            {
+                body["Spec"] = request.Spec;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateComponent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateComponentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates components.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is currently in beta. To join the beta testing, please submit a request. You can call this operation after we add you to the beta program.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateComponentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateComponentResponse
+        /// </returns>
+        public UpdateComponentResponse UpdateComponent(UpdateComponentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateComponentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates components.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is currently in beta. To join the beta testing, please submit a request. You can call this operation after we add you to the beta program.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateComponentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateComponentResponse
+        /// </returns>
+        public async Task<UpdateComponentResponse> UpdateComponentAsync(UpdateComponentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateComponentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates an alert rule configured for a synchronization task.</para>
         /// </summary>
         /// 
@@ -32707,8 +33771,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据质量告警规则</para>
+        /// <para>Updates a specified data quality monitoring alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateDataQualityAlertRuleRequest
@@ -32775,8 +33844,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据质量告警规则</para>
+        /// <para>Updates a specified data quality monitoring alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateDataQualityAlertRuleRequest
@@ -32843,8 +33917,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据质量告警规则</para>
+        /// <para>Updates a specified data quality monitoring alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataQualityAlertRuleRequest
@@ -32861,8 +33940,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据质量告警规则</para>
+        /// <para>Updates a specified data quality monitoring alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataQualityAlertRuleRequest
@@ -33551,8 +34635,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据质量监控</para>
+        /// <para>Updates a data quality monitor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateDataQualityScanRequest
@@ -33655,8 +34744,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据质量监控</para>
+        /// <para>Updates a data quality monitor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateDataQualityScanRequest
@@ -33759,8 +34853,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据质量监控</para>
+        /// <para>Updates a data quality monitor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataQualityScanRequest
@@ -33777,8 +34876,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据质量监控</para>
+        /// <para>Updates a data quality monitor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataQualityScanRequest
@@ -33795,8 +34899,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据质量模板</para>
+        /// <para>Updates a data quality rule template in a project</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataQualityTemplateRequest
@@ -33851,8 +34960,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据质量模板</para>
+        /// <para>Updates a data quality rule template in a project</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataQualityTemplateRequest
@@ -33907,8 +35021,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据质量模板</para>
+        /// <para>Updates a data quality rule template in a project</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataQualityTemplateRequest
@@ -33925,8 +35044,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据质量模板</para>
+        /// <para>Updates a data quality rule template in a project</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDataQualityTemplateRequest
@@ -36135,7 +37259,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified task in full update mode.</para>
+        /// <para>Update a task. The changes are synchronized to Data Studio, which creates a new saved version.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36283,7 +37407,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified task in full update mode.</para>
+        /// <para>Update a task. The changes are synchronized to Data Studio, which creates a new saved version.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36431,7 +37555,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified task in full update mode.</para>
+        /// <para>Update a task. The changes are synchronized to Data Studio, which creates a new saved version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36449,7 +37573,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified task in full update mode.</para>
+        /// <para>Update a task. The changes are synchronized to Data Studio, which creates a new saved version.</para>
         /// </summary>
         /// 
         /// <param name="request">

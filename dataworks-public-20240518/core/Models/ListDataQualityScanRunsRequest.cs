@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityScanRunsRequest : TeaModel {
         /// <summary>
+        /// <para>The earliest time when the data quality monitor starts to run.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CreateTimeFrom { get; set; }
 
         /// <summary>
+        /// <para>The latest time when the data quality monitor starts to run.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CreateTimeTo { get; set; }
 
         /// <summary>
+        /// <para>The ID of the data quality monitor.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10001</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataQualityScanId { get; set; }
 
         /// <summary>
+        /// <para>The page number of the results. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of records per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -50,6 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +71,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The list of sorting fields. Supports fields such as last modified time and creation time. Format: &quot;SortField+SortOrder (Desc/Asc)&quot;, where Asc is the default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CreateTime (Desc/Asc)</description></item>
+        /// <item><description>Id (Desc/Asc)</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>CreateTime Desc</para>
         /// </summary>
@@ -68,6 +85,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>The status of the data quality check result.</para>
+        /// <list type="bullet">
+        /// <item><description>Pass</description></item>
+        /// <item><description>Running</description></item>
+        /// <item><description>Error</description></item>
+        /// <item><description>Fail</description></item>
+        /// <item><description>Warn</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Fail</para>
         /// </summary>

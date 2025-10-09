@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListNodesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListNodesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The nodes.</para>
+            /// <para>The list of nodes in DataStudio.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
             public List<ListNodesResponseBodyPagingInfoNodes> Nodes { get; set; }
             public class ListNodesResponseBodyPagingInfoNodes : TeaModel {
                 /// <summary>
-                /// <para>The time when the node was created. This value is a UNIX timestamp.</para>
+                /// <para>The timestamp when the node in DataStudio was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1722910655000</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The information about the data source.</para>
+                /// <para>The data source.</para>
                 /// </summary>
                 [NameInMap("DataSource")]
                 [Validation(Required=false)]
@@ -83,14 +83,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The input of the node.</para>
+                /// <para>The node input.</para>
                 /// </summary>
                 [NameInMap("Inputs")]
                 [Validation(Required=false)]
                 public ListNodesResponseBodyPagingInfoNodesInputs Inputs { get; set; }
                 public class ListNodesResponseBodyPagingInfoNodesInputs : TeaModel {
                     /// <summary>
-                    /// <para>The node outputs.</para>
+                    /// <para>The node output list.</para>
                     /// </summary>
                     [NameInMap("NodeOutputs")]
                     [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The tables.</para>
+                    /// <para>The table list.</para>
                     /// </summary>
                     [NameInMap("Tables")]
                     [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The variables.</para>
+                    /// <para>The variable list.</para>
                     /// </summary>
                     [NameInMap("Variables")]
                     [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public ListNodesResponseBodyPagingInfoNodesInputsVariablesNode Node { get; set; }
                         public class ListNodesResponseBodyPagingInfoNodesInputsVariablesNode : TeaModel {
                             /// <summary>
-                            /// <para>The output of the node.</para>
+                            /// <para>The node output.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>623731286945488XXXX</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The value of the variable.</para>
+                        /// <para>The variable value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>222</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the node was last modified. This value is a UNIX timestamp.</para>
+                /// <para>The timestamp when the node in DataStudio was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1722910655000</para>
@@ -251,14 +251,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The output of the node.</para>
+                /// <para>The node output.</para>
                 /// </summary>
                 [NameInMap("Outputs")]
                 [Validation(Required=false)]
                 public ListNodesResponseBodyPagingInfoNodesOutputs Outputs { get; set; }
                 public class ListNodesResponseBodyPagingInfoNodesOutputs : TeaModel {
                     /// <summary>
-                    /// <para>The node outputs.</para>
+                    /// <para>The node output list.</para>
                     /// </summary>
                     [NameInMap("NodeOutputs")]
                     [Validation(Required=false)]
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The tables.</para>
+                    /// <para>The table list.</para>
                     /// </summary>
                     [NameInMap("Tables")]
                     [Validation(Required=false)]
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The variables.</para>
+                    /// <para>The variable list.</para>
                     /// </summary>
                     [NameInMap("Variables")]
                     [Validation(Required=false)]
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public ListNodesResponseBodyPagingInfoNodesOutputsVariablesNode Node { get; set; }
                         public class ListNodesResponseBodyPagingInfoNodesOutputsVariablesNode : TeaModel {
                             /// <summary>
-                            /// <para>The output of the node.</para>
+                            /// <para>The node output.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>860438872620113XXXX</para>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>The scope of the variable. Valid values:</para>
+                        /// <para>The variable scope. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>NodeParameter</description></item>
                         /// <item><description>NodeContext</description></item>
@@ -368,7 +368,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Scope { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the variable. Valid values:</para>
+                        /// <para>The variable type. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>NoKvVariableExpression</description></item>
                         /// <item><description>Constant</description></item>
@@ -385,7 +385,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The value of the variable.</para>
+                        /// <para>The variable value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>111</para>
@@ -399,7 +399,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The owner of the node.</para>
+                /// <para>The owner of nodes in DataStudio.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110755000425XXXX</para>
@@ -441,6 +441,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public ListNodesResponseBodyPagingInfoNodesRuntimeResource RuntimeResource { get; set; }
                 public class ListNodesResponseBodyPagingInfoNodesRuntimeResource : TeaModel {
+                    /// <summary>
+                    /// <para>The identifier of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the identifier of the resource group.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>S_res_group_XXXX</para>
+                    /// </summary>
                     [NameInMap("ResourceGroup")]
                     [Validation(Required=false)]
                     public string ResourceGroup { get; set; }
@@ -562,7 +568,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public int? RerunTimes { get; set; }
 
                     /// <summary>
-                    /// <para>The timeout period.</para>
+                    /// <para>Timeout.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -574,7 +580,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The tags. This parameter is not in use.</para>
+                /// <para>The tag information (not in use).</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -591,7 +597,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The tag value</para>
+                    /// <para>The tag value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>null</para>
@@ -620,7 +626,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListNodesResponseBodyPagingInfoNodesTrigger Trigger { get; set; }
                 public class ListNodesResponseBodyPagingInfoNodesTrigger : TeaModel {
                     /// <summary>
-                    /// <para>The CRON expression for scheduling.</para>
+                    /// <para>The cron expression for scheduling</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>00 00 00 * * ?</para>
@@ -670,12 +676,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Timezone { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the trigger.</para>
+                    /// <para>The trigger type.</para>
                     /// <para>Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Scheduler</description></item>
-                    /// <item><description>Manual</description></item>
-                    /// <item><description>Steaming</description></item>
+                    /// <item><description>Scheduler: periodic scheduling</description></item>
+                    /// <item><description>Manual: manual trigger</description></item>
+                    /// <item><description>Streaming: streaming task</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

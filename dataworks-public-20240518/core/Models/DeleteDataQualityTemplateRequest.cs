@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteDataQualityTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the custom rule template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>USER_DEFINED:2001</para>
         /// </summary>
