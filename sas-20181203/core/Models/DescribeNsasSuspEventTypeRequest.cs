@@ -100,6 +100,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
+        [NameInMap("SupportOperateCodeList")]
+        [Validation(Required=false)]
+        public List<string> SupportOperateCodeList { get; set; }
+
         /// <summary>
         /// <para>The UUIDs of servers. Separate multiple UUIDs with commas (,).</para>
         /// <remarks>

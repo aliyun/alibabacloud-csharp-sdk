@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspEventDetailResponseBody : TeaModel {
+        [NameInMap("AlarmUniqueInfo")]
+        [Validation(Required=false)]
+        public string AlarmUniqueInfo { get; set; }
+
         /// <summary>
         /// <para>Indicates whether the online processing of exceptions is supported, such as blocking an exception, adding an exception to the whitelist, and ignoring an exception. Valid values:</para>
         /// <list type="bullet">

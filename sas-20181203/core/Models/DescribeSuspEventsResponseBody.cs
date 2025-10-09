@@ -678,6 +678,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Stages { get; set; }
 
+            [NameInMap("SupportOperateCode")]
+            [Validation(Required=false)]
+            public string SupportOperateCode { get; set; }
+
             /// <summary>
             /// <para>The display name of the attack stage.</para>
             /// </summary>

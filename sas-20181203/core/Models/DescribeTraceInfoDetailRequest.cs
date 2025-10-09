@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Uuid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vertex. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the ID.</para>
+        /// <para>Vertex ID, which can be obtained from the AlarmUniqueInfo in the response of the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

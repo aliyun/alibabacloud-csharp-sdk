@@ -386,6 +386,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string StrictMode { get; set; }
 
+        [NameInMap("SupportOperateCodeList")]
+        [Validation(Required=false)]
+        public List<string> SupportOperateCodeList { get; set; }
+
         /// <summary>
         /// <para>The tactic ID of ATT\&amp;CK.</para>
         /// 

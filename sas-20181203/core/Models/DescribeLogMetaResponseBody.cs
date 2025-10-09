@@ -20,7 +20,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The category of logs. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>host</b></description></item>
-            /// <item><description><b>network</b></description></item>
             /// <item><description><b>security</b></description></item>
             /// </list>
             /// 
