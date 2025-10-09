@@ -741,6 +741,14 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
             [Validation(Required=false)]
             public int? IsBackTrace { get; set; }
 
+            [NameInMap("IsJailbroken")]
+            [Validation(Required=false)]
+            public int? IsJailbroken { get; set; }
+
+            [NameInMap("IsSimulator")]
+            [Validation(Required=false)]
+            public int? IsSimulator { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>0</para>

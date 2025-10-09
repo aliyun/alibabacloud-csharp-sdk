@@ -1037,6 +1037,11 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611
             return await GetSymbolicFilesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RequestUploadToken</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RequestUploadTokenRequest
         /// </param>
@@ -1078,6 +1083,11 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611
             return TeaModel.ToObject<RequestUploadTokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RequestUploadToken</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RequestUploadTokenRequest
         /// </param>
@@ -1119,6 +1129,11 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611
             return TeaModel.ToObject<RequestUploadTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RequestUploadToken</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RequestUploadTokenRequest
         /// </param>
@@ -1132,6 +1147,11 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611
             return RequestUploadTokenWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>RequestUploadToken</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RequestUploadTokenRequest
         /// </param>
@@ -1145,6 +1165,11 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611
             return await RequestUploadTokenWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SubmitSymbolic</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitSymbolicRequest
         /// </param>
@@ -1210,6 +1235,11 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611
             return TeaModel.ToObject<SubmitSymbolicResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SubmitSymbolic</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitSymbolicRequest
         /// </param>
@@ -1275,6 +1305,11 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611
             return TeaModel.ToObject<SubmitSymbolicResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SubmitSymbolic</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitSymbolicRequest
         /// </param>
@@ -1288,6 +1323,11 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611
             return SubmitSymbolicWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SubmitSymbolic</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitSymbolicRequest
         /// </param>

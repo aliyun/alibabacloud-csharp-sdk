@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Emas-appmonitor20190611</AssemblyName>
-    <Version>1.2.2</Version>
+    <Version>1.2.3</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud emas-appmonitor (20190611) SDK Library for .NET</Description>
