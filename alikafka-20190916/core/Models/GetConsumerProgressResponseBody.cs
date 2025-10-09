@@ -143,6 +143,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                         [Validation(Required=false)]
                         public List<GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList> OffsetList { get; set; }
                         public class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList : TeaModel {
+                            [NameInMap("Accumulate")]
+                            [Validation(Required=false)]
+                            public long? Accumulate { get; set; }
+
                             /// <summary>
                             /// <para>The latest offset in the partition of the topic.</para>
                             /// 
