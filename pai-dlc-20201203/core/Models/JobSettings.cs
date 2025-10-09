@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string JobReservedPolicy { get; set; }
 
+        [NameInMap("ModelConfig")]
+        [Validation(Required=false)]
+        public ModelConfig ModelConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>AcceptQuotaOverSold</para>

@@ -1,3 +1,6 @@
+2025-10-09 Version: 1.7.1
+- Generated csharp 2020-12-03 for pai-dlc.
+
 2025-09-22 Version: 1.7.0
 - Support API GetDashboard.
 
