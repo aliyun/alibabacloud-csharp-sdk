@@ -62,6 +62,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>t-xxxx</para>
         /// </summary>

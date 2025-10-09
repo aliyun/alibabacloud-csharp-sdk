@@ -9,30 +9,72 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeEdgeContainerAppStatsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Average CPU limit ratio</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0.1</para>
+        /// </summary>
         [NameInMap("CpuUsageSecondsQuotaRateAvg")]
         [Validation(Required=false)]
         public double? CpuUsageSecondsQuotaRateAvg { get; set; }
 
+        /// <summary>
+        /// <para>Average number of CPU cores</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("CpuUsageSecondsTotalAvg")]
         [Validation(Required=false)]
         public double? CpuUsageSecondsTotalAvg { get; set; }
 
+        /// <summary>
+        /// <para>Average read IO</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("FsReadsBytesAvgAvg")]
         [Validation(Required=false)]
         public double? FsReadsBytesAvgAvg { get; set; }
 
+        /// <summary>
+        /// <para>Average write IO</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("FsWritesBytesAvgAvg")]
         [Validation(Required=false)]
         public double? FsWritesBytesAvgAvg { get; set; }
 
+        /// <summary>
+        /// <para>Average memory usage</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0.1</para>
+        /// </summary>
         [NameInMap("MemoryRssAvg")]
         [Validation(Required=false)]
         public double? MemoryRssAvg { get; set; }
 
+        /// <summary>
+        /// <para>Average memory limit proportion</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("MemoryRssQuotaRateAvg")]
         [Validation(Required=false)]
         public double? MemoryRssQuotaRateAvg { get; set; }
 
+        /// <summary>
+        /// <para>Average PodReady rate</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("PodReadyRateAvg")]
         [Validation(Required=false)]
         public double? PodReadyRateAvg { get; set; }

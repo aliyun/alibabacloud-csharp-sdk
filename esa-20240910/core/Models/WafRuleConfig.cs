@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public class WafRuleConfigRateLimit : TeaModel {
             [NameInMap("Characteristics")]
             [Validation(Required=false)]
-            public WafRuleMatch2 Characteristics { get; set; }
+            public WafRatelimitCharacteristics Characteristics { get; set; }
 
             [NameInMap("Interval")]
             [Validation(Required=false)]

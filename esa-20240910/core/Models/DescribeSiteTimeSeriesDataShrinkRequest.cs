@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The metric to query.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Fields")]

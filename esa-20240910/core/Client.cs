@@ -8408,7 +8408,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增边缘函数路由配置</para>
+        /// <para>Adds edge function routing configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8478,7 +8478,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增边缘函数路由配置</para>
+        /// <para>Adds edge function routing configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8548,7 +8548,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增边缘函数路由配置</para>
+        /// <para>Adds edge function routing configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8566,7 +8566,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增边缘函数路由配置</para>
+        /// <para>Adds edge function routing configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9970,7 +9970,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网页监测配置</para>
+        /// <para>Create a web page monitoring configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10020,7 +10020,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网页监测配置</para>
+        /// <para>Create a web page monitoring configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10070,7 +10070,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网页监测配置</para>
+        /// <para>Create a web page monitoring configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10088,7 +10088,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网页监测配置</para>
+        /// <para>Create a web page monitoring configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10434,7 +10434,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增站点视频处理配置</para>
+        /// <para>Add video processing configurations for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10520,7 +10520,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增站点视频处理配置</para>
+        /// <para>Add video processing configurations for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10606,7 +10606,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增站点视频处理配置</para>
+        /// <para>Add video processing configurations for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10624,7 +10624,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增站点视频处理配置</para>
+        /// <para>Add video processing configurations for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15902,7 +15902,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘函数路由配置</para>
+        /// <para>Deletes the route configuration of an edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15948,7 +15948,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘函数路由配置</para>
+        /// <para>Deletes the route configuration of an edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15994,7 +15994,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘函数路由配置</para>
+        /// <para>Deletes the route configuration of an edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16012,7 +16012,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除边缘函数路由配置</para>
+        /// <para>Deletes the route configuration of an edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16774,7 +16774,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网页监测配置</para>
+        /// <para>Deletes page monitoring configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16820,7 +16820,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网页监测配置</para>
+        /// <para>Deletes page monitoring configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16866,7 +16866,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网页监测配置</para>
+        /// <para>Deletes page monitoring configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16884,7 +16884,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网页监测配置</para>
+        /// <para>Deletes page monitoring configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17062,7 +17062,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除站点视频处理配置</para>
+        /// <para>Deletes a video processing configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17108,7 +17108,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除站点视频处理配置</para>
+        /// <para>Deletes a video processing configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17154,7 +17154,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除站点视频处理配置</para>
+        /// <para>Deletes a video processing configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17172,7 +17172,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除站点视频处理配置</para>
+        /// <para>Deletes a video processing configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18414,7 +18414,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将天眼提供给XCDN边缘容器的监控OpenAPI适配成青蓝的OpenAPI</para>
+        /// <para>Provides monitoring data for metrics of ESA edge containers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18452,7 +18452,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将天眼提供给XCDN边缘容器的监控OpenAPI适配成青蓝的OpenAPI</para>
+        /// <para>Provides monitoring data for metrics of ESA edge containers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18490,7 +18490,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将天眼提供给XCDN边缘容器的监控OpenAPI适配成青蓝的OpenAPI</para>
+        /// <para>Provides monitoring data for metrics of ESA edge containers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18508,7 +18508,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将天眼提供给XCDN边缘容器的监控OpenAPI适配成青蓝的OpenAPI</para>
+        /// <para>Provides monitoring data for metrics of ESA edge containers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19224,8 +19224,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点离线日志</para>
+        /// <para>Queries the URLs from which you can download the raw access logs of a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify StartTime or EndTime, the log data generated in the last 24 hours is queried. If you specify StartTime and EndTime, the log data generated within the specified time range is queried.</para>
+        /// <list type="bullet">
+        /// <item><description>The log data is collected every hour.</description></item>
+        /// <item><description>You can call this operation up to 50 times per second per account.</description></item>
+        /// <item><description>You can query only logs in the last month. The time range cannot exceed 31 days.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSiteLogsRequest
@@ -19282,8 +19292,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点离线日志</para>
+        /// <para>Queries the URLs from which you can download the raw access logs of a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify StartTime or EndTime, the log data generated in the last 24 hours is queried. If you specify StartTime and EndTime, the log data generated within the specified time range is queried.</para>
+        /// <list type="bullet">
+        /// <item><description>The log data is collected every hour.</description></item>
+        /// <item><description>You can call this operation up to 50 times per second per account.</description></item>
+        /// <item><description>You can query only logs in the last month. The time range cannot exceed 31 days.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSiteLogsRequest
@@ -19340,8 +19360,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点离线日志</para>
+        /// <para>Queries the URLs from which you can download the raw access logs of a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify StartTime or EndTime, the log data generated in the last 24 hours is queried. If you specify StartTime and EndTime, the log data generated within the specified time range is queried.</para>
+        /// <list type="bullet">
+        /// <item><description>The log data is collected every hour.</description></item>
+        /// <item><description>You can call this operation up to 50 times per second per account.</description></item>
+        /// <item><description>You can query only logs in the last month. The time range cannot exceed 31 days.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSiteLogsRequest
@@ -19358,8 +19388,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点离线日志</para>
+        /// <para>Queries the URLs from which you can download the raw access logs of a website.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify StartTime or EndTime, the log data generated in the last 24 hours is queried. If you specify StartTime and EndTime, the log data generated within the specified time range is queried.</para>
+        /// <list type="bullet">
+        /// <item><description>The log data is collected every hour.</description></item>
+        /// <item><description>You can call this operation up to 50 times per second per account.</description></item>
+        /// <item><description>You can query only logs in the last month. The time range cannot exceed 31 days.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSiteLogsRequest
@@ -19378,6 +19418,22 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <summary>
         /// <para>获取时序数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify StartTime and EndTime, the request returns the data collected within the specified time range.</para>
+        /// <list type="bullet">
+        /// <item><description>The time interval at which data is returned varies according to the span of StartTime and EndTime.<list type="bullet">
+        /// <item><description>If Time span ≤ 3 hours, the data is returned at a 1-minute interval.</description></item>
+        /// <item><description>If 3 hours &lt; Time span ≤ 12 hours, the data is returned at a 5-minute interval.</description></item>
+        /// <item><description>If 12 hours &lt; Time span ≤ 24 hours, the data is returned at a 15-minute interval.</description></item>
+        /// <item><description>If 1 day &lt; Time span ≤ 10 days, the data is returned at an hourly interval.</description></item>
+        /// <item><description>If 10 days &lt; Time span ≤ 31 days, the data is returned at a daily interval.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Data analysis may be sampled due to a large number of visits during the query period.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeSiteTimeSeriesDataRequest
@@ -19443,6 +19499,22 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <para>获取时序数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify StartTime and EndTime, the request returns the data collected within the specified time range.</para>
+        /// <list type="bullet">
+        /// <item><description>The time interval at which data is returned varies according to the span of StartTime and EndTime.<list type="bullet">
+        /// <item><description>If Time span ≤ 3 hours, the data is returned at a 1-minute interval.</description></item>
+        /// <item><description>If 3 hours &lt; Time span ≤ 12 hours, the data is returned at a 5-minute interval.</description></item>
+        /// <item><description>If 12 hours &lt; Time span ≤ 24 hours, the data is returned at a 15-minute interval.</description></item>
+        /// <item><description>If 1 day &lt; Time span ≤ 10 days, the data is returned at an hourly interval.</description></item>
+        /// <item><description>If 10 days &lt; Time span ≤ 31 days, the data is returned at a daily interval.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Data analysis may be sampled due to a large number of visits during the query period.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// DescribeSiteTimeSeriesDataRequest
         /// </param>
@@ -19507,6 +19579,22 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <para>获取时序数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify StartTime and EndTime, the request returns the data collected within the specified time range.</para>
+        /// <list type="bullet">
+        /// <item><description>The time interval at which data is returned varies according to the span of StartTime and EndTime.<list type="bullet">
+        /// <item><description>If Time span ≤ 3 hours, the data is returned at a 1-minute interval.</description></item>
+        /// <item><description>If 3 hours &lt; Time span ≤ 12 hours, the data is returned at a 5-minute interval.</description></item>
+        /// <item><description>If 12 hours &lt; Time span ≤ 24 hours, the data is returned at a 15-minute interval.</description></item>
+        /// <item><description>If 1 day &lt; Time span ≤ 10 days, the data is returned at an hourly interval.</description></item>
+        /// <item><description>If 10 days &lt; Time span ≤ 31 days, the data is returned at a daily interval.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Data analysis may be sampled due to a large number of visits during the query period.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeSiteTimeSeriesDataRequest
         /// </param>
@@ -19525,6 +19613,22 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <para>获取时序数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify StartTime and EndTime, the request returns the data collected within the specified time range.</para>
+        /// <list type="bullet">
+        /// <item><description>The time interval at which data is returned varies according to the span of StartTime and EndTime.<list type="bullet">
+        /// <item><description>If Time span ≤ 3 hours, the data is returned at a 1-minute interval.</description></item>
+        /// <item><description>If 3 hours &lt; Time span ≤ 12 hours, the data is returned at a 5-minute interval.</description></item>
+        /// <item><description>If 12 hours &lt; Time span ≤ 24 hours, the data is returned at a 15-minute interval.</description></item>
+        /// <item><description>If 1 day &lt; Time span ≤ 10 days, the data is returned at an hourly interval.</description></item>
+        /// <item><description>If 10 days &lt; Time span ≤ 31 days, the data is returned at a daily interval.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Data analysis may be sampled due to a large number of visits during the query period.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeSiteTimeSeriesDataRequest
         /// </param>
@@ -19540,8 +19644,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Top数据</para>
+        /// <para>Queries the top-ranking records in a traffic analytics report by website or Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the previous 24 hours. If you specify both parameters, the request returns the data collected within the specified time range.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeSiteTopDataRequest
@@ -19608,8 +19717,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Top数据</para>
+        /// <para>Queries the top-ranking records in a traffic analytics report by website or Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the previous 24 hours. If you specify both parameters, the request returns the data collected within the specified time range.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeSiteTopDataRequest
@@ -19676,8 +19790,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Top数据</para>
+        /// <para>Queries the top-ranking records in a traffic analytics report by website or Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the previous 24 hours. If you specify both parameters, the request returns the data collected within the specified time range.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSiteTopDataRequest
@@ -19694,8 +19813,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Top数据</para>
+        /// <para>Queries the top-ranking records in a traffic analytics report by website or Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the previous 24 hours. If you specify both parameters, the request returns the data collected within the specified time range.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSiteTopDataRequest
@@ -19712,8 +19836,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网页观测质量数据</para>
+        /// <para>Queries the page monitoring data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not specify the StartTime or EndTime parameter, this operation returns the data collected within the last 24 hours. If you specify both parameters, this operation returns the data collected within the specified time range.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUrlObservationDataRequest
@@ -19774,8 +19903,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网页观测质量数据</para>
+        /// <para>Queries the page monitoring data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not specify the StartTime or EndTime parameter, this operation returns the data collected within the last 24 hours. If you specify both parameters, this operation returns the data collected within the specified time range.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUrlObservationDataRequest
@@ -19836,8 +19970,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网页观测质量数据</para>
+        /// <para>Queries the page monitoring data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not specify the StartTime or EndTime parameter, this operation returns the data collected within the last 24 hours. If you specify both parameters, this operation returns the data collected within the specified time range.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUrlObservationDataRequest
@@ -19854,8 +19993,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网页观测质量数据</para>
+        /// <para>Queries the page monitoring data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not specify the StartTime or EndTime parameter, this operation returns the data collected within the last 24 hours. If you specify both parameters, this operation returns the data collected within the specified time range.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeUrlObservationDataRequest
@@ -21478,7 +21622,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点中国大陆网络接入优化配置</para>
+        /// <para>Queries the configuration of Chinese mainland access optimization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21516,7 +21660,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点中国大陆网络接入优化配置</para>
+        /// <para>Queries the configuration of Chinese mainland access optimization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21554,7 +21698,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点中国大陆网络接入优化配置</para>
+        /// <para>Queries the configuration of Chinese mainland access optimization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21572,7 +21716,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点中国大陆网络接入优化配置</para>
+        /// <para>Queries the configuration of Chinese mainland access optimization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21934,7 +22078,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器资源预留配置</para>
+        /// <para>Obtain the resource reservation configuration of the edge container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21976,7 +22120,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器资源预留配置</para>
+        /// <para>Obtain the resource reservation configuration of the edge container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22018,7 +22162,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器资源预留配置</para>
+        /// <para>Obtain the resource reservation configuration of the edge container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22036,7 +22180,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器资源预留配置</para>
+        /// <para>Obtain the resource reservation configuration of the edge container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22054,7 +22198,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用资源分布</para>
+        /// <para>Obtains the distribution of edge container application resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22096,7 +22240,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用资源分布</para>
+        /// <para>Obtains the distribution of edge container application resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22138,7 +22282,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用资源分布</para>
+        /// <para>Obtains the distribution of edge container application resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22156,7 +22300,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取边缘容器应用资源分布</para>
+        /// <para>Obtains the distribution of edge container application resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26272,7 +26416,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单条边缘函数路由配置</para>
+        /// <para>Queries the route configurations of a single edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26318,7 +26462,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单条边缘函数路由配置</para>
+        /// <para>Queries the route configurations of a single edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26364,7 +26508,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单条边缘函数路由配置</para>
+        /// <para>Queries the route configurations of a single edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26382,7 +26526,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单条边缘函数路由配置</para>
+        /// <para>Queries the route configurations of a single edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28708,7 +28852,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点视频处理配置详情</para>
+        /// <para>Queries the video processing configuration details of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28754,7 +28898,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点视频处理配置详情</para>
+        /// <para>Queries the video processing configuration details of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28800,7 +28944,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点视频处理配置详情</para>
+        /// <para>Queries the video processing configuration details of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28818,7 +28962,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点视频处理配置详情</para>
+        /// <para>Queries the video processing configuration details of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29794,7 +29938,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询匹配记录名的站点证书列表</para>
+        /// <para>Lists certificates that match specified records for a website. You can specify multiple records at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29832,7 +29976,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询匹配记录名的站点证书列表</para>
+        /// <para>Lists certificates that match specified records for a website. You can specify multiple records at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29870,7 +30014,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询匹配记录名的站点证书列表</para>
+        /// <para>Lists certificates that match specified records for a website. You can specify multiple records at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29888,7 +30032,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询匹配记录名的站点证书列表</para>
+        /// <para>Lists certificates that match specified records for a website. You can specify multiple records at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30354,8 +30498,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询IP是否为VIP</para>
+        /// <para>Batch query whether the IP address is included in the ESA resolution result.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface is used to check whether the vs_addr parameter in the vipInfo collection is vip.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListESAIPInfoRequest
@@ -30392,8 +30541,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询IP是否为VIP</para>
+        /// <para>Batch query whether the IP address is included in the ESA resolution result.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface is used to check whether the vs_addr parameter in the vipInfo collection is vip.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListESAIPInfoRequest
@@ -30430,8 +30584,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询IP是否为VIP</para>
+        /// <para>Batch query whether the IP address is included in the ESA resolution result.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface is used to check whether the vs_addr parameter in the vipInfo collection is vip.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListESAIPInfoRequest
@@ -30448,8 +30607,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询IP是否为VIP</para>
+        /// <para>Batch query whether the IP address is included in the ESA resolution result.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface is used to check whether the vs_addr parameter in the vipInfo collection is vip.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListESAIPInfoRequest
@@ -34150,8 +34314,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine的代码版本列表</para>
+        /// <para>Queries the code versions of a function (routine) by page.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation to query the code versions of a specific function. Paged query and fuzzy search are supported. You can configure <c>Name</c> to specify the name of a function.
+        /// Specify <c>PageNumber</c> and <c>PageSize</c> to control the number of entries returned in a request, and use <c>SearchKeyWord</c> to specify a keyword for fuzzy search.
+        /// The response includes the number, description, and creation time of each code version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRoutineCodeVersionsRequest
@@ -34204,8 +34375,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine的代码版本列表</para>
+        /// <para>Queries the code versions of a function (routine) by page.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation to query the code versions of a specific function. Paged query and fuzzy search are supported. You can configure <c>Name</c> to specify the name of a function.
+        /// Specify <c>PageNumber</c> and <c>PageSize</c> to control the number of entries returned in a request, and use <c>SearchKeyWord</c> to specify a keyword for fuzzy search.
+        /// The response includes the number, description, and creation time of each code version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRoutineCodeVersionsRequest
@@ -34258,8 +34436,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine的代码版本列表</para>
+        /// <para>Queries the code versions of a function (routine) by page.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation to query the code versions of a specific function. Paged query and fuzzy search are supported. You can configure <c>Name</c> to specify the name of a function.
+        /// Specify <c>PageNumber</c> and <c>PageSize</c> to control the number of entries returned in a request, and use <c>SearchKeyWord</c> to specify a keyword for fuzzy search.
+        /// The response includes the number, description, and creation time of each code version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRoutineCodeVersionsRequest
@@ -34276,8 +34461,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine的代码版本列表</para>
+        /// <para>Queries the code versions of a function (routine) by page.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation to query the code versions of a specific function. Paged query and fuzzy search are supported. You can configure <c>Name</c> to specify the name of a function.
+        /// Specify <c>PageNumber</c> and <c>PageSize</c> to control the number of entries returned in a request, and use <c>SearchKeyWord</c> to specify a keyword for fuzzy search.
+        /// The response includes the number, description, and creation time of each code version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRoutineCodeVersionsRequest
@@ -34294,8 +34486,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询函数关联域名列表</para>
+        /// <para>The records associated with the function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the routes associated with a function. You can specify paged query parameters to obtain the specified number of routes or specify a keyword for fuzzy search to filter specific routes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRoutineRelatedRecordsRequest
@@ -34348,8 +34545,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询函数关联域名列表</para>
+        /// <para>The records associated with the function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the routes associated with a function. You can specify paged query parameters to obtain the specified number of routes or specify a keyword for fuzzy search to filter specific routes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRoutineRelatedRecordsRequest
@@ -34402,8 +34604,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询函数关联域名列表</para>
+        /// <para>The records associated with the function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the routes associated with a function. You can specify paged query parameters to obtain the specified number of routes or specify a keyword for fuzzy search to filter specific routes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRoutineRelatedRecordsRequest
@@ -34420,8 +34627,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询函数关联域名列表</para>
+        /// <para>The records associated with the function.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query the routes associated with a function. You can specify paged query parameters to obtain the specified number of routes or specify a keyword for fuzzy search to filter specific routes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRoutineRelatedRecordsRequest
@@ -34438,7 +34650,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘程序的函数路由列表</para>
+        /// <para>Queries the routes of an edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34488,7 +34700,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘程序的函数路由列表</para>
+        /// <para>Queries the routes of an edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34538,7 +34750,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘程序的函数路由列表</para>
+        /// <para>Queries the routes of an edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34556,7 +34768,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询边缘程序的函数路由列表</para>
+        /// <para>Queries the routes of an edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34910,7 +35122,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点的函数路由列表</para>
+        /// <para>Queries the edge function routes for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34972,7 +35184,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点的函数路由列表</para>
+        /// <para>Queries the edge function routes for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35034,7 +35246,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点的函数路由列表</para>
+        /// <para>Queries the edge function routes for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35052,7 +35264,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点的函数路由列表</para>
+        /// <para>Queries the edge function routes for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35594,7 +35806,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网页观测配置列表</para>
+        /// <para>Queries the list of page monitoring configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35648,7 +35860,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网页观测配置列表</para>
+        /// <para>Queries the list of page monitoring configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35702,7 +35914,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网页观测配置列表</para>
+        /// <para>Queries the list of page monitoring configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35720,7 +35932,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网页观测配置列表</para>
+        /// <para>Queries the list of page monitoring configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35962,8 +36174,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的Routine列表</para>
+        /// <para>Queries the functions created in your account and the maximum number of functions supported by your plan. You can call this operation to perform a paged query.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to perform a paged query to query all functions created in your account, the maximum number of functions supported by the billing plan that you use, and the number of functions already created. You can specify <c>PageNumber</c> and <c>PageSize</c> to control the number of entries to be returned in the response and specify <c>SearchKeyWord</c> to perform a fuzzy search to filter specific routine names.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserRoutinesRequest
@@ -36012,8 +36229,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的Routine列表</para>
+        /// <para>Queries the functions created in your account and the maximum number of functions supported by your plan. You can call this operation to perform a paged query.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to perform a paged query to query all functions created in your account, the maximum number of functions supported by the billing plan that you use, and the number of functions already created. You can specify <c>PageNumber</c> and <c>PageSize</c> to control the number of entries to be returned in the response and specify <c>SearchKeyWord</c> to perform a fuzzy search to filter specific routine names.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserRoutinesRequest
@@ -36062,8 +36284,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的Routine列表</para>
+        /// <para>Queries the functions created in your account and the maximum number of functions supported by your plan. You can call this operation to perform a paged query.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to perform a paged query to query all functions created in your account, the maximum number of functions supported by the billing plan that you use, and the number of functions already created. You can specify <c>PageNumber</c> and <c>PageSize</c> to control the number of entries to be returned in the response and specify <c>SearchKeyWord</c> to perform a fuzzy search to filter specific routine names.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserRoutinesRequest
@@ -36080,8 +36307,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的Routine列表</para>
+        /// <para>Queries the functions created in your account and the maximum number of functions supported by your plan. You can call this operation to perform a paged query.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to perform a paged query to query all functions created in your account, the maximum number of functions supported by the billing plan that you use, and the number of functions already created. You can specify <c>PageNumber</c> and <c>PageSize</c> to control the number of entries to be returned in the response and specify <c>SearchKeyWord</c> to perform a fuzzy search to filter specific routine names.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserRoutinesRequest
@@ -36098,7 +36330,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点视频处理配置列表</para>
+        /// <para>Queries the video processing configurations of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36164,7 +36396,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点视频处理配置列表</para>
+        /// <para>Queries the video processing configurations of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36230,7 +36462,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点视频处理配置列表</para>
+        /// <para>Queries the video processing configurations of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36248,7 +36480,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询站点视频处理配置列表</para>
+        /// <para>Queries the video processing configurations of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42750,7 +42982,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新边缘容器资源预留配置</para>
+        /// <para>Updates the resource reservation configuration of an edge container.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42814,7 +43046,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新边缘容器资源预留配置</para>
+        /// <para>Updates the resource reservation configuration of an edge container.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42878,7 +43110,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新边缘容器资源预留配置</para>
+        /// <para>Updates the resource reservation configuration of an edge container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42896,7 +43128,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新边缘容器资源预留配置</para>
+        /// <para>Updates the resource reservation configuration of an edge container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47026,7 +47258,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改边缘函数路由配置</para>
+        /// <para>Modifies the route configuration of an edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47100,7 +47332,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改边缘函数路由配置</para>
+        /// <para>Modifies the route configuration of an edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47174,7 +47406,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改边缘函数路由配置</para>
+        /// <para>Modifies the route configuration of an edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47192,7 +47424,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改边缘函数路由配置</para>
+        /// <para>Modifies the route configuration of an edge function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47366,7 +47598,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点放行搜索引擎爬虫配置</para>
+        /// <para>Modifies the search engine crawler configuration for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47412,7 +47644,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点放行搜索引擎爬虫配置</para>
+        /// <para>Modifies the search engine crawler configuration for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47458,7 +47690,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点放行搜索引擎爬虫配置</para>
+        /// <para>Modifies the search engine crawler configuration for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47476,7 +47708,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点放行搜索引擎爬虫配置</para>
+        /// <para>Modifies the search engine crawler configuration for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48922,7 +49154,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网页监测配置</para>
+        /// <para>Updates the webpage monitoring configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48972,7 +49204,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网页监测配置</para>
+        /// <para>Updates the webpage monitoring configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49022,7 +49254,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网页监测配置</para>
+        /// <para>Updates the webpage monitoring configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49040,7 +49272,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新网页监测配置</para>
+        /// <para>Updates the webpage monitoring configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49354,7 +49586,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点视频处理配置</para>
+        /// <para>Modifies the video processing configuration of the site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49440,7 +49672,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点视频处理配置</para>
+        /// <para>Modifies the video processing configuration of the site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49526,7 +49758,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点视频处理配置</para>
+        /// <para>Modifies the video processing configuration of the site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49544,7 +49776,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改站点视频处理配置</para>
+        /// <para>Modifies the video processing configuration of the site.</para>
         /// </summary>
         /// 
         /// <param name="request">

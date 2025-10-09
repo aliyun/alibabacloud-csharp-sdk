@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeSiteTimeSeriesDataResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeSiteTimeSeriesDataResponseBodyData> Data { get; set; }
@@ -101,6 +104,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        /// <summary>
+        /// <para>The queried summary data.</para>
+        /// </summary>
         [NameInMap("SummarizedData")]
         [Validation(Required=false)]
         public List<DescribeSiteTimeSeriesDataResponseBodySummarizedData> SummarizedData { get; set; }

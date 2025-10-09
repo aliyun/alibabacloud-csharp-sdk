@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRoutineRouteResponseBody : TeaModel {
         /// <summary>
+        /// <para>The configuration ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>35281609698****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>

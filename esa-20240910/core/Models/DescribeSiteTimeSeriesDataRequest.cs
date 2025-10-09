@@ -18,17 +18,26 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The metric to query.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public List<DescribeSiteTimeSeriesDataRequestFields> Fields { get; set; }
         public class DescribeSiteTimeSeriesDataRequestFields : TeaModel {
+            /// <summary>
+            /// <para>The dimensions at which you want to query the data.</para>
+            /// </summary>
             [NameInMap("Dimension")]
             [Validation(Required=false)]
             public List<string> Dimension { get; set; }
 
             /// <summary>
+            /// <para>The metric to query.</para>
+            /// <remarks>
+            /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/2878520.html">Data analysis field description</a>.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>Traffic</para>
             /// </summary>

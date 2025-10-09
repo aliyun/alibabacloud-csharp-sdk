@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateUrlObservationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The configuration ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>35281609698****</para>
         /// </summary>

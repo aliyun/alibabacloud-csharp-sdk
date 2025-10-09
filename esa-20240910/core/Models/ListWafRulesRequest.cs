@@ -35,6 +35,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description>http_anti_scan: Scan protection</description></item>
         /// <item><description>http_bot: Bots</description></item>
         /// </list>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_custom</para>
