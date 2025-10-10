@@ -788,6 +788,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public int? AutoRenewPeriod { get; set; }
 
+            [NameInMap("CpuOptions")]
+            [Validation(Required=false)]
+            public CreateAutoProvisioningGroupRequestLaunchConfigurationCpuOptions CpuOptions { get; set; }
+            public class CreateAutoProvisioningGroupRequestLaunchConfigurationCpuOptions : TeaModel {
+                [NameInMap("Core")]
+                [Validation(Required=false)]
+                public int? Core { get; set; }
+
+                [NameInMap("ThreadsPerCore")]
+                [Validation(Required=false)]
+                public int? ThreadsPerCore { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The image options.</para>
             /// <para>When you specify this parameter, take note of the following items:</para>

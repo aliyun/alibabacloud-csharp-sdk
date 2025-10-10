@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
+        [NameInMap("MachineId")]
+        [Validation(Required=false)]
+        public string MachineId { get; set; }
+
         /// <summary>
         /// <para>The maximum number of entries per page.</para>
         /// <para>Valid values: 1 to 50.</para>

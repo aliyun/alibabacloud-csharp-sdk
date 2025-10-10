@@ -1045,7 +1045,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? UseAdditionalService { get; set; }
 
         /// <summary>
-        /// <para>The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 16 KB.</para>
+        /// <para>The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 32 KB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ZWNobyBoZWxsbyBlY3Mh</para>
