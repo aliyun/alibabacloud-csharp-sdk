@@ -86,7 +86,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <item><description>Specify an IP address if you set <b>ServerType</b> to <b>Ip</b>.</description></item>
             /// <item><description>Specify the Alibaba Cloud Resource Name (ARN) of a Function Compute function if you set <b>ServerType</b> to <b>Fc</b>.</description></item>
             /// </list>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp1f9kdprbgy9uiu****</para>

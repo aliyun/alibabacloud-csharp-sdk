@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public class ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig : TeaModel {
                 /// <summary>
                 /// <para>The billing method. Valid value:</para>
-                /// <para>Only <b>PostPay</b> may be returned, which indicates the pay-as-you-go billing method.</para>
+                /// <para><b>PostPay</b>: You are charged for the ALB instance on a pay-as-you-go basis.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PostPay</para>

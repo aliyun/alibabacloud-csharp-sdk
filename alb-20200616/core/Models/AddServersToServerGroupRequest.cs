@@ -103,7 +103,6 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <item><description>If the server group is of the <b>Ip</b> type, set this parameter to IP addresses.</description></item>
             /// <item><description>If the server group is of the <b>Fc</b> type, set ServerId to an Alibaba Cloud Resource Name (ARN).</description></item>
             /// </list>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs-bp67acfmxazb4p****</para>

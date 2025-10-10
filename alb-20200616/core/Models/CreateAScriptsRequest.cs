@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public class CreateAScriptsRequestAScripts : TeaModel {
             /// <summary>
             /// <para>The name of the AScript rule.</para>
-            /// <para>The name must be 2 to 128 character in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</para>
+            /// <para>The length must be between 2 and 128 characters. This name must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string AScriptName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the AScript rule. Valid values:</para>
+            /// <para>Enables the AScript rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b></description></item>
             /// <item><description><b>false</b> (default)</description></item>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the extended attributes of the AScript rule. Valid values:</para>
+            /// <para>Enables the extended attribute of the Ascript rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
             /// <item><description>false (default)</description></item>
@@ -57,15 +57,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public bool? ExtAttributeEnabled { get; set; }
 
             /// <summary>
-            /// <para>The extended attributes.</para>
+            /// <para>The extended attribute of the AScript rule.</para>
             /// </summary>
             [NameInMap("ExtAttributes")]
             [Validation(Required=false)]
             public List<CreateAScriptsRequestAScriptsExtAttributes> ExtAttributes { get; set; }
             public class CreateAScriptsRequestAScriptsExtAttributes : TeaModel {
                 /// <summary>
-                /// <para>The attribute name.</para>
-                /// <para>Set the value to <b>EsDebug</b>, which specifies that if requests carry the _es_dbg parameter and the value is the specified key, the debugging header is enabled to output the execution result.</para>
+                /// <para>The key of the extended attribute.</para>
+                /// <para>You can only set the key to <b>EsDebug</b>. This extended attribute adds a debug response header to record the execution of the AScript rule if the client request includes the _es_dbg parameter and its value matches the specified value of the extended attribute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>EsDebug</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string AttributeKey { get; set; }
 
                 /// <summary>
-                /// <para>The attribute value, which must be 1 to 128 characters in length, and can contain letters or digits.</para>
+                /// <para>The value of the extended attribute, which can contain a maximum of 128 characters, including letters and digits.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test123</para>
@@ -87,14 +87,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>可编程脚本执行位置</para>
+            /// <para>The position where the Ascript rule is evaluated. Valid values are:</para>
             /// <list type="bullet">
-            /// <item><description><para>RequestHead（默认值）：请求方向规则执行前</para>
-            /// </description></item>
-            /// <item><description><para>RequestFoot：请求方向规则执行后</para>
-            /// </description></item>
-            /// <item><description><para>ResponseHead：响应方向规则执行前</para>
-            /// </description></item>
+            /// <item><description>RequestHead (default): before inbound rules are evaluated</description></item>
+            /// <item><description>RequestFoot: after inbound rules are evaluated</description></item>
+            /// <item><description>ResponseHead: before outbound rules are evaluated</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

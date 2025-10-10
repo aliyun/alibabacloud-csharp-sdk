@@ -426,13 +426,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <item><description><b>HTTPS</b></description></item>
                 /// </list>
                 /// <remarks>
-                /// </remarks>
                 /// <list type="bullet">
-                /// <item><description><para>HTTPS listeners support only HTTPS redirection.</para>
-                /// </description></item>
-                /// <item><description><para>HTTP listeners support HTTP and HTTPS redirection.</para>
-                /// </description></item>
+                /// <item><description>HTTPS listeners support only HTTPS redirection.</description></item>
+                /// <item><description>HTTP listeners support HTTP and HTTPS redirection.</description></item>
                 /// </list>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP</para>
