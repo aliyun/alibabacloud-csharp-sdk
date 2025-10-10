@@ -1568,6 +1568,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["LoadWhiteList"] = request.LoadWhiteList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogSource))
+            {
+                query["LogSource"] = request.LogSource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberAccount))
             {
                 query["MemberAccount"] = request.MemberAccount;
@@ -1595,6 +1599,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
             {
                 query["ProductId"] = request.ProductId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleAggQuery))
+            {
+                query["RuleAggQuery"] = request.RuleAggQuery;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleCategory))
             {
@@ -1706,6 +1714,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["LoadWhiteList"] = request.LoadWhiteList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogSource))
+            {
+                query["LogSource"] = request.LogSource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberAccount))
             {
                 query["MemberAccount"] = request.MemberAccount;
@@ -1733,6 +1745,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
             {
                 query["ProductId"] = request.ProductId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleAggQuery))
+            {
+                query["RuleAggQuery"] = request.RuleAggQuery;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleCategory))
             {

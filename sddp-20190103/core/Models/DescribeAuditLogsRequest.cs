@@ -107,6 +107,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>SLOW_SQL</para>
+        /// </summary>
+        [NameInMap("LogSource")]
+        [Validation(Required=false)]
+        public string LogSource { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>**********8103</para>
         /// </summary>
         [NameInMap("MemberAccount")]
@@ -160,6 +168,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("ProductId")]
         [Validation(Required=false)]
         public long? ProductId { get; set; }
+
+        [NameInMap("RuleAggQuery")]
+        [Validation(Required=false)]
+        public bool? RuleAggQuery { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

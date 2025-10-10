@@ -85,10 +85,6 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [Validation(Required=false)]
             public string DatabaseName { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>MySQL</para>
-            /// </summary>
             [NameInMap("DbType")]
             [Validation(Required=false)]
             public string DbType { get; set; }
@@ -127,6 +123,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("InstanceAuditStatus")]
+            [Validation(Required=false)]
+            public string InstanceAuditStatus { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>instance dscription</para>
             /// </summary>
             [NameInMap("InstanceDescription")]
@@ -148,6 +152,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             [NameInMap("IpType")]
             [Validation(Required=false)]
             public string IpType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>SLOW_SQL</para>
+            /// </summary>
+            [NameInMap("LogSource")]
+            [Validation(Required=false)]
+            public string LogSource { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
