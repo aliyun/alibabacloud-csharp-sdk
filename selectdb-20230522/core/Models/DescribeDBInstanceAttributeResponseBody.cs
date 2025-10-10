@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>selectdb-cn-7213cjv****-be</para>
+            /// </summary>
             [NameInMap("ClusterBinding")]
             [Validation(Required=false)]
             public string ClusterBinding { get; set; }
@@ -192,14 +196,26 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
             [NameInMap("ScaleMax")]
             [Validation(Required=false)]
             public double? ScaleMax { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0.5</para>
+            /// </summary>
             [NameInMap("ScaleMin")]
             [Validation(Required=false)]
             public double? ScaleMin { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("ScalingRulesEnable")]
             [Validation(Required=false)]
             public bool? ScalingRulesEnable { get; set; }
@@ -232,14 +248,26 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>预留参数，暂不返回。</para>
+            /// </summary>
             [NameInMap("SubDomain")]
             [Validation(Required=false)]
             public string SubDomain { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>vsw-t4n8x7jcc8rknon85tqoa</para>
+            /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-k</para>
+            /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
@@ -256,6 +284,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>multi_az</para>
+        /// </summary>
         [NameInMap("DeployScheme")]
         [Validation(Required=false)]
         public string DeployScheme { get; set; }
@@ -368,10 +400,18 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public List<DescribeDBInstanceAttributeResponseBodyMultiZone> MultiZone { get; set; }
         public class DescribeDBInstanceAttributeResponseBodyMultiZone : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>4096</para>
+            /// </summary>
             [NameInMap("AvailableIpCount")]
             [Validation(Required=false)]
             public long? AvailableIpCount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>113.88.14.211/32</para>
+            /// </summary>
             [NameInMap("Cidr")]
             [Validation(Required=false)]
             public string Cidr { get; set; }
@@ -380,6 +420,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public List<string> VSwitchIds { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou-k</para>
+            /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
@@ -436,6 +480,18 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("SecGroupConnValid")]
+        [Validation(Required=false)]
+        public string SecGroupConnValid { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Serverless")]
         [Validation(Required=false)]
         public bool? Serverless { get; set; }
@@ -507,6 +563,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vsw-bp18iztwqrs8qj2nc6nyu</para>
+        /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
