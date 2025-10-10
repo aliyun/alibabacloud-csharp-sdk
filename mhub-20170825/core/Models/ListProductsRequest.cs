@@ -17,9 +17,21 @@ namespace AlibabaCloud.SDK.Mhub20170825.Models
         [Validation(Required=false)]
         public int? Offset { get; set; }
 
+        [NameInMap("PageNum")]
+        [Validation(Required=false)]
+        public int? PageNum { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
         [NameInMap("ProductName")]
         [Validation(Required=false)]
         public string ProductName { get; set; }
+
+        [NameInMap("SearchKeyWord")]
+        [Validation(Required=false)]
+        public string SearchKeyWord { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

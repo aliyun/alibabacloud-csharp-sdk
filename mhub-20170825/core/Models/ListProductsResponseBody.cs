@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Mhub20170825.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>图片 base64</para>
+                /// </summary>
                 [NameInMap("EncodedIcon")]
                 [Validation(Required=false)]
                 public string EncodedIcon { get; set; }
@@ -45,6 +49,10 @@ namespace AlibabaCloud.SDK.Mhub20170825.Models
                 [Validation(Required=false)]
                 public int? IndustryId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>我的项目</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }

@@ -27,12 +27,24 @@ namespace AlibabaCloud.SDK.Mhub20170825.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>mobile-live-service</para>
+                /// </summary>
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
+                public string AppName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>com.test.ios</para>
                 /// </summary>
                 [NameInMap("BundleId")]
                 [Validation(Required=false)]
                 public string BundleId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>图片 base64 字符串</para>
+                /// </summary>
                 [NameInMap("EncodedIcon")]
                 [Validation(Required=false)]
                 public string EncodedIcon { get; set; }
@@ -45,6 +57,10 @@ namespace AlibabaCloud.SDK.Mhub20170825.Models
                 [Validation(Required=false)]
                 public int? IndustryId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>我的应用</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }

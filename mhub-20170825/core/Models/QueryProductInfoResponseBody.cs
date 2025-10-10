@@ -13,10 +13,34 @@ namespace AlibabaCloud.SDK.Mhub20170825.Models
         [Validation(Required=false)]
         public QueryProductInfoResponseBodyProductInfo ProductInfo { get; set; }
         public class QueryProductInfoResponseBodyProductInfo : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2022-12-02T09:50:01Z</para>
+            /// </summary>
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>endpoint for ecs: kangaroo-xuanji-cn-hangzhou-ecs-console-mirror-0(i-bp1fs84ua5zw4aljdlh1)</para>
+            /// </summary>
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>icon图片base64字符串</para>
+            /// </summary>
             [NameInMap("EncodedIcon")]
             [Validation(Required=false)]
             public string EncodedIcon { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>icon图片名称</para>
+            /// </summary>
             [NameInMap("IconName")]
             [Validation(Required=false)]
             public string IconName { get; set; }
@@ -29,9 +53,29 @@ namespace AlibabaCloud.SDK.Mhub20170825.Models
             [Validation(Required=false)]
             public int? IndustryId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>我的项目</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>linux/amd64</para>
+            /// </summary>
+            [NameInMap("Platforms")]
+            [Validation(Required=false)]
+            public string Platforms { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>3910360</para>
+            /// </summary>
+            [NameInMap("ProductId")]
+            [Validation(Required=false)]
+            public int? ProductId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
