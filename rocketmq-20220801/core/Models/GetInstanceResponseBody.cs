@@ -593,6 +593,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public bool? AutoScaling { get; set; }
 
+                [NameInMap("capacityType")]
+                [Validation(Required=false)]
+                public string CapacityType { get; set; }
+
                 /// <summary>
                 /// <para>The retention period of messages. Unit: hours.</para>
                 /// <para>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section in <a href="https://help.aliyun.com/document_detail/440347.html">Usage limits</a>.</para>
@@ -614,6 +618,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [NameInMap("msgProcessSpec")]
                 [Validation(Required=false)]
                 public string MsgProcessSpec { get; set; }
+
+                [NameInMap("provisionedCapacity")]
+                [Validation(Required=false)]
+                public long? ProvisionedCapacity { get; set; }
 
                 /// <summary>
                 /// <para>The ratio between sent messages and received messages in the instance.</para>

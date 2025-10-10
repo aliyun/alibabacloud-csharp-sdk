@@ -115,6 +115,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [Validation(Required=false)]
                 public ListInstancesResponseBodyDataListProductInfo ProductInfo { get; set; }
                 public class ListInstancesResponseBodyDataListProductInfo : TeaModel {
+                    [NameInMap("capacityType")]
+                    [Validation(Required=false)]
+                    public string CapacityType { get; set; }
+
                     /// <summary>
                     /// <para>Indicates whether the message trace feature is enabled. Valid values:</para>
                     /// <list type="bullet">
