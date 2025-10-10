@@ -399,6 +399,10 @@ namespace AlibabaCloud.SDK.IQS20241111
             {
                 query["returnMarkdownText"] = request.ReturnMarkdownText;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnRichMainBody))
+            {
+                query["returnRichMainBody"] = request.ReturnRichMainBody;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnSummary))
             {
                 query["returnSummary"] = request.ReturnSummary;
@@ -476,6 +480,10 @@ namespace AlibabaCloud.SDK.IQS20241111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnMarkdownText))
             {
                 query["returnMarkdownText"] = request.ReturnMarkdownText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnRichMainBody))
+            {
+                query["returnRichMainBody"] = request.ReturnRichMainBody;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnSummary))
             {
@@ -837,6 +845,126 @@ namespace AlibabaCloud.SDK.IQS20241111
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GlobalSearchWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>页面读取</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadPageBasicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadPageBasicResponse
+        /// </returns>
+        public ReadPageBasicResponse ReadPageBasicWithOptions(ReadPageBasicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadPageBasic",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/iqs/readpage/basic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadPageBasicResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>页面读取</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadPageBasicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadPageBasicResponse
+        /// </returns>
+        public async Task<ReadPageBasicResponse> ReadPageBasicWithOptionsAsync(ReadPageBasicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadPageBasic",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/iqs/readpage/basic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadPageBasicResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>页面读取</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadPageBasicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadPageBasicResponse
+        /// </returns>
+        public ReadPageBasicResponse ReadPageBasic(ReadPageBasicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ReadPageBasicWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>页面读取</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadPageBasicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadPageBasicResponse
+        /// </returns>
+        public async Task<ReadPageBasicResponse> ReadPageBasicAsync(ReadPageBasicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ReadPageBasicWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

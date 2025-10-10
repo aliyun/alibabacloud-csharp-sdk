@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public bool? RerankScore { get; set; }
 
+        [NameInMap("richMainBody")]
+        [Validation(Required=false)]
+        public bool? RichMainBody { get; set; }
+
         [NameInMap("summary")]
         [Validation(Required=false)]
         public bool? Summary { get; set; }

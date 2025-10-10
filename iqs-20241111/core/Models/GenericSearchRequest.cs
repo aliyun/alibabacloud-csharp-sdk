@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public bool? ReturnMarkdownText { get; set; }
 
+        [NameInMap("returnRichMainBody")]
+        [Validation(Required=false)]
+        public bool? ReturnRichMainBody { get; set; }
+
         [NameInMap("returnSummary")]
         [Validation(Required=false)]
         public bool? ReturnSummary { get; set; }

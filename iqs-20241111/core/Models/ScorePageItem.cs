@@ -121,6 +121,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public long? PublishTime { get; set; }
 
+        [NameInMap("richMainBody")]
+        [Validation(Required=false)]
+        public string RichMainBody { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>0.234325235</para>
