@@ -566,6 +566,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public KubeletConfig KubeletConfiguration { get; set; }
 
+                [NameInMap("node_os_config")]
+                [Validation(Required=false)]
+                public DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfigNodeOsConfig NodeOsConfig { get; set; }
+                public class DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfigNodeOsConfig : TeaModel {
+                    [NameInMap("hugepage")]
+                    [Validation(Required=false)]
+                    public Hugepage Hugepage { get; set; }
+
+                }
+
             }
 
             /// <summary>
@@ -1024,6 +1034,24 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [NameInMap("rds_instances")]
                 [Validation(Required=false)]
                 public List<string> RdsInstances { get; set; }
+
+                [NameInMap("resource_pool_options")]
+                [Validation(Required=false)]
+                public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupResourcePoolOptions ResourcePoolOptions { get; set; }
+                public class DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupResourcePoolOptions : TeaModel {
+                    [NameInMap("private_pool_ids")]
+                    [Validation(Required=false)]
+                    public List<string> PrivatePoolIds { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PrivatePoolFirst</para>
+                    /// </summary>
+                    [NameInMap("strategy")]
+                    [Validation(Required=false)]
+                    public string Strategy { get; set; }
+
+                }
 
                 /// <summary>
                 /// <para>The scaling group ID.</para>

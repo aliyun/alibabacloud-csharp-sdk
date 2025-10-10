@@ -1100,6 +1100,24 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public List<string> RdsInstances { get; set; }
 
+            [NameInMap("resource_pool_options")]
+            [Validation(Required=false)]
+            public CreateClusterNodePoolRequestScalingGroupResourcePoolOptions ResourcePoolOptions { get; set; }
+            public class CreateClusterNodePoolRequestScalingGroupResourcePoolOptions : TeaModel {
+                [NameInMap("private_pool_ids")]
+                [Validation(Required=false)]
+                public List<string> PrivatePoolIds { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>PrivatePoolFirst</para>
+                /// </summary>
+                [NameInMap("strategy")]
+                [Validation(Required=false)]
+                public string Strategy { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The scaling mode of the scaling group. Valid values:</para>
             /// <list type="bullet">

@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public ModifyNodePoolNodeConfigRequestOsConfig OsConfig { get; set; }
         public class ModifyNodePoolNodeConfigRequestOsConfig : TeaModel {
+            [NameInMap("hugepage")]
+            [Validation(Required=false)]
+            public Hugepage Hugepage { get; set; }
+
             /// <summary>
             /// <para>The sysctl configuration.</para>
             /// </summary>
