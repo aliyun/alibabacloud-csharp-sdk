@@ -43,6 +43,28 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("AmbientSoundConfig")]
+        [Validation(Required=false)]
+        public CreateAppAgentTemplateRequestAmbientSoundConfig AmbientSoundConfig { get; set; }
+        public class CreateAppAgentTemplateRequestAmbientSoundConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>white_noise</para>
+            /// </summary>
+            [NameInMap("SoundId")]
+            [Validation(Required=false)]
+            public string SoundId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("Volume")]
+            [Validation(Required=false)]
+            public int? Volume { get; set; }
+
+        }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -125,6 +147,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("BackChannelConfig")]
+        [Validation(Required=false)]
+        public CreateAppAgentTemplateRequestBackChannelConfig BackChannelConfig { get; set; }
+        public class CreateAppAgentTemplateRequestBackChannelConfig : TeaModel {
+            [NameInMap("UserTurnEnd")]
+            [Validation(Required=false)]
+            public bool? UserTurnEnd { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2</para>
@@ -136,6 +168,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("Greeting")]
         [Validation(Required=false)]
         public string Greeting { get; set; }
+
+        [NameInMap("InterruptConfig")]
+        [Validation(Required=false)]
+        public CreateAppAgentTemplateRequestInterruptConfig InterruptConfig { get; set; }
+        public class CreateAppAgentTemplateRequestInterruptConfig : TeaModel {
+            [NameInMap("SemanticsInterrupt")]
+            [Validation(Required=false)]
+            public bool? SemanticsInterrupt { get; set; }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>

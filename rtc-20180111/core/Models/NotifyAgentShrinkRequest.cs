@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rtc20180111.Models
 {
-    public class NotifyAgentRequest : TeaModel {
+    public class NotifyAgentShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>aec****</para>
@@ -19,21 +19,7 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         [NameInMap("BackgroundMusic")]
         [Validation(Required=false)]
-        public NotifyAgentRequestBackgroundMusic BackgroundMusic { get; set; }
-        public class NotifyAgentRequestBackgroundMusic : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>wav</para>
-            /// </summary>
-            [NameInMap("format")]
-            [Validation(Required=false)]
-            public string Format { get; set; }
-
-            [NameInMap("url")]
-            [Validation(Required=false)]
-            public string Url { get; set; }
-
-        }
+        public string BackgroundMusicShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

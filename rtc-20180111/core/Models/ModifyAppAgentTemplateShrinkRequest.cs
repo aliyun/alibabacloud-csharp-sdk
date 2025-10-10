@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public string AgentSilenceConfigShrink { get; set; }
 
+        [NameInMap("AmbientSoundConfig")]
+        [Validation(Required=false)]
+        public string AmbientSoundConfigShrink { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,6 +30,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("AsrConfig")]
         [Validation(Required=false)]
         public string AsrConfigShrink { get; set; }
+
+        [NameInMap("BackChannelConfig")]
+        [Validation(Required=false)]
+        public string BackChannelConfigShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -48,6 +56,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
+
+        [NameInMap("InterruptConfig")]
+        [Validation(Required=false)]
+        public string InterruptConfigShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

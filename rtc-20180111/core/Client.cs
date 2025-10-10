@@ -305,9 +305,21 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 request.AgentSilenceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgentSilenceConfig, "AgentSilenceConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AmbientSoundConfig))
+            {
+                request.AmbientSoundConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AmbientSoundConfig, "AmbientSoundConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AsrConfig))
             {
                 request.AsrConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AsrConfig, "AsrConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BackChannelConfig))
+            {
+                request.BackChannelConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BackChannelConfig, "BackChannelConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InterruptConfig))
+            {
+                request.InterruptConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InterruptConfig, "InterruptConfig", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LlmConfig))
             {
@@ -322,6 +334,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["AgentSilenceConfig"] = request.AgentSilenceConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AmbientSoundConfigShrink))
+            {
+                query["AmbientSoundConfig"] = request.AmbientSoundConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -330,6 +346,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["AsrConfig"] = request.AsrConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackChannelConfigShrink))
+            {
+                query["BackChannelConfig"] = request.BackChannelConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatMode))
             {
                 query["ChatMode"] = request.ChatMode;
@@ -337,6 +357,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Greeting))
             {
                 query["Greeting"] = request.Greeting;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterruptConfigShrink))
+            {
+                query["InterruptConfig"] = request.InterruptConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterruptMode))
             {
@@ -401,9 +425,21 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 request.AgentSilenceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgentSilenceConfig, "AgentSilenceConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AmbientSoundConfig))
+            {
+                request.AmbientSoundConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AmbientSoundConfig, "AmbientSoundConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AsrConfig))
             {
                 request.AsrConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AsrConfig, "AsrConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BackChannelConfig))
+            {
+                request.BackChannelConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BackChannelConfig, "BackChannelConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InterruptConfig))
+            {
+                request.InterruptConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InterruptConfig, "InterruptConfig", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LlmConfig))
             {
@@ -418,6 +454,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["AgentSilenceConfig"] = request.AgentSilenceConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AmbientSoundConfigShrink))
+            {
+                query["AmbientSoundConfig"] = request.AmbientSoundConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -426,6 +466,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["AsrConfig"] = request.AsrConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackChannelConfigShrink))
+            {
+                query["BackChannelConfig"] = request.BackChannelConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatMode))
             {
                 query["ChatMode"] = request.ChatMode;
@@ -433,6 +477,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Greeting))
             {
                 query["Greeting"] = request.Greeting;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterruptConfigShrink))
+            {
+                query["InterruptConfig"] = request.InterruptConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterruptMode))
             {
@@ -11647,9 +11695,21 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 request.AgentSilenceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgentSilenceConfig, "AgentSilenceConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AmbientSoundConfig))
+            {
+                request.AmbientSoundConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AmbientSoundConfig, "AmbientSoundConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AsrConfig))
             {
                 request.AsrConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AsrConfig, "AsrConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BackChannelConfig))
+            {
+                request.BackChannelConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BackChannelConfig, "BackChannelConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InterruptConfig))
+            {
+                request.InterruptConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InterruptConfig, "InterruptConfig", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LlmConfig))
             {
@@ -11664,6 +11724,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["AgentSilenceConfig"] = request.AgentSilenceConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AmbientSoundConfigShrink))
+            {
+                query["AmbientSoundConfig"] = request.AmbientSoundConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -11671,6 +11735,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrConfigShrink))
             {
                 query["AsrConfig"] = request.AsrConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackChannelConfigShrink))
+            {
+                query["BackChannelConfig"] = request.BackChannelConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatMode))
             {
@@ -11683,6 +11751,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterruptConfigShrink))
+            {
+                query["InterruptConfig"] = request.InterruptConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterruptMode))
             {
@@ -11747,9 +11819,21 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 request.AgentSilenceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgentSilenceConfig, "AgentSilenceConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AmbientSoundConfig))
+            {
+                request.AmbientSoundConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AmbientSoundConfig, "AmbientSoundConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AsrConfig))
             {
                 request.AsrConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AsrConfig, "AsrConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BackChannelConfig))
+            {
+                request.BackChannelConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BackChannelConfig, "BackChannelConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InterruptConfig))
+            {
+                request.InterruptConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InterruptConfig, "InterruptConfig", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LlmConfig))
             {
@@ -11764,6 +11848,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["AgentSilenceConfig"] = request.AgentSilenceConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AmbientSoundConfigShrink))
+            {
+                query["AmbientSoundConfig"] = request.AmbientSoundConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -11771,6 +11859,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrConfigShrink))
             {
                 query["AsrConfig"] = request.AsrConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackChannelConfigShrink))
+            {
+                query["BackChannelConfig"] = request.BackChannelConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatMode))
             {
@@ -11783,6 +11875,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterruptConfigShrink))
+            {
+                query["InterruptConfig"] = request.InterruptConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterruptMode))
             {
@@ -13104,7 +13200,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>NotifyAgent</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// NotifyAgentRequest
         /// </param>
         /// <param name="runtime">
@@ -13114,13 +13210,23 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <returns>
         /// NotifyAgentResponse
         /// </returns>
-        public NotifyAgentResponse NotifyAgentWithOptions(NotifyAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public NotifyAgentResponse NotifyAgentWithOptions(NotifyAgentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            NotifyAgentShrinkRequest request = new NotifyAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BackgroundMusic))
+            {
+                request.BackgroundMusicShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BackgroundMusic, "BackgroundMusic", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackgroundMusicShrink))
+            {
+                query["BackgroundMusic"] = request.BackgroundMusicShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
             {
@@ -13170,7 +13276,7 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>NotifyAgent</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// NotifyAgentRequest
         /// </param>
         /// <param name="runtime">
@@ -13180,13 +13286,23 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <returns>
         /// NotifyAgentResponse
         /// </returns>
-        public async Task<NotifyAgentResponse> NotifyAgentWithOptionsAsync(NotifyAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<NotifyAgentResponse> NotifyAgentWithOptionsAsync(NotifyAgentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            NotifyAgentShrinkRequest request = new NotifyAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BackgroundMusic))
+            {
+                request.BackgroundMusicShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BackgroundMusic, "BackgroundMusic", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackgroundMusicShrink))
+            {
+                query["BackgroundMusic"] = request.BackgroundMusicShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
             {

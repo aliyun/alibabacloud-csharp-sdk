@@ -43,6 +43,28 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("AmbientSoundConfig")]
+        [Validation(Required=false)]
+        public ModifyAppAgentTemplateRequestAmbientSoundConfig AmbientSoundConfig { get; set; }
+        public class ModifyAppAgentTemplateRequestAmbientSoundConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>white_noise</para>
+            /// </summary>
+            [NameInMap("SoundId")]
+            [Validation(Required=false)]
+            public string SoundId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("Volume")]
+            [Validation(Required=false)]
+            public int? Volume { get; set; }
+
+        }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -133,6 +155,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
         }
 
+        [NameInMap("BackChannelConfig")]
+        [Validation(Required=false)]
+        public ModifyAppAgentTemplateRequestBackChannelConfig BackChannelConfig { get; set; }
+        public class ModifyAppAgentTemplateRequestBackChannelConfig : TeaModel {
+            [NameInMap("UserTurnEnd")]
+            [Validation(Required=false)]
+            public bool? UserTurnEnd { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2</para>
@@ -154,6 +186,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
+
+        [NameInMap("InterruptConfig")]
+        [Validation(Required=false)]
+        public ModifyAppAgentTemplateRequestInterruptConfig InterruptConfig { get; set; }
+        public class ModifyAppAgentTemplateRequestInterruptConfig : TeaModel {
+            [NameInMap("SemanticsInterrupt")]
+            [Validation(Required=false)]
+            public bool? SemanticsInterrupt { get; set; }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>

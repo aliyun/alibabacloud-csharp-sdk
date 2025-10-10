@@ -45,6 +45,28 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             }
 
+            [NameInMap("AmbientSoundConfig")]
+            [Validation(Required=false)]
+            public DescribeAppAgentTemplatesResponseBodyTemplatesAmbientSoundConfig AmbientSoundConfig { get; set; }
+            public class DescribeAppAgentTemplatesResponseBodyTemplatesAmbientSoundConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>office</para>
+                /// </summary>
+                [NameInMap("SoundId")]
+                [Validation(Required=false)]
+                public string SoundId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>50</para>
+                /// </summary>
+                [NameInMap("Volume")]
+                [Validation(Required=false)]
+                public int? Volume { get; set; }
+
+            }
+
             [NameInMap("AsrConfig")]
             [Validation(Required=false)]
             public DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfig AsrConfig { get; set; }
@@ -107,6 +129,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
             }
 
+            [NameInMap("BackChannelConfig")]
+            [Validation(Required=false)]
+            public DescribeAppAgentTemplatesResponseBodyTemplatesBackChannelConfig BackChannelConfig { get; set; }
+            public class DescribeAppAgentTemplatesResponseBodyTemplatesBackChannelConfig : TeaModel {
+                [NameInMap("UserTurnEnd")]
+                [Validation(Required=false)]
+                public bool? UserTurnEnd { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
@@ -138,6 +170,16 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
+            [NameInMap("InterruptConfig")]
+            [Validation(Required=false)]
+            public DescribeAppAgentTemplatesResponseBodyTemplatesInterruptConfig InterruptConfig { get; set; }
+            public class DescribeAppAgentTemplatesResponseBodyTemplatesInterruptConfig : TeaModel {
+                [NameInMap("SemanticsInterrupt")]
+                [Validation(Required=false)]
+                public bool? SemanticsInterrupt { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>
