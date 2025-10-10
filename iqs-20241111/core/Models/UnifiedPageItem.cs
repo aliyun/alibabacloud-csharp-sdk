@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public double? RerankScore { get; set; }
 
+        [NameInMap("richMainBody")]
+        [Validation(Required=false)]
+        public string RichMainBody { get; set; }
+
         [NameInMap("snippet")]
         [Validation(Required=false)]
         public string Snippet { get; set; }
