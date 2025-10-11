@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string LastModifiedTime { get; set; }
 
+        [NameInMap("nasConfig")]
+        [Validation(Required=false)]
+        public NASConfig NasConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>AliasName1</para>

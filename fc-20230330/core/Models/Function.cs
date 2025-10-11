@@ -61,8 +61,14 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("disableInjectCredentials")]
+        [Validation(Required=false)]
+        public string DisableInjectCredentials { get; set; }
+
+        /// <term><b>Obsolete</b></term>
         [NameInMap("disableOndemand")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? DisableOndemand { get; set; }
 
         /// <summary>
@@ -119,6 +125,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string Handler { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("idleTimeout")]
         [Validation(Required=false)]
         public int? IdleTimeout { get; set; }
@@ -206,6 +216,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [NameInMap("ossMountConfig")]
         [Validation(Required=false)]
         public OSSMountConfig OssMountConfig { get; set; }
+
+        [NameInMap("polarFsConfig")]
+        [Validation(Required=false)]
+        public PolarFsConfig PolarFsConfig { get; set; }
 
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]

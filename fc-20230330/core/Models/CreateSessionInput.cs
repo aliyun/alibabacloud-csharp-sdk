@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CreateSessionInput : TeaModel {
+        [NameInMap("nasConfig")]
+        [Validation(Required=false)]
+        public NASConfig NasConfig { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1800</para>
