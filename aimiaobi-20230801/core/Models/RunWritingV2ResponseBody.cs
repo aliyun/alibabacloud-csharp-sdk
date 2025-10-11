@@ -181,6 +181,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
                 }
 
+                [NameInMap("GenerateTraceability")]
+                [Validation(Required=false)]
+                public GenerateTraceability GenerateTraceability { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>文章精排之后的片段</para>
@@ -188,6 +192,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [NameInMap("MiniDoc")]
                 [Validation(Required=false)]
                 public List<string> MiniDoc { get; set; }
+
+                [NameInMap("Outlines")]
+                [Validation(Required=false)]
+                public List<WritingOutline> Outlines { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -197,6 +205,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public string SearchQuery { get; set; }
 
+                [NameInMap("SearchResult")]
+                [Validation(Required=false)]
+                public OutlineSearchResult SearchResult { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>文本生成结果</para>
@@ -204,6 +216,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [NameInMap("Text")]
                 [Validation(Required=false)]
                 public string Text { get; set; }
+
+                [NameInMap("Title")]
+                [Validation(Required=false)]
+                public string Title { get; set; }
 
             }
 

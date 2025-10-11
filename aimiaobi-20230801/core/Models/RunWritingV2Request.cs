@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        [NameInMap("OutlineList")]
+        [Validation(Required=false)]
+        public List<WritingOutline> OutlineList { get; set; }
+
         [NameInMap("Outlines")]
         [Validation(Required=false)]
         public List<RunWritingV2RequestOutlines> Outlines { get; set; }
@@ -178,6 +182,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [NameInMap("SessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
+
+        [NameInMap("SourceTraceMethod")]
+        [Validation(Required=false)]
+        public string SourceTraceMethod { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

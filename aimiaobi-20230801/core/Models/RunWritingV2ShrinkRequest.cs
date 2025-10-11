@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string MiniDocsShrink { get; set; }
 
+        [NameInMap("OutlineList")]
+        [Validation(Required=false)]
+        public string OutlineListShrink { get; set; }
+
         [NameInMap("Outlines")]
         [Validation(Required=false)]
         public string OutlinesShrink { get; set; }
@@ -76,6 +80,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [NameInMap("SessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
+
+        [NameInMap("SourceTraceMethod")]
+        [Validation(Required=false)]
+        public string SourceTraceMethod { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

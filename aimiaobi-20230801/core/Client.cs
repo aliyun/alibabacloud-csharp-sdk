@@ -23689,6 +23689,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 request.MiniDocsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MiniDocs, "MiniDocs", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutlineList))
+            {
+                request.OutlineListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutlineList, "OutlineList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Outlines))
             {
                 request.OutlinesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Outlines, "Outlines", "json");
@@ -23734,6 +23738,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["MiniDocs"] = request.MiniDocsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutlineListShrink))
+            {
+                body["OutlineList"] = request.OutlineListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutlinesShrink))
             {
                 body["Outlines"] = request.OutlinesShrink;
@@ -23753,6 +23761,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTraceMethod))
+            {
+                body["SourceTraceMethod"] = request.SourceTraceMethod;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Step))
             {
@@ -23837,6 +23849,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 request.MiniDocsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MiniDocs, "MiniDocs", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutlineList))
+            {
+                request.OutlineListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutlineList, "OutlineList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Outlines))
             {
                 request.OutlinesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Outlines, "Outlines", "json");
@@ -23882,6 +23898,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["MiniDocs"] = request.MiniDocsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutlineListShrink))
+            {
+                body["OutlineList"] = request.OutlineListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutlinesShrink))
             {
                 body["Outlines"] = request.OutlinesShrink;
@@ -23901,6 +23921,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTraceMethod))
+            {
+                body["SourceTraceMethod"] = request.SourceTraceMethod;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Step))
             {
