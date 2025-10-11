@@ -1,3 +1,7 @@
+2025-10-11 Version: 3.12.0
+- Support API DeepfakeDetectIntlStream.
+
+
 2025-09-29 Version: 3.11.0
 - Support API CredentialGetResultIntl.
 - Support API CredentialSubmitIntl.
