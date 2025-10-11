@@ -71,6 +71,18 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public string AdvancedRetentionType { get; set; }
 
+            [NameInMap("ArchiveErrorMessage")]
+            [Validation(Required=false)]
+            public string ArchiveErrorMessage { get; set; }
+
+            [NameInMap("ArchiveStatus")]
+            [Validation(Required=false)]
+            public string ArchiveStatus { get; set; }
+
+            [NameInMap("ArchiveTriggerTime")]
+            [Validation(Required=false)]
+            public long? ArchiveTriggerTime { get; set; }
+
             /// <summary>
             /// <para>The backup type. Valid value: <b>COMPLETE</b>, which indicates full backup.</para>
             /// 
