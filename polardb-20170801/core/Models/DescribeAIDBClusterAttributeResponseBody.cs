@@ -305,6 +305,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string PayType { get; set; }
 
+        [NameInMap("PublicIp")]
+        [Validation(Required=false)]
+        public string PublicIp { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

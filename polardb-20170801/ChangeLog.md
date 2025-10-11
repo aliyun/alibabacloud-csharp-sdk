@@ -1,3 +1,18 @@
+2025-10-11 Version: 5.13.0
+- Support API AttachApplicationPolarFS.
+- Support API CreateApplication.
+- Support API CreateApplicationEndpointAddress.
+- Support API DeleteAIDBCluster.
+- Support API DeleteApplicationEndpointAddress.
+- Support API DescribeApplicationAttribute.
+- Support API DescribeApplicationParameters.
+- Support API DescribeApplications.
+- Support API ModifyApplicationDescription.
+- Support API ModifyApplicationParameter.
+- Support API ModifyApplicationWhitelist.
+- Update API DescribeAIDBClusterAttribute: add response parameters Body.PublicIp.
+
+
 2025-09-23 Version: 5.12.0
 - Support API AbortDBClusterMigration.
 - Support API AddEncryptionDBRolePrivilege.
