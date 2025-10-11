@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class GetAICoachScriptResponseBody : TeaModel {
+        [NameInMap("agentId")]
+        [Validation(Required=false)]
+        public string AgentId { get; set; }
+
         [NameInMap("appendQuestionFlag")]
         [Validation(Required=false)]
         public bool? AppendQuestionFlag { get; set; }
@@ -606,6 +610,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [NameInMap("type")]
         [Validation(Required=false)]
         public int? Type { get; set; }
+
+        [NameInMap("voiceId")]
+        [Validation(Required=false)]
+        public string VoiceId { get; set; }
+
+        [NameInMap("voiceLanguage")]
+        [Validation(Required=false)]
+        public string VoiceLanguage { get; set; }
 
         [NameInMap("weights")]
         [Validation(Required=false)]
