@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         [Validation(Required=false)]
         public GetDeliveryChannelResponseBodyResourceChangeDelivery ResourceChangeDelivery { get; set; }
         public class GetDeliveryChannelResponseBodyResourceChangeDelivery : TeaModel {
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public string Enabled { get; set; }
+
             /// <summary>
             /// <para>The Simple Log Service configurations.</para>
             /// </summary>
@@ -136,6 +140,10 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             [NameInMap("DeliveryTime")]
             [Validation(Required=false)]
             public string DeliveryTime { get; set; }
+
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public string Enabled { get; set; }
 
             /// <summary>
             /// <para>The Simple Log Service configurations.</para>
