@@ -21,9 +21,49 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public List<string> ApiKeys { get; set; }
 
+        [NameInMap("bedrockServiceConfig")]
+        [Validation(Required=false)]
+        public AiServiceConfigBedrockServiceConfig BedrockServiceConfig { get; set; }
+        public class AiServiceConfigBedrockServiceConfig : TeaModel {
+            [NameInMap("awsAccessKey")]
+            [Validation(Required=false)]
+            public string AwsAccessKey { get; set; }
+
+            [NameInMap("awsRegion")]
+            [Validation(Required=false)]
+            public string AwsRegion { get; set; }
+
+            [NameInMap("awsSecretKey")]
+            [Validation(Required=false)]
+            public string AwsSecretKey { get; set; }
+
+        }
+
         [NameInMap("enableHealthCheck")]
         [Validation(Required=false)]
         public bool? EnableHealthCheck { get; set; }
+
+        [NameInMap("paiEASServiceConfig")]
+        [Validation(Required=false)]
+        public AiServiceConfigPaiEASServiceConfig PaiEASServiceConfig { get; set; }
+        public class AiServiceConfigPaiEASServiceConfig : TeaModel {
+            [NameInMap("endpointType")]
+            [Validation(Required=false)]
+            public string EndpointType { get; set; }
+
+            [NameInMap("serviceId")]
+            [Validation(Required=false)]
+            public string ServiceId { get; set; }
+
+            [NameInMap("serviceName")]
+            [Validation(Required=false)]
+            public string ServiceName { get; set; }
+
+            [NameInMap("workspaceId")]
+            [Validation(Required=false)]
+            public string WorkspaceId { get; set; }
+
+        }
 
         [NameInMap("protocols")]
         [Validation(Required=false)]

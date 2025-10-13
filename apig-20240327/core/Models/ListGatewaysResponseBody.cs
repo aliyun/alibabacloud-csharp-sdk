@@ -81,6 +81,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? ExpireTimestamp { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>Serverless</para>
+                /// </summary>
+                [NameInMap("gatewayEdition")]
+                [Validation(Required=false)]
+                public string GatewayEdition { get; set; }
+
+                /// <summary>
                 /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>

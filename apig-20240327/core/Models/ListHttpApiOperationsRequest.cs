@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string ConsumerAuthorizationRuleId { get; set; }
 
+        [NameInMap("enableAuth")]
+        [Validation(Required=false)]
+        public bool? EnableAuth { get; set; }
+
         [NameInMap("forDeploy")]
         [Validation(Required=false)]
         public bool? ForDeploy { get; set; }

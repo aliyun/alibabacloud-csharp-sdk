@@ -87,9 +87,19 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public HttpApiDeployConfigPolicyConfigsAiFallbackConfig AiFallbackConfig { get; set; }
             public class HttpApiDeployConfigPolicyConfigsAiFallbackConfig : TeaModel {
-                [NameInMap("serviceIds")]
+                [NameInMap("serviceConfigs")]
                 [Validation(Required=false)]
-                public List<string> ServiceIds { get; set; }
+                public List<HttpApiDeployConfigPolicyConfigsAiFallbackConfigServiceConfigs> ServiceConfigs { get; set; }
+                public class HttpApiDeployConfigPolicyConfigsAiFallbackConfigServiceConfigs : TeaModel {
+                    [NameInMap("serviceId")]
+                    [Validation(Required=false)]
+                    public string ServiceId { get; set; }
+
+                    [NameInMap("targetModelName")]
+                    [Validation(Required=false)]
+                    public string TargetModelName { get; set; }
+
+                }
 
             }
 

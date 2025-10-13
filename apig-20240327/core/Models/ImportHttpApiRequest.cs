@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// </summary>
         [NameInMap("deployConfigs")]
         [Validation(Required=false)]
-        public HttpApiDeployConfig DeployConfigs { get; set; }
+        public List<HttpApiDeployConfig> DeployConfigs { get; set; }
 
         /// <summary>
         /// <para>The API description, which cannot exceed 255 bytes in length. If you do not specify a description, a description is extracted from the definition file.</para>
@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("dryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
+
+        [NameInMap("gatewayId")]
+        [Validation(Required=false)]
+        public string GatewayId { get; set; }
 
         /// <summary>
         /// <para>The MCP route ID.</para>

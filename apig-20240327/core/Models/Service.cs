@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         [NameInMap("labelDetails")]
         [Validation(Required=false)]
-        public LabelDetail LabelDetails { get; set; }
+        public List<LabelDetail> LabelDetails { get; set; }
 
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
+
+        [NameInMap("outlierEndpoints")]
+        [Validation(Required=false)]
+        public List<string> OutlierEndpoints { get; set; }
 
         [NameInMap("ports")]
         [Validation(Required=false)]

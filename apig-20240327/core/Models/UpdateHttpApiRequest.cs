@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public bool? EnableAuth { get; set; }
 
+        [NameInMap("firstByteTimeout")]
+        [Validation(Required=false)]
+        public int? FirstByteTimeout { get; set; }
+
         /// <summary>
         /// <para>The HTTP Ingress API configurations.</para>
         /// </summary>

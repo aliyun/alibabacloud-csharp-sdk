@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>Professional</para>
+        /// </summary>
+        [NameInMap("gatewayEdition")]
+        [Validation(Required=false)]
+        public string GatewayEdition { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>API</para>
         /// </summary>
         [NameInMap("gatewayType")]

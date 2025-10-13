@@ -113,6 +113,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? ExpireTimestamp { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>Serverless</para>
+            /// </summary>
+            [NameInMap("gatewayEdition")]
+            [Validation(Required=false)]
+            public string GatewayEdition { get; set; }
+
+            /// <summary>
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
@@ -278,6 +286,28 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
+
+            }
+
+            [NameInMap("maintenancePeriod")]
+            [Validation(Required=false)]
+            public GetGatewayResponseBodyDataMaintenancePeriod MaintenancePeriod { get; set; }
+            public class GetGatewayResponseBodyDataMaintenancePeriod : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>06:00</para>
+                /// </summary>
+                [NameInMap("endTime")]
+                [Validation(Required=false)]
+                public string EndTime { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>02:00</para>
+                /// </summary>
+                [NameInMap("startTime")]
+                [Validation(Required=false)]
+                public string StartTime { get; set; }
 
             }
 
