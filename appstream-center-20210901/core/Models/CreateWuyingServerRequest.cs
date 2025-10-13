@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        [NameInMap("Bandwidth")]
+        [Validation(Required=false)]
+        public int? Bandwidth { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -94,6 +98,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
+
+        [NameInMap("NetworkStrategyType")]
+        [Validation(Required=false)]
+        public string NetworkStrategyType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

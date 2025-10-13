@@ -964,6 +964,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["AutoRenew"] = request.AutoRenew;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bandwidth))
+            {
+                body["Bandwidth"] = request.Bandwidth;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 body["BizRegionId"] = request.BizRegionId;
@@ -984,6 +988,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkStrategyType))
+            {
+                body["NetworkStrategyType"] = request.NetworkStrategyType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
             {
@@ -1088,6 +1096,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["AutoRenew"] = request.AutoRenew;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bandwidth))
+            {
+                body["Bandwidth"] = request.Bandwidth;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 body["BizRegionId"] = request.BizRegionId;
@@ -1108,6 +1120,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkStrategyType))
+            {
+                body["NetworkStrategyType"] = request.NetworkStrategyType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
             {
@@ -1647,6 +1663,134 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteWuyingServerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询无影工作站EIP信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWuyingServerEipInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWuyingServerEipInfoResponse
+        /// </returns>
+        public DescribeWuyingServerEipInfoResponse DescribeWuyingServerEipInfoWithOptions(DescribeWuyingServerEipInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Isp))
+            {
+                body["Isp"] = request.Isp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerId))
+            {
+                body["WuyingServerId"] = request.WuyingServerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWuyingServerEipInfo",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWuyingServerEipInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询无影工作站EIP信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWuyingServerEipInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWuyingServerEipInfoResponse
+        /// </returns>
+        public async Task<DescribeWuyingServerEipInfoResponse> DescribeWuyingServerEipInfoWithOptionsAsync(DescribeWuyingServerEipInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Isp))
+            {
+                body["Isp"] = request.Isp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerId))
+            {
+                body["WuyingServerId"] = request.WuyingServerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeWuyingServerEipInfo",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeWuyingServerEipInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询无影工作站EIP信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWuyingServerEipInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWuyingServerEipInfoResponse
+        /// </returns>
+        public DescribeWuyingServerEipInfoResponse DescribeWuyingServerEipInfo(DescribeWuyingServerEipInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeWuyingServerEipInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询无影工作站EIP信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeWuyingServerEipInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeWuyingServerEipInfoResponse
+        /// </returns>
+        public async Task<DescribeWuyingServerEipInfoResponse> DescribeWuyingServerEipInfoAsync(DescribeWuyingServerEipInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeWuyingServerEipInfoWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
