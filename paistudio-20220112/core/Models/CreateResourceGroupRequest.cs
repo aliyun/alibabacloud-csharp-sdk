@@ -67,6 +67,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public UserVpc UserVpc { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.0</para>
+        /// </summary>
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
+
     }
 
 }

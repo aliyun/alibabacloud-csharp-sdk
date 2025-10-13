@@ -103,6 +103,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1.0</para>
+        /// </summary>
+        [NameInMap("Versions")]
+        [Validation(Required=false)]
+        public string Versions { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>21345,38727</para>
         /// </summary>
         [NameInMap("WorkspaceIds")]

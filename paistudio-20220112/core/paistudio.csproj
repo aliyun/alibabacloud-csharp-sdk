@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.PaiStudio20220112</AssemblyName>
-    <Version>2.1.8</Version>
+    <Version>2.1.9</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud PaiStudio (20220112) SDK Library for .NET</Description>

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string AvailabilityZone { get; set; }
 
+        [NameInMap("CliqueID")]
+        [Validation(Required=false)]
+        public string CliqueID { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>quotamtl37ge7gkvdz</para>
@@ -44,6 +48,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("GPUType")]
         [Validation(Required=false)]
         public string GPUType { get; set; }
+
+        [NameInMap("HyperNode")]
+        [Validation(Required=false)]
+        public string HyperNode { get; set; }
 
         [NameInMap("HyperZone")]
         [Validation(Required=false)]
@@ -84,6 +92,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>260590501560397</para>
+        /// </summary>
+        [NameInMap("OrderInstanceIds")]
+        [Validation(Required=false)]
+        public string OrderInstanceIds { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

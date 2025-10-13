@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
 
+        [NameInMap("HyperZones")]
+        [Validation(Required=false)]
+        public List<string> HyperZones { get; set; }
+
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
@@ -154,6 +158,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("SubQuotas")]
         [Validation(Required=false)]
         public List<QuotaIdName> SubQuotas { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.0</para>
+        /// </summary>
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
 
         [NameInMap("Workspaces")]
         [Validation(Required=false)]

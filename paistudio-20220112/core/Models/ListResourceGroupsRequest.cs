@@ -89,6 +89,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.0</para>
+        /// </summary>
+        [NameInMap("Versions")]
+        [Validation(Required=false)]
+        public string Versions { get; set; }
+
     }
 
 }
