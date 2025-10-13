@@ -43,6 +43,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public List<AddonMetaEnvironments> Environments { get; set; }
         public class AddonMetaEnvironments : TeaModel {
+            [NameInMap("commonSchemaRefs")]
+            [Validation(Required=false)]
+            public List<AddonMetaEnvironmentsCommonSchemaRefs> CommonSchemaRefs { get; set; }
+            public class AddonMetaEnvironmentsCommonSchemaRefs : TeaModel {
+                [NameInMap("group")]
+                [Validation(Required=false)]
+                public string Group { get; set; }
+
+                [NameInMap("version")]
+                [Validation(Required=false)]
+                public string Version { get; set; }
+
+            }
+
             [NameInMap("dependencies")]
             [Validation(Required=false)]
             public AddonMetaEnvironmentsDependencies Dependencies { get; set; }

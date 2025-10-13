@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
+            [NameInMap("disablePolicyShare")]
+            [Validation(Required=false)]
+            public bool? DisablePolicyShare { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>eg-b79f65d11fb94e779867cf937c3a3002</para>
