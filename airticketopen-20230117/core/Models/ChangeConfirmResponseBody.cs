@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>1756797933000</para>
+            /// </summary>
+            [NameInMap("pay_time")]
+            [Validation(Required=false)]
+            public long? PayTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>hkduendkd-2023-dj0</para>
             /// </summary>
             [NameInMap("transaction_no")]

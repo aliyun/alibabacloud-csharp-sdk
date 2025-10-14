@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-02-02 11:20:00</para>
+        /// <para>1677229005000</para>
         /// </summary>
         [NameInMap("book_time_end")]
         [Validation(Required=false)]
@@ -25,17 +25,17 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-02-01 11:20:00</para>
+        /// <para>1677227005000</para>
         /// </summary>
         [NameInMap("book_time_start")]
         [Validation(Required=false)]
         public long? BookTimeStart { get; set; }
 
         /// <summary>
-        /// <para>pagination query parameters, from which page to start querying</para>
+        /// <para>pagination query parameters, from which page to start querying,querying starts with 0</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("page_index")]
         [Validation(Required=false)]

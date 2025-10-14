@@ -443,11 +443,16 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
                 }
 
+                /// <summary>
+                /// <para>supply source type</para>
+                /// </summary>
                 [NameInMap("solution_attribute")]
                 [Validation(Required=false)]
                 public SearchResponseBodyDataSolutionListSolutionAttribute SolutionAttribute { get; set; }
                 public class SearchResponseBodyDataSolutionListSolutionAttribute : TeaModel {
                     /// <summary>
+                    /// <para>supply source: 1;2;3</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>

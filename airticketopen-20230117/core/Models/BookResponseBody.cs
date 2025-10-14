@@ -33,6 +33,50 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             [Validation(Required=false)]
             public List<BookResponseBodyDataOrderList> OrderList { get; set; }
             public class BookResponseBodyDataOrderList : TeaModel {
+                [NameInMap("order_attribute")]
+                [Validation(Required=false)]
+                public BookResponseBodyDataOrderListOrderAttribute OrderAttribute { get; set; }
+                public class BookResponseBodyDataOrderListOrderAttribute : TeaModel {
+                    [NameInMap("aba_pay_lock_rate_info")]
+                    [Validation(Required=false)]
+                    public BookResponseBodyDataOrderListOrderAttributeAbaPayLockRateInfo AbaPayLockRateInfo { get; set; }
+                    public class BookResponseBodyDataOrderListOrderAttributeAbaPayLockRateInfo : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>14.2854</para>
+                        /// </summary>
+                        [NameInMap("pay_intended_amount")]
+                        [Validation(Required=false)]
+                        public string PayIntendedAmount { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CNY</para>
+                        /// </summary>
+                        [NameInMap("pay_intended_currency_code")]
+                        [Validation(Required=false)]
+                        public string PayIntendedCurrencyCode { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>USD</para>
+                        /// </summary>
+                        [NameInMap("quotation_currency_code")]
+                        [Validation(Required=false)]
+                        public string QuotationCurrencyCode { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>7.1427</para>
+                        /// </summary>
+                        [NameInMap("to_pay_currency_rate")]
+                        [Validation(Required=false)]
+                        public string ToPayCurrencyRate { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>order number</para>
                 /// 
@@ -74,6 +118,50 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             [Validation(Required=false)]
             public List<BookResponseBodyErrorDataOrderList> OrderList { get; set; }
             public class BookResponseBodyErrorDataOrderList : TeaModel {
+                [NameInMap("order_attribute")]
+                [Validation(Required=false)]
+                public BookResponseBodyErrorDataOrderListOrderAttribute OrderAttribute { get; set; }
+                public class BookResponseBodyErrorDataOrderListOrderAttribute : TeaModel {
+                    [NameInMap("aba_pay_lock_rate_info")]
+                    [Validation(Required=false)]
+                    public BookResponseBodyErrorDataOrderListOrderAttributeAbaPayLockRateInfo AbaPayLockRateInfo { get; set; }
+                    public class BookResponseBodyErrorDataOrderListOrderAttributeAbaPayLockRateInfo : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>14.2854</para>
+                        /// </summary>
+                        [NameInMap("pay_intended_amount")]
+                        [Validation(Required=false)]
+                        public string PayIntendedAmount { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CNY</para>
+                        /// </summary>
+                        [NameInMap("pay_intended_currency_code")]
+                        [Validation(Required=false)]
+                        public string PayIntendedCurrencyCode { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>USD</para>
+                        /// </summary>
+                        [NameInMap("quotation_currency_code")]
+                        [Validation(Required=false)]
+                        public string QuotationCurrencyCode { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>7.1427</para>
+                        /// </summary>
+                        [NameInMap("to_pay_currency_rate")]
+                        [Validation(Required=false)]
+                        public string ToPayCurrencyRate { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>order number</para>
                 /// 
