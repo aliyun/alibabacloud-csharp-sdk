@@ -506,6 +506,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
         }
 
+        [NameInMap("StartInstance")]
+        [Validation(Required=false)]
+        public bool? StartInstance { get; set; }
+
         [NameInMap("UserCommand")]
         [Validation(Required=false)]
         public UpdateInstanceRequestUserCommand UserCommand { get; set; }
