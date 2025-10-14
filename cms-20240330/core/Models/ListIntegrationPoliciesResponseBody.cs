@@ -283,6 +283,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public class ListIntegrationPoliciesResponseBodyPoliciesManagedInfo : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>eni-12345678</para>
+                /// </summary>
+                [NameInMap("eniId")]
+                [Validation(Required=false)]
+                public string EniId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>sg-xxxxx</para>
                 /// </summary>
                 [NameInMap("securityGroupId")]
