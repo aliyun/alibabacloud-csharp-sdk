@@ -3701,6 +3701,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await CreateCloudGtmAddressPoolWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建gtm实例配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCloudGtmInstanceConfigRequest
         /// </param>
@@ -3718,6 +3723,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -3774,6 +3783,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<CreateCloudGtmInstanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建gtm实例配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCloudGtmInstanceConfigRequest
         /// </param>
@@ -3791,6 +3805,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -3847,6 +3865,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<CreateCloudGtmInstanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建gtm实例配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCloudGtmInstanceConfigRequest
         /// </param>
@@ -3860,6 +3883,11 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return CreateCloudGtmInstanceConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建gtm实例配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateCloudGtmInstanceConfigRequest
         /// </param>
@@ -21378,6 +21406,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -21439,6 +21471,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -24822,6 +24858,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -24883,6 +24923,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
             {
                 query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {

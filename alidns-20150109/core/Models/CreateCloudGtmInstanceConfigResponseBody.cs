@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? ConfigId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>gtm-cn-xxxxx</para>
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>

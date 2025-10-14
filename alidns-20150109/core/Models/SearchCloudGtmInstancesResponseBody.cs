@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public List<SearchCloudGtmInstancesResponseBodyInstancesInstance> Instance { get; set; }
             public class SearchCloudGtmInstancesResponseBodyInstancesInstance : TeaModel {
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>postpay / prepay</para>
+                /// </summary>
+                [NameInMap("ChargeType")]
+                [Validation(Required=false)]
+                public string ChargeType { get; set; }
+
+                /// <summary>
                 /// <para>The commodity code. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>dns_gtm_public_cn: commodity code on the China site (aliyun.com)</description></item>
