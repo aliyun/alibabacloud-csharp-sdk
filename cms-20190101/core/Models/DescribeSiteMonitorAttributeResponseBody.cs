@@ -1122,6 +1122,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public int? RetryDelay { get; set; }
 
+                [NameInMap("safe_link")]
+                [Validation(Required=false)]
+                public int? SafeLink { get; set; }
+
                 /// <summary>
                 /// <para>Indicates whether page screenshot is enabled.</para>
                 /// 
