@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<DescribeAICImagesResponseBodyImages> Images { get; set; }
         public class DescribeAICImagesResponseBodyImages : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("AndroidVersion")]
             [Validation(Required=false)]
             public string AndroidVersion { get; set; }

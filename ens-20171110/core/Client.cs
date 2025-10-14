@@ -8155,7 +8155,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建弹性网卡</para>
+        /// <para>Create an Elastic Network Interface (ENI).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8215,7 +8215,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建弹性网卡</para>
+        /// <para>Create an Elastic Network Interface (ENI).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8275,7 +8275,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建弹性网卡</para>
+        /// <para>Create an Elastic Network Interface (ENI).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8293,7 +8293,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建弹性网卡</para>
+        /// <para>Create an Elastic Network Interface (ENI).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9991,7 +9991,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DeleteEip删除后付费的弹性公网EIP实例。</para>
+        /// <para>Deletes a pay-as-you-go elastic IP address (EIP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10033,7 +10033,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DeleteEip删除后付费的弹性公网EIP实例。</para>
+        /// <para>Deletes a pay-as-you-go elastic IP address (EIP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10075,7 +10075,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DeleteEip删除后付费的弹性公网EIP实例。</para>
+        /// <para>Deletes a pay-as-you-go elastic IP address (EIP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10093,7 +10093,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DeleteEip删除后付费的弹性公网EIP实例。</para>
+        /// <para>Deletes a pay-as-you-go elastic IP address (EIP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16598,6 +16598,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["EnsRegionIds"] = request.EnsRegionIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IcmpReplyEnabled))
+            {
+                query["IcmpReplyEnabled"] = request.IcmpReplyEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -16675,6 +16679,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionIds))
             {
                 query["EnsRegionIds"] = request.EnsRegionIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IcmpReplyEnabled))
+            {
+                query["IcmpReplyEnabled"] = request.IcmpReplyEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -19883,7 +19891,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件列表</para>
+        /// <para>Queries instance system events.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19963,7 +19971,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件列表</para>
+        /// <para>Queries instance system events.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -20043,7 +20051,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件列表</para>
+        /// <para>Queries instance system events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20061,7 +20069,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件列表</para>
+        /// <para>Queries instance system events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23587,7 +23595,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>输出指定用户ID下可用资源对应的nas信息</para>
+        /// <para>Queries the specifications of resources that you can purchase when you create a NAS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23620,7 +23628,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>输出指定用户ID下可用资源对应的nas信息</para>
+        /// <para>Queries the specifications of resources that you can purchase when you create a NAS.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23653,7 +23661,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>输出指定用户ID下可用资源对应的nas信息</para>
+        /// <para>Queries the specifications of resources that you can purchase when you create a NAS.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -23667,7 +23675,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>输出指定用户ID下可用资源对应的nas信息</para>
+        /// <para>Queries the specifications of resources that you can purchase when you create a NAS.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -38197,7 +38205,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可移除所有版本的sdg，恢复为本地盘挂载</para>
+        /// <para>Removes all versions of SDG and restores the mount to the local disk.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38253,7 +38261,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可移除所有版本的sdg，恢复为本地盘挂载</para>
+        /// <para>Removes all versions of SDG and restores the mount to the local disk.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38309,7 +38317,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可移除所有版本的sdg，恢复为本地盘挂载</para>
+        /// <para>Removes all versions of SDG and restores the mount to the local disk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38327,7 +38335,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可移除所有版本的sdg，恢复为本地盘挂载</para>
+        /// <para>Removes all versions of SDG and restores the mount to the local disk.</para>
         /// </summary>
         /// 
         /// <param name="request">

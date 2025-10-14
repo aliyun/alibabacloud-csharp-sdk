@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateNetworkInterfaceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of ENI IDs.</para>
+        /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
         public List<string> NetworkInterfaceIds { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F3B261DD-3858-4D3C-877D-303ADF374600</para>
         /// </summary>

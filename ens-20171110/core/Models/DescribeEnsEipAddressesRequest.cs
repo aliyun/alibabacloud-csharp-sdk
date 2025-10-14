@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public List<string> EnsRegionIds { get; set; }
 
+        [NameInMap("IcmpReplyEnabled")]
+        [Validation(Required=false)]
+        public bool? IcmpReplyEnabled { get; set; }
+
         /// <summary>
         /// <para>The page number. Default value: 1.</para>
         /// 

@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
 
+                [NameInMap("IcmpReplyEnabled")]
+                [Validation(Required=false)]
+                public bool? IcmpReplyEnabled { get; set; }
+
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }

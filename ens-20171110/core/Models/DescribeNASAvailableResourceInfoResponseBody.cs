@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeNASAvailableResourceInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned service code. A value of 0 indicates that the operation was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>you are not authorized to this workspace, or workspace not exists.</para>
         /// </summary>
@@ -25,15 +29,23 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The information of available NAS resources.</para>
+        /// </summary>
         [NameInMap("NasAvailableResourceInfo")]
         [Validation(Required=false)]
         public List<DescribeNASAvailableResourceInfoResponseBodyNasAvailableResourceInfo> NasAvailableResourceInfo { get; set; }
         public class DescribeNASAvailableResourceInfoResponseBodyNasAvailableResourceInfo : TeaModel {
+            /// <summary>
+            /// <para>The product supported by the edge node.</para>
+            /// </summary>
             [NameInMap("Ability")]
             [Validation(Required=false)]
             public List<string> Ability { get; set; }
 
             /// <summary>
+            /// <para>The region to which the ENS node belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SouthWestChina</para>
             /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Area { get; set; }
 
             /// <summary>
+            /// <para>The English name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-chenzhou-telecom_unicom_cmcc</para>
             /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string EnName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the ENS node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-chenzhou-telecom_unicom_cmcc</para>
             /// </summary>
@@ -57,11 +73,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string EnsRegionId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the ENS node.</para>
+            /// </summary>
             [NameInMap("EnsRegionName")]
             [Validation(Required=false)]
             public string EnsRegionName { get; set; }
 
             /// <summary>
+            /// <para>the number of available NAS resources.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -70,6 +91,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? NasAvailableAmount { get; set; }
 
             /// <summary>
+            /// <para>The types of available NAS resources.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>capacity</para>
             /// </summary>
@@ -77,6 +100,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string NasAvailableStorgeType { get; set; }
 
+            /// <summary>
+            /// <para>The province to which the ENS node belongs.</para>
+            /// </summary>
             [NameInMap("Province")]
             [Validation(Required=false)]
             public string Province { get; set; }
@@ -84,6 +110,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAE90880-4970-4D81-A534-A6C0F3631F74</para>
         /// </summary>

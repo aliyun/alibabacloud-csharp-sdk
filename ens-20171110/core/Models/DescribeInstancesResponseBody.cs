@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned instance information. It is an array that consists of InstanceAttributesType data.</para>
+        /// <para>The information about the instance is returned in an array of InstanceAttributesType.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]

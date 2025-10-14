@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RemoveSDGsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the instances.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIdsShrink { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of SDG.</para>
+        /// </summary>
         [NameInMap("SdgIds")]
         [Validation(Required=false)]
         public string SdgIdsShrink { get; set; }

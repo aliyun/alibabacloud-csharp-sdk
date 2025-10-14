@@ -9,15 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeHistoryEventsShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The levels of the event-triggered alerts.</para>
+        /// </summary>
         [NameInMap("EventLevels")]
         [Validation(Required=false)]
         public string EventLevelsShrink { get; set; }
 
+        /// <summary>
+        /// <para>Event status list.</para>
+        /// </summary>
         [NameInMap("EventStatus")]
         [Validation(Required=false)]
         public string EventStatusShrink { get; set; }
 
         /// <summary>
+        /// <para>The list of event types.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EventTypes")]
@@ -25,6 +32,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string EventTypesShrink { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -33,6 +42,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

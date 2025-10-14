@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateNetworkInterfaceRequest : TeaModel {
         /// <summary>
+        /// <para>Description of the ENI.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>ENI name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>name</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Security group ID.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SecurityGroupIds")]
@@ -33,6 +38,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<string> SecurityGroupIds { get; set; }
 
         /// <summary>
+        /// <para>vSwitch ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-5****</para>
         /// </summary>
