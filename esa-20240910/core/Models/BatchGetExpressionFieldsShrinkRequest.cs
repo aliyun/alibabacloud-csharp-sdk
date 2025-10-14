@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string ExpressionsShrink { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        [NameInMap("Kind")]
+        [Validation(Required=false)]
+        public string Kind { get; set; }
+
         /// <summary>
         /// <para>WAF Phase</para>
         /// 
@@ -28,6 +36,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("Phase")]
         [Validation(Required=false)]
         public string Phase { get; set; }
+
+        [NameInMap("PlanNameEn")]
+        [Validation(Required=false)]
+        public string PlanNameEn { get; set; }
 
         /// <summary>
         /// <para>Site ID</para>

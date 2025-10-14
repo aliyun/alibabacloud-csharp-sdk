@@ -1461,6 +1461,14 @@ namespace AlibabaCloud.SDK.ESA20240910
                 request.ExpressionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Expressions, "Expressions", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanNameEn))
+            {
+                query["PlanNameEn"] = request.PlanNameEn;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
             {
                 query["SiteId"] = request.SiteId;
@@ -1469,6 +1477,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpressionsShrink))
             {
                 body["Expressions"] = request.ExpressionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kind))
+            {
+                body["Kind"] = request.Kind;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phase))
             {
@@ -1519,6 +1531,14 @@ namespace AlibabaCloud.SDK.ESA20240910
                 request.ExpressionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Expressions, "Expressions", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanNameEn))
+            {
+                query["PlanNameEn"] = request.PlanNameEn;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
             {
                 query["SiteId"] = request.SiteId;
@@ -1527,6 +1547,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpressionsShrink))
             {
                 body["Expressions"] = request.ExpressionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kind))
+            {
+                body["Kind"] = request.Kind;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phase))
             {
@@ -4484,7 +4508,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增HTTP入站请求头规则</para>
+        /// <para>Adds the configuration of modifying HTTP request headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4556,7 +4580,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增HTTP入站请求头规则</para>
+        /// <para>Adds the configuration of modifying HTTP request headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4628,7 +4652,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增HTTP入站请求头规则</para>
+        /// <para>Adds the configuration of modifying HTTP request headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4646,7 +4670,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增HTTP入站请求头规则</para>
+        /// <para>Adds the configuration of modifying HTTP request headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4664,7 +4688,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增HTTP入站响应头规则</para>
+        /// <para>Adds the configuration of modifying HTTP response headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4736,7 +4760,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增HTTP入站响应头规则</para>
+        /// <para>Adds the configuration of modifying HTTP response headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4808,7 +4832,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增HTTP入站响应头规则</para>
+        /// <para>Adds the configuration of modifying HTTP response headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4826,7 +4850,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增HTTP入站响应头规则</para>
+        /// <para>Adds the configuration of modifying HTTP response headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8116,8 +8140,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布Routine某版本代码</para>
+        /// <para>Release the version of the function code in proportion to the specified environment.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>When you create a version for deployment, you can set the environment name <c>Env</c> parameter only to the test environment <c>staging</c> or the production environment <c>production</c>.</description></item>
+        /// <item><description><c>CodeVersions</c> parameter supports up to two versions of a phased release, and the sum of the proportions of these versions must be equal to 100%.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateRoutineCodeDeploymentRequest
@@ -8176,8 +8209,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布Routine某版本代码</para>
+        /// <para>Release the version of the function code in proportion to the specified environment.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>When you create a version for deployment, you can set the environment name <c>Env</c> parameter only to the test environment <c>staging</c> or the production environment <c>production</c>.</description></item>
+        /// <item><description><c>CodeVersions</c> parameter supports up to two versions of a phased release, and the sum of the proportions of these versions must be equal to 100%.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateRoutineCodeDeploymentRequest
@@ -8236,8 +8278,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布Routine某版本代码</para>
+        /// <para>Release the version of the function code in proportion to the specified environment.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>When you create a version for deployment, you can set the environment name <c>Env</c> parameter only to the test environment <c>staging</c> or the production environment <c>production</c>.</description></item>
+        /// <item><description><c>CodeVersions</c> parameter supports up to two versions of a phased release, and the sum of the proportions of these versions must be equal to 100%.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRoutineCodeDeploymentRequest
@@ -8254,8 +8305,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布Routine某版本代码</para>
+        /// <para>Release the version of the function code in proportion to the specified environment.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>When you create a version for deployment, you can set the environment name <c>Env</c> parameter only to the test environment <c>staging</c> or the production environment <c>production</c>.</description></item>
+        /// <item><description><c>CodeVersions</c> parameter supports up to two versions of a phased release, and the sum of the proportions of these versions must be equal to 100%.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRoutineCodeDeploymentRequest
@@ -12878,7 +12938,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除HTTP入站请求头规则</para>
+        /// <para>Deletes the configuration of modifying incoming HTTP request headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12924,7 +12984,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除HTTP入站请求头规则</para>
+        /// <para>Deletes the configuration of modifying incoming HTTP request headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12970,7 +13030,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除HTTP入站请求头规则</para>
+        /// <para>Deletes the configuration of modifying incoming HTTP request headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12988,7 +13048,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除HTTP入站请求头规则</para>
+        /// <para>Deletes the configuration of modifying incoming HTTP request headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13006,7 +13066,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除HTTP入站响应头规则</para>
+        /// <para>Deletes the configuration of modifying HTTP response headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13052,7 +13112,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除HTTP入站响应头规则</para>
+        /// <para>Deletes the configuration of modifying HTTP response headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13098,7 +13158,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除HTTP入站响应头规则</para>
+        /// <para>Deletes the configuration of modifying HTTP response headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13116,7 +13176,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除HTTP入站响应头规则</para>
+        /// <para>Deletes the configuration of modifying HTTP response headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19416,22 +19476,22 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取时序数据</para>
+        /// <para>Query traffic analysis time series data</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify StartTime and EndTime, the request returns the data collected within the specified time range.</para>
         /// <list type="bullet">
-        /// <item><description>The time interval at which data is returned varies according to the span of StartTime and EndTime.<list type="bullet">
-        /// <item><description>If Time span ≤ 3 hours, the data is returned at a 1-minute interval.</description></item>
-        /// <item><description>If 3 hours &lt; Time span ≤ 12 hours, the data is returned at a 5-minute interval.</description></item>
-        /// <item><description>If 12 hours &lt; Time span ≤ 24 hours, the data is returned at a 15-minute interval.</description></item>
-        /// <item><description>If 1 day &lt; Time span ≤ 10 days, the data is returned at an hourly interval.</description></item>
-        /// <item><description>If 10 days &lt; Time span ≤ 31 days, the data is returned at a daily interval.</description></item>
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, the API returns data for the past 24 hours; if you specify <c>StartTime</c> and <c>EndTime</c>, the API returns data for the specified time period.</description></item>
+        /// <item><description>The API returns different time granularities based on the span between <c>StartTime</c> and <c>EndTime</c>.<list type="bullet">
+        /// <item><description>For a span of 3 hours or less, it returns 1-minute granularity data.</description></item>
+        /// <item><description>For a span greater than 3 hours but no more than 12 hours, it returns 5-minute granularity data.</description></item>
+        /// <item><description>For a span greater than 12 hours but no more than 1 day, it returns 15-minute granularity data.</description></item>
+        /// <item><description>For a span greater than 1 day but no more than 10 days, it returns hourly granularity data.</description></item>
+        /// <item><description>For a span greater than 10 days but no more than 31 days, it returns daily granularity data.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data analysis may be sampled due to a large number of visits during the query period.</description></item>
+        /// <item><description>Due to the high number of accesses during the query period, the data analysis may be sampled.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19496,22 +19556,22 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取时序数据</para>
+        /// <para>Query traffic analysis time series data</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify StartTime and EndTime, the request returns the data collected within the specified time range.</para>
         /// <list type="bullet">
-        /// <item><description>The time interval at which data is returned varies according to the span of StartTime and EndTime.<list type="bullet">
-        /// <item><description>If Time span ≤ 3 hours, the data is returned at a 1-minute interval.</description></item>
-        /// <item><description>If 3 hours &lt; Time span ≤ 12 hours, the data is returned at a 5-minute interval.</description></item>
-        /// <item><description>If 12 hours &lt; Time span ≤ 24 hours, the data is returned at a 15-minute interval.</description></item>
-        /// <item><description>If 1 day &lt; Time span ≤ 10 days, the data is returned at an hourly interval.</description></item>
-        /// <item><description>If 10 days &lt; Time span ≤ 31 days, the data is returned at a daily interval.</description></item>
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, the API returns data for the past 24 hours; if you specify <c>StartTime</c> and <c>EndTime</c>, the API returns data for the specified time period.</description></item>
+        /// <item><description>The API returns different time granularities based on the span between <c>StartTime</c> and <c>EndTime</c>.<list type="bullet">
+        /// <item><description>For a span of 3 hours or less, it returns 1-minute granularity data.</description></item>
+        /// <item><description>For a span greater than 3 hours but no more than 12 hours, it returns 5-minute granularity data.</description></item>
+        /// <item><description>For a span greater than 12 hours but no more than 1 day, it returns 15-minute granularity data.</description></item>
+        /// <item><description>For a span greater than 1 day but no more than 10 days, it returns hourly granularity data.</description></item>
+        /// <item><description>For a span greater than 10 days but no more than 31 days, it returns daily granularity data.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data analysis may be sampled due to a large number of visits during the query period.</description></item>
+        /// <item><description>Due to the high number of accesses during the query period, the data analysis may be sampled.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19576,22 +19636,22 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取时序数据</para>
+        /// <para>Query traffic analysis time series data</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify StartTime and EndTime, the request returns the data collected within the specified time range.</para>
         /// <list type="bullet">
-        /// <item><description>The time interval at which data is returned varies according to the span of StartTime and EndTime.<list type="bullet">
-        /// <item><description>If Time span ≤ 3 hours, the data is returned at a 1-minute interval.</description></item>
-        /// <item><description>If 3 hours &lt; Time span ≤ 12 hours, the data is returned at a 5-minute interval.</description></item>
-        /// <item><description>If 12 hours &lt; Time span ≤ 24 hours, the data is returned at a 15-minute interval.</description></item>
-        /// <item><description>If 1 day &lt; Time span ≤ 10 days, the data is returned at an hourly interval.</description></item>
-        /// <item><description>If 10 days &lt; Time span ≤ 31 days, the data is returned at a daily interval.</description></item>
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, the API returns data for the past 24 hours; if you specify <c>StartTime</c> and <c>EndTime</c>, the API returns data for the specified time period.</description></item>
+        /// <item><description>The API returns different time granularities based on the span between <c>StartTime</c> and <c>EndTime</c>.<list type="bullet">
+        /// <item><description>For a span of 3 hours or less, it returns 1-minute granularity data.</description></item>
+        /// <item><description>For a span greater than 3 hours but no more than 12 hours, it returns 5-minute granularity data.</description></item>
+        /// <item><description>For a span greater than 12 hours but no more than 1 day, it returns 15-minute granularity data.</description></item>
+        /// <item><description>For a span greater than 1 day but no more than 10 days, it returns hourly granularity data.</description></item>
+        /// <item><description>For a span greater than 10 days but no more than 31 days, it returns daily granularity data.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data analysis may be sampled due to a large number of visits during the query period.</description></item>
+        /// <item><description>Due to the high number of accesses during the query period, the data analysis may be sampled.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19610,22 +19670,22 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取时序数据</para>
+        /// <para>Query traffic analysis time series data</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify StartTime and EndTime, the request returns the data collected within the specified time range.</para>
         /// <list type="bullet">
-        /// <item><description>The time interval at which data is returned varies according to the span of StartTime and EndTime.<list type="bullet">
-        /// <item><description>If Time span ≤ 3 hours, the data is returned at a 1-minute interval.</description></item>
-        /// <item><description>If 3 hours &lt; Time span ≤ 12 hours, the data is returned at a 5-minute interval.</description></item>
-        /// <item><description>If 12 hours &lt; Time span ≤ 24 hours, the data is returned at a 15-minute interval.</description></item>
-        /// <item><description>If 1 day &lt; Time span ≤ 10 days, the data is returned at an hourly interval.</description></item>
-        /// <item><description>If 10 days &lt; Time span ≤ 31 days, the data is returned at a daily interval.</description></item>
+        /// <item><description>If you do not specify <c>StartTime</c> and <c>EndTime</c>, the API returns data for the past 24 hours; if you specify <c>StartTime</c> and <c>EndTime</c>, the API returns data for the specified time period.</description></item>
+        /// <item><description>The API returns different time granularities based on the span between <c>StartTime</c> and <c>EndTime</c>.<list type="bullet">
+        /// <item><description>For a span of 3 hours or less, it returns 1-minute granularity data.</description></item>
+        /// <item><description>For a span greater than 3 hours but no more than 12 hours, it returns 5-minute granularity data.</description></item>
+        /// <item><description>For a span greater than 12 hours but no more than 1 day, it returns 15-minute granularity data.</description></item>
+        /// <item><description>For a span greater than 1 day but no more than 10 days, it returns hourly granularity data.</description></item>
+        /// <item><description>For a span greater than 10 days but no more than 31 days, it returns daily granularity data.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data analysis may be sampled due to a large number of visits during the query period.</description></item>
+        /// <item><description>Due to the high number of accesses during the query period, the data analysis may be sampled.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23126,7 +23186,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站请求头规则详情</para>
+        /// <para>Queries the configuration details of an HTTP request header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23164,7 +23224,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站请求头规则详情</para>
+        /// <para>Queries the configuration details of an HTTP request header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23202,7 +23262,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站请求头规则详情</para>
+        /// <para>Queries the configuration details of an HTTP request header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23220,7 +23280,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站请求头规则详情</para>
+        /// <para>Queries the configuration details of an HTTP request header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23238,7 +23298,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站响应头规则</para>
+        /// <para>Queries the configuration details of an incoming HTTP response header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23276,7 +23336,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站响应头规则</para>
+        /// <para>Queries the configuration details of an incoming HTTP response header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23314,7 +23374,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站响应头规则</para>
+        /// <para>Queries the configuration details of an incoming HTTP response header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23332,7 +23392,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站响应头规则</para>
+        /// <para>Queries the configuration details of an incoming HTTP response header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26288,7 +26348,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine某版本代码</para>
+        /// <para>Queries information about a code version of a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26334,7 +26394,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine某版本代码</para>
+        /// <para>Queries information about a code version of a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26380,7 +26440,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine某版本代码</para>
+        /// <para>Queries information about a code version of a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26398,7 +26458,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Routine某版本代码</para>
+        /// <para>Queries information about a code version of a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31360,7 +31420,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站请求头规则列表</para>
+        /// <para>Queries the configuration details of an incoming HTTP request header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31398,7 +31458,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站请求头规则列表</para>
+        /// <para>Queries the configuration details of an incoming HTTP request header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31436,7 +31496,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站请求头规则列表</para>
+        /// <para>Queries the configuration details of an incoming HTTP request header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31454,7 +31514,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站请求头规则列表</para>
+        /// <para>Queries the configuration details of an incoming HTTP request header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31472,7 +31532,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站响应头规则列表</para>
+        /// <para>Queries the configurations of an incoming HTTP response header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31510,7 +31570,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站响应头规则列表</para>
+        /// <para>Queries the configurations of an incoming HTTP response header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31548,7 +31608,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站响应头规则列表</para>
+        /// <para>Queries the configurations of an incoming HTTP response header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31566,7 +31626,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询HTTP入站响应头规则列表</para>
+        /// <para>Queries the configurations of an incoming HTTP response header modification rule for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36516,6 +36576,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListWafManagedRulesShrinkRequest request = new ListWafManagedRulesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ManagedRuleset))
+            {
+                request.ManagedRulesetShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ManagedRuleset, "ManagedRuleset", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryArgs))
             {
                 request.QueryArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryArgs, "QueryArgs", "json");
@@ -36529,9 +36593,17 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["Id"] = request.Id;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedRulesetShrink))
+            {
+                query["ManagedRuleset"] = request.ManagedRulesetShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -36592,6 +36664,10 @@ namespace AlibabaCloud.SDK.ESA20240910
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListWafManagedRulesShrinkRequest request = new ListWafManagedRulesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ManagedRuleset))
+            {
+                request.ManagedRulesetShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ManagedRuleset, "ManagedRuleset", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryArgs))
             {
                 request.QueryArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryArgs, "QueryArgs", "json");
@@ -36605,9 +36681,17 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["Id"] = request.Id;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedRulesetShrink))
+            {
+                query["ManagedRuleset"] = request.ManagedRulesetShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -37189,6 +37273,10 @@ namespace AlibabaCloud.SDK.ESA20240910
                 request.QueryArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryArgs, "QueryArgs", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phase))
             {
                 query["Phase"] = request.Phase;
@@ -37245,6 +37333,10 @@ namespace AlibabaCloud.SDK.ESA20240910
                 request.QueryArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryArgs, "QueryArgs", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phase))
             {
                 query["Phase"] = request.Phase;
@@ -37331,6 +37423,10 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phase))
             {
                 query["Phase"] = request.Phase;
@@ -37377,6 +37473,10 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phase))
             {
                 query["Phase"] = request.Phase;
@@ -41502,7 +41602,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存保持变配</para>
+        /// <para>Cache Reserve Specification Change</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41556,7 +41656,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存保持变配</para>
+        /// <para>Cache Reserve Specification Change</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41610,7 +41710,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存保持变配</para>
+        /// <para>Cache Reserve Specification Change</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41628,7 +41728,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>缓存保持变配</para>
+        /// <para>Cache Reserve Specification Change</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43146,7 +43246,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改HTTP入站请求头规则</para>
+        /// <para>Updates the HTTP incoming request header modification rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43218,7 +43318,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改HTTP入站请求头规则</para>
+        /// <para>Updates the HTTP incoming request header modification rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43290,7 +43390,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改HTTP入站请求头规则</para>
+        /// <para>Updates the HTTP incoming request header modification rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43308,7 +43408,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改HTTP入站请求头规则</para>
+        /// <para>Updates the HTTP incoming request header modification rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43326,7 +43426,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改HTTP入站响应头规则</para>
+        /// <para>Updates the configuration of modifying HTTP response headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43398,7 +43498,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改HTTP入站响应头规则</para>
+        /// <para>Updates the configuration of modifying HTTP response headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43470,7 +43570,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改HTTP入站响应头规则</para>
+        /// <para>Updates the configuration of modifying HTTP response headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43488,7 +43588,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改HTTP入站响应头规则</para>
+        /// <para>Updates the configuration of modifying HTTP response headers for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47130,7 +47230,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Routine描述信息</para>
+        /// <para>Modifies the description of a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47176,7 +47276,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Routine描述信息</para>
+        /// <para>Modifies the description of a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47222,7 +47322,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Routine描述信息</para>
+        /// <para>Modifies the description of a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47240,7 +47340,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Routine描述信息</para>
+        /// <para>Modifies the description of a routine.</para>
         /// </summary>
         /// 
         /// <param name="request">

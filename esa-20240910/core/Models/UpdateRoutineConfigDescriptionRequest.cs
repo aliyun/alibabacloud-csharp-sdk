@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateRoutineConfigDescriptionRequest : TeaModel {
         /// <summary>
+        /// <para>The routine description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>description of this routine</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The routine name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateHttpIncomingRequestHeaderModificationRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The configuration ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>35281609698****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7C414690-9D7B-5D66-9CD9-AD0B3F25ED49</para>
         /// </summary>

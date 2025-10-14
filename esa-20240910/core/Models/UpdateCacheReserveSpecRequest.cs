@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateCacheReserveSpecRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable auto payment.</para>
+        /// <para>Automatic payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
+        /// <para>Billing type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PREPAY</description></item>
+        /// <item><description>POSTPAY</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>PREPAY</para>
         /// </summary>
@@ -28,6 +34,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ChargeType { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>esa-cr-9tuv*********</para>
         /// </summary>
@@ -36,6 +44,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Cache requested size, in GB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>

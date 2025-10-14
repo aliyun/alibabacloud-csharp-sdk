@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateCacheReserveSpecResponseBody : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>esa-cr-9tuv*********</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2223332122***</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>40423A7F-A83D-1E24-B80E-86DD25790759</para>
         /// </summary>

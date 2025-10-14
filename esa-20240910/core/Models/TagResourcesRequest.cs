@@ -14,7 +14,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>China site (aliyun.com): cn-hangzhou</description></item>
+        /// <item><description>International site (alibabacloud.com): ap-southeast-1</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +29,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of resource. Valid values of N: <b>1</b> to <b>50</b>.</para>
+        /// <para>The resource ID. Enter a website ID or DNS record ID.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -33,7 +37,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type, which can only be <b>site</b>.</para>
+        /// <para>The type of the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Site: <b>site</b></description></item>
+        /// <item><description>DNS records: <b>record</b></description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

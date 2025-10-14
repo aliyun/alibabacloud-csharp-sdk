@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListHttpIncomingResponseHeaderModificationRulesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of incoming response header modification rules.</para>
+        /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public List<ListHttpIncomingResponseHeaderModificationRulesResponseBodyConfigs> Configs { get; set; }
         public class ListHttpIncomingResponseHeaderModificationRulesResponseBodyConfigs : TeaModel {
             /// <summary>
+            /// <para>The configuration ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>430559776208896</para>
             /// </summary>
@@ -22,6 +27,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ConfigId { get; set; }
 
             /// <summary>
+            /// <para>The type of the configuration. Specifies whether to check the image used by the instance supports hot migration. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>global: global configuration.</description></item>
+            /// <item><description>rule: rule configuration.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>rule</para>
             /// </summary>
@@ -29,11 +40,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string ConfigType { get; set; }
 
+            /// <summary>
+            /// <para>The configurations of modifying response headers. You can add, delete, or modify a response header.</para>
+            /// </summary>
             [NameInMap("ResponseHeaderModification")]
             [Validation(Required=false)]
             public List<ListHttpIncomingResponseHeaderModificationRulesResponseBodyConfigsResponseHeaderModification> ResponseHeaderModification { get; set; }
             public class ListHttpIncomingResponseHeaderModificationRulesResponseBodyConfigsResponseHeaderModification : TeaModel {
                 /// <summary>
+                /// <para>The name of the response header.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>headerName</para>
                 /// </summary>
@@ -42,6 +58,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The action. Specifies whether to check the image used by the instance supports hot migration. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>add: adds a response header.</description></item>
+                /// <item><description>del: deletes a response header.</description></item>
+                /// <item><description>modify: modifies a response header.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>add</para>
                 /// </summary>
@@ -50,6 +73,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Operation { get; set; }
 
                 /// <summary>
+                /// <para>The type of the header. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>static</description></item>
+                /// <item><description>dynamic</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>static</para>
                 /// </summary>
@@ -58,6 +87,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Type { get; set; }
 
                 /// <summary>
+                /// <para>The value of the response header.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>headerValue</para>
                 /// </summary>
@@ -68,6 +99,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
+            /// <para>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configuration. Use cases:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Match all incoming requests.</description></item>
+            /// <item><description>Set the value to a custom expression, for example:(http.host eq &quot;video.example.com&quot;): Match the specified request.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>(http.host eq &quot;video.example.com&quot;)</para>
             /// </summary>
@@ -76,6 +113,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configuration. Specifies whether to check the image used by the instance supports hot migration. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>on</description></item>
+            /// <item><description>off</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -84,6 +127,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleEnable { get; set; }
 
             /// <summary>
+            /// <para>The rule name. You do not need to set this parameter when you add global configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rule_example</para>
             /// </summary>
@@ -92,6 +137,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
+            /// <para>The order in which the rule is executed. A smaller value gives priority to the rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -100,6 +147,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Sequence { get; set; }
 
             /// <summary>
+            /// <para>The version number of the website configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -110,6 +159,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
+        /// <para>The number of the returned page. Default value: 1</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -118,6 +169,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 500. Valid values: 1 to 500.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -126,6 +179,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CF02C6F6-DB59-5438-8C05-3CE42DFCB0AD</para>
         /// </summary>
@@ -134,6 +189,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -142,6 +199,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

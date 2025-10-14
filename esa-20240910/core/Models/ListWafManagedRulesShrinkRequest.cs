@@ -34,7 +34,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>ID of the WAF rule.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>
@@ -42,6 +41,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
+
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         /// <summary>
         /// <para>Language type, which will be used to return the response. Value range:</para>
@@ -56,6 +59,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
+
+        [NameInMap("ManagedRuleset")]
+        [Validation(Required=false)]
+        public string ManagedRulesetShrink { get; set; }
 
         /// <summary>
         /// <para>Query page number.</para>
@@ -90,7 +97,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

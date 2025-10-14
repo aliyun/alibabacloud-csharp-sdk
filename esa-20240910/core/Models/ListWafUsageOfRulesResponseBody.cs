@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafUsageOfRulesResponseBody : TeaModel {
+        [NameInMap("BatchConfigUsage")]
+        [Validation(Required=false)]
+        public long? BatchConfigUsage { get; set; }
+
+        [NameInMap("InstanceUsage")]
+        [Validation(Required=false)]
+        public long? InstanceUsage { get; set; }
+
         /// <summary>
         /// <para>Request ID.</para>
         /// 

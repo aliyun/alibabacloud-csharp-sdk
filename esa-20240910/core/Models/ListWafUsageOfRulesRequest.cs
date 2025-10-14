@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafUsageOfRulesRequest : TeaModel {
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         /// <summary>
         /// <para>Name of the WAF operation phase.</para>
         /// 

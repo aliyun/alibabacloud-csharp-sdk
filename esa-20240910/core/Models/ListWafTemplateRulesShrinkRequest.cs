@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafTemplateRulesShrinkRequest : TeaModel {
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         /// <summary>
         /// <para>WAF operation phase, used to filter template rules for a specific phase.</para>
         /// 
