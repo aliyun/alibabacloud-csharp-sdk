@@ -1,0 +1,38 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
+{
+    public class CreateExportTaskResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>event_1193842352994186_17344888****.xlsx</para>
+        /// </summary>
+        [NameInMap("FileName")]
+        [Validation(Required=false)]
+        public string FileName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>400151</para>
+        /// </summary>
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public long? Id { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}
