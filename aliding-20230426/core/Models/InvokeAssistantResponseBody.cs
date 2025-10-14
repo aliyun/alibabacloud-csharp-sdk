@@ -95,13 +95,9 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                     [Validation(Required=false)]
                     public InvokeAssistantResponseBodyMessagesContentDingNormalCardCardData CardData { get; set; }
                     public class InvokeAssistantResponseBodyMessagesContentDingNormalCardCardData : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>{}</para>
-                        /// </summary>
                         [NameInMap("cardParamMap")]
                         [Validation(Required=false)]
-                        public Dictionary<string, object> CardParamMap { get; set; }
+                        public object CardParamMap { get; set; }
 
                     }
 
