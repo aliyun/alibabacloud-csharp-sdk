@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 [Validation(Required=false)]
                 public string GdnInstanceName { get; set; }
 
+                [NameInMap("GdnMode")]
+                [Validation(Required=false)]
+                public string GdnMode { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>2025-01-02T13:11:10.000+0000</para>
@@ -76,6 +80,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [NameInMap("CommodityCode")]
                     [Validation(Required=false)]
                     public string CommodityCode { get; set; }
+
+                    [NameInMap("DataSyncStatus")]
+                    [Validation(Required=false)]
+                    public string DataSyncStatus { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -132,6 +140,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [NameInMap("PrimaryZone")]
                     [Validation(Required=false)]
                     public string PrimaryZone { get; set; }
+
+                    [NameInMap("ReadWriteStatus")]
+                    [Validation(Required=false)]
+                    public string ReadWriteStatus { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -203,6 +215,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 [NameInMap("MysqlVersion")]
                 [Validation(Required=false)]
                 public string MysqlVersion { get; set; }
+
+                [NameInMap("RplConflictStrategy")]
+                [Validation(Required=false)]
+                public string RplConflictStrategy { get; set; }
+
+                [NameInMap("RplDmlStrategy")]
+                [Validation(Required=false)]
+                public string RplDmlStrategy { get; set; }
+
+                [NameInMap("RplSyncDdl")]
+                [Validation(Required=false)]
+                public bool? RplSyncDdl { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
