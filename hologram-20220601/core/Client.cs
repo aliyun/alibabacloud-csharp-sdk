@@ -197,6 +197,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterCount))
+            {
+                body["clusterCount"] = request.ClusterCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
             {
                 body["cpu"] = request.Cpu;
@@ -247,6 +251,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterCount))
+            {
+                body["clusterCount"] = request.ClusterCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
             {
                 body["cpu"] = request.Cpu;
@@ -3303,6 +3311,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterCount))
+            {
+                body["clusterCount"] = request.ClusterCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
             {
                 body["cpu"] = request.Cpu;
@@ -3353,6 +3365,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterCount))
+            {
+                body["clusterCount"] = request.ClusterCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
             {
                 body["cpu"] = request.Cpu;

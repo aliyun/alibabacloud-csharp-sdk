@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public GetWarehouseDetailResponseBodyWarehouseDetail WarehouseDetail { get; set; }
         public class GetWarehouseDetailResponseBodyWarehouseDetail : TeaModel {
+            [NameInMap("AutoElasticCpu")]
+            [Validation(Required=false)]
+            public string AutoElasticCpu { get; set; }
+
             /// <summary>
             /// <para>The remaining unallocated computing resources of the virtual warehouse instance.</para>
             /// 
@@ -58,6 +62,30 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public List<GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList> WarehouseList { get; set; }
             public class GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList : TeaModel {
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>Standard</para>
+                /// </summary>
+                [NameInMap("AutoScaleType")]
+                [Validation(Required=false)]
+                public string AutoScaleType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
+                [NameInMap("ClusterCount")]
+                [Validation(Required=false)]
+                public string ClusterCount { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>32</para>
+                /// </summary>
+                [NameInMap("ClusterCpu")]
+                [Validation(Required=false)]
+                public string ClusterCpu { get; set; }
+
+                /// <summary>
                 /// <para>The number of CPU cores.</para>
                 /// 
                 /// <b>Example:</b>
@@ -76,6 +104,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public long? ElasticCpu { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>auto</para>
+                /// </summary>
+                [NameInMap("ElasticType")]
+                [Validation(Required=false)]
+                public string ElasticType { get; set; }
+
+                /// <summary>
                 /// <para>The ID.</para>
                 /// 
                 /// <b>Example:</b>
@@ -84,6 +120,22 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
+                [NameInMap("InitClusterCount")]
+                [Validation(Required=false)]
+                public string InitClusterCount { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>4</para>
+                /// </summary>
+                [NameInMap("MaxClusterCount")]
+                [Validation(Required=false)]
+                public string MaxClusterCount { get; set; }
 
                 /// <summary>
                 /// <para>The memory capacity.</para>

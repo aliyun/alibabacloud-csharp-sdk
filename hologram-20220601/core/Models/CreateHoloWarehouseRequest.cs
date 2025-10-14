@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class CreateHoloWarehouseRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
+        [NameInMap("clusterCount")]
+        [Validation(Required=false)]
+        public long? ClusterCount { get; set; }
+
+        /// <summary>
         /// <para>The specifications of the virtual warehouse. The number of vCPUs must be an integer multiple of 16 CPUs. Minimum value: 16.</para>
         /// <para>This parameter is required.</para>
         /// 
