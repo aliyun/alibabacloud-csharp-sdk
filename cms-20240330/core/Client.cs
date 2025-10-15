@@ -4845,6 +4845,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 query["addonName"] = request.AddonName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BindResourceId))
+            {
+                query["bindResourceId"] = request.BindResourceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityGroupIds))
             {
                 query["entityGroupIds"] = request.EntityGroupIds;
@@ -4944,6 +4948,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonName))
             {
                 query["addonName"] = request.AddonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BindResourceId))
+            {
+                query["bindResourceId"] = request.BindResourceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityGroupIds))
             {

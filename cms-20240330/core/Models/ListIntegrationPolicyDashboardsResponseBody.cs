@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string FolderUid { get; set; }
 
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
             [NameInMap("region")]
             [Validation(Required=false)]
             public string Region { get; set; }

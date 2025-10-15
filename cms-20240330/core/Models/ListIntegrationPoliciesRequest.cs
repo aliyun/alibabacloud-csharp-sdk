@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string AddonName { get; set; }
 
+        [NameInMap("bindResourceId")]
+        [Validation(Required=false)]
+        public string BindResourceId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>eg-1,eg-2,eg-3</para>
