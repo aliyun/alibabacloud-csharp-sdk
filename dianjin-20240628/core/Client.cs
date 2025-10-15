@@ -6186,6 +6186,136 @@ namespace AlibabaCloud.SDK.DianJin20240628
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>流式获取外呼会话分析结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDialogAnalysisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDialogAnalysisResponse
+        /// </returns>
+        public RunDialogAnalysisResponse RunDialogAnalysisWithOptions(string workspaceId, RunDialogAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunDialogAnalysis",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/virtualHuman/dialog/stream/analysis",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunDialogAnalysisResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>流式获取外呼会话分析结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDialogAnalysisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDialogAnalysisResponse
+        /// </returns>
+        public async Task<RunDialogAnalysisResponse> RunDialogAnalysisWithOptionsAsync(string workspaceId, RunDialogAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunDialogAnalysis",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/virtualHuman/dialog/stream/analysis",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunDialogAnalysisResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>流式获取外呼会话分析结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDialogAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDialogAnalysisResponse
+        /// </returns>
+        public RunDialogAnalysisResponse RunDialogAnalysis(string workspaceId, RunDialogAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunDialogAnalysisWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>流式获取外呼会话分析结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunDialogAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunDialogAnalysisResponse
+        /// </returns>
+        public async Task<RunDialogAnalysisResponse> RunDialogAnalysisAsync(string workspaceId, RunDialogAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunDialogAnalysisWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取生成式对话结果</para>
         /// </summary>
         /// 
