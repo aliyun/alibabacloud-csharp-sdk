@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         [Validation(Required=false)]
         public string AppInstancePersistentId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>abc</para>
+        /// </summary>
+        [NameInMap("AvatarId")]
+        [Validation(Required=false)]
+        public string AvatarId { get; set; }
+
         [NameInMap("BindQueueInfo")]
         [Validation(Required=false)]
         public GetConnectionTicketResponseBodyBindQueueInfo BindQueueInfo { get; set; }
@@ -86,6 +94,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>500</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("NextPollIntervalMs")]
+        [Validation(Required=false)]
+        public int? NextPollIntervalMs { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
