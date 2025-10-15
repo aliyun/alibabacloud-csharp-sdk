@@ -8,13 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
-    public class ListDomainsRequest : TeaModel {
-        [NameInMap("BrandId")]
-        [Validation(Required=false)]
-        public string BrandId { get; set; }
-
+    public class DeleteNetworkZoneRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>IDaaS EIAM实例的ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,6 +19,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        /// <summary>
+        /// <para>IDaaS的网络区域主键id</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>network_11111</para>
+        /// </summary>
+        [NameInMap("NetworkZoneId")]
+        [Validation(Required=false)]
+        public string NetworkZoneId { get; set; }
 
     }
 

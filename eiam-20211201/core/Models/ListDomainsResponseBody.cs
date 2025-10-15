@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public List<ListDomainsResponseBodyDomains> Domains { get; set; }
         public class ListDomainsResponseBodyDomains : TeaModel {
+            [NameInMap("BrandId")]
+            [Validation(Required=false)]
+            public string BrandId { get; set; }
+
             /// <summary>
             /// <para>The time when the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 

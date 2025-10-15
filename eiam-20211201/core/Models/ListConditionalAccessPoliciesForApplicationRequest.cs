@@ -8,13 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
-    public class ListDomainsRequest : TeaModel {
-        [NameInMap("BrandId")]
+    public class ListConditionalAccessPoliciesForApplicationRequest : TeaModel {
+        /// <summary>
+        /// <para>条件访问策略关联的应用ID</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>app_11111</para>
+        /// </summary>
+        [NameInMap("ApplicationId")]
         [Validation(Required=false)]
-        public string BrandId { get; set; }
+        public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>IDaaS EIAM实例的ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

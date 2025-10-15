@@ -8,13 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
-    public class ListDomainsRequest : TeaModel {
-        [NameInMap("BrandId")]
+    public class EnableFederatedCredentialProviderRequest : TeaModel {
+        /// <summary>
+        /// <para>联邦凭证提供方ID</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fcp_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
+        /// </summary>
+        [NameInMap("FederatedCredentialProviderId")]
         [Validation(Required=false)]
-        public string BrandId { get; set; }
+        public string FederatedCredentialProviderId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>IDaaS EIAM实例的ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

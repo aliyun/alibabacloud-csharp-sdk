@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public GetDomainResponseBodyDomain Domain { get; set; }
         public class GetDomainResponseBodyDomain : TeaModel {
+            [NameInMap("BrandId")]
+            [Validation(Required=false)]
+            public string BrandId { get; set; }
+
             /// <summary>
             /// <para>The start time when the change order was created.</para>
             /// 
