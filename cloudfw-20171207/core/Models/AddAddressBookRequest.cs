@@ -10,6 +10,40 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddAddressBookRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ac-7c1bad6c3cc84c33baab1</para>
+        /// </summary>
+        [NameInMap("AckClusterConnectorId")]
+        [Validation(Required=false)]
+        public string AckClusterConnectorId { get; set; }
+
+        [NameInMap("AckLabels")]
+        [Validation(Required=false)]
+        public List<AddAddressBookRequestAckLabels> AckLabels { get; set; }
+        public class AddAddressBookRequestAckLabels : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>app</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>storage-operator</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        [NameInMap("AckNamespaces")]
+        [Validation(Required=false)]
+        public List<string> AckNamespaces { get; set; }
+
+        /// <summary>
         /// <para>The addresses that you want to add to the address book. Separate multiple addresses with commas (,).</para>
         /// <remarks>
         /// <para> If you set GroupType to <c>ip</c>, <c>port</c> or <c>domain</c>, you must specify AddressList.</para>

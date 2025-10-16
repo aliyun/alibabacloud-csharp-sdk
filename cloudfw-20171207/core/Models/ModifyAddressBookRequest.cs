@@ -9,6 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyAddressBookRequest : TeaModel {
+        [NameInMap("AckLabels")]
+        [Validation(Required=false)]
+        public List<ModifyAddressBookRequestAckLabels> AckLabels { get; set; }
+        public class ModifyAddressBookRequestAckLabels : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>app</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>storage-operator</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        [NameInMap("AckNamespaces")]
+        [Validation(Required=false)]
+        public List<string> AckNamespaces { get; set; }
+
         /// <summary>
         /// <para>The addresses in the address book. Separate multiple addresses with commas (,). If you set GroupType to <b>ip</b>, <b>port</b>, or <b>domain</b>, you must specify this parameter.</para>
         /// <list type="bullet">

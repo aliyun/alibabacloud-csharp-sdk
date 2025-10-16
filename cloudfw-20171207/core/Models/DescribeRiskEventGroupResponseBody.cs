@@ -314,6 +314,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Obsolete]
             public string SrcIPTag { get; set; }
 
+            [NameInMap("SrcIPTags")]
+            [Validation(Required=false)]
+            public List<string> SrcIPTags { get; set; }
+
             /// <summary>
             /// <para>An array that consists of the source private IP addresses in the intrusion event.</para>
             /// </summary>

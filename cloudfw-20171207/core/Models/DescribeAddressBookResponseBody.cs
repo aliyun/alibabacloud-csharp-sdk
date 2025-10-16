@@ -17,6 +17,48 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeAddressBookResponseBodyAcls> Acls { get; set; }
         public class DescribeAddressBookResponseBodyAcls : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>ac-7c1bad6c3cc84c33baab1</para>
+            /// </summary>
+            [NameInMap("AckClusterConnectorId")]
+            [Validation(Required=false)]
+            public string AckClusterConnectorId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ACK集群连接器</para>
+            /// </summary>
+            [NameInMap("AckClusterConnectorName")]
+            [Validation(Required=false)]
+            public string AckClusterConnectorName { get; set; }
+
+            [NameInMap("AckLabels")]
+            [Validation(Required=false)]
+            public List<DescribeAddressBookResponseBodyAclsAckLabels> AckLabels { get; set; }
+            public class DescribeAddressBookResponseBodyAclsAckLabels : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>app</para>
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>storage-operator</para>
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            [NameInMap("AckNamespaces")]
+            [Validation(Required=false)]
+            public List<string> AckNamespaces { get; set; }
+
+            /// <summary>
             /// <para>The addresses in the address book.</para>
             /// </summary>
             [NameInMap("AddressList")]
@@ -133,6 +175,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("ReferenceCount")]
             [Validation(Required=false)]
             public int? ReferenceCount { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-beijing</para>
+            /// </summary>
+            [NameInMap("RegionNo")]
+            [Validation(Required=false)]
+            public string RegionNo { get; set; }
 
             /// <summary>
             /// <para>The details about the ECS tags that can be automatically added to the address book.</para>

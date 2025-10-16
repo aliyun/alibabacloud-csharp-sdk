@@ -9,6 +9,78 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAssetStatisticResponseBody : TeaModel {
+        [NameInMap("GeneralInstanceSpecStatistic")]
+        [Validation(Required=false)]
+        public DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatistic GeneralInstanceSpecStatistic { get; set; }
+        public class DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatistic : TeaModel {
+            [NameInMap("CfwGeneralInstanceRegionStatistic")]
+            [Validation(Required=false)]
+            public List<DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwGeneralInstanceRegionStatistic> CfwGeneralInstanceRegionStatistic { get; set; }
+            public class DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwGeneralInstanceRegionStatistic : TeaModel {
+                [NameInMap("MemberList")]
+                [Validation(Required=false)]
+                public List<string> MemberList { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
+                /// </summary>
+                [NameInMap("RegionNo")]
+                [Validation(Required=false)]
+                public string RegionNo { get; set; }
+
+            }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("TotalCfwGeneralInstanceCnt")]
+            [Validation(Required=false)]
+            public int? TotalCfwGeneralInstanceCnt { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("TotalCfwGeneralInstanceUsedCnt")]
+            [Validation(Required=false)]
+            public int? TotalCfwGeneralInstanceUsedCnt { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("TotalGeneralInstanceUsedCnt")]
+            [Validation(Required=false)]
+            public int? TotalGeneralInstanceUsedCnt { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("TotalNatGeneralInstanceCnt")]
+            [Validation(Required=false)]
+            public int? TotalNatGeneralInstanceCnt { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("TotalNatGeneralInstanceUsedCnt")]
+            [Validation(Required=false)]
+            public int? TotalNatGeneralInstanceUsedCnt { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("TotalVfwGeneralInstanceUsedCnt")]
+            [Validation(Required=false)]
+            public int? TotalVfwGeneralInstanceUsedCnt { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 

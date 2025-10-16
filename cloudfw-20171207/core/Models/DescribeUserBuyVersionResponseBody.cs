@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeUserBuyVersionResponseBody : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
+        [NameInMap("AckClusterConnectorQuota")]
+        [Validation(Required=false)]
+        public long? AckClusterConnectorQuota { get; set; }
+
+        /// <summary>
         /// <para>The ID of the Alibaba Cloud account that is used to purchase Cloud Firewall.</para>
         /// 
         /// <b>Example:</b>
@@ -18,6 +26,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("AliUid")]
         [Validation(Required=false)]
         public long? AliUid { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
+        [NameInMap("DefaultBandwidth")]
+        [Validation(Required=false)]
+        public long? DefaultBandwidth { get; set; }
 
         /// <summary>
         /// <para>The time when Cloud Firewall expires.</para>
@@ -34,6 +50,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("Expire")]
         [Validation(Required=false)]
         public long? Expire { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
+        [NameInMap("ExtensionBandwidth")]
+        [Validation(Required=false)]
+        public long? ExtensionBandwidth { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("GeneralInstance")]
+        [Validation(Required=false)]
+        public long? GeneralInstance { get; set; }
 
         /// <summary>
         /// <para>The instance ID of Cloud Firewall.</para>
@@ -116,6 +148,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? LogStorage { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("MajorVersion")]
+        [Validation(Required=false)]
+        public long? MajorVersion { get; set; }
+
+        /// <summary>
         /// <para>The status of the burstable protected traffic feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1000000</b>: enabled.</description></item>
@@ -143,6 +183,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? NatBandwidth { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
+        [NameInMap("PrivateDnsConnectorQuota")]
+        [Validation(Required=false)]
+        public long? PrivateDnsConnectorQuota { get; set; }
+
+        /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
@@ -151,6 +199,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("Sdl")]
+        [Validation(Required=false)]
+        public long? Sdl { get; set; }
 
         /// <summary>
         /// <para>The time when Cloud Firewall was activated.</para>
@@ -164,6 +220,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
+        [NameInMap("TemporaryBandwidth")]
+        [Validation(Required=false)]
+        public long? TemporaryBandwidth { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("ThreatIntelligence")]
+        [Validation(Required=false)]
+        public long? ThreatIntelligence { get; set; }
 
         /// <summary>
         /// <para>Indicates whether Cloud Firewall is valid. Valid values:</para>
