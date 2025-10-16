@@ -705,6 +705,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string SnapshotPolicyId { get; set; }
 
+        [NameInMap("SubnetId")]
+        [Validation(Required=false)]
+        public string SubnetId { get; set; }
+
         /// <summary>
         /// <para>The tags that you want to add to the cloud desktop.</para>
         /// </summary>

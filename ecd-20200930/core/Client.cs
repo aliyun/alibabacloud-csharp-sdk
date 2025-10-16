@@ -8873,6 +8873,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["SnapshotPolicyId"] = request.SnapshotPolicyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubnetId))
+            {
+                query["SubnetId"] = request.SubnetId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -9083,6 +9087,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotPolicyId))
             {
                 query["SnapshotPolicyId"] = request.SnapshotPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubnetId))
+            {
+                query["SubnetId"] = request.SubnetId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -40851,6 +40859,166 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyResourceCenterPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改办公网络维度安全组策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityGroupAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityGroupAttributeResponse
+        /// </returns>
+        public ModifySecurityGroupAttributeResponse ModifySecurityGroupAttributeWithOptions(ModifySecurityGroupAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizeEgress))
+            {
+                query["AuthorizeEgress"] = request.AuthorizeEgress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizeIngress))
+            {
+                query["AuthorizeIngress"] = request.AuthorizeIngress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeEgress))
+            {
+                query["RevokeEgress"] = request.RevokeEgress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeIngress))
+            {
+                query["RevokeIngress"] = request.RevokeIngress;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySecurityGroupAttribute",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySecurityGroupAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改办公网络维度安全组策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityGroupAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityGroupAttributeResponse
+        /// </returns>
+        public async Task<ModifySecurityGroupAttributeResponse> ModifySecurityGroupAttributeWithOptionsAsync(ModifySecurityGroupAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizeEgress))
+            {
+                query["AuthorizeEgress"] = request.AuthorizeEgress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizeIngress))
+            {
+                query["AuthorizeIngress"] = request.AuthorizeIngress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeEgress))
+            {
+                query["RevokeEgress"] = request.RevokeEgress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeIngress))
+            {
+                query["RevokeIngress"] = request.RevokeIngress;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySecurityGroupAttribute",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySecurityGroupAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改办公网络维度安全组策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityGroupAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityGroupAttributeResponse
+        /// </returns>
+        public ModifySecurityGroupAttributeResponse ModifySecurityGroupAttribute(ModifySecurityGroupAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifySecurityGroupAttributeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改办公网络维度安全组策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityGroupAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityGroupAttributeResponse
+        /// </returns>
+        public async Task<ModifySecurityGroupAttributeResponse> ModifySecurityGroupAttributeAsync(ModifySecurityGroupAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifySecurityGroupAttributeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
