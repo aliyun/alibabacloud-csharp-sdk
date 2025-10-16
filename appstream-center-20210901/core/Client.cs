@@ -799,6 +799,190 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>通过实例创建镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageByInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageByInstanceResponse
+        /// </returns>
+        public CreateImageByInstanceResponse CreateImageByInstanceWithOptions(CreateImageByInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCleanUserdata))
+            {
+                body["AutoCleanUserdata"] = request.AutoCleanUserdata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskType))
+            {
+                body["DiskType"] = request.DiskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                body["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubInstanceId))
+            {
+                body["SubInstanceId"] = request.SubInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateImageByInstance",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateImageByInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过实例创建镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageByInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageByInstanceResponse
+        /// </returns>
+        public async Task<CreateImageByInstanceResponse> CreateImageByInstanceWithOptionsAsync(CreateImageByInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCleanUserdata))
+            {
+                body["AutoCleanUserdata"] = request.AutoCleanUserdata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskType))
+            {
+                body["DiskType"] = request.DiskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                body["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                body["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubInstanceId))
+            {
+                body["SubInstanceId"] = request.SubInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateImageByInstance",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateImageByInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过实例创建镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageByInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageByInstanceResponse
+        /// </returns>
+        public CreateImageByInstanceResponse CreateImageByInstance(CreateImageByInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateImageByInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过实例创建镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageByInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageByInstanceResponse
+        /// </returns>
+        public async Task<CreateImageByInstanceResponse> CreateImageByInstanceAsync(CreateImageByInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateImageByInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a new image by debugging the delivery group.</para>
         /// </summary>
         /// 
@@ -3443,6 +3627,290 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListBindInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表显示镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListImageResponse
+        /// </returns>
+        public ListImageResponse ListImageWithOptions(ListImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
+            {
+                query["TagList"] = request.TagList;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionIdList))
+            {
+                body["BizRegionIdList"] = request.BizRegionIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizTypeList))
+            {
+                body["BizTypeList"] = request.BizTypeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureList))
+            {
+                body["FeatureList"] = request.FeatureList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FotaVersion))
+            {
+                body["FotaVersion"] = request.FotaVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                body["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                body["ImageType"] = request.ImageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageType))
+            {
+                body["LanguageType"] = request.LanguageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                body["OsType"] = request.OsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageType))
+            {
+                body["PackageType"] = request.PackageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
+            {
+                body["PlatformName"] = request.PlatformName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformNameList))
+            {
+                body["PlatformNameList"] = request.PlatformNameList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductTypeList))
+            {
+                body["ProductTypeList"] = request.ProductTypeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolType))
+            {
+                body["ProtocolType"] = request.ProtocolType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceInstanceType))
+            {
+                body["ResourceInstanceType"] = request.ResourceInstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表显示镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListImageResponse
+        /// </returns>
+        public async Task<ListImageResponse> ListImageWithOptionsAsync(ListImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
+            {
+                query["TagList"] = request.TagList;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionIdList))
+            {
+                body["BizRegionIdList"] = request.BizRegionIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizTypeList))
+            {
+                body["BizTypeList"] = request.BizTypeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureList))
+            {
+                body["FeatureList"] = request.FeatureList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FotaVersion))
+            {
+                body["FotaVersion"] = request.FotaVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                body["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageType))
+            {
+                body["ImageType"] = request.ImageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LanguageType))
+            {
+                body["LanguageType"] = request.LanguageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                body["OsType"] = request.OsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageType))
+            {
+                body["PackageType"] = request.PackageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
+            {
+                body["PlatformName"] = request.PlatformName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformNameList))
+            {
+                body["PlatformNameList"] = request.PlatformNameList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductTypeList))
+            {
+                body["ProductTypeList"] = request.ProductTypeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolType))
+            {
+                body["ProtocolType"] = request.ProtocolType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceInstanceType))
+            {
+                body["ResourceInstanceType"] = request.ResourceInstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表显示镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListImageResponse
+        /// </returns>
+        public ListImageResponse ListImage(ListImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列表显示镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListImageResponse
+        /// </returns>
+        public async Task<ListImageResponse> ListImageAsync(ListImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListImageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
