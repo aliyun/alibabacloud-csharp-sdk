@@ -4411,6 +4411,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             {
                 body["splitInterval"] = request.SplitInterval;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitType))
+            {
+                body["splitType"] = request.SplitType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 body["taskId"] = request.TaskId;
@@ -4562,6 +4566,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitInterval))
             {
                 body["splitInterval"] = request.SplitInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitType))
+            {
+                body["splitType"] = request.SplitType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
@@ -5395,6 +5403,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             {
                 body["splitInterval"] = request.SplitInterval;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitType))
+            {
+                body["splitType"] = request.SplitType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextProcessTasksShrink))
             {
                 body["textProcessTasks"] = request.TextProcessTasksShrink;
@@ -5542,6 +5554,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitInterval))
             {
                 body["splitInterval"] = request.SplitInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitType))
+            {
+                body["splitType"] = request.SplitType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextProcessTasksShrink))
             {

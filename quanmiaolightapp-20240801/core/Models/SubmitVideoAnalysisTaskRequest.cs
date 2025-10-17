@@ -107,6 +107,14 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public int? SplitInterval { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>fixDuration</para>
+        /// </summary>
+        [NameInMap("splitType")]
+        [Validation(Required=false)]
+        public string SplitType { get; set; }
+
         [NameInMap("textProcessTasks")]
         [Validation(Required=false)]
         public List<SubmitVideoAnalysisTaskRequestTextProcessTasks> TextProcessTasks { get; set; }
