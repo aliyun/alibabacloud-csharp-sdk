@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class GetConnectionTicketResponseBody : TeaModel {
+        [NameInMap("P2PToken")]
+        [Validation(Required=false)]
+        public string P2PToken { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class GetConnectionTicketRequest : TeaModel {
+        [NameInMap("AccessType")]
+        [Validation(Required=false)]
+        public string AccessType { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

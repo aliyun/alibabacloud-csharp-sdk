@@ -2136,6 +2136,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessType))
+            {
+                query["AccessType"] = request.AccessType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["ClientId"] = request.ClientId;
@@ -2234,6 +2238,10 @@ namespace AlibabaCloud.SDK.Ecd20201002
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessType))
+            {
+                query["AccessType"] = request.AccessType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["ClientId"] = request.ClientId;
