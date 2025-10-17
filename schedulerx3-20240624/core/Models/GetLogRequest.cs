@@ -95,11 +95,27 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>2023-10-01 12:00:00</para>
+        /// </summary>
+        [NameInMap("ScheduleTime")]
+        [Validation(Required=false)]
+        public long? ScheduleTime { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1721636220</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>192.168.1.100</para>
+        /// </summary>
+        [NameInMap("WorkerAddr")]
+        [Validation(Required=false)]
+        public string WorkerAddr { get; set; }
 
     }
 
