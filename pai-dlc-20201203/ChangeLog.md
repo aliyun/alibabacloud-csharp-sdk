@@ -1,3 +1,7 @@
+2025-10-17 Version: 1.7.2
+- Update API ListJobs: add request parameters DisplayNameSearchMode.
+
+
 2025-10-09 Version: 1.7.1
 - Generated csharp 2020-12-03 for pai-dlc.
 

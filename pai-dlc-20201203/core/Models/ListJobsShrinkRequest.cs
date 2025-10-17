@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
+        [NameInMap("DisplayNameSearchMode")]
+        [Validation(Required=false)]
+        public string DisplayNameSearchMode { get; set; }
+
         /// <summary>
         /// <para>The end time of the query. Use the job creation time to filter data. The default value is the current time.</para>
         /// 
