@@ -23,12 +23,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Cores { get; set; }
 
         /// <summary>
-        /// <para>The billing method of ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
+        /// <para>The billing method of the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrePaid: subscription</description></item>
+        /// <item><description>PrePaid: subscription.</description></item>
         /// <item><description>PostPaid: pay-as-you-go</description></item>
         /// </list>
-        /// <para>Default value: PostPaid.</para>
+        /// <para>Default value: PostPaid</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -142,11 +142,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The policy that is used to recommend instance types. Valid values:</para>
+        /// <para>The policy for recommending instance types. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>InventoryFirst: recommends instance types in descending order of resource availability.</description></item>
         /// <item><description>PriceFirst: recommends the most cost-effective instance types. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.</description></item>
-        /// <item><description>NewProductFirst: recommends the latest instance types.</description></item>
+        /// <item><description>NewProductFirst: recommends the latest instance types first.</description></item>
         /// </list>
         /// <para>Default value: InventoryFirst.</para>
         /// 
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The scenario in which instance types are recommended. Valid values:</para>
+        /// <para>Specifies the scenarios in which instance types are recommended. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>UPGRADE: instance type upgrade or downgrade</description></item>
         /// <item><description>CREATE: instance creation</description></item>
@@ -192,11 +192,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Scene { get; set; }
 
         /// <summary>
-        /// <para>The bidding policy of spot instances. Valid values:</para>
+        /// <para>The bidding policy of the spot instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NoSpot: The instances are regular pay-as-you-go instances.</description></item>
-        /// <item><description>SpotWithPriceLimit: The instances are created as spot instances for which you can specify the maximum hourly price.</description></item>
-        /// <item><description>SpotAsPriceGo: The instances are spot instances for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</description></item>
+        /// <item><description>NoSpot: The instance is created as a pay-as-you-go instance.</description></item>
+        /// <item><description>SpotWithPriceLimit: The instance is a spot instance that has a user-defined maximum hourly price.</description></item>
+        /// <item><description>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</description></item>
         /// </list>
         /// <remarks>
         /// <para> If you specify <c>SpotStrategy</c>, you must set <c>InstanceChargeType</c> to <c>PostPaid</c>.</para>

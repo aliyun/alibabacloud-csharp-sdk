@@ -431,7 +431,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The total number of snapshots returned.</para>
+        /// <para>The total number of snapshots.</para>
+        /// <remarks>
+        /// <para>When using the <c>MaxResults</c> and <c>NextToken</c> parameters for a paginated query, the returned <c>TotalCount</c> parameter value is invalid.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePortRangeListsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: 1 to 100.</description></item>
+        /// <item><description>Maximum value: 100</description></item>
         /// <item><description>Default value: 10.</description></item>
         /// </list>
         /// 

@@ -315,6 +315,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string BootMode { get; set; }
 
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
                     /// <summary>
                     /// <para>The information of disks from which the custom images are created.</para>
                     /// <list type="bullet">
@@ -392,6 +396,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures Features { get; set; }
                     public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures : TeaModel {
+                        [NameInMap("ImdsSupport")]
+                        [Validation(Required=false)]
+                        public string ImdsSupport { get; set; }
+
                         /// <summary>
                         /// <para>Indicates whether the image supports the NVMe protocol. Valid values:</para>
                         /// <list type="bullet">
@@ -405,6 +413,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [NameInMap("NvmeSupport")]
                         [Validation(Required=false)]
                         public string NvmeSupport { get; set; }
+
+                    }
+
+                    [NameInMap("ImageName")]
+                    [Validation(Required=false)]
+                    public string ImageName { get; set; }
+
+                    [NameInMap("ImportImageTags")]
+                    [Validation(Required=false)]
+                    public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTags ImportImageTags { get; set; }
+                    public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTags : TeaModel {
+                        [NameInMap("ImportImageTag")]
+                        [Validation(Required=false)]
+                        public List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTagsImportImageTag> ImportImageTag { get; set; }
+                        public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsImportImageTagsImportImageTag : TeaModel {
+                            [NameInMap("Key")]
+                            [Validation(Required=false)]
+                            public string Key { get; set; }
+
+                            [NameInMap("Value")]
+                            [Validation(Required=false)]
+                            public string Value { get; set; }
+
+                        }
 
                     }
 
@@ -487,6 +519,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [NameInMap("RetainImportedImage")]
                     [Validation(Required=false)]
                     public bool? RetainImportedImage { get; set; }
+
+                    [NameInMap("RetentionStrategy")]
+                    [Validation(Required=false)]
+                    public string RetentionStrategy { get; set; }
+
+                    [NameInMap("RoleName")]
+                    [Validation(Required=false)]
+                    public string RoleName { get; set; }
 
                 }
 

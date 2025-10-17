@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the order. This is returned only when the payment method is changed to subscription.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20413515388****</para>

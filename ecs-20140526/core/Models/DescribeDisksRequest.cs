@@ -307,13 +307,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the multi-attach feature is enabled for the disk. Valid values:</para>
+        /// <para>Specifies whether to enable the multi-attach feature for the disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Disabled: The multi-attach feature is not enabled for the disk.</description></item>
-        /// <item><description>Enabled: The multi-attach feature is enabled for the disk.</description></item>
+        /// <item><description>Disabled</description></item>
+        /// <item><description>Enabled</description></item>
         /// <item><description>LegacyShared: Shared Block Storage devices are queried.</description></item>
         /// </list>
-        /// <para>The multi-attach feature is available to select users. To use this feature, <a href="https://workorder-intl.console.aliyun.com/console.htm#/ticket/list">submit a ticket</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Disabled</para>

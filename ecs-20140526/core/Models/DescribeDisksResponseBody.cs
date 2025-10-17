@@ -751,7 +751,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The total number of entries returned.</para>
         /// <remarks>
-        /// <para>For paginated queries using MaxResults and NextToken, the TotalCount value in the response is invalid and should be ignored.</para>
+        /// <para>When using the <c>MaxResults</c> and <c>NextToken</c> parameters for a paginated query, the returned <c>TotalCount</c> parameter value is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

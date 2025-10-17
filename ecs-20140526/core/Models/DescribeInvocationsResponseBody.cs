@@ -353,10 +353,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public string InvocationStatus { get; set; }
 
+                        /// <summary>
+                        /// <para>The output delivery status of the command execution. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>InProgress: The delivery is in progress.</description></item>
+                        /// <item><description>Finished: The delivery is complete.</description></item>
+                        /// <item><description>Failed: The delivery failed.</description></item>
+                        /// </list>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Finished</para>
+                        /// </summary>
                         [NameInMap("OssOutputStatus")]
                         [Validation(Required=false)]
                         public string OssOutputStatus { get; set; }
 
+                        /// <summary>
+                        /// <para>The command execution Output delivers the object URI to OSS. This field is an empty string when the delivery fails or is in progress.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>oss://testBucket/testPrefix/output.txt</para>
+                        /// </summary>
                         [NameInMap("OssOutputUri")]
                         [Validation(Required=false)]
                         public string OssOutputUri { get; set; }
@@ -456,6 +473,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Launcher { get; set; }
 
+                /// <summary>
+                /// <para>Command to execute the Output OSS delivery configuration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>oss://testBucket/testPrefix</para>
+                /// </summary>
                 [NameInMap("OssOutputDelivery")]
                 [Validation(Required=false)]
                 public string OssOutputDelivery { get; set; }
