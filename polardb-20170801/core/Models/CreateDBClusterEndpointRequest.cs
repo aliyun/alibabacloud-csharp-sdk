@@ -141,6 +141,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>pfs-test****</para>
+        /// </summary>
+        [NameInMap("PolarFsInstanceId")]
+        [Validation(Required=false)]
+        public string PolarFsInstanceId { get; set; }
+
+        /// <summary>
         /// <para>Global consistency timeout strategy. The value range is as follows:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Send the request to the primary node</description></item>

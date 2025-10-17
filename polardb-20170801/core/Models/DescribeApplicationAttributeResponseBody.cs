@@ -435,6 +435,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         }
 
+        [NameInMap("ServerlessType")]
+        [Validation(Required=false)]
+        public string ServerlessType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Activated</para>

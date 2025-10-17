@@ -912,6 +912,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? SQLSize { get; set; }
 
+        [NameInMap("SearchCompressStorageUsed")]
+        [Validation(Required=false)]
+        public long? SearchCompressStorageUsed { get; set; }
+
+        [NameInMap("SearchStorageUsed")]
+        [Validation(Required=false)]
+        public long? SearchStorageUsed { get; set; }
+
         /// <summary>
         /// <para>Serverless type. Valid values are as follows:</para>
         /// <list type="bullet">

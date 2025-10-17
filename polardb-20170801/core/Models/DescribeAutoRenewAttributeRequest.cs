@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAutoRenewAttributeRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENS</para>
+        /// </summary>
+        [NameInMap("CloudProvider")]
+        [Validation(Required=false)]
+        public string CloudProvider { get; set; }
+
+        /// <summary>
         /// <para>The ID of the cluster. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>

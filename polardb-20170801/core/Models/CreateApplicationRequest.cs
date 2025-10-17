@@ -73,6 +73,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string ComponentType { get; set; }
 
+            [NameInMap("ScaleMax")]
+            [Validation(Required=false)]
+            public string ScaleMax { get; set; }
+
+            [NameInMap("ScaleMin")]
+            [Validation(Required=false)]
+            public string ScaleMin { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>sg-********************</para>
@@ -208,6 +216,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
+
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

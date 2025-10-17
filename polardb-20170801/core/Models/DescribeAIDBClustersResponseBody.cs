@@ -123,6 +123,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>pc-**************</para>
+                /// </summary>
+                [NameInMap("RelativeDBClusterId")]
+                [Validation(Required=false)]
+                public string RelativeDBClusterId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>container</para>
                 /// </summary>
                 [NameInMap("RunType")]

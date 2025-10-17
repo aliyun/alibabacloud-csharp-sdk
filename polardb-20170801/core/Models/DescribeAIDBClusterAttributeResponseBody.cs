@@ -53,6 +53,52 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public List<DescribeAIDBClusterAttributeResponseBodyDBNodes> DBNodes { get; set; }
         public class DescribeAIDBClusterAttributeResponseBodyDBNodes : TeaModel {
+            [NameInMap("ChildVolumes")]
+            [Validation(Required=false)]
+            public List<DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes> ChildVolumes { get; set; }
+            public class DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>/tmp/CrowdStrike</para>
+                /// </summary>
+                [NameInMap("MountPath")]
+                [Validation(Required=false)]
+                public string MountPath { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>jueming</para>
+                /// </summary>
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>8192</para>
+                /// </summary>
+                [NameInMap("SizeGB")]
+                [Validation(Required=false)]
+                public string SizeGB { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>PolarFs</para>
+                /// </summary>
+                [NameInMap("StorageCategory")]
+                [Validation(Required=false)]
+                public string StorageCategory { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>PL1</para>
+                /// </summary>
+                [NameInMap("StorageType")]
+                [Validation(Required=false)]
+                public string StorageType { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2</para>
@@ -140,52 +186,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
-
-            [NameInMap("Volumes")]
-            [Validation(Required=false)]
-            public List<DescribeAIDBClusterAttributeResponseBodyDBNodesVolumes> Volumes { get; set; }
-            public class DescribeAIDBClusterAttributeResponseBodyDBNodesVolumes : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>/tmp/CrowdStrike</para>
-                /// </summary>
-                [NameInMap("MountPath")]
-                [Validation(Required=false)]
-                public string MountPath { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>jueming</para>
-                /// </summary>
-                [NameInMap("Name")]
-                [Validation(Required=false)]
-                public string Name { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>8192</para>
-                /// </summary>
-                [NameInMap("SizeGB")]
-                [Validation(Required=false)]
-                public string SizeGB { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>PolarFs</para>
-                /// </summary>
-                [NameInMap("StorageCategory")]
-                [Validation(Required=false)]
-                public string StorageCategory { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>PL1</para>
-                /// </summary>
-                [NameInMap("StorageType")]
-                [Validation(Required=false)]
-                public string StorageType { get; set; }
-
-            }
 
             /// <summary>
             /// <b>Example:</b>

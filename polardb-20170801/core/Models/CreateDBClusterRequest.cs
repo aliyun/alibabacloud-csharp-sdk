@@ -118,6 +118,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CloneDataPoint { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENS</para>
+        /// </summary>
+        [NameInMap("CloudProvider")]
+        [Validation(Required=false)]
+        public string CloudProvider { get; set; }
+
+        /// <summary>
         /// <para>Cluster network type, currently only VPC is supported, with a fixed value of <b>VPC</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -339,6 +347,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("DefaultTimeZone")]
         [Validation(Required=false)]
         public string DefaultTimeZone { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vn-hanoi-3</para>
+        /// </summary>
+        [NameInMap("EnsRegionId")]
+        [Validation(Required=false)]
+        public string EnsRegionId { get; set; }
 
         /// <summary>
         /// <para>Global Database Network (GDN) ID.</para>

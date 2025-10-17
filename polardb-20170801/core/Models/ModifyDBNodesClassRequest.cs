@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ENS</para>
+        /// </summary>
+        [NameInMap("CloudProvider")]
+        [Validation(Required=false)]
+        public string CloudProvider { get; set; }
+
+        /// <summary>
         /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 

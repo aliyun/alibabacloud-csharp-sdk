@@ -409,6 +409,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                [NameInMap("SearchStorageUsed")]
+                [Validation(Required=false)]
+                public long? SearchStorageUsed { get; set; }
+
                 /// <summary>
                 /// <para>Indicates whether the cluster is a serverless cluster. <b>AgileServerless</b> indicates the cluster is a serverless cluster. No value is returned for a common cluster.</para>
                 /// 

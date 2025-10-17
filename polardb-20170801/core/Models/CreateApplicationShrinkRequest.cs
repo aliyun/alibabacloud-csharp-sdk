@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-beijing-k</para>
