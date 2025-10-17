@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.Brain_industrial20200920.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>FULL</para>
+        /// </summary>
+        [NameInMap("DataMode")]
+        [Validation(Required=false)]
+        public string DataMode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>electricityMeter</para>
         /// </summary>
         [NameInMap("DeviceType")]
@@ -32,6 +40,14 @@ namespace AlibabaCloud.SDK.Brain_industrial20200920.Models
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DAY_AHEAD</para>
+        /// </summary>
+        [NameInMap("ForecastHorizon")]
+        [Validation(Required=false)]
+        public string ForecastHorizon { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
