@@ -1366,8 +1366,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证识别查询</para>
+        /// <para>Credential Recognition Query</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After obtaining the TransactionId, you can use this interface on the server side to get the corresponding authentication result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialGetResultIntlRequest
@@ -1408,8 +1413,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证识别查询</para>
+        /// <para>Credential Recognition Query</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After obtaining the TransactionId, you can use this interface on the server side to get the corresponding authentication result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialGetResultIntlRequest
@@ -1450,8 +1460,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证识别查询</para>
+        /// <para>Credential Recognition Query</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After obtaining the TransactionId, you can use this interface on the server side to get the corresponding authentication result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialGetResultIntlRequest
@@ -1468,8 +1483,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证识别查询</para>
+        /// <para>Credential Recognition Query</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After obtaining the TransactionId, you can use this interface on the server side to get the corresponding authentication result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialGetResultIntlRequest
@@ -1670,8 +1690,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证识别提交</para>
+        /// <para>Credential Recognition Submission</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initialization interface for credential recognition OCR, through which you can obtain the transactionId.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialSubmitIntlRequest
@@ -1742,8 +1767,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证识别提交</para>
+        /// <para>Credential Recognition Submission</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initialization interface for credential recognition OCR, through which you can obtain the transactionId.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialSubmitIntlRequest
@@ -1814,8 +1844,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证识别提交</para>
+        /// <para>Credential Recognition Submission</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initialization interface for credential recognition OCR, through which you can obtain the transactionId.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialSubmitIntlRequest
@@ -1832,8 +1867,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>凭证识别提交</para>
+        /// <para>Credential Recognition Submission</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initialization interface for credential recognition OCR, through which you can obtain the transactionId.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CredentialSubmitIntlRequest
@@ -2402,8 +2442,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>deepfake文件流api</para>
+        /// <para>deepfake file stream API</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input a face image and use the algorithm to detect if there is a risk of deepfake. This includes risk scenarios such as AIGC-generated faces, deepfake face swaps, template faces, and rephotographed faces, and outputs risk labels and confidence scores.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeepfakeDetectIntlStreamRequest
@@ -2468,8 +2513,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>deepfake文件流api</para>
+        /// <para>deepfake file stream API</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input a face image and use the algorithm to detect if there is a risk of deepfake. This includes risk scenarios such as AIGC-generated faces, deepfake face swaps, template faces, and rephotographed faces, and outputs risk labels and confidence scores.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeepfakeDetectIntlStreamRequest
@@ -2534,8 +2584,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>deepfake文件流api</para>
+        /// <para>deepfake file stream API</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input a face image and use the algorithm to detect if there is a risk of deepfake. This includes risk scenarios such as AIGC-generated faces, deepfake face swaps, template faces, and rephotographed faces, and outputs risk labels and confidence scores.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeepfakeDetectIntlStreamRequest
@@ -2552,8 +2607,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>deepfake文件流api</para>
+        /// <para>deepfake file stream API</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Input a face image and use the algorithm to detect if there is a risk of deepfake. This includes risk scenarios such as AIGC-generated faces, deepfake face swaps, template faces, and rephotographed faces, and outputs risk labels and confidence scores.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeepfakeDetectIntlStreamRequest
@@ -3358,6 +3418,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         public DocOcrMaxResponse DocOcrMaxWithOptions(DocOcrMaxRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrValueStandard))
+            {
+                query["OcrValueStandard"] = request.OcrValueStandard;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocPage))
             {
@@ -3413,6 +3478,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3448,6 +3514,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         public async Task<DocOcrMaxResponse> DocOcrMaxWithOptionsAsync(DocOcrMaxRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrValueStandard))
+            {
+                query["OcrValueStandard"] = request.OcrValueStandard;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocPage))
             {
@@ -3503,6 +3574,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3942,7 +4014,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸交叉比对</para>
+        /// <para>Face Cross Comparison</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4024,7 +4096,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸交叉比对</para>
+        /// <para>Face Cross Comparison</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4106,7 +4178,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸交叉比对</para>
+        /// <para>Face Cross Comparison</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4124,7 +4196,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>人脸交叉比对</para>
+        /// <para>Face Cross Comparison</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6524,7 +6596,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询人脸记录</para>
+        /// <para>Query Face Records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6594,7 +6666,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询人脸记录</para>
+        /// <para>Query Face Records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6664,7 +6736,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询人脸记录</para>
+        /// <para>Query Face Records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6682,7 +6754,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询人脸记录</para>
+        /// <para>Query Face Records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6700,7 +6772,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取临时token</para>
+        /// <para>Get Temporary Token</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6742,7 +6814,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取临时token</para>
+        /// <para>Get Temporary Token</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6784,7 +6856,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取临时token</para>
+        /// <para>Get Temporary Token</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6802,7 +6874,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取临时token</para>
+        /// <para>Get Temporary Token</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6820,7 +6892,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件临时地址</para>
+        /// <para>Get Temporary File URL</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6862,7 +6934,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件临时地址</para>
+        /// <para>Get Temporary File URL</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6904,7 +6976,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件临时地址</para>
+        /// <para>Get Temporary File URL</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6922,7 +6994,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件临时地址</para>
+        /// <para>Get Temporary File URL</para>
         /// </summary>
         /// 
         /// <param name="request">

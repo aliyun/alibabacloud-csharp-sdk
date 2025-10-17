@@ -122,6 +122,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrModel { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("OcrValueStandard")]
+        [Validation(Required=false)]
+        public string OcrValueStandard { get; set; }
+
+        /// <summary>
         /// <para>The product solution to be integrated.</para>
         /// <para>Value: ID_OCR_MAX</para>
         /// 

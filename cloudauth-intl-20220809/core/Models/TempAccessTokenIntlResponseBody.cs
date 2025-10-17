@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class TempAccessTokenIntlResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Return result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TempAccessTokenIntlResponseBodyData Data { get; set; }
         public class TempAccessTokenIntlResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>AccessKeyId for temporary file upload credentials.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string AccessKeyId { get; set; }
 
             /// <summary>
+            /// <para>Temporary authorization secret.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3hxuRpEJ3Jv2Rtzyg4HooFCYqps762XcNtzhn19wQymk</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string AccessKeySecret { get; set; }
 
             /// <summary>
+            /// <para>Bucket name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>liyi</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string BucketName { get; set; }
 
             /// <summary>
+            /// <para>File prefix.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test001</para>
             /// </summary>
@@ -54,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FileNamePrefix { get; set; }
 
             /// <summary>
-            /// <para>OssEndPoint。</para>
+            /// <para>OSS endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ossEndPoint</para>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string OssEndPoint { get; set; }
 
             /// <summary>
+            /// <para>Security token for temporary file upload credentials.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -74,6 +89,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         }
 
         /// <summary>
+        /// <para>Return message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -82,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>86C40EC3-5940-5F47-995C-BFE90B70E540</para>

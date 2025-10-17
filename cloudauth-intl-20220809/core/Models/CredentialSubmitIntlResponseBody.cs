@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CredentialSubmitIntlResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Return message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>5E63B760-0ECB-5C07-8503-A65C27876968</para>
@@ -35,11 +39,16 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Return result.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CredentialSubmitIntlResponseBodyResult Result { get; set; }
         public class CredentialSubmitIntlResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>Unique identifier of the authentication request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4ab0b***cbde97</para>
             /// </summary>
