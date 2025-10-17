@@ -15104,6 +15104,150 @@ namespace AlibabaCloud.SDK.Dts20200101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询JobStep列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobStepRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobStepResponse
+        /// </returns>
+        public ListJobStepResponse ListJobStepWithOptions(ListJobStepRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZeroEtlJob))
+            {
+                query["ZeroEtlJob"] = request.ZeroEtlJob;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListJobStep",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListJobStepResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询JobStep列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobStepRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobStepResponse
+        /// </returns>
+        public async Task<ListJobStepResponse> ListJobStepWithOptionsAsync(ListJobStepRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZeroEtlJob))
+            {
+                query["ZeroEtlJob"] = request.ZeroEtlJob;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListJobStep",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListJobStepResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询JobStep列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobStepRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobStepResponse
+        /// </returns>
+        public ListJobStepResponse ListJobStep(ListJobStepRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListJobStepWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询JobStep列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobStepRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobStepResponse
+        /// </returns>
+        public async Task<ListJobStepResponse> ListJobStepAsync(ListJobStepRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListJobStepWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the tags that are bound to specific data migration, data synchronization, or change tracking instances, or queries the instances to which specific tags are bound.</para>
         /// </summary>
         /// 
@@ -17936,6 +18080,158 @@ namespace AlibabaCloud.SDK.Dts20200101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyGadInstanceNameWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改增量写入的位点。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyJobStepCheckpointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyJobStepCheckpointResponse
+        /// </returns>
+        public ModifyJobStepCheckpointResponse ModifyJobStepCheckpointWithOptions(ModifyJobStepCheckpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobStepId))
+            {
+                query["JobStepId"] = request.JobStepId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewCheckPoint))
+            {
+                query["NewCheckPoint"] = request.NewCheckPoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyJobStepCheckpoint",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyJobStepCheckpointResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改增量写入的位点。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyJobStepCheckpointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyJobStepCheckpointResponse
+        /// </returns>
+        public async Task<ModifyJobStepCheckpointResponse> ModifyJobStepCheckpointWithOptionsAsync(ModifyJobStepCheckpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
+            {
+                query["DtsJobId"] = request.DtsJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobStepId))
+            {
+                query["JobStepId"] = request.JobStepId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewCheckPoint))
+            {
+                query["NewCheckPoint"] = request.NewCheckPoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyJobStepCheckpoint",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyJobStepCheckpointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改增量写入的位点。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyJobStepCheckpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyJobStepCheckpointResponse
+        /// </returns>
+        public ModifyJobStepCheckpointResponse ModifyJobStepCheckpoint(ModifyJobStepCheckpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyJobStepCheckpointWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改增量写入的位点。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyJobStepCheckpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyJobStepCheckpointResponse
+        /// </returns>
+        public async Task<ModifyJobStepCheckpointResponse> ModifyJobStepCheckpointAsync(ModifyJobStepCheckpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyJobStepCheckpointWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
