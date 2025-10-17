@@ -162,6 +162,58 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public ModifyDBResourceGroupRequestRayConfig RayConfig { get; set; }
         public class ModifyDBResourceGroupRequestRayConfig : TeaModel {
+            [NameInMap("AppConfig")]
+            [Validation(Required=false)]
+            public ModifyDBResourceGroupRequestRayConfigAppConfig AppConfig { get; set; }
+            public class ModifyDBResourceGroupRequestRayConfigAppConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>app01</para>
+                /// </summary>
+                [NameInMap("AppName")]
+                [Validation(Required=false)]
+                public string AppName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>IsaacLab</para>
+                /// </summary>
+                [NameInMap("AppType")]
+                [Validation(Required=false)]
+                public string AppType { get; set; }
+
+                [NameInMap("ImageSelector")]
+                [Validation(Required=false)]
+                public ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector ImageSelector { get; set; }
+                public class ModifyDBResourceGroupRequestRayConfigAppConfigImageSelector : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>lab2.10.0-ray2.43.0</para>
+                    /// </summary>
+                    [NameInMap("Image")]
+                    [Validation(Required=false)]
+                    public string Image { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>vLLM</para>
+                    /// </summary>
+                    [NameInMap("InferenceEngine")]
+                    [Validation(Required=false)]
+                    public string InferenceEngine { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Deepseek-R1</para>
+                    /// </summary>
+                    [NameInMap("LlmModel")]
+                    [Validation(Required=false)]
+                    public string LlmModel { get; set; }
+
+                }
+
+            }
+
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
@@ -185,6 +237,28 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [NameInMap("HeadSpecType")]
             [Validation(Required=false)]
             public string HeadSpecType { get; set; }
+
+            [NameInMap("StorageMounts")]
+            [Validation(Required=false)]
+            public List<ModifyDBResourceGroupRequestRayConfigStorageMounts> StorageMounts { get; set; }
+            public class ModifyDBResourceGroupRequestRayConfigStorageMounts : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>/mnt/data01</para>
+                /// </summary>
+                [NameInMap("MountPath")]
+                [Validation(Required=false)]
+                public string MountPath { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("StorageId")]
+                [Validation(Required=false)]
+                public long? StorageId { get; set; }
+
+            }
 
             [NameInMap("WorkerGroups")]
             [Validation(Required=false)]

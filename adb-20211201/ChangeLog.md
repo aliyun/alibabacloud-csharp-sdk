@@ -1,3 +1,20 @@
+2025-10-17 Version: 4.4.0
+- Support API CreateApsWebhook.
+- Support API CreateMaterializedViewRecommend.
+- Support API DeleteApsWebhook.
+- Support API DescribeSparkAuditLogRecords.
+- Support API ListApsWebhook.
+- Support API ModifyMaterializedView.
+- Support API ModifyMaterializedViewRecommend.
+- Support API ModifySqlTemplatePosition.
+- Support API UpdateApsWebhook.
+- Update API DescribeDBResourceGroup: add response parameters Body.GroupsInfo.$.RayConfig.AppConfig.
+- Update API DescribeDBResourceGroup: add response parameters Body.GroupsInfo.$.RayConfig.StorageMounts.
+- Update API DescribeJobResourceUsage: add response parameters Body.Data.JobAcuUsage.$.UseCachePool.
+- Update API ModifyDBResourceGroup: add request parameters RayConfig.AppConfig.
+- Update API ModifyDBResourceGroup: add request parameters RayConfig.StorageMounts.
+
+
 2025-09-23 Version: 4.3.0
 - Support API ConfigureResultExport.
 - Support API CreateBackup.

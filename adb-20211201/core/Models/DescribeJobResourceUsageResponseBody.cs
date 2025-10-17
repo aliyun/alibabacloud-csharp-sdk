@@ -152,6 +152,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string ResourceGroupName { get; set; }
 
+                [NameInMap("UseCachePool")]
+                [Validation(Required=false)]
+                public bool? UseCachePool { get; set; }
+
             }
 
             [NameInMap("PageNumber")]

@@ -179,6 +179,66 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig RayConfig { get; set; }
             public class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig : TeaModel {
+                /// <summary>
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
+                [NameInMap("AppConfig")]
+                [Validation(Required=false)]
+                public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig AppConfig { get; set; }
+                public class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>app01</para>
+                    /// </summary>
+                    [NameInMap("AppName")]
+                    [Validation(Required=false)]
+                    public string AppName { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>IsaacLab</para>
+                    /// </summary>
+                    [NameInMap("AppType")]
+                    [Validation(Required=false)]
+                    public string AppType { get; set; }
+
+                    /// <summary>
+                    /// <b>if can be null:</b>
+                    /// <c>true</c>
+                    /// </summary>
+                    [NameInMap("ImageSelector")]
+                    [Validation(Required=false)]
+                    public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector ImageSelector { get; set; }
+                    public class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>lab2.10.0-ray2.43.0</para>
+                        /// </summary>
+                        [NameInMap("Image")]
+                        [Validation(Required=false)]
+                        public string Image { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>vLLM</para>
+                        /// </summary>
+                        [NameInMap("InferenceEngine")]
+                        [Validation(Required=false)]
+                        public string InferenceEngine { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>Deepseek-R1</para>
+                        /// </summary>
+                        [NameInMap("LlmModel")]
+                        [Validation(Required=false)]
+                        public string LlmModel { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
@@ -207,46 +267,108 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string HeadSpecType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="http://ray-cluster-address.example.com">http://ray-cluster-address.example.com</a></para>
+                /// </summary>
                 [NameInMap("RayClusterAddress")]
                 [Validation(Required=false)]
                 public string RayClusterAddress { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="http://ray-dashboard-address.example.com">http://ray-dashboard-address.example.com</a></para>
+                /// </summary>
                 [NameInMap("RayDashboardAddress")]
                 [Validation(Required=false)]
                 public string RayDashboardAddress { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="http://ray-grafana-address.example.com">http://ray-grafana-address.example.com</a></para>
+                /// </summary>
                 [NameInMap("RayGrafanaAddress")]
                 [Validation(Required=false)]
                 public string RayGrafanaAddress { get; set; }
+
+                [NameInMap("StorageMounts")]
+                [Validation(Required=false)]
+                public List<DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigStorageMounts> StorageMounts { get; set; }
+                public class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigStorageMounts : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>/mnt/data01</para>
+                    /// </summary>
+                    [NameInMap("MountPath")]
+                    [Validation(Required=false)]
+                    public string MountPath { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
+                    [NameInMap("StorageId")]
+                    [Validation(Required=false)]
+                    public long? StorageId { get; set; }
+
+                }
 
                 [NameInMap("WorkerGroups")]
                 [Validation(Required=false)]
                 public List<DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups> WorkerGroups { get; set; }
                 public class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
                     [NameInMap("AllocateUnit")]
                     [Validation(Required=false)]
                     public string AllocateUnit { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>g01</para>
+                    /// </summary>
                     [NameInMap("GroupName")]
                     [Validation(Required=false)]
                     public string GroupName { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
                     [NameInMap("MaxWorkerQuantity")]
                     [Validation(Required=false)]
                     public int? MaxWorkerQuantity { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
                     [NameInMap("MinWorkerQuantity")]
                     [Validation(Required=false)]
                     public int? MinWorkerQuantity { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>100G</para>
+                    /// </summary>
                     [NameInMap("WorkerDiskCapacity")]
                     [Validation(Required=false)]
                     public string WorkerDiskCapacity { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>large</para>
+                    /// </summary>
                     [NameInMap("WorkerSpecName")]
                     [Validation(Required=false)]
                     public string WorkerSpecName { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>CPU</para>
+                    /// </summary>
                     [NameInMap("WorkerSpecType")]
                     [Validation(Required=false)]
                     public string WorkerSpecType { get; set; }
