@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeDesktopSessionsResponseBodySessions> Sessions { get; set; }
         public class DescribeDesktopSessionsResponseBodySessions : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>SIMPLE</para>
+            /// </summary>
+            [NameInMap("AccountType")]
+            [Validation(Required=false)]
+            public string AccountType { get; set; }
+
+            /// <summary>
             /// <para>The IP address of the client.</para>
             /// 
             /// <b>Example:</b>
@@ -75,6 +83,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
             public string DesktopName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>SIMPLE</para>
+            /// </summary>
+            [NameInMap("DirectoryType")]
+            [Validation(Required=false)]
+            public string DirectoryType { get; set; }
 
             /// <summary>
             /// <para>The duration of the remote assistance. Unit: seconds.</para>
@@ -170,10 +186,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public List<DescribeDesktopSessionsResponseBodySessionsResourceGroups> ResourceGroups { get; set; }
             public class DescribeDesktopSessionsResponseBodySessionsResourceGroups : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>rg-8whrmo2gtsb8bxxxx</para>
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>RgTest</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }

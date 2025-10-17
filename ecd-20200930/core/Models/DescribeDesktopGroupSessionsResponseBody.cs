@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeDesktopGroupSessionsResponseBodySessions> Sessions { get; set; }
         public class DescribeDesktopGroupSessionsResponseBodySessions : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>SIMPLE</para>
+            /// </summary>
+            [NameInMap("AccountType")]
+            [Validation(Required=false)]
+            public string AccountType { get; set; }
+
+            /// <summary>
             /// <para>The IP address of the client.</para>
             /// 
             /// <b>Example:</b>
@@ -95,6 +103,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
             public string DesktopId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>SIMPLE</para>
+            /// </summary>
+            [NameInMap("DirectoryType")]
+            [Validation(Required=false)]
+            public string DirectoryType { get; set; }
 
             /// <summary>
             /// <para>The point in time when the end user applies for administrator assistance.</para>
