@@ -192,6 +192,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("SecurityGroupId")]
+        [Validation(Required=false)]
+        public string SecurityGroupId { get; set; }
+
         /// <summary>
         /// <para>The job ID.</para>
         /// 
@@ -211,6 +215,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
 
         /// <summary>
         /// <para>The ID of the virtual private cloud (VPC).</para>

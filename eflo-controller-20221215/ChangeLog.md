@@ -1,3 +1,8 @@
+2025-10-17 Version: 2.8.7
+- Update API DescribeCluster: add response parameters Body.SecurityGroupId.
+- Update API DescribeCluster: add response parameters Body.VSwitchId.
+
+
 2025-09-22 Version: 2.8.6
 - Update API CreateCluster: add request parameters NodeGroups.$.Nodes.$.DataDisk.$.BurstingEnabled.
 - Update API CreateCluster: add request parameters NodeGroups.$.Nodes.$.DataDisk.$.ProvisionedIops.
