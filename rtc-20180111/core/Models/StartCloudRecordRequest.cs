@@ -852,6 +852,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public StartCloudRecordRequestSingleStreamingRecord SingleStreamingRecord { get; set; }
         public class StartCloudRecordRequestSingleStreamingRecord : TeaModel {
+            [NameInMap("AvMerge")]
+            [Validation(Required=false)]
+            public bool? AvMerge { get; set; }
+
             /// <summary>
             /// <para>This parameter is required.</para>
             /// </summary>
@@ -905,6 +909,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>aac</para>
+                /// </summary>
                 [NameInMap("Container")]
                 [Validation(Required=false)]
                 public string Container { get; set; }
