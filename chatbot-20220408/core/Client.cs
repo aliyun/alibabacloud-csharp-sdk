@@ -352,13 +352,23 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             {
                 query["AgentKey"] = request.AgentKey;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
-                query["InstanceId"] = request.InstanceId;
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandBox))
+            {
+                body["SandBox"] = request.SandBox;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VendorParam))
+            {
+                body["VendorParam"] = request.VendorParam;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -398,13 +408,23 @@ namespace AlibabaCloud.SDK.Chatbot20220408
             {
                 query["AgentKey"] = request.AgentKey;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
-                query["InstanceId"] = request.InstanceId;
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandBox))
+            {
+                body["SandBox"] = request.SandBox;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VendorParam))
+            {
+                body["VendorParam"] = request.VendorParam;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
