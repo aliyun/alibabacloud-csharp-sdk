@@ -1,3 +1,7 @@
+2025-10-20 Version: 1.5.0
+- Support API ListPartitions.
+
+
 2025-09-18 Version: 1.4.0
 - Support API GetTableToken.
 - Update API ListTableDetails: add request parameters type.
