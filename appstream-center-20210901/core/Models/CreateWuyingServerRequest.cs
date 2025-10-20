@@ -151,6 +151,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string ServerInstanceType { get; set; }
 
+        [NameInMap("ServerPortRange")]
+        [Validation(Required=false)]
+        public string ServerPortRange { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cloud_auto</para>

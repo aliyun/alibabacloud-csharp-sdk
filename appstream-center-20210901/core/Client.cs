@@ -1201,6 +1201,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["ServerInstanceType"] = request.ServerInstanceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerPortRange))
+            {
+                body["ServerPortRange"] = request.ServerPortRange;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskCategory))
             {
                 body["SystemDiskCategory"] = request.SystemDiskCategory;
@@ -1332,6 +1336,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerInstanceType))
             {
                 body["ServerInstanceType"] = request.ServerInstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerPortRange))
+            {
+                body["ServerPortRange"] = request.ServerPortRange;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskCategory))
             {
@@ -1727,6 +1735,106 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAppInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <param name="request">
+        /// DeleteImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteImageResponse
+        /// </returns>
+        public DeleteImageResponse DeleteImageWithOptions(DeleteImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DeleteImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteImageResponse
+        /// </returns>
+        public async Task<DeleteImageResponse> DeleteImageWithOptionsAsync(DeleteImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DeleteImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteImageResponse
+        /// </returns>
+        public DeleteImageResponse DeleteImage(DeleteImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteImageWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// DeleteImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteImageResponse
+        /// </returns>
+        public async Task<DeleteImageResponse> DeleteImageAsync(DeleteImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteImageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6997,6 +7105,146 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RestartWuyingServerWithOptionsAsync(request, runtime);
+        }
+
+        /// <param name="request">
+        /// StartTaskForDistributeImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartTaskForDistributeImageResponse
+        /// </returns>
+        public StartTaskForDistributeImageResponse StartTaskForDistributeImageWithOptions(StartTaskForDistributeImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationRegionList))
+            {
+                body["DestinationRegionList"] = request.DestinationRegionList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryType))
+            {
+                body["RetryType"] = request.RetryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegion))
+            {
+                body["SourceRegion"] = request.SourceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartTaskForDistributeImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartTaskForDistributeImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// StartTaskForDistributeImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartTaskForDistributeImageResponse
+        /// </returns>
+        public async Task<StartTaskForDistributeImageResponse> StartTaskForDistributeImageWithOptionsAsync(StartTaskForDistributeImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationRegionList))
+            {
+                body["DestinationRegionList"] = request.DestinationRegionList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryType))
+            {
+                body["RetryType"] = request.RetryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegion))
+            {
+                body["SourceRegion"] = request.SourceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartTaskForDistributeImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartTaskForDistributeImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// StartTaskForDistributeImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartTaskForDistributeImageResponse
+        /// </returns>
+        public StartTaskForDistributeImageResponse StartTaskForDistributeImage(StartTaskForDistributeImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartTaskForDistributeImageWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// StartTaskForDistributeImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartTaskForDistributeImageResponse
+        /// </returns>
+        public async Task<StartTaskForDistributeImageResponse> StartTaskForDistributeImageAsync(StartTaskForDistributeImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartTaskForDistributeImageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
