@@ -1,3 +1,16 @@
+2025-10-20 Version: 1.11.0
+- Support API CreateBrand.
+- Support API DeleteBrand.
+- Support API DisableBrand.
+- Support API EnableBrand.
+- Support API GetBrand.
+- Support API GetLoginRedirectApplicationForBrand.
+- Support API ListBrands.
+- Support API SetLoginRedirectApplicationForBrand.
+- Support API UpdateBrand.
+- Support API UpdateDomainBrand.
+
+
 2025-10-15 Version: 1.10.0
 - Support API AddApplicationAccountToUser.
 - Support API CreateApplicationFederatedCredential.
