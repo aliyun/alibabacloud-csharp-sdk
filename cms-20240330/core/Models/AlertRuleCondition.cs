@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string Aggregate { get; set; }
 
+            [NameInMap("baseUnit")]
+            [Validation(Required=false)]
+            public string BaseUnit { get; set; }
+
+            [NameInMap("displayUnit")]
+            [Validation(Required=false)]
+            public string DisplayUnit { get; set; }
+
             [NameInMap("oper")]
             [Validation(Required=false)]
             public string Oper { get; set; }

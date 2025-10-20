@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string AddonName { get; set; }
 
+        [NameInMap("language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>databse</para>

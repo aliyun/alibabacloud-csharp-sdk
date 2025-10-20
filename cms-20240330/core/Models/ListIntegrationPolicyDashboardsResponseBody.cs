@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public List<ListIntegrationPolicyDashboardsResponseBodyDashboards> Dashboards { get; set; }
         public class ListIntegrationPolicyDashboardsResponseBodyDashboards : TeaModel {
+            [NameInMap("engine")]
+            [Validation(Required=false)]
+            public string Engine { get; set; }
+
             [NameInMap("folderUid")]
             [Validation(Required=false)]
             public string FolderUid { get; set; }

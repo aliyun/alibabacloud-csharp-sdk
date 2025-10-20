@@ -5231,6 +5231,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 query["addonName"] = request.AddonName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
             {
                 query["scene"] = request.Scene;
@@ -5280,6 +5284,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonName))
             {
                 query["addonName"] = request.AddonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
             {
