@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateMemoryRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>365</para>
         /// </summary>
@@ -20,14 +18,24 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? LongTtl { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("permanent")]
+        [Validation(Required=false)]
+        public bool? Permanent { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
         [NameInMap("shortTtl")]
         [Validation(Required=false)]
         public int? ShortTtl { get; set; }
+
+        [NameInMap("strategy")]
+        [Validation(Required=false)]
+        public List<string> Strategy { get; set; }
 
     }
 

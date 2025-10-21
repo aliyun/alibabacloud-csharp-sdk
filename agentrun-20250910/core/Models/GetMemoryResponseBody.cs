@@ -21,6 +21,18 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public GetMemoryResponseBodyData Data { get; set; }
         public class GetMemoryResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>my-cms-workspace</para>
+            /// </summary>
+            [NameInMap("cmsWorkspaceName")]
+            [Validation(Required=false)]
+            public string CmsWorkspaceName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1735870116</para>
+            /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public int? CreateTime { get; set; }
@@ -43,11 +55,23 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("permanent")]
+            [Validation(Required=false)]
+            public bool? Permanent { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>
             [NameInMap("shortTtl")]
             [Validation(Required=false)]
             public int? ShortTtl { get; set; }
+
+            [NameInMap("strategy")]
+            [Validation(Required=false)]
+            public List<string> Strategy { get; set; }
 
         }
 

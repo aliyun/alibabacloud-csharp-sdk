@@ -627,9 +627,17 @@ namespace AlibabaCloud.SDK.AgentRun20250910
             {
                 body["name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Permanent))
+            {
+                body["permanent"] = request.Permanent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShortTtl))
             {
                 body["shortTtl"] = request.ShortTtl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                body["strategy"] = request.Strategy;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -681,9 +689,17 @@ namespace AlibabaCloud.SDK.AgentRun20250910
             {
                 body["name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Permanent))
+            {
+                body["permanent"] = request.Permanent;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShortTtl))
             {
                 body["shortTtl"] = request.ShortTtl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                body["strategy"] = request.Strategy;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4212,19 +4228,27 @@ namespace AlibabaCloud.SDK.AgentRun20250910
         public UpdateMemoryResponse UpdateMemoryWithOptions(string memoryName, UpdateMemoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LongTtl))
             {
-                query["longTtl"] = request.LongTtl;
+                body["longTtl"] = request.LongTtl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Permanent))
+            {
+                body["permanent"] = request.Permanent;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShortTtl))
             {
-                query["shortTtl"] = request.ShortTtl;
+                body["shortTtl"] = request.ShortTtl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                body["strategy"] = request.Strategy;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4262,19 +4286,27 @@ namespace AlibabaCloud.SDK.AgentRun20250910
         public async Task<UpdateMemoryResponse> UpdateMemoryWithOptionsAsync(string memoryName, UpdateMemoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LongTtl))
             {
-                query["longTtl"] = request.LongTtl;
+                body["longTtl"] = request.LongTtl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Permanent))
+            {
+                body["permanent"] = request.Permanent;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShortTtl))
             {
-                query["shortTtl"] = request.ShortTtl;
+                body["shortTtl"] = request.ShortTtl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                body["strategy"] = request.Strategy;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {

@@ -17,6 +17,20 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("data")]
+        [Validation(Required=false)]
+        public UpdateMemoryResponseBodyData Data { get; set; }
+        public class UpdateMemoryResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>default_workspace</para>
+            /// </summary>
+            [NameInMap("cmsWorkspaceName")]
+            [Validation(Required=false)]
+            public string CmsWorkspaceName { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Id of the request</para>
         /// 

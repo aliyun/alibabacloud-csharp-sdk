@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("permanent")]
+        [Validation(Required=false)]
+        public bool? Permanent { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +46,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [NameInMap("shortTtl")]
         [Validation(Required=false)]
         public int? ShortTtl { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[&quot;Preference&quot;, &quot;Facts&quot;]</para>
+        /// </summary>
+        [NameInMap("strategy")]
+        [Validation(Required=false)]
+        public List<string> Strategy { get; set; }
 
     }
 
