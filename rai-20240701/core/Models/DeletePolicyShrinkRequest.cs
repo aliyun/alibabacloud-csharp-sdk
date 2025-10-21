@@ -8,24 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RAI20240701.Models
 {
-    public class ListSensitiveWordRequest : TeaModel {
+    public class DeletePolicyShrinkRequest : TeaModel {
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>List of detection policy IDs</para>
         /// </summary>
-        [NameInMap("PageNumber")]
+        [NameInMap("PolicyIdList")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string PolicyIdListShrink { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>10</para>
-        /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>

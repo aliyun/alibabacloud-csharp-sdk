@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RAI20240701.Models
 {
     public class GetModelInputContentDetectResultRequest : TeaModel {
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RAI20240701.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5d85cd38-03b2-49fd-86b2-be85c4b13215</para>
         /// </summary>

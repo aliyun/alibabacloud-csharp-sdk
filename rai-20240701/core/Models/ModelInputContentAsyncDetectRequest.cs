@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.RAI20240701.Models
 {
     public class ModelInputContentAsyncDetectRequest : TeaModel {
+        /// <summary>
+        /// <para>Request object</para>
+        /// </summary>
         [NameInMap("BodyData")]
         [Validation(Required=false)]
         public ModelInputContentAsyncDetectRequestBodyData BodyData { get; set; }
         public class ModelInputContentAsyncDetectRequestBodyData : TeaModel {
+            /// <summary>
+            /// <ol>
+            /// <item><description>The text content to be reviewed, with a maximum limit of 10000 characters (including English and Chinese).</description></item>
+            /// <item><description>Or the URL address of the image to be reviewed.</description></item>
+            /// </ol>
+            /// 
+            /// <b>Example:</b>
+            /// <para>the content to be checked</para>
+            /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
@@ -20,6 +32,8 @@ namespace AlibabaCloud.SDK.RAI20240701.Models
         }
 
         /// <summary>
+        /// <para>Policy ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>x1bc5xgs4uhx</para>
         /// </summary>
@@ -28,6 +42,8 @@ namespace AlibabaCloud.SDK.RAI20240701.Models
         public string PolicyIdentifier { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -36,6 +52,8 @@ namespace AlibabaCloud.SDK.RAI20240701.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Scene name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -44,8 +62,11 @@ namespace AlibabaCloud.SDK.RAI20240701.Models
         public string SceneName { get; set; }
 
         /// <summary>
+        /// <para>Service name</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>textDetection</para>
+        /// <para>textDetection
+        /// imageDetection</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]

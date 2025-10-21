@@ -8,20 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RAI20240701.Models
 {
-    public class SyncSensitiveWordShrinkRequest : TeaModel {
-        [NameInMap("BodyData")]
-        [Validation(Required=false)]
-        public string BodyDataShrink { get; set; }
-
+    public class DeletePolicyRequest : TeaModel {
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>List of detection policy IDs</para>
         /// </summary>
-        [NameInMap("Commit")]
+        [NameInMap("PolicyIdList")]
         [Validation(Required=false)]
-        public bool? Commit { get; set; }
+        public List<long?> PolicyIdList { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>

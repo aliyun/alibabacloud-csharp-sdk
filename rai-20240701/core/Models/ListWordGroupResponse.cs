@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RAI20240701.Models
 {
-    public class SyncSensitiveWordResponse : TeaModel {
+    public class ListWordGroupResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.RAI20240701.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public SyncSensitiveWordResponseBody Body { get; set; }
+        public ListWordGroupResponseBody Body { get; set; }
 
     }
 
