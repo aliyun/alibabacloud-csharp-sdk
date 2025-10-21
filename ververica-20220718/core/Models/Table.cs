@@ -13,6 +13,13 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public string Comment { get; set; }
 
+        [NameInMap("metadata")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Metadata { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -28,6 +35,13 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [NameInMap("schema")]
         [Validation(Required=false)]
         public Schema Schema { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("tableType")]
+        [Validation(Required=false)]
+        public string TableType { get; set; }
 
     }
 

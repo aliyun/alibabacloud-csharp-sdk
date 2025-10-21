@@ -8,18 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class TableColumn : TeaModel {
-        [NameInMap("expression")]
+    public class AiModel : TeaModel {
+        [NameInMap("comment")]
         [Validation(Required=false)]
-        public string Expression { get; set; }
+        public string Comment { get; set; }
 
-        [NameInMap("logicalType")]
+        [NameInMap("inputSchema")]
         [Validation(Required=false)]
-        public string LogicalType { get; set; }
-
-        [NameInMap("metadataInfo")]
-        [Validation(Required=false)]
-        public MetadataInfo MetadataInfo { get; set; }
+        public Schema InputSchema { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -28,13 +24,16 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("nullable")]
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("options")]
         [Validation(Required=false)]
-        public bool? Nullable { get; set; }
+        public Dictionary<string, string> Options { get; set; }
 
-        [NameInMap("type")]
+        [NameInMap("outputSchema")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public Schema OutputSchema { get; set; }
 
     }
 

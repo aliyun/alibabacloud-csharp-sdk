@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public ResourceSpec Limit { get; set; }
 
+        [NameInMap("request")]
+        [Validation(Required=false)]
+        public ResourceSpec Request { get; set; }
+
         [NameInMap("used")]
         [Validation(Required=false)]
         public ResourceSpec Used { get; set; }

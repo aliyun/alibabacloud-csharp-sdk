@@ -8,34 +8,36 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class PrimaryKey : TeaModel {
+    public class FetchSqlPreviewResultsRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>19426537348647121698828223472</para>
         /// </summary>
-        [NameInMap("columns")]
+        [NameInMap("queryId")]
         [Validation(Required=false)]
-        public List<string> Columns { get; set; }
+        public string QueryId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-session</para>
         /// </summary>
-        [NameInMap("constraintName")]
+        [NameInMap("sessionClusterName")]
         [Validation(Required=false)]
-        public string ConstraintName { get; set; }
+        public string SessionClusterName { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5f581795-4c5b-43f1-bdae-d7b0871080a1</para>
         /// </summary>
-        [NameInMap("constraintType")]
+        [NameInMap("sessionId")]
         [Validation(Required=false)]
-        public string ConstraintType { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("enforced")]
-        [Validation(Required=false)]
-        public bool? Enforced { get; set; }
+        public string SessionId { get; set; }
 
     }
 

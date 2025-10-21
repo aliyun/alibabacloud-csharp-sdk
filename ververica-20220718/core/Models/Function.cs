@@ -8,34 +8,42 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class PrimaryKey : TeaModel {
+    public class Function : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("columns")]
+        [NameInMap("className")]
         [Validation(Required=false)]
-        public List<string> Columns { get; set; }
+        public string ClassName { get; set; }
+
+        [NameInMap("description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("constraintName")]
+        [NameInMap("functionLanguage")]
         [Validation(Required=false)]
-        public string ConstraintName { get; set; }
+        public string FunctionLanguage { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("constraintType")]
+        [NameInMap("functionType")]
         [Validation(Required=false)]
-        public string ConstraintType { get; set; }
+        public string FunctionType { get; set; }
+
+        [NameInMap("gmtModified")]
+        [Validation(Required=false)]
+        public long? GmtModified { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("enforced")]
+        [NameInMap("name")]
         [Validation(Required=false)]
-        public bool? Enforced { get; set; }
+        public string Name { get; set; }
 
     }
 
