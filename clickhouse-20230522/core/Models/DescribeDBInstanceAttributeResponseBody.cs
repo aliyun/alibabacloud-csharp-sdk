@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string ChargeType { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>activation</para>
+            /// </summary>
+            [NameInMap("ClickObserveServiceStatus")]
+            [Validation(Required=false)]
+            public string ClickObserveServiceStatus { get; set; }
+
+            /// <summary>
             /// <para>The time when the cluster was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>

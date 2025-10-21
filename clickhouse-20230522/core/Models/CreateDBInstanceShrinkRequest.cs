@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>6</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("NodeCount")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>32</para>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("NodeScaleMax")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>4</para>
+        /// <para>32</para>
         /// </summary>
         [NameInMap("NodeScaleMin")]
         [Validation(Required=false)]
@@ -155,11 +155,11 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// </summary>
         [NameInMap("StorageQuota")]
         [Validation(Required=false)]
-        public string StorageQuota { get; set; }
+        public long? StorageQuota { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>oss</para>
+        /// <para>OSS</para>
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]

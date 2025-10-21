@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// </summary>
         [NameInMap("StorageQuota")]
         [Validation(Required=false)]
-        public string StorageQuota { get; set; }
+        public long? StorageQuota { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
