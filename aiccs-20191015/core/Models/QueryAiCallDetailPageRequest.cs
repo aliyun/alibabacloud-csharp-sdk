@@ -73,6 +73,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public long? MinConversationDuration { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
+        /// </summary>
+        [NameInMap("OutId")]
+        [Validation(Required=false)]
+        public string OutId { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }

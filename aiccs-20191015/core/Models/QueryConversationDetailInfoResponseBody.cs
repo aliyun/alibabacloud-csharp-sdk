@@ -33,9 +33,81 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <b>Example:</b>
             /// <para>示例值示例值</para>
             /// </summary>
+            [NameInMap("CallId")]
+            [Validation(Required=false)]
+            public string CallId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值</para>
+            /// </summary>
+            [NameInMap("CallResult")]
+            [Validation(Required=false)]
+            public string CallResult { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值</para>
+            /// </summary>
+            [NameInMap("CalledPhone")]
+            [Validation(Required=false)]
+            public string CalledPhone { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值示例值</para>
+            /// </summary>
+            [NameInMap("CallerPhone")]
+            [Validation(Required=false)]
+            public string CallerPhone { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值</para>
+            /// </summary>
             [NameInMap("ConversationRecord")]
             [Validation(Required=false)]
             public string ConversationRecord { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>16</para>
+            /// </summary>
+            [NameInMap("Duration")]
+            [Validation(Required=false)]
+            public long? Duration { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值示例值</para>
+            /// </summary>
+            [NameInMap("FailedReason")]
+            [Validation(Required=false)]
+            public string FailedReason { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值示例值</para>
+            /// </summary>
+            [NameInMap("HangupDirection")]
+            [Validation(Required=false)]
+            public string HangupDirection { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值</para>
+            /// </summary>
+            [NameInMap("MajorIntent")]
+            [Validation(Required=false)]
+            public string MajorIntent { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值示例值</para>
+            /// </summary>
+            [NameInMap("OutId")]
+            [Validation(Required=false)]
+            public string OutId { get; set; }
 
             [NameInMap("OutputTags")]
             [Validation(Required=false)]
@@ -90,6 +162,38 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             [NameInMap("RecordingFileDownloadUrl")]
             [Validation(Required=false)]
             public string RecordingFileDownloadUrl { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>98</para>
+            /// </summary>
+            [NameInMap("ReleaseTime")]
+            [Validation(Required=false)]
+            public long? ReleaseTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>23</para>
+            /// </summary>
+            [NameInMap("StartCallTime")]
+            [Validation(Required=false)]
+            public long? StartCallTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值</para>
+            /// </summary>
+            [NameInMap("StatusCode")]
+            [Validation(Required=false)]
+            public string StatusCode { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值</para>
+            /// </summary>
+            [NameInMap("StatusMsg")]
+            [Validation(Required=false)]
+            public string StatusMsg { get; set; }
 
             [NameInMap("Variables")]
             [Validation(Required=false)]

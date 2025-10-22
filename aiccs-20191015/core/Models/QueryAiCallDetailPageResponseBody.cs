@@ -139,6 +139,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>51</para>
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public long? Status { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>12121211111*****</para>
                 /// </summary>
                 [NameInMap("TaskId")]
