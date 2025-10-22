@@ -2020,6 +2020,158 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             return await ListUserSolutionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商玄坛呼叫中心操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateCallCenterForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateCallCenterForPartnerResponse
+        /// </returns>
+        public OperateCallCenterForPartnerResponse OperateCallCenterForPartnerWithOptions(OperateCallCenterForPartnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallAction))
+            {
+                query["CallAction"] = request.CallAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmployeeCode))
+            {
+                query["EmployeeCode"] = request.EmployeeCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Request))
+            {
+                query["Request"] = request.Request;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateCallCenterForPartner",
+                Version = "2020-03-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateCallCenterForPartnerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商玄坛呼叫中心操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateCallCenterForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateCallCenterForPartnerResponse
+        /// </returns>
+        public async Task<OperateCallCenterForPartnerResponse> OperateCallCenterForPartnerWithOptionsAsync(OperateCallCenterForPartnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallAction))
+            {
+                query["CallAction"] = request.CallAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmployeeCode))
+            {
+                query["EmployeeCode"] = request.EmployeeCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Request))
+            {
+                query["Request"] = request.Request;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["TenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateCallCenterForPartner",
+                Version = "2020-03-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateCallCenterForPartnerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商玄坛呼叫中心操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateCallCenterForPartnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateCallCenterForPartnerResponse
+        /// </returns>
+        public OperateCallCenterForPartnerResponse OperateCallCenterForPartner(OperateCallCenterForPartnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateCallCenterForPartnerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商玄坛呼叫中心操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateCallCenterForPartnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateCallCenterForPartnerResponse
+        /// </returns>
+        public async Task<OperateCallCenterForPartnerResponse> OperateCallCenterForPartnerAsync(OperateCallCenterForPartnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateCallCenterForPartnerWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// OperateProduceForPartnerRequest
         /// </param>
@@ -3192,6 +3344,206 @@ namespace AlibabaCloud.SDK.Companyreg20200306
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryUserNeedAuthWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商玄坛外呼呼叫中心事件回传</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecordCallCenterEventForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecordCallCenterEventForPartnerResponse
+        /// </returns>
+        public RecordCallCenterEventForPartnerResponse RecordCallCenterEventForPartnerWithOptions(RecordCallCenterEventForPartnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallAction))
+            {
+                query["CallAction"] = request.CallAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Callee))
+            {
+                query["Callee"] = request.Callee;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Caller))
+            {
+                query["Caller"] = request.Caller;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnId))
+            {
+                query["ConnId"] = request.ConnId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                query["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedId))
+            {
+                query["RelatedId"] = request.RelatedId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretMobile))
+            {
+                query["SecretMobile"] = request.SecretMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillType))
+            {
+                query["SkillType"] = request.SkillType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecordCallCenterEventForPartner",
+                Version = "2020-03-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecordCallCenterEventForPartnerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商玄坛外呼呼叫中心事件回传</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecordCallCenterEventForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecordCallCenterEventForPartnerResponse
+        /// </returns>
+        public async Task<RecordCallCenterEventForPartnerResponse> RecordCallCenterEventForPartnerWithOptionsAsync(RecordCallCenterEventForPartnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallAction))
+            {
+                query["CallAction"] = request.CallAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Callee))
+            {
+                query["Callee"] = request.Callee;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Caller))
+            {
+                query["Caller"] = request.Caller;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnId))
+            {
+                query["ConnId"] = request.ConnId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                query["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedId))
+            {
+                query["RelatedId"] = request.RelatedId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretMobile))
+            {
+                query["SecretMobile"] = request.SecretMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillType))
+            {
+                query["SkillType"] = request.SkillType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecordCallCenterEventForPartner",
+                Version = "2020-03-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecordCallCenterEventForPartnerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商玄坛外呼呼叫中心事件回传</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecordCallCenterEventForPartnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecordCallCenterEventForPartnerResponse
+        /// </returns>
+        public RecordCallCenterEventForPartnerResponse RecordCallCenterEventForPartner(RecordCallCenterEventForPartnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RecordCallCenterEventForPartnerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务商玄坛外呼呼叫中心事件回传</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecordCallCenterEventForPartnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecordCallCenterEventForPartnerResponse
+        /// </returns>
+        public async Task<RecordCallCenterEventForPartnerResponse> RecordCallCenterEventForPartnerAsync(RecordCallCenterEventForPartnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RecordCallCenterEventForPartnerWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
