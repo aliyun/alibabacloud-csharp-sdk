@@ -277,6 +277,302 @@ namespace AlibabaCloud.SDK.Domain20180208
             return await BatchIntrudeDomainsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据OutBizId（批量）查看带价PUSH状态，通常用于超时场景补偿</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchQueryPushStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchQueryPushStatusResponse
+        /// </returns>
+        public BatchQueryPushStatusResponse BatchQueryPushStatusWithOptions(BatchQueryPushStatusRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchQueryPushStatusShrinkRequest request = new BatchQueryPushStatusShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutBizIds))
+            {
+                request.OutBizIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutBizIds, "OutBizIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutBizIdsShrink))
+            {
+                query["OutBizIds"] = request.OutBizIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchQueryPushStatus",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchQueryPushStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据OutBizId（批量）查看带价PUSH状态，通常用于超时场景补偿</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchQueryPushStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchQueryPushStatusResponse
+        /// </returns>
+        public async Task<BatchQueryPushStatusResponse> BatchQueryPushStatusWithOptionsAsync(BatchQueryPushStatusRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchQueryPushStatusShrinkRequest request = new BatchQueryPushStatusShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutBizIds))
+            {
+                request.OutBizIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutBizIds, "OutBizIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutBizIdsShrink))
+            {
+                query["OutBizIds"] = request.OutBizIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchQueryPushStatus",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchQueryPushStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据OutBizId（批量）查看带价PUSH状态，通常用于超时场景补偿</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchQueryPushStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchQueryPushStatusResponse
+        /// </returns>
+        public BatchQueryPushStatusResponse BatchQueryPushStatus(BatchQueryPushStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchQueryPushStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据OutBizId（批量）查看带价PUSH状态，通常用于超时场景补偿</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchQueryPushStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchQueryPushStatusResponse
+        /// </returns>
+        public async Task<BatchQueryPushStatusResponse> BatchQueryPushStatusAsync(BatchQueryPushStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchQueryPushStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量撤回带价PUSH</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchRecallPushRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchRecallPushResponse
+        /// </returns>
+        public BatchRecallPushResponse BatchRecallPushWithOptions(BatchRecallPushRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchRecallPushShrinkRequest request = new BatchRecallPushShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutBizIds))
+            {
+                request.OutBizIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutBizIds, "OutBizIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutBizIdsShrink))
+            {
+                query["OutBizIds"] = request.OutBizIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchRecallPush",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchRecallPushResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量撤回带价PUSH</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchRecallPushRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchRecallPushResponse
+        /// </returns>
+        public async Task<BatchRecallPushResponse> BatchRecallPushWithOptionsAsync(BatchRecallPushRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchRecallPushShrinkRequest request = new BatchRecallPushShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OutBizIds))
+            {
+                request.OutBizIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OutBizIds, "OutBizIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutBizIdsShrink))
+            {
+                query["OutBizIds"] = request.OutBizIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchRecallPush",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchRecallPushResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量撤回带价PUSH</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchRecallPushRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchRecallPushResponse
+        /// </returns>
+        public BatchRecallPushResponse BatchRecallPush(BatchRecallPushRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchRecallPushWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量撤回带价PUSH</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchRecallPushRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchRecallPushResponse
+        /// </returns>
+        public async Task<BatchRecallPushResponse> BatchRecallPushAsync(BatchRecallPushRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchRecallPushWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// BidDomainRequest
         /// </param>
@@ -603,6 +899,126 @@ namespace AlibabaCloud.SDK.Domain20180208
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckDomainStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验域名带价PUSH接收方可接收</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckPushReceiverRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckPushReceiverResponse
+        /// </returns>
+        public CheckPushReceiverResponse CheckPushReceiverWithOptions(CheckPushReceiverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReceiverAccount))
+            {
+                query["ReceiverAccount"] = request.ReceiverAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckPushReceiver",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckPushReceiverResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验域名带价PUSH接收方可接收</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckPushReceiverRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckPushReceiverResponse
+        /// </returns>
+        public async Task<CheckPushReceiverResponse> CheckPushReceiverWithOptionsAsync(CheckPushReceiverRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReceiverAccount))
+            {
+                query["ReceiverAccount"] = request.ReceiverAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckPushReceiver",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckPushReceiverResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验域名带价PUSH接收方可接收</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckPushReceiverRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckPushReceiverResponse
+        /// </returns>
+        public CheckPushReceiverResponse CheckPushReceiver(CheckPushReceiverRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckPushReceiverWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>校验域名带价PUSH接收方可接收</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckPushReceiverRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckPushReceiverResponse
+        /// </returns>
+        public async Task<CheckPushReceiverResponse> CheckPushReceiverAsync(CheckPushReceiverRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckPushReceiverWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1519,6 +1935,162 @@ namespace AlibabaCloud.SDK.Domain20180208
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PurchaseIntlDomainWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布域名PUSH，目前只支持0元PUSH</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// PushDomainsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushDomainsResponse
+        /// </returns>
+        public PushDomainsResponse PushDomainsWithOptions(PushDomainsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PushDomainsShrinkRequest request = new PushDomainsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DomainList))
+            {
+                request.DomainListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DomainList, "DomainList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainListShrink))
+            {
+                query["DomainList"] = request.DomainListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutBizId))
+            {
+                query["OutBizId"] = request.OutBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishRemark))
+            {
+                query["PublishRemark"] = request.PublishRemark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReceiverAccount))
+            {
+                query["ReceiverAccount"] = request.ReceiverAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PushDomains",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PushDomainsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布域名PUSH，目前只支持0元PUSH</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// PushDomainsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushDomainsResponse
+        /// </returns>
+        public async Task<PushDomainsResponse> PushDomainsWithOptionsAsync(PushDomainsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PushDomainsShrinkRequest request = new PushDomainsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DomainList))
+            {
+                request.DomainListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DomainList, "DomainList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainListShrink))
+            {
+                query["DomainList"] = request.DomainListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutBizId))
+            {
+                query["OutBizId"] = request.OutBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishRemark))
+            {
+                query["PublishRemark"] = request.PublishRemark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReceiverAccount))
+            {
+                query["ReceiverAccount"] = request.ReceiverAccount;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PushDomains",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PushDomainsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布域名PUSH，目前只支持0元PUSH</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PushDomainsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushDomainsResponse
+        /// </returns>
+        public PushDomainsResponse PushDomains(PushDomainsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PushDomainsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布域名PUSH，目前只支持0元PUSH</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PushDomainsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushDomainsResponse
+        /// </returns>
+        public async Task<PushDomainsResponse> PushDomainsAsync(PushDomainsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PushDomainsWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
