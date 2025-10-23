@@ -213,6 +213,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public long? JobMaxRunningTimeMinutes { get; set; }
 
+        [NameInMap("JobReplicaStatuses")]
+        [Validation(Required=false)]
+        public JobReplicaStatus JobReplicaStatuses { get; set; }
+
         [NameInMap("JobSpecs")]
         [Validation(Required=false)]
         public List<JobSpec> JobSpecs { get; set; }

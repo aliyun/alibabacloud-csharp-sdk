@@ -1,3 +1,7 @@
+2025-10-23 Version: 1.7.3
+- Update API GetJob: add response parameters Body.JobReplicaStatuses.
+
+
 2025-10-17 Version: 1.7.2
 - Update API ListJobs: add request parameters DisplayNameSearchMode.
 

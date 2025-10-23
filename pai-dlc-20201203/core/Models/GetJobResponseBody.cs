@@ -252,6 +252,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        [NameInMap("JobReplicaStatuses")]
+        [Validation(Required=false)]
+        public List<JobReplicaStatus> JobReplicaStatuses { get; set; }
+
         /// <summary>
         /// <para>The node configuration of the job, which is <b>JobSpecs</b> in the CreateJob operation.</para>
         /// </summary>
