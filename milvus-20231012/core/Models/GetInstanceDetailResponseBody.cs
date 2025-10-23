@@ -372,6 +372,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 
             }
 
+            [NameInMap("MultiZoneMode")]
+            [Validation(Required=false)]
+            public string MultiZoneMode { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>perf</para>
@@ -509,6 +513,20 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [NameInMap("UserConfig")]
             [Validation(Required=false)]
             public string UserConfig { get; set; }
+
+            [NameInMap("VSwitches")]
+            [Validation(Required=false)]
+            public List<GetInstanceDetailResponseBodyDataVSwitches> VSwitches { get; set; }
+            public class GetInstanceDetailResponseBodyDataVSwitches : TeaModel {
+                [NameInMap("VswId")]
+                [Validation(Required=false)]
+                public string VswId { get; set; }
+
+                [NameInMap("ZoneId")]
+                [Validation(Required=false)]
+                public string ZoneId { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The kernel version.</para>
