@@ -95,6 +95,24 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string TagName { get; set; }
 
+        [NameInMap("Template")]
+        [Validation(Required=false)]
+        public SingleSendMailRequestTemplate Template { get; set; }
+        public class SingleSendMailRequestTemplate : TeaModel {
+            [NameInMap("TemplateData")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> TemplateData { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>xxx</para>
+            /// </summary>
+            [NameInMap("TemplateId")]
+            [Validation(Required=false)]
+            public string TemplateId { get; set; }
+
+        }
+
         [NameInMap("TextBody")]
         [Validation(Required=false)]
         public string TextBody { get; set; }

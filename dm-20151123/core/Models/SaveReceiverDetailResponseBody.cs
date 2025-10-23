@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [Validation(Required=false)]
                 public string Email { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>XXX</para>
+                /// </summary>
+                [NameInMap("ErrMessage")]
+                [Validation(Required=false)]
+                public string ErrMessage { get; set; }
+
             }
 
         }

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
-    public class SingleSendMailAdvanceRequest : TeaModel {
+    public class SingleSendMailShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -25,15 +25,15 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 
         [NameInMap("Attachments")]
         [Validation(Required=false)]
-        public List<SingleSendMailAdvanceRequestAttachments> Attachments { get; set; }
-        public class SingleSendMailAdvanceRequestAttachments : TeaModel {
+        public List<SingleSendMailShrinkRequestAttachments> Attachments { get; set; }
+        public class SingleSendMailShrinkRequestAttachments : TeaModel {
             [NameInMap("AttachmentName")]
             [Validation(Required=false)]
             public string AttachmentName { get; set; }
 
             [NameInMap("AttachmentUrl")]
             [Validation(Required=false)]
-            public Stream AttachmentUrlObject { get; set; }
+            public string AttachmentUrl { get; set; }
 
         }
 
@@ -97,21 +97,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 
         [NameInMap("Template")]
         [Validation(Required=false)]
-        public SingleSendMailAdvanceRequestTemplate Template { get; set; }
-        public class SingleSendMailAdvanceRequestTemplate : TeaModel {
-            [NameInMap("TemplateData")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> TemplateData { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>xxx</para>
-            /// </summary>
-            [NameInMap("TemplateId")]
-            [Validation(Required=false)]
-            public string TemplateId { get; set; }
-
-        }
+        public string TemplateShrink { get; set; }
 
         [NameInMap("TextBody")]
         [Validation(Required=false)]

@@ -95,6 +95,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? TemplateId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;age&quot;:&quot;20&quot;,&quot;nickName&quot;:&quot;tom&quot;}</para>
+        /// </summary>
+        [NameInMap("TemplateParams")]
+        [Validation(Required=false)]
+        public string TemplateParams { get; set; }
+
+        /// <summary>
         /// <para>UserName, with a maximum length of 30 characters</para>
         /// 
         /// <b>Example:</b>
