@@ -310,6 +310,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                 [Validation(Required=false)]
                 public string Height { get; set; }
 
+                [NameInMap("MD5")]
+                [Validation(Required=false)]
+                public string MD5 { get; set; }
+
                 /// <summary>
                 /// <para>The media streams that are contained in the input media file.</para>
                 /// </summary>
@@ -424,6 +428,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                             [NameInMap("Duration")]
                             [Validation(Required=false)]
                             public string Duration { get; set; }
+
+                            [NameInMap("DurationInaccurate")]
+                            [Validation(Required=false)]
+                            public string DurationInaccurate { get; set; }
 
                             /// <summary>
                             /// <para>The sequence number of the audio stream. The value indicates the position of the audio stream in all audio streams.</para>
@@ -754,6 +762,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
                             [NameInMap("Duration")]
                             [Validation(Required=false)]
                             public string Duration { get; set; }
+
+                            [NameInMap("DurationInaccurate")]
+                            [Validation(Required=false)]
+                            public string DurationInaccurate { get; set; }
 
                             /// <summary>
                             /// <para>The frame rate.</para>

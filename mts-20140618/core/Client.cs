@@ -14828,6 +14828,10 @@ namespace AlibabaCloud.SDK.Mts20140618
             {
                 query["Async"] = request.Async;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
             {
                 query["Input"] = request.Input;
@@ -14908,6 +14912,10 @@ namespace AlibabaCloud.SDK.Mts20140618
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Async))
             {
                 query["Async"] = request.Async;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
             {

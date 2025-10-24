@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Mts20140618.Models
         [Validation(Required=false)]
         public bool? Async { get; set; }
 
+        [NameInMap("Config")]
+        [Validation(Required=false)]
+        public string Config { get; set; }
+
         /// <summary>
         /// <para>The information about the input media file. The value is a JSON string. You must perform the following operations to add the OSS bucket in which the input media file is stored as a media bucket: Log on to the <b>MPS console</b>, choose <b>Workflows</b> &gt; <b>Media Buckets</b> in the left-side navigation pane, and then click <b>Add Bucket</b>. After you add the OSS bucket as a media bucket, you must perform URL encoding for the OSS object. For example, <c>{&quot;Bucket&quot;:&quot;example-bucket&quot;,&quot;Location&quot;:&quot;example-location&quot;,&quot;Object&quot;:&quot;example%2Fexample.flv&quot;}</c> indicates the <c>example-bucket.example-location.aliyuncs.com/example/example.flv</c> file.</para>
         /// <remarks>
