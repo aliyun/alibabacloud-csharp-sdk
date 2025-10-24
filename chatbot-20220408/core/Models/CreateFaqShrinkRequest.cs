@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
-    public class UpdateFaqRequest : TeaModel {
+    public class CreateFaqShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>30000049006</para>
+        /// <para>1000053274</para>
         /// </summary>
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
@@ -35,19 +35,21 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>30001905617</para>
-        /// </summary>
-        [NameInMap("KnowledgeId")]
+        [NameInMap("SolutionContent")]
         [Validation(Required=false)]
-        public long? KnowledgeId { get; set; }
+        public string SolutionContent { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2022-05-27T05:18:20Z</para>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("SolutionType")]
+        [Validation(Required=false)]
+        public int? SolutionType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2022-05-25T16:28:36Z</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 
         [NameInMap("TagIdList")]
         [Validation(Required=false)]
-        public List<long?> TagIdList { get; set; }
+        public string TagIdListShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

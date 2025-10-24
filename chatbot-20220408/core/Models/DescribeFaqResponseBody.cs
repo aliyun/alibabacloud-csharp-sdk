@@ -223,6 +223,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public int? Status { get; set; }
 
+        [NameInMap("TagIdList")]
+        [Validation(Required=false)]
+        public List<long?> TagIdList { get; set; }
+
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }

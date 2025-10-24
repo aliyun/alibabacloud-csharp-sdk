@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
-    public class UpdateFaqRequest : TeaModel {
+    public class UpdateFaqShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 
         [NameInMap("TagIdList")]
         [Validation(Required=false)]
-        public List<long?> TagIdList { get; set; }
+        public string TagIdListShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

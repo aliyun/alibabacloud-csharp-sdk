@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
+        [NameInMap("TagIdList")]
+        [Validation(Required=false)]
+        public List<long?> TagIdList { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>

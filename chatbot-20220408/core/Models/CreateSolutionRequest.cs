@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public List<string> PerspectiveCodes { get; set; }
 
+        [NameInMap("TagIdList")]
+        [Validation(Required=false)]
+        public List<long?> TagIdList { get; set; }
+
     }
 
 }

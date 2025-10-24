@@ -8,50 +8,54 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
-    public class UpdateSolutionRequest : TeaModel {
+    public class ListTagRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("AgentKey")]
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
-        [NameInMap("Content")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string Content { get; set; }
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>43445343</para>
+        /// </summary>
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public long? GroupId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
-        [NameInMap("ContentType")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public int? ContentType { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("PerspectiveCodes")]
-        [Validation(Required=false)]
-        public List<string> PerspectiveCodes { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>100001333260</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("SolutionId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long? SolutionId { get; set; }
+        public int? PageSize { get; set; }
 
-        [NameInMap("TagIdList")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xx</para>
+        /// </summary>
+        [NameInMap("TagName")]
         [Validation(Required=false)]
-        public List<long?> TagIdList { get; set; }
+        public string TagName { get; set; }
 
     }
 

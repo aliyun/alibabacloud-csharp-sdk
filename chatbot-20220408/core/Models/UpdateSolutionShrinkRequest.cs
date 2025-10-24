@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
-    public class UpdateFaqRequest : TeaModel {
+    public class UpdateSolutionShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
@@ -19,50 +19,39 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>30000049006</para>
         /// </summary>
-        [NameInMap("CategoryId")]
+        [NameInMap("Content")]
         [Validation(Required=false)]
-        public long? CategoryId { get; set; }
+        public string Content { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2030-12-31T16:00:00Z</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("EndDate")]
+        [NameInMap("ContentType")]
         [Validation(Required=false)]
-        public string EndDate { get; set; }
+        public int? ContentType { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("PerspectiveCodes")]
+        [Validation(Required=false)]
+        public List<string> PerspectiveCodes { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>30001905617</para>
+        /// <para>100001333260</para>
         /// </summary>
-        [NameInMap("KnowledgeId")]
+        [NameInMap("SolutionId")]
         [Validation(Required=false)]
-        public long? KnowledgeId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>2022-05-27T05:18:20Z</para>
-        /// </summary>
-        [NameInMap("StartDate")]
-        [Validation(Required=false)]
-        public string StartDate { get; set; }
+        public long? SolutionId { get; set; }
 
         [NameInMap("TagIdList")]
         [Validation(Required=false)]
-        public List<long?> TagIdList { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("Title")]
-        [Validation(Required=false)]
-        public string Title { get; set; }
+        public string TagIdListShrink { get; set; }
 
     }
 
