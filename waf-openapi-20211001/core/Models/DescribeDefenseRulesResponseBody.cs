@@ -26,8 +26,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public List<DescribeDefenseRulesResponseBodyRules> Rules { get; set; }
         public class DescribeDefenseRulesResponseBodyRules : TeaModel {
+            /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;empty&quot;:&quot;test&quot;}</para>
+            /// </summary>
             [NameInMap("ActionExternal")]
             [Validation(Required=false)]
+            [Obsolete]
             public string ActionExternal { get; set; }
 
             /// <summary>
@@ -83,16 +91,40 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string DefenseType { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
+            [Obsolete]
             public string Description { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123,456</para>
+            /// </summary>
             [NameInMap("DetailRuleIds")]
             [Validation(Required=false)]
+            [Obsolete]
             public string DetailRuleIds { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// 
+            /// <b>Example:</b>
+            /// <para>empty</para>
+            /// </summary>
             [NameInMap("ExternalInfo")]
             [Validation(Required=false)]
+            [Obsolete]
             public string ExternalInfo { get; set; }
 
             [NameInMap("GmtCreate")]
@@ -133,8 +165,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("RuleType")]
             [Validation(Required=false)]
+            [Obsolete]
             public string RuleType { get; set; }
 
             /// <summary>
