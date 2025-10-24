@@ -53,6 +53,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
+        [NameInMap("ShareDataVolume")]
+        [Validation(Required=false)]
+        public int? ShareDataVolume { get; set; }
+
+        [NameInMap("SwapSize")]
+        [Validation(Required=false)]
+        public int? SwapSize { get; set; }
+
         [NameInMap("UpBandwidthLimit")]
         [Validation(Required=false)]
         public int? UpBandwidthLimit { get; set; }

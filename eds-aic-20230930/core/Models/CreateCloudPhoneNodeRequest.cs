@@ -283,6 +283,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public int? StreamMode { get; set; }
 
+        [NameInMap("SwapSize")]
+        [Validation(Required=false)]
+        public int? SwapSize { get; set; }
+
         /// <summary>
         /// <para>The resource tags.</para>
         /// </summary>

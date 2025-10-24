@@ -274,6 +274,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("SwapSize")]
+            [Validation(Required=false)]
+            public int? SwapSize { get; set; }
+
             /// <summary>
             /// <para>The vSwitch ID.</para>
             /// 

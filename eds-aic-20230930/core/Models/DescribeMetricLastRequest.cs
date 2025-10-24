@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public List<string> InstanceIds { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1000</para>
