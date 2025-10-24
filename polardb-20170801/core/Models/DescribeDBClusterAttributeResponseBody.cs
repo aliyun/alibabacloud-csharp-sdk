@@ -912,6 +912,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? SQLSize { get; set; }
 
+        [NameInMap("SearchClusterStatus")]
+        [Validation(Required=false)]
+        public string SearchClusterStatus { get; set; }
+
         [NameInMap("SearchCompressStorageUsed")]
         [Validation(Required=false)]
         public long? SearchCompressStorageUsed { get; set; }
