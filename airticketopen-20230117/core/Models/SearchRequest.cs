@@ -39,7 +39,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
             /// <summary>
             /// <para>arrival city code</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MFM</para>
@@ -60,7 +59,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
             /// <summary>
             /// <para>departure city code</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SHA</para>
@@ -129,6 +127,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public class SearchRequestSearchControlOptions : TeaModel {
             /// <summary>
             /// <para>excluded airlines list</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>7C</para>
             /// </summary>
             [NameInMap("airline_excluded_list")]
             [Validation(Required=false)]
@@ -136,6 +137,9 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
             /// <summary>
             /// <para>preferred airlines list</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>FD</para>
             /// </summary>
             [NameInMap("airline_prefer_list")]
             [Validation(Required=false)]

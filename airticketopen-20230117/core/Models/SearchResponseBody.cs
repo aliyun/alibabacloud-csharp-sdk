@@ -343,26 +343,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>product type description</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>&quot;&quot;</para>
-                /// </summary>
-                [NameInMap("product_type_description")]
-                [Validation(Required=false)]
-                public string ProductTypeDescription { get; set; }
-
-                /// <summary>
-                /// <para>refund airline coupon description</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>&quot;&quot;</para>
-                /// </summary>
-                [NameInMap("refund_ticket_coupon_description")]
-                [Validation(Required=false)]
-                public string RefundTicketCouponDescription { get; set; }
-
-                /// <summary>
                 /// <para>through check-in baggage policy</para>
                 /// </summary>
                 [NameInMap("segment_baggage_check_in_info_list")]
@@ -450,6 +430,20 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [Validation(Required=false)]
                 public SearchResponseBodyDataSolutionListSolutionAttribute SolutionAttribute { get; set; }
                 public class SearchResponseBodyDataSolutionListSolutionAttribute : TeaModel {
+                    [NameInMap("issue_time_info")]
+                    [Validation(Required=false)]
+                    public SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo IssueTimeInfo { get; set; }
+                    public class SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo : TeaModel {
+                        [NameInMap("issue_ticket_type")]
+                        [Validation(Required=false)]
+                        public int? IssueTicketType { get; set; }
+
+                        [NameInMap("issue_time_limit")]
+                        [Validation(Required=false)]
+                        public int? IssueTimeLimit { get; set; }
+
+                    }
+
                     /// <summary>
                     /// <para>supply source: 1;2;3</para>
                     /// 

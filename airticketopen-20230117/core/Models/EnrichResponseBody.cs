@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public List<EnrichResponseBodyDataSolutionListJourneyListSegmentList> SegmentList { get; set; }
                     public class EnrichResponseBodyDataSolutionListJourneyListSegmentList : TeaModel {
                         /// <summary>
-                        /// <para>arrival airport code (capitalized)</para>
+                        /// <para>arrival airport code</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>MFM</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string ArrivalAirport { get; set; }
 
                         /// <summary>
-                        /// <para>arrival city code (capitalized)</para>
+                        /// <para>arrival city code</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>MFM</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string ArrivalTerminal { get; set; }
 
                         /// <summary>
-                        /// <para>arrival time in string format (yyyy-MM-dd HH:mm:ss)</para>
+                        /// <para>arrival time (yyyy-MM-dd HH:mm:ss)</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2023-03-10 10:40:00</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public bool? CodeShare { get; set; }
 
                         /// <summary>
-                        /// <para>departure airport code (capitalized)</para>
+                        /// <para>departure airport code</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>PVG</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string DepartureAirport { get; set; }
 
                         /// <summary>
-                        /// <para>departure city code (capitalized)</para>
+                        /// <para>departure city code</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>SHA</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string DepartureTerminal { get; set; }
 
                         /// <summary>
-                        /// <para>departure time in string format (yyyy-MM-dd HH:mm:ss)</para>
+                        /// <para>departure time (yyyy-MM-dd HH:mm:ss)</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2023-03-10 07:55:00</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string OperatingFlightNo { get; set; }
 
                         /// <summary>
-                        /// <para>segment ID format: flight no.+departure airport[IATA airport code]+arrival airport[IATA airport code]+departure time(MMdd)</para>
+                        /// <para>segment ID: flight no+departure airport+arrival airport+departure time(MMdd)</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>HO1295-PVG-MFM-20230310</para>
@@ -341,26 +341,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public int? TransferCount { get; set; }
 
                 }
-
-                /// <summary>
-                /// <para>product type description</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>&quot;&quot;</para>
-                /// </summary>
-                [NameInMap("product_type_description")]
-                [Validation(Required=false)]
-                public string ProductTypeDescription { get; set; }
-
-                /// <summary>
-                /// <para>refund airline coupon description</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>&quot;&quot;</para>
-                /// </summary>
-                [NameInMap("refund_ticket_coupon_description")]
-                [Validation(Required=false)]
-                public string RefundTicketCouponDescription { get; set; }
 
                 /// <summary>
                 /// <para>through check-in baggage  policy</para>
@@ -441,11 +421,30 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
                 }
 
+                /// <summary>
+                /// <para>Quotation Attributes</para>
+                /// </summary>
                 [NameInMap("solution_attribute")]
                 [Validation(Required=false)]
                 public EnrichResponseBodyDataSolutionListSolutionAttribute SolutionAttribute { get; set; }
                 public class EnrichResponseBodyDataSolutionListSolutionAttribute : TeaModel {
+                    [NameInMap("issue_time_info")]
+                    [Validation(Required=false)]
+                    public EnrichResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo IssueTimeInfo { get; set; }
+                    public class EnrichResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo : TeaModel {
+                        [NameInMap("issue_ticket_type")]
+                        [Validation(Required=false)]
+                        public int? IssueTicketType { get; set; }
+
+                        [NameInMap("issue_time_limit")]
+                        [Validation(Required=false)]
+                        public int? IssueTimeLimit { get; set; }
+
+                    }
+
                     /// <summary>
+                    /// <para>Supply source type 1:self-operated; 2:agent; 3:flagship store</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>

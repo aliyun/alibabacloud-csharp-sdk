@@ -597,6 +597,30 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
                 }
 
+                [NameInMap("solution_attribute")]
+                [Validation(Required=false)]
+                public PricingResponseBodyDataSolutionSolutionAttribute SolutionAttribute { get; set; }
+                public class PricingResponseBodyDataSolutionSolutionAttribute : TeaModel {
+                    [NameInMap("issue_time_info")]
+                    [Validation(Required=false)]
+                    public PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo IssueTimeInfo { get; set; }
+                    public class PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo : TeaModel {
+                        [NameInMap("issue_ticket_type")]
+                        [Validation(Required=false)]
+                        public int? IssueTicketType { get; set; }
+
+                        [NameInMap("issue_time_limit")]
+                        [Validation(Required=false)]
+                        public int? IssueTimeLimit { get; set; }
+
+                    }
+
+                    [NameInMap("supply_source_type")]
+                    [Validation(Required=false)]
+                    public string SupplySourceType { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>solution_id, equals to solution_id in request</para>
                 /// 
