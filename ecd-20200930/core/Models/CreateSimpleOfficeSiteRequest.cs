@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateSimpleOfficeSiteRequest : TeaModel {
+        [NameInMap("AccountType")]
+        [Validation(Required=false)]
+        public string AccountType { get; set; }
+
+        [NameInMap("AuthorityHost")]
+        [Validation(Required=false)]
+        public string AuthorityHost { get; set; }
+
         /// <summary>
         /// <para>The maximum public bandwidth. Value range: 10 to 200. Unit: Mbit/s. This parameter is available if you set <c>EnableInternetAccess</c> to <c>true</c>.</para>
         /// 
@@ -61,6 +69,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string CidrBlock { get; set; }
 
+        [NameInMap("ClientId")]
+        [Validation(Required=false)]
+        public string ClientId { get; set; }
+
+        [NameInMap("ClientSecret")]
+        [Validation(Required=false)]
+        public string ClientSecret { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to create a CloudBox-based office network.</para>
         /// <para>Valid values:</para>
@@ -99,6 +115,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("DesktopAccessType")]
         [Validation(Required=false)]
         public string DesktopAccessType { get; set; }
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</para>
@@ -171,6 +191,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("TenantId")]
+        [Validation(Required=false)]
+        public string TenantId { get; set; }
 
         /// <summary>
         /// <para>The IDs of the vSwitches that you want to specify in VPCs. This parameter is required only when you create CloudBox-based office networks.</para>

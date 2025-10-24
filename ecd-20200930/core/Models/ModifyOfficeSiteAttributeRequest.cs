@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyOfficeSiteAttributeRequest : TeaModel {
+        [NameInMap("AuthorityHost")]
+        [Validation(Required=false)]
+        public string AuthorityHost { get; set; }
+
+        [NameInMap("ClientId")]
+        [Validation(Required=false)]
+        public string ClientId { get; set; }
+
+        [NameInMap("ClientSecret")]
+        [Validation(Required=false)]
+        public string ClientSecret { get; set; }
+
         /// <summary>
         /// <para>The method to connect to cloud computers from Alibaba Cloud Workspace clients.</para>
         /// <remarks>
@@ -27,6 +39,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("DesktopAccessType")]
         [Validation(Required=false)]
         public string DesktopAccessType { get; set; }
+
+        [NameInMap("DomainName")]
+        [Validation(Required=false)]
+        public string DomainName { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</para>
@@ -95,6 +111,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("TenantId")]
+        [Validation(Required=false)]
+        public string TenantId { get; set; }
 
     }
 

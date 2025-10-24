@@ -118,6 +118,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string AcceleratorId { get; set; }
 
+            [NameInMap("AccountType")]
+            [Validation(Required=false)]
+            public string AccountType { get; set; }
+
             /// <summary>
             /// <para>The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows.</para>
             /// 
@@ -127,6 +131,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("AdHostname")]
             [Validation(Required=false)]
             public string AdHostname { get; set; }
+
+            [NameInMap("AuthorityHost")]
+            [Validation(Required=false)]
+            public string AuthorityHost { get; set; }
 
             /// <summary>
             /// <para>The hostname of the secondary domain controller.</para>
@@ -188,6 +196,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("CidrBlock")]
             [Validation(Required=false)]
             public string CidrBlock { get; set; }
+
+            [NameInMap("ClientId")]
+            [Validation(Required=false)]
+            public string ClientId { get; set; }
+
+            [NameInMap("ClientSecret")]
+            [Validation(Required=false)]
+            public string ClientSecret { get; set; }
 
             /// <summary>
             /// <para>Indicates whether the CloudBox-based office network is created.</para>
@@ -718,6 +734,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("SubnetMode")]
             [Validation(Required=false)]
             public string SubnetMode { get; set; }
+
+            [NameInMap("TenantId")]
+            [Validation(Required=false)]
+            public string TenantId { get; set; }
 
             /// <summary>
             /// <para>The total number of cloud computers.</para>

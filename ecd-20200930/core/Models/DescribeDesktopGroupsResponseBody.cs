@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribeDesktopGroupsResponseBodyDesktopGroups> DesktopGroups { get; set; }
         public class DescribeDesktopGroupsResponseBodyDesktopGroups : TeaModel {
+            [NameInMap("AccountType")]
+            [Validation(Required=false)]
+            public string AccountType { get; set; }
+
             /// <summary>
             /// <para>The number of concurrent sessions allowed for each cloud computer within the multi-session many-to-many share.</para>
             /// 
@@ -248,6 +252,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("EndUserCount")]
             [Validation(Required=false)]
             public int? EndUserCount { get; set; }
+
+            [NameInMap("EntraDomainName")]
+            [Validation(Required=false)]
+            public string EntraDomainName { get; set; }
 
             /// <summary>
             /// <para>The expiration date of the subscription cloud computer share.</para>

@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribeDesktopsResponseBodyDesktops> Desktops { get; set; }
         public class DescribeDesktopsResponseBodyDesktops : TeaModel {
+            [NameInMap("AccountType")]
+            [Validation(Required=false)]
+            public string AccountType { get; set; }
+
             /// <summary>
             /// <para>The number of concurrent sessions of each cloud computer in a multi-session cloud computer pool.</para>
             /// 
@@ -382,6 +386,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("EndUserIds")]
             [Validation(Required=false)]
             public List<string> EndUserIds { get; set; }
+
+            [NameInMap("EntraDomainName")]
+            [Validation(Required=false)]
+            public string EntraDomainName { get; set; }
 
             /// <summary>
             /// <para>The time when a subscription cloud computer expired.</para>
