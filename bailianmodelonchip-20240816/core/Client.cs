@@ -39,6 +39,136 @@ namespace AlibabaCloud.SDK.BailianModelOnChip20240816
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>主动交互消息传递</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveInteractionCreateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveInteractionCreateResponse
+        /// </returns>
+        public ActiveInteractionCreateResponse ActiveInteractionCreateWithOptions(ActiveInteractionCreateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Image))
+            {
+                body["image"] = request.Image;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ActiveInteractionCreate",
+                Version = "2024-08-16",
+                Protocol = "HTTPS",
+                Pathname = "/open/api/v1/active/interaction/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ActiveInteractionCreateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>主动交互消息传递</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveInteractionCreateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveInteractionCreateResponse
+        /// </returns>
+        public async Task<ActiveInteractionCreateResponse> ActiveInteractionCreateWithOptionsAsync(ActiveInteractionCreateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Image))
+            {
+                body["image"] = request.Image;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ActiveInteractionCreate",
+                Version = "2024-08-16",
+                Protocol = "HTTPS",
+                Pathname = "/open/api/v1/active/interaction/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ActiveInteractionCreateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>主动交互消息传递</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveInteractionCreateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveInteractionCreateResponse
+        /// </returns>
+        public ActiveInteractionCreateResponse ActiveInteractionCreate(ActiveInteractionCreateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ActiveInteractionCreateWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>主动交互消息传递</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveInteractionCreateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveInteractionCreateResponse
+        /// </returns>
+        public async Task<ActiveInteractionCreateResponse> ActiveInteractionCreateAsync(ActiveInteractionCreateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ActiveInteractionCreateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>设备注册</para>
         /// </summary>
         /// 
