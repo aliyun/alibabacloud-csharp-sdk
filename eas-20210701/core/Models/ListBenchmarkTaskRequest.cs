@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        [NameInMap("ModelId")]
+        [Validation(Required=false)]
+        public string ModelId { get; set; }
+
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
         /// <summary>
         /// <para>The page number. Pages start from page 1. Default value: 1.</para>
         /// 
@@ -39,6 +47,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
+        [NameInMap("RequestMethod")]
+        [Validation(Required=false)]
+        public string RequestMethod { get; set; }
+
         /// <summary>
         /// <para>The name of the EAS service that corresponds to the stress testing task. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</para>
         /// 
@@ -48,6 +60,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
+
+        [NameInMap("Sort")]
+        [Validation(Required=false)]
+        public string Sort { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

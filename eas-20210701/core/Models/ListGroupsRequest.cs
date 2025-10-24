@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
         /// <summary>
         /// <para>The page number. Default value: 1.</para>
         /// 
@@ -38,6 +42,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
+
+        [NameInMap("Sort")]
+        [Validation(Required=false)]
+        public string Sort { get; set; }
+
+        [NameInMap("TrafficMode")]
+        [Validation(Required=false)]
+        public string TrafficMode { get; set; }
 
         /// <summary>
         /// <para>The workspace ID.</para>
