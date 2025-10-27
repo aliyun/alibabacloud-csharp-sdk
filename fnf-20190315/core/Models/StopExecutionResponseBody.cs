@@ -10,74 +10,111 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class StopExecutionResponseBody : TeaModel {
         /// <summary>
-        /// The definition of the flow.
+        /// <para>The definition of the flow.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>version: v1.0\ntype: flow\nname: test\nsteps:\n - type: pass\n name: mypass</para>
         /// </summary>
         [NameInMap("FlowDefinition")]
         [Validation(Required=false)]
         public string FlowDefinition { get; set; }
 
         /// <summary>
-        /// The name of the flow.
+        /// <para>The name of the flow.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>flow</para>
         /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]
         public string FlowName { get; set; }
 
         /// <summary>
-        /// The input of the execution, which is in the JSON format.
+        /// <para>The input of the execution, which is in the JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public string Input { get; set; }
 
         /// <summary>
-        /// The name of the execution.
+        /// <para>The name of the execution.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>exec</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The execution result, which is in the JSON format.
+        /// <para>The execution result, which is in the JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
         /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]
         public string Output { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testRequestId</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud resource name (ARN) of the role that executed the flow. If the RoleArn in the flow definition is changed during the execution of the flow, the system records and returns a snapshot of the original RoleArn.</para>
+        /// <remarks>
+        /// <para> If you do not specify the RoleArn parameter in the request parameters, the response parameters do not contain the RoleArn parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram:${region}:${accountID}:${role}</para>
+        /// </summary>
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// The time when the execution started.
+        /// <para>The time when the execution started.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-01-01T01:01:01.001Z</para>
         /// </summary>
         [NameInMap("StartedTime")]
         [Validation(Required=false)]
         public string StartedTime { get; set; }
 
         /// <summary>
-        /// The execution status. Valid values:
+        /// <para>The execution status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Starting</b></description></item>
+        /// <item><description><b>Running</b></description></item>
+        /// <item><description><b>Stopped</b></description></item>
+        /// <item><description><b>Succeeded</b></description></item>
+        /// <item><description><b>Failed</b></description></item>
+        /// <item><description><b>TimedOut</b></description></item>
+        /// </list>
         /// 
-        /// *   **Starting**
-        /// *   **Running**
-        /// *   **Stopped**
-        /// *   **Succeeded**
-        /// *   **Failed**
-        /// *   **TimedOut**
+        /// <b>Example:</b>
+        /// <para>Running</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The time when the execution stopped.
+        /// <para>The time when the execution stopped.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2019-01-01T01:01:01.001Z</para>
         /// </summary>
         [NameInMap("StoppedTime")]
         [Validation(Required=false)]

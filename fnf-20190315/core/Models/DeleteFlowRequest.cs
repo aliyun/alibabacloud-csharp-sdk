@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class DeleteFlowRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

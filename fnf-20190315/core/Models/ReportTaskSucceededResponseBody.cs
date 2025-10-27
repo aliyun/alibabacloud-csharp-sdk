@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class ReportTaskSucceededResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the event.
+        /// <para>The ID of the event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public long? EventId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testRequestId</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

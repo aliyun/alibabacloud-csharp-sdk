@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class DeleteScheduleRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]
         public string FlowName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ScheduleName")]
         [Validation(Required=false)]

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Fnf20190315.Models
 {
     public class DeleteFlowResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testRequestId</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
