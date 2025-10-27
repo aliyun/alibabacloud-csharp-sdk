@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("SystemType")]
+        [Validation(Required=false)]
+        public string SystemType { get; set; }
+
     }
 
 }
