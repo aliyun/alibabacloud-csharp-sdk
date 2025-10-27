@@ -13,6 +13,32 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public List<DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceList> NetworkInstanceList { get; set; }
         public class DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceList : TeaModel {
+            [NameInMap("AssociatedCen")]
+            [Validation(Required=false)]
+            public List<DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen> AssociatedCen { get; set; }
+            public class DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListAssociatedCen : TeaModel {
+                [NameInMap("AttachmentId")]
+                [Validation(Required=false)]
+                public string AttachmentId { get; set; }
+
+                [NameInMap("AttachmentName")]
+                [Validation(Required=false)]
+                public string AttachmentName { get; set; }
+
+                [NameInMap("CenId")]
+                [Validation(Required=false)]
+                public string CenId { get; set; }
+
+                [NameInMap("CenName")]
+                [Validation(Required=false)]
+                public string CenName { get; set; }
+
+                [NameInMap("TransitRouterType")]
+                [Validation(Required=false)]
+                public string TransitRouterType { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>cen</para>
@@ -49,6 +75,32 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public List<DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceList> PeerNetworkInstanceList { get; set; }
             public class DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceList : TeaModel {
+                [NameInMap("AssociatedCen")]
+                [Validation(Required=false)]
+                public List<DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen> AssociatedCen { get; set; }
+                public class DescribeNetworkInstanceRelationListResponseBodyNetworkInstanceListPeerNetworkInstanceListAssociatedCen : TeaModel {
+                    [NameInMap("AttachmentId")]
+                    [Validation(Required=false)]
+                    public string AttachmentId { get; set; }
+
+                    [NameInMap("AttachmentName")]
+                    [Validation(Required=false)]
+                    public string AttachmentName { get; set; }
+
+                    [NameInMap("CenId")]
+                    [Validation(Required=false)]
+                    public string CenId { get; set; }
+
+                    [NameInMap("CenName")]
+                    [Validation(Required=false)]
+                    public string CenName { get; set; }
+
+                    [NameInMap("TransitRouterType")]
+                    [Validation(Required=false)]
+                    public string TransitRouterType { get; set; }
+
+                }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>vpc-dsf232d****</para>

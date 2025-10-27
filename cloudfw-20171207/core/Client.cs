@@ -2348,6 +2348,230 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建私网DNS终端节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePrivateDnsEndpointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePrivateDnsEndpointResponse
+        /// </returns>
+        public CreatePrivateDnsEndpointResponse CreatePrivateDnsEndpointWithOptions(CreatePrivateDnsEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessInstanceName))
+            {
+                query["AccessInstanceName"] = request.AccessInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallType))
+            {
+                query["FirewallType"] = request.FirewallType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpProtocol))
+            {
+                query["IpProtocol"] = request.IpProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
+            {
+                query["MemberUid"] = request.MemberUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryDns))
+            {
+                query["PrimaryDns"] = request.PrimaryDns;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryVSwitchId))
+            {
+                query["PrimaryVSwitchId"] = request.PrimaryVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryVSwitchIp))
+            {
+                query["PrimaryVSwitchIp"] = request.PrimaryVSwitchIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateDnsType))
+            {
+                query["PrivateDnsType"] = request.PrivateDnsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyDns))
+            {
+                query["StandbyDns"] = request.StandbyDns;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyVSwitchId))
+            {
+                query["StandbyVSwitchId"] = request.StandbyVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyVSwitchIp))
+            {
+                query["StandbyVSwitchIp"] = request.StandbyVSwitchIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePrivateDnsEndpoint",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePrivateDnsEndpointResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建私网DNS终端节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePrivateDnsEndpointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePrivateDnsEndpointResponse
+        /// </returns>
+        public async Task<CreatePrivateDnsEndpointResponse> CreatePrivateDnsEndpointWithOptionsAsync(CreatePrivateDnsEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessInstanceName))
+            {
+                query["AccessInstanceName"] = request.AccessInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallType))
+            {
+                query["FirewallType"] = request.FirewallType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpProtocol))
+            {
+                query["IpProtocol"] = request.IpProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
+            {
+                query["MemberUid"] = request.MemberUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryDns))
+            {
+                query["PrimaryDns"] = request.PrimaryDns;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryVSwitchId))
+            {
+                query["PrimaryVSwitchId"] = request.PrimaryVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryVSwitchIp))
+            {
+                query["PrimaryVSwitchIp"] = request.PrimaryVSwitchIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateDnsType))
+            {
+                query["PrivateDnsType"] = request.PrivateDnsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyDns))
+            {
+                query["StandbyDns"] = request.StandbyDns;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyVSwitchId))
+            {
+                query["StandbyVSwitchId"] = request.StandbyVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyVSwitchIp))
+            {
+                query["StandbyVSwitchIp"] = request.StandbyVSwitchIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePrivateDnsEndpoint",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePrivateDnsEndpointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建私网DNS终端节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePrivateDnsEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePrivateDnsEndpointResponse
+        /// </returns>
+        public CreatePrivateDnsEndpointResponse CreatePrivateDnsEndpoint(CreatePrivateDnsEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreatePrivateDnsEndpointWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建私网DNS终端节点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePrivateDnsEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePrivateDnsEndpointResponse
+        /// </returns>
+        public async Task<CreatePrivateDnsEndpointResponse> CreatePrivateDnsEndpointAsync(CreatePrivateDnsEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreatePrivateDnsEndpointWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a NAT firewall.</para>
         /// </summary>
         /// 
@@ -13385,6 +13609,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
             {
                 query["MemberUid"] = request.MemberUid;
@@ -13482,6 +13710,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsIgnore))
             {
                 query["IsIgnore"] = request.IsIgnore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -15199,6 +15431,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInstanceId))
+            {
+                query["NetworkInstanceId"] = request.NetworkInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerNetworkInstanceId))
+            {
+                query["PeerNetworkInstanceId"] = request.PeerNetworkInstanceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -15252,6 +15492,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInstanceId))
+            {
+                query["NetworkInstanceId"] = request.NetworkInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeerNetworkInstanceId))
+            {
+                query["PeerNetworkInstanceId"] = request.PeerNetworkInstanceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -18046,6 +18294,118 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the status of the virtual private cloud (VPC) Firewall feature in Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayUserVpcStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayUserVpcStatusResponse
+        /// </returns>
+        public DescribePostpayUserVpcStatusResponse DescribePostpayUserVpcStatusWithOptions(DescribePostpayUserVpcStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePostpayUserVpcStatus",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePostpayUserVpcStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the virtual private cloud (VPC) Firewall feature in Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayUserVpcStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayUserVpcStatusResponse
+        /// </returns>
+        public async Task<DescribePostpayUserVpcStatusResponse> DescribePostpayUserVpcStatusWithOptionsAsync(DescribePostpayUserVpcStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePostpayUserVpcStatus",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePostpayUserVpcStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the virtual private cloud (VPC) Firewall feature in Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayUserVpcStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayUserVpcStatusResponse
+        /// </returns>
+        public DescribePostpayUserVpcStatusResponse DescribePostpayUserVpcStatus(DescribePostpayUserVpcStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePostpayUserVpcStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the virtual private cloud (VPC) Firewall feature in Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayUserVpcStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayUserVpcStatusResponse
+        /// </returns>
+        public async Task<DescribePostpayUserVpcStatusResponse> DescribePostpayUserVpcStatusAsync(DescribePostpayUserVpcStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePostpayUserVpcStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries prefix lists.</para>
         /// </summary>
         /// 
@@ -19770,6 +20130,206 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取正向代理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityProxyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityProxyResponse
+        /// </returns>
+        public DescribeSecurityProxyResponse DescribeSecurityProxyWithOptions(DescribeSecurityProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
+            {
+                query["MemberUid"] = request.MemberUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyId))
+            {
+                query["ProxyId"] = request.ProxyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyName))
+            {
+                query["ProxyName"] = request.ProxyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSecurityProxy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSecurityProxyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取正向代理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityProxyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityProxyResponse
+        /// </returns>
+        public async Task<DescribeSecurityProxyResponse> DescribeSecurityProxyWithOptionsAsync(DescribeSecurityProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberUid))
+            {
+                query["MemberUid"] = request.MemberUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayId))
+            {
+                query["NatGatewayId"] = request.NatGatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyId))
+            {
+                query["ProxyId"] = request.ProxyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyName))
+            {
+                query["ProxyName"] = request.ProxyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionNo))
+            {
+                query["RegionNo"] = request.RegionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSecurityProxy",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSecurityProxyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取正向代理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityProxyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityProxyResponse
+        /// </returns>
+        public DescribeSecurityProxyResponse DescribeSecurityProxy(DescribeSecurityProxyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSecurityProxyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取正向代理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityProxyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityProxyResponse
+        /// </returns>
+        public async Task<DescribeSecurityProxyResponse> DescribeSecurityProxyAsync(DescribeSecurityProxyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSecurityProxyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the information about signature library versions.</para>
         /// </summary>
         /// 
@@ -19980,6 +20540,100 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSlsAnalyzeOpenStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询威胁情报配置的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeThreatIntelligenceSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeThreatIntelligenceSwitchResponse
+        /// </returns>
+        public DescribeThreatIntelligenceSwitchResponse DescribeThreatIntelligenceSwitchWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeThreatIntelligenceSwitch",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeThreatIntelligenceSwitchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询威胁情报配置的信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeThreatIntelligenceSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeThreatIntelligenceSwitchResponse
+        /// </returns>
+        public async Task<DescribeThreatIntelligenceSwitchResponse> DescribeThreatIntelligenceSwitchWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeThreatIntelligenceSwitch",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeThreatIntelligenceSwitchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询威胁情报配置的信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeThreatIntelligenceSwitchResponse
+        /// </returns>
+        public DescribeThreatIntelligenceSwitchResponse DescribeThreatIntelligenceSwitch()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeThreatIntelligenceSwitchWithOptions(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询威胁情报配置的信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeThreatIntelligenceSwitchResponse
+        /// </returns>
+        public async Task<DescribeThreatIntelligenceSwitchResponse> DescribeThreatIntelligenceSwitchAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeThreatIntelligenceSwitchWithOptionsAsync(runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -24396,6 +25050,262 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableSdlProtectedAssetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下载TLS证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTlsInspectCertificateDownloadUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTlsInspectCertificateDownloadUrlResponse
+        /// </returns>
+        public GetTlsInspectCertificateDownloadUrlResponse GetTlsInspectCertificateDownloadUrlWithOptions(GetTlsInspectCertificateDownloadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaCertId))
+            {
+                query["CaCertId"] = request.CaCertId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTlsInspectCertificateDownloadUrl",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTlsInspectCertificateDownloadUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下载TLS证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTlsInspectCertificateDownloadUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTlsInspectCertificateDownloadUrlResponse
+        /// </returns>
+        public async Task<GetTlsInspectCertificateDownloadUrlResponse> GetTlsInspectCertificateDownloadUrlWithOptionsAsync(GetTlsInspectCertificateDownloadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaCertId))
+            {
+                query["CaCertId"] = request.CaCertId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTlsInspectCertificateDownloadUrl",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTlsInspectCertificateDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下载TLS证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTlsInspectCertificateDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTlsInspectCertificateDownloadUrlResponse
+        /// </returns>
+        public GetTlsInspectCertificateDownloadUrlResponse GetTlsInspectCertificateDownloadUrl(GetTlsInspectCertificateDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTlsInspectCertificateDownloadUrlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下载TLS证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTlsInspectCertificateDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTlsInspectCertificateDownloadUrlResponse
+        /// </returns>
+        public async Task<GetTlsInspectCertificateDownloadUrlResponse> GetTlsInspectCertificateDownloadUrlAsync(GetTlsInspectCertificateDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTlsInspectCertificateDownloadUrlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询TLS检查证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTlsInspectCACertificatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTlsInspectCACertificatesResponse
+        /// </returns>
+        public ListTlsInspectCACertificatesResponse ListTlsInspectCACertificatesWithOptions(ListTlsInspectCACertificatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaCertId))
+            {
+                query["CaCertId"] = request.CaCertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTlsInspectCACertificates",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTlsInspectCACertificatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询TLS检查证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTlsInspectCACertificatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTlsInspectCACertificatesResponse
+        /// </returns>
+        public async Task<ListTlsInspectCACertificatesResponse> ListTlsInspectCACertificatesWithOptionsAsync(ListTlsInspectCACertificatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaCertId))
+            {
+                query["CaCertId"] = request.CaCertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTlsInspectCACertificates",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTlsInspectCACertificatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询TLS检查证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTlsInspectCACertificatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTlsInspectCACertificatesResponse
+        /// </returns>
+        public ListTlsInspectCACertificatesResponse ListTlsInspectCACertificates(ListTlsInspectCACertificatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTlsInspectCACertificatesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询TLS检查证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTlsInspectCACertificatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTlsInspectCACertificatesResponse
+        /// </returns>
+        public async Task<ListTlsInspectCACertificatesResponse> ListTlsInspectCACertificatesAsync(ListTlsInspectCACertificatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTlsInspectCACertificatesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -31832,6 +32742,278 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdatePostpayUserInternetStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of the NAT Firewall feature for Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePostpayUserNatStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePostpayUserNatStatusResponse
+        /// </returns>
+        public UpdatePostpayUserNatStatusResponse UpdatePostpayUserNatStatusWithOptions(UpdatePostpayUserNatStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operate))
+            {
+                query["Operate"] = request.Operate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePostpayUserNatStatus",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePostpayUserNatStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of the NAT Firewall feature for Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePostpayUserNatStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePostpayUserNatStatusResponse
+        /// </returns>
+        public async Task<UpdatePostpayUserNatStatusResponse> UpdatePostpayUserNatStatusWithOptionsAsync(UpdatePostpayUserNatStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operate))
+            {
+                query["Operate"] = request.Operate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePostpayUserNatStatus",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePostpayUserNatStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of the NAT Firewall feature for Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePostpayUserNatStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePostpayUserNatStatusResponse
+        /// </returns>
+        public UpdatePostpayUserNatStatusResponse UpdatePostpayUserNatStatus(UpdatePostpayUserNatStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdatePostpayUserNatStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of the NAT Firewall feature for Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePostpayUserNatStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePostpayUserNatStatusResponse
+        /// </returns>
+        public async Task<UpdatePostpayUserNatStatusResponse> UpdatePostpayUserNatStatusAsync(UpdatePostpayUserNatStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdatePostpayUserNatStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of the virtual private cloud (VPC) Firewall feature for Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePostpayUserVpcStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePostpayUserVpcStatusResponse
+        /// </returns>
+        public UpdatePostpayUserVpcStatusResponse UpdatePostpayUserVpcStatusWithOptions(UpdatePostpayUserVpcStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operate))
+            {
+                query["Operate"] = request.Operate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePostpayUserVpcStatus",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePostpayUserVpcStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of the virtual private cloud (VPC) Firewall feature for Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePostpayUserVpcStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePostpayUserVpcStatusResponse
+        /// </returns>
+        public async Task<UpdatePostpayUserVpcStatusResponse> UpdatePostpayUserVpcStatusWithOptionsAsync(UpdatePostpayUserVpcStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operate))
+            {
+                query["Operate"] = request.Operate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePostpayUserVpcStatus",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePostpayUserVpcStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of the virtual private cloud (VPC) Firewall feature for Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePostpayUserVpcStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePostpayUserVpcStatusResponse
+        /// </returns>
+        public UpdatePostpayUserVpcStatusResponse UpdatePostpayUserVpcStatus(UpdatePostpayUserVpcStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdatePostpayUserVpcStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of the virtual private cloud (VPC) Firewall feature for Cloud Firewall that uses the pay-as-you-go billing method.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePostpayUserVpcStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePostpayUserVpcStatusResponse
+        /// </returns>
+        public async Task<UpdatePostpayUserVpcStatusResponse> UpdatePostpayUserVpcStatusAsync(UpdatePostpayUserVpcStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdatePostpayUserVpcStatusWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("NetworkInstanceId")]
+        [Validation(Required=false)]
+        public string NetworkInstanceId { get; set; }
+
+        [NameInMap("PeerNetworkInstanceId")]
+        [Validation(Required=false)]
+        public string PeerNetworkInstanceId { get; set; }
+
     }
 
 }

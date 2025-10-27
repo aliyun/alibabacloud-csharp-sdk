@@ -8,10 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class ModifyUserIPSWhitelistResponseBody : TeaModel {
+    public class UpdatePostpayUserVpcStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>36E89955-1E5D-5810-970C-74646F378085</para>
+        /// <para>450D47F5-956E-543E-8502-2F71C8******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

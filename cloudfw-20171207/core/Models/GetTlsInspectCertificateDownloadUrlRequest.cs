@@ -8,14 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class ModifyUserIPSWhitelistResponseBody : TeaModel {
+    public class GetTlsInspectCertificateDownloadUrlRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>36E89955-1E5D-5810-970C-74646F378085</para>
+        /// <para>C3E91391-16CD-1BFC-A133-******D429</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("CaCertId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string CaCertId { get; set; }
 
     }
 
