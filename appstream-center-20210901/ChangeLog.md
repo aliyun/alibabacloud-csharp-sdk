@@ -1,3 +1,8 @@
+2025-10-27 Version: 4.6.0
+- Support API ModifyBrowserInstanceGroup.
+- Update API CreateWuyingServer: add request parameters SavingPlanId.
+
+
 2025-10-20 Version: 4.5.0
 - Support API DeleteImage.
 - Support API StartTaskForDistributeImage.

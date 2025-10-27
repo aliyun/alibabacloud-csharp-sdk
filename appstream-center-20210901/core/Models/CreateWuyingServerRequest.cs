@@ -143,6 +143,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
+        [NameInMap("SavingPlanId")]
+        [Validation(Required=false)]
+        public string SavingPlanId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>eds.proworkstation_flagship_elite_ne.96c384g.192g4x</para>

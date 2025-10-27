@@ -1135,6 +1135,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         public CreateWuyingServerResponse CreateWuyingServerWithOptions(CreateWuyingServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SavingPlanId))
+            {
+                query["SavingPlanId"] = request.SavingPlanId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
             {
@@ -1236,6 +1241,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1271,6 +1277,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         public async Task<CreateWuyingServerResponse> CreateWuyingServerWithOptionsAsync(CreateWuyingServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SavingPlanId))
+            {
+                query["SavingPlanId"] = request.SavingPlanId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
             {
@@ -1372,6 +1383,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -5849,6 +5861,206 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAppPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改浏览器交付组</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyBrowserInstanceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyBrowserInstanceGroupResponse
+        /// </returns>
+        public ModifyBrowserInstanceGroupResponse ModifyBrowserInstanceGroupWithOptions(ModifyBrowserInstanceGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyBrowserInstanceGroupShrinkRequest request = new ModifyBrowserInstanceGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BrowserConfig))
+            {
+                request.BrowserConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BrowserConfig, "BrowserConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Network))
+            {
+                request.NetworkShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Network, "Network", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Policy))
+            {
+                request.PolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Policy, "Policy", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Timers))
+            {
+                request.TimersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Timers, "Timers", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrowserConfigShrink))
+            {
+                query["BrowserConfig"] = request.BrowserConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrowserInstanceGroupId))
+            {
+                query["BrowserInstanceGroupId"] = request.BrowserInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyShrink))
+            {
+                query["Policy"] = request.PolicyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimersShrink))
+            {
+                query["Timers"] = request.TimersShrink;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudBrowserName))
+            {
+                body["CloudBrowserName"] = request.CloudBrowserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkShrink))
+            {
+                body["Network"] = request.NetworkShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyBrowserInstanceGroup",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyBrowserInstanceGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改浏览器交付组</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyBrowserInstanceGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyBrowserInstanceGroupResponse
+        /// </returns>
+        public async Task<ModifyBrowserInstanceGroupResponse> ModifyBrowserInstanceGroupWithOptionsAsync(ModifyBrowserInstanceGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyBrowserInstanceGroupShrinkRequest request = new ModifyBrowserInstanceGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BrowserConfig))
+            {
+                request.BrowserConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BrowserConfig, "BrowserConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Network))
+            {
+                request.NetworkShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Network, "Network", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Policy))
+            {
+                request.PolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Policy, "Policy", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Timers))
+            {
+                request.TimersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Timers, "Timers", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrowserConfigShrink))
+            {
+                query["BrowserConfig"] = request.BrowserConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrowserInstanceGroupId))
+            {
+                query["BrowserInstanceGroupId"] = request.BrowserInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyShrink))
+            {
+                query["Policy"] = request.PolicyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimersShrink))
+            {
+                query["Timers"] = request.TimersShrink;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudBrowserName))
+            {
+                body["CloudBrowserName"] = request.CloudBrowserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkShrink))
+            {
+                body["Network"] = request.NetworkShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyBrowserInstanceGroup",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyBrowserInstanceGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改浏览器交付组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyBrowserInstanceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyBrowserInstanceGroupResponse
+        /// </returns>
+        public ModifyBrowserInstanceGroupResponse ModifyBrowserInstanceGroup(ModifyBrowserInstanceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyBrowserInstanceGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改浏览器交付组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyBrowserInstanceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyBrowserInstanceGroupResponse
+        /// </returns>
+        public async Task<ModifyBrowserInstanceGroupResponse> ModifyBrowserInstanceGroupAsync(ModifyBrowserInstanceGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyBrowserInstanceGroupWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
