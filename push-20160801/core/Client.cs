@@ -1670,6 +1670,154 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>新版高级推送接口</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// MassPushV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MassPushV2Response
+        /// </returns>
+        public MassPushV2Response MassPushV2WithOptions(MassPushV2Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            MassPushV2ShrinkRequest request = new MassPushV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PushTasks))
+            {
+                request.PushTasksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PushTasks, "PushTasks", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
+            {
+                query["AppKey"] = request.AppKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdempotentToken))
+            {
+                query["IdempotentToken"] = request.IdempotentToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushTasksShrink))
+            {
+                query["PushTasks"] = request.PushTasksShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MassPushV2",
+                Version = "2016-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MassPushV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新版高级推送接口</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// MassPushV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MassPushV2Response
+        /// </returns>
+        public async Task<MassPushV2Response> MassPushV2WithOptionsAsync(MassPushV2Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            MassPushV2ShrinkRequest request = new MassPushV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PushTasks))
+            {
+                request.PushTasksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PushTasks, "PushTasks", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
+            {
+                query["AppKey"] = request.AppKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdempotentToken))
+            {
+                query["IdempotentToken"] = request.IdempotentToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushTasksShrink))
+            {
+                query["PushTasks"] = request.PushTasksShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MassPushV2",
+                Version = "2016-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MassPushV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新版高级推送接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MassPushV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// MassPushV2Response
+        /// </returns>
+        public MassPushV2Response MassPushV2(MassPushV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MassPushV2WithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新版高级推送接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MassPushV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// MassPushV2Response
+        /// </returns>
+        public async Task<MassPushV2Response> MassPushV2Async(MassPushV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MassPushV2WithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>高级推送接口</para>
         /// </summary>
         /// 
@@ -3382,6 +3530,154 @@ namespace AlibabaCloud.SDK.Push20160801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PushNoticeToiOSWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新版高级推送接口</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// PushV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushV2Response
+        /// </returns>
+        public PushV2Response PushV2WithOptions(PushV2Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PushV2ShrinkRequest request = new PushV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PushTask))
+            {
+                request.PushTaskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PushTask, "PushTask", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
+            {
+                query["AppKey"] = request.AppKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdempotentToken))
+            {
+                query["IdempotentToken"] = request.IdempotentToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushTaskShrink))
+            {
+                query["PushTask"] = request.PushTaskShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PushV2",
+                Version = "2016-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PushV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新版高级推送接口</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// PushV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushV2Response
+        /// </returns>
+        public async Task<PushV2Response> PushV2WithOptionsAsync(PushV2Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PushV2ShrinkRequest request = new PushV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PushTask))
+            {
+                request.PushTaskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PushTask, "PushTask", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
+            {
+                query["AppKey"] = request.AppKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdempotentToken))
+            {
+                query["IdempotentToken"] = request.IdempotentToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PushTaskShrink))
+            {
+                query["PushTask"] = request.PushTaskShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PushV2",
+                Version = "2016-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PushV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新版高级推送接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PushV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushV2Response
+        /// </returns>
+        public PushV2Response PushV2(PushV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PushV2WithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新版高级推送接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PushV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushV2Response
+        /// </returns>
+        public async Task<PushV2Response> PushV2Async(PushV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PushV2WithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -135,6 +135,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
                         [Validation(Required=false)]
                         public int? Importance { get; set; }
 
+                        [NameInMap("LiveNotificationPayload")]
+                        [Validation(Required=false)]
+                        public string LiveNotificationPayload { get; set; }
+
                         [NameInMap("ReceiptId")]
                         [Validation(Required=false)]
                         public string ReceiptId { get; set; }
@@ -142,6 +146,16 @@ namespace AlibabaCloud.SDK.Push20160801.Models
                         [NameInMap("Urgency")]
                         [Validation(Required=false)]
                         public string Urgency { get; set; }
+
+                    }
+
+                    [NameInMap("Meizu")]
+                    [Validation(Required=false)]
+                    public PushTaskNotificationAndroidOptionsMeizu Meizu { get; set; }
+                    public class PushTaskNotificationAndroidOptionsMeizu : TeaModel {
+                        [NameInMap("NoticeMsgType")]
+                        [Validation(Required=false)]
+                        public int? NoticeMsgType { get; set; }
 
                     }
 
@@ -156,6 +170,18 @@ namespace AlibabaCloud.SDK.Push20160801.Models
                         [NameInMap("NotifyLevel")]
                         [Validation(Required=false)]
                         public long? NotifyLevel { get; set; }
+
+                        [NameInMap("PrivateContentParameters")]
+                        [Validation(Required=false)]
+                        public string PrivateContentParameters { get; set; }
+
+                        [NameInMap("PrivateMsgTemplateId")]
+                        [Validation(Required=false)]
+                        public string PrivateMsgTemplateId { get; set; }
+
+                        [NameInMap("PrivateTitleParameters")]
+                        [Validation(Required=false)]
+                        public string PrivateTitleParameters { get; set; }
 
                     }
 
@@ -250,6 +276,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
                 [NameInMap("InboxContent")]
                 [Validation(Required=false)]
                 public List<string> InboxContent { get; set; }
+
+                [NameInMap("LiveViewPayload")]
+                [Validation(Required=false)]
+                public string LiveViewPayload { get; set; }
 
                 [NameInMap("NotifyId")]
                 [Validation(Required=false)]
