@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public string ExecuteTime { get; set; }
 
+            [NameInMap("ExecuteTimestamp")]
+            [Validation(Required=false)]
+            public long? ExecuteTimestamp { get; set; }
+
             /// <summary>
             /// <para>The IP address and port number of the client that is used to execute the SQL statement.</para>
             /// 

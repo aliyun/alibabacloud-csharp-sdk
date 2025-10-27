@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请公网链接</para>
+        /// <para>Applies for a public endpoint for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请公网链接</para>
+        /// <para>Applies for a public endpoint for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请公网链接</para>
+        /// <para>Applies for a public endpoint for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Adb20190315
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请公网链接</para>
+        /// <para>Applies for a public endpoint for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">

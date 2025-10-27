@@ -1,3 +1,7 @@
+2025-10-27 Version: 5.0.8
+- Update API DescribeAuditLogRecords: add response parameters Body.Items.$.ExecuteTimestamp.
+
+
 2025-09-11 Version: 5.0.7
 - Update API DescribeBackups: add response parameters Body.Items.$.BackupStatus.
 
