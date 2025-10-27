@@ -682,6 +682,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string EndUserGroupCoordinate { get; set; }
 
+        [NameInMap("ExternalDrive")]
+        [Validation(Required=false)]
+        public string ExternalDrive { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable file transfer.</para>
         /// <para>Valid values:</para>

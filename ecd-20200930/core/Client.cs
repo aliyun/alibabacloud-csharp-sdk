@@ -6192,6 +6192,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["EndUserGroupCoordinate"] = request.EndUserGroupCoordinate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalDrive))
+            {
+                query["ExternalDrive"] = request.ExternalDrive;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileMigrate))
             {
                 query["FileMigrate"] = request.FileMigrate;
@@ -6693,6 +6697,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserGroupCoordinate))
             {
                 query["EndUserGroupCoordinate"] = request.EndUserGroupCoordinate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalDrive))
+            {
+                query["ExternalDrive"] = request.ExternalDrive;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileMigrate))
             {
@@ -35004,6 +35012,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["EndUserGroupCoordinate"] = request.EndUserGroupCoordinate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalDrive))
+            {
+                query["ExternalDrive"] = request.ExternalDrive;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileMigrate))
             {
                 query["FileMigrate"] = request.FileMigrate;
@@ -35517,6 +35529,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserGroupCoordinate))
             {
                 query["EndUserGroupCoordinate"] = request.EndUserGroupCoordinate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalDrive))
+            {
+                query["ExternalDrive"] = request.ExternalDrive;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileMigrate))
             {

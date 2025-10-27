@@ -629,6 +629,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string EndUserGroupCoordinate { get; set; }
 
+            [NameInMap("ExternalDrive")]
+            [Validation(Required=false)]
+            public string ExternalDrive { get; set; }
+
             [NameInMap("FileMigrate")]
             [Validation(Required=false)]
             public string FileMigrate { get; set; }
