@@ -37,6 +37,21 @@ namespace AlibabaCloud.SDK.Captcha20230305
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证码验证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyCaptchaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCaptchaResponse
+        /// </returns>
         public VerifyCaptchaResponse VerifyCaptchaWithOptions(VerifyCaptchaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -64,6 +79,21 @@ namespace AlibabaCloud.SDK.Captcha20230305
             return TeaModel.ToObject<VerifyCaptchaResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证码验证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyCaptchaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCaptchaResponse
+        /// </returns>
         public async Task<VerifyCaptchaResponse> VerifyCaptchaWithOptionsAsync(VerifyCaptchaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -91,18 +121,57 @@ namespace AlibabaCloud.SDK.Captcha20230305
             return TeaModel.ToObject<VerifyCaptchaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证码验证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyCaptchaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCaptchaResponse
+        /// </returns>
         public VerifyCaptchaResponse VerifyCaptcha(VerifyCaptchaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return VerifyCaptchaWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证码验证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyCaptchaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCaptchaResponse
+        /// </returns>
         public async Task<VerifyCaptchaResponse> VerifyCaptchaAsync(VerifyCaptchaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await VerifyCaptchaWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证码验证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyIntelligentCaptchaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyIntelligentCaptchaResponse
+        /// </returns>
         public VerifyIntelligentCaptchaResponse VerifyIntelligentCaptchaWithOptions(VerifyIntelligentCaptchaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -134,6 +203,21 @@ namespace AlibabaCloud.SDK.Captcha20230305
             return TeaModel.ToObject<VerifyIntelligentCaptchaResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证码验证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyIntelligentCaptchaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyIntelligentCaptchaResponse
+        /// </returns>
         public async Task<VerifyIntelligentCaptchaResponse> VerifyIntelligentCaptchaWithOptionsAsync(VerifyIntelligentCaptchaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -165,12 +249,36 @@ namespace AlibabaCloud.SDK.Captcha20230305
             return TeaModel.ToObject<VerifyIntelligentCaptchaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证码验证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyIntelligentCaptchaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyIntelligentCaptchaResponse
+        /// </returns>
         public VerifyIntelligentCaptchaResponse VerifyIntelligentCaptcha(VerifyIntelligentCaptchaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return VerifyIntelligentCaptchaWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>验证码验证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyIntelligentCaptchaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyIntelligentCaptchaResponse
+        /// </returns>
         public async Task<VerifyIntelligentCaptchaResponse> VerifyIntelligentCaptchaAsync(VerifyIntelligentCaptchaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Captcha20230305.Models
 {
     public class VerifyIntelligentCaptchaRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dsjidsjidsjkds*djsjdiskds</para>
+        /// </summary>
         [NameInMap("CaptchaVerifyParam")]
         [Validation(Required=false)]
         public string CaptchaVerifyParam { get; set; }
