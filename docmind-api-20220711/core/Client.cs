@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
         /// <para>文档结构化流式接口</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetDocParserResultRequest
         /// </param>
         /// <param name="runtime">
@@ -362,10 +362,20 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
         /// <returns>
         /// GetDocParserResultResponse
         /// </returns>
-        public GetDocParserResultResponse GetDocParserResultWithOptions(GetDocParserResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetDocParserResultResponse GetDocParserResultWithOptions(GetDocParserResultRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDocParserResultShrinkRequest request = new GetDocParserResultShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeFields))
+            {
+                request.ExcludeFieldsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeFields, "ExcludeFields", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeFieldsShrink))
+            {
+                query["ExcludeFields"] = request.ExcludeFieldsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["Id"] = request.Id;
@@ -402,7 +412,7 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
         /// <para>文档结构化流式接口</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetDocParserResultRequest
         /// </param>
         /// <param name="runtime">
@@ -412,10 +422,20 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
         /// <returns>
         /// GetDocParserResultResponse
         /// </returns>
-        public async Task<GetDocParserResultResponse> GetDocParserResultWithOptionsAsync(GetDocParserResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetDocParserResultResponse> GetDocParserResultWithOptionsAsync(GetDocParserResultRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDocParserResultShrinkRequest request = new GetDocParserResultShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeFields))
+            {
+                request.ExcludeFieldsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeFields, "ExcludeFields", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeFieldsShrink))
+            {
+                query["ExcludeFields"] = request.ExcludeFieldsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["Id"] = request.Id;
@@ -3864,6 +3884,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             {
                 query["MultimediaParameters"] = request.MultimediaParametersShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedHeaderFooter))
+            {
+                query["NeedHeaderFooter"] = request.NeedHeaderFooter;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Option))
             {
                 query["Option"] = request.Option;
@@ -3971,6 +3995,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultimediaParametersShrink))
             {
                 query["MultimediaParameters"] = request.MultimediaParametersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedHeaderFooter))
+            {
+                query["NeedHeaderFooter"] = request.NeedHeaderFooter;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Option))
             {

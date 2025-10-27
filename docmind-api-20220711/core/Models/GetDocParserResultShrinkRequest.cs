@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 {
-    public class GetDocParserResultRequest : TeaModel {
+    public class GetDocParserResultShrinkRequest : TeaModel {
         [NameInMap("ExcludeFields")]
         [Validation(Required=false)]
-        public List<string> ExcludeFields { get; set; }
+        public string ExcludeFieldsShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

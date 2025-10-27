@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 
         }
 
+        [NameInMap("NeedHeaderFooter")]
+        [Validation(Required=false)]
+        public bool? NeedHeaderFooter { get; set; }
+
         [NameInMap("Option")]
         [Validation(Required=false)]
         public string Option { get; set; }

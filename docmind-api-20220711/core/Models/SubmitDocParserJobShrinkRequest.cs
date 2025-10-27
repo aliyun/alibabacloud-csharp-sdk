@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public string MultimediaParametersShrink { get; set; }
 
+        [NameInMap("NeedHeaderFooter")]
+        [Validation(Required=false)]
+        public bool? NeedHeaderFooter { get; set; }
+
         [NameInMap("Option")]
         [Validation(Required=false)]
         public string Option { get; set; }
