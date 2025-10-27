@@ -21,14 +21,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? AddTime { get; set; }
 
-            [NameInMap("IsCloudSiemAccount")]
-            [Validation(Required=false)]
-            public string IsCloudSiemAccount { get; set; }
-
-            [NameInMap("IsSasAccount")]
-            [Validation(Required=false)]
-            public string IsSasAccount { get; set; }
-
             [NameInMap("OperatorUid")]
             [Validation(Required=false)]
             public string OperatorUid { get; set; }
@@ -40,14 +32,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("SasVersion")]
             [Validation(Required=false)]
             public string SasVersion { get; set; }
-
-            [NameInMap("aliUid")]
-            [Validation(Required=false)]
-            public string AliUid { get; set; }
-
-            [NameInMap("isMarked")]
-            [Validation(Required=false)]
-            public string IsMarked { get; set; }
 
         }
 

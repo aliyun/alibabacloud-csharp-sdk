@@ -152,6 +152,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<long?> RequirementIds { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// </remarks>
+        /// </summary>
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
+        /// <summary>
         /// <para>The risk levels of check items. Separate multiple risk levels with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>HIGH</b></description></item>

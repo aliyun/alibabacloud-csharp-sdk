@@ -127,16 +127,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The status of the check item. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1: failed</para>
-        /// </description></item>
-        /// <item><description><para>2: verifying</para>
-        /// </description></item>
-        /// <item><description><para>3: passed</para>
-        /// </description></item>
-        /// <item><description><para>6: ignored</para>
-        /// </description></item>
-        /// <item><description><para>7: fixing</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: failed</description></item>
+        /// <item><description><b>2</b>: verifying</description></item>
+        /// <item><description><b>3</b>: passed</description></item>
+        /// <item><description><b>6</b>: ignored</description></item>
+        /// <item><description><b>7</b>: fixing</description></item>
+        /// <item><description><b>8</b>: fixed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

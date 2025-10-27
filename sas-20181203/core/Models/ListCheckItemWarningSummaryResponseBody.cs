@@ -148,6 +148,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>1</b>: failed</description></item>
             /// <item><description><b>3</b>: passed</description></item>
             /// <item><description><b>6</b>: whitelisted</description></item>
+            /// <item><description><b>8</b>: fixed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
