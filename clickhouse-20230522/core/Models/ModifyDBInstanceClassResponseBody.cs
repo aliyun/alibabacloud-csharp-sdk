@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public ModifyDBInstanceClassResponseBodyData Data { get; set; }
         public class ModifyDBInstanceClassResponseBodyData : TeaModel {
+            [NameInMap("ComputingGroupId")]
+            [Validation(Required=false)]
+            public string ComputingGroupId { get; set; }
+
             /// <summary>
             /// <para>The cluster ID.</para>
             /// 

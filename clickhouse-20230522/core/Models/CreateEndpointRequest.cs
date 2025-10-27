@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateEndpointRequest : TeaModel {
+        [NameInMap("ComputingGroupId")]
+        [Validation(Required=false)]
+        public string ComputingGroupId { get; set; }
+
         /// <summary>
         /// <para>The prefix of the new endpoint. The prefix of the ConnectionString parameter.</para>
         /// 

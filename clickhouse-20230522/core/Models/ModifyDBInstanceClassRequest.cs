@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyDBInstanceClassRequest : TeaModel {
+        [NameInMap("ComputingGroupId")]
+        [Validation(Required=false)]
+        public string ComputingGroupId { get; set; }
+
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>

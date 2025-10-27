@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DeleteEndpointRequest : TeaModel {
+        [NameInMap("ComputingGroupId")]
+        [Validation(Required=false)]
+        public string ComputingGroupId { get; set; }
+
         /// <summary>
         /// <para>The prefix of the endpoint, which indicates the prefix of the value of the ConnectionString parameter.</para>
         /// 
