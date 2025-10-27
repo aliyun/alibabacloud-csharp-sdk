@@ -6903,6 +6903,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             {
                 query["Namespace"] = request.Namespace;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationPolicyName))
+            {
+                query["NotificationPolicyName"] = request.NotificationPolicyName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -6972,6 +6976,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationPolicyName))
+            {
+                query["NotificationPolicyName"] = request.NotificationPolicyName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

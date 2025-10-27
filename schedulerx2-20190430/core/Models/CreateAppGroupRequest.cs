@@ -151,6 +151,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>test-workday-notification</para>
+        /// </summary>
+        [NameInMap("NotificationPolicyName")]
+        [Validation(Required=false)]
+        public string NotificationPolicyName { get; set; }
+
+        /// <summary>
         /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
