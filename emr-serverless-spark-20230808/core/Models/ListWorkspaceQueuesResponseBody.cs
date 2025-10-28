@@ -156,6 +156,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string PaymentType { get; set; }
 
+            [NameInMap("preheat")]
+            [Validation(Required=false)]
+            public bool? Preheat { get; set; }
+
             /// <summary>
             /// <para>The queue label.</para>
             /// 

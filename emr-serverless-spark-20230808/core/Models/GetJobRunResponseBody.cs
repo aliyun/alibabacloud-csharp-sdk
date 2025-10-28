@@ -132,6 +132,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx">http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx</a></para>
+            /// </summary>
+            [NameInMap("notebookAccessUrl")]
+            [Validation(Required=false)]
+            public string NotebookAccessUrl { get; set; }
+
+            /// <summary>
             /// <para>The version of the Spark engine on which the job runs.</para>
             /// 
             /// <b>Example:</b>

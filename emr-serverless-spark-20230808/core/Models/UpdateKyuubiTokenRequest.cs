@@ -8,48 +8,48 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
-    public class EditWorkspaceQueueRequest : TeaModel {
-        [NameInMap("environments")]
+    public class UpdateKyuubiTokenRequest : TeaModel {
+        [NameInMap("autoExpireConfiguration")]
         [Validation(Required=false)]
-        public List<string> Environments { get; set; }
-
-        [NameInMap("resourceSpec")]
-        [Validation(Required=false)]
-        public EditWorkspaceQueueRequestResourceSpec ResourceSpec { get; set; }
-        public class EditWorkspaceQueueRequestResourceSpec : TeaModel {
+        public UpdateKyuubiTokenRequestAutoExpireConfiguration AutoExpireConfiguration { get; set; }
+        public class UpdateKyuubiTokenRequestAutoExpireConfiguration : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>1000</para>
+            /// <para>true</para>
             /// </summary>
-            [NameInMap("cu")]
+            [NameInMap("enable")]
             [Validation(Required=false)]
-            public long? Cu { get; set; }
+            public bool? Enable { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>0.5</para>
+            /// <para>365</para>
             /// </summary>
-            [NameInMap("maxCu")]
+            [NameInMap("expireDays")]
             [Validation(Required=false)]
-            public long? MaxCu { get; set; }
+            public int? ExpireDays { get; set; }
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>w-975bcfda9625****</para>
-        /// </summary>
-        [NameInMap("workspaceId")]
+        [NameInMap("memberArns")]
         [Validation(Required=false)]
-        public string WorkspaceId { get; set; }
+        public List<string> MemberArns { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>dev_queue</para>
+        /// <para>dev_serverless_spark</para>
         /// </summary>
-        [NameInMap("workspaceQueueName")]
+        [NameInMap("name")]
         [Validation(Required=false)]
-        public string WorkspaceQueueName { get; set; }
+        public string Name { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rjy7ejhej9gkzjjuun49jnx2xk8if2cu</para>
+        /// </summary>
+        [NameInMap("token")]
+        [Validation(Required=false)]
+        public string Token { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

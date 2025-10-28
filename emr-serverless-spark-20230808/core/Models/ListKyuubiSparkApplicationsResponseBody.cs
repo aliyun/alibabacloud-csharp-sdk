@@ -56,10 +56,26 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Exit Code: 137, Exit Reason: OOMKilled</para>
+            /// </summary>
             [NameInMap("exitReason")]
             [Validation(Required=false)]
             public string ExitReason { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>kb-2b93ec*******c9440c</para>
+            /// </summary>
+            [NameInMap("kyuubiServiceId")]
+            [Validation(Required=false)]
+            public string KyuubiServiceId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>SUCCESS</para>
+            /// </summary>
             [NameInMap("latestSqlStatementStatus")]
             [Validation(Required=false)]
             public string LatestSqlStatementStatus { get; set; }
@@ -83,6 +99,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("resourceQueueId")]
             [Validation(Required=false)]
             public string ResourceQueueId { get; set; }
+
+            [NameInMap("runLog")]
+            [Validation(Required=false)]
+            public RunLog RunLog { get; set; }
 
             /// <summary>
             /// <para>The time when the task started.</para>

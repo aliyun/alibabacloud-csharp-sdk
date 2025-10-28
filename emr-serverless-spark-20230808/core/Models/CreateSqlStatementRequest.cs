@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string SqlComputeId { get; set; }
 
+        [NameInMap("taskBizId")]
+        [Validation(Required=false)]
+        public string TaskBizId { get; set; }
+
         /// <summary>
         /// <para>The region ID.</para>
         /// 

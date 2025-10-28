@@ -160,6 +160,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ReleaseVersion { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>dev_queue</para>
+            /// </summary>
+            [NameInMap("resourceQueueId")]
+            [Validation(Required=false)]
+            public string ResourceQueueId { get; set; }
+
+            /// <summary>
             /// <para>The job state.</para>
             /// 
             /// <b>Example:</b>

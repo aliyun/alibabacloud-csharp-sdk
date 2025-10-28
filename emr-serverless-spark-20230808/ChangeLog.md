@@ -1,3 +1,12 @@
+2025-10-28 Version: 1.9.3
+- Update API EditWorkspaceQueue: add request parameters body.resourceSpec.maxCu.
+- Update API GetJobRun: add response parameters Body.jobRun.notebookAccessUrl.
+- Update API ListJobRuns: add response parameters Body.jobRuns.$.resourceQueueId.
+- Update API ListKyuubiSparkApplications: add response parameters Body.applications.$.kyuubiServiceId.
+- Update API ListKyuubiSparkApplications: add response parameters Body.applications.$.runLog.
+- Update API ListWorkspaceQueues: add response parameters Body.queues.$.preheat.
+
+
 2025-08-19 Version: 1.9.2
 - Update API CreateSessionCluster: add request parameters body.clientToken.
 - Update API ListJobRuns: add request parameters applicationConfigs.
