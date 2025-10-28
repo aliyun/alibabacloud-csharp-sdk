@@ -39,6 +39,152 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>诊断问题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDiagnosisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDiagnosisResponse
+        /// </returns>
+        public CreateDiagnosisResponse CreateDiagnosisWithOptions(CreateDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GmtFailureTime))
+            {
+                body["GmtFailureTime"] = request.GmtFailureTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProblemCategory))
+            {
+                body["ProblemCategory"] = request.ProblemCategory;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDiagnosis",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/diagnoses",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDiagnosisResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>诊断问题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDiagnosisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDiagnosisResponse
+        /// </returns>
+        public async Task<CreateDiagnosisResponse> CreateDiagnosisWithOptionsAsync(CreateDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GmtFailureTime))
+            {
+                body["GmtFailureTime"] = request.GmtFailureTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProblemCategory))
+            {
+                body["ProblemCategory"] = request.ProblemCategory;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDiagnosis",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/diagnoses",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDiagnosisResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>诊断问题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDiagnosisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDiagnosisResponse
+        /// </returns>
+        public CreateDiagnosisResponse CreateDiagnosis(CreateDiagnosisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateDiagnosisWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>诊断问题</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDiagnosisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDiagnosisResponse
+        /// </returns>
+        public async Task<CreateDiagnosisResponse> CreateDiagnosisAsync(CreateDiagnosisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateDiagnosisWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an automatic stop policy for a specific Data Science Workshop (DSW) instance. When the conditions are met, the instance is automatically stopped. You can create only one automatic stop policy for an idle DSW instance. If the specific instance has an automatic stop policy, call DeleteIdleInstanceCuller to delete it first.</para>
         /// </summary>
         /// 
