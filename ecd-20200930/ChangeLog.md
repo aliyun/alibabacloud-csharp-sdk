@@ -1,3 +1,7 @@
+2025-10-28 Version: 4.13.0
+- Support API DescribeSecurityGroupAttribute.
+
+
 2025-10-27 Version: 4.12.1
 - Update API CreateCenterPolicy: add request parameters ExternalDrive.
 - Update API DescribePolicyGroups: add response parameters Body.DescribePolicyGroups.$.ExternalDrive.
