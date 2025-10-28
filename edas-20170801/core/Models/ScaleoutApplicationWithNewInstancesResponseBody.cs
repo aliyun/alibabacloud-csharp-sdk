@@ -10,35 +10,47 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ScaleoutApplicationWithNewInstancesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the change process for the scale-out.
+        /// <para>The ID of the change process for the scale-out.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>e370c17f-*****-3df0721a327</para>
         /// </summary>
         [NameInMap("ChangeOrderId")]
         [Validation(Required=false)]
         public string ChangeOrderId { get; set; }
 
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The IDs of ECS instances.
+        /// <para>The IDs of ECS instances.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// The additional information that is returned.
+        /// <para>The additional information that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>e370c17f-*****-3df0721a327</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

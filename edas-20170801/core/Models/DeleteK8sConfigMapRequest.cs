@@ -10,21 +10,33 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DeleteK8sConfigMapRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>51e37e91-6403-423a-9913-f236aa7a6a50</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The name of the ConfigMap. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.
+        /// <para>The name of the ConfigMap. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-configmap</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The namespace of the Kubernetes cluster.
+        /// <para>The namespace of the Kubernetes cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]

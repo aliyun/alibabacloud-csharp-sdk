@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class AbortChangeOrderRequest : TeaModel {
         /// <summary>
-        /// The ID of the change process. You can call the [GetChangeOrderInfo](~~62072~~) operation to query the change process ID.
+        /// <para>The ID of the change process. You can call the <a href="https://help.aliyun.com/document_detail/62072.html">GetChangeOrderInfo</a> operation to query the change process ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4f038ddf-b27b-<b><b>-</b></b>-88e44375****</para>
         /// </summary>
         [NameInMap("ChangeOrderId")]
         [Validation(Required=false)]

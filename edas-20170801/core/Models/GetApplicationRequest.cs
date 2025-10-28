@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetApplicationRequest : TeaModel {
         /// <summary>
-        /// The ID of the application.
+        /// <para>The ID of the application.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>29f0******************</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

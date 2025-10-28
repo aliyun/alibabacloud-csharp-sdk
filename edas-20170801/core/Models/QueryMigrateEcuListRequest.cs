@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class QueryMigrateEcuListRequest : TeaModel {
         /// <summary>
-        /// The ID of the namespace.
+        /// <para>The ID of the namespace.</para>
+        /// <list type="bullet">
+        /// <item><description>The ID of a custom namespace is in the <c>region ID:namespace identifier</c> format. Example: <c>cn-beijing:test</c>.</description></item>
+        /// <item><description>The ID of the default namespace is in the <c>region ID</c> format. Example: <c>cn-beijing</c>.</description></item>
+        /// </list>
         /// 
-        /// *   The ID of a custom namespace is in the `region ID:namespace identifier` format. Example: `cn-beijing:test`.
-        /// *   The ID of the default namespace is in the `region ID` format. Example: `cn-beijing`.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou or cn-hangzhou:test</para>
         /// </summary>
         [NameInMap("LogicalRegionId")]
         [Validation(Required=false)]

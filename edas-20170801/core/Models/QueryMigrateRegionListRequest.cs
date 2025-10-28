@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class QueryMigrateRegionListRequest : TeaModel {
         /// <summary>
-        /// The ID of the namespace.
+        /// <para>The ID of the namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou:test</para>
         /// </summary>
         [NameInMap("LogicalRegionId")]
         [Validation(Required=false)]

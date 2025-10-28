@@ -10,101 +10,141 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UpdateK8sSlbRequest : TeaModel {
         /// <summary>
-        /// The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see [ListApplication](~~149390~~).
+        /// <para>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5a166fbd-<b><b>-</b></b>-a286-781659d9f54c</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The ID of the cluster. You can query the cluster ID by calling the GetK8sCluster operation. For more information, see [GetK8sCluster](~~181437~~).
+        /// <para>The ID of the cluster. You can query the cluster ID by calling the GetK8sCluster operation. For more information, see <a href="https://help.aliyun.com/document_detail/181437.html">GetK8sCluster</a>.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>712082c3-<b><b>-</b></b>-9217-a947b5cde6ee</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// Specifies whether to disable listener configuration overriding.
+        /// <para>Specifies whether to disable listener configuration overriding.</para>
+        /// <list type="bullet">
+        /// <item><description>true: disables listener configuration overriding.</description></item>
+        /// <item><description>false: enables listener configuration overriding.</description></item>
+        /// </list>
         /// 
-        /// *   true: disables listener configuration overriding.
-        /// *   false: enables listener configuration overriding.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DisableForceOverride")]
         [Validation(Required=false)]
         public bool? DisableForceOverride { get; set; }
 
         /// <summary>
-        /// The frontend port. Valid values: 1 to 65535.
+        /// <para>The frontend port. Valid values: 1 to 65535.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
         public string Port { get; set; }
 
         /// <summary>
-        /// The scheduling algorithm for the SLB instance. If you do not specify this parameter, the default value rr is used. SLB supports the following scheduling algorithms: round-robin and weighted round-robin. Valid values:
+        /// <para>The scheduling algorithm for the SLB instance. If you do not specify this parameter, the default value rr is used. SLB supports the following scheduling algorithms: round-robin and weighted round-robin. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>wrr: weighted round-robin scheduling. Backend servers that have higher weights receive more requests than those that have lower weights.</description></item>
+        /// <item><description>rr: round-robin scheduling. Requests are sequentially distributed to backend servers.</description></item>
+        /// </list>
         /// 
-        /// *   wrr: weighted round-robin scheduling. Backend servers that have higher weights receive more requests than those that have lower weights.
-        /// *   rr: round-robin scheduling. Requests are sequentially distributed to backend servers.
+        /// <b>Example:</b>
+        /// <para>wrr</para>
         /// </summary>
         [NameInMap("Scheduler")]
         [Validation(Required=false)]
         public string Scheduler { get; set; }
 
         /// <summary>
-        /// The information about the ports. This parameter is required if you want to configure multi-port mappings or use a protocol other than TCP. You must set this parameter to a JSON array. Example: \[{"targetPort":8080,"port":82,"loadBalancerProtocol":"TCP"},{"port":81,"certId":"1362469756373809\_16c185d6fa2\_1914500329\_-xxxxxxx","targetPort":8181,"lo adBalancerProtocol":"HTTPS"}]
+        /// <para>The information about the ports. This parameter is required if you want to configure multi-port mappings or use a protocol other than TCP. You must set this parameter to a JSON array. Example: [{&quot;targetPort&quot;:8080,&quot;port&quot;:82,&quot;loadBalancerProtocol&quot;:&quot;TCP&quot;},{&quot;port&quot;:81,&quot;certId&quot;:&quot;1362469756373809_16c185d6fa2_1914500329_-xxxxxxx&quot;,&quot;targetPort&quot;:8181,&quot;lo adBalancerProtocol&quot;:&quot;HTTPS&quot;}]</para>
+        /// <list type="bullet">
+        /// <item><description>port: required. The frontend port. Valid values: 1 to 65535. Each port must be unique.</description></item>
+        /// <item><description>targetPort: required. The backend port. Valid values: 1 to 65535.</description></item>
+        /// <item><description>loadBalancerProtocol: required. Valid values: TCP and HTTPS. If the HTTP protocol is used, set this parameter to TCP.</description></item>
+        /// <item><description>certId: the ID of the certificate. This parameter is required if the HTTPS protocol is used. You can purchase an SLB instance in the SLB console.</description></item>
+        /// <item><description>Note: The ServicePortInfos parameter is specified to support multi-port mappings. If you want this parameter to take effect, make sure that you specify the AppId, ClusterId, Type, and SlbId parameters.</description></item>
+        /// </list>
         /// 
-        /// *   port: required. The frontend port. Valid values: 1 to 65535. Each port must be unique.
-        /// *   targetPort: required. The backend port. Valid values: 1 to 65535.
-        /// *   loadBalancerProtocol: required. Valid values: TCP and HTTPS. If the HTTP protocol is used, set this parameter to TCP.
-        /// *   certId: the ID of the certificate. This parameter is required if the HTTPS protocol is used. You can purchase an SLB instance in the SLB console.
-        /// *   Note: The ServicePortInfos parameter is specified to support multi-port mappings. If you want this parameter to take effect, make sure that you specify the AppId, ClusterId, Type, and SlbId parameters.
+        /// <b>Example:</b>
+        /// <para>{&quot;targetPort&quot;:8080,&quot;port&quot;:82,&quot;loadBalancerProtocol&quot;:&quot;TCP&quot;},{&quot;port&quot;:81,&quot;certId&quot;:&quot;136246975637380916c185d6fa21914500329_-xxxxxxx&quot;,&quot;targetPort&quot;:8181,&quot;lo adBalancerProtocol&quot;:&quot;HTTPS&quot;}</para>
         /// </summary>
         [NameInMap("ServicePortInfos")]
         [Validation(Required=false)]
         public string ServicePortInfos { get; set; }
 
         /// <summary>
-        /// The name of the SLB instance.
+        /// <para>The name of the SLB instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SLB_doctest</para>
         /// </summary>
         [NameInMap("SlbName")]
         [Validation(Required=false)]
         public string SlbName { get; set; }
 
         /// <summary>
-        /// The protocol used by the SLB instance. Set the value to TCP.
+        /// <para>The protocol used by the SLB instance. Set the value to TCP.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TCP</para>
         /// </summary>
         [NameInMap("SlbProtocol")]
         [Validation(Required=false)]
         public string SlbProtocol { get; set; }
 
         /// <summary>
-        /// The specifications of the SLB instance.
+        /// <para>The specifications of the SLB instance.</para>
+        /// <list type="bullet">
+        /// <item><description>slb.s1.small</description></item>
+        /// <item><description>slb.s2.small</description></item>
+        /// <item><description>slb.s2.medium</description></item>
+        /// <item><description>slb.s3.small</description></item>
+        /// <item><description>slb.s3.medium</description></item>
+        /// <item><description>slb.s3.large</description></item>
+        /// </list>
+        /// <para>If you do not specify this parameter, the default value slb.s1.small is used.</para>
         /// 
-        /// *   slb.s1.small
-        /// *   slb.s2.small
-        /// *   slb.s2.medium
-        /// *   slb.s3.small
-        /// *   slb.s3.medium
-        /// *   slb.s3.large
-        /// 
-        /// If you do not specify this parameter, the default value slb.s1.small is used.
+        /// <b>Example:</b>
+        /// <para>slb.s1.small</para>
         /// </summary>
         [NameInMap("Specification")]
         [Validation(Required=false)]
         public string Specification { get; set; }
 
         /// <summary>
-        /// The backend port, which is also the service port of the application. Valid values: 1 to 65535.
+        /// <para>The backend port, which is also the service port of the application. Valid values: 1 to 65535.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8082</para>
         /// </summary>
         [NameInMap("TargetPort")]
         [Validation(Required=false)]
         public string TargetPort { get; set; }
 
         /// <summary>
-        /// The type of the SLB instance. Valid values:
+        /// <para>The type of the SLB instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Internet: an Internet-facing SLB instance</description></item>
+        /// <item><description>Intranet: an internal-facing SLB instance</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   Internet: an Internet-facing SLB instance
-        /// *   Intranet: an internal-facing SLB instance
+        /// <b>Example:</b>
+        /// <para>Internet</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

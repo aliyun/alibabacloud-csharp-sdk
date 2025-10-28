@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListUserDefineRegionRequest : TeaModel {
         /// <summary>
-        /// Specifies whether remote debugging is allowed.
+        /// <para>Specifies whether remote debugging is allowed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DebugEnable")]
         [Validation(Required=false)]

@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Edas20170801.Models
 {
-    public class RollbackChangeOrderResponseBody : TeaModel {
+    public class UpdateLocalitySettingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -19,38 +17,37 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        /// <summary>
-        /// <para>The information about the change process.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public RollbackChangeOrderResponseBodyData Data { get; set; }
-        public class RollbackChangeOrderResponseBodyData : TeaModel {
+        public UpdateLocalitySettingResponseBodyData Data { get; set; }
+        public class UpdateLocalitySettingResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the change process.</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>4f40e616-cdcd-4250-a018-efd4599c****</para>
+            /// <para>true</para>
             /// </summary>
-            [NameInMap("ChangeOrderId")]
+            [NameInMap("Enabled")]
             [Validation(Required=false)]
-            public string ChangeOrderId { get; set; }
+            public bool? Enabled { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>15</para>
+            /// </summary>
+            [NameInMap("Threshold")]
+            [Validation(Required=false)]
+            public float? Threshold { get; set; }
 
         }
 
         /// <summary>
-        /// <para>The error code that is returned.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>200</para>
         /// </summary>
-        [NameInMap("ErrorCode")]
+        [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
-        public string ErrorCode { get; set; }
+        public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information that is returned.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -59,24 +56,20 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>B909AB1F-3763-4963-B1CE-0BDFA192****</para>
+        /// <para>a5281053-08e4-47a5-b2ab-5c0323de*****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>000000000000000000000000000000</para>
+        /// <para>True</para>
         /// </summary>
-        [NameInMap("TraceId")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string TraceId { get; set; }
+        public bool? Success { get; set; }
 
     }
 

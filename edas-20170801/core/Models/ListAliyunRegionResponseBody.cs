@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListAliyunRegionResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The message that is returned.
+        /// <para>The message that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The details of the regions.
+        /// <para>The details of the regions.</para>
         /// </summary>
         [NameInMap("RegionEntityList")]
         [Validation(Required=false)]
@@ -35,14 +41,20 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public List<ListAliyunRegionResponseBodyRegionEntityListRegionEntity> RegionEntity { get; set; }
             public class ListAliyunRegionResponseBodyRegionEntityListRegionEntity : TeaModel {
                 /// <summary>
-                /// The ID of the region.
+                /// <para>The ID of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
                 /// <summary>
-                /// The name of the region.
+                /// <para>The name of the region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>China East 1 (Hangzhou)</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -53,7 +65,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b197-40ab-9155-7ca7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

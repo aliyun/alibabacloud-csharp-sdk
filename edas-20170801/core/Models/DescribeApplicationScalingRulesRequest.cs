@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DescribeApplicationScalingRulesRequest : TeaModel {
         /// <summary>
-        /// The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).
+        /// <para>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>78194c76-3dca-418e-a263-cccd1ab4****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

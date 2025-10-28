@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListSwimmingLaneRequest : TeaModel {
         /// <summary>
-        /// The ID of the lane group.
+        /// <para>The ID of the lane group.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>79</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

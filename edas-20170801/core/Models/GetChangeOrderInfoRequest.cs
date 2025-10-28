@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetChangeOrderInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the change process.
+        /// <para>The ID of the change process.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1074f3e2-e974-4a0e-<b><b>-</b></b>********</para>
         /// </summary>
         [NameInMap("ChangeOrderId")]
         [Validation(Required=false)]

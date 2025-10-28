@@ -10,38 +10,51 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UpdateHookConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The information about the mounted script.
+        /// <para>The information about the mounted script.</para>
         /// </summary>
         [NameInMap("HooksConfiguration")]
         [Validation(Required=false)]
         public List<UpdateHookConfigurationResponseBodyHooksConfiguration> HooksConfiguration { get; set; }
         public class UpdateHookConfigurationResponseBodyHooksConfiguration : TeaModel {
             /// <summary>
-            /// Indicates whether a mount failure is ignored. Valid values:
+            /// <para>Indicates whether a mount failure is ignored. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: A mount failure is ignored.</description></item>
+            /// <item><description><b>false</b>: A mount failure is not ignored.</description></item>
+            /// </list>
             /// 
-            /// *   **true**: A mount failure is ignored.
-            /// *   **false**: A mount failure is not ignored.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("IgnoreFail")]
             [Validation(Required=false)]
             public bool? IgnoreFail { get; set; }
 
             /// <summary>
-            /// The name of the mounted script.
+            /// <para>The name of the mounted script.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>postprepareInstanceEnvironmentOnScaleOut</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The content of the mounted script.
+            /// <para>The content of the mounted script.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ls</para>
             /// </summary>
             [NameInMap("Script")]
             [Validation(Required=false)]
@@ -50,14 +63,20 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// The message that is returned.
+        /// <para>The message that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d498****-1dd8ec229862</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

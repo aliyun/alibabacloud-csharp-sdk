@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class CreateIDCImportCommandRequest : TeaModel {
         /// <summary>
-        /// The cluster ID. You can call the ListCluster operation to query the cluster ID. For more information, see [ListCluster](~~154995~~).
+        /// <para>The cluster ID. You can call the ListCluster operation to query the cluster ID. For more information, see <a href="https://help.aliyun.com/document_detail/154995.html">ListCluster</a>.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7246cxxx-53xx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]

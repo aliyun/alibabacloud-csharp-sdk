@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class QueryEccInfoRequest : TeaModel {
         /// <summary>
-        /// The ID of the ECC.
+        /// <para>The ID of the ECC.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b197-40ab-9155-****</para>
         /// </summary>
         [NameInMap("EccId")]
         [Validation(Required=false)]

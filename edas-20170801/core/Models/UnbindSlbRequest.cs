@@ -10,34 +10,51 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UnbindSlbRequest : TeaModel {
         /// <summary>
-        /// The ID of the application.
+        /// <para>The ID of the application.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c627c157-560d-********************</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// Specifies whether to remove the configured listeners. Valid values:
+        /// <para>Specifies whether to remove the configured listeners. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: removes the configured listeners.</description></item>
+        /// <item><description>false: does not remove the configured listeners.</description></item>
+        /// </list>
         /// 
-        /// *   true: removes the configured listeners.
-        /// *   false: does not remove the configured listeners.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DeleteListener")]
         [Validation(Required=false)]
         public string DeleteListener { get; set; }
 
         /// <summary>
-        /// The ID of the SLB instance.
+        /// <para>The ID of the SLB instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lb-wz9vo49****************</para>
         /// </summary>
         [NameInMap("SlbId")]
         [Validation(Required=false)]
         public string SlbId { get; set; }
 
         /// <summary>
-        /// The network type of the SLB instance. Valid values:
+        /// <para>The network type of the SLB instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>internet</b>: Internet-facing SLB instance</description></item>
+        /// <item><description><b>intranet</b>: internal-facing SLB instance</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **internet**: Internet-facing SLB instance
-        /// *   **intranet**: internal-facing SLB instance
+        /// <b>Example:</b>
+        /// <para>internet</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

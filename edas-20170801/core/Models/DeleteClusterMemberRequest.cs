@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DeleteClusterMemberRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>52984524-<b><b>-</b></b>-85f2-a34b0e5bb521</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The member ID of the ECS instance that you want to remove from the cluster.
+        /// <para>The member ID of the ECS instance that you want to remove from the cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-2zej4i2jdf3****jigng</para>
         /// </summary>
         [NameInMap("ClusterMemberId")]
         [Validation(Required=false)]

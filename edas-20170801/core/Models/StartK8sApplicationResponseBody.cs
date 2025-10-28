@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class StartK8sApplicationResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the change process.
+        /// <para>The ID of the change process.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>*********d237-4827-a4f4-ed2ae98de18d</para>
         /// </summary>
         [NameInMap("ChangeOrderId")]
         [Validation(Required=false)]
         public string ChangeOrderId { get; set; }
 
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The additional information that is returned.
+        /// <para>The additional information that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>03FD1520-0FD6-436A-<b><b>-265318D7</b></b></para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DeleteSwimmingLaneRequest : TeaModel {
         /// <summary>
-        /// The ID of the lane.
+        /// <para>The ID of the lane.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>241</para>
         /// </summary>
         [NameInMap("LaneId")]
         [Validation(Required=false)]

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DeleteRoleRequest : TeaModel {
         /// <summary>
-        /// The ID of the RAM role.
+        /// <para>The ID of the RAM role.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>99999999</para>
         /// </summary>
         [NameInMap("RoleId")]
         [Validation(Required=false)]

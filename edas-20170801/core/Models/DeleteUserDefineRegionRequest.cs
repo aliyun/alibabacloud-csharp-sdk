@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DeleteUserDefineRegionRequest : TeaModel {
         /// <summary>
-        /// The unique ID of the custom namespace. You can call the ListUserDefineRegion operation to query the ID. For more information, see [ListUserDefineRegion](~~149377~~).
+        /// <para>The unique ID of the custom namespace. You can call the ListUserDefineRegion operation to query the ID. For more information, see <a href="https://help.aliyun.com/document_detail/149377.html">ListUserDefineRegion</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2564</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// The tag of the custom namespace.
+        /// <para>The tag of the custom namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>regiontag</para>
         /// </summary>
         [NameInMap("RegionTag")]
         [Validation(Required=false)]

@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class UpdateHealthCheckUrlResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The health check URL.
+        /// <para>The health check URL.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://127.0.0.1:8080/_ehc.html">http://127.0.0.1:8080/_ehc.html</a></para>
         /// </summary>
         [NameInMap("HealthCheckURL")]
         [Validation(Required=false)]
         public string HealthCheckURL { get; set; }
 
         /// <summary>
-        /// The message that is returned.
+        /// <para>The message that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D16979DC-4D42-*****************</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

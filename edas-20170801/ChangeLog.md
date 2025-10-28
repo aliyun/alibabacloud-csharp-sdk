@@ -1,3 +1,10 @@
+2025-10-28 Version: 2.0.0
+- Support API UpdateLocalitySetting.
+- Update API DeleteApplicationScalingRule: add response parameters Body.Code.
+- Update API DeleteApplicationScalingRule: add response parameters Body.Message.
+- Update API InsertApplication: delete request parameters HealthCheckURL.
+
+
 2024-01-30 Version: 1.0.8
 - Update API DeployK8sApplicationadd CustomAgentVersion param.
 - Update API GetK8sApplicationupdate response param.

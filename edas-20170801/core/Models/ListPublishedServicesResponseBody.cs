@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListPublishedServicesResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The message that is returned.
+        /// <para>The message that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The published services.
+        /// <para>The published services.</para>
         /// </summary>
         [NameInMap("PublishedServicesList")]
         [Validation(Required=false)]
@@ -35,24 +41,34 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public List<ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices> ListPublishedServices { get; set; }
             public class ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices : TeaModel {
                 /// <summary>
-                /// The ID of the application.
+                /// <para>The ID of the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ECD1D6FC-4307-4583-BA6F-215F3857E****</para>
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// Indicates whether the application runs in a Docker container. Valid values:
+                /// <para>Indicates whether the application runs in a Docker container. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: The application runs in a Docker container.</description></item>
+                /// <item><description>false: The application does not run in a Docker container.</description></item>
+                /// </list>
                 /// 
-                /// *   true: The application runs in a Docker container.
-                /// *   false: The application does not run in a Docker container.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("DockerApplication")]
                 [Validation(Required=false)]
                 public bool? DockerApplication { get; set; }
 
                 /// <summary>
-                /// A reserved parameter.
+                /// <para>A reserved parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>&quot;&quot;</para>
                 /// </summary>
                 [NameInMap("Group2Ip")]
                 [Validation(Required=false)]
@@ -79,21 +95,30 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 }
 
                 /// <summary>
-                /// The name of the published service.
+                /// <para>The name of the published service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>providers:com.****</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The type of the published service.
+                /// <para>The type of the published service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>RESTful</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The version of the published services.
+                /// <para>The version of the published services.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>--</para>
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
@@ -104,7 +129,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1D6FC-4307-4583-BA6F-215F3857E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,28 +10,44 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ConvertK8sResourceRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see [ListCluster](~~154995~~).
+        /// <para>The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see <a href="https://help.aliyun.com/document_detail/154995.html">ListCluster</a>.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b07c8192-****-adf4f7447720</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The namespace.
+        /// <para>The namespace.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The name of the resource.
+        /// <para>The name of the resource.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>deployment-to-convert</para>
         /// </summary>
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// The type of the resource that is used. Set the value to deployment.
+        /// <para>The type of the resource that is used. Set the value to deployment.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>deployment</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

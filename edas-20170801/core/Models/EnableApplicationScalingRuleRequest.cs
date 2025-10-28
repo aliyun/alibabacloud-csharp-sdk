@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class EnableApplicationScalingRuleRequest : TeaModel {
         /// <summary>
-        /// The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).
+        /// <para>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>78194c76-3dca-418e-a263-cccd1ab4****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// The name of the auto scaling policy.
+        /// <para>The name of the auto scaling policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cpu-trigger</para>
         /// </summary>
         [NameInMap("ScalingRuleName")]
         [Validation(Required=false)]

@@ -10,77 +10,104 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetServiceListPageResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The returned data.
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetServiceListPageResponseBodyData Data { get; set; }
         public class GetServiceListPageResponseBodyData : TeaModel {
             /// <summary>
-            /// The data array that is returned.
+            /// <para>The data array that is returned.</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public List<GetServiceListPageResponseBodyDataContent> Content { get; set; }
             public class GetServiceListPageResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// The ID of the application.
+                /// <para>The ID of the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>efbda488-7b33-432f-<b><b>-36530047</b></b></para>
                 /// </summary>
                 [NameInMap("EdasAppId")]
                 [Validation(Required=false)]
                 public string EdasAppId { get; set; }
 
                 /// <summary>
-                /// The name of the application.
+                /// <para>The name of the application.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>k8s-lq-cartservice</para>
                 /// </summary>
                 [NameInMap("EdasAppName")]
                 [Validation(Required=false)]
                 public string EdasAppName { get; set; }
 
                 /// <summary>
-                /// The service group.
+                /// <para>The service group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DUBBO</para>
                 /// </summary>
                 [NameInMap("Group")]
                 [Validation(Required=false)]
                 public string Group { get; set; }
 
                 /// <summary>
-                /// The number of instances.
+                /// <para>The number of instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("InstanceNum")]
                 [Validation(Required=false)]
                 public int? InstanceNum { get; set; }
 
                 /// <summary>
-                /// The type of the service registry.
+                /// <para>The type of the service registry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xx</para>
                 /// </summary>
                 [NameInMap("RegisterType")]
                 [Validation(Required=false)]
                 public string RegisterType { get; set; }
 
                 /// <summary>
-                /// The ID of the service.
+                /// <para>The ID of the service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xx</para>
                 /// </summary>
                 [NameInMap("ServiceId")]
                 [Validation(Required=false)]
                 public string ServiceId { get; set; }
 
                 /// <summary>
-                /// The name of the service.
+                /// <para>The name of the service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>com.alibabacloud.hipstershop.CartService</para>
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// The version number.
+                /// <para>The version number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.0.0</para>
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
@@ -89,21 +116,30 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             }
 
             /// <summary>
-            /// The number of entries returned per page.
+            /// <para>The number of entries returned per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8</para>
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
 
             /// <summary>
-            /// The total number of returned entries.
+            /// <para>The total number of returned entries.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6</para>
             /// </summary>
             [NameInMap("TotalElements")]
             [Validation(Required=false)]
             public int? TotalElements { get; set; }
 
             /// <summary>
-            /// The total number of returned pages.
+            /// <para>The total number of returned pages.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TotalPages")]
             [Validation(Required=false)]
@@ -112,14 +148,20 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// The message that is returned for the request.
+        /// <para>The message that is returned for the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

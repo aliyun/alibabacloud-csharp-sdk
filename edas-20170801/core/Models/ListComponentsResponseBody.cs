@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class ListComponentsResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The components.
+        /// <para>The components.</para>
         /// </summary>
         [NameInMap("ComponentList")]
         [Validation(Required=false)]
@@ -28,49 +31,69 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             public List<ListComponentsResponseBodyComponentListComponent> Component { get; set; }
             public class ListComponentsResponseBodyComponentListComponent : TeaModel {
                 /// <summary>
-                /// The ID of the component.
+                /// <para>The ID of the component.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("ComponentId")]
                 [Validation(Required=false)]
                 public string ComponentId { get; set; }
 
                 /// <summary>
-                /// The key of the component.
+                /// <para>The key of the component.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>JDK 7</para>
                 /// </summary>
                 [NameInMap("ComponentKey")]
                 [Validation(Required=false)]
                 public string ComponentKey { get; set; }
 
                 /// <summary>
-                /// The description of the component.
+                /// <para>The description of the component.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>JDK 7</para>
                 /// </summary>
                 [NameInMap("Desc")]
                 [Validation(Required=false)]
                 public string Desc { get; set; }
 
                 /// <summary>
-                /// Indicates whether the component has expired. Valid values:
+                /// <para>Indicates whether the component has expired. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>false: The component has not expired.</description></item>
+                /// <item><description>true: The component has expired.</description></item>
+                /// </list>
                 /// 
-                /// *   false: The component has not expired.
-                /// *   true: The component has expired.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Expired")]
                 [Validation(Required=false)]
                 public bool? Expired { get; set; }
 
                 /// <summary>
-                /// The type of the component. Valid values:
+                /// <para>The type of the component. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>JDK</description></item>
+                /// <item><description>TOMCAT</description></item>
+                /// <item><description>TENGINE</description></item>
+                /// </list>
                 /// 
-                /// *   JDK
-                /// *   TOMCAT
-                /// *   TENGINE
+                /// <b>Example:</b>
+                /// <para>JDK</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
                 /// <summary>
-                /// The version of the component.
+                /// <para>The version of the component.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>oraclejdk7</para>
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
@@ -81,7 +104,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// The message that is returned.
+        /// <para>The message that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

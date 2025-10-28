@@ -10,17 +10,25 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DeleteClusterRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster.
+        /// <para>The ID of the cluster.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8b96ade0-0a07-****-af9d-5ed83640d076</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// The type of the cluster ID. Valid values:
+        /// <para>The type of the cluster ID. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: specifies the ID of the cluster in Enterprise Distributed Application Service (EDAS).</description></item>
+        /// <item><description>1: specifies the ID of the ACK cluster.</description></item>
+        /// </list>
         /// 
-        /// *   0: specifies the ID of the cluster in Enterprise Distributed Application Service (EDAS).
-        /// *   1: specifies the ID of the ACK cluster.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]

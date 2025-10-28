@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Edas20170801
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -82,6 +81,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a change process and rolls back the application. This operation is applicable to applications that are deployed in Container Service for Kubernetes (ACK) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AbortAndRollbackChangeOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AbortAndRollbackChangeOrderResponse
+        /// </returns>
         public AbortAndRollbackChangeOrderResponse AbortAndRollbackChangeOrderWithOptions(AbortAndRollbackChangeOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -110,6 +127,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<AbortAndRollbackChangeOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a change process and rolls back the application. This operation is applicable to applications that are deployed in Container Service for Kubernetes (ACK) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AbortAndRollbackChangeOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AbortAndRollbackChangeOrderResponse
+        /// </returns>
         public async Task<AbortAndRollbackChangeOrderResponse> AbortAndRollbackChangeOrderWithOptionsAsync(AbortAndRollbackChangeOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -138,6 +173,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<AbortAndRollbackChangeOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a change process and rolls back the application. This operation is applicable to applications that are deployed in Container Service for Kubernetes (ACK) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AbortAndRollbackChangeOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AbortAndRollbackChangeOrderResponse
+        /// </returns>
         public AbortAndRollbackChangeOrderResponse AbortAndRollbackChangeOrder(AbortAndRollbackChangeOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -145,6 +192,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return AbortAndRollbackChangeOrderWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a change process and rolls back the application. This operation is applicable to applications that are deployed in Container Service for Kubernetes (ACK) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AbortAndRollbackChangeOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AbortAndRollbackChangeOrderResponse
+        /// </returns>
         public async Task<AbortAndRollbackChangeOrderResponse> AbortAndRollbackChangeOrderAsync(AbortAndRollbackChangeOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -152,6 +211,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await AbortAndRollbackChangeOrderWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a change process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AbortChangeOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AbortChangeOrderResponse
+        /// </returns>
         public AbortChangeOrderResponse AbortChangeOrderWithOptions(AbortChangeOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -180,6 +257,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<AbortChangeOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a change process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AbortChangeOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AbortChangeOrderResponse
+        /// </returns>
         public async Task<AbortChangeOrderResponse> AbortChangeOrderWithOptionsAsync(AbortChangeOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -208,6 +303,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<AbortChangeOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a change process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AbortChangeOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AbortChangeOrderResponse
+        /// </returns>
         public AbortChangeOrderResponse AbortChangeOrder(AbortChangeOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -215,6 +322,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return AbortChangeOrderWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a change process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AbortChangeOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AbortChangeOrderResponse
+        /// </returns>
         public async Task<AbortChangeOrderResponse> AbortChangeOrderAsync(AbortChangeOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -222,6 +341,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await AbortChangeOrderWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a log directory to an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddLogPathRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddLogPathResponse
+        /// </returns>
         public AddLogPathResponse AddLogPathWithOptions(AddLogPathRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -254,6 +391,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<AddLogPathResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a log directory to an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddLogPathRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddLogPathResponse
+        /// </returns>
         public async Task<AddLogPathResponse> AddLogPathWithOptionsAsync(AddLogPathRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -286,6 +441,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<AddLogPathResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a log directory to an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddLogPathRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddLogPathResponse
+        /// </returns>
         public AddLogPathResponse AddLogPath(AddLogPathRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -293,6 +460,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return AddLogPathWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a log directory to an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddLogPathRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddLogPathResponse
+        /// </returns>
         public async Task<AddLogPathResponse> AddLogPathAsync(AddLogPathRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -300,6 +479,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await AddLogPathWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants a Resource Access Management (RAM) user the permissions on a specified application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeApplicationResponse
+        /// </returns>
         public AuthorizeApplicationResponse AuthorizeApplicationWithOptions(AuthorizeApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -332,6 +529,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<AuthorizeApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants a Resource Access Management (RAM) user the permissions on a specified application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeApplicationResponse
+        /// </returns>
         public async Task<AuthorizeApplicationResponse> AuthorizeApplicationWithOptionsAsync(AuthorizeApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -364,6 +579,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<AuthorizeApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants a Resource Access Management (RAM) user the permissions on a specified application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeApplicationResponse
+        /// </returns>
         public AuthorizeApplicationResponse AuthorizeApplication(AuthorizeApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -371,6 +598,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return AuthorizeApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants a Resource Access Management (RAM) user the permissions on a specified application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeApplicationResponse
+        /// </returns>
         public async Task<AuthorizeApplicationResponse> AuthorizeApplicationAsync(AuthorizeApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -378,6 +617,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await AuthorizeApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants a Resource Access Management (RAM) user the permissions on a resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeResourceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeResourceGroupResponse
+        /// </returns>
         public AuthorizeResourceGroupResponse AuthorizeResourceGroupWithOptions(AuthorizeResourceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -410,6 +667,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<AuthorizeResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants a Resource Access Management (RAM) user the permissions on a resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeResourceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeResourceGroupResponse
+        /// </returns>
         public async Task<AuthorizeResourceGroupResponse> AuthorizeResourceGroupWithOptionsAsync(AuthorizeResourceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -442,6 +717,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<AuthorizeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants a Resource Access Management (RAM) user the permissions on a resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeResourceGroupResponse
+        /// </returns>
         public AuthorizeResourceGroupResponse AuthorizeResourceGroup(AuthorizeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -449,6 +736,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return AuthorizeResourceGroupWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants a Resource Access Management (RAM) user the permissions on a resource group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeResourceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeResourceGroupResponse
+        /// </returns>
         public async Task<AuthorizeResourceGroupResponse> AuthorizeResourceGroupAsync(AuthorizeResourceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -456,6 +755,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await AuthorizeResourceGroupWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns one or more roles to a RAM user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeRoleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeRoleResponse
+        /// </returns>
         public AuthorizeRoleResponse AuthorizeRoleWithOptions(AuthorizeRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -488,6 +805,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<AuthorizeRoleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns one or more roles to a RAM user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeRoleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeRoleResponse
+        /// </returns>
         public async Task<AuthorizeRoleResponse> AuthorizeRoleWithOptionsAsync(AuthorizeRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -520,6 +855,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<AuthorizeRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns one or more roles to a RAM user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeRoleResponse
+        /// </returns>
         public AuthorizeRoleResponse AuthorizeRole(AuthorizeRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -527,6 +874,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return AuthorizeRoleWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns one or more roles to a RAM user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeRoleResponse
+        /// </returns>
         public async Task<AuthorizeRoleResponse> AuthorizeRoleAsync(AuthorizeRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -534,6 +893,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await AuthorizeRoleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to an application that is deployed in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindEcsSlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindEcsSlbResponse
+        /// </returns>
         public BindEcsSlbResponse BindEcsSlbWithOptions(BindEcsSlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -594,6 +971,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<BindEcsSlbResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to an application that is deployed in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindEcsSlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindEcsSlbResponse
+        /// </returns>
         public async Task<BindEcsSlbResponse> BindEcsSlbWithOptionsAsync(BindEcsSlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -654,6 +1049,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<BindEcsSlbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to an application that is deployed in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindEcsSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindEcsSlbResponse
+        /// </returns>
         public BindEcsSlbResponse BindEcsSlb(BindEcsSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -661,6 +1068,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return BindEcsSlbWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to an application that is deployed in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindEcsSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindEcsSlbResponse
+        /// </returns>
         public async Task<BindEcsSlbResponse> BindEcsSlbAsync(BindEcsSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -668,6 +1087,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await BindEcsSlbWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindK8sSlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindK8sSlbResponse
+        /// </returns>
         public BindK8sSlbResponse BindK8sSlbWithOptions(BindK8sSlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -732,6 +1169,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<BindK8sSlbResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindK8sSlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindK8sSlbResponse
+        /// </returns>
         public async Task<BindK8sSlbResponse> BindK8sSlbWithOptionsAsync(BindK8sSlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -796,6 +1251,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<BindK8sSlbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindK8sSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindK8sSlbResponse
+        /// </returns>
         public BindK8sSlbResponse BindK8sSlb(BindK8sSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -803,6 +1270,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return BindK8sSlbWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindK8sSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindK8sSlbResponse
+        /// </returns>
         public async Task<BindK8sSlbResponse> BindK8sSlbAsync(BindK8sSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -810,6 +1289,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await BindK8sSlbWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to an application in Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSlbResponse
+        /// </returns>
         public BindSlbResponse BindSlbWithOptions(BindSlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -858,6 +1355,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<BindSlbResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to an application in Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSlbResponse
+        /// </returns>
         public async Task<BindSlbResponse> BindSlbWithOptionsAsync(BindSlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -906,6 +1421,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<BindSlbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to an application in Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSlbResponse
+        /// </returns>
         public BindSlbResponse BindSlb(BindSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -913,6 +1440,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return BindSlbWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Server Load Balancer (SLB) instance to an application in Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSlbResponse
+        /// </returns>
         public async Task<BindSlbResponse> BindSlbAsync(BindSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -920,6 +1459,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await BindSlbWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the application instance group for an Elastic Compute Service (ECS) instance in an ECS cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDeployGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDeployGroupResponse
+        /// </returns>
         public ChangeDeployGroupResponse ChangeDeployGroupWithOptions(ChangeDeployGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -960,6 +1517,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ChangeDeployGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the application instance group for an Elastic Compute Service (ECS) instance in an ECS cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDeployGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDeployGroupResponse
+        /// </returns>
         public async Task<ChangeDeployGroupResponse> ChangeDeployGroupWithOptionsAsync(ChangeDeployGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1000,6 +1575,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ChangeDeployGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the application instance group for an Elastic Compute Service (ECS) instance in an ECS cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDeployGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDeployGroupResponse
+        /// </returns>
         public ChangeDeployGroupResponse ChangeDeployGroup(ChangeDeployGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1007,6 +1594,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ChangeDeployGroupWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the application instance group for an Elastic Compute Service (ECS) instance in an ECS cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeDeployGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeDeployGroupResponse
+        /// </returns>
         public async Task<ChangeDeployGroupResponse> ChangeDeployGroupAsync(ChangeDeployGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1014,6 +1613,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ChangeDeployGroupWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually confirms the release of the next batch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ContinuePipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContinuePipelineResponse
+        /// </returns>
         public ContinuePipelineResponse ContinuePipelineWithOptions(ContinuePipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1046,6 +1663,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ContinuePipelineResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually confirms the release of the next batch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ContinuePipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContinuePipelineResponse
+        /// </returns>
         public async Task<ContinuePipelineResponse> ContinuePipelineWithOptionsAsync(ContinuePipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1078,6 +1713,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ContinuePipelineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually confirms the release of the next batch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ContinuePipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContinuePipelineResponse
+        /// </returns>
         public ContinuePipelineResponse ContinuePipeline(ContinuePipelineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1085,6 +1732,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ContinuePipelineWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually confirms the release of the next batch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ContinuePipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ContinuePipelineResponse
+        /// </returns>
         public async Task<ContinuePipelineResponse> ContinuePipelineAsync(ContinuePipelineRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1092,6 +1751,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ContinuePipelineWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts a Deployment into an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConvertK8sResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertK8sResourceResponse
+        /// </returns>
         public ConvertK8sResourceResponse ConvertK8sResourceWithOptions(ConvertK8sResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1132,6 +1809,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ConvertK8sResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts a Deployment into an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConvertK8sResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertK8sResourceResponse
+        /// </returns>
         public async Task<ConvertK8sResourceResponse> ConvertK8sResourceWithOptionsAsync(ConvertK8sResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1172,6 +1867,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ConvertK8sResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts a Deployment into an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConvertK8sResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertK8sResourceResponse
+        /// </returns>
         public ConvertK8sResourceResponse ConvertK8sResource(ConvertK8sResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1179,6 +1886,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ConvertK8sResourceWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts a Deployment into an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConvertK8sResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertK8sResourceResponse
+        /// </returns>
         public async Task<ConvertK8sResourceResponse> ConvertK8sResourceAsync(ConvertK8sResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1186,6 +1905,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ConvertK8sResourceWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateApplicationScalingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApplicationScalingRuleResponse
+        /// </returns>
         public CreateApplicationScalingRuleResponse CreateApplicationScalingRuleWithOptions(CreateApplicationScalingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1242,6 +1979,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<CreateApplicationScalingRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateApplicationScalingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApplicationScalingRuleResponse
+        /// </returns>
         public async Task<CreateApplicationScalingRuleResponse> CreateApplicationScalingRuleWithOptionsAsync(CreateApplicationScalingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1298,6 +2053,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<CreateApplicationScalingRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateApplicationScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApplicationScalingRuleResponse
+        /// </returns>
         public CreateApplicationScalingRuleResponse CreateApplicationScalingRule(CreateApplicationScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1305,6 +2072,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return CreateApplicationScalingRuleWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateApplicationScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApplicationScalingRuleResponse
+        /// </returns>
         public async Task<CreateApplicationScalingRuleResponse> CreateApplicationScalingRuleAsync(CreateApplicationScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1312,6 +2091,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await CreateApplicationScalingRuleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a configuration template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConfigTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConfigTemplateResponse
+        /// </returns>
         public CreateConfigTemplateResponse CreateConfigTemplateWithOptions(CreateConfigTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1352,6 +2149,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<CreateConfigTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a configuration template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConfigTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConfigTemplateResponse
+        /// </returns>
         public async Task<CreateConfigTemplateResponse> CreateConfigTemplateWithOptionsAsync(CreateConfigTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1392,6 +2207,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<CreateConfigTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a configuration template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConfigTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConfigTemplateResponse
+        /// </returns>
         public CreateConfigTemplateResponse CreateConfigTemplate(CreateConfigTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1399,6 +2226,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return CreateConfigTemplateWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a configuration template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateConfigTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateConfigTemplateResponse
+        /// </returns>
         public async Task<CreateConfigTemplateResponse> CreateConfigTemplateAsync(CreateConfigTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1406,15 +2245,30 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await CreateConfigTemplateWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * ## Description
-          * You must call the CreateIDCImportCommand operation first to generate a command used to import hybrid cloud ECS instances to a hybrid cloud ECS cluster. Then, run this command on the instances to import the instances to the cluster.
-          *
-          * @param request CreateIDCImportCommandRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateIDCImportCommandResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a command that is used to import instances to a hybrid cloud Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <para>You must call the CreateIDCImportCommand operation first to generate a command used to import hybrid cloud ECS instances to a hybrid cloud ECS cluster. Then, run this command on the instances to import the instances to the cluster.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateIDCImportCommandRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIDCImportCommandResponse
+        /// </returns>
         public CreateIDCImportCommandResponse CreateIDCImportCommandWithOptions(CreateIDCImportCommandRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1443,15 +2297,30 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<CreateIDCImportCommandResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * You must call the CreateIDCImportCommand operation first to generate a command used to import hybrid cloud ECS instances to a hybrid cloud ECS cluster. Then, run this command on the instances to import the instances to the cluster.
-          *
-          * @param request CreateIDCImportCommandRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return CreateIDCImportCommandResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a command that is used to import instances to a hybrid cloud Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <para>You must call the CreateIDCImportCommand operation first to generate a command used to import hybrid cloud ECS instances to a hybrid cloud ECS cluster. Then, run this command on the instances to import the instances to the cluster.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateIDCImportCommandRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIDCImportCommandResponse
+        /// </returns>
         public async Task<CreateIDCImportCommandResponse> CreateIDCImportCommandWithOptionsAsync(CreateIDCImportCommandRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1480,13 +2349,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<CreateIDCImportCommandResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Description
-          * You must call the CreateIDCImportCommand operation first to generate a command used to import hybrid cloud ECS instances to a hybrid cloud ECS cluster. Then, run this command on the instances to import the instances to the cluster.
-          *
-          * @param request CreateIDCImportCommandRequest
-          * @return CreateIDCImportCommandResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a command that is used to import instances to a hybrid cloud Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <para>You must call the CreateIDCImportCommand operation first to generate a command used to import hybrid cloud ECS instances to a hybrid cloud ECS cluster. Then, run this command on the instances to import the instances to the cluster.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateIDCImportCommandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIDCImportCommandResponse
+        /// </returns>
         public CreateIDCImportCommandResponse CreateIDCImportCommand(CreateIDCImportCommandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1494,13 +2374,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return CreateIDCImportCommandWithOptions(request, headers, runtime);
         }
 
-        /**
-          * ## Description
-          * You must call the CreateIDCImportCommand operation first to generate a command used to import hybrid cloud ECS instances to a hybrid cloud ECS cluster. Then, run this command on the instances to import the instances to the cluster.
-          *
-          * @param request CreateIDCImportCommandRequest
-          * @return CreateIDCImportCommandResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a command that is used to import instances to a hybrid cloud Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <para>You must call the CreateIDCImportCommand operation first to generate a command used to import hybrid cloud ECS instances to a hybrid cloud ECS cluster. Then, run this command on the instances to import the instances to the cluster.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateIDCImportCommandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIDCImportCommandResponse
+        /// </returns>
         public async Task<CreateIDCImportCommandResponse> CreateIDCImportCommandAsync(CreateIDCImportCommandRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1508,6 +2399,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await CreateIDCImportCommandWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Kubernetes ConfigMap.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sConfigMapRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sConfigMapResponse
+        /// </returns>
         public CreateK8sConfigMapResponse CreateK8sConfigMapWithOptions(CreateK8sConfigMapRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1548,6 +2457,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<CreateK8sConfigMapResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Kubernetes ConfigMap.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sConfigMapRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sConfigMapResponse
+        /// </returns>
         public async Task<CreateK8sConfigMapResponse> CreateK8sConfigMapWithOptionsAsync(CreateK8sConfigMapRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1588,6 +2515,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<CreateK8sConfigMapResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Kubernetes ConfigMap.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sConfigMapRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sConfigMapResponse
+        /// </returns>
         public CreateK8sConfigMapResponse CreateK8sConfigMap(CreateK8sConfigMapRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1595,6 +2534,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return CreateK8sConfigMapWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Kubernetes ConfigMap.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sConfigMapRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sConfigMapResponse
+        /// </returns>
         public async Task<CreateK8sConfigMapResponse> CreateK8sConfigMapAsync(CreateK8sConfigMapRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1602,6 +2553,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await CreateK8sConfigMapWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Ingress.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sIngressRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sIngressRuleResponse
+        /// </returns>
         public CreateK8sIngressRuleResponse CreateK8sIngressRuleWithOptions(CreateK8sIngressRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1650,6 +2619,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<CreateK8sIngressRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Ingress.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sIngressRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sIngressRuleResponse
+        /// </returns>
         public async Task<CreateK8sIngressRuleResponse> CreateK8sIngressRuleWithOptionsAsync(CreateK8sIngressRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1698,6 +2685,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<CreateK8sIngressRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Ingress.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sIngressRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sIngressRuleResponse
+        /// </returns>
         public CreateK8sIngressRuleResponse CreateK8sIngressRule(CreateK8sIngressRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1705,6 +2704,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return CreateK8sIngressRuleWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an Ingress.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sIngressRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sIngressRuleResponse
+        /// </returns>
         public async Task<CreateK8sIngressRuleResponse> CreateK8sIngressRuleAsync(CreateK8sIngressRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1712,6 +2723,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await CreateK8sIngressRuleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Kubernetes Secret.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sSecretRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sSecretResponse
+        /// </returns>
         public CreateK8sSecretResponse CreateK8sSecretWithOptions(CreateK8sSecretRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1768,6 +2797,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<CreateK8sSecretResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Kubernetes Secret.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sSecretRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sSecretResponse
+        /// </returns>
         public async Task<CreateK8sSecretResponse> CreateK8sSecretWithOptionsAsync(CreateK8sSecretRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1824,6 +2871,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<CreateK8sSecretResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Kubernetes Secret.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sSecretRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sSecretResponse
+        /// </returns>
         public CreateK8sSecretResponse CreateK8sSecret(CreateK8sSecretRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1831,6 +2890,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return CreateK8sSecretWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Kubernetes Secret.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sSecretRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sSecretResponse
+        /// </returns>
         public async Task<CreateK8sSecretResponse> CreateK8sSecretAsync(CreateK8sSecretRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1838,6 +2909,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await CreateK8sSecretWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application service in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sServiceResponse
+        /// </returns>
         public CreateK8sServiceResponse CreateK8sServiceWithOptions(CreateK8sServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1882,6 +2971,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<CreateK8sServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application service in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sServiceResponse
+        /// </returns>
         public async Task<CreateK8sServiceResponse> CreateK8sServiceWithOptionsAsync(CreateK8sServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1926,6 +3033,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<CreateK8sServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application service in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sServiceResponse
+        /// </returns>
         public CreateK8sServiceResponse CreateK8sService(CreateK8sServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1933,6 +3052,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return CreateK8sServiceWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application service in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateK8sServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateK8sServiceResponse
+        /// </returns>
         public async Task<CreateK8sServiceResponse> CreateK8sServiceAsync(CreateK8sServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1940,6 +3071,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await CreateK8sServiceWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationResponse
+        /// </returns>
         public DeleteApplicationResponse DeleteApplicationWithOptions(DeleteApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1968,6 +3117,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationResponse
+        /// </returns>
         public async Task<DeleteApplicationResponse> DeleteApplicationWithOptionsAsync(DeleteApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1996,6 +3163,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationResponse
+        /// </returns>
         public DeleteApplicationResponse DeleteApplication(DeleteApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2003,6 +3182,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationResponse
+        /// </returns>
         public async Task<DeleteApplicationResponse> DeleteApplicationAsync(DeleteApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2010,6 +3201,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationScalingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationScalingRuleResponse
+        /// </returns>
         public DeleteApplicationScalingRuleResponse DeleteApplicationScalingRuleWithOptions(DeleteApplicationScalingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2042,6 +3251,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteApplicationScalingRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationScalingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationScalingRuleResponse
+        /// </returns>
         public async Task<DeleteApplicationScalingRuleResponse> DeleteApplicationScalingRuleWithOptionsAsync(DeleteApplicationScalingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2074,6 +3301,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteApplicationScalingRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationScalingRuleResponse
+        /// </returns>
         public DeleteApplicationScalingRuleResponse DeleteApplicationScalingRule(DeleteApplicationScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2081,6 +3320,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteApplicationScalingRuleWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteApplicationScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApplicationScalingRuleResponse
+        /// </returns>
         public async Task<DeleteApplicationScalingRuleResponse> DeleteApplicationScalingRuleAsync(DeleteApplicationScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2088,6 +3339,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteApplicationScalingRuleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Elastic Compute Service (ECS) cluster or cancels the import of a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteClusterResponse
+        /// </returns>
         public DeleteClusterResponse DeleteClusterWithOptions(DeleteClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2120,6 +3389,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Elastic Compute Service (ECS) cluster or cancels the import of a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteClusterResponse
+        /// </returns>
         public async Task<DeleteClusterResponse> DeleteClusterWithOptionsAsync(DeleteClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2152,6 +3439,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Elastic Compute Service (ECS) cluster or cancels the import of a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteClusterResponse
+        /// </returns>
         public DeleteClusterResponse DeleteCluster(DeleteClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2159,6 +3458,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteClusterWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Elastic Compute Service (ECS) cluster or cancels the import of a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteClusterResponse
+        /// </returns>
         public async Task<DeleteClusterResponse> DeleteClusterAsync(DeleteClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2166,6 +3477,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteClusterWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes an Elastic Compute Service (ECS) instance from a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteClusterMemberRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteClusterMemberResponse
+        /// </returns>
         public DeleteClusterMemberResponse DeleteClusterMemberWithOptions(DeleteClusterMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2198,6 +3527,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteClusterMemberResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes an Elastic Compute Service (ECS) instance from a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteClusterMemberRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteClusterMemberResponse
+        /// </returns>
         public async Task<DeleteClusterMemberResponse> DeleteClusterMemberWithOptionsAsync(DeleteClusterMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2230,6 +3577,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteClusterMemberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes an Elastic Compute Service (ECS) instance from a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteClusterMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteClusterMemberResponse
+        /// </returns>
         public DeleteClusterMemberResponse DeleteClusterMember(DeleteClusterMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2237,6 +3596,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteClusterMemberWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes an Elastic Compute Service (ECS) instance from a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteClusterMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteClusterMemberResponse
+        /// </returns>
         public async Task<DeleteClusterMemberResponse> DeleteClusterMemberAsync(DeleteClusterMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2244,6 +3615,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteClusterMemberWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a configuration template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConfigTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigTemplateResponse
+        /// </returns>
         public DeleteConfigTemplateResponse DeleteConfigTemplateWithOptions(DeleteConfigTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2272,6 +3661,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteConfigTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a configuration template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConfigTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigTemplateResponse
+        /// </returns>
         public async Task<DeleteConfigTemplateResponse> DeleteConfigTemplateWithOptionsAsync(DeleteConfigTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2300,6 +3707,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteConfigTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a configuration template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConfigTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigTemplateResponse
+        /// </returns>
         public DeleteConfigTemplateResponse DeleteConfigTemplate(DeleteConfigTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2307,6 +3726,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteConfigTemplateWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a configuration template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteConfigTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteConfigTemplateResponse
+        /// </returns>
         public async Task<DeleteConfigTemplateResponse> DeleteConfigTemplateAsync(DeleteConfigTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2314,6 +3745,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteConfigTemplateWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an instance group for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDeployGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeployGroupResponse
+        /// </returns>
         public DeleteDeployGroupResponse DeleteDeployGroupWithOptions(DeleteDeployGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2346,6 +3795,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteDeployGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an instance group for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDeployGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeployGroupResponse
+        /// </returns>
         public async Task<DeleteDeployGroupResponse> DeleteDeployGroupWithOptionsAsync(DeleteDeployGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2378,6 +3845,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteDeployGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an instance group for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDeployGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeployGroupResponse
+        /// </returns>
         public DeleteDeployGroupResponse DeleteDeployGroup(DeleteDeployGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2385,6 +3864,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteDeployGroupWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an instance group for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDeployGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeployGroupResponse
+        /// </returns>
         public async Task<DeleteDeployGroupResponse> DeleteDeployGroupAsync(DeleteDeployGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2392,6 +3883,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteDeployGroupWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Elastic Compute Unit (ECU).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEcuRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEcuResponse
+        /// </returns>
         public DeleteEcuResponse DeleteEcuWithOptions(DeleteEcuRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2420,6 +3929,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteEcuResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Elastic Compute Unit (ECU).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEcuRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEcuResponse
+        /// </returns>
         public async Task<DeleteEcuResponse> DeleteEcuWithOptionsAsync(DeleteEcuRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2448,6 +3975,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteEcuResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Elastic Compute Unit (ECU).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEcuRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEcuResponse
+        /// </returns>
         public DeleteEcuResponse DeleteEcu(DeleteEcuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2455,6 +3994,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteEcuWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Elastic Compute Unit (ECU).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEcuRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEcuResponse
+        /// </returns>
         public async Task<DeleteEcuResponse> DeleteEcuAsync(DeleteEcuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2462,6 +4013,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteEcuWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an application from a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sApplicationResponse
+        /// </returns>
         public DeleteK8sApplicationResponse DeleteK8sApplicationWithOptions(DeleteK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2494,6 +4063,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteK8sApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an application from a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sApplicationResponse
+        /// </returns>
         public async Task<DeleteK8sApplicationResponse> DeleteK8sApplicationWithOptionsAsync(DeleteK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2526,6 +4113,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteK8sApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an application from a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sApplicationResponse
+        /// </returns>
         public DeleteK8sApplicationResponse DeleteK8sApplication(DeleteK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2533,6 +4132,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteK8sApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an application from a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sApplicationResponse
+        /// </returns>
         public async Task<DeleteK8sApplicationResponse> DeleteK8sApplicationAsync(DeleteK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2540,6 +4151,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteK8sApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Kubernetes ConfigMap.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sConfigMapRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sConfigMapResponse
+        /// </returns>
         public DeleteK8sConfigMapResponse DeleteK8sConfigMapWithOptions(DeleteK8sConfigMapRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2576,6 +4205,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteK8sConfigMapResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Kubernetes ConfigMap.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sConfigMapRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sConfigMapResponse
+        /// </returns>
         public async Task<DeleteK8sConfigMapResponse> DeleteK8sConfigMapWithOptionsAsync(DeleteK8sConfigMapRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2612,6 +4259,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteK8sConfigMapResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Kubernetes ConfigMap.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sConfigMapRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sConfigMapResponse
+        /// </returns>
         public DeleteK8sConfigMapResponse DeleteK8sConfigMap(DeleteK8sConfigMapRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2619,6 +4278,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteK8sConfigMapWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Kubernetes ConfigMap.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sConfigMapRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sConfigMapResponse
+        /// </returns>
         public async Task<DeleteK8sConfigMapResponse> DeleteK8sConfigMapAsync(DeleteK8sConfigMapRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2626,6 +4297,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteK8sConfigMapWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an ingress.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sIngressRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sIngressRuleResponse
+        /// </returns>
         public DeleteK8sIngressRuleResponse DeleteK8sIngressRuleWithOptions(DeleteK8sIngressRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2662,6 +4351,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteK8sIngressRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an ingress.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sIngressRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sIngressRuleResponse
+        /// </returns>
         public async Task<DeleteK8sIngressRuleResponse> DeleteK8sIngressRuleWithOptionsAsync(DeleteK8sIngressRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2698,6 +4405,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteK8sIngressRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an ingress.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sIngressRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sIngressRuleResponse
+        /// </returns>
         public DeleteK8sIngressRuleResponse DeleteK8sIngressRule(DeleteK8sIngressRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2705,6 +4424,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteK8sIngressRuleWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an ingress.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sIngressRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sIngressRuleResponse
+        /// </returns>
         public async Task<DeleteK8sIngressRuleResponse> DeleteK8sIngressRuleAsync(DeleteK8sIngressRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2712,6 +4443,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteK8sIngressRuleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Kubernetes Secret.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sSecretRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sSecretResponse
+        /// </returns>
         public DeleteK8sSecretResponse DeleteK8sSecretWithOptions(DeleteK8sSecretRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2748,6 +4497,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteK8sSecretResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Kubernetes Secret.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sSecretRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sSecretResponse
+        /// </returns>
         public async Task<DeleteK8sSecretResponse> DeleteK8sSecretWithOptionsAsync(DeleteK8sSecretRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2784,6 +4551,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteK8sSecretResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Kubernetes Secret.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sSecretRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sSecretResponse
+        /// </returns>
         public DeleteK8sSecretResponse DeleteK8sSecret(DeleteK8sSecretRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2791,6 +4570,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteK8sSecretWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Kubernetes Secret.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sSecretRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sSecretResponse
+        /// </returns>
         public async Task<DeleteK8sSecretResponse> DeleteK8sSecretAsync(DeleteK8sSecretRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2798,6 +4589,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteK8sSecretWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an application service from a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sServiceResponse
+        /// </returns>
         public DeleteK8sServiceResponse DeleteK8sServiceWithOptions(DeleteK8sServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2830,6 +4639,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteK8sServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an application service from a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sServiceResponse
+        /// </returns>
         public async Task<DeleteK8sServiceResponse> DeleteK8sServiceWithOptionsAsync(DeleteK8sServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2862,6 +4689,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteK8sServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an application service from a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sServiceResponse
+        /// </returns>
         public DeleteK8sServiceResponse DeleteK8sService(DeleteK8sServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2869,6 +4708,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteK8sServiceWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an application service from a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteK8sServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteK8sServiceResponse
+        /// </returns>
         public async Task<DeleteK8sServiceResponse> DeleteK8sServiceAsync(DeleteK8sServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2876,6 +4727,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteK8sServiceWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a log directory from an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLogPathRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogPathResponse
+        /// </returns>
         public DeleteLogPathResponse DeleteLogPathWithOptions(DeleteLogPathRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2908,6 +4777,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteLogPathResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a log directory from an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLogPathRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogPathResponse
+        /// </returns>
         public async Task<DeleteLogPathResponse> DeleteLogPathWithOptionsAsync(DeleteLogPathRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2940,6 +4827,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteLogPathResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a log directory from an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLogPathRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogPathResponse
+        /// </returns>
         public DeleteLogPathResponse DeleteLogPath(DeleteLogPathRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2947,6 +4846,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteLogPathWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a log directory from an application. This operation is applicable to applications that are deployed in Alibaba Cloud Elastic Compute Service (ECS) clusters and hybrid cloud ECS clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLogPathRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogPathResponse
+        /// </returns>
         public async Task<DeleteLogPathResponse> DeleteLogPathAsync(DeleteLogPathRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2954,6 +4865,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteLogPathWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRoleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRoleResponse
+        /// </returns>
         public DeleteRoleResponse DeleteRoleWithOptions(DeleteRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2982,6 +4911,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteRoleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRoleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRoleResponse
+        /// </returns>
         public async Task<DeleteRoleResponse> DeleteRoleWithOptionsAsync(DeleteRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3010,6 +4957,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRoleResponse
+        /// </returns>
         public DeleteRoleResponse DeleteRole(DeleteRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3017,6 +4976,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteRoleWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Resource Access Management (RAM) role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRoleResponse
+        /// </returns>
         public async Task<DeleteRoleResponse> DeleteRoleAsync(DeleteRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3024,6 +4995,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteRoleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceGroupResponse
+        /// </returns>
         public DeleteServiceGroupResponse DeleteServiceGroupWithOptions(DeleteServiceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3052,6 +5041,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteServiceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceGroupResponse
+        /// </returns>
         public async Task<DeleteServiceGroupResponse> DeleteServiceGroupWithOptionsAsync(DeleteServiceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3080,6 +5087,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteServiceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceGroupResponse
+        /// </returns>
         public DeleteServiceGroupResponse DeleteServiceGroup(DeleteServiceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3087,6 +5106,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteServiceGroupWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceGroupResponse
+        /// </returns>
         public async Task<DeleteServiceGroupResponse> DeleteServiceGroupAsync(DeleteServiceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3094,6 +5125,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteServiceGroupWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimmingLaneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimmingLaneResponse
+        /// </returns>
         public DeleteSwimmingLaneResponse DeleteSwimmingLaneWithOptions(DeleteSwimmingLaneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3122,6 +5171,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteSwimmingLaneResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimmingLaneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimmingLaneResponse
+        /// </returns>
         public async Task<DeleteSwimmingLaneResponse> DeleteSwimmingLaneWithOptionsAsync(DeleteSwimmingLaneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3150,6 +5217,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteSwimmingLaneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimmingLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimmingLaneResponse
+        /// </returns>
         public DeleteSwimmingLaneResponse DeleteSwimmingLane(DeleteSwimmingLaneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3157,6 +5236,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteSwimmingLaneWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimmingLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimmingLaneResponse
+        /// </returns>
         public async Task<DeleteSwimmingLaneResponse> DeleteSwimmingLaneAsync(DeleteSwimmingLaneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3164,6 +5255,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteSwimmingLaneWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified custom namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserDefineRegionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserDefineRegionResponse
+        /// </returns>
         public DeleteUserDefineRegionResponse DeleteUserDefineRegionWithOptions(DeleteUserDefineRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3196,6 +5305,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteUserDefineRegionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified custom namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserDefineRegionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserDefineRegionResponse
+        /// </returns>
         public async Task<DeleteUserDefineRegionResponse> DeleteUserDefineRegionWithOptionsAsync(DeleteUserDefineRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3228,6 +5355,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeleteUserDefineRegionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified custom namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserDefineRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserDefineRegionResponse
+        /// </returns>
         public DeleteUserDefineRegionResponse DeleteUserDefineRegion(DeleteUserDefineRegionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3235,6 +5374,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeleteUserDefineRegionWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified custom namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUserDefineRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserDefineRegionResponse
+        /// </returns>
         public async Task<DeleteUserDefineRegionResponse> DeleteUserDefineRegionAsync(DeleteUserDefineRegionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3242,14 +5393,31 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeleteUserDefineRegionWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * > To deploy an application in a Container Service for Kubernetes (ACK) cluster that is imported into Enterprise Distributed Application Service (EDAS), call the DeployK8sApplication operation provided by EDAS. For more information, see [](~~149420~~)DeployK8sApplication.
-          *
-          * @param request DeployApplicationRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeployApplicationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploys an application in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>To deploy an application in a Container Service for Kubernetes (ACK) cluster that is imported into Enterprise Distributed Application Service (EDAS), call the DeployK8sApplication operation provided by EDAS. For more information, see <a href="~~149420~~"></a>DeployK8sApplication.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeployApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployApplicationResponse
+        /// </returns>
         public DeployApplicationResponse DeployApplicationWithOptions(DeployApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3334,14 +5502,31 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeployApplicationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > To deploy an application in a Container Service for Kubernetes (ACK) cluster that is imported into Enterprise Distributed Application Service (EDAS), call the DeployK8sApplication operation provided by EDAS. For more information, see [](~~149420~~)DeployK8sApplication.
-          *
-          * @param request DeployApplicationRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DeployApplicationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploys an application in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>To deploy an application in a Container Service for Kubernetes (ACK) cluster that is imported into Enterprise Distributed Application Service (EDAS), call the DeployK8sApplication operation provided by EDAS. For more information, see <a href="~~149420~~"></a>DeployK8sApplication.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeployApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployApplicationResponse
+        /// </returns>
         public async Task<DeployApplicationResponse> DeployApplicationWithOptionsAsync(DeployApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3426,12 +5611,25 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeployApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > To deploy an application in a Container Service for Kubernetes (ACK) cluster that is imported into Enterprise Distributed Application Service (EDAS), call the DeployK8sApplication operation provided by EDAS. For more information, see [](~~149420~~)DeployK8sApplication.
-          *
-          * @param request DeployApplicationRequest
-          * @return DeployApplicationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploys an application in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>To deploy an application in a Container Service for Kubernetes (ACK) cluster that is imported into Enterprise Distributed Application Service (EDAS), call the DeployK8sApplication operation provided by EDAS. For more information, see <a href="~~149420~~"></a>DeployK8sApplication.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeployApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployApplicationResponse
+        /// </returns>
         public DeployApplicationResponse DeployApplication(DeployApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3439,12 +5637,25 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeployApplicationWithOptions(request, headers, runtime);
         }
 
-        /**
-          * > To deploy an application in a Container Service for Kubernetes (ACK) cluster that is imported into Enterprise Distributed Application Service (EDAS), call the DeployK8sApplication operation provided by EDAS. For more information, see [](~~149420~~)DeployK8sApplication.
-          *
-          * @param request DeployApplicationRequest
-          * @return DeployApplicationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploys an application in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>To deploy an application in a Container Service for Kubernetes (ACK) cluster that is imported into Enterprise Distributed Application Service (EDAS), call the DeployK8sApplication operation provided by EDAS. For more information, see <a href="~~149420~~"></a>DeployK8sApplication.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeployApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployApplicationResponse
+        /// </returns>
         public async Task<DeployApplicationResponse> DeployApplicationAsync(DeployApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3452,6 +5663,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeployApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploys an application in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployK8sApplicationResponse
+        /// </returns>
         public DeployK8sApplicationResponse DeployK8sApplicationWithOptions(DeployK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3748,6 +5977,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeployK8sApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploys an application in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployK8sApplicationResponse
+        /// </returns>
         public async Task<DeployK8sApplicationResponse> DeployK8sApplicationWithOptionsAsync(DeployK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4044,6 +6291,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DeployK8sApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploys an application in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployK8sApplicationResponse
+        /// </returns>
         public DeployK8sApplicationResponse DeployK8sApplication(DeployK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4051,6 +6310,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DeployK8sApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deploys an application in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployK8sApplicationResponse
+        /// </returns>
         public async Task<DeployK8sApplicationResponse> DeployK8sApplicationAsync(DeployK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4058,6 +6329,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DeployK8sApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Kubernetes application instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAppInstanceListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAppInstanceListResponse
+        /// </returns>
         public DescribeAppInstanceListResponse DescribeAppInstanceListWithOptions(DescribeAppInstanceListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4090,6 +6379,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DescribeAppInstanceListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Kubernetes application instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAppInstanceListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAppInstanceListResponse
+        /// </returns>
         public async Task<DescribeAppInstanceListResponse> DescribeAppInstanceListWithOptionsAsync(DescribeAppInstanceListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4122,6 +6429,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DescribeAppInstanceListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Kubernetes application instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAppInstanceListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAppInstanceListResponse
+        /// </returns>
         public DescribeAppInstanceListResponse DescribeAppInstanceList(DescribeAppInstanceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4129,6 +6448,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DescribeAppInstanceListWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Kubernetes application instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAppInstanceListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAppInstanceListResponse
+        /// </returns>
         public async Task<DescribeAppInstanceListResponse> DescribeAppInstanceListAsync(DescribeAppInstanceListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4136,6 +6467,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DescribeAppInstanceListWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the auto scaling policies of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationScalingRulesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationScalingRulesResponse
+        /// </returns>
         public DescribeApplicationScalingRulesResponse DescribeApplicationScalingRulesWithOptions(DescribeApplicationScalingRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4164,6 +6513,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DescribeApplicationScalingRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the auto scaling policies of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationScalingRulesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationScalingRulesResponse
+        /// </returns>
         public async Task<DescribeApplicationScalingRulesResponse> DescribeApplicationScalingRulesWithOptionsAsync(DescribeApplicationScalingRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4192,6 +6559,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DescribeApplicationScalingRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the auto scaling policies of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationScalingRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationScalingRulesResponse
+        /// </returns>
         public DescribeApplicationScalingRulesResponse DescribeApplicationScalingRules(DescribeApplicationScalingRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4199,6 +6578,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DescribeApplicationScalingRulesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the auto scaling policies of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationScalingRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationScalingRulesResponse
+        /// </returns>
         public async Task<DescribeApplicationScalingRulesResponse> DescribeApplicationScalingRulesAsync(DescribeApplicationScalingRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4206,6 +6597,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DescribeApplicationScalingRulesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableApplicationScalingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableApplicationScalingRuleResponse
+        /// </returns>
         public DisableApplicationScalingRuleResponse DisableApplicationScalingRuleWithOptions(DisableApplicationScalingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4238,6 +6647,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DisableApplicationScalingRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableApplicationScalingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableApplicationScalingRuleResponse
+        /// </returns>
         public async Task<DisableApplicationScalingRuleResponse> DisableApplicationScalingRuleWithOptionsAsync(DisableApplicationScalingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4270,6 +6697,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<DisableApplicationScalingRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableApplicationScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableApplicationScalingRuleResponse
+        /// </returns>
         public DisableApplicationScalingRuleResponse DisableApplicationScalingRule(DisableApplicationScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4277,6 +6716,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return DisableApplicationScalingRuleWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableApplicationScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableApplicationScalingRuleResponse
+        /// </returns>
         public async Task<DisableApplicationScalingRuleResponse> DisableApplicationScalingRuleAsync(DisableApplicationScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4284,6 +6735,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await DisableApplicationScalingRuleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableApplicationScalingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableApplicationScalingRuleResponse
+        /// </returns>
         public EnableApplicationScalingRuleResponse EnableApplicationScalingRuleWithOptions(EnableApplicationScalingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4316,6 +6785,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<EnableApplicationScalingRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableApplicationScalingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableApplicationScalingRuleResponse
+        /// </returns>
         public async Task<EnableApplicationScalingRuleResponse> EnableApplicationScalingRuleWithOptionsAsync(EnableApplicationScalingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4348,6 +6835,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<EnableApplicationScalingRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableApplicationScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableApplicationScalingRuleResponse
+        /// </returns>
         public EnableApplicationScalingRuleResponse EnableApplicationScalingRule(EnableApplicationScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4355,6 +6854,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return EnableApplicationScalingRuleWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableApplicationScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableApplicationScalingRuleResponse
+        /// </returns>
         public async Task<EnableApplicationScalingRuleResponse> EnableApplicationScalingRuleAsync(EnableApplicationScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4362,6 +6873,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await EnableApplicationScalingRuleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the Deployment of a Kubernetes application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAppDeploymentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAppDeploymentResponse
+        /// </returns>
         public GetAppDeploymentResponse GetAppDeploymentWithOptions(GetAppDeploymentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4390,6 +6919,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetAppDeploymentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the Deployment of a Kubernetes application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAppDeploymentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAppDeploymentResponse
+        /// </returns>
         public async Task<GetAppDeploymentResponse> GetAppDeploymentWithOptionsAsync(GetAppDeploymentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4418,6 +6965,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetAppDeploymentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the Deployment of a Kubernetes application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAppDeploymentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAppDeploymentResponse
+        /// </returns>
         public GetAppDeploymentResponse GetAppDeployment(GetAppDeploymentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4425,6 +6984,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetAppDeploymentWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about the Deployment of a Kubernetes application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAppDeploymentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAppDeploymentResponse
+        /// </returns>
         public async Task<GetAppDeploymentResponse> GetAppDeploymentAsync(GetAppDeploymentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4432,6 +7003,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetAppDeploymentWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a specified application in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApplicationResponse
+        /// </returns>
         public GetApplicationResponse GetApplicationWithOptions(GetApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4460,6 +7049,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a specified application in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApplicationResponse
+        /// </returns>
         public async Task<GetApplicationResponse> GetApplicationWithOptionsAsync(GetApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4488,6 +7095,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a specified application in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApplicationResponse
+        /// </returns>
         public GetApplicationResponse GetApplication(GetApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4495,6 +7114,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a specified application in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApplicationResponse
+        /// </returns>
         public async Task<GetApplicationResponse> GetApplicationAsync(GetApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4502,6 +7133,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a change process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChangeOrderInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChangeOrderInfoResponse
+        /// </returns>
         public GetChangeOrderInfoResponse GetChangeOrderInfoWithOptions(GetChangeOrderInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4530,6 +7179,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetChangeOrderInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a change process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChangeOrderInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChangeOrderInfoResponse
+        /// </returns>
         public async Task<GetChangeOrderInfoResponse> GetChangeOrderInfoWithOptionsAsync(GetChangeOrderInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4558,6 +7225,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetChangeOrderInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a change process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChangeOrderInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChangeOrderInfoResponse
+        /// </returns>
         public GetChangeOrderInfoResponse GetChangeOrderInfo(GetChangeOrderInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4565,6 +7244,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetChangeOrderInfoWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details about a change process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChangeOrderInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChangeOrderInfoResponse
+        /// </returns>
         public async Task<GetChangeOrderInfoResponse> GetChangeOrderInfoAsync(GetChangeOrderInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4572,6 +7263,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetChangeOrderInfoWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a specific cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterResponse
+        /// </returns>
         public GetClusterResponse GetClusterWithOptions(GetClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4600,6 +7309,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a specific cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterResponse
+        /// </returns>
         public async Task<GetClusterResponse> GetClusterWithOptionsAsync(GetClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4628,6 +7355,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a specific cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterResponse
+        /// </returns>
         public GetClusterResponse GetCluster(GetClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4635,6 +7374,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetClusterWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a specific cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetClusterResponse
+        /// </returns>
         public async Task<GetClusterResponse> GetClusterAsync(GetClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4642,6 +7393,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetClusterWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Tomcat configuration of an application or an instance group in which an application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContainerConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContainerConfigurationResponse
+        /// </returns>
         public GetContainerConfigurationResponse GetContainerConfigurationWithOptions(GetContainerConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4674,6 +7443,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetContainerConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Tomcat configuration of an application or an instance group in which an application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContainerConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContainerConfigurationResponse
+        /// </returns>
         public async Task<GetContainerConfigurationResponse> GetContainerConfigurationWithOptionsAsync(GetContainerConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4706,6 +7493,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetContainerConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Tomcat configuration of an application or an instance group in which an application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContainerConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContainerConfigurationResponse
+        /// </returns>
         public GetContainerConfigurationResponse GetContainerConfiguration(GetContainerConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4713,6 +7512,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetContainerConfigurationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Tomcat configuration of an application or an instance group in which an application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContainerConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContainerConfigurationResponse
+        /// </returns>
         public async Task<GetContainerConfigurationResponse> GetContainerConfigurationAsync(GetContainerConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4720,6 +7531,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetContainerConfigurationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration of Java startup parameters for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJavaStartUpConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJavaStartUpConfigResponse
+        /// </returns>
         public GetJavaStartUpConfigResponse GetJavaStartUpConfigWithOptions(GetJavaStartUpConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4748,6 +7577,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetJavaStartUpConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration of Java startup parameters for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJavaStartUpConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJavaStartUpConfigResponse
+        /// </returns>
         public async Task<GetJavaStartUpConfigResponse> GetJavaStartUpConfigWithOptionsAsync(GetJavaStartUpConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4776,6 +7623,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetJavaStartUpConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration of Java startup parameters for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJavaStartUpConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJavaStartUpConfigResponse
+        /// </returns>
         public GetJavaStartUpConfigResponse GetJavaStartUpConfig(GetJavaStartUpConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4783,6 +7642,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetJavaStartUpConfigWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration of Java startup parameters for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJavaStartUpConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJavaStartUpConfigResponse
+        /// </returns>
         public async Task<GetJavaStartUpConfigResponse> GetJavaStartUpConfigAsync(GetJavaStartUpConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4790,6 +7661,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetJavaStartUpConfigWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Java Virtual Machine (JVM) configuration of an application or an instance group in which an application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJvmConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJvmConfigurationResponse
+        /// </returns>
         public GetJvmConfigurationResponse GetJvmConfigurationWithOptions(GetJvmConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4822,6 +7711,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetJvmConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Java Virtual Machine (JVM) configuration of an application or an instance group in which an application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJvmConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJvmConfigurationResponse
+        /// </returns>
         public async Task<GetJvmConfigurationResponse> GetJvmConfigurationWithOptionsAsync(GetJvmConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4854,6 +7761,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetJvmConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Java Virtual Machine (JVM) configuration of an application or an instance group in which an application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJvmConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJvmConfigurationResponse
+        /// </returns>
         public GetJvmConfigurationResponse GetJvmConfiguration(GetJvmConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4861,6 +7780,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetJvmConfigurationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Java Virtual Machine (JVM) configuration of an application or an instance group in which an application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJvmConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJvmConfigurationResponse
+        /// </returns>
         public async Task<GetJvmConfigurationResponse> GetJvmConfigurationAsync(GetJvmConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4868,6 +7799,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetJvmConfigurationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the precheck result of a Kubernetes application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sAppPrecheckResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sAppPrecheckResultResponse
+        /// </returns>
         public GetK8sAppPrecheckResultResponse GetK8sAppPrecheckResultWithOptions(GetK8sAppPrecheckResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4904,6 +7853,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetK8sAppPrecheckResultResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the precheck result of a Kubernetes application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sAppPrecheckResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sAppPrecheckResultResponse
+        /// </returns>
         public async Task<GetK8sAppPrecheckResultResponse> GetK8sAppPrecheckResultWithOptionsAsync(GetK8sAppPrecheckResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4940,6 +7907,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetK8sAppPrecheckResultResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the precheck result of a Kubernetes application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sAppPrecheckResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sAppPrecheckResultResponse
+        /// </returns>
         public GetK8sAppPrecheckResultResponse GetK8sAppPrecheckResult(GetK8sAppPrecheckResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4947,6 +7926,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetK8sAppPrecheckResultWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the precheck result of a Kubernetes application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sAppPrecheckResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sAppPrecheckResultResponse
+        /// </returns>
         public async Task<GetK8sAppPrecheckResultResponse> GetK8sAppPrecheckResultAsync(GetK8sAppPrecheckResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4954,6 +7945,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetK8sAppPrecheckResultWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about applications deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sApplicationResponse
+        /// </returns>
         public GetK8sApplicationResponse GetK8sApplicationWithOptions(GetK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4986,6 +7995,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetK8sApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about applications deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sApplicationResponse
+        /// </returns>
         public async Task<GetK8sApplicationResponse> GetK8sApplicationWithOptionsAsync(GetK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5018,6 +8045,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetK8sApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about applications deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sApplicationResponse
+        /// </returns>
         public GetK8sApplicationResponse GetK8sApplication(GetK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5025,6 +8064,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetK8sApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about applications deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sApplicationResponse
+        /// </returns>
         public async Task<GetK8sApplicationResponse> GetK8sApplicationAsync(GetK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5032,6 +8083,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetK8sApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes clusters in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sClusterResponse
+        /// </returns>
         public GetK8sClusterResponse GetK8sClusterWithOptions(GetK8sClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5076,6 +8145,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetK8sClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes clusters in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sClusterResponse
+        /// </returns>
         public async Task<GetK8sClusterResponse> GetK8sClusterWithOptionsAsync(GetK8sClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5120,6 +8207,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetK8sClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes clusters in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sClusterResponse
+        /// </returns>
         public GetK8sClusterResponse GetK8sCluster(GetK8sClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5127,6 +8226,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetK8sClusterWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Container Service for Kubernetes (ACK) clusters or Serverless Kubernetes clusters in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sClusterResponse
+        /// </returns>
         public async Task<GetK8sClusterResponse> GetK8sClusterAsync(GetK8sClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5134,6 +8245,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetK8sClusterWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries application services that are deployed in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sServicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sServicesResponse
+        /// </returns>
         public GetK8sServicesResponse GetK8sServicesWithOptions(GetK8sServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5162,6 +8291,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetK8sServicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries application services that are deployed in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sServicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sServicesResponse
+        /// </returns>
         public async Task<GetK8sServicesResponse> GetK8sServicesWithOptionsAsync(GetK8sServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5190,6 +8337,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetK8sServicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries application services that are deployed in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sServicesResponse
+        /// </returns>
         public GetK8sServicesResponse GetK8sServices(GetK8sServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5197,6 +8356,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetK8sServicesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries application services that are deployed in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetK8sServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetK8sServicesResponse
+        /// </returns>
         public async Task<GetK8sServicesResponse> GetK8sServicesAsync(GetK8sServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5204,6 +8375,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetK8sServicesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Security Token Service (STS) tokens that are required for temporary storage.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPackageStorageCredentialResponse
+        /// </returns>
         public GetPackageStorageCredentialResponse GetPackageStorageCredentialWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5225,6 +8411,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetPackageStorageCredentialResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Security Token Service (STS) tokens that are required for temporary storage.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPackageStorageCredentialResponse
+        /// </returns>
         public async Task<GetPackageStorageCredentialResponse> GetPackageStorageCredentialWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -5246,6 +8447,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetPackageStorageCredentialResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Security Token Service (STS) tokens that are required for temporary storage.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetPackageStorageCredentialResponse
+        /// </returns>
         public GetPackageStorageCredentialResponse GetPackageStorageCredential()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5253,6 +8462,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetPackageStorageCredentialWithOptions(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Security Token Service (STS) tokens that are required for temporary storage.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetPackageStorageCredentialResponse
+        /// </returns>
         public async Task<GetPackageStorageCredentialResponse> GetPackageStorageCredentialAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5260,6 +8477,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetPackageStorageCredentialWithOptionsAsync(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries scaling rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetScalingRulesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetScalingRulesResponse
+        /// </returns>
         public GetScalingRulesResponse GetScalingRulesWithOptions(GetScalingRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5296,6 +8531,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetScalingRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries scaling rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetScalingRulesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetScalingRulesResponse
+        /// </returns>
         public async Task<GetScalingRulesResponse> GetScalingRulesWithOptionsAsync(GetScalingRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5332,6 +8585,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetScalingRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries scaling rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetScalingRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetScalingRulesResponse
+        /// </returns>
         public GetScalingRulesResponse GetScalingRules(GetScalingRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5339,6 +8604,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetScalingRulesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries scaling rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetScalingRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetScalingRulesResponse
+        /// </returns>
         public async Task<GetScalingRulesResponse> GetScalingRulesAsync(GetScalingRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5346,6 +8623,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetScalingRulesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security token information of a namespace. You can call this operation to query information, such as the AccessKey ID, AccessKey secret, tenant ID, and the domain name of Address Server, for the specified namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSecureTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecureTokenResponse
+        /// </returns>
         public GetSecureTokenResponse GetSecureTokenWithOptions(GetSecureTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5374,6 +8669,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetSecureTokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security token information of a namespace. You can call this operation to query information, such as the AccessKey ID, AccessKey secret, tenant ID, and the domain name of Address Server, for the specified namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSecureTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecureTokenResponse
+        /// </returns>
         public async Task<GetSecureTokenResponse> GetSecureTokenWithOptionsAsync(GetSecureTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5402,6 +8715,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetSecureTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security token information of a namespace. You can call this operation to query information, such as the AccessKey ID, AccessKey secret, tenant ID, and the domain name of Address Server, for the specified namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSecureTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecureTokenResponse
+        /// </returns>
         public GetSecureTokenResponse GetSecureToken(GetSecureTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5409,6 +8734,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetSecureTokenWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security token information of a namespace. You can call this operation to query information, such as the AccessKey ID, AccessKey secret, tenant ID, and the domain name of Address Server, for the specified namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSecureTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecureTokenResponse
+        /// </returns>
         public async Task<GetSecureTokenResponse> GetSecureTokenAsync(GetSecureTokenRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5416,6 +8753,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetSecureTokenWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service consumers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceConsumersPageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceConsumersPageResponse
+        /// </returns>
         public GetServiceConsumersPageResponse GetServiceConsumersPageWithOptions(GetServiceConsumersPageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5496,6 +8851,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetServiceConsumersPageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service consumers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceConsumersPageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceConsumersPageResponse
+        /// </returns>
         public async Task<GetServiceConsumersPageResponse> GetServiceConsumersPageWithOptionsAsync(GetServiceConsumersPageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5576,6 +8949,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetServiceConsumersPageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service consumers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceConsumersPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceConsumersPageResponse
+        /// </returns>
         public GetServiceConsumersPageResponse GetServiceConsumersPage(GetServiceConsumersPageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5583,6 +8968,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetServiceConsumersPageWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service consumers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceConsumersPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceConsumersPageResponse
+        /// </returns>
         public async Task<GetServiceConsumersPageResponse> GetServiceConsumersPageAsync(GetServiceConsumersPageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5590,6 +8987,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetServiceConsumersPageWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceDetailResponse
+        /// </returns>
         public GetServiceDetailResponse GetServiceDetailWithOptions(GetServiceDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5662,6 +9077,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetServiceDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceDetailResponse
+        /// </returns>
         public async Task<GetServiceDetailResponse> GetServiceDetailWithOptionsAsync(GetServiceDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5734,6 +9167,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetServiceDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceDetailResponse
+        /// </returns>
         public GetServiceDetailResponse GetServiceDetail(GetServiceDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5741,6 +9186,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetServiceDetailWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceDetailResponse
+        /// </returns>
         public async Task<GetServiceDetailResponse> GetServiceDetailAsync(GetServiceDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5748,6 +9205,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetServiceDetailWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceListPageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceListPageResponse
+        /// </returns>
         public GetServiceListPageResponse GetServiceListPageWithOptions(GetServiceListPageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5808,6 +9283,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetServiceListPageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceListPageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceListPageResponse
+        /// </returns>
         public async Task<GetServiceListPageResponse> GetServiceListPageWithOptionsAsync(GetServiceListPageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5868,6 +9361,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetServiceListPageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceListPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceListPageResponse
+        /// </returns>
         public GetServiceListPageResponse GetServiceListPage(GetServiceListPageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5875,6 +9380,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetServiceListPageWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries services.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceListPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceListPageResponse
+        /// </returns>
         public async Task<GetServiceListPageResponse> GetServiceListPageAsync(GetServiceListPageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -5882,6 +9399,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetServiceListPageWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service methods.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceMethodPageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceMethodPageResponse
+        /// </returns>
         public GetServiceMethodPageResponse GetServiceMethodPageWithOptions(GetServiceMethodPageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5974,6 +9509,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetServiceMethodPageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service methods.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceMethodPageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceMethodPageResponse
+        /// </returns>
         public async Task<GetServiceMethodPageResponse> GetServiceMethodPageWithOptionsAsync(GetServiceMethodPageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6066,6 +9619,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetServiceMethodPageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service methods.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceMethodPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceMethodPageResponse
+        /// </returns>
         public GetServiceMethodPageResponse GetServiceMethodPage(GetServiceMethodPageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6073,6 +9638,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetServiceMethodPageWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service methods.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceMethodPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceMethodPageResponse
+        /// </returns>
         public async Task<GetServiceMethodPageResponse> GetServiceMethodPageAsync(GetServiceMethodPageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6080,6 +9657,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetServiceMethodPageWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service providers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceProvidersPageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceProvidersPageResponse
+        /// </returns>
         public GetServiceProvidersPageResponse GetServiceProvidersPageWithOptions(GetServiceProvidersPageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6160,6 +9755,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetServiceProvidersPageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service providers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceProvidersPageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceProvidersPageResponse
+        /// </returns>
         public async Task<GetServiceProvidersPageResponse> GetServiceProvidersPageWithOptionsAsync(GetServiceProvidersPageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6240,6 +9853,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetServiceProvidersPageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service providers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceProvidersPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceProvidersPageResponse
+        /// </returns>
         public GetServiceProvidersPageResponse GetServiceProvidersPage(GetServiceProvidersPageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6247,6 +9872,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetServiceProvidersPageWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service providers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetServiceProvidersPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceProvidersPageResponse
+        /// </returns>
         public async Task<GetServiceProvidersPageResponse> GetServiceProvidersPageAsync(GetServiceProvidersPageRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6254,14 +9891,29 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetServiceProvidersPageWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * ***
-          *
-          * @param request GetWebContainerConfigRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetWebContainerConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Tomcat configurations of an application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWebContainerConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWebContainerConfigResponse
+        /// </returns>
         public GetWebContainerConfigResponse GetWebContainerConfigWithOptions(GetWebContainerConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6290,14 +9942,29 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetWebContainerConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ***
-          *
-          * @param request GetWebContainerConfigRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetWebContainerConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Tomcat configurations of an application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWebContainerConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWebContainerConfigResponse
+        /// </returns>
         public async Task<GetWebContainerConfigResponse> GetWebContainerConfigWithOptionsAsync(GetWebContainerConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6326,12 +9993,23 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<GetWebContainerConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ***
-          *
-          * @param request GetWebContainerConfigRequest
-          * @return GetWebContainerConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Tomcat configurations of an application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWebContainerConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWebContainerConfigResponse
+        /// </returns>
         public GetWebContainerConfigResponse GetWebContainerConfig(GetWebContainerConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6339,12 +10017,23 @@ namespace AlibabaCloud.SDK.Edas20170801
             return GetWebContainerConfigWithOptions(request, headers, runtime);
         }
 
-        /**
-          * ***
-          *
-          * @param request GetWebContainerConfigRequest
-          * @return GetWebContainerConfigResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Tomcat configurations of an application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWebContainerConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWebContainerConfigResponse
+        /// </returns>
         public async Task<GetWebContainerConfigResponse> GetWebContainerConfigAsync(GetWebContainerConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6352,6 +10041,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await GetWebContainerConfigWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster to Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportK8sClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportK8sClusterResponse
+        /// </returns>
         public ImportK8sClusterResponse ImportK8sClusterWithOptions(ImportK8sClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6392,6 +10099,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ImportK8sClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster to Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportK8sClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportK8sClusterResponse
+        /// </returns>
         public async Task<ImportK8sClusterResponse> ImportK8sClusterWithOptionsAsync(ImportK8sClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6432,6 +10157,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ImportK8sClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster to Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportK8sClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportK8sClusterResponse
+        /// </returns>
         public ImportK8sClusterResponse ImportK8sCluster(ImportK8sClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6439,6 +10176,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ImportK8sClusterWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster to Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportK8sClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportK8sClusterResponse
+        /// </returns>
         public async Task<ImportK8sClusterResponse> ImportK8sClusterAsync(ImportK8sClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6446,14 +10195,31 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ImportK8sClusterWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * > To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).
-          *
-          * @param request InsertApplicationRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InsertApplicationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InsertApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertApplicationResponse
+        /// </returns>
         public InsertApplicationResponse InsertApplicationWithOptions(InsertApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6493,10 +10259,6 @@ namespace AlibabaCloud.SDK.Edas20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableUrlCheck))
             {
                 query["EnableUrlCheck"] = request.EnableUrlCheck;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckURL))
-            {
-                query["HealthCheckURL"] = request.HealthCheckURL;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckUrl))
             {
@@ -6570,14 +10332,31 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertApplicationResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).
-          *
-          * @param request InsertApplicationRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InsertApplicationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InsertApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertApplicationResponse
+        /// </returns>
         public async Task<InsertApplicationResponse> InsertApplicationWithOptionsAsync(InsertApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6617,10 +10396,6 @@ namespace AlibabaCloud.SDK.Edas20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableUrlCheck))
             {
                 query["EnableUrlCheck"] = request.EnableUrlCheck;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckURL))
-            {
-                query["HealthCheckURL"] = request.HealthCheckURL;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckUrl))
             {
@@ -6694,12 +10469,25 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).
-          *
-          * @param request InsertApplicationRequest
-          * @return InsertApplicationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InsertApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertApplicationResponse
+        /// </returns>
         public InsertApplicationResponse InsertApplication(InsertApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6707,12 +10495,25 @@ namespace AlibabaCloud.SDK.Edas20170801
             return InsertApplicationWithOptions(request, headers, runtime);
         }
 
-        /**
-          * > To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).
-          *
-          * @param request InsertApplicationRequest
-          * @return InsertApplicationResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InsertApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertApplicationResponse
+        /// </returns>
         public async Task<InsertApplicationResponse> InsertApplicationAsync(InsertApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6720,6 +10521,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await InsertApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertClusterResponse
+        /// </returns>
         public InsertClusterResponse InsertClusterWithOptions(InsertClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6772,6 +10591,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertClusterResponse
+        /// </returns>
         public async Task<InsertClusterResponse> InsertClusterWithOptionsAsync(InsertClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6824,6 +10661,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertClusterResponse
+        /// </returns>
         public InsertClusterResponse InsertCluster(InsertClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6831,6 +10680,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return InsertClusterWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertClusterResponse
+        /// </returns>
         public async Task<InsertClusterResponse> InsertClusterAsync(InsertClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6838,16 +10699,33 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await InsertClusterWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * ##
-          * If you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all original data of the ECS instance is deleted. In addition, you must set a logon password for the ECS instance. Make sure that no important data exists on the ECS instance that you want to import or data has been backed up for the ECS instance.
-          * > We recommend that you call the InstallAgent operation instead of this operation. For more information, see [InstallAgent](~~127023~~).
-          *
-          * @param request InsertClusterMemberRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InsertClusterMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports Elastic Compute Service (ECS) instances into an ECS cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2></h2>
+        /// <para>If you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all original data of the ECS instance is deleted. In addition, you must set a logon password for the ECS instance. Make sure that no important data exists on the ECS instance that you want to import or data has been backed up for the ECS instance.</para>
+        /// <remarks>
+        /// <para>We recommend that you call the InstallAgent operation instead of this operation. For more information, see <a href="https://help.aliyun.com/document_detail/127023.html">InstallAgent</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InsertClusterMemberRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertClusterMemberResponse
+        /// </returns>
         public InsertClusterMemberResponse InsertClusterMemberWithOptions(InsertClusterMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6884,16 +10762,33 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertClusterMemberResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ##
-          * If you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all original data of the ECS instance is deleted. In addition, you must set a logon password for the ECS instance. Make sure that no important data exists on the ECS instance that you want to import or data has been backed up for the ECS instance.
-          * > We recommend that you call the InstallAgent operation instead of this operation. For more information, see [InstallAgent](~~127023~~).
-          *
-          * @param request InsertClusterMemberRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InsertClusterMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports Elastic Compute Service (ECS) instances into an ECS cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2></h2>
+        /// <para>If you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all original data of the ECS instance is deleted. In addition, you must set a logon password for the ECS instance. Make sure that no important data exists on the ECS instance that you want to import or data has been backed up for the ECS instance.</para>
+        /// <remarks>
+        /// <para>We recommend that you call the InstallAgent operation instead of this operation. For more information, see <a href="https://help.aliyun.com/document_detail/127023.html">InstallAgent</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InsertClusterMemberRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertClusterMemberResponse
+        /// </returns>
         public async Task<InsertClusterMemberResponse> InsertClusterMemberWithOptionsAsync(InsertClusterMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6930,14 +10825,27 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertClusterMemberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ##
-          * If you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all original data of the ECS instance is deleted. In addition, you must set a logon password for the ECS instance. Make sure that no important data exists on the ECS instance that you want to import or data has been backed up for the ECS instance.
-          * > We recommend that you call the InstallAgent operation instead of this operation. For more information, see [InstallAgent](~~127023~~).
-          *
-          * @param request InsertClusterMemberRequest
-          * @return InsertClusterMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports Elastic Compute Service (ECS) instances into an ECS cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2></h2>
+        /// <para>If you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all original data of the ECS instance is deleted. In addition, you must set a logon password for the ECS instance. Make sure that no important data exists on the ECS instance that you want to import or data has been backed up for the ECS instance.</para>
+        /// <remarks>
+        /// <para>We recommend that you call the InstallAgent operation instead of this operation. For more information, see <a href="https://help.aliyun.com/document_detail/127023.html">InstallAgent</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InsertClusterMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertClusterMemberResponse
+        /// </returns>
         public InsertClusterMemberResponse InsertClusterMember(InsertClusterMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6945,14 +10853,27 @@ namespace AlibabaCloud.SDK.Edas20170801
             return InsertClusterMemberWithOptions(request, headers, runtime);
         }
 
-        /**
-          * ##
-          * If you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all original data of the ECS instance is deleted. In addition, you must set a logon password for the ECS instance. Make sure that no important data exists on the ECS instance that you want to import or data has been backed up for the ECS instance.
-          * > We recommend that you call the InstallAgent operation instead of this operation. For more information, see [InstallAgent](~~127023~~).
-          *
-          * @param request InsertClusterMemberRequest
-          * @return InsertClusterMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports Elastic Compute Service (ECS) instances into an ECS cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2></h2>
+        /// <para>If you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all original data of the ECS instance is deleted. In addition, you must set a logon password for the ECS instance. Make sure that no important data exists on the ECS instance that you want to import or data has been backed up for the ECS instance.</para>
+        /// <remarks>
+        /// <para>We recommend that you call the InstallAgent operation instead of this operation. For more information, see <a href="https://help.aliyun.com/document_detail/127023.html">InstallAgent</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InsertClusterMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertClusterMemberResponse
+        /// </returns>
         public async Task<InsertClusterMemberResponse> InsertClusterMemberAsync(InsertClusterMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6960,6 +10881,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await InsertClusterMemberWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an instance group for a specified application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertDeployGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertDeployGroupResponse
+        /// </returns>
         public InsertDeployGroupResponse InsertDeployGroupWithOptions(InsertDeployGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6996,6 +10935,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertDeployGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an instance group for a specified application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertDeployGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertDeployGroupResponse
+        /// </returns>
         public async Task<InsertDeployGroupResponse> InsertDeployGroupWithOptionsAsync(InsertDeployGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7032,6 +10989,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertDeployGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an instance group for a specified application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertDeployGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertDeployGroupResponse
+        /// </returns>
         public InsertDeployGroupResponse InsertDeployGroup(InsertDeployGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7039,6 +11008,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return InsertDeployGroupWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an instance group for a specified application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertDeployGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertDeployGroupResponse
+        /// </returns>
         public async Task<InsertDeployGroupResponse> InsertDeployGroupAsync(InsertDeployGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7046,6 +11027,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await InsertDeployGroupWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application in a Container Service for Kubernetes (ACK) cluster or serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertK8sApplicationResponse
+        /// </returns>
         public InsertK8sApplicationResponse InsertK8sApplicationWithOptions(InsertK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7410,6 +11409,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertK8sApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application in a Container Service for Kubernetes (ACK) cluster or serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertK8sApplicationResponse
+        /// </returns>
         public async Task<InsertK8sApplicationResponse> InsertK8sApplicationWithOptionsAsync(InsertK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7774,6 +11791,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertK8sApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application in a Container Service for Kubernetes (ACK) cluster or serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertK8sApplicationResponse
+        /// </returns>
         public InsertK8sApplicationResponse InsertK8sApplication(InsertK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7781,6 +11810,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return InsertK8sApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application in a Container Service for Kubernetes (ACK) cluster or serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertK8sApplicationResponse
+        /// </returns>
         public async Task<InsertK8sApplicationResponse> InsertK8sApplicationAsync(InsertK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7788,6 +11829,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await InsertK8sApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or edits a custom namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertOrUpdateRegionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertOrUpdateRegionResponse
+        /// </returns>
         public InsertOrUpdateRegionResponse InsertOrUpdateRegionWithOptions(InsertOrUpdateRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7840,6 +11899,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertOrUpdateRegionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or edits a custom namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertOrUpdateRegionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertOrUpdateRegionResponse
+        /// </returns>
         public async Task<InsertOrUpdateRegionResponse> InsertOrUpdateRegionWithOptionsAsync(InsertOrUpdateRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7892,6 +11969,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertOrUpdateRegionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or edits a custom namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertOrUpdateRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertOrUpdateRegionResponse
+        /// </returns>
         public InsertOrUpdateRegionResponse InsertOrUpdateRegion(InsertOrUpdateRegionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7899,6 +11988,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return InsertOrUpdateRegionWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or edits a custom namespace.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertOrUpdateRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertOrUpdateRegionResponse
+        /// </returns>
         public async Task<InsertOrUpdateRegionResponse> InsertOrUpdateRegionAsync(InsertOrUpdateRegionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7906,6 +12007,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await InsertOrUpdateRegionWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertRoleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertRoleResponse
+        /// </returns>
         public InsertRoleResponse InsertRoleWithOptions(InsertRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7938,6 +12057,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertRoleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertRoleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertRoleResponse
+        /// </returns>
         public async Task<InsertRoleResponse> InsertRoleWithOptionsAsync(InsertRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7970,6 +12107,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertRoleResponse
+        /// </returns>
         public InsertRoleResponse InsertRole(InsertRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7977,6 +12126,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return InsertRoleWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertRoleResponse
+        /// </returns>
         public async Task<InsertRoleResponse> InsertRoleAsync(InsertRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7984,6 +12145,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await InsertRoleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertServiceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertServiceGroupResponse
+        /// </returns>
         public InsertServiceGroupResponse InsertServiceGroupWithOptions(InsertServiceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8012,6 +12191,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertServiceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertServiceGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertServiceGroupResponse
+        /// </returns>
         public async Task<InsertServiceGroupResponse> InsertServiceGroupWithOptionsAsync(InsertServiceGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8040,6 +12237,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertServiceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertServiceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertServiceGroupResponse
+        /// </returns>
         public InsertServiceGroupResponse InsertServiceGroup(InsertServiceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8047,6 +12256,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return InsertServiceGroupWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertServiceGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertServiceGroupResponse
+        /// </returns>
         public async Task<InsertServiceGroupResponse> InsertServiceGroupAsync(InsertServiceGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8054,6 +12275,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await InsertServiceGroupWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertSwimmingLaneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertSwimmingLaneResponse
+        /// </returns>
         public InsertSwimmingLaneResponse InsertSwimmingLaneWithOptions(InsertSwimmingLaneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8106,6 +12345,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertSwimmingLaneResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertSwimmingLaneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertSwimmingLaneResponse
+        /// </returns>
         public async Task<InsertSwimmingLaneResponse> InsertSwimmingLaneWithOptionsAsync(InsertSwimmingLaneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8158,6 +12415,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertSwimmingLaneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertSwimmingLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertSwimmingLaneResponse
+        /// </returns>
         public InsertSwimmingLaneResponse InsertSwimmingLane(InsertSwimmingLaneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8165,6 +12434,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return InsertSwimmingLaneWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertSwimmingLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertSwimmingLaneResponse
+        /// </returns>
         public async Task<InsertSwimmingLaneResponse> InsertSwimmingLaneAsync(InsertSwimmingLaneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8172,6 +12453,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await InsertSwimmingLaneWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertSwimmingLaneGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertSwimmingLaneGroupResponse
+        /// </returns>
         public InsertSwimmingLaneGroupResponse InsertSwimmingLaneGroupWithOptions(InsertSwimmingLaneGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8212,6 +12511,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertSwimmingLaneGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertSwimmingLaneGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertSwimmingLaneGroupResponse
+        /// </returns>
         public async Task<InsertSwimmingLaneGroupResponse> InsertSwimmingLaneGroupWithOptionsAsync(InsertSwimmingLaneGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8252,6 +12569,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InsertSwimmingLaneGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertSwimmingLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertSwimmingLaneGroupResponse
+        /// </returns>
         public InsertSwimmingLaneGroupResponse InsertSwimmingLaneGroup(InsertSwimmingLaneGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8259,6 +12588,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return InsertSwimmingLaneGroupWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InsertSwimmingLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InsertSwimmingLaneGroupResponse
+        /// </returns>
         public async Task<InsertSwimmingLaneGroupResponse> InsertSwimmingLaneGroupAsync(InsertSwimmingLaneGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8266,14 +12607,29 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await InsertSwimmingLaneGroupWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * If you call this operation to import an ECS instance into EDAS, the operating system of the ECS instance is not reinstalled. We recommend that you call this operation to import ECS instances into EDAS.
-          *
-          * @param request InstallAgentRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InstallAgentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uses the Cloud Assistant provided by Elastic Compute Service (ECS) to install Enterprise Distributed Application Service (EDAS) Agent and imports ECS instances to EDAS.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you call this operation to import an ECS instance into EDAS, the operating system of the ECS instance is not reinstalled. We recommend that you call this operation to import ECS instances into EDAS.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallAgentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallAgentResponse
+        /// </returns>
         public InstallAgentResponse InstallAgentWithOptions(InstallAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8310,14 +12666,29 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InstallAgentResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * If you call this operation to import an ECS instance into EDAS, the operating system of the ECS instance is not reinstalled. We recommend that you call this operation to import ECS instances into EDAS.
-          *
-          * @param request InstallAgentRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return InstallAgentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uses the Cloud Assistant provided by Elastic Compute Service (ECS) to install Enterprise Distributed Application Service (EDAS) Agent and imports ECS instances to EDAS.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you call this operation to import an ECS instance into EDAS, the operating system of the ECS instance is not reinstalled. We recommend that you call this operation to import ECS instances into EDAS.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallAgentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallAgentResponse
+        /// </returns>
         public async Task<InstallAgentResponse> InstallAgentWithOptionsAsync(InstallAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8354,12 +12725,23 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<InstallAgentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * If you call this operation to import an ECS instance into EDAS, the operating system of the ECS instance is not reinstalled. We recommend that you call this operation to import ECS instances into EDAS.
-          *
-          * @param request InstallAgentRequest
-          * @return InstallAgentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uses the Cloud Assistant provided by Elastic Compute Service (ECS) to install Enterprise Distributed Application Service (EDAS) Agent and imports ECS instances to EDAS.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you call this operation to import an ECS instance into EDAS, the operating system of the ECS instance is not reinstalled. We recommend that you call this operation to import ECS instances into EDAS.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallAgentResponse
+        /// </returns>
         public InstallAgentResponse InstallAgent(InstallAgentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8367,12 +12749,23 @@ namespace AlibabaCloud.SDK.Edas20170801
             return InstallAgentWithOptions(request, headers, runtime);
         }
 
-        /**
-          * If you call this operation to import an ECS instance into EDAS, the operating system of the ECS instance is not reinstalled. We recommend that you call this operation to import ECS instances into EDAS.
-          *
-          * @param request InstallAgentRequest
-          * @return InstallAgentResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uses the Cloud Assistant provided by Elastic Compute Service (ECS) to install Enterprise Distributed Application Service (EDAS) Agent and imports ECS instances to EDAS.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you call this operation to import an ECS instance into EDAS, the operating system of the ECS instance is not reinstalled. We recommend that you call this operation to import ECS instances into EDAS.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallAgentResponse
+        /// </returns>
         public async Task<InstallAgentResponse> InstallAgentAsync(InstallAgentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8380,6 +12773,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await InstallAgentWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Alibaba Cloud regions supported by Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAliyunRegionResponse
+        /// </returns>
         public ListAliyunRegionResponse ListAliyunRegionWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8401,6 +12809,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListAliyunRegionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Alibaba Cloud regions supported by Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAliyunRegionResponse
+        /// </returns>
         public async Task<ListAliyunRegionResponse> ListAliyunRegionWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8422,6 +12845,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListAliyunRegionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Alibaba Cloud regions supported by Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListAliyunRegionResponse
+        /// </returns>
         public ListAliyunRegionResponse ListAliyunRegion()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8429,6 +12860,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListAliyunRegionWithOptions(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Alibaba Cloud regions supported by Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListAliyunRegionResponse
+        /// </returns>
         public async Task<ListAliyunRegionResponse> ListAliyunRegionAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8436,6 +12875,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListAliyunRegionWithOptionsAsync(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of applications.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApplicationResponse
+        /// </returns>
         public ListApplicationResponse ListApplicationWithOptions(ListApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8492,6 +12949,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of applications.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApplicationResponse
+        /// </returns>
         public async Task<ListApplicationResponse> ListApplicationWithOptionsAsync(ListApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8548,6 +13023,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of applications.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApplicationResponse
+        /// </returns>
         public ListApplicationResponse ListApplication(ListApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8555,6 +13042,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of applications.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApplicationResponse
+        /// </returns>
         public async Task<ListApplicationResponse> ListApplicationAsync(ListApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8562,6 +13061,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries elastic compute units (ECUs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApplicationEcuRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApplicationEcuResponse
+        /// </returns>
         public ListApplicationEcuResponse ListApplicationEcuWithOptions(ListApplicationEcuRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8594,6 +13111,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListApplicationEcuResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries elastic compute units (ECUs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApplicationEcuRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApplicationEcuResponse
+        /// </returns>
         public async Task<ListApplicationEcuResponse> ListApplicationEcuWithOptionsAsync(ListApplicationEcuRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8626,6 +13161,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListApplicationEcuResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries elastic compute units (ECUs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApplicationEcuRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApplicationEcuResponse
+        /// </returns>
         public ListApplicationEcuResponse ListApplicationEcu(ListApplicationEcuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8633,6 +13180,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListApplicationEcuWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries elastic compute units (ECUs).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApplicationEcuRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApplicationEcuResponse
+        /// </returns>
         public async Task<ListApplicationEcuResponse> ListApplicationEcuAsync(ListApplicationEcuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8640,6 +13199,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListApplicationEcuWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all permissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuthorityResponse
+        /// </returns>
         public ListAuthorityResponse ListAuthorityWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8661,6 +13235,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListAuthorityResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all permissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuthorityResponse
+        /// </returns>
         public async Task<ListAuthorityResponse> ListAuthorityWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8682,6 +13271,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListAuthorityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all permissions.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListAuthorityResponse
+        /// </returns>
         public ListAuthorityResponse ListAuthority()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8689,6 +13286,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListAuthorityWithOptions(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all permissions.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListAuthorityResponse
+        /// </returns>
         public async Task<ListAuthorityResponse> ListAuthorityAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8696,6 +13301,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListAuthorityWithOptionsAsync(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Enterprise Distributed Application Service (EDAS) Container versions.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBuildPackResponse
+        /// </returns>
         public ListBuildPackResponse ListBuildPackWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8717,6 +13337,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListBuildPackResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Enterprise Distributed Application Service (EDAS) Container versions.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBuildPackResponse
+        /// </returns>
         public async Task<ListBuildPackResponse> ListBuildPackWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8738,6 +13373,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListBuildPackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Enterprise Distributed Application Service (EDAS) Container versions.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListBuildPackResponse
+        /// </returns>
         public ListBuildPackResponse ListBuildPack()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8745,6 +13388,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListBuildPackWithOptions(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Enterprise Distributed Application Service (EDAS) Container versions.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListBuildPackResponse
+        /// </returns>
         public async Task<ListBuildPackResponse> ListBuildPackAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8752,6 +13403,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListBuildPackWithOptionsAsync(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterResponse
+        /// </returns>
         public ListClusterResponse ListClusterWithOptions(ListClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8784,6 +13453,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterResponse
+        /// </returns>
         public async Task<ListClusterResponse> ListClusterWithOptionsAsync(ListClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8816,6 +13503,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterResponse
+        /// </returns>
         public ListClusterResponse ListCluster(ListClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8823,6 +13522,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListClusterWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterResponse
+        /// </returns>
         public async Task<ListClusterResponse> ListClusterAsync(ListClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8830,6 +13541,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListClusterWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Elastic Compute Service (ECS) instances in a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListClusterMembersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterMembersResponse
+        /// </returns>
         public ListClusterMembersResponse ListClusterMembersWithOptions(ListClusterMembersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8870,6 +13599,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListClusterMembersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Elastic Compute Service (ECS) instances in a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListClusterMembersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterMembersResponse
+        /// </returns>
         public async Task<ListClusterMembersResponse> ListClusterMembersWithOptionsAsync(ListClusterMembersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8910,6 +13657,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListClusterMembersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Elastic Compute Service (ECS) instances in a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListClusterMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterMembersResponse
+        /// </returns>
         public ListClusterMembersResponse ListClusterMembers(ListClusterMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8917,6 +13676,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListClusterMembersWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Elastic Compute Service (ECS) instances in a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListClusterMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterMembersResponse
+        /// </returns>
         public async Task<ListClusterMembersResponse> ListClusterMembersAsync(ListClusterMembersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8924,6 +13695,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListClusterMembersWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the components that are related to applications in Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComponentsResponse
+        /// </returns>
         public ListComponentsResponse ListComponentsWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8945,6 +13731,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListComponentsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the components that are related to applications in Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComponentsResponse
+        /// </returns>
         public async Task<ListComponentsResponse> ListComponentsWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -8966,6 +13767,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListComponentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the components that are related to applications in Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListComponentsResponse
+        /// </returns>
         public ListComponentsResponse ListComponents()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8973,6 +13782,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListComponentsWithOptions(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the components that are related to applications in Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListComponentsResponse
+        /// </returns>
         public async Task<ListComponentsResponse> ListComponentsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8980,6 +13797,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListComponentsWithOptionsAsync(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries configuration templates.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConfigTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConfigTemplatesResponse
+        /// </returns>
         public ListConfigTemplatesResponse ListConfigTemplatesWithOptions(ListConfigTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9020,6 +13855,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListConfigTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries configuration templates.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConfigTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConfigTemplatesResponse
+        /// </returns>
         public async Task<ListConfigTemplatesResponse> ListConfigTemplatesWithOptionsAsync(ListConfigTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9060,6 +13913,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListConfigTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries configuration templates.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConfigTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConfigTemplatesResponse
+        /// </returns>
         public ListConfigTemplatesResponse ListConfigTemplates(ListConfigTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9067,6 +13932,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListConfigTemplatesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries configuration templates.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConfigTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConfigTemplatesResponse
+        /// </returns>
         public async Task<ListConfigTemplatesResponse> ListConfigTemplatesAsync(ListConfigTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9074,6 +13951,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListConfigTemplatesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the services that are consumed by an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConsumedServicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumedServicesResponse
+        /// </returns>
         public ListConsumedServicesResponse ListConsumedServicesWithOptions(ListConsumedServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9102,6 +13997,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListConsumedServicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the services that are consumed by an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConsumedServicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumedServicesResponse
+        /// </returns>
         public async Task<ListConsumedServicesResponse> ListConsumedServicesWithOptionsAsync(ListConsumedServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9130,6 +14043,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListConsumedServicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the services that are consumed by an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConsumedServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumedServicesResponse
+        /// </returns>
         public ListConsumedServicesResponse ListConsumedServices(ListConsumedServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9137,6 +14062,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListConsumedServicesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the services that are consumed by an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConsumedServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumedServicesResponse
+        /// </returns>
         public async Task<ListConsumedServicesResponse> ListConsumedServicesAsync(ListConsumedServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9144,6 +14081,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListConsumedServicesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elastic Compute Service (ECS) instances that can be imported to a specified cluster. This operation is applicable to ECS clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConvertableEcuRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConvertableEcuResponse
+        /// </returns>
         public ListConvertableEcuResponse ListConvertableEcuWithOptions(ListConvertableEcuRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9172,6 +14127,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListConvertableEcuResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elastic Compute Service (ECS) instances that can be imported to a specified cluster. This operation is applicable to ECS clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConvertableEcuRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConvertableEcuResponse
+        /// </returns>
         public async Task<ListConvertableEcuResponse> ListConvertableEcuWithOptionsAsync(ListConvertableEcuRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9200,6 +14173,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListConvertableEcuResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elastic Compute Service (ECS) instances that can be imported to a specified cluster. This operation is applicable to ECS clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConvertableEcuRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConvertableEcuResponse
+        /// </returns>
         public ListConvertableEcuResponse ListConvertableEcu(ListConvertableEcuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9207,6 +14192,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListConvertableEcuWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elastic Compute Service (ECS) instances that can be imported to a specified cluster. This operation is applicable to ECS clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConvertableEcuRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConvertableEcuResponse
+        /// </returns>
         public async Task<ListConvertableEcuResponse> ListConvertableEcuAsync(ListConvertableEcuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9214,6 +14211,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListConvertableEcuWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the instance groups to which an application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeployGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeployGroupResponse
+        /// </returns>
         public ListDeployGroupResponse ListDeployGroupWithOptions(ListDeployGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9242,6 +14257,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListDeployGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the instance groups to which an application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeployGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeployGroupResponse
+        /// </returns>
         public async Task<ListDeployGroupResponse> ListDeployGroupWithOptionsAsync(ListDeployGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9270,6 +14303,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListDeployGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the instance groups to which an application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeployGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeployGroupResponse
+        /// </returns>
         public ListDeployGroupResponse ListDeployGroup(ListDeployGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9277,6 +14322,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListDeployGroupWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the instance groups to which an application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeployGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeployGroupResponse
+        /// </returns>
         public async Task<ListDeployGroupResponse> ListDeployGroupAsync(ListDeployGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9284,6 +14341,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListDeployGroupWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all Elastic Compute Service (ECS) instances that have not been imported to clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEcsNotInClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEcsNotInClusterResponse
+        /// </returns>
         public ListEcsNotInClusterResponse ListEcsNotInClusterWithOptions(ListEcsNotInClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9316,6 +14391,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListEcsNotInClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all Elastic Compute Service (ECS) instances that have not been imported to clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEcsNotInClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEcsNotInClusterResponse
+        /// </returns>
         public async Task<ListEcsNotInClusterResponse> ListEcsNotInClusterWithOptionsAsync(ListEcsNotInClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9348,6 +14441,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListEcsNotInClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all Elastic Compute Service (ECS) instances that have not been imported to clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEcsNotInClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEcsNotInClusterResponse
+        /// </returns>
         public ListEcsNotInClusterResponse ListEcsNotInCluster(ListEcsNotInClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9355,6 +14460,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListEcsNotInClusterWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all Elastic Compute Service (ECS) instances that have not been imported to clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEcsNotInClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEcsNotInClusterResponse
+        /// </returns>
         public async Task<ListEcsNotInClusterResponse> ListEcsNotInClusterAsync(ListEcsNotInClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9362,17 +14479,34 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListEcsNotInClusterWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * ## Terms
-          * *   **Namespace**: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.
-          * *   **Elastic compute unit (ECU)**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-          * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-          *
-          * @param request ListEcuByRegionRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListEcuByRegionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available elastic compute units (ECUs) in a specified namespace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Terms</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</description></item>
+        /// <item><description><b>Elastic compute unit (ECU)</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
+        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEcuByRegionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEcuByRegionResponse
+        /// </returns>
         public ListEcuByRegionResponse ListEcuByRegionWithOptions(ListEcuByRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9405,17 +14539,34 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListEcuByRegionResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Terms
-          * *   **Namespace**: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.
-          * *   **Elastic compute unit (ECU)**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-          * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-          *
-          * @param request ListEcuByRegionRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListEcuByRegionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available elastic compute units (ECUs) in a specified namespace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Terms</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</description></item>
+        /// <item><description><b>Elastic compute unit (ECU)</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
+        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEcuByRegionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEcuByRegionResponse
+        /// </returns>
         public async Task<ListEcuByRegionResponse> ListEcuByRegionWithOptionsAsync(ListEcuByRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9448,15 +14599,28 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListEcuByRegionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Terms
-          * *   **Namespace**: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.
-          * *   **Elastic compute unit (ECU)**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-          * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-          *
-          * @param request ListEcuByRegionRequest
-          * @return ListEcuByRegionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available elastic compute units (ECUs) in a specified namespace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Terms</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</description></item>
+        /// <item><description><b>Elastic compute unit (ECU)</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
+        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEcuByRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEcuByRegionResponse
+        /// </returns>
         public ListEcuByRegionResponse ListEcuByRegion(ListEcuByRegionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9464,15 +14628,28 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListEcuByRegionWithOptions(request, headers, runtime);
         }
 
-        /**
-          * ## Terms
-          * *   **Namespace**: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.
-          * *   **Elastic compute unit (ECU)**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-          * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-          *
-          * @param request ListEcuByRegionRequest
-          * @return ListEcuByRegionResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available elastic compute units (ECUs) in a specified namespace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Terms</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</description></item>
+        /// <item><description><b>Elastic compute unit (ECU)</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
+        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListEcuByRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEcuByRegionResponse
+        /// </returns>
         public async Task<ListEcuByRegionResponse> ListEcuByRegionAsync(ListEcuByRegionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9480,6 +14657,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListEcuByRegionWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries historical deployment packages of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHistoryDeployVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHistoryDeployVersionResponse
+        /// </returns>
         public ListHistoryDeployVersionResponse ListHistoryDeployVersionWithOptions(ListHistoryDeployVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9508,6 +14703,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListHistoryDeployVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries historical deployment packages of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHistoryDeployVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHistoryDeployVersionResponse
+        /// </returns>
         public async Task<ListHistoryDeployVersionResponse> ListHistoryDeployVersionWithOptionsAsync(ListHistoryDeployVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9536,6 +14749,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListHistoryDeployVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries historical deployment packages of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHistoryDeployVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHistoryDeployVersionResponse
+        /// </returns>
         public ListHistoryDeployVersionResponse ListHistoryDeployVersion(ListHistoryDeployVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9543,6 +14768,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListHistoryDeployVersionWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries historical deployment packages of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHistoryDeployVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHistoryDeployVersionResponse
+        /// </returns>
         public async Task<ListHistoryDeployVersionResponse> ListHistoryDeployVersionAsync(ListHistoryDeployVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9550,6 +14787,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListHistoryDeployVersionWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Kubernetes ConfigMaps.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sConfigMapsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sConfigMapsResponse
+        /// </returns>
         public ListK8sConfigMapsResponse ListK8sConfigMapsWithOptions(ListK8sConfigMapsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9602,6 +14857,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListK8sConfigMapsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Kubernetes ConfigMaps.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sConfigMapsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sConfigMapsResponse
+        /// </returns>
         public async Task<ListK8sConfigMapsResponse> ListK8sConfigMapsWithOptionsAsync(ListK8sConfigMapsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9654,6 +14927,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListK8sConfigMapsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Kubernetes ConfigMaps.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sConfigMapsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sConfigMapsResponse
+        /// </returns>
         public ListK8sConfigMapsResponse ListK8sConfigMaps(ListK8sConfigMapsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9661,6 +14946,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListK8sConfigMapsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Kubernetes ConfigMaps.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sConfigMapsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sConfigMapsResponse
+        /// </returns>
         public async Task<ListK8sConfigMapsResponse> ListK8sConfigMapsAsync(ListK8sConfigMapsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9668,6 +14965,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListK8sConfigMapsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries ingresses.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sIngressRulesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sIngressRulesResponse
+        /// </returns>
         public ListK8sIngressRulesResponse ListK8sIngressRulesWithOptions(ListK8sIngressRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9708,6 +15023,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListK8sIngressRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries ingresses.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sIngressRulesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sIngressRulesResponse
+        /// </returns>
         public async Task<ListK8sIngressRulesResponse> ListK8sIngressRulesWithOptionsAsync(ListK8sIngressRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9748,6 +15081,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListK8sIngressRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries ingresses.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sIngressRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sIngressRulesResponse
+        /// </returns>
         public ListK8sIngressRulesResponse ListK8sIngressRules(ListK8sIngressRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9755,6 +15100,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListK8sIngressRulesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries ingresses.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sIngressRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sIngressRulesResponse
+        /// </returns>
         public async Task<ListK8sIngressRulesResponse> ListK8sIngressRulesAsync(ListK8sIngressRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9762,6 +15119,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListK8sIngressRulesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries namespaces for a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sNamespacesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sNamespacesResponse
+        /// </returns>
         public ListK8sNamespacesResponse ListK8sNamespacesWithOptions(ListK8sNamespacesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9790,6 +15165,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListK8sNamespacesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries namespaces for a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sNamespacesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sNamespacesResponse
+        /// </returns>
         public async Task<ListK8sNamespacesResponse> ListK8sNamespacesWithOptionsAsync(ListK8sNamespacesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9818,6 +15211,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListK8sNamespacesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries namespaces for a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sNamespacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sNamespacesResponse
+        /// </returns>
         public ListK8sNamespacesResponse ListK8sNamespaces(ListK8sNamespacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9825,6 +15230,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListK8sNamespacesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries namespaces for a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sNamespacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sNamespacesResponse
+        /// </returns>
         public async Task<ListK8sNamespacesResponse> ListK8sNamespacesAsync(ListK8sNamespacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9832,6 +15249,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListK8sNamespacesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Kubernetes Secrets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sSecretsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sSecretsResponse
+        /// </returns>
         public ListK8sSecretsResponse ListK8sSecretsWithOptions(ListK8sSecretsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9884,6 +15319,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListK8sSecretsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Kubernetes Secrets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sSecretsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sSecretsResponse
+        /// </returns>
         public async Task<ListK8sSecretsResponse> ListK8sSecretsWithOptionsAsync(ListK8sSecretsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9936,6 +15389,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListK8sSecretsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Kubernetes Secrets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sSecretsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sSecretsResponse
+        /// </returns>
         public ListK8sSecretsResponse ListK8sSecrets(ListK8sSecretsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9943,6 +15408,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListK8sSecretsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Kubernetes Secrets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8sSecretsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8sSecretsResponse
+        /// </returns>
         public async Task<ListK8sSecretsResponse> ListK8sSecretsAsync(ListK8sSecretsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -9950,6 +15427,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListK8sSecretsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service methods.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMethodsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMethodsResponse
+        /// </returns>
         public ListMethodsResponse ListMethodsWithOptions(ListMethodsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9982,6 +15477,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListMethodsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service methods.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMethodsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMethodsResponse
+        /// </returns>
         public async Task<ListMethodsResponse> ListMethodsWithOptionsAsync(ListMethodsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10014,6 +15527,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListMethodsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service methods.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMethodsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMethodsResponse
+        /// </returns>
         public ListMethodsResponse ListMethods(ListMethodsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10021,6 +15546,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListMethodsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service methods.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMethodsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMethodsResponse
+        /// </returns>
         public async Task<ListMethodsResponse> ListMethodsAsync(ListMethodsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10028,6 +15565,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListMethodsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the services that are published by an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPublishedServicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPublishedServicesResponse
+        /// </returns>
         public ListPublishedServicesResponse ListPublishedServicesWithOptions(ListPublishedServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10056,6 +15611,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListPublishedServicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the services that are published by an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPublishedServicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPublishedServicesResponse
+        /// </returns>
         public async Task<ListPublishedServicesResponse> ListPublishedServicesWithOptionsAsync(ListPublishedServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10084,6 +15657,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListPublishedServicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the services that are published by an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPublishedServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPublishedServicesResponse
+        /// </returns>
         public ListPublishedServicesResponse ListPublishedServices(ListPublishedServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10091,6 +15676,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListPublishedServicesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the services that are published by an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPublishedServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPublishedServicesResponse
+        /// </returns>
         public async Task<ListPublishedServicesResponse> ListPublishedServicesAsync(ListPublishedServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10098,6 +15695,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListPublishedServicesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the change processes of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecentChangeOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecentChangeOrderResponse
+        /// </returns>
         public ListRecentChangeOrderResponse ListRecentChangeOrderWithOptions(ListRecentChangeOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10126,6 +15741,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListRecentChangeOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the change processes of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecentChangeOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecentChangeOrderResponse
+        /// </returns>
         public async Task<ListRecentChangeOrderResponse> ListRecentChangeOrderWithOptionsAsync(ListRecentChangeOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10154,6 +15787,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListRecentChangeOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the change processes of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecentChangeOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecentChangeOrderResponse
+        /// </returns>
         public ListRecentChangeOrderResponse ListRecentChangeOrder(ListRecentChangeOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10161,6 +15806,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListRecentChangeOrderWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the change processes of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRecentChangeOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRecentChangeOrderResponse
+        /// </returns>
         public async Task<ListRecentChangeOrderResponse> ListRecentChangeOrderAsync(ListRecentChangeOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10168,6 +15825,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListRecentChangeOrderWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceGroupResponse
+        /// </returns>
         public ListResourceGroupResponse ListResourceGroupWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10189,6 +15861,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceGroupResponse
+        /// </returns>
         public async Task<ListResourceGroupResponse> ListResourceGroupWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10210,6 +15897,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource groups.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListResourceGroupResponse
+        /// </returns>
         public ListResourceGroupResponse ListResourceGroup()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10217,6 +15912,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListResourceGroupWithOptions(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource groups.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListResourceGroupResponse
+        /// </returns>
         public async Task<ListResourceGroupResponse> ListResourceGroupAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10224,6 +15927,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListResourceGroupWithOptionsAsync(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries roles.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRoleResponse
+        /// </returns>
         public ListRoleResponse ListRoleWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10245,6 +15963,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListRoleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries roles.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRoleResponse
+        /// </returns>
         public async Task<ListRoleResponse> ListRoleWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10266,6 +15999,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries roles.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListRoleResponse
+        /// </returns>
         public ListRoleResponse ListRole()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10273,6 +16014,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListRoleWithOptions(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries roles.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListRoleResponse
+        /// </returns>
         public async Task<ListRoleResponse> ListRoleAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10280,17 +16029,34 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListRoleWithOptionsAsync(headers, runtime);
         }
 
-        /**
-          * ## Terms
-          * *   **Namespace**: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.
-          * *   **Elastic compute unit (ECU)**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-          * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-          *
-          * @param request ListScaleOutEcuRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListScaleOutEcuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries elastic compute units (ECUs) available for scaling out an application in a specified cluster or the cluster where the application is deployed. This operation is applicable to Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Terms</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</description></item>
+        /// <item><description><b>Elastic compute unit (ECU)</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
+        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListScaleOutEcuRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListScaleOutEcuResponse
+        /// </returns>
         public ListScaleOutEcuResponse ListScaleOutEcuWithOptions(ListScaleOutEcuRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10343,17 +16109,34 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListScaleOutEcuResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Terms
-          * *   **Namespace**: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.
-          * *   **Elastic compute unit (ECU)**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-          * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-          *
-          * @param request ListScaleOutEcuRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ListScaleOutEcuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries elastic compute units (ECUs) available for scaling out an application in a specified cluster or the cluster where the application is deployed. This operation is applicable to Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Terms</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</description></item>
+        /// <item><description><b>Elastic compute unit (ECU)</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
+        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListScaleOutEcuRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListScaleOutEcuResponse
+        /// </returns>
         public async Task<ListScaleOutEcuResponse> ListScaleOutEcuWithOptionsAsync(ListScaleOutEcuRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10406,15 +16189,28 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListScaleOutEcuResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Terms
-          * *   **Namespace**: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.
-          * *   **Elastic compute unit (ECU)**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-          * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-          *
-          * @param request ListScaleOutEcuRequest
-          * @return ListScaleOutEcuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries elastic compute units (ECUs) available for scaling out an application in a specified cluster or the cluster where the application is deployed. This operation is applicable to Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Terms</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</description></item>
+        /// <item><description><b>Elastic compute unit (ECU)</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
+        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListScaleOutEcuRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListScaleOutEcuResponse
+        /// </returns>
         public ListScaleOutEcuResponse ListScaleOutEcu(ListScaleOutEcuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10422,15 +16218,28 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListScaleOutEcuWithOptions(request, headers, runtime);
         }
 
-        /**
-          * ## Terms
-          * *   **Namespace**: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.
-          * *   **Elastic compute unit (ECU)**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-          * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-          *
-          * @param request ListScaleOutEcuRequest
-          * @return ListScaleOutEcuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries elastic compute units (ECUs) available for scaling out an application in a specified cluster or the cluster where the application is deployed. This operation is applicable to Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Terms</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources such as clusters, ECS instances, and applications, and microservices published in EDAS. This concept involves the default namespace and custom namespaces. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</description></item>
+        /// <item><description><b>Elastic compute unit (ECU)</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
+        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListScaleOutEcuRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListScaleOutEcuResponse
+        /// </returns>
         public async Task<ListScaleOutEcuResponse> ListScaleOutEcuAsync(ListScaleOutEcuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10438,6 +16247,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListScaleOutEcuWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the service groups of a High-Speed Service Framework (HSF) application.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceGroupsResponse
+        /// </returns>
         public ListServiceGroupsResponse ListServiceGroupsWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10459,6 +16283,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListServiceGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the service groups of a High-Speed Service Framework (HSF) application.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceGroupsResponse
+        /// </returns>
         public async Task<ListServiceGroupsResponse> ListServiceGroupsWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10480,6 +16319,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListServiceGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the service groups of a High-Speed Service Framework (HSF) application.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListServiceGroupsResponse
+        /// </returns>
         public ListServiceGroupsResponse ListServiceGroups()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10487,6 +16334,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListServiceGroupsWithOptions(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the service groups of a High-Speed Service Framework (HSF) application.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListServiceGroupsResponse
+        /// </returns>
         public async Task<ListServiceGroupsResponse> ListServiceGroupsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10494,6 +16349,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListServiceGroupsWithOptionsAsync(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Server Load Balancer (SLB) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSlbResponse
+        /// </returns>
         public ListSlbResponse ListSlbWithOptions(ListSlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10530,6 +16403,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListSlbResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Server Load Balancer (SLB) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSlbResponse
+        /// </returns>
         public async Task<ListSlbResponse> ListSlbWithOptionsAsync(ListSlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10566,6 +16457,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListSlbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Server Load Balancer (SLB) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSlbResponse
+        /// </returns>
         public ListSlbResponse ListSlb(ListSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10573,6 +16476,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListSlbWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries Server Load Balancer (SLB) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSlbResponse
+        /// </returns>
         public async Task<ListSlbResponse> ListSlbAsync(ListSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10580,6 +16495,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListSlbWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Resource Access Management (RAM) users.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSubAccountResponse
+        /// </returns>
         public ListSubAccountResponse ListSubAccountWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10601,6 +16531,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListSubAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Resource Access Management (RAM) users.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSubAccountResponse
+        /// </returns>
         public async Task<ListSubAccountResponse> ListSubAccountWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10622,6 +16567,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListSubAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Resource Access Management (RAM) users.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListSubAccountResponse
+        /// </returns>
         public ListSubAccountResponse ListSubAccount()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10629,6 +16582,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListSubAccountWithOptions(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Resource Access Management (RAM) users.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListSubAccountResponse
+        /// </returns>
         public async Task<ListSubAccountResponse> ListSubAccountAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10636,6 +16597,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListSubAccountWithOptionsAsync(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries lanes in a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneResponse
+        /// </returns>
         public ListSwimmingLaneResponse ListSwimmingLaneWithOptions(ListSwimmingLaneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10664,6 +16643,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListSwimmingLaneResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries lanes in a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneResponse
+        /// </returns>
         public async Task<ListSwimmingLaneResponse> ListSwimmingLaneWithOptionsAsync(ListSwimmingLaneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10692,6 +16689,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListSwimmingLaneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries lanes in a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneResponse
+        /// </returns>
         public ListSwimmingLaneResponse ListSwimmingLane(ListSwimmingLaneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10699,6 +16708,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListSwimmingLaneWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries lanes in a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneResponse
+        /// </returns>
         public async Task<ListSwimmingLaneResponse> ListSwimmingLaneAsync(ListSwimmingLaneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10706,6 +16727,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListSwimmingLaneWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries lane groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneGroupResponse
+        /// </returns>
         public ListSwimmingLaneGroupResponse ListSwimmingLaneGroupWithOptions(ListSwimmingLaneGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10738,6 +16777,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListSwimmingLaneGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries lane groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneGroupResponse
+        /// </returns>
         public async Task<ListSwimmingLaneGroupResponse> ListSwimmingLaneGroupWithOptionsAsync(ListSwimmingLaneGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10770,6 +16827,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListSwimmingLaneGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries lane groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneGroupResponse
+        /// </returns>
         public ListSwimmingLaneGroupResponse ListSwimmingLaneGroup(ListSwimmingLaneGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10777,6 +16846,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListSwimmingLaneGroupWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries lane groups.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSwimmingLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSwimmingLaneGroupResponse
+        /// </returns>
         public async Task<ListSwimmingLaneGroupResponse> ListSwimmingLaneGroupAsync(ListSwimmingLaneGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10784,6 +16865,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListSwimmingLaneGroupWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10824,6 +16923,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10864,6 +16981,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10871,6 +17000,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListTagResourcesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags that are added to resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10878,6 +17019,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListTagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries custom namespaces.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserDefineRegionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserDefineRegionResponse
+        /// </returns>
         public ListUserDefineRegionResponse ListUserDefineRegionWithOptions(ListUserDefineRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10906,6 +17065,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListUserDefineRegionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries custom namespaces.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserDefineRegionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserDefineRegionResponse
+        /// </returns>
         public async Task<ListUserDefineRegionResponse> ListUserDefineRegionWithOptionsAsync(ListUserDefineRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10934,6 +17111,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListUserDefineRegionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries custom namespaces.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserDefineRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserDefineRegionResponse
+        /// </returns>
         public ListUserDefineRegionResponse ListUserDefineRegion(ListUserDefineRegionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10941,6 +17130,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListUserDefineRegionWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries custom namespaces.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserDefineRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserDefineRegionResponse
+        /// </returns>
         public async Task<ListUserDefineRegionResponse> ListUserDefineRegionAsync(ListUserDefineRegionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10948,6 +17149,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListUserDefineRegionWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The HTTP status code returned.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcResponse
+        /// </returns>
         public ListVpcResponse ListVpcWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10969,6 +17185,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListVpcResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The HTTP status code returned.</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcResponse
+        /// </returns>
         public async Task<ListVpcResponse> ListVpcWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -10990,6 +17221,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ListVpcResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The HTTP status code returned.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListVpcResponse
+        /// </returns>
         public ListVpcResponse ListVpc()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -10997,6 +17236,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ListVpcWithOptions(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The HTTP status code returned.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListVpcResponse
+        /// </returns>
         public async Task<ListVpcResponse> ListVpcAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11004,20 +17251,37 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ListVpcWithOptionsAsync(headers, runtime);
         }
 
-        /**
-          * ## Limits
-          * We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see [TransformClusterMember](~~71514~~).
-          * When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.
-          * ## Terms
-          * *   **Namespace**: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.
-          * *   **ECU**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-          * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-          *
-          * @param request MigrateEcuRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return MigrateEcuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an elastic compute unit (ECU) to the default cluster in a specified namespace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Limits</h2>
+        /// <para>We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
+        /// When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// <h2>Terms</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.</description></item>
+        /// <item><description><b>ECU</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
+        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateEcuRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateEcuResponse
+        /// </returns>
         public MigrateEcuResponse MigrateEcuWithOptions(MigrateEcuRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11050,20 +17314,37 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<MigrateEcuResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Limits
-          * We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see [TransformClusterMember](~~71514~~).
-          * When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.
-          * ## Terms
-          * *   **Namespace**: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.
-          * *   **ECU**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-          * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-          *
-          * @param request MigrateEcuRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return MigrateEcuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an elastic compute unit (ECU) to the default cluster in a specified namespace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Limits</h2>
+        /// <para>We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
+        /// When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// <h2>Terms</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.</description></item>
+        /// <item><description><b>ECU</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
+        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateEcuRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateEcuResponse
+        /// </returns>
         public async Task<MigrateEcuResponse> MigrateEcuWithOptionsAsync(MigrateEcuRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11096,18 +17377,31 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<MigrateEcuResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Limits
-          * We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see [TransformClusterMember](~~71514~~).
-          * When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.
-          * ## Terms
-          * *   **Namespace**: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.
-          * *   **ECU**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-          * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-          *
-          * @param request MigrateEcuRequest
-          * @return MigrateEcuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an elastic compute unit (ECU) to the default cluster in a specified namespace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Limits</h2>
+        /// <para>We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
+        /// When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// <h2>Terms</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.</description></item>
+        /// <item><description><b>ECU</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
+        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateEcuRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateEcuResponse
+        /// </returns>
         public MigrateEcuResponse MigrateEcu(MigrateEcuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11115,18 +17409,31 @@ namespace AlibabaCloud.SDK.Edas20170801
             return MigrateEcuWithOptions(request, headers, runtime);
         }
 
-        /**
-          * ## Limits
-          * We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see [TransformClusterMember](~~71514~~).
-          * When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.
-          * ## Terms
-          * *   **Namespace**: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.
-          * *   **ECU**: After an ECS instance is imported to a cluster, the instance becomes an ECU.
-          * *   **Elastic compute container (ECC)**: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.
-          *
-          * @param request MigrateEcuRequest
-          * @return MigrateEcuResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an elastic compute unit (ECU) to the default cluster in a specified namespace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Limits</h2>
+        /// <para>We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
+        /// When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// <h2>Terms</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Namespace</b>: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.</description></item>
+        /// <item><description><b>ECU</b>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</description></item>
+        /// <item><description><b>Elastic compute container (ECC)</b>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MigrateEcuRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MigrateEcuResponse
+        /// </returns>
         public async Task<MigrateEcuResponse> MigrateEcuAsync(MigrateEcuRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11134,6 +17441,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await MigrateEcuWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the scaling rule for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyScalingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyScalingRuleResponse
+        /// </returns>
         public ModifyScalingRuleResponse ModifyScalingRuleWithOptions(ModifyScalingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11278,6 +17603,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ModifyScalingRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the scaling rule for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyScalingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyScalingRuleResponse
+        /// </returns>
         public async Task<ModifyScalingRuleResponse> ModifyScalingRuleWithOptionsAsync(ModifyScalingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11422,6 +17765,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ModifyScalingRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the scaling rule for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyScalingRuleResponse
+        /// </returns>
         public ModifyScalingRuleResponse ModifyScalingRule(ModifyScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11429,6 +17784,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ModifyScalingRuleWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the scaling rule for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyScalingRuleResponse
+        /// </returns>
         public async Task<ModifyScalingRuleResponse> ModifyScalingRuleAsync(ModifyScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11436,6 +17803,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ModifyScalingRuleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryApplicationStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApplicationStatusResponse
+        /// </returns>
         public QueryApplicationStatusResponse QueryApplicationStatusWithOptions(QueryApplicationStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11464,6 +17849,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<QueryApplicationStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryApplicationStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApplicationStatusResponse
+        /// </returns>
         public async Task<QueryApplicationStatusResponse> QueryApplicationStatusWithOptionsAsync(QueryApplicationStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11492,6 +17895,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<QueryApplicationStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryApplicationStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApplicationStatusResponse
+        /// </returns>
         public QueryApplicationStatusResponse QueryApplicationStatus(QueryApplicationStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11499,6 +17914,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return QueryApplicationStatusWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryApplicationStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApplicationStatusResponse
+        /// </returns>
         public async Task<QueryApplicationStatusResponse> QueryApplicationStatusAsync(QueryApplicationStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11506,6 +17933,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await QueryApplicationStatusWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details about an elastic compute container (ECC). This operation is applicable to Container Service for Kubernetes (ACK) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEccInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEccInfoResponse
+        /// </returns>
         public QueryEccInfoResponse QueryEccInfoWithOptions(QueryEccInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11534,6 +17979,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<QueryEccInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details about an elastic compute container (ECC). This operation is applicable to Container Service for Kubernetes (ACK) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEccInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEccInfoResponse
+        /// </returns>
         public async Task<QueryEccInfoResponse> QueryEccInfoWithOptionsAsync(QueryEccInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11562,6 +18025,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<QueryEccInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details about an elastic compute container (ECC). This operation is applicable to Container Service for Kubernetes (ACK) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEccInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEccInfoResponse
+        /// </returns>
         public QueryEccInfoResponse QueryEccInfo(QueryEccInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11569,6 +18044,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return QueryEccInfoWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries details about an elastic compute container (ECC). This operation is applicable to Container Service for Kubernetes (ACK) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEccInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEccInfoResponse
+        /// </returns>
         public async Task<QueryEccInfoResponse> QueryEccInfoAsync(QueryEccInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11576,6 +18063,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await QueryEccInfoWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the elastic compute units (ECUs) that can be migrated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMigrateEcuListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMigrateEcuListResponse
+        /// </returns>
         public QueryMigrateEcuListResponse QueryMigrateEcuListWithOptions(QueryMigrateEcuListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11604,6 +18109,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<QueryMigrateEcuListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the elastic compute units (ECUs) that can be migrated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMigrateEcuListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMigrateEcuListResponse
+        /// </returns>
         public async Task<QueryMigrateEcuListResponse> QueryMigrateEcuListWithOptionsAsync(QueryMigrateEcuListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11632,6 +18155,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<QueryMigrateEcuListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the elastic compute units (ECUs) that can be migrated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMigrateEcuListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMigrateEcuListResponse
+        /// </returns>
         public QueryMigrateEcuListResponse QueryMigrateEcuList(QueryMigrateEcuListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11639,6 +18174,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return QueryMigrateEcuListWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the elastic compute units (ECUs) that can be migrated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMigrateEcuListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMigrateEcuListResponse
+        /// </returns>
         public async Task<QueryMigrateEcuListResponse> QueryMigrateEcuListAsync(QueryMigrateEcuListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11646,6 +18193,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await QueryMigrateEcuListWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the namespaces to which an instance can be migrated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMigrateRegionListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMigrateRegionListResponse
+        /// </returns>
         public QueryMigrateRegionListResponse QueryMigrateRegionListWithOptions(QueryMigrateRegionListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11674,6 +18239,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<QueryMigrateRegionListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the namespaces to which an instance can be migrated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMigrateRegionListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMigrateRegionListResponse
+        /// </returns>
         public async Task<QueryMigrateRegionListResponse> QueryMigrateRegionListWithOptionsAsync(QueryMigrateRegionListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11702,6 +18285,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<QueryMigrateRegionListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the namespaces to which an instance can be migrated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMigrateRegionListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMigrateRegionListResponse
+        /// </returns>
         public QueryMigrateRegionListResponse QueryMigrateRegionList(QueryMigrateRegionListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11709,6 +18304,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return QueryMigrateRegionListWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the namespaces to which an instance can be migrated.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMigrateRegionListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMigrateRegionListResponse
+        /// </returns>
         public async Task<QueryMigrateRegionListResponse> QueryMigrateRegionListAsync(QueryMigrateRegionListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11716,6 +18323,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await QueryMigrateRegionListWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of different regions that are supported by Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryRegionConfigResponse
+        /// </returns>
         public QueryRegionConfigResponse QueryRegionConfigWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11737,6 +18359,21 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<QueryRegionConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of different regions that are supported by Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryRegionConfigResponse
+        /// </returns>
         public async Task<QueryRegionConfigResponse> QueryRegionConfigWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11758,6 +18395,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<QueryRegionConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of different regions that are supported by Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// QueryRegionConfigResponse
+        /// </returns>
         public QueryRegionConfigResponse QueryRegionConfig()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11765,6 +18410,14 @@ namespace AlibabaCloud.SDK.Edas20170801
             return QueryRegionConfigWithOptions(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of different regions that are supported by Enterprise Distributed Application Service (EDAS).</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// QueryRegionConfigResponse
+        /// </returns>
         public async Task<QueryRegionConfigResponse> QueryRegionConfigAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11772,6 +18425,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await QueryRegionConfigWithOptionsAsync(headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration details of Log Service for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySlsLogStoreListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySlsLogStoreListResponse
+        /// </returns>
         public QuerySlsLogStoreListResponse QuerySlsLogStoreListWithOptions(QuerySlsLogStoreListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11812,6 +18483,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<QuerySlsLogStoreListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration details of Log Service for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySlsLogStoreListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySlsLogStoreListResponse
+        /// </returns>
         public async Task<QuerySlsLogStoreListResponse> QuerySlsLogStoreListWithOptionsAsync(QuerySlsLogStoreListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11852,6 +18541,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<QuerySlsLogStoreListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration details of Log Service for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySlsLogStoreListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySlsLogStoreListResponse
+        /// </returns>
         public QuerySlsLogStoreListResponse QuerySlsLogStoreList(QuerySlsLogStoreListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11859,6 +18560,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return QuerySlsLogStoreListWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration details of Log Service for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySlsLogStoreListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySlsLogStoreListResponse
+        /// </returns>
         public async Task<QuerySlsLogStoreListResponse> QuerySlsLogStoreListAsync(QuerySlsLogStoreListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11866,6 +18579,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await QuerySlsLogStoreListWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetApplicationResponse
+        /// </returns>
         public ResetApplicationResponse ResetApplicationWithOptions(ResetApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11898,6 +18629,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ResetApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetApplicationResponse
+        /// </returns>
         public async Task<ResetApplicationResponse> ResetApplicationWithOptionsAsync(ResetApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11930,6 +18679,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ResetApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetApplicationResponse
+        /// </returns>
         public ResetApplicationResponse ResetApplication(ResetApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11937,6 +18698,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ResetApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetApplicationResponse
+        /// </returns>
         public async Task<ResetApplicationResponse> ResetApplicationAsync(ResetApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11944,6 +18717,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ResetApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartApplicationResponse
+        /// </returns>
         public RestartApplicationResponse RestartApplicationWithOptions(RestartApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11976,6 +18767,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<RestartApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartApplicationResponse
+        /// </returns>
         public async Task<RestartApplicationResponse> RestartApplicationWithOptionsAsync(RestartApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12008,6 +18817,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<RestartApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartApplicationResponse
+        /// </returns>
         public RestartApplicationResponse RestartApplication(RestartApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12015,6 +18836,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return RestartApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartApplicationResponse
+        /// </returns>
         public async Task<RestartApplicationResponse> RestartApplicationAsync(RestartApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12022,6 +18855,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await RestartApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an application that is deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartK8sApplicationResponse
+        /// </returns>
         public RestartK8sApplicationResponse RestartK8sApplicationWithOptions(RestartK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12054,6 +18905,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<RestartK8sApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an application that is deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartK8sApplicationResponse
+        /// </returns>
         public async Task<RestartK8sApplicationResponse> RestartK8sApplicationWithOptionsAsync(RestartK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12086,6 +18955,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<RestartK8sApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an application that is deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartK8sApplicationResponse
+        /// </returns>
         public RestartK8sApplicationResponse RestartK8sApplication(RestartK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12093,6 +18974,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return RestartK8sApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an application that is deployed in a Container Service for Kubernetes (ACK) cluster or a serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestartK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestartK8sApplicationResponse
+        /// </returns>
         public async Task<RestartK8sApplicationResponse> RestartK8sApplicationAsync(RestartK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12100,6 +18993,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await RestartK8sApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retries a failed process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryChangeOrderTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryChangeOrderTaskResponse
+        /// </returns>
         public RetryChangeOrderTaskResponse RetryChangeOrderTaskWithOptions(RetryChangeOrderTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12132,6 +19043,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<RetryChangeOrderTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retries a failed process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryChangeOrderTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryChangeOrderTaskResponse
+        /// </returns>
         public async Task<RetryChangeOrderTaskResponse> RetryChangeOrderTaskWithOptionsAsync(RetryChangeOrderTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12164,6 +19093,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<RetryChangeOrderTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retries a failed process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryChangeOrderTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryChangeOrderTaskResponse
+        /// </returns>
         public RetryChangeOrderTaskResponse RetryChangeOrderTask(RetryChangeOrderTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12171,6 +19112,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return RetryChangeOrderTaskWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retries a failed process.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryChangeOrderTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryChangeOrderTaskResponse
+        /// </returns>
         public async Task<RetryChangeOrderTaskResponse> RetryChangeOrderTaskAsync(RetryChangeOrderTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12178,6 +19131,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await RetryChangeOrderTaskWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rolls back an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackApplicationResponse
+        /// </returns>
         public RollbackApplicationResponse RollbackApplicationWithOptions(RollbackApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12222,6 +19193,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<RollbackApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rolls back an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackApplicationResponse
+        /// </returns>
         public async Task<RollbackApplicationResponse> RollbackApplicationWithOptionsAsync(RollbackApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12266,6 +19255,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<RollbackApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rolls back an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackApplicationResponse
+        /// </returns>
         public RollbackApplicationResponse RollbackApplication(RollbackApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12273,6 +19274,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return RollbackApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rolls back an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackApplicationResponse
+        /// </returns>
         public async Task<RollbackApplicationResponse> RollbackApplicationAsync(RollbackApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12280,6 +19293,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await RollbackApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates an application change process and rolls back the application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackChangeOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackChangeOrderResponse
+        /// </returns>
         public RollbackChangeOrderResponse RollbackChangeOrderWithOptions(RollbackChangeOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12308,6 +19339,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<RollbackChangeOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates an application change process and rolls back the application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackChangeOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackChangeOrderResponse
+        /// </returns>
         public async Task<RollbackChangeOrderResponse> RollbackChangeOrderWithOptionsAsync(RollbackChangeOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12336,6 +19385,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<RollbackChangeOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates an application change process and rolls back the application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackChangeOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackChangeOrderResponse
+        /// </returns>
         public RollbackChangeOrderResponse RollbackChangeOrder(RollbackChangeOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12343,6 +19404,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return RollbackChangeOrderWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates an application change process and rolls back the application. This operation is applicable to applications that are deployed in Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RollbackChangeOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RollbackChangeOrderResponse
+        /// </returns>
         public async Task<RollbackChangeOrderResponse> RollbackChangeOrderAsync(RollbackChangeOrderRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12350,6 +19423,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await RollbackChangeOrderWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales in an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleInApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleInApplicationResponse
+        /// </returns>
         public ScaleInApplicationResponse ScaleInApplicationWithOptions(ScaleInApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12386,6 +19477,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ScaleInApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales in an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleInApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleInApplicationResponse
+        /// </returns>
         public async Task<ScaleInApplicationResponse> ScaleInApplicationWithOptionsAsync(ScaleInApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12422,6 +19531,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ScaleInApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales in an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleInApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleInApplicationResponse
+        /// </returns>
         public ScaleInApplicationResponse ScaleInApplication(ScaleInApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12429,6 +19550,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ScaleInApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales in an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleInApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleInApplicationResponse
+        /// </returns>
         public async Task<ScaleInApplicationResponse> ScaleInApplicationAsync(ScaleInApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12436,6 +19569,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ScaleInApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales out or in an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleK8sApplicationResponse
+        /// </returns>
         public ScaleK8sApplicationResponse ScaleK8sApplicationWithOptions(ScaleK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12472,6 +19623,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ScaleK8sApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales out or in an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleK8sApplicationResponse
+        /// </returns>
         public async Task<ScaleK8sApplicationResponse> ScaleK8sApplicationWithOptionsAsync(ScaleK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12508,6 +19677,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ScaleK8sApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales out or in an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleK8sApplicationResponse
+        /// </returns>
         public ScaleK8sApplicationResponse ScaleK8sApplication(ScaleK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12515,6 +19696,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ScaleK8sApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales out or in an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleK8sApplicationResponse
+        /// </returns>
         public async Task<ScaleK8sApplicationResponse> ScaleK8sApplicationAsync(ScaleK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12522,6 +19715,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ScaleK8sApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales out an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleOutApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleOutApplicationResponse
+        /// </returns>
         public ScaleOutApplicationResponse ScaleOutApplicationWithOptions(ScaleOutApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12558,6 +19769,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ScaleOutApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales out an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleOutApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleOutApplicationResponse
+        /// </returns>
         public async Task<ScaleOutApplicationResponse> ScaleOutApplicationWithOptionsAsync(ScaleOutApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12594,6 +19823,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ScaleOutApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales out an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleOutApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleOutApplicationResponse
+        /// </returns>
         public ScaleOutApplicationResponse ScaleOutApplication(ScaleOutApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12601,6 +19842,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ScaleOutApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales out an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ScaleOutApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleOutApplicationResponse
+        /// </returns>
         public async Task<ScaleOutApplicationResponse> ScaleOutApplicationAsync(ScaleOutApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12608,15 +19861,30 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ScaleOutApplicationWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * ## Limits
-          * Assume that the auto scaling feature is configured and enabled for an application. When an auto scale-in is triggered for the application, the ECS instances that are purchased by calling this operation are removed first.
-          *
-          * @param request ScaleoutApplicationWithNewInstancesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ScaleoutApplicationWithNewInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases Elastic Compute Service (ECS) instances in the Enterprise Distributed Application Service (EDAS) console and adds the purchased ECS instances to the specified instance group of an application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Limits</h2>
+        /// <para>Assume that the auto scaling feature is configured and enabled for an application. When an auto scale-in is triggered for the application, the ECS instances that are purchased by calling this operation are removed first.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ScaleoutApplicationWithNewInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleoutApplicationWithNewInstancesResponse
+        /// </returns>
         public ScaleoutApplicationWithNewInstancesResponse ScaleoutApplicationWithNewInstancesWithOptions(ScaleoutApplicationWithNewInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12693,15 +19961,30 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ScaleoutApplicationWithNewInstancesResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Limits
-          * Assume that the auto scaling feature is configured and enabled for an application. When an auto scale-in is triggered for the application, the ECS instances that are purchased by calling this operation are removed first.
-          *
-          * @param request ScaleoutApplicationWithNewInstancesRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ScaleoutApplicationWithNewInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases Elastic Compute Service (ECS) instances in the Enterprise Distributed Application Service (EDAS) console and adds the purchased ECS instances to the specified instance group of an application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Limits</h2>
+        /// <para>Assume that the auto scaling feature is configured and enabled for an application. When an auto scale-in is triggered for the application, the ECS instances that are purchased by calling this operation are removed first.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ScaleoutApplicationWithNewInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleoutApplicationWithNewInstancesResponse
+        /// </returns>
         public async Task<ScaleoutApplicationWithNewInstancesResponse> ScaleoutApplicationWithNewInstancesWithOptionsAsync(ScaleoutApplicationWithNewInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12778,13 +20061,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<ScaleoutApplicationWithNewInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Limits
-          * Assume that the auto scaling feature is configured and enabled for an application. When an auto scale-in is triggered for the application, the ECS instances that are purchased by calling this operation are removed first.
-          *
-          * @param request ScaleoutApplicationWithNewInstancesRequest
-          * @return ScaleoutApplicationWithNewInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases Elastic Compute Service (ECS) instances in the Enterprise Distributed Application Service (EDAS) console and adds the purchased ECS instances to the specified instance group of an application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Limits</h2>
+        /// <para>Assume that the auto scaling feature is configured and enabled for an application. When an auto scale-in is triggered for the application, the ECS instances that are purchased by calling this operation are removed first.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ScaleoutApplicationWithNewInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleoutApplicationWithNewInstancesResponse
+        /// </returns>
         public ScaleoutApplicationWithNewInstancesResponse ScaleoutApplicationWithNewInstances(ScaleoutApplicationWithNewInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12792,13 +20086,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return ScaleoutApplicationWithNewInstancesWithOptions(request, headers, runtime);
         }
 
-        /**
-          * ## Limits
-          * Assume that the auto scaling feature is configured and enabled for an application. When an auto scale-in is triggered for the application, the ECS instances that are purchased by calling this operation are removed first.
-          *
-          * @param request ScaleoutApplicationWithNewInstancesRequest
-          * @return ScaleoutApplicationWithNewInstancesResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purchases Elastic Compute Service (ECS) instances in the Enterprise Distributed Application Service (EDAS) console and adds the purchased ECS instances to the specified instance group of an application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Limits</h2>
+        /// <para>Assume that the auto scaling feature is configured and enabled for an application. When an auto scale-in is triggered for the application, the ECS instances that are purchased by calling this operation are removed first.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ScaleoutApplicationWithNewInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ScaleoutApplicationWithNewInstancesResponse
+        /// </returns>
         public async Task<ScaleoutApplicationWithNewInstancesResponse> ScaleoutApplicationWithNewInstancesAsync(ScaleoutApplicationWithNewInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12806,6 +20111,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await ScaleoutApplicationWithNewInstancesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartApplicationResponse
+        /// </returns>
         public StartApplicationResponse StartApplicationWithOptions(StartApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12838,6 +20161,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<StartApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartApplicationResponse
+        /// </returns>
         public async Task<StartApplicationResponse> StartApplicationWithOptionsAsync(StartApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12870,6 +20211,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<StartApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartApplicationResponse
+        /// </returns>
         public StartApplicationResponse StartApplication(StartApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12877,6 +20230,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return StartApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartApplicationResponse
+        /// </returns>
         public async Task<StartApplicationResponse> StartApplicationAsync(StartApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12884,6 +20249,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await StartApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts precheck for Kubernetes application changes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartK8sAppPrecheckRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartK8sAppPrecheckResponse
+        /// </returns>
         public StartK8sAppPrecheckResponse StartK8sAppPrecheckWithOptions(StartK8sAppPrecheckRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13004,6 +20387,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<StartK8sAppPrecheckResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts precheck for Kubernetes application changes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartK8sAppPrecheckRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartK8sAppPrecheckResponse
+        /// </returns>
         public async Task<StartK8sAppPrecheckResponse> StartK8sAppPrecheckWithOptionsAsync(StartK8sAppPrecheckRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13124,6 +20525,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<StartK8sAppPrecheckResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts precheck for Kubernetes application changes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartK8sAppPrecheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartK8sAppPrecheckResponse
+        /// </returns>
         public StartK8sAppPrecheckResponse StartK8sAppPrecheck(StartK8sAppPrecheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13131,6 +20544,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return StartK8sAppPrecheckWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts precheck for Kubernetes application changes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartK8sAppPrecheckRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartK8sAppPrecheckResponse
+        /// </returns>
         public async Task<StartK8sAppPrecheckResponse> StartK8sAppPrecheckAsync(StartK8sAppPrecheckRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13138,6 +20563,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await StartK8sAppPrecheckWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an application in a Container Service for Kubernetes (ACK) cluster or Serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartK8sApplicationResponse
+        /// </returns>
         public StartK8sApplicationResponse StartK8sApplicationWithOptions(StartK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13174,6 +20617,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<StartK8sApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an application in a Container Service for Kubernetes (ACK) cluster or Serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartK8sApplicationResponse
+        /// </returns>
         public async Task<StartK8sApplicationResponse> StartK8sApplicationWithOptionsAsync(StartK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13210,6 +20671,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<StartK8sApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an application in a Container Service for Kubernetes (ACK) cluster or Serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartK8sApplicationResponse
+        /// </returns>
         public StartK8sApplicationResponse StartK8sApplication(StartK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13217,6 +20690,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return StartK8sApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an application in a Container Service for Kubernetes (ACK) cluster or Serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartK8sApplicationResponse
+        /// </returns>
         public async Task<StartK8sApplicationResponse> StartK8sApplicationAsync(StartK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13224,6 +20709,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await StartK8sApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopApplicationResponse
+        /// </returns>
         public StopApplicationResponse StopApplicationWithOptions(StopApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13256,6 +20759,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<StopApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopApplicationResponse
+        /// </returns>
         public async Task<StopApplicationResponse> StopApplicationWithOptionsAsync(StopApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13288,6 +20809,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<StopApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopApplicationResponse
+        /// </returns>
         public StopApplicationResponse StopApplication(StopApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13295,6 +20828,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return StopApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopApplicationResponse
+        /// </returns>
         public async Task<StopApplicationResponse> StopApplicationAsync(StopApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13302,6 +20847,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await StopApplicationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an application in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopK8sApplicationResponse
+        /// </returns>
         public StopK8sApplicationResponse StopK8sApplicationWithOptions(StopK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13334,6 +20897,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<StopK8sApplicationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an application in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopK8sApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopK8sApplicationResponse
+        /// </returns>
         public async Task<StopK8sApplicationResponse> StopK8sApplicationWithOptionsAsync(StopK8sApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13366,6 +20947,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<StopK8sApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an application in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopK8sApplicationResponse
+        /// </returns>
         public StopK8sApplicationResponse StopK8sApplication(StopK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13373,6 +20966,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return StopK8sApplicationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops an application in a Container Service for Kubernetes (ACK) cluster or a Serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopK8sApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopK8sApplicationResponse
+        /// </returns>
         public async Task<StopK8sApplicationResponse> StopK8sApplicationAsync(StopK8sApplicationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13380,14 +20985,29 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await StopK8sApplicationWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * To call the SwitchAdvancedMonitoring operation, you must make sure that the version of Enterprise Distributed Application Service (EDAS) SDK for Java or Python is 3.15.2 or later.
-          *
-          * @param request SwitchAdvancedMonitoringRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SwitchAdvancedMonitoringResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the advanced application monitoring feature or configures this feature for an application that is deployed in an Elastic Compute Service (ECS) or Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To call the SwitchAdvancedMonitoring operation, you must make sure that the version of Enterprise Distributed Application Service (EDAS) SDK for Java or Python is 3.15.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchAdvancedMonitoringRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchAdvancedMonitoringResponse
+        /// </returns>
         public SwitchAdvancedMonitoringResponse SwitchAdvancedMonitoringWithOptions(SwitchAdvancedMonitoringRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13420,14 +21040,29 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<SwitchAdvancedMonitoringResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * To call the SwitchAdvancedMonitoring operation, you must make sure that the version of Enterprise Distributed Application Service (EDAS) SDK for Java or Python is 3.15.2 or later.
-          *
-          * @param request SwitchAdvancedMonitoringRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SwitchAdvancedMonitoringResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the advanced application monitoring feature or configures this feature for an application that is deployed in an Elastic Compute Service (ECS) or Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To call the SwitchAdvancedMonitoring operation, you must make sure that the version of Enterprise Distributed Application Service (EDAS) SDK for Java or Python is 3.15.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchAdvancedMonitoringRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchAdvancedMonitoringResponse
+        /// </returns>
         public async Task<SwitchAdvancedMonitoringResponse> SwitchAdvancedMonitoringWithOptionsAsync(SwitchAdvancedMonitoringRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13460,12 +21095,23 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<SwitchAdvancedMonitoringResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * To call the SwitchAdvancedMonitoring operation, you must make sure that the version of Enterprise Distributed Application Service (EDAS) SDK for Java or Python is 3.15.2 or later.
-          *
-          * @param request SwitchAdvancedMonitoringRequest
-          * @return SwitchAdvancedMonitoringResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the advanced application monitoring feature or configures this feature for an application that is deployed in an Elastic Compute Service (ECS) or Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To call the SwitchAdvancedMonitoring operation, you must make sure that the version of Enterprise Distributed Application Service (EDAS) SDK for Java or Python is 3.15.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchAdvancedMonitoringRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchAdvancedMonitoringResponse
+        /// </returns>
         public SwitchAdvancedMonitoringResponse SwitchAdvancedMonitoring(SwitchAdvancedMonitoringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13473,12 +21119,23 @@ namespace AlibabaCloud.SDK.Edas20170801
             return SwitchAdvancedMonitoringWithOptions(request, headers, runtime);
         }
 
-        /**
-          * To call the SwitchAdvancedMonitoring operation, you must make sure that the version of Enterprise Distributed Application Service (EDAS) SDK for Java or Python is 3.15.2 or later.
-          *
-          * @param request SwitchAdvancedMonitoringRequest
-          * @return SwitchAdvancedMonitoringResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of the advanced application monitoring feature or configures this feature for an application that is deployed in an Elastic Compute Service (ECS) or Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To call the SwitchAdvancedMonitoring operation, you must make sure that the version of Enterprise Distributed Application Service (EDAS) SDK for Java or Python is 3.15.2 or later.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchAdvancedMonitoringRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchAdvancedMonitoringResponse
+        /// </returns>
         public async Task<SwitchAdvancedMonitoringResponse> SwitchAdvancedMonitoringAsync(SwitchAdvancedMonitoringRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13486,14 +21143,29 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await SwitchAdvancedMonitoringWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * If you call this operation to synchronize ECS resource information, all instance data is synchronized from ECS. If you have more than 100 ECS instances, we recommend that you do not frequently call this operation.
-          *
-          * @param request SynchronizeResourceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SynchronizeResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes the basic Alibaba Cloud resources that belong to your account to Enterprise Distributed Application Service (EDAS). This operation is applicable to Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you call this operation to synchronize ECS resource information, all instance data is synchronized from ECS. If you have more than 100 ECS instances, we recommend that you do not frequently call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SynchronizeResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SynchronizeResourceResponse
+        /// </returns>
         public SynchronizeResourceResponse SynchronizeResourceWithOptions(SynchronizeResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13526,14 +21198,29 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<SynchronizeResourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * If you call this operation to synchronize ECS resource information, all instance data is synchronized from ECS. If you have more than 100 ECS instances, we recommend that you do not frequently call this operation.
-          *
-          * @param request SynchronizeResourceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return SynchronizeResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes the basic Alibaba Cloud resources that belong to your account to Enterprise Distributed Application Service (EDAS). This operation is applicable to Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you call this operation to synchronize ECS resource information, all instance data is synchronized from ECS. If you have more than 100 ECS instances, we recommend that you do not frequently call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SynchronizeResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SynchronizeResourceResponse
+        /// </returns>
         public async Task<SynchronizeResourceResponse> SynchronizeResourceWithOptionsAsync(SynchronizeResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13566,12 +21253,23 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<SynchronizeResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * If you call this operation to synchronize ECS resource information, all instance data is synchronized from ECS. If you have more than 100 ECS instances, we recommend that you do not frequently call this operation.
-          *
-          * @param request SynchronizeResourceRequest
-          * @return SynchronizeResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes the basic Alibaba Cloud resources that belong to your account to Enterprise Distributed Application Service (EDAS). This operation is applicable to Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you call this operation to synchronize ECS resource information, all instance data is synchronized from ECS. If you have more than 100 ECS instances, we recommend that you do not frequently call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SynchronizeResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SynchronizeResourceResponse
+        /// </returns>
         public SynchronizeResourceResponse SynchronizeResource(SynchronizeResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13579,12 +21277,23 @@ namespace AlibabaCloud.SDK.Edas20170801
             return SynchronizeResourceWithOptions(request, headers, runtime);
         }
 
-        /**
-          * If you call this operation to synchronize ECS resource information, all instance data is synchronized from ECS. If you have more than 100 ECS instances, we recommend that you do not frequently call this operation.
-          *
-          * @param request SynchronizeResourceRequest
-          * @return SynchronizeResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes the basic Alibaba Cloud resources that belong to your account to Enterprise Distributed Application Service (EDAS). This operation is applicable to Elastic Compute Service (ECS) clusters.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you call this operation to synchronize ECS resource information, all instance data is synchronized from ECS. If you have more than 100 ECS instances, we recommend that you do not frequently call this operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SynchronizeResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SynchronizeResourceResponse
+        /// </returns>
         public async Task<SynchronizeResourceResponse> SynchronizeResourceAsync(SynchronizeResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13592,6 +21301,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await SynchronizeResourceWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates tags and adds the tags to resources at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13632,6 +21359,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates tags and adds the tags to resources at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13672,6 +21417,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates tags and adds the tags to resources at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13679,6 +21436,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TagResourcesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates tags and adds the tags to resources at a time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13686,15 +21455,30 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await TagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * ## Limits
-          * When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.
-          *
-          * @param request TransformClusterMemberRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TransformClusterMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports or migrates one or more Elastic Compute Service (ECS) instances to a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Limits</h2>
+        /// <para>When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransformClusterMemberRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformClusterMemberResponse
+        /// </returns>
         public TransformClusterMemberResponse TransformClusterMemberWithOptions(TransformClusterMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13731,15 +21515,30 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<TransformClusterMemberResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * ## Limits
-          * When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.
-          *
-          * @param request TransformClusterMemberRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return TransformClusterMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports or migrates one or more Elastic Compute Service (ECS) instances to a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Limits</h2>
+        /// <para>When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransformClusterMemberRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformClusterMemberResponse
+        /// </returns>
         public async Task<TransformClusterMemberResponse> TransformClusterMemberWithOptionsAsync(TransformClusterMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13776,13 +21575,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<TransformClusterMemberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * ## Limits
-          * When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.
-          *
-          * @param request TransformClusterMemberRequest
-          * @return TransformClusterMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports or migrates one or more Elastic Compute Service (ECS) instances to a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Limits</h2>
+        /// <para>When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransformClusterMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformClusterMemberResponse
+        /// </returns>
         public TransformClusterMemberResponse TransformClusterMember(TransformClusterMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13790,13 +21600,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TransformClusterMemberWithOptions(request, headers, runtime);
         }
 
-        /**
-          * ## Limits
-          * When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.
-          *
-          * @param request TransformClusterMemberRequest
-          * @return TransformClusterMemberResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports or migrates one or more Elastic Compute Service (ECS) instances to a cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Limits</h2>
+        /// <para>When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TransformClusterMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TransformClusterMemberResponse
+        /// </returns>
         public async Task<TransformClusterMemberResponse> TransformClusterMemberAsync(TransformClusterMemberRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13804,6 +21625,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await TransformClusterMemberWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a Server Load Balancer (SLB) instance from an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindK8sSlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindK8sSlbResponse
+        /// </returns>
         public UnbindK8sSlbResponse UnbindK8sSlbWithOptions(UnbindK8sSlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13844,6 +21683,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UnbindK8sSlbResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a Server Load Balancer (SLB) instance from an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindK8sSlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindK8sSlbResponse
+        /// </returns>
         public async Task<UnbindK8sSlbResponse> UnbindK8sSlbWithOptionsAsync(UnbindK8sSlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13884,6 +21741,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UnbindK8sSlbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a Server Load Balancer (SLB) instance from an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindK8sSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindK8sSlbResponse
+        /// </returns>
         public UnbindK8sSlbResponse UnbindK8sSlb(UnbindK8sSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13891,6 +21760,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UnbindK8sSlbWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a Server Load Balancer (SLB) instance from an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindK8sSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindK8sSlbResponse
+        /// </returns>
         public async Task<UnbindK8sSlbResponse> UnbindK8sSlbAsync(UnbindK8sSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13898,6 +21779,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UnbindK8sSlbWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a Server Load Balancer (SLB) instance from an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSlbResponse
+        /// </returns>
         public UnbindSlbResponse UnbindSlbWithOptions(UnbindSlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13938,6 +21837,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UnbindSlbResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a Server Load Balancer (SLB) instance from an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSlbResponse
+        /// </returns>
         public async Task<UnbindSlbResponse> UnbindSlbWithOptionsAsync(UnbindSlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -13978,6 +21895,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UnbindSlbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a Server Load Balancer (SLB) instance from an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSlbResponse
+        /// </returns>
         public UnbindSlbResponse UnbindSlb(UnbindSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13985,6 +21914,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UnbindSlbWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a Server Load Balancer (SLB) instance from an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSlbResponse
+        /// </returns>
         public async Task<UnbindSlbResponse> UnbindSlbAsync(UnbindSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13992,6 +21933,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UnbindSlbWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more tags from one or more resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14036,6 +21995,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more tags from one or more resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14080,6 +22057,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more tags from one or more resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14087,6 +22076,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UntagResourcesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes one or more tags from one or more resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14094,6 +22095,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UntagResourcesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about an account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAccountInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAccountInfoResponse
+        /// </returns>
         public UpdateAccountInfoResponse UpdateAccountInfoWithOptions(UpdateAccountInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14130,6 +22149,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateAccountInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about an account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAccountInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAccountInfoResponse
+        /// </returns>
         public async Task<UpdateAccountInfoResponse> UpdateAccountInfoWithOptionsAsync(UpdateAccountInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14166,6 +22203,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateAccountInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about an account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAccountInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAccountInfoResponse
+        /// </returns>
         public UpdateAccountInfoResponse UpdateAccountInfo(UpdateAccountInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14173,6 +22222,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateAccountInfoWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information about an account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAccountInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAccountInfoResponse
+        /// </returns>
         public async Task<UpdateAccountInfoResponse> UpdateAccountInfoAsync(UpdateAccountInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14180,6 +22241,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateAccountInfoWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name, description, and owner of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationBaseInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationBaseInfoResponse
+        /// </returns>
         public UpdateApplicationBaseInfoResponse UpdateApplicationBaseInfoWithOptions(UpdateApplicationBaseInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14220,6 +22299,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateApplicationBaseInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name, description, and owner of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationBaseInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationBaseInfoResponse
+        /// </returns>
         public async Task<UpdateApplicationBaseInfoResponse> UpdateApplicationBaseInfoWithOptionsAsync(UpdateApplicationBaseInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14260,6 +22357,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateApplicationBaseInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name, description, and owner of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationBaseInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationBaseInfoResponse
+        /// </returns>
         public UpdateApplicationBaseInfoResponse UpdateApplicationBaseInfo(UpdateApplicationBaseInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14267,6 +22376,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateApplicationBaseInfoWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name, description, and owner of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationBaseInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationBaseInfoResponse
+        /// </returns>
         public async Task<UpdateApplicationBaseInfoResponse> UpdateApplicationBaseInfoAsync(UpdateApplicationBaseInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14274,6 +22395,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateApplicationBaseInfoWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationScalingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationScalingRuleResponse
+        /// </returns>
         public UpdateApplicationScalingRuleResponse UpdateApplicationScalingRuleWithOptions(UpdateApplicationScalingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14330,6 +22469,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateApplicationScalingRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationScalingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationScalingRuleResponse
+        /// </returns>
         public async Task<UpdateApplicationScalingRuleResponse> UpdateApplicationScalingRuleWithOptionsAsync(UpdateApplicationScalingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14386,6 +22543,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateApplicationScalingRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationScalingRuleResponse
+        /// </returns>
         public UpdateApplicationScalingRuleResponse UpdateApplicationScalingRule(UpdateApplicationScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14393,6 +22562,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateApplicationScalingRuleWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an auto scaling policy for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationScalingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationScalingRuleResponse
+        /// </returns>
         public async Task<UpdateApplicationScalingRuleResponse> UpdateApplicationScalingRuleAsync(UpdateApplicationScalingRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14400,6 +22581,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateApplicationScalingRuleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a configuration template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConfigTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConfigTemplateResponse
+        /// </returns>
         public UpdateConfigTemplateResponse UpdateConfigTemplateWithOptions(UpdateConfigTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14444,6 +22643,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateConfigTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a configuration template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConfigTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConfigTemplateResponse
+        /// </returns>
         public async Task<UpdateConfigTemplateResponse> UpdateConfigTemplateWithOptionsAsync(UpdateConfigTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14488,6 +22705,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateConfigTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a configuration template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConfigTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConfigTemplateResponse
+        /// </returns>
         public UpdateConfigTemplateResponse UpdateConfigTemplate(UpdateConfigTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14495,6 +22724,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateConfigTemplateWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a configuration template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateConfigTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConfigTemplateResponse
+        /// </returns>
         public async Task<UpdateConfigTemplateResponse> UpdateConfigTemplateAsync(UpdateConfigTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14502,6 +22743,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateConfigTemplateWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the Enterprise Distributed Application Service (EDAS) Container version of a High-Speed Service Framework (HSF) application. EDAS Container includes Ali-Tomcat and Pandora.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContainerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContainerResponse
+        /// </returns>
         public UpdateContainerResponse UpdateContainerWithOptions(UpdateContainerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14534,6 +22793,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateContainerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the Enterprise Distributed Application Service (EDAS) Container version of a High-Speed Service Framework (HSF) application. EDAS Container includes Ali-Tomcat and Pandora.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContainerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContainerResponse
+        /// </returns>
         public async Task<UpdateContainerResponse> UpdateContainerWithOptionsAsync(UpdateContainerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14566,6 +22843,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateContainerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the Enterprise Distributed Application Service (EDAS) Container version of a High-Speed Service Framework (HSF) application. EDAS Container includes Ali-Tomcat and Pandora.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContainerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContainerResponse
+        /// </returns>
         public UpdateContainerResponse UpdateContainer(UpdateContainerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14573,6 +22862,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateContainerWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the Enterprise Distributed Application Service (EDAS) Container version of a High-Speed Service Framework (HSF) application. EDAS Container includes Ali-Tomcat and Pandora.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContainerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContainerResponse
+        /// </returns>
         public async Task<UpdateContainerResponse> UpdateContainerAsync(UpdateContainerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14580,6 +22881,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateContainerWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the Tomcat container for an application or application instance group in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContainerConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContainerConfigurationResponse
+        /// </returns>
         public UpdateContainerConfigurationResponse UpdateContainerConfigurationWithOptions(UpdateContainerConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14632,6 +22951,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateContainerConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the Tomcat container for an application or application instance group in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContainerConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContainerConfigurationResponse
+        /// </returns>
         public async Task<UpdateContainerConfigurationResponse> UpdateContainerConfigurationWithOptionsAsync(UpdateContainerConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14684,6 +23021,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateContainerConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the Tomcat container for an application or application instance group in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContainerConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContainerConfigurationResponse
+        /// </returns>
         public UpdateContainerConfigurationResponse UpdateContainerConfiguration(UpdateContainerConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14691,6 +23040,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateContainerConfigurationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the Tomcat container for an application or application instance group in an Elastic Compute Service (ECS) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContainerConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContainerConfigurationResponse
+        /// </returns>
         public async Task<UpdateContainerConfigurationResponse> UpdateContainerConfigurationAsync(UpdateContainerConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14698,6 +23059,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateContainerConfigurationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the health check URL for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHealthCheckUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHealthCheckUrlResponse
+        /// </returns>
         public UpdateHealthCheckUrlResponse UpdateHealthCheckUrlWithOptions(UpdateHealthCheckUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14730,6 +23109,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateHealthCheckUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the health check URL for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHealthCheckUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHealthCheckUrlResponse
+        /// </returns>
         public async Task<UpdateHealthCheckUrlResponse> UpdateHealthCheckUrlWithOptionsAsync(UpdateHealthCheckUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14762,6 +23159,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateHealthCheckUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the health check URL for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHealthCheckUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHealthCheckUrlResponse
+        /// </returns>
         public UpdateHealthCheckUrlResponse UpdateHealthCheckUrl(UpdateHealthCheckUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14769,6 +23178,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateHealthCheckUrlWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the health check URL for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHealthCheckUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHealthCheckUrlResponse
+        /// </returns>
         public async Task<UpdateHealthCheckUrlResponse> UpdateHealthCheckUrlAsync(UpdateHealthCheckUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14776,6 +23197,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateHealthCheckUrlWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Mounts a script to an application or application instance group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHookConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHookConfigurationResponse
+        /// </returns>
         public UpdateHookConfigurationResponse UpdateHookConfigurationWithOptions(UpdateHookConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14812,6 +23251,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateHookConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Mounts a script to an application or application instance group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHookConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHookConfigurationResponse
+        /// </returns>
         public async Task<UpdateHookConfigurationResponse> UpdateHookConfigurationWithOptionsAsync(UpdateHookConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14848,6 +23305,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateHookConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Mounts a script to an application or application instance group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHookConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHookConfigurationResponse
+        /// </returns>
         public UpdateHookConfigurationResponse UpdateHookConfiguration(UpdateHookConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14855,6 +23324,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateHookConfigurationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Mounts a script to an application or application instance group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHookConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHookConfigurationResponse
+        /// </returns>
         public async Task<UpdateHookConfigurationResponse> UpdateHookConfigurationAsync(UpdateHookConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14862,6 +23343,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateHookConfigurationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the Java virtual machine (JVM) parameters for an application or an instance group where the application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJvmConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJvmConfigurationResponse
+        /// </returns>
         public UpdateJvmConfigurationResponse UpdateJvmConfigurationWithOptions(UpdateJvmConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14910,6 +23409,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateJvmConfigurationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the Java virtual machine (JVM) parameters for an application or an instance group where the application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJvmConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJvmConfigurationResponse
+        /// </returns>
         public async Task<UpdateJvmConfigurationResponse> UpdateJvmConfigurationWithOptionsAsync(UpdateJvmConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -14958,6 +23475,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateJvmConfigurationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the Java virtual machine (JVM) parameters for an application or an instance group where the application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJvmConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJvmConfigurationResponse
+        /// </returns>
         public UpdateJvmConfigurationResponse UpdateJvmConfiguration(UpdateJvmConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14965,6 +23494,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateJvmConfigurationWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the Java virtual machine (JVM) parameters for an application or an instance group where the application is deployed.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJvmConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJvmConfigurationResponse
+        /// </returns>
         public async Task<UpdateJvmConfigurationResponse> UpdateJvmConfigurationAsync(UpdateJvmConfigurationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -14972,6 +23513,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateJvmConfigurationWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies basic information about an application that is deployed in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sApplicationBaseInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sApplicationBaseInfoResponse
+        /// </returns>
         public UpdateK8sApplicationBaseInfoResponse UpdateK8sApplicationBaseInfoWithOptions(UpdateK8sApplicationBaseInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15016,6 +23575,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sApplicationBaseInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies basic information about an application that is deployed in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sApplicationBaseInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sApplicationBaseInfoResponse
+        /// </returns>
         public async Task<UpdateK8sApplicationBaseInfoResponse> UpdateK8sApplicationBaseInfoWithOptionsAsync(UpdateK8sApplicationBaseInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15060,6 +23637,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sApplicationBaseInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies basic information about an application that is deployed in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sApplicationBaseInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sApplicationBaseInfoResponse
+        /// </returns>
         public UpdateK8sApplicationBaseInfoResponse UpdateK8sApplicationBaseInfo(UpdateK8sApplicationBaseInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15067,6 +23656,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateK8sApplicationBaseInfoWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies basic information about an application that is deployed in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sApplicationBaseInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sApplicationBaseInfoResponse
+        /// </returns>
         public async Task<UpdateK8sApplicationBaseInfoResponse> UpdateK8sApplicationBaseInfoAsync(UpdateK8sApplicationBaseInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15074,6 +23675,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateK8sApplicationBaseInfoWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of an application in a Container Service for Kubernetes (ACK) or Serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sApplicationConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sApplicationConfigResponse
+        /// </returns>
         public UpdateK8sApplicationConfigResponse UpdateK8sApplicationConfigWithOptions(UpdateK8sApplicationConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15142,6 +23761,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sApplicationConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of an application in a Container Service for Kubernetes (ACK) or Serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sApplicationConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sApplicationConfigResponse
+        /// </returns>
         public async Task<UpdateK8sApplicationConfigResponse> UpdateK8sApplicationConfigWithOptionsAsync(UpdateK8sApplicationConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15210,6 +23847,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sApplicationConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of an application in a Container Service for Kubernetes (ACK) or Serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sApplicationConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sApplicationConfigResponse
+        /// </returns>
         public UpdateK8sApplicationConfigResponse UpdateK8sApplicationConfig(UpdateK8sApplicationConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15217,6 +23866,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateK8sApplicationConfigWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of an application in a Container Service for Kubernetes (ACK) or Serverless Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sApplicationConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sApplicationConfigResponse
+        /// </returns>
         public async Task<UpdateK8sApplicationConfigResponse> UpdateK8sApplicationConfigAsync(UpdateK8sApplicationConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15224,6 +23885,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateK8sApplicationConfigWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a Kubernetes ConfigMap.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sConfigMapRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sConfigMapResponse
+        /// </returns>
         public UpdateK8sConfigMapResponse UpdateK8sConfigMapWithOptions(UpdateK8sConfigMapRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15264,6 +23943,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sConfigMapResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a Kubernetes ConfigMap.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sConfigMapRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sConfigMapResponse
+        /// </returns>
         public async Task<UpdateK8sConfigMapResponse> UpdateK8sConfigMapWithOptionsAsync(UpdateK8sConfigMapRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15304,6 +24001,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sConfigMapResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a Kubernetes ConfigMap.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sConfigMapRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sConfigMapResponse
+        /// </returns>
         public UpdateK8sConfigMapResponse UpdateK8sConfigMap(UpdateK8sConfigMapRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15311,6 +24020,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateK8sConfigMapWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a Kubernetes ConfigMap.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sConfigMapRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sConfigMapResponse
+        /// </returns>
         public async Task<UpdateK8sConfigMapResponse> UpdateK8sConfigMapAsync(UpdateK8sConfigMapRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15318,6 +24039,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateK8sConfigMapWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an ingress.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sIngressRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sIngressRuleResponse
+        /// </returns>
         public UpdateK8sIngressRuleResponse UpdateK8sIngressRuleWithOptions(UpdateK8sIngressRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15366,6 +24105,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sIngressRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an ingress.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sIngressRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sIngressRuleResponse
+        /// </returns>
         public async Task<UpdateK8sIngressRuleResponse> UpdateK8sIngressRuleWithOptionsAsync(UpdateK8sIngressRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15414,6 +24171,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sIngressRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an ingress.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sIngressRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sIngressRuleResponse
+        /// </returns>
         public UpdateK8sIngressRuleResponse UpdateK8sIngressRule(UpdateK8sIngressRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15421,6 +24190,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateK8sIngressRuleWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an ingress.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sIngressRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sIngressRuleResponse
+        /// </returns>
         public async Task<UpdateK8sIngressRuleResponse> UpdateK8sIngressRuleAsync(UpdateK8sIngressRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15428,14 +24209,31 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateK8sIngressRuleWithOptionsAsync(request, headers, runtime);
         }
 
-        /**
-          * > You can update only Deployments.
-          *
-          * @param request UpdateK8sResourceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateK8sResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a specified resource in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can update only Deployments.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sResourceResponse
+        /// </returns>
         public UpdateK8sResourceResponse UpdateK8sResourceWithOptions(UpdateK8sResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15472,14 +24270,31 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sResourceResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * > You can update only Deployments.
-          *
-          * @param request UpdateK8sResourceRequest
-          * @param headers map
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return UpdateK8sResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a specified resource in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can update only Deployments.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sResourceResponse
+        /// </returns>
         public async Task<UpdateK8sResourceResponse> UpdateK8sResourceWithOptionsAsync(UpdateK8sResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15516,12 +24331,25 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * > You can update only Deployments.
-          *
-          * @param request UpdateK8sResourceRequest
-          * @return UpdateK8sResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a specified resource in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can update only Deployments.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sResourceResponse
+        /// </returns>
         public UpdateK8sResourceResponse UpdateK8sResource(UpdateK8sResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15529,12 +24357,25 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateK8sResourceWithOptions(request, headers, runtime);
         }
 
-        /**
-          * > You can update only Deployments.
-          *
-          * @param request UpdateK8sResourceRequest
-          * @return UpdateK8sResourceResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a specified resource in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can update only Deployments.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sResourceResponse
+        /// </returns>
         public async Task<UpdateK8sResourceResponse> UpdateK8sResourceAsync(UpdateK8sResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15542,6 +24383,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateK8sResourceWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a Kubernetes Secret.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sSecretRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sSecretResponse
+        /// </returns>
         public UpdateK8sSecretResponse UpdateK8sSecretWithOptions(UpdateK8sSecretRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15598,6 +24457,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sSecretResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a Kubernetes Secret.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sSecretRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sSecretResponse
+        /// </returns>
         public async Task<UpdateK8sSecretResponse> UpdateK8sSecretWithOptionsAsync(UpdateK8sSecretRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15654,6 +24531,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sSecretResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a Kubernetes Secret.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sSecretRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sSecretResponse
+        /// </returns>
         public UpdateK8sSecretResponse UpdateK8sSecret(UpdateK8sSecretRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15661,6 +24550,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateK8sSecretWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a Kubernetes Secret.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sSecretRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sSecretResponse
+        /// </returns>
         public async Task<UpdateK8sSecretResponse> UpdateK8sSecretAsync(UpdateK8sSecretRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15668,6 +24569,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateK8sSecretWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an application service in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sServiceResponse
+        /// </returns>
         public UpdateK8sServiceResponse UpdateK8sServiceWithOptions(UpdateK8sServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15712,6 +24631,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an application service in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sServiceResponse
+        /// </returns>
         public async Task<UpdateK8sServiceResponse> UpdateK8sServiceWithOptionsAsync(UpdateK8sServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15756,6 +24693,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an application service in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sServiceResponse
+        /// </returns>
         public UpdateK8sServiceResponse UpdateK8sService(UpdateK8sServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15763,6 +24712,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateK8sServiceWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an application service in a Kubernetes cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sServiceResponse
+        /// </returns>
         public async Task<UpdateK8sServiceResponse> UpdateK8sServiceAsync(UpdateK8sServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15770,6 +24731,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateK8sServiceWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the Server Load Balancer (SLB) instance bound to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sSlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sSlbResponse
+        /// </returns>
         public UpdateK8sSlbResponse UpdateK8sSlbWithOptions(UpdateK8sSlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15838,6 +24817,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sSlbResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the Server Load Balancer (SLB) instance bound to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sSlbRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sSlbResponse
+        /// </returns>
         public async Task<UpdateK8sSlbResponse> UpdateK8sSlbWithOptionsAsync(UpdateK8sSlbRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15906,6 +24903,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateK8sSlbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the Server Load Balancer (SLB) instance bound to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sSlbResponse
+        /// </returns>
         public UpdateK8sSlbResponse UpdateK8sSlb(UpdateK8sSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15913,6 +24922,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateK8sSlbWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the Server Load Balancer (SLB) instance bound to an application that is deployed in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateK8sSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateK8sSlbResponse
+        /// </returns>
         public async Task<UpdateK8sSlbResponse> UpdateK8sSlbAsync(UpdateK8sSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15920,6 +24941,186 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateK8sSlbWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新本地设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLocalitySettingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLocalitySettingResponse
+        /// </returns>
+        public UpdateLocalitySettingResponse UpdateLocalitySettingWithOptions(UpdateLocalitySettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            {
+                query["Threshold"] = request.Threshold;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLocalitySetting",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/pop/sp/applications/locality/setting",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateLocalitySettingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新本地设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLocalitySettingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLocalitySettingResponse
+        /// </returns>
+        public async Task<UpdateLocalitySettingResponse> UpdateLocalitySettingWithOptionsAsync(UpdateLocalitySettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            {
+                query["Threshold"] = request.Threshold;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLocalitySetting",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/pop/sp/applications/locality/setting",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateLocalitySettingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新本地设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLocalitySettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLocalitySettingResponse
+        /// </returns>
+        public UpdateLocalitySettingResponse UpdateLocalitySetting(UpdateLocalitySettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateLocalitySettingWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新本地设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLocalitySettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLocalitySettingResponse
+        /// </returns>
+        public async Task<UpdateLocalitySettingResponse> UpdateLocalitySettingAsync(UpdateLocalitySettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateLocalitySettingWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRoleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRoleResponse
+        /// </returns>
         public UpdateRoleResponse UpdateRoleWithOptions(UpdateRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15952,6 +25153,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateRoleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRoleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRoleResponse
+        /// </returns>
         public async Task<UpdateRoleResponse> UpdateRoleWithOptionsAsync(UpdateRoleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -15984,6 +25203,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRoleResponse
+        /// </returns>
         public UpdateRoleResponse UpdateRole(UpdateRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15991,6 +25222,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateRoleWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRoleResponse
+        /// </returns>
         public async Task<UpdateRoleResponse> UpdateRoleAsync(UpdateRoleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -15998,6 +25241,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateRoleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a Logstore for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSlsLogStoreRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSlsLogStoreResponse
+        /// </returns>
         public UpdateSlsLogStoreResponse UpdateSlsLogStoreWithOptions(UpdateSlsLogStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16030,6 +25291,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateSlsLogStoreResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a Logstore for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSlsLogStoreRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSlsLogStoreResponse
+        /// </returns>
         public async Task<UpdateSlsLogStoreResponse> UpdateSlsLogStoreWithOptionsAsync(UpdateSlsLogStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16062,6 +25341,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateSlsLogStoreResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a Logstore for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSlsLogStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSlsLogStoreResponse
+        /// </returns>
         public UpdateSlsLogStoreResponse UpdateSlsLogStore(UpdateSlsLogStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16069,6 +25360,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateSlsLogStoreWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures a Logstore for an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSlsLogStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSlsLogStoreResponse
+        /// </returns>
         public async Task<UpdateSlsLogStoreResponse> UpdateSlsLogStoreAsync(UpdateSlsLogStoreRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16076,6 +25379,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateSlsLogStoreWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新泳道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimmingLaneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimmingLaneResponse
+        /// </returns>
         public UpdateSwimmingLaneResponse UpdateSwimmingLaneWithOptions(UpdateSwimmingLaneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16120,6 +25441,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateSwimmingLaneResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新泳道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimmingLaneRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimmingLaneResponse
+        /// </returns>
         public async Task<UpdateSwimmingLaneResponse> UpdateSwimmingLaneWithOptionsAsync(UpdateSwimmingLaneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16164,6 +25503,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateSwimmingLaneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新泳道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimmingLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimmingLaneResponse
+        /// </returns>
         public UpdateSwimmingLaneResponse UpdateSwimmingLane(UpdateSwimmingLaneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16171,6 +25522,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateSwimmingLaneWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新泳道</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimmingLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimmingLaneResponse
+        /// </returns>
         public async Task<UpdateSwimmingLaneResponse> UpdateSwimmingLaneAsync(UpdateSwimmingLaneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16178,6 +25541,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return await UpdateSwimmingLaneWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimmingLaneGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimmingLaneGroupResponse
+        /// </returns>
         public UpdateSwimmingLaneGroupResponse UpdateSwimmingLaneGroupWithOptions(UpdateSwimmingLaneGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16218,6 +25599,24 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateSwimmingLaneGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimmingLaneGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimmingLaneGroupResponse
+        /// </returns>
         public async Task<UpdateSwimmingLaneGroupResponse> UpdateSwimmingLaneGroupWithOptionsAsync(UpdateSwimmingLaneGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16258,6 +25657,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return TeaModel.ToObject<UpdateSwimmingLaneGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimmingLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimmingLaneGroupResponse
+        /// </returns>
         public UpdateSwimmingLaneGroupResponse UpdateSwimmingLaneGroup(UpdateSwimmingLaneGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -16265,6 +25676,18 @@ namespace AlibabaCloud.SDK.Edas20170801
             return UpdateSwimmingLaneGroupWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimmingLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimmingLaneGroupResponse
+        /// </returns>
         public async Task<UpdateSwimmingLaneGroupResponse> UpdateSwimmingLaneGroupAsync(UpdateSwimmingLaneGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

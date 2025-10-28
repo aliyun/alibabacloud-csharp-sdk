@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class DeleteApplicationResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the change process.
+        /// <para>The ID of the change process.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0b8e3c0b-5818-430*************</para>
         /// </summary>
         [NameInMap("ChangeOrderId")]
         [Validation(Required=false)]
         public string ChangeOrderId { get; set; }
 
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The additional information that is returned.
+        /// <para>The additional information that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>34DFE9FDV****************</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

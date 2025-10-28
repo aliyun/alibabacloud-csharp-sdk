@@ -10,42 +10,54 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
 {
     public class GetServiceConsumersPageResponseBody : TeaModel {
         /// <summary>
-        /// The HTTP status code that is returned.
+        /// <para>The HTTP status code that is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
         /// <summary>
-        /// The data that is returned.
+        /// <para>The data that is returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetServiceConsumersPageResponseBodyData Data { get; set; }
         public class GetServiceConsumersPageResponseBodyData : TeaModel {
             /// <summary>
-            /// The data array that is returned.
+            /// <para>The data array that is returned.</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public List<GetServiceConsumersPageResponseBodyDataContent> Content { get; set; }
             public class GetServiceConsumersPageResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// The name of the service consumer.
+                /// <para>The name of the service consumer.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>k8s-lq-cartservice</para>
                 /// </summary>
                 [NameInMap("EdasAppName")]
                 [Validation(Required=false)]
                 public string EdasAppName { get; set; }
 
                 /// <summary>
-                /// The ID of the service consumer.
+                /// <para>The ID of the service consumer.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>efbda488-7b33-432f-a40d-<b><b>0047</b></b></para>
                 /// </summary>
                 [NameInMap("EdassAppId")]
                 [Validation(Required=false)]
                 public string EdassAppId { get; set; }
 
                 /// <summary>
-                /// The IP address of the service consumer.
+                /// <para>The IP address of the service consumer.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10.20.x.xx</para>
                 /// </summary>
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
@@ -54,21 +66,30 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
             }
 
             /// <summary>
-            /// The number of entries to return on each page.
+            /// <para>The number of entries to return on each page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }
 
             /// <summary>
-            /// The total number of returned entries.
+            /// <para>The total number of returned entries.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("TotalElements")]
             [Validation(Required=false)]
             public int? TotalElements { get; set; }
 
             /// <summary>
-            /// The total number of returned pages.
+            /// <para>The total number of returned pages.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TotalPages")]
             [Validation(Required=false)]
@@ -77,14 +98,20 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         }
 
         /// <summary>
-        /// The message that is returned for the request.
+        /// <para>The message that is returned for the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// Indicates whether the request is successful.
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
