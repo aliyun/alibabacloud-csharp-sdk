@@ -46,6 +46,46 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public ImageModerationResponseBodyDataExt Ext { get; set; }
             public class ImageModerationResponseBodyDataExt : TeaModel {
+                [NameInMap("AigcData")]
+                [Validation(Required=false)]
+                public ImageModerationResponseBodyDataExtAigcData AigcData { get; set; }
+                public class ImageModerationResponseBodyDataExtAigcData : TeaModel {
+                    [NameInMap("AIGC")]
+                    [Validation(Required=false)]
+                    public ImageModerationResponseBodyDataExtAigcDataAIGC AIGC { get; set; }
+                    public class ImageModerationResponseBodyDataExtAigcDataAIGC : TeaModel {
+                        [NameInMap("ContentProducer")]
+                        [Validation(Required=false)]
+                        public string ContentProducer { get; set; }
+
+                        [NameInMap("ContentPropagator")]
+                        [Validation(Required=false)]
+                        public string ContentPropagator { get; set; }
+
+                        [NameInMap("Label")]
+                        [Validation(Required=false)]
+                        public string Label { get; set; }
+
+                        [NameInMap("ProduceID")]
+                        [Validation(Required=false)]
+                        public string ProduceID { get; set; }
+
+                        [NameInMap("PropagateID")]
+                        [Validation(Required=false)]
+                        public string PropagateID { get; set; }
+
+                        [NameInMap("ReservedCode1")]
+                        [Validation(Required=false)]
+                        public string ReservedCode1 { get; set; }
+
+                        [NameInMap("ReservedCode2")]
+                        [Validation(Required=false)]
+                        public string ReservedCode2 { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>If a custom image library is hit, information about the hit custom image library is returned.</para>
                 /// </summary>

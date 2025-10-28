@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         /// <summary>
         /// <b>Example:</b>
         /// <para>{
-        ///         &quot;imageUrl&quot;: &quot;<a href="https://img.alicdn.com/tfs/TB1U4r9AeH2gK0jSZJnXXaT1FXa-2880-480.png">https://img.alicdn.com/tfs/TB1U4r9AeH2gK0jSZJnXXaT1FXa-2880-480.png</a>&quot;,
+        ///         &quot;imageUrl&quot;: &quot;<a href="https://img.alicdn.com/xxx.jpg">https://img.alicdn.com/xxx.jpg</a>&quot;,
         ///         &quot;dataId&quot;: &quot;img123****&quot;
         ///     }</para>
         /// </summary>
