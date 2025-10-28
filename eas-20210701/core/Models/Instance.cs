@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        [NameInMap("IsLatest")]
+        [Validation(Required=false)]
+        public bool? IsLatest { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>false</para>
