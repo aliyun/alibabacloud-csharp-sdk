@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to display workspace details. Valid values:</para>
         /// <list type="bullet">

@@ -13450,6 +13450,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 query["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Verbose))
             {
                 query["Verbose"] = request.Verbose;
@@ -13544,6 +13548,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Verbose))
             {
