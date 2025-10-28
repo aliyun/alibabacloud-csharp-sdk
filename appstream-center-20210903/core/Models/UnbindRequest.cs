@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>p-xxxxx</para>
+        /// </summary>
+        [NameInMap("AppInstancePersistentId")]
+        [Validation(Required=false)]
+        public string AppInstancePersistentId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>eac19bef-1e45-4190-a03a-4ea74b699ca7</para>
         /// </summary>
         [NameInMap("ClientId")]

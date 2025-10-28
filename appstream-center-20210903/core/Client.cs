@@ -1964,6 +1964,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
             {
                 body["AppInstanceId"] = request.AppInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstancePersistentId))
+            {
+                body["AppInstancePersistentId"] = request.AppInstancePersistentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 body["ClientId"] = request.ClientId;
@@ -2053,6 +2057,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceId))
             {
                 body["AppInstanceId"] = request.AppInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstancePersistentId))
+            {
+                body["AppInstancePersistentId"] = request.AppInstancePersistentId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
