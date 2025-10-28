@@ -144,7 +144,15 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                         [Validation(Required=false)]
                         public string InsRole { get; set; }
 
+                        [NameInMap("TotalCount")]
+                        [Validation(Required=false)]
+                        public long? TotalCount { get; set; }
+
                     }
+
+                    [NameInMap("InsRole")]
+                    [Validation(Required=false)]
+                    public string InsRole { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -153,6 +161,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     [NameInMap("NodeId")]
                     [Validation(Required=false)]
                     public string NodeId { get; set; }
+
+                    [NameInMap("TotalCount")]
+                    [Validation(Required=false)]
+                    public long? TotalCount { get; set; }
 
                 }
 
@@ -275,6 +287,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [NameInMap("Total")]
                 [Validation(Required=false)]
                 public long? Total { get; set; }
+
+                [NameInMap("TotalCount")]
+                [Validation(Required=false)]
+                public long? TotalCount { get; set; }
 
                 [NameInMap("Ts")]
                 [Validation(Required=false)]
