@@ -1036,6 +1036,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
             {
                 query["Tag"] = request.Tag;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetSlsRegionId))
+            {
+                query["TargetSlsRegionId"] = request.TargetSlsRegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
             {
                 query["Version"] = request.Version;
@@ -1131,6 +1135,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetSlsRegionId))
+            {
+                query["TargetSlsRegionId"] = request.TargetSlsRegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
             {

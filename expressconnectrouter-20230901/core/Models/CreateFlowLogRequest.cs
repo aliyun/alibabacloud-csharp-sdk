@@ -190,6 +190,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
 
         }
 
+        [NameInMap("TargetSlsRegionId")]
+        [Validation(Required=false)]
+        public string TargetSlsRegionId { get; set; }
+
         [NameInMap("Version")]
         [Validation(Required=false)]
         public string Version { get; set; }
