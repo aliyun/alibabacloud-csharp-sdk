@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? CheckWarningId { get; set; }
 
+        [NameInMap("ContainerName")]
+        [Validation(Required=false)]
+        public string ContainerName { get; set; }
+
         /// <summary>
         /// <para>The language of the content within the request and response. Valid values:</para>
         /// <list type="bullet">

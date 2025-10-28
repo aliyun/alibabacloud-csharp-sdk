@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteCheckPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>Array of policies to delete</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PolicyIds")]
@@ -17,6 +18,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<long?> PolicyIds { get; set; }
 
         /// <summary>
+        /// <para>Policy type for custom check rule:</para>
+        /// <list type="bullet">
+        /// <item><description><b>STANDARD</b>: Standard-level policy</description></item>
+        /// <item><description><b>REQUIREMENT</b>: Requirement-level policy</description></item>
+        /// <item><description><b>SECTION</b>: Section-level policy</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
