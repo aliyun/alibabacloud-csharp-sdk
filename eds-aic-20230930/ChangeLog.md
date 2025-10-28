@@ -1,3 +1,6 @@
+2025-10-28 Version: 4.13.2
+- Generated csharp 2023-09-30 for eds-aic.
+
 2025-10-27 Version: 4.13.1
 - Update API DescribeImageList: add request parameters SystemType.
 
