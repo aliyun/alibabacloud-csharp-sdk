@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
     public class LogConfiguration : TeaModel {
         /// <summary>
         /// <para>SLS日志库名称</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>agent-runtime-logs</para>
         /// </summary>
         [NameInMap("logstore")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <para>SLS项目名称</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>agent-runtime-logs</para>
         /// </summary>
         [NameInMap("project")]
         [Validation(Required=false)]

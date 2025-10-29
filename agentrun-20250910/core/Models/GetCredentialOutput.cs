@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class GetCredentialOutput : TeaModel {
+        /// <summary>
+        /// <para>凭证的配置参数，以键值对形式存储</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>api_endpoint=<a href="https://api.example.com,timeout=30">https://api.example.com,timeout=30</a></para>
+        /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public Dictionary<string, string> Config { get; set; }

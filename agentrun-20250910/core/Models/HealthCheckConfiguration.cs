@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
     public class HealthCheckConfiguration : TeaModel {
         /// <summary>
         /// <para>在将容器视为不健康之前，连续失败的健康检查次数</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("failureThreshold")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <para>用于健康检查的HTTP GET请求的URL地址</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/ready</para>
         /// </summary>
         [NameInMap("httpGetUrl")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <para>在容器启动后，首次执行健康检查前的延迟时间（秒）</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("initialDelaySeconds")]
         [Validation(Required=false)]
@@ -32,6 +41,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <para>执行健康检查的时间间隔（秒）</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("periodSeconds")]
         [Validation(Required=false)]
@@ -39,6 +51,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <para>在将容器视为健康之前，连续成功的健康检查次数</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("successThreshold")]
         [Validation(Required=false)]
@@ -46,6 +61,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <para>健康检查的超时时间（秒）</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("timeoutSeconds")]
         [Validation(Required=false)]

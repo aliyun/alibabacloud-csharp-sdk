@@ -9,16 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateAgentRuntimeEndpointInput : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>production-endpoint</para>
+        /// </summary>
         [NameInMap("agentRuntimeEndpointName")]
         [Validation(Required=false)]
         public string AgentRuntimeEndpointName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Updated endpoint configuration</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
         /// <para>智能体运行时端点的路由配置，支持多版本权重分配</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("routingConfiguration")]
         [Validation(Required=false)]
@@ -26,6 +37,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <para>智能体运行时的目标版本</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LATEST</para>
         /// </summary>
         [NameInMap("targetVersion")]
         [Validation(Required=false)]
