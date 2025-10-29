@@ -1,0 +1,32 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Polardb20170801.Models
+{
+    public class DeletePolarFsQuotaResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>pfs-2ze0i74ka607*****</para>
+        /// </summary>
+        [NameInMap("PolarFsInstanceId")]
+        [Validation(Required=false)]
+        public string PolarFsInstanceId { get; set; }
+
+        /// <summary>
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>69A85BAF-1089-4CDF-A82F-0A140F******</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}

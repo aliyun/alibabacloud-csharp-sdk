@@ -578,6 +578,142 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>新增PolarFs Quota规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddPolarFsQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddPolarFsQuotaResponse
+        /// </returns>
+        public AddPolarFsQuotaResponse AddPolarFsQuotaWithOptions(AddPolarFsQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quotas))
+            {
+                query["Quotas"] = request.Quotas;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddPolarFsQuota",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddPolarFsQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增PolarFs Quota规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddPolarFsQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddPolarFsQuotaResponse
+        /// </returns>
+        public async Task<AddPolarFsQuotaResponse> AddPolarFsQuotaWithOptionsAsync(AddPolarFsQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quotas))
+            {
+                query["Quotas"] = request.Quotas;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddPolarFsQuota",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddPolarFsQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增PolarFs Quota规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddPolarFsQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddPolarFsQuotaResponse
+        /// </returns>
+        public AddPolarFsQuotaResponse AddPolarFsQuota(AddPolarFsQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddPolarFsQuotaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增PolarFs Quota规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddPolarFsQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddPolarFsQuotaResponse
+        /// </returns>
+        public async Task<AddPolarFsQuotaResponse> AddPolarFsQuotaAsync(AddPolarFsQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddPolarFsQuotaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>添加SQL限流规则</para>
         /// </summary>
         /// 
@@ -1222,6 +1358,142 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelCronJobPolicyServerlessWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消目录的配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelPolarFsFileQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelPolarFsFileQuotaResponse
+        /// </returns>
+        public CancelPolarFsFileQuotaResponse CancelPolarFsFileQuotaWithOptions(CancelPolarFsFileQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePathIds))
+            {
+                query["FilePathIds"] = request.FilePathIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelPolarFsFileQuota",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelPolarFsFileQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消目录的配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelPolarFsFileQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelPolarFsFileQuotaResponse
+        /// </returns>
+        public async Task<CancelPolarFsFileQuotaResponse> CancelPolarFsFileQuotaWithOptionsAsync(CancelPolarFsFileQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePathIds))
+            {
+                query["FilePathIds"] = request.FilePathIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelPolarFsFileQuota",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelPolarFsFileQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消目录的配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelPolarFsFileQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelPolarFsFileQuotaResponse
+        /// </returns>
+        public CancelPolarFsFileQuotaResponse CancelPolarFsFileQuota(CancelPolarFsFileQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelPolarFsFileQuotaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消目录的配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelPolarFsFileQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelPolarFsFileQuotaResponse
+        /// </returns>
+        public async Task<CancelPolarFsFileQuotaResponse> CancelPolarFsFileQuotaAsync(CancelPolarFsFileQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelPolarFsFileQuotaWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12646,6 +12918,142 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteParameterGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PolarFs Quota规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolarFsQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsQuotaResponse
+        /// </returns>
+        public DeletePolarFsQuotaResponse DeletePolarFsQuotaWithOptions(DeletePolarFsQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quotas))
+            {
+                query["Quotas"] = request.Quotas;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePolarFsQuota",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePolarFsQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PolarFs Quota规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolarFsQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsQuotaResponse
+        /// </returns>
+        public async Task<DeletePolarFsQuotaResponse> DeletePolarFsQuotaWithOptionsAsync(DeletePolarFsQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quotas))
+            {
+                query["Quotas"] = request.Quotas;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePolarFsQuota",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePolarFsQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PolarFs Quota规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolarFsQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsQuotaResponse
+        /// </returns>
+        public DeletePolarFsQuotaResponse DeletePolarFsQuota(DeletePolarFsQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeletePolarFsQuotaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除PolarFs Quota规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolarFsQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsQuotaResponse
+        /// </returns>
+        public async Task<DeletePolarFsQuotaResponse> DeletePolarFsQuotaAsync(DeletePolarFsQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeletePolarFsQuotaWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -28294,6 +28702,278 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePendingMaintenanceActionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取PolarFS实例详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsAttributeResponse
+        /// </returns>
+        public DescribePolarFsAttributeResponse DescribePolarFsAttributeWithOptions(DescribePolarFsAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFuseMountInfo))
+            {
+                query["QueryFuseMountInfo"] = request.QueryFuseMountInfo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarFsAttribute",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarFsAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取PolarFS实例详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsAttributeResponse
+        /// </returns>
+        public async Task<DescribePolarFsAttributeResponse> DescribePolarFsAttributeWithOptionsAsync(DescribePolarFsAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFuseMountInfo))
+            {
+                query["QueryFuseMountInfo"] = request.QueryFuseMountInfo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarFsAttribute",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarFsAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取PolarFS实例详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsAttributeResponse
+        /// </returns>
+        public DescribePolarFsAttributeResponse DescribePolarFsAttribute(DescribePolarFsAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePolarFsAttributeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取PolarFS实例详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsAttributeResponse
+        /// </returns>
+        public async Task<DescribePolarFsAttributeResponse> DescribePolarFsAttributeAsync(DescribePolarFsAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePolarFsAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询配额规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsQuotaResponse
+        /// </returns>
+        public DescribePolarFsQuotaResponse DescribePolarFsQuotaWithOptions(DescribePolarFsQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarFsQuota",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarFsQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询配额规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsQuotaResponse
+        /// </returns>
+        public async Task<DescribePolarFsQuotaResponse> DescribePolarFsQuotaWithOptionsAsync(DescribePolarFsQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarFsQuota",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarFsQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询配额规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsQuotaResponse
+        /// </returns>
+        public DescribePolarFsQuotaResponse DescribePolarFsQuota(DescribePolarFsQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePolarFsQuotaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询配额规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsQuotaResponse
+        /// </returns>
+        public async Task<DescribePolarFsQuotaResponse> DescribePolarFsQuotaAsync(DescribePolarFsQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePolarFsQuotaWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -48124,6 +48804,142 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RevokeAccountPrivilegeZonalWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为目录应用配额规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolarFsFileQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolarFsFileQuotaResponse
+        /// </returns>
+        public SetPolarFsFileQuotaResponse SetPolarFsFileQuotaWithOptions(SetPolarFsFileQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePathQuotas))
+            {
+                query["FilePathQuotas"] = request.FilePathQuotas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetPolarFsFileQuota",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetPolarFsFileQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为目录应用配额规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolarFsFileQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolarFsFileQuotaResponse
+        /// </returns>
+        public async Task<SetPolarFsFileQuotaResponse> SetPolarFsFileQuotaWithOptionsAsync(SetPolarFsFileQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePathQuotas))
+            {
+                query["FilePathQuotas"] = request.FilePathQuotas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetPolarFsFileQuota",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetPolarFsFileQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为目录应用配额规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolarFsFileQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolarFsFileQuotaResponse
+        /// </returns>
+        public SetPolarFsFileQuotaResponse SetPolarFsFileQuota(SetPolarFsFileQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetPolarFsFileQuotaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为目录应用配额规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetPolarFsFileQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetPolarFsFileQuotaResponse
+        /// </returns>
+        public async Task<SetPolarFsFileQuotaResponse> SetPolarFsFileQuotaAsync(SetPolarFsFileQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetPolarFsFileQuotaWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
