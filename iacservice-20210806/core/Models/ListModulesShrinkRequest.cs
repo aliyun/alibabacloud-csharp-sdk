@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
+        [NameInMap("moduleName")]
+        [Validation(Required=false)]
+        public string ModuleName { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>

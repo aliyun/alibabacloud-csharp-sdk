@@ -133,6 +133,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string JobId { get; set; }
 
+            [NameInMap("logFile")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> LogFile { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>/</para>
@@ -140,6 +144,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [NameInMap("output")]
             [Validation(Required=false)]
             public string Output { get; set; }
+
+            [NameInMap("outputJsonPlan")]
+            [Validation(Required=false)]
+            public object OutputJsonPlan { get; set; }
 
             [NameInMap("parameters")]
             [Validation(Required=false)]

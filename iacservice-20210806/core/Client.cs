@@ -6145,6 +6145,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             {
                 query["keyword"] = request.Keyword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
+            {
+                query["moduleName"] = request.ModuleName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;
@@ -6216,6 +6220,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
+            {
+                query["moduleName"] = request.ModuleName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
