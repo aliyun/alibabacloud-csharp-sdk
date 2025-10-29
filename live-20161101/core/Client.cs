@@ -1666,6 +1666,10 @@ namespace AlibabaCloud.SDK.Live20161101
             {
                 query["BitrateWithSource"] = request.BitrateWithSource;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeInterlaced))
+            {
+                query["DeInterlaced"] = request.DeInterlaced;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
             {
                 query["Domain"] = request.Domain;
@@ -1821,6 +1825,10 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BitrateWithSource))
             {
                 query["BitrateWithSource"] = request.BitrateWithSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeInterlaced))
+            {
+                query["DeInterlaced"] = request.DeInterlaced;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
             {
@@ -64187,6 +64195,202 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>用于修改指定直播流的录制文件存储时长。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口允许用户为一个或多个指定的直播流设置新的录制文件存储期限。</description></item>
+        /// <item><description><c>Tag</c> 字段必须符合格式 <c>[0-9]+days</c>，表示直播结束后录制内容将被保存的天数。</description></item>
+        /// <item><description>如果对某个流的存储时间修改失败，错误信息会被记录在返回结果中。对于失败的情况，调用方应重试最多3次；如果超过重试次数仍失败，则视为最终失败。</description></item>
+        /// <item><description>为了支持未来可能的需求变化（如更长的存储周期），请确保您的系统能够处理不同的时间段值。</description></item>
+        /// <item><description>成功执行后，供应商会通过异步回调的方式通知调用方所有操作的结果。若回调失败，将按照1小时、2小时、4小时的时间间隔尝试重新发送，直至成功或达到最大重试次数。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// PutRecordStorageLifeCycleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutRecordStorageLifeCycleResponse
+        /// </returns>
+        public PutRecordStorageLifeCycleResponse PutRecordStorageLifeCycleWithOptions(PutRecordStorageLifeCycleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PutRecordStorageLifeCycleShrinkRequest request = new PutRecordStorageLifeCycleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StreamIds))
+            {
+                request.StreamIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StreamIds, "StreamIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamIdsShrink))
+            {
+                body["StreamIds"] = request.StreamIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                body["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnixTimestamp))
+            {
+                body["UnixTimestamp"] = request.UnixTimestamp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutRecordStorageLifeCycle",
+                Version = "2016-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutRecordStorageLifeCycleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于修改指定直播流的录制文件存储时长。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口允许用户为一个或多个指定的直播流设置新的录制文件存储期限。</description></item>
+        /// <item><description><c>Tag</c> 字段必须符合格式 <c>[0-9]+days</c>，表示直播结束后录制内容将被保存的天数。</description></item>
+        /// <item><description>如果对某个流的存储时间修改失败，错误信息会被记录在返回结果中。对于失败的情况，调用方应重试最多3次；如果超过重试次数仍失败，则视为最终失败。</description></item>
+        /// <item><description>为了支持未来可能的需求变化（如更长的存储周期），请确保您的系统能够处理不同的时间段值。</description></item>
+        /// <item><description>成功执行后，供应商会通过异步回调的方式通知调用方所有操作的结果。若回调失败，将按照1小时、2小时、4小时的时间间隔尝试重新发送，直至成功或达到最大重试次数。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// PutRecordStorageLifeCycleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutRecordStorageLifeCycleResponse
+        /// </returns>
+        public async Task<PutRecordStorageLifeCycleResponse> PutRecordStorageLifeCycleWithOptionsAsync(PutRecordStorageLifeCycleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PutRecordStorageLifeCycleShrinkRequest request = new PutRecordStorageLifeCycleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StreamIds))
+            {
+                request.StreamIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StreamIds, "StreamIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamIdsShrink))
+            {
+                body["StreamIds"] = request.StreamIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                body["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnixTimestamp))
+            {
+                body["UnixTimestamp"] = request.UnixTimestamp;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutRecordStorageLifeCycle",
+                Version = "2016-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutRecordStorageLifeCycleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于修改指定直播流的录制文件存储时长。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口允许用户为一个或多个指定的直播流设置新的录制文件存储期限。</description></item>
+        /// <item><description><c>Tag</c> 字段必须符合格式 <c>[0-9]+days</c>，表示直播结束后录制内容将被保存的天数。</description></item>
+        /// <item><description>如果对某个流的存储时间修改失败，错误信息会被记录在返回结果中。对于失败的情况，调用方应重试最多3次；如果超过重试次数仍失败，则视为最终失败。</description></item>
+        /// <item><description>为了支持未来可能的需求变化（如更长的存储周期），请确保您的系统能够处理不同的时间段值。</description></item>
+        /// <item><description>成功执行后，供应商会通过异步回调的方式通知调用方所有操作的结果。若回调失败，将按照1小时、2小时、4小时的时间间隔尝试重新发送，直至成功或达到最大重试次数。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutRecordStorageLifeCycleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutRecordStorageLifeCycleResponse
+        /// </returns>
+        public PutRecordStorageLifeCycleResponse PutRecordStorageLifeCycle(PutRecordStorageLifeCycleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PutRecordStorageLifeCycleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于修改指定直播流的录制文件存储时长。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口允许用户为一个或多个指定的直播流设置新的录制文件存储期限。</description></item>
+        /// <item><description><c>Tag</c> 字段必须符合格式 <c>[0-9]+days</c>，表示直播结束后录制内容将被保存的天数。</description></item>
+        /// <item><description>如果对某个流的存储时间修改失败，错误信息会被记录在返回结果中。对于失败的情况，调用方应重试最多3次；如果超过重试次数仍失败，则视为最终失败。</description></item>
+        /// <item><description>为了支持未来可能的需求变化（如更长的存储周期），请确保您的系统能够处理不同的时间段值。</description></item>
+        /// <item><description>成功执行后，供应商会通过异步回调的方式通知调用方所有操作的结果。若回调失败，将按照1小时、2小时、4小时的时间间隔尝试重新发送，直至成功或达到最大重试次数。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PutRecordStorageLifeCycleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutRecordStorageLifeCycleResponse
+        /// </returns>
+        public async Task<PutRecordStorageLifeCycleResponse> PutRecordStorageLifeCycleAsync(PutRecordStorageLifeCycleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PutRecordStorageLifeCycleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the dual-stream disaster recovery records of online streams.</para>
         /// </summary>
         /// 
@@ -74397,6 +74601,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return await TagLiveResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnTagLiveResourcesRequest
         /// </param>
@@ -74454,6 +74663,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<UnTagLiveResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnTagLiveResourcesRequest
         /// </param>
@@ -74511,6 +74725,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<UnTagLiveResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnTagLiveResourcesRequest
         /// </param>
@@ -74524,6 +74743,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return UnTagLiveResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnTagLiveResourcesRequest
         /// </param>
@@ -75334,6 +75558,10 @@ namespace AlibabaCloud.SDK.Live20161101
             {
                 query["BitrateWithSource"] = request.BitrateWithSource;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeInterlaced))
+            {
+                query["DeInterlaced"] = request.DeInterlaced;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
             {
                 query["Domain"] = request.Domain;
@@ -75477,6 +75705,10 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BitrateWithSource))
             {
                 query["BitrateWithSource"] = request.BitrateWithSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeInterlaced))
+            {
+                query["DeInterlaced"] = request.DeInterlaced;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
             {

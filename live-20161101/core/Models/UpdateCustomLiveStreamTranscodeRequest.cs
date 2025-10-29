@@ -102,6 +102,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string BitrateWithSource { get; set; }
 
+        [NameInMap("DeInterlaced")]
+        [Validation(Required=false)]
+        public bool? DeInterlaced { get; set; }
+
         /// <summary>
         /// <para>Streamer domain name, unmodifiable.</para>
         /// <para>This parameter is required.</para>

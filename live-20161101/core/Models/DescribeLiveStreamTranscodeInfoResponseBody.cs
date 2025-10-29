@@ -110,6 +110,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     [Validation(Required=false)]
                     public Dictionary<string, object> BitrateWithSource { get; set; }
 
+                    [NameInMap("DeInterlaced")]
+                    [Validation(Required=false)]
+                    public bool? DeInterlaced { get; set; }
+
                     /// <summary>
                     /// <para>Other source-based settings.</para>
                     /// 
