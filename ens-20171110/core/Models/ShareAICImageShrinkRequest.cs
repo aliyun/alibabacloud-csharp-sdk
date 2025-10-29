@@ -8,26 +8,23 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class ImportImageResponseBody : TeaModel {
+    public class ShareAICImageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Image ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>m-5wn1dh*******b48f440ntvad</para>
+        /// <para>mykey</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Users")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string UsersShrink { get; set; }
 
     }
 

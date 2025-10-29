@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteNetworkInterfacesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the elastic network interfaces (ENIs).</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NetworkInterfaceIds")]

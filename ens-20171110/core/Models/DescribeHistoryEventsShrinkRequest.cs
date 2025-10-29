@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of resources.</para>
+        /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public string ResourceIdsShrink { get; set; }

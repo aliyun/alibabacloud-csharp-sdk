@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
     public class RunInstancesRequest : TeaModel {
         /// <summary>
         /// <para>The number of instances that you want to create. Valid values: 1 to 100.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -214,7 +213,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <item><description><b>PrePaid</b>: subscription.</description></item>
         /// <item><description><b>PostPaid:</b> pay-as-you-go.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -236,7 +234,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// <para>The instance type.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ens.sn1.small</para>
@@ -264,7 +261,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         /// <summary>
         /// <para>The maximum public bandwidth. If the value of this parameter is greater than 0, a public IP address is assigned to the instance.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -305,6 +301,30 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("KeyPairName")]
         [Validation(Required=false)]
         public string KeyPairName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>lt-test</para>
+        /// </summary>
+        [NameInMap("LaunchTemplateId")]
+        [Validation(Required=false)]
+        public string LaunchTemplateId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>lt-test</para>
+        /// </summary>
+        [NameInMap("LaunchTemplateName")]
+        [Validation(Required=false)]
+        public string LaunchTemplateName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
+        [NameInMap("LaunchTemplateVersion")]
+        [Validation(Required=false)]
+        public int? LaunchTemplateVersion { get; set; }
 
         /// <summary>
         /// <para>The code of the region.</para>
@@ -421,7 +441,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// <item><description><b>Small</b>: city</description></item>
         /// <item><description><b>Region</b>: node</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Region</para>

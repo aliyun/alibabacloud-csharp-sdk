@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteHaVipsRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of high-availability virtual IP addresses (HAVIPs).</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("HaVipIds")]

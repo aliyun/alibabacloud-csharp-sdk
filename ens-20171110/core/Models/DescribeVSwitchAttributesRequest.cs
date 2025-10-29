@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeVSwitchAttributesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the VSwitch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

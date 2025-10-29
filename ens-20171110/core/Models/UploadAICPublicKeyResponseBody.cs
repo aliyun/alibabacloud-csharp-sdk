@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DeleteNetworkInterfacesResponseBody : TeaModel {
+    public class UploadAICPublicKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>125B04C7-3D0D-4245-AF96-14E3758E3F06</para>

@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DeleteNetworkInterfacesResponseBody : TeaModel {
+    public class DeleteAICPublicKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>125B04C7-3D0D-4245-AF96-14E3758E3F06</para>
+        /// <para>mykey</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("KeyName")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string KeyName { get; set; }
 
     }
 

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateHaVipResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The IDs of the HAVIPs.</para>
+        /// </summary>
         [NameInMap("HaVipIds")]
         [Validation(Required=false)]
         public List<string> HaVipIds { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAE90880-4970-4D81-A534-A6C0F3631F74</para>
         /// </summary>

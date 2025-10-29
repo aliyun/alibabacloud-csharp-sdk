@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? Amount { get; set; }
 
         /// <summary>
+        /// <para>The description of the HAVIP.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
         /// </summary>
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The IP address of the HAVIP.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>120.24.243.91</para>
         /// </summary>
@@ -37,6 +41,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string IpAddress { get; set; }
 
         /// <summary>
+        /// <para>The name of the HAVIP.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yourName</para>
         /// </summary>
@@ -45,6 +51,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The vSwitch ID of the HAVIP.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-5****</para>
         /// </summary>

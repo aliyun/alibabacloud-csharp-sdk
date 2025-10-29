@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class DeleteNetworkInterfacesResponseBody : TeaModel {
+    public class ShareAICImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>125B04C7-3D0D-4245-AF96-14E3758E3F06</para>
+        /// <para>AAE90880-4970-4D81-A534-A6C0F3631F74</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

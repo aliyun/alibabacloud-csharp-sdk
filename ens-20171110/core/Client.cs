@@ -2119,8 +2119,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>因底层升级批量迁移</para>
+        /// <para>Migrates multiple instances in a specified event at a time. You can execute the task immediately or schedule the task execution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// BatchEventMigrateInstanceRequest
@@ -2167,8 +2175,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>因底层升级批量迁移</para>
+        /// <para>Migrates multiple instances in a specified event at a time. You can execute the task immediately or schedule the task execution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// BatchEventMigrateInstanceRequest
@@ -2215,8 +2231,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>因底层升级批量迁移</para>
+        /// <para>Migrates multiple instances in a specified event at a time. You can execute the task immediately or schedule the task execution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchEventMigrateInstanceRequest
@@ -2233,8 +2257,16 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>因底层升级批量迁移</para>
+        /// <para>Migrates multiple instances in a specified event at a time. You can execute the task immediately or schedule the task execution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchEventMigrateInstanceRequest
@@ -2251,20 +2283,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量因系统维护实例重启</para>
+        /// <para>The event that is used to immediately redeploy specified resources in batches or by appointment</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description><c>Action</c> 参数固定为 <c>BatchEventRebootInstance</c>。</description></item>
-        /// <item><description><c>Version</c> 参数固定为 <c>2017-11-10</c>。</description></item>
-        /// <item><description><c>EventInfos</c> 是一个数组，每个元素包含需要重启实例的信息，包括事件ID、资源ID、操作类型（立即执行或预约执行）以及可选的计划时间戳（毫秒）。</description></item>
-        /// <item><description>如果选择预约执行，则必须提供 <c>PlanTime</c> 字段的时间戳。</description></item>
-        /// <item><description>返回结果中，<c>Results</c> 数组包含了每个请求的结果信息，包括消息、资源ID、事件ID和状态码。</description></item>
-        /// <item><description>错误情况下，返回相应的错误代码和消息。</description></item>
-        /// </list>
+        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemMaintenance.Reboot (instance reboot due to system problems)</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2312,20 +2336,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量因系统维护实例重启</para>
+        /// <para>The event that is used to immediately redeploy specified resources in batches or by appointment</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description><c>Action</c> 参数固定为 <c>BatchEventRebootInstance</c>。</description></item>
-        /// <item><description><c>Version</c> 参数固定为 <c>2017-11-10</c>。</description></item>
-        /// <item><description><c>EventInfos</c> 是一个数组，每个元素包含需要重启实例的信息，包括事件ID、资源ID、操作类型（立即执行或预约执行）以及可选的计划时间戳（毫秒）。</description></item>
-        /// <item><description>如果选择预约执行，则必须提供 <c>PlanTime</c> 字段的时间戳。</description></item>
-        /// <item><description>返回结果中，<c>Results</c> 数组包含了每个请求的结果信息，包括消息、资源ID、事件ID和状态码。</description></item>
-        /// <item><description>错误情况下，返回相应的错误代码和消息。</description></item>
-        /// </list>
+        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemMaintenance.Reboot (instance reboot due to system problems)</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2373,20 +2389,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量因系统维护实例重启</para>
+        /// <para>The event that is used to immediately redeploy specified resources in batches or by appointment</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description><c>Action</c> 参数固定为 <c>BatchEventRebootInstance</c>。</description></item>
-        /// <item><description><c>Version</c> 参数固定为 <c>2017-11-10</c>。</description></item>
-        /// <item><description><c>EventInfos</c> 是一个数组，每个元素包含需要重启实例的信息，包括事件ID、资源ID、操作类型（立即执行或预约执行）以及可选的计划时间戳（毫秒）。</description></item>
-        /// <item><description>如果选择预约执行，则必须提供 <c>PlanTime</c> 字段的时间戳。</description></item>
-        /// <item><description>返回结果中，<c>Results</c> 数组包含了每个请求的结果信息，包括消息、资源ID、事件ID和状态码。</description></item>
-        /// <item><description>错误情况下，返回相应的错误代码和消息。</description></item>
-        /// </list>
+        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemMaintenance.Reboot (instance reboot due to system problems)</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2404,20 +2412,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量因系统维护实例重启</para>
+        /// <para>The event that is used to immediately redeploy specified resources in batches or by appointment</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description><c>Action</c> 参数固定为 <c>BatchEventRebootInstance</c>。</description></item>
-        /// <item><description><c>Version</c> 参数固定为 <c>2017-11-10</c>。</description></item>
-        /// <item><description><c>EventInfos</c> 是一个数组，每个元素包含需要重启实例的信息，包括事件ID、资源ID、操作类型（立即执行或预约执行）以及可选的计划时间戳（毫秒）。</description></item>
-        /// <item><description>如果选择预约执行，则必须提供 <c>PlanTime</c> 字段的时间戳。</description></item>
-        /// <item><description>返回结果中，<c>Results</c> 数组包含了每个请求的结果信息，包括消息、资源ID、事件ID和状态码。</description></item>
-        /// <item><description>错误情况下，返回相应的错误代码和消息。</description></item>
-        /// </list>
+        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemMaintenance.Reboot (instance reboot due to system problems)</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2435,8 +2435,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量操作重新部署</para>
+        /// <para>Batch redeployment</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation currently only supports event types: Instance:SystemFailure.Redeploy (redeploy instance due to system issues), Instance:SystemMaintenance.Redeploy (redeploy instance due to system maintenance)</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// BatchEventRedeployInstanceRequest
@@ -2483,8 +2490,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量操作重新部署</para>
+        /// <para>Batch redeployment</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation currently only supports event types: Instance:SystemFailure.Redeploy (redeploy instance due to system issues), Instance:SystemMaintenance.Redeploy (redeploy instance due to system maintenance)</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// BatchEventRedeployInstanceRequest
@@ -2531,8 +2545,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量操作重新部署</para>
+        /// <para>Batch redeployment</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation currently only supports event types: Instance:SystemFailure.Redeploy (redeploy instance due to system issues), Instance:SystemMaintenance.Redeploy (redeploy instance due to system maintenance)</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchEventRedeployInstanceRequest
@@ -2549,8 +2570,15 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量操作重新部署</para>
+        /// <para>Batch redeployment</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation currently only supports event types: Instance:SystemFailure.Redeploy (redeploy instance due to system issues), Instance:SystemMaintenance.Redeploy (redeploy instance due to system maintenance)</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchEventRedeployInstanceRequest
@@ -5015,7 +5043,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高可用VIP</para>
+        /// <para>Creates a high-availability virtual IP address (HAVIP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5073,7 +5101,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高可用VIP</para>
+        /// <para>Creates a high-availability virtual IP address (HAVIP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5131,7 +5159,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高可用VIP</para>
+        /// <para>Creates a high-availability virtual IP address (HAVIP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5149,7 +5177,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高可用VIP</para>
+        /// <para>Creates a high-availability virtual IP address (HAVIP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9443,6 +9471,126 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除托管公钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAICPublicKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAICPublicKeyResponse
+        /// </returns>
+        public DeleteAICPublicKeyResponse DeleteAICPublicKeyWithOptions(DeleteAICPublicKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyName))
+            {
+                query["KeyName"] = request.KeyName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAICPublicKey",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAICPublicKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除托管公钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAICPublicKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAICPublicKeyResponse
+        /// </returns>
+        public async Task<DeleteAICPublicKeyResponse> DeleteAICPublicKeyWithOptionsAsync(DeleteAICPublicKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyName))
+            {
+                query["KeyName"] = request.KeyName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAICPublicKey",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAICPublicKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除托管公钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAICPublicKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAICPublicKeyResponse
+        /// </returns>
+        public DeleteAICPublicKeyResponse DeleteAICPublicKey(DeleteAICPublicKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAICPublicKeyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除托管公钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAICPublicKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAICPublicKeyResponse
+        /// </returns>
+        public async Task<DeleteAICPublicKeyResponse> DeleteAICPublicKeyAsync(DeleteAICPublicKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAICPublicKeyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Releases all containers and resource instances related to a specific application in an asynchronous manner.</para>
         /// </summary>
         /// 
@@ -10915,7 +11063,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高可用VIP实例</para>
+        /// <para>Deletes a high-availability VIP (HAVIP).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10963,7 +11111,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高可用VIP实例</para>
+        /// <para>Deletes a high-availability VIP (HAVIP).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11011,7 +11159,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高可用VIP实例</para>
+        /// <para>Deletes a high-availability VIP (HAVIP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11029,7 +11177,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高可用VIP实例</para>
+        /// <para>Deletes a high-availability VIP (HAVIP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12139,7 +12287,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除弹性网卡</para>
+        /// <para>Deletes an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12187,7 +12335,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除弹性网卡</para>
+        /// <para>Deletes an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12235,7 +12383,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除弹性网卡</para>
+        /// <para>Deletes an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12253,7 +12401,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除弹性网卡</para>
+        /// <para>Deletes an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19894,6 +20042,11 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries instance system events.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You must specify an event type to query. You can query multiple event types at the same time.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// DescribeHistoryEventsRequest
         /// </param>
@@ -19973,6 +20126,11 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <summary>
         /// <para>Queries instance system events.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You must specify an event type to query. You can query multiple event types at the same time.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeHistoryEventsRequest
@@ -20054,6 +20212,11 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries instance system events.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You must specify an event type to query. You can query multiple event types at the same time.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeHistoryEventsRequest
         /// </param>
@@ -20071,6 +20234,11 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <summary>
         /// <para>Queries instance system events.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You must specify an event type to query. You can query multiple event types at the same time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHistoryEventsRequest
@@ -20647,8 +20815,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例5分钟粒度带宽明细</para>
+        /// <para>Queries the detailed bandwidth data of an instance, which is collected every 5 minutes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 800 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 100 times per second per user.</description></item>
+        /// <item><description>You can specify multiple request parameters to filter query results. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, this parameter is regarded as a valid filter condition and an empty result is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceBandwidthDetailRequest
@@ -20685,8 +20862,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例5分钟粒度带宽明细</para>
+        /// <para>Queries the detailed bandwidth data of an instance, which is collected every 5 minutes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 800 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 100 times per second per user.</description></item>
+        /// <item><description>You can specify multiple request parameters to filter query results. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, this parameter is regarded as a valid filter condition and an empty result is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceBandwidthDetailRequest
@@ -20723,8 +20909,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例5分钟粒度带宽明细</para>
+        /// <para>Queries the detailed bandwidth data of an instance, which is collected every 5 minutes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 800 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 100 times per second per user.</description></item>
+        /// <item><description>You can specify multiple request parameters to filter query results. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, this parameter is regarded as a valid filter condition and an empty result is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceBandwidthDetailRequest
@@ -20741,8 +20936,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例5分钟粒度带宽明细</para>
+        /// <para>Queries the detailed bandwidth data of an instance, which is collected every 5 minutes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation up to 800 times per second per account.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 100 times per second per user.</description></item>
+        /// <item><description>You can specify multiple request parameters to filter query results. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions. However, if InstanceIds is set to an empty JSON array, this parameter is regarded as a valid filter condition and an empty result is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceBandwidthDetailRequest
@@ -25585,6 +25789,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DescribeSDGDeploymentStatusShrinkRequest request = new DescribeSDGDeploymentStatusShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DiskIds))
+            {
+                request.DiskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DiskIds, "DiskIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
             {
                 request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
@@ -25597,6 +25805,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentType))
             {
                 query["DeploymentType"] = request.DeploymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskIdsShrink))
+            {
+                query["DiskIds"] = request.DiskIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
             {
@@ -25661,6 +25873,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DescribeSDGDeploymentStatusShrinkRequest request = new DescribeSDGDeploymentStatusShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DiskIds))
+            {
+                request.DiskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DiskIds, "DiskIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
             {
                 request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
@@ -25673,6 +25889,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentType))
             {
                 query["DeploymentType"] = request.DeploymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskIdsShrink))
+            {
+                query["DiskIds"] = request.DiskIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
             {
@@ -25751,6 +25971,158 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeSDGDeploymentStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询SDG下的共享盘</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSDGSharedDisksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSDGSharedDisksResponse
+        /// </returns>
+        public DescribeSDGSharedDisksResponse DescribeSDGSharedDisksWithOptions(DescribeSDGSharedDisksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SdgId))
+            {
+                query["SdgId"] = request.SdgId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSDGSharedDisks",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSDGSharedDisksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询SDG下的共享盘</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSDGSharedDisksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSDGSharedDisksResponse
+        /// </returns>
+        public async Task<DescribeSDGSharedDisksResponse> DescribeSDGSharedDisksWithOptionsAsync(DescribeSDGSharedDisksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SdgId))
+            {
+                query["SdgId"] = request.SdgId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSDGSharedDisks",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSDGSharedDisksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询SDG下的共享盘</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSDGSharedDisksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSDGSharedDisksResponse
+        /// </returns>
+        public DescribeSDGSharedDisksResponse DescribeSDGSharedDisks(DescribeSDGSharedDisksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSDGSharedDisksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询SDG下的共享盘</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSDGSharedDisksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSDGSharedDisksResponse
+        /// </returns>
+        public async Task<DescribeSDGSharedDisksResponse> DescribeSDGSharedDisksAsync(DescribeSDGSharedDisksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSDGSharedDisksWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -27807,7 +28179,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeVSwitchAttributes接口查询指定交换机的配置信息。</para>
+        /// <para>Call the DescribeVSwitchAttributes interface to query the configuration of a specified VSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27849,7 +28221,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeVSwitchAttributes接口查询指定交换机的配置信息。</para>
+        /// <para>Call the DescribeVSwitchAttributes interface to query the configuration of a specified VSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27891,7 +28263,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeVSwitchAttributes接口查询指定交换机的配置信息。</para>
+        /// <para>Call the DescribeVSwitchAttributes interface to query the configuration of a specified VSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27909,7 +28281,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeVSwitchAttributes接口查询指定交换机的配置信息。</para>
+        /// <para>Call the DescribeVSwitchAttributes interface to query the configuration of a specified VSwitch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28671,8 +29043,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>因底层升级需要迁移</para>
+        /// <para>Migrates the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EventMigrateInstanceRequest
@@ -28733,8 +29110,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>因底层升级需要迁移</para>
+        /// <para>Migrates the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EventMigrateInstanceRequest
@@ -28795,8 +29177,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>因底层升级需要迁移</para>
+        /// <para>Migrates the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EventMigrateInstanceRequest
@@ -28813,8 +29200,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>因底层升级需要迁移</para>
+        /// <para>Migrates the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This O\&amp;M operation is supported only by the Instance:SystemUpgrade.Migrate event.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EventMigrateInstanceRequest
@@ -28831,18 +29223,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>因系统维护实例重启</para>
+        /// <para>Restart the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该API用于触发一个实例的重启事件。</description></item>
-        /// <item><description><c>OpsType</c>参数可选，若不提供，默认为<c>scheduled</c>（预约执行）。</description></item>
-        /// <item><description>当选择<c>scheduled</c>时，必须提供<c>PlanTime</c>参数，格式为时间戳（毫秒）。</description></item>
-        /// <item><description>如果需要立即执行重启，请设置<c>OpsType</c>为<c>immediate</c>。</description></item>
-        /// </list>
+        /// <para>  This O\&amp;M operation supports only the Instance:SystemMaintenance.Reboot event</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28896,18 +29282,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>因系统维护实例重启</para>
+        /// <para>Restart the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该API用于触发一个实例的重启事件。</description></item>
-        /// <item><description><c>OpsType</c>参数可选，若不提供，默认为<c>scheduled</c>（预约执行）。</description></item>
-        /// <item><description>当选择<c>scheduled</c>时，必须提供<c>PlanTime</c>参数，格式为时间戳（毫秒）。</description></item>
-        /// <item><description>如果需要立即执行重启，请设置<c>OpsType</c>为<c>immediate</c>。</description></item>
-        /// </list>
+        /// <para>  This O\&amp;M operation supports only the Instance:SystemMaintenance.Reboot event</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28961,18 +29341,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>因系统维护实例重启</para>
+        /// <para>Restart the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该API用于触发一个实例的重启事件。</description></item>
-        /// <item><description><c>OpsType</c>参数可选，若不提供，默认为<c>scheduled</c>（预约执行）。</description></item>
-        /// <item><description>当选择<c>scheduled</c>时，必须提供<c>PlanTime</c>参数，格式为时间戳（毫秒）。</description></item>
-        /// <item><description>如果需要立即执行重启，请设置<c>OpsType</c>为<c>immediate</c>。</description></item>
-        /// </list>
+        /// <para>  This O\&amp;M operation supports only the Instance:SystemMaintenance.Reboot event</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28990,18 +29364,12 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>因系统维护实例重启</para>
+        /// <para>Restart the instance across nodes after an O\\\&amp;M event occurs on an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该API用于触发一个实例的重启事件。</description></item>
-        /// <item><description><c>OpsType</c>参数可选，若不提供，默认为<c>scheduled</c>（预约执行）。</description></item>
-        /// <item><description>当选择<c>scheduled</c>时，必须提供<c>PlanTime</c>参数，格式为时间戳（毫秒）。</description></item>
-        /// <item><description>如果需要立即执行重启，请设置<c>OpsType</c>为<c>immediate</c>。</description></item>
-        /// </list>
+        /// <para>  This O\&amp;M operation supports only the Instance:SystemMaintenance.Reboot event</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29019,8 +29387,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>节点内迁移</para>
+        /// <para>The event that is used to immediately redeploy a specified resource or by appointment</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system problems) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EventRedeployInstanceRequest
@@ -29073,8 +29446,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>节点内迁移</para>
+        /// <para>The event that is used to immediately redeploy a specified resource or by appointment</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system problems) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EventRedeployInstanceRequest
@@ -29127,8 +29505,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>节点内迁移</para>
+        /// <para>The event that is used to immediately redeploy a specified resource or by appointment</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system problems) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EventRedeployInstanceRequest
@@ -29145,8 +29528,13 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>节点内迁移</para>
+        /// <para>The event that is used to immediately redeploy a specified resource or by appointment</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This O\&amp;M operation supports only the following event types: Instance:SystemFailure.Redeploy (instance redeployment due to system problems) and Instance:SystemMaintenance.Redeploy (instance redeployment due to system maintenance).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EventRedeployInstanceRequest
@@ -30183,7 +30571,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用ImportImage导入一份您的镜像文件到云服务器。</para>
+        /// <para>Call ImportImage to import your image file to the cloud server.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30279,7 +30667,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用ImportImage导入一份您的镜像文件到云服务器。</para>
+        /// <para>Call ImportImage to import your image file to the cloud server.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30375,7 +30763,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用ImportImage导入一份您的镜像文件到云服务器。</para>
+        /// <para>Call ImportImage to import your image file to the cloud server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30393,7 +30781,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用ImportImage导入一份您的镜像文件到云服务器。</para>
+        /// <para>Call ImportImage to import your image file to the cloud server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31159,6 +31547,318 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询公钥下发信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAICPublicKeyDeliveriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAICPublicKeyDeliveriesResponse
+        /// </returns>
+        public ListAICPublicKeyDeliveriesResponse ListAICPublicKeyDeliveriesWithOptions(ListAICPublicKeyDeliveriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyGroup))
+            {
+                query["KeyGroup"] = request.KeyGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyName))
+            {
+                query["KeyName"] = request.KeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyType))
+            {
+                query["KeyType"] = request.KeyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAICPublicKeyDeliveries",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAICPublicKeyDeliveriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询公钥下发信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAICPublicKeyDeliveriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAICPublicKeyDeliveriesResponse
+        /// </returns>
+        public async Task<ListAICPublicKeyDeliveriesResponse> ListAICPublicKeyDeliveriesWithOptionsAsync(ListAICPublicKeyDeliveriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyGroup))
+            {
+                query["KeyGroup"] = request.KeyGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyName))
+            {
+                query["KeyName"] = request.KeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyType))
+            {
+                query["KeyType"] = request.KeyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAICPublicKeyDeliveries",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAICPublicKeyDeliveriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询公钥下发信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAICPublicKeyDeliveriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAICPublicKeyDeliveriesResponse
+        /// </returns>
+        public ListAICPublicKeyDeliveriesResponse ListAICPublicKeyDeliveries(ListAICPublicKeyDeliveriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAICPublicKeyDeliveriesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询公钥下发信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAICPublicKeyDeliveriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAICPublicKeyDeliveriesResponse
+        /// </returns>
+        public async Task<ListAICPublicKeyDeliveriesResponse> ListAICPublicKeyDeliveriesAsync(ListAICPublicKeyDeliveriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAICPublicKeyDeliveriesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有托管的公钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAICPublicKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAICPublicKeysResponse
+        /// </returns>
+        public ListAICPublicKeysResponse ListAICPublicKeysWithOptions(ListAICPublicKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyGroup))
+            {
+                query["KeyGroup"] = request.KeyGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyName))
+            {
+                query["KeyName"] = request.KeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyType))
+            {
+                query["KeyType"] = request.KeyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAICPublicKeys",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAICPublicKeysResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有托管的公钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAICPublicKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAICPublicKeysResponse
+        /// </returns>
+        public async Task<ListAICPublicKeysResponse> ListAICPublicKeysWithOptionsAsync(ListAICPublicKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyGroup))
+            {
+                query["KeyGroup"] = request.KeyGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyName))
+            {
+                query["KeyName"] = request.KeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyType))
+            {
+                query["KeyType"] = request.KeyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAICPublicKeys",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAICPublicKeysResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有托管的公钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAICPublicKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAICPublicKeysResponse
+        /// </returns>
+        public ListAICPublicKeysResponse ListAICPublicKeys(ListAICPublicKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAICPublicKeysWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有托管的公钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAICPublicKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAICPublicKeysResponse
+        /// </returns>
+        public async Task<ListAICPublicKeysResponse> ListAICPublicKeysAsync(ListAICPublicKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAICPublicKeysWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the created applications.</para>
         /// </summary>
         /// 
@@ -31877,6 +32577,150 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>AIC公钥登入管理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManageAICLoginRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageAICLoginResponse
+        /// </returns>
+        public ManageAICLoginResponse ManageAICLoginWithOptions(ManageAICLoginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionName))
+            {
+                query["ActionName"] = request.ActionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyGroup))
+            {
+                query["KeyGroup"] = request.KeyGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyName))
+            {
+                query["KeyName"] = request.KeyName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ManageAICLogin",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ManageAICLoginResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AIC公钥登入管理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManageAICLoginRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageAICLoginResponse
+        /// </returns>
+        public async Task<ManageAICLoginResponse> ManageAICLoginWithOptionsAsync(ManageAICLoginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionName))
+            {
+                query["ActionName"] = request.ActionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyGroup))
+            {
+                query["KeyGroup"] = request.KeyGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyName))
+            {
+                query["KeyName"] = request.KeyName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ManageAICLogin",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ManageAICLoginResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AIC公钥登入管理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManageAICLoginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageAICLoginResponse
+        /// </returns>
+        public ManageAICLoginResponse ManageAICLogin(ManageAICLoginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ManageAICLoginWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AIC公钥登入管理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManageAICLoginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageAICLoginResponse
+        /// </returns>
+        public async Task<ManageAICLoginResponse> ManageAICLoginAsync(ManageAICLoginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ManageAICLoginWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the name, description, and peak bandwidth of a specified elastic IP address (EIP).</para>
         /// </summary>
         /// 
@@ -32021,7 +32865,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用ModifyEnsRouteEntry接口修改自定义路由条目名称、描述。</para>
+        /// <para>Modifies the name and description of a custom route.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32071,7 +32915,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用ModifyEnsRouteEntry接口修改自定义路由条目名称、描述。</para>
+        /// <para>Modifies the name and description of a custom route.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32121,7 +32965,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用ModifyEnsRouteEntry接口修改自定义路由条目名称、描述。</para>
+        /// <para>Modifies the name and description of a custom route.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32139,7 +32983,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用ModifyEnsRouteEntry接口修改自定义路由条目名称、描述。</para>
+        /// <para>Modifies the name and description of a custom route.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33353,8 +34197,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改启动配置，只支持异构实例(PCFarm裸金属)。</para>
+        /// <para>Modifies the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If an instance is in the Starting state, you cannot reset the password of the instance.</para>
+        /// <list type="bullet">
+        /// <item><description>If the instance is in the Running state, you cannot change the password of the instance.</description></item>
+        /// <item><description>After resetting the password, you must restart the instance in the ENS console or call the RebootInstance operation to apply the change. The restart operation within the instance does not apply the change.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceBootConfigurationRequest
@@ -33391,8 +34244,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改启动配置，只支持异构实例(PCFarm裸金属)。</para>
+        /// <para>Modifies the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If an instance is in the Starting state, you cannot reset the password of the instance.</para>
+        /// <list type="bullet">
+        /// <item><description>If the instance is in the Running state, you cannot change the password of the instance.</description></item>
+        /// <item><description>After resetting the password, you must restart the instance in the ENS console or call the RebootInstance operation to apply the change. The restart operation within the instance does not apply the change.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceBootConfigurationRequest
@@ -33429,8 +34291,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改启动配置，只支持异构实例(PCFarm裸金属)。</para>
+        /// <para>Modifies the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If an instance is in the Starting state, you cannot reset the password of the instance.</para>
+        /// <list type="bullet">
+        /// <item><description>If the instance is in the Running state, you cannot change the password of the instance.</description></item>
+        /// <item><description>After resetting the password, you must restart the instance in the ENS console or call the RebootInstance operation to apply the change. The restart operation within the instance does not apply the change.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceBootConfigurationRequest
@@ -33447,8 +34318,17 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改启动配置，只支持异构实例(PCFarm裸金属)。</para>
+        /// <para>Modifies the boot configuration of a heterogeneous PC Farm bare metal instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If an instance is in the Starting state, you cannot reset the password of the instance.</para>
+        /// <list type="bullet">
+        /// <item><description>If the instance is in the Running state, you cannot change the password of the instance.</description></item>
+        /// <item><description>After resetting the password, you must restart the instance in the ENS console or call the RebootInstance operation to apply the change. The restart operation within the instance does not apply the change.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceBootConfigurationRequest
@@ -40156,6 +41036,18 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["KeyPairName"] = request.KeyPairName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaunchTemplateId))
+            {
+                query["LaunchTemplateId"] = request.LaunchTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaunchTemplateName))
+            {
+                query["LaunchTemplateName"] = request.LaunchTemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaunchTemplateVersion))
+            {
+                query["LaunchTemplateVersion"] = request.LaunchTemplateVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetDistrictCode))
             {
                 query["NetDistrictCode"] = request.NetDistrictCode;
@@ -40359,6 +41251,18 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
             {
                 query["KeyPairName"] = request.KeyPairName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaunchTemplateId))
+            {
+                query["LaunchTemplateId"] = request.LaunchTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaunchTemplateName))
+            {
+                query["LaunchTemplateName"] = request.LaunchTemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LaunchTemplateVersion))
+            {
+                query["LaunchTemplateVersion"] = request.LaunchTemplateVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetDistrictCode))
             {
@@ -42197,6 +43101,146 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetLoadBalancerUDPListenerAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>共享AIC镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ShareAICImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ShareAICImageResponse
+        /// </returns>
+        public ShareAICImageResponse ShareAICImageWithOptions(ShareAICImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ShareAICImageShrinkRequest request = new ShareAICImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Users))
+            {
+                request.UsersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Users, "Users", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsersShrink))
+            {
+                query["Users"] = request.UsersShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ShareAICImage",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ShareAICImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>共享AIC镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ShareAICImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ShareAICImageResponse
+        /// </returns>
+        public async Task<ShareAICImageResponse> ShareAICImageWithOptionsAsync(ShareAICImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ShareAICImageShrinkRequest request = new ShareAICImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Users))
+            {
+                request.UsersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Users, "Users", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsersShrink))
+            {
+                query["Users"] = request.UsersShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ShareAICImage",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ShareAICImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>共享AIC镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ShareAICImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ShareAICImageResponse
+        /// </returns>
+        public ShareAICImageResponse ShareAICImage(ShareAICImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ShareAICImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>共享AIC镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ShareAICImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ShareAICImageResponse
+        /// </returns>
+        public async Task<ShareAICImageResponse> ShareAICImageAsync(ShareAICImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ShareAICImageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -45137,6 +46181,158 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeApplicationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传公钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UploadAICPublicKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAICPublicKeyResponse
+        /// </returns>
+        public UploadAICPublicKeyResponse UploadAICPublicKeyWithOptions(UploadAICPublicKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyGroup))
+            {
+                query["KeyGroup"] = request.KeyGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyName))
+            {
+                query["KeyName"] = request.KeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyType))
+            {
+                query["KeyType"] = request.KeyType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadAICPublicKey",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadAICPublicKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传公钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UploadAICPublicKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAICPublicKeyResponse
+        /// </returns>
+        public async Task<UploadAICPublicKeyResponse> UploadAICPublicKeyWithOptionsAsync(UploadAICPublicKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyGroup))
+            {
+                query["KeyGroup"] = request.KeyGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyName))
+            {
+                query["KeyName"] = request.KeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyType))
+            {
+                query["KeyType"] = request.KeyType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadAICPublicKey",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadAICPublicKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传公钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UploadAICPublicKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAICPublicKeyResponse
+        /// </returns>
+        public UploadAICPublicKeyResponse UploadAICPublicKey(UploadAICPublicKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UploadAICPublicKeyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传公钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UploadAICPublicKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAICPublicKeyResponse
+        /// </returns>
+        public async Task<UploadAICPublicKeyResponse> UploadAICPublicKeyAsync(UploadAICPublicKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UploadAICPublicKeyWithOptionsAsync(request, runtime);
         }
 
     }

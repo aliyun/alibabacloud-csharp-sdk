@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string DeploymentType { get; set; }
 
+        [NameInMap("DiskIds")]
+        [Validation(Required=false)]
+        public List<string> DiskIds { get; set; }
+
         /// <summary>
         /// <para>IDs of Android in Container (AIC) instances.</para>
         /// </summary>

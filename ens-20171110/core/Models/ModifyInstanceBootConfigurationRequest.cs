@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ModifyInstanceBootConfigurationRequest : TeaModel {
         /// <summary>
+        /// <para>The startup method.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>legacy</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BootSet { get; set; }
 
         /// <summary>
+        /// <para>The startup type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string BootType { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the startup depends on the disk.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string DiskSet { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance for which you want to modify the configuration. You can specify only one ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

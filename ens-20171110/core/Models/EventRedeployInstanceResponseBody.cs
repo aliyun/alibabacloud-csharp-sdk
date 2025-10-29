@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class EventRedeployInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>RequestId。</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>125B04C7-3D0D-4245-AF96-14E3758E3F06</para>
