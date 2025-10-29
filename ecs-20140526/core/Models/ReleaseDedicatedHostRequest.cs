@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("TerminateSubscription")]
+        [Validation(Required=false)]
+        public bool? TerminateSubscription { get; set; }
+
     }
 
 }
