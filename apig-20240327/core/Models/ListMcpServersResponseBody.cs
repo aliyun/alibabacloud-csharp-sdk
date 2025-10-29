@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public List<ListMcpServersResponseBodyDataItems> Items { get; set; }
             public class ListMcpServersResponseBodyDataItems : TeaModel {
+                [NameInMap("apiId")]
+                [Validation(Required=false)]
+                public string ApiId { get; set; }
+
                 [NameInMap("assembledSources")]
                 [Validation(Required=false)]
                 public List<ListMcpServersResponseBodyDataItemsAssembledSources> AssembledSources { get; set; }
