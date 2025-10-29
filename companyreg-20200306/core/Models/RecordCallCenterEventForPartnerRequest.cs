@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Companyreg20200306.Models
         [Validation(Required=false)]
         public string ContactId { get; set; }
 
+        [NameInMap("EmployeeCode")]
+        [Validation(Required=false)]
+        public string EmployeeCode { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>ufbo502ma94m480</para>
@@ -98,6 +102,10 @@ namespace AlibabaCloud.SDK.Companyreg20200306.Models
         [NameInMap("SkillType")]
         [Validation(Required=false)]
         public int? SkillType { get; set; }
+
+        [NameInMap("TenantId")]
+        [Validation(Required=false)]
+        public string TenantId { get; set; }
 
     }
 

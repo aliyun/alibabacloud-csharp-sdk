@@ -3393,6 +3393,10 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             {
                 query["ContactId"] = request.ContactId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmployeeCode))
+            {
+                query["EmployeeCode"] = request.EmployeeCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
                 query["JobId"] = request.JobId;
@@ -3408,6 +3412,10 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillType))
             {
                 query["SkillType"] = request.SkillType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["TenantId"] = request.TenantId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3475,6 +3483,10 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             {
                 query["ContactId"] = request.ContactId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmployeeCode))
+            {
+                query["EmployeeCode"] = request.EmployeeCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
                 query["JobId"] = request.JobId;
@@ -3490,6 +3502,10 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillType))
             {
                 query["SkillType"] = request.SkillType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["TenantId"] = request.TenantId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
