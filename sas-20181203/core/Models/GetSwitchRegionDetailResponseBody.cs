@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IsNoticed { get; set; }
 
+            [NameInMap("NeedNotice")]
+            [Validation(Required=false)]
+            public bool? NeedNotice { get; set; }
+
             [NameInMap("NeedSwitch")]
             [Validation(Required=false)]
             public bool? NeedSwitch { get; set; }

@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public bool? IsAgree { get; set; }
 
+        [NameInMap("IsConfirmed")]
+        [Validation(Required=false)]
+        public bool? IsConfirmed { get; set; }
+
         [NameInMap("IsImmediate")]
         [Validation(Required=false)]
         public bool? IsImmediate { get; set; }
