@@ -1,3 +1,7 @@
+2025-10-29 Version: 1.6.0
+- Support API GetTableCompaction.
+
+
 2025-10-20 Version: 1.5.0
 - Support API ListPartitions.
 

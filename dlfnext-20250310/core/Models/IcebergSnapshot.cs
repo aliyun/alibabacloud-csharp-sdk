@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        [NameInMap("idString")]
+        [Validation(Required=false)]
+        public string IdString { get; set; }
+
         [NameInMap("operation")]
         [Validation(Required=false)]
         public string Operation { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [NameInMap("parentId")]
         [Validation(Required=false)]
         public long? ParentId { get; set; }
+
+        [NameInMap("parentIdString")]
+        [Validation(Required=false)]
+        public string ParentIdString { get; set; }
 
         [NameInMap("schemaId")]
         [Validation(Required=false)]

@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        [NameInMap("idString")]
+        [Validation(Required=false)]
+        public string IdString { get; set; }
+
         [NameInMap("indexManifest")]
         [Validation(Required=false)]
         public string IndexManifest { get; set; }
@@ -57,13 +61,25 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public Dictionary<string, long?> LogOffsets { get; set; }
 
+        [NameInMap("parentIdString")]
+        [Validation(Required=false)]
+        public string ParentIdString { get; set; }
+
         [NameInMap("schemaId")]
         [Validation(Required=false)]
         public long? SchemaId { get; set; }
 
+        [NameInMap("sequenceNumber")]
+        [Validation(Required=false)]
+        public long? SequenceNumber { get; set; }
+
         [NameInMap("statistics")]
         [Validation(Required=false)]
         public string Statistics { get; set; }
+
+        [NameInMap("summary")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Summary { get; set; }
 
         [NameInMap("timeMillis")]
         [Validation(Required=false)]

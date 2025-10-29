@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string CreatedBy { get; set; }
 
+        [NameInMap("icebergTableMetadata")]
+        [Validation(Required=false)]
+        public IcebergTableMetadata IcebergTableMetadata { get; set; }
+
         [NameInMap("id")]
         [Validation(Required=false)]
         public string Id { get; set; }
@@ -56,6 +60,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [NameInMap("storageClass")]
         [Validation(Required=false)]
         public string StorageClass { get; set; }
+
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
         [NameInMap("updatedAt")]
         [Validation(Required=false)]
