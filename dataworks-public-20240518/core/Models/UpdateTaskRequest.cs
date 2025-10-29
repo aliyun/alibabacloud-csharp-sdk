@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Constant: constant.</description></item>
+                /// <item><description>Constant: constant value.</description></item>
                 /// <item><description>PassThrough: node output.</description></item>
                 /// <item><description>System: variable.</description></item>
                 /// <item><description>NodeOutput: script output.</description></item>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The instance generation mode. Valid values:</para>
+        /// <para>The instance generation mode.</para>
         /// <list type="bullet">
         /// <item><description>T+1: the next day</description></item>
         /// <item><description>Immediately</description></item>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Constant: constant.</description></item>
+                /// <item><description>Constant: constant value.</description></item>
                 /// <item><description>PassThrough: node output.</description></item>
                 /// <item><description>System: variable.</description></item>
                 /// <item><description>NodeOutput: script output.</description></item>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The rerun interval. Unit: seconds.</para>
+        /// <para>The rerun interval. Unit: milliseconds. Must not exceed 1800000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -419,7 +419,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The timeout period of task running. Unit: seconds.</para>
+        /// <para>Task execution timeout in seconds. Must be greater than 3600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -445,6 +445,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string Cron { get; set; }
 
+            /// <summary>
+            /// <para>Cycle type. This parameter takes effect only when Type is set to Scheduler and the cron expression specifies hourly scheduling. Default value: Daily</para>
+            /// <list type="bullet">
+            /// <item><description>Daily: Schedules jobs on a daily basis.</description></item>
+            /// <item><description>NotDaily: Schedules jobs on an hourly basis.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Daily</para>
+            /// </summary>
             [NameInMap("CycleType")]
             [Validation(Required=false)]
             public string CycleType { get; set; }

@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public List<long?> WorkflowInstanceIds { get; set; }
 
+            [NameInMap("WorkflowTaskInstanceIds")]
+            [Validation(Required=false)]
+            public List<long?> WorkflowTaskInstanceIds { get; set; }
+
         }
 
     }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListCatalogsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The comment. Supports token-based matching.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The name. Supports fuzzy matching.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>abc</para>
         /// </summary>
@@ -26,6 +30,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The order in which the tables are sorted. Default value: Asc. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Asc: ascending order.</description></item>
+        /// <item><description>Desc: descending order.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Asc</para>
         /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Order { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of records per page. Default value: 10. Maximum value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -51,15 +65,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The parent entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</para>
-        /// <para>Only DLF and StarRocks data sources support this parameter.</para>
+        /// <para>Currently, only the DLF and StarRocks types are supported.</para>
         /// <list type="bullet">
-        /// <item><description>For DLF data sources, you can call this API operation to query all catalogs. In this case, you must set the <c>ParentMetaEntityId</c> parameter to <c>dlf</c>.</description></item>
-        /// <item><description>For StarRocks data sources, you can call this API operation to query the catalogs in a specific instance. In this case, you can configure the <c>ParentMetaEntityId</c> parameter in the <c>starrocks:(instance_id|encoded_jdbc_url)</c> format.</description></item>
+        /// <item><description>For the DLF type, you can query all catalog lists. The format of <c>ParentMetaEntityId</c> is <c>DLF</c>.</description></item>
+        /// <item><description>For the StarRocks type, you can query the catalogs of a specific instance. The format of <c>ParentMetaEntityId</c> <c>is StarRocks:(instance_id|encoded_jdbc_url)</c>.</description></item>
         /// </list>
         /// <remarks>
         /// <para>\
-        /// <c>instance_id</c>: the ID of an instance. If the related data source is added to DataWorks in Alibaba Cloud instance mode, you must configure this parameter.\
-        /// <c>encoded_jdbc_url</c>: the JDBC connection string that is URL-encoded. If the related data source is added to DataWorks in connection string mode, you must configure this parameter.</para>
+        /// <c>instance_id</c>: The instance ID. Required if the data source is registered in instance mode.\
+        /// <c>encoded_jdbc_url</c>: The JDBC connection string encoded with URL encoding. Required if the data source is registered in connection-string mode.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -72,6 +86,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ParentMetaEntityId { get; set; }
 
         /// <summary>
+        /// <para>The sort field. Default value: CreateTime. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CreateTime</description></item>
+        /// <item><description>ModifyTime</description></item>
+        /// <item><description>Name</description></item>
+        /// <item><description>Type</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>
         /// </summary>
@@ -79,6 +101,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
+        /// <summary>
+        /// <para>The type. Supports exact match. If left empty, all types are queried.</para>
+        /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]
         public string TypesShrink { get; set; }

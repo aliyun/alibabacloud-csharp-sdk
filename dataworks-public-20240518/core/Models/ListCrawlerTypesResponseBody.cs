@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListCrawlerTypesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of metadata crawler types.</para>
+        /// </summary>
         [NameInMap("CrawlerTypes")]
         [Validation(Required=false)]
         public List<CrawlerType> CrawlerTypes { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

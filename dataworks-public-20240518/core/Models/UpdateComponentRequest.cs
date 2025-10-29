@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateComponentRequest : TeaModel {
         /// <summary>
+        /// <para>The component ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

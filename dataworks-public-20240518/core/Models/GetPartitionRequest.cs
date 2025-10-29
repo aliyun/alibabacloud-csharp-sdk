@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetPartitionRequest : TeaModel {
         /// <summary>
+        /// <para>The partition name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The table ID. For more details, refer to the response of the ListTables operation and <a href="https://help.aliyun.com/document_detail/2880092.html">description of concepts related to metadata entities.</a></para>
+        /// <para>The table ID. You can refer to the result returned by the ListTables operation and <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

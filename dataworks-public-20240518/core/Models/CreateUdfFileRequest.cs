@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateUdfFileRequest : TeaModel {
         /// <summary>
+        /// <para>The class name where the function is defined, corresponding to the class name field in the Create Function form.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClassName { get; set; }
 
         /// <summary>
+        /// <para>The command format for invoking the function, corresponding to the command format field in the Create Function form.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>StringConcat(String... substrs)</para>
         /// </summary>
@@ -28,6 +31,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CmdDescription { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to automatically create the directory if the specified path (FileFolderPath) does not exist. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Automatically creates the directory if it does not exist.</description></item>
+        /// <item><description>false: The call fails if the directory does not exist.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -36,6 +45,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? CreateFolderIfNotExists { get; set; }
 
         /// <summary>
+        /// <para>An example demonstrating how to call the function, corresponding to the example field in the Create Function form.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>StringConcat(\&quot;a\&quot;, \&quot;b\&quot;, \&quot;c\&quot;)</para>
         /// </summary>
@@ -44,6 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Example { get; set; }
 
         /// <summary>
+        /// <para>The path to the folder containing the function file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string FileFolderPath { get; set; }
 
         /// <summary>
+        /// <para>The function name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string FileName { get; set; }
 
         /// <summary>
+        /// <para>The function category, corresponding to the function type field in the Create Function form. Valid values: MATH (mathematical functions), AGGREGATE (aggregate functions), STRING (string processing functions), DATE (date processing functions), ANALYTIC (window functions), and OTHER (other functions).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +88,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string FunctionType { get; set; }
 
         /// <summary>
+        /// <para>The function parameter description, corresponding to the parameter description field in the Create Function form.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>List of strings to be connected</para>
         /// </summary>
@@ -82,6 +98,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ParameterDescription { get; set; }
 
         /// <summary>
+        /// <para>The DataWorks workspace ID. To find this, click the wrench icon in the upper-right corner and navigate to the workspace management page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10000</para>
         /// </summary>
@@ -90,6 +108,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the DataWorks workspace, which is the identifier at the top of the Data Studio page where you switch workspaces.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>
         /// </summary>
@@ -98,6 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ProjectIdentifier { get; set; }
 
         /// <summary>
+        /// <para>A comma-separated list of resource names referenced by the function, corresponding to the resource list field in the Create Function form.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,6 +129,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Resources { get; set; }
 
         /// <summary>
+        /// <para>The return value description, corresponding to the return value field in the Create Function form.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>New strings generated by concatenating all strings before and after the input order</para>
         /// </summary>
@@ -116,6 +139,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ReturnValue { get; set; }
 
         /// <summary>
+        /// <para>The function purpose description, corresponding to the description field in the Create Function form.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Concatenate several strings to generate a new string</para>
         /// </summary>

@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetSchemaRequest : TeaModel {
         /// <summary>
-        /// <para>The schema ID. You can call the ListSchemas operation to query the ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</para>
-        /// <para>The common format of this parameter is <c>${Entity type}:${Instance ID or escaped URL}:${Catalog identifier}:${Database name}:${Schema name}</c>. If a level does not exist, specify an empty string as a placeholder.</para>
+        /// <para>The ID. You can refer to the ListSchemas operation and <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</para>
+        /// <para>The format is <c>${EntityType}:${Instance ID or escaped URL}:${Catalog ID}:${Database name}:${Schema name}&lt;/code&gt;</c>. Use empty strings as placeholders for missing levels.</para>
         /// <remarks>
-        /// <para> For MaxCompute tables, specify an empty string at the Instance ID level and a MaxCompute project name at the Database name level. Make sure that the three-layer model is enabled for the MaxCompute project.</para>
+        /// <para> For the MaxCompute type, use an empty string as the placeholder for the instance ID level. The database name is the MaxCompute project name, and the project must have the three-level model enabled.</para>
         /// </remarks>
-        /// <para>You can configure this parameter in one of the following formats based on your data source type:</para>
-        /// <para><c>maxcompute-schema:::project_name:schema_name</c> (Three-layer model is enabled for the MaxCompute project.)</para>
+        /// <para>Examples:</para>
+        /// <para><c>maxcompute-schema:::project_name:schema_name</c> (The three-level model is enabled for the MaxCompute project.)</para>
         /// <para><c>holo-schema:instance_id::database_name:schema_name</c></para>
         /// <remarks>
         /// <para>\
-        /// <c>instance_id</c>: the ID of a Hologres instance\
-        /// <c>database_name</c>: the name of a database\
-        /// <c>project_name</c>: the name of a MaxCompute project\
-        /// <c>schema_name</c>: the name of a schema</para>
+        /// <c>instance_id</c>: The Hologres instance ID\
+        /// . <c>database_name</c>: The database name\
+        /// . <c>database_name</c>: The MaxCompute project name\
+        /// . <c>schema_name</c>: The schema name.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

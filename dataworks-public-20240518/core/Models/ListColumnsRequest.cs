@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListColumnsRequest : TeaModel {
         /// <summary>
+        /// <para>The comment. Fuzzy match is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test comment</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The name. Fuzzy match is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_table</para>
         /// </summary>
@@ -26,6 +30,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The sort order. Default value: Asc. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Asc</description></item>
+        /// <item><description>Desc</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Asc</para>
         /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Order { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of records per page. Default value: 10. Maximum value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -50,6 +64,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The sort field. Default value: Position. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Name</description></item>
+        /// <item><description>Position</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Position</para>
         /// </summary>
@@ -58,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the table to which the columns belong. You can call the ListTables operation to query the ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</para>
+        /// <para>The table ID. You can refer to the return result of the ListTables operation. and the <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string InputsShrink { get; set; }
 
         /// <summary>
-        /// <para>The instance generation mode. Valid values:</para>
+        /// <para>The instance generation mode.</para>
         /// <list type="bullet">
         /// <item><description>T+1: the next day</description></item>
         /// <item><description>Immediately</description></item>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The rerun interval. Unit: seconds.</para>
+        /// <para>The rerun interval. Unit: milliseconds. Must not exceed 1800000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of task running. Unit: seconds.</para>
+        /// <para>Task execution timeout in seconds. Must be greater than 3600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>

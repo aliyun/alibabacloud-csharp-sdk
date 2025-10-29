@@ -145,6 +145,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("Owner")]
+                [Validation(Required=false)]
+                public string Owner { get; set; }
+
                 /// <summary>
                 /// <para>The workspace ID.</para>
                 /// 
@@ -185,14 +189,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// <para>The task tag.</para>
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags> Tags { get; set; }
                 public class ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstancesTags : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>key1</para>
+                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>value1</para>
+                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
@@ -217,9 +232,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public long? WorkflowId { get; set; }
 
+                /// <summary>
+                /// <para>The workflow parameters.</para>
+                /// </summary>
                 [NameInMap("WorkflowParameters")]
                 [Validation(Required=false)]
                 public string WorkflowParameters { get; set; }
+
+                [NameInMap("WorkflowTaskInstanceId")]
+                [Validation(Required=false)]
+                public long? WorkflowTaskInstanceId { get; set; }
 
             }
 

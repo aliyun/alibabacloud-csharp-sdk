@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The tasks.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<BatchUpdateTasksRequestTasks> Tasks { get; set; }
         public class BatchUpdateTasksRequestTasks : TeaModel {
             /// <summary>
-            /// <para>The information about the associated data source.</para>
+            /// <para>Associated data source information.</para>
             /// </summary>
             [NameInMap("DataSource")]
             [Validation(Required=false)]
             public BatchUpdateTasksRequestTasksDataSource DataSource { get; set; }
             public class BatchUpdateTasksRequestTasksDataSource : TeaModel {
                 /// <summary>
-                /// <para>The name of the data source.</para>
+                /// <para>The data source name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps_test</para>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The environment of the workspace. Valid values:</para>
+            /// <para>The project environment.</para>
             /// <list type="bullet">
-            /// <item><description>Prod: production environment</description></item>
-            /// <item><description>Dev: development environment</description></item>
+            /// <item><description>Prod: Production</description></item>
+            /// <item><description>Dev: Development</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The rerun interval. Unit: seconds.</para>
+            /// <para>The retry interval in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -113,9 +113,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The rerun mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</description></item>
-            /// <item><description>FailureAllowed: The task can be rerun only after it fails to run.</description></item>
-            /// <item><description>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</description></item>
+            /// <item><description>AllDenied: The task cannot be rerun.</description></item>
+            /// <item><description>FailureAllowed: The task can be rerun only after it fails.</description></item>
+            /// <item><description>AllAllowed: The task can always be rerun.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string RerunMode { get; set; }
 
             /// <summary>
-            /// <para>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</para>
+            /// <para>The number of retry attempts. Takes effect when the task is configured to allow reruns.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? RerunTimes { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the runtime environment, such as the resource group information.</para>
+            /// <para>Runtime environment configurations, such as resource group information.</para>
             /// </summary>
             [NameInMap("RuntimeResource")]
             [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Cu { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the image configured for task running.</para>
+                /// <para>The image ID used in the task runtime configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-xxxxxx</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Image { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource group for scheduling configured for task running.</para>
+                /// <para>The identifier of the scheduling resource group used in the task runtime configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>S_res_group_524258031846018_1684XXXXXXXXX</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The list of task tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The timeout period of task running. Unit: seconds.</para>
+            /// <para>The task execution timeout in seconds. The value should be greater than 3600.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -215,14 +215,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? Timeout { get; set; }
 
             /// <summary>
-            /// <para>The trigger method.</para>
+            /// <para>The task trigger configurations.</para>
             /// </summary>
             [NameInMap("Trigger")]
             [Validation(Required=false)]
             public BatchUpdateTasksRequestTasksTrigger Trigger { get; set; }
             public class BatchUpdateTasksRequestTasksTrigger : TeaModel {
                 /// <summary>
-                /// <para>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</para>
+                /// <para>The cron expression. Takes effect when type=Scheduler.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00 00 00 * * ?</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Cron { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <c>yyyy-mm-dd hh:mm:ss</c>.</para>
+                /// <para>The expiration time of periodic triggering. Takes effect only when type is set to Scheduler. The value of this parameter is in the<c>yyyy-mm-dd hh:mm:ss</c> format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9999-01-01 00:00:00</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Recurrence { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <c>yyyy-mm-dd hh:mm:ss</c>.</para>
+                /// <para>The time when periodic triggering takes effect. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <c>yyyy-mm-dd hh:mm:ss</c> format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1970-01-01 00:00:00</para>
@@ -269,8 +269,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The trigger type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Scheduler: scheduling cycle-based trigger</description></item>
-                /// <item><description>Manual: manual trigger</description></item>
+                /// <item><description>Scheduler: periodically triggered</description></item>
+                /// <item><description>Manual</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

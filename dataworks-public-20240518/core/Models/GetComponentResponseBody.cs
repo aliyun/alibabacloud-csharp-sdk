@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetComponentResponseBody : TeaModel {
+        /// <summary>
+        /// <para>JSON serialization of the component module.</para>
+        /// </summary>
         [NameInMap("Component")]
         [Validation(Required=false)]
         public GetComponentResponseBodyComponent Component { get; set; }
         public class GetComponentResponseBodyComponent : TeaModel {
             /// <summary>
+            /// <para>The ID of the dataset acceleration component. For information on how to obtain the component ID, see <a href="https://help.aliyun.com/document_detail/2979566.html">ListComponents</a>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>43cd873b-235c-44f8-be07-e4d4cf7e73b0</para>
             /// </summary>
@@ -22,6 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ComponentId { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>None</para>
             /// </summary>
@@ -40,6 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The modification time (millisecond-level timestamp).</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>Parameter</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dim_whse_epet_warehouse_jz_storage_stock_lot_relation_id</para>
             /// </summary>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The ID of the task owner.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>207316543660665792</para>
             /// </summary>
@@ -66,6 +79,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Owner { get; set; }
 
             /// <summary>
+            /// <para>The DataWorks workspace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>64623</para>
             /// </summary>
@@ -74,6 +89,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The region ID, such as ap-southeast-1. The region ID is automatically parsed from your endpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -82,6 +99,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The FlowSpec information for this workflow. For more information, see <a href="https://github.com/aliyun/alibabacloud-dataworks-tool-dflow/">FlowSpec</a>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///     &quot;kind&quot;: &quot;Component&quot;,

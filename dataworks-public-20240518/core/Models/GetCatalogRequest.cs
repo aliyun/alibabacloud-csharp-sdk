@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetCatalogRequest : TeaModel {
         /// <summary>
-        /// <para>Data catalog entity ID. Currently, only DLF and StarRocks types are supported. You can refer to the response of the ListCatalogs operation and <a href="https://help.aliyun.com/document_detail/2880092.html">the description of metadata entity concepts.</a></para>
+        /// <para>The catalog entity ID. Currently supports dlf and starrocks types. You can refer to the results returned by the ListCatalogs operation and the <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</para>
         /// <list type="bullet">
         /// <item><description>For the DLF type, the format is <c>dlf-catalog::catalog_id</c>.</description></item>
         /// <item><description>For the StarRocks type, the format is <c>starrocks-catalog:(instance_id|encoded_jdbc_url):catalog_name</c>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Parameter descriptions:\
-        /// <c>catalog_id</c>: The DLF catalog ID.\
-        /// <c>instance_id</c>: The instance ID, required for the data source registered in instance mode.\
-        /// <c>encoded_jdbc_url</c>: The JDBC connection string that has been URL encoded, required for the data source registered via a connection string.\
+        /// <para>\
+        /// <c>catalog_id</c>: The ID of the DLF catalog.\
+        /// <c>instance_id</c>: The instance ID, required if the data source is registered in instance mode.\
+        /// <c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string. Required if the data source is registered in connection string mode.\
         /// <c>catalog_name</c>: The name of the StarRocks catalog.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>

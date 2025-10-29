@@ -1381,7 +1381,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建组件</para>
+        /// <para>Creates components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1431,7 +1431,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建组件</para>
+        /// <para>Creates components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1481,7 +1481,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建组件</para>
+        /// <para>Creates components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1499,7 +1499,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建组件</para>
+        /// <para>Creates components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13509,8 +13509,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取组件信息</para>
+        /// <para>Gets component information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetComponentRequest
@@ -13555,8 +13562,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取组件信息</para>
+        /// <para>Gets component information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetComponentRequest
@@ -13601,8 +13615,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取组件信息</para>
+        /// <para>Gets component information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetComponentRequest
@@ -13619,8 +13640,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取组件信息</para>
+        /// <para>Gets component information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetComponentRequest
@@ -16845,8 +16873,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据表的分区详情</para>
+        /// <para>Retrieves partition details for a data map table. Currently supports MaxCompute and HMS (EMR cluster) types only.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>This operation supports MaxCompute and HMS (EMR cluster) tables only.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPartitionRequest
@@ -16883,8 +16919,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据表的分区详情</para>
+        /// <para>Retrieves partition details for a data map table. Currently supports MaxCompute and HMS (EMR cluster) types only.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>This operation supports MaxCompute and HMS (EMR cluster) tables only.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPartitionRequest
@@ -16921,8 +16965,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据表的分区详情</para>
+        /// <para>Retrieves partition details for a data map table. Currently supports MaxCompute and HMS (EMR cluster) types only.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>This operation supports MaxCompute and HMS (EMR cluster) tables only.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPartitionRequest
@@ -16939,8 +16991,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据表的分区详情</para>
+        /// <para>Retrieves partition details for a data map table. Currently supports MaxCompute and HMS (EMR cluster) types only.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>This API operation is available for all DataWorks editions.</description></item>
+        /// <item><description>This operation supports MaxCompute and HMS (EMR cluster) tables only.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPartitionRequest
@@ -20373,8 +20433,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取组件列表</para>
+        /// <para>Retrieves a list of components.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListComponentsRequest
@@ -20427,8 +20492,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取组件列表</para>
+        /// <para>Retrieves a list of components.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListComponentsRequest
@@ -20481,8 +20551,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取组件列表</para>
+        /// <para>Retrieves a list of components.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListComponentsRequest
@@ -20499,8 +20574,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取组件列表</para>
+        /// <para>Retrieves a list of components.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListComponentsRequest
@@ -23543,7 +23623,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询发布包列表</para>
+        /// <para>Queries a list of deployment packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23621,7 +23701,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询发布包列表</para>
+        /// <para>Queries a list of deployment packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23699,7 +23779,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询发布包列表</para>
+        /// <para>Queries a list of deployment packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23717,7 +23797,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询发布包列表</para>
+        /// <para>Queries a list of deployment packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25491,7 +25571,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过发布流程的ID获取发布内容</para>
+        /// <para>Queries the information about deployment objects by deployment process ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25529,7 +25609,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过发布流程的ID获取发布内容</para>
+        /// <para>Queries the information about deployment objects by deployment process ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25567,7 +25647,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过发布流程的ID获取发布内容</para>
+        /// <para>Queries the information about deployment objects by deployment process ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25585,7 +25665,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过发布流程的ID获取发布内容</para>
+        /// <para>Queries the information about deployment objects by deployment process ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26835,7 +26915,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据表列表</para>
+        /// <para>Queries a list of tables in Data Map. For data source types that do not support schemas, you can call this API operation to query a list of tables in a specific database. For data source types that support schemas, you can call this API operation to query a list of tables in a specific database, MaxCompute project, or schema. Only the basic information about tables is returned. The information about technical metadata and business metadata is not returned.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26879,7 +26959,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据表列表</para>
+        /// <para>Queries a list of tables in Data Map. For data source types that do not support schemas, you can call this API operation to query a list of tables in a specific database. For data source types that support schemas, you can call this API operation to query a list of tables in a specific database, MaxCompute project, or schema. Only the basic information about tables is returned. The information about technical metadata and business metadata is not returned.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26923,7 +27003,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据表列表</para>
+        /// <para>Queries a list of tables in Data Map. For data source types that do not support schemas, you can call this API operation to query a list of tables in a specific database. For data source types that support schemas, you can call this API operation to query a list of tables in a specific database, MaxCompute project, or schema. Only the basic information about tables is returned. The information about technical metadata and business metadata is not returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26941,7 +27021,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据表列表</para>
+        /// <para>Queries a list of tables in Data Map. For data source types that do not support schemas, you can call this API operation to query a list of tables in a specific database. For data source types that support schemas, you can call this API operation to query a list of tables in a specific database, MaxCompute project, or schema. Only the basic information about tables is returned. The information about technical metadata and business metadata is not returned.</para>
         /// </summary>
         /// 
         /// <param name="request">

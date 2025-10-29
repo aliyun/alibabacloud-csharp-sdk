@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetBusinessResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Details of the workflow.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetBusinessResponseBodyData Data { get; set; }
         public class GetBusinessResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The workflow ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000001</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? BusinessId { get; set; }
 
             /// <summary>
+            /// <para>The name of the workflow. Workflow names must be unique within the same workspace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>The first business process</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string BusinessName { get; set; }
 
             /// <summary>
+            /// <para>The description of the workflow.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>This is my first business process.</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The Alibaba Cloud account ID of the workflow owner.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20000****</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Owner { get; set; }
 
             /// <summary>
+            /// <para>The ID of the workspace where the workflow resides.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10000</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The functional module to which the workflow belongs. Valid values: NORMAL (Data Studio) and MANUAL_BIZ (Manually Triggered Workflow)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
             /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Invalid.Tenant.ConnectionNotExists</para>
         /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>The connection does not exist.</para>
         /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID. Used for troubleshooting when an error occurs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
         /// </summary>
@@ -96,6 +119,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: success.</description></item>
+        /// <item><description>false: failure.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

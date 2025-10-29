@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetLineageRelationshipRequest : TeaModel {
         /// <summary>
-        /// <para>The lineage ID. For more information, see the response returned by the ListLineageRelationships operation.</para>
+        /// <para>The lineage ID. You can refer to the return result of the ListLineageRelationships operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

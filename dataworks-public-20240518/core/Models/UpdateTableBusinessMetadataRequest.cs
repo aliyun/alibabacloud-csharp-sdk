@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateTableBusinessMetadataRequest : TeaModel {
         /// <summary>
-        /// <para>The data table ID. You can call the ListTables operation to query the ID.</para>
+        /// <para>The table ID. You can refer to the format of the table ID returned by the ListTables operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The usage notes. The rich text format is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <h2>introduction</h2>
         /// </summary>

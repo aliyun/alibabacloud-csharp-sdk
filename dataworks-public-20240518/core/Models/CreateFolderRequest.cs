@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateFolderRequest : TeaModel {
         /// <summary>
+        /// <para>The path of the folder.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string FolderPath { get; set; }
 
         /// <summary>
+        /// <para>The ID of the DataWorks workspace. You can obtain the workspace ID from the workspace configuration page in the DataWorks console. Either this parameter or <b>ProjectIdentifier</b> must be specified to determine which DataWorks workspace this API call operates on.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10000</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The name of the DataWorks workspace. You can obtain the workspace name from the workspace configuration page in the DataWorks console. Either this parameter or <b>ProjectId</b> must be specified to determine which DataWorks workspace this API call operates on.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>
         /// </summary>

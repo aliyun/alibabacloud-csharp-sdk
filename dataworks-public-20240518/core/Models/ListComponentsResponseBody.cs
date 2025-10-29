@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListComponentsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The pagination information.</para>
+        /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListComponentsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListComponentsResponseBodyPagingInfo : TeaModel {
+            /// <summary>
+            /// <para>The UID of the user who created the dataset acceleration component. In Alibaba Cloud, this is the RAM user ID (or the Alibaba Cloud account ID if created by the account itself).</para>
+            /// </summary>
             [NameInMap("Components")]
             [Validation(Required=false)]
             public List<ListComponentsResponseBodyPagingInfoComponents> Components { get; set; }
             public class ListComponentsResponseBodyPagingInfoComponents : TeaModel {
                 /// <summary>
+                /// <para>The component ID. This parameter can be used in requests to query, modify, or delete director components.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12312313123</para>
                 /// </summary>
@@ -26,6 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ComponentId { get; set; }
 
                 /// <summary>
+                /// <para>The creation time.</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
                 /// 
                 /// <b>Example:</b>
@@ -36,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>对组件的描述</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc peering management_staging</para>
@@ -46,14 +55,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>组件的输入参数列表</para>
+                /// <para>The input parameters.</para>
                 /// </summary>
                 [NameInMap("Inputs")]
                 [Validation(Required=false)]
                 public List<ListComponentsResponseBodyPagingInfoComponentsInputs> Inputs { get; set; }
                 public class ListComponentsResponseBodyPagingInfoComponentsInputs : TeaModel {
                     /// <summary>
-                    /// <para>输入参数的默认值</para>
+                    /// <para>The default value of the variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mdb.shard.2x.2xlarge.d</para>
@@ -63,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string DefaultValue { get; set; }
 
                     /// <summary>
-                    /// <para>输入参数的描述信息</para>
+                    /// <para>The parameter description.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>None</para>
@@ -73,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>输入参数的名称</para>
+                    /// <para>The parameter name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>auto_updateAlertRule_test_bULIRo</para>
@@ -83,7 +92,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>输入参数的数据类型</para>
+                    /// <para>The parameter type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>string</para>
@@ -95,6 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
+                /// <para>The timestamp when the publishing process was modified.</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
                 /// 
                 /// <b>Example:</b>
@@ -105,7 +115,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>代表资源名称的资源属性字段</para>
+                /// <para>The resource name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>auto_updateAlertRule_test_lJd81f</para>
@@ -115,14 +125,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>组件的输出参数列表</para>
+                /// <para>The output parameters.</para>
                 /// </summary>
                 [NameInMap("Outputs")]
                 [Validation(Required=false)]
                 public List<ListComponentsResponseBodyPagingInfoComponentsOutputs> Outputs { get; set; }
                 public class ListComponentsResponseBodyPagingInfoComponentsOutputs : TeaModel {
                     /// <summary>
-                    /// <para>输出参数的默认值</para>
+                    /// <para>The default value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>32000</para>
@@ -132,7 +142,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string DefaultValue { get; set; }
 
                     /// <summary>
-                    /// <para>输出参数的描述信息</para>
+                    /// <para>The parameter description.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>zdy</para>
@@ -142,7 +152,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>输出参数的名称</para>
+                    /// <para>The parameter name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>auto_updateAlertRule_test_bULIRo</para>
@@ -152,7 +162,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>输出参数的数据类型</para>
+                    /// <para>The parameter type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>string</para>
@@ -164,7 +174,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>组件责任人</para>
+                /// <para>The owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>252675537980665607</para>
@@ -174,6 +184,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
+                /// <para>The DataWorks workspace ID. To obtain the workspace ID, log on to the DataWorks console and navigate to the workspace configuration page. You must specify either this parameter or ProjectIdentifier to identify the target DataWorks workspace for this API call.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>199925</para>
                 /// </summary>
@@ -182,7 +194,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>工作流的脚本信息</para>
+                /// <para>The script information.</para>
                 /// </summary>
                 [NameInMap("Script")]
                 [Validation(Required=false)]
@@ -199,7 +211,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>脚本路径</para>
+                    /// <para>The script path.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/</para>
@@ -209,14 +221,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>脚本的运行时信息</para>
+                    /// <para>The runtime.</para>
                     /// </summary>
                     [NameInMap("Runtime")]
                     [Validation(Required=false)]
                     public ListComponentsResponseBodyPagingInfoComponentsScriptRuntime Runtime { get; set; }
                     public class ListComponentsResponseBodyPagingInfoComponentsScriptRuntime : TeaModel {
                         /// <summary>
-                        /// <para>脚本所属类型</para>
+                        /// <para>The command.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>SQL_COMPONENT</para>
@@ -232,6 +244,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -240,6 +254,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -248,6 +264,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -258,6 +276,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The request ID. Use this ID for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>952795279527ab****</para>
         /// </summary>

@@ -99,11 +99,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Normal</description></item>
-        /// <item><description>Manual</description></item>
-        /// <item><description>SmokeTest</description></item>
-        /// <item><description>SupplementData</description></item>
-        /// <item><description>ManualWorkflow</description></item>
+        /// <item><description>Normal: Scheduled execution</description></item>
+        /// <item><description>Manual: Manually triggered node</description></item>
+        /// <item><description>SmokeTest: Smoke test</description></item>
+        /// <item><description>SupplementData: Data backfill</description></item>
+        /// <item><description>ManualWorkflow: Manually triggered workflow</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

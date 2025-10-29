@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateMetaCollectionRequest : TeaModel {
         /// <summary>
+        /// <para>The collection description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test comment</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ID of the collection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the collection of an ancestor node.</para>
+        /// <para>The parent collection ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>category.123</para>
@@ -38,6 +41,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ParentId { get; set; }
 
         /// <summary>
+        /// <para>The collection name.</para>
+        /// <list type="bullet">
+        /// <item><description>Category</description></item>
+        /// <item><description>Album</description></item>
+        /// <item><description>AlbumCategory: Album subcategory.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

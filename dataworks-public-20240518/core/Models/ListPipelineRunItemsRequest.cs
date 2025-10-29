@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListPipelineRunItemsRequest : TeaModel {
         /// <summary>
+        /// <para>The page number, for pagination.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. The number of entries per page. Default: 10. Maximum: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The workflow task ID. To obtain the ID, see <a href="https://help.aliyun.com/document_detail/438042.html">ListPipelineRuns</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string PipelineRunId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the DataWorks workspace. You can obtain the workspace ID from the workspace configuration page in the DataWorks console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

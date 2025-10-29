@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateMetaCollectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the created collection.</para>
+        /// <para>The collection ID returned after a successful creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>category.123</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E6F0DBDD-5AD****</para>

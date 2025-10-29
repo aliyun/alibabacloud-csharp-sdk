@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ImportCertificateRequest : TeaModel {
         /// <summary>
+        /// <para>The certificate file to upload. Upload method: Upload the file by creating an InputStream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,6 +23,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CertificateFile { get; set; }
 
         /// <summary>
+        /// <para>The description of the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>This is a file</para>
         /// </summary>
@@ -30,6 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The certificate file name. In a project workspace, certificate file names must be unique.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace to which the certificate file belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

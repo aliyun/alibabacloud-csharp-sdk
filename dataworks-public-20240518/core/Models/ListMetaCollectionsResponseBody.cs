@@ -10,25 +10,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListMetaCollectionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data.</para>
+        /// <para>Pagination information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListMetaCollectionsResponseBodyData Data { get; set; }
         public class ListMetaCollectionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The collections.</para>
+            /// <para>The list of collections.</para>
             /// </summary>
             [NameInMap("MetaCollections")]
             [Validation(Required=false)]
             public List<ListMetaCollectionsResponseBodyDataMetaCollections> MetaCollections { get; set; }
             public class ListMetaCollectionsResponseBodyDataMetaCollections : TeaModel {
+                /// <summary>
+                /// <para>The list of administrator IDs. Supported only for album types. Administrators must be users within the same tenant. Multiple administrators can be specified.</para>
+                /// </summary>
                 [NameInMap("Administrators")]
                 [Validation(Required=false)]
                 public List<string> Administrators { get; set; }
 
                 /// <summary>
-                /// <para>The time when the collection was created. The value is a UNIX timestamp. Unit: milliseconds.</para>
+                /// <para>The creation time in milliseconds (timestamp).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1668568601000</para>
@@ -38,6 +41,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
+                /// <para>The creator user ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>456789</para>
                 /// </summary>
@@ -45,12 +50,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public string CreateUser { get; set; }
 
+                /// <summary>
+                /// <para>The collection description.</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the collection.</para>
+                /// <para>The collection name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>category.123</para>
@@ -60,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The time when the collection was modified. The value is a UNIX timestamp. Unit: milliseconds.</para>
+                /// <para>The modification time in milliseconds (timestamp).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1668568601000</para>
@@ -70,6 +78,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
+                /// <para>The collection name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test_category</para>
                 /// </summary>
@@ -78,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the collection of the ancestor node. This parameter can be left empty.</para>
+                /// <para>The ID of the parent collection. Can be empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>category.1</para>
@@ -88,6 +98,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ParentId { get; set; }
 
                 /// <summary>
+                /// <para>The collection type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Category</description></item>
+                /// <item><description>Album</description></item>
+                /// <item><description>AlbumCategory: Album subcategory</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Category</para>
                 /// </summary>
@@ -98,6 +115,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -106,6 +125,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -114,6 +135,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -124,7 +147,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E25887B7-579C-54A5-9C4F-83A0DE367DDE</para>

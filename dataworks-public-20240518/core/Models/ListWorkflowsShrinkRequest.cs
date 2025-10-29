@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The trigger type. Valid values:</para>
+        /// <para>The trigger type.</para>
         /// <list type="bullet">
         /// <item><description>Scheduler</description></item>
         /// <item><description>Manual</description></item>

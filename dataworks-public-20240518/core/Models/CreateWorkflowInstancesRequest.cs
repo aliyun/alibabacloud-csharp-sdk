@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The alert notification method. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Sms: SMS only.</description></item>
-                /// <item><description>Mail: mail only.</description></item>
+                /// <item><description>Mail: Mail only.</description></item>
                 /// <item><description>SmsMail: SMS and mail.</description></item>
                 /// </list>
                 /// 
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The analysis configuration. Required when Type is set to SupplementData.</para>
+            /// <para>The analysis configuration. Required when Type = SupplementData.</para>
             /// </summary>
             [NameInMap("Analysis")]
             [Validation(Required=false)]
             public CreateWorkflowInstancesRequestDefaultRunPropertiesAnalysis Analysis { get; set; }
             public class CreateWorkflowInstancesRequestDefaultRunPropertiesAnalysis : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to block execution if the analysis fails. Required when Type is set to SupplementData.</para>
+                /// <para>Specifies whether to block execution if the analysis fails. Required when Type = SupplementData.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? Blocked { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the analysis feature. Required when Type is set to SupplementData.</para>
+                /// <para>Specifies whether to enable the analysis feature. Required when Type = SupplementData.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public CreateWorkflowInstancesRequestDefaultRunPropertiesRunPolicy RunPolicy { get; set; }
             public class CreateWorkflowInstancesRequestDefaultRunPropertiesRunPolicy : TeaModel {
                 /// <summary>
-                /// <para>The end time of running. Configure this parameter in the <c>hh:mm:ss</c> format (24-hour clock). This parameter is required if you configure the RunPolicy parameter.</para>
+                /// <para>The end time of running. Configure this parameter in the <c>hh:mm:ss</c> format (24-hour clock). This parameter is required if you configure the RunPolicy parameter. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>23:59:59</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>Custom scheduling resource group ID. If left empty, the task configuration is used.</para>
+            /// <para>The custom scheduling resource group ID. If left empty, the task configuration is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>S_res_group_524258031846018_1684XXXXXXXXX</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The project environment.</para>
+        /// <para>The project environment. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Prod</description></item>
         /// <item><description>Dev</description></item>
@@ -433,9 +433,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SupplementData: Data backfill. The usage of RootTaskIds and IncludeTaskIds varies based on the backfill mode. See the description of the DefaultRunProperties.Mode parameter.</description></item>
-        /// <item><description>ManualWorkflow: Manual workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</description></item>
+        /// <item><description>ManualWorkflow: Manually triggered workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</description></item>
         /// <item><description>Manual: Manual task. You only need to specify RootTaskIds. This is the list of manual tasks to run.</description></item>
         /// <item><description>SmokeTest: Smoke test. You only need to specify RootTaskIds. This is the list of test tasks to run.</description></item>
+        /// <item><description>TriggerWorkflow: Triggered Workflow You must specify the WorkflowId of the triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow runs.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -458,7 +459,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? WorkflowId { get; set; }
 
         /// <summary>
-        /// <para>The workflow parameters. This parameter takes effect only when you set the <c>WorkflowId</c> parameter to a value other than 1. If your workflow is an auto triggered workflow, configure this parameter in the key=value format. The parameters that you configure in this parameter have a lower priority than task parameters. If your workflow is a manually triggered workflow, configure this parameter in the JSON format. The parameters that you configure in this parameter have a higher priority than task parameters.</para>
+        /// <para>The workflow parameters. This parameter takes effect when a specific workflow is specified (<c>WorkflowId != 1</c>). For scheduled workflows and triggered workflows, the format is key=value, and these parameters have lower priority than task parameters. For manual workflows, the format is JSON, and these parameters have higher priority than task parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ 
