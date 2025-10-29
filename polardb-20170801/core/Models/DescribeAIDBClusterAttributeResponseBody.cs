@@ -165,6 +165,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>101.101.101.101</para>
+            /// </summary>
+            [NameInMap("PublicIp")]
+            [Validation(Required=false)]
+            public string PublicIp { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>vn-***************</para>
             /// </summary>
             [NameInMap("VNodeId")]
