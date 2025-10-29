@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
-    public class GenericSearchRequest : TeaModel {
+    public class GenericSearchShrinkRequest : TeaModel {
         [NameInMap("advancedParams")]
         [Validation(Required=false)]
-        public Dictionary<string, object> AdvancedParams { get; set; }
+        public string AdvancedParamsShrink { get; set; }
 
         [NameInMap("enableRerank")]
         [Validation(Required=false)]

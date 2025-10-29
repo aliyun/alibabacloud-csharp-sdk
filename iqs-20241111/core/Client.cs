@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.IQS20241111
         /// <para>通用搜索</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GenericSearchRequest
         /// </param>
         /// <param name="headers">
@@ -371,10 +371,20 @@ namespace AlibabaCloud.SDK.IQS20241111
         /// <returns>
         /// GenericSearchResponse
         /// </returns>
-        public GenericSearchResponse GenericSearchWithOptions(GenericSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GenericSearchResponse GenericSearchWithOptions(GenericSearchRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GenericSearchShrinkRequest request = new GenericSearchShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdvancedParams))
+            {
+                request.AdvancedParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdvancedParams, "advancedParams", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedParamsShrink))
+            {
+                query["advancedParams"] = request.AdvancedParamsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableRerank))
             {
                 query["enableRerank"] = request.EnableRerank;
@@ -440,7 +450,7 @@ namespace AlibabaCloud.SDK.IQS20241111
         /// <para>通用搜索</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GenericSearchRequest
         /// </param>
         /// <param name="headers">
@@ -453,10 +463,20 @@ namespace AlibabaCloud.SDK.IQS20241111
         /// <returns>
         /// GenericSearchResponse
         /// </returns>
-        public async Task<GenericSearchResponse> GenericSearchWithOptionsAsync(GenericSearchRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GenericSearchResponse> GenericSearchWithOptionsAsync(GenericSearchRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GenericSearchShrinkRequest request = new GenericSearchShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdvancedParams))
+            {
+                request.AdvancedParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdvancedParams, "advancedParams", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedParamsShrink))
+            {
+                query["advancedParams"] = request.AdvancedParamsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableRerank))
             {
                 query["enableRerank"] = request.EnableRerank;
@@ -965,6 +985,126 @@ namespace AlibabaCloud.SDK.IQS20241111
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ReadPageBasicWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>动态页面解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadPageScrapeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadPageScrapeResponse
+        /// </returns>
+        public ReadPageScrapeResponse ReadPageScrapeWithOptions(ReadPageScrapeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadPageScrape",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/iqs/readpage/scrape",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadPageScrapeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>动态页面解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadPageScrapeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadPageScrapeResponse
+        /// </returns>
+        public async Task<ReadPageScrapeResponse> ReadPageScrapeWithOptionsAsync(ReadPageScrapeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadPageScrape",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/iqs/readpage/scrape",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadPageScrapeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>动态页面解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadPageScrapeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadPageScrapeResponse
+        /// </returns>
+        public ReadPageScrapeResponse ReadPageScrape(ReadPageScrapeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ReadPageScrapeWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>动态页面解析</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadPageScrapeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadPageScrapeResponse
+        /// </returns>
+        public async Task<ReadPageScrapeResponse> ReadPageScrapeAsync(ReadPageScrapeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ReadPageScrapeWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string RawHtml { get; set; }
 
+        [NameInMap("screenshot")]
+        [Validation(Required=false)]
+        public string Screenshot { get; set; }
+
         [NameInMap("statusCode")]
         [Validation(Required=false)]
         public int? StatusCode { get; set; }
