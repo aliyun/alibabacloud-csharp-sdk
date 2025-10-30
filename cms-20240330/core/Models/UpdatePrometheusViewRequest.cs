@@ -10,14 +10,27 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdatePrometheusViewRequest : TeaModel {
         /// <summary>
+        /// <para>Password-free read policy (supports IP segments and VpcId).</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>0.0.0.0/0</para>
+        /// <para>{
+        ///   &quot;SourceIp&quot;: [
+        ///     &quot;192.168.1.0/24&quot;,
+        ///     &quot;172.168.2.22&quot;
+        ///   ],
+        ///   &quot;SourceVpc&quot;: [
+        ///     &quot;vpc-xx1&quot;,
+        ///     &quot;vpc-xx2&quot;
+        ///   ]
+        /// }</para>
         /// </summary>
         [NameInMap("authFreeReadPolicy")]
         [Validation(Required=false)]
         public string AuthFreeReadPolicy { get; set; }
 
         /// <summary>
+        /// <para>Whether to support password-free read.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +39,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthFreeRead { get; set; }
 
         /// <summary>
+        /// <para>Whether to support authToken.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -33,11 +48,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public bool? EnableAuthToken { get; set; }
 
+        /// <summary>
+        /// <para>List of Prometheus instances.</para>
+        /// </summary>
         [NameInMap("prometheusInstances")]
         [Validation(Required=false)]
         public List<UpdatePrometheusViewRequestPrometheusInstances> PrometheusInstances { get; set; }
         public class UpdatePrometheusViewRequestPrometheusInstances : TeaModel {
             /// <summary>
+            /// <para>Instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>c7ba84651c71e442c8d0653085d862164</para>
             /// </summary>
@@ -46,6 +66,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusInstanceId { get; set; }
 
             /// <summary>
+            /// <para>Region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-north-2-gov-1</para>
             /// </summary>
@@ -54,6 +76,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>User ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>16727123456789</para>
             /// </summary>
@@ -64,6 +88,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
+        /// <para>Prometheus view name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-prom-view-name</para>
         /// </summary>
@@ -72,6 +98,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusViewName { get; set; }
 
         /// <summary>
+        /// <para>Running status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Running</para>
         /// </summary>
@@ -80,6 +108,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>Belonging workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default-cms-108490012345-cn-heyuan</para>
         /// </summary>

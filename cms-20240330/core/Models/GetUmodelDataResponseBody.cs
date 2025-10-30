@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetUmodelDataResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Error information</para>
+        /// </summary>
         [NameInMap("errors")]
         [Validation(Required=false)]
         public List<GetUmodelDataResponseBodyErrors> Errors { get; set; }
         public class GetUmodelDataResponseBodyErrors : TeaModel {
             /// <summary>
+            /// <para>Details.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ok</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Message { get; set; }
 
             /// <summary>
+            /// <para>Error type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>external</para>
             /// </summary>
@@ -31,15 +38,23 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         }
 
+        /// <summary>
+        /// <para>List of node link relationships</para>
+        /// </summary>
         [NameInMap("links")]
         [Validation(Required=false)]
         public List<object> Links { get; set; }
 
+        /// <summary>
+        /// <para>List of nodes</para>
+        /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]
         public List<object> Nodes { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123-123-234-345-123</para>
         /// </summary>
@@ -48,6 +63,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total number of node links</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -56,6 +73,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? TotalLinksCount { get; set; }
 
         /// <summary>
+        /// <para>Total number of nodes</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

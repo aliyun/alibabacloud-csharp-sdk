@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAddonReleasesRequest : TeaModel {
         /// <summary>
+        /// <para>Addon component name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cs-gpu</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AddonName { get; set; }
 
         /// <summary>
+        /// <para>Parent AddonReleaseId.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>policy-xxxxxxxxxxxxx</para>
         /// </summary>

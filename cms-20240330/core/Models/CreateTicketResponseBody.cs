@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateTicketResponseBody : TeaModel {
         /// <summary>
+        /// <para>免登录票据。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eyJ***************.eyJ******************.KUT****************</para>
         /// </summary>

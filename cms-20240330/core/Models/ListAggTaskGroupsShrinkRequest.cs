@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAggTaskGroupsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>List of IDs for the aggregation task groups, which must be JSON parseable.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;aggTaskGroup-xxx&quot;]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string FilterAggTaskGroupIds { get; set; }
 
         /// <summary>
+        /// <para>List of names for the aggregation task groups, which must be JSON parseable.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;apiserver_request_total&quot;]</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string FilterAggTaskGroupNames { get; set; }
 
         /// <summary>
+        /// <para>Maximum number of records to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Query token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>28036394xxx</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Name search, supports fuzzy matching.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>Status of the aggregation task group, either \&quot;Running\&quot; or \&quot;Stopped\&quot;. Default is Running.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Running</para>
         /// </summary>
@@ -57,11 +69,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>Resource group tags.</para>
+        /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
+        /// <para>The target Prometheus instance ID for the aggregation task group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rw-pq4apob9jm</para>
         /// </summary>

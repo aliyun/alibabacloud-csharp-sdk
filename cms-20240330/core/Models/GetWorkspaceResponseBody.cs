@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetWorkspaceResponseBody : TeaModel {
         /// <summary>
+        /// <para>Creation Time</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>工作空间描述</para>
+        /// <para>Workspace Description</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace test</para>
@@ -30,6 +31,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Workspace Display Name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>
         /// </summary>
@@ -38,6 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>Last Modified Time</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string LastModifyTime { get; set; }
 
         /// <summary>
-        /// <para>地域ID</para>
+        /// <para>Region ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-heyuan</para>
@@ -58,6 +62,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>
         /// </summary>
@@ -66,7 +72,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>工作空间绑定的日志服务项目名称</para>
+        /// <para>Log Service Project Name</para>
         /// 
         /// <b>Example:</b>
         /// <para>sls-project-test-001</para>
@@ -76,7 +82,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SlsProject { get; set; }
 
         /// <summary>
-        /// <para>工作空间名称</para>
+        /// <para>Workspace Name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

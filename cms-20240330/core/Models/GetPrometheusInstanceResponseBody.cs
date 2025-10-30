@@ -9,11 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetPrometheusInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Details of the Prometheus instance.</para>
+        /// </summary>
         [NameInMap("prometheusInstance")]
         [Validation(Required=false)]
         public GetPrometheusInstanceResponseBodyPrometheusInstance PrometheusInstance { get; set; }
         public class GetPrometheusInstanceResponseBodyPrometheusInstance : TeaModel {
             /// <summary>
+            /// <para>Access type:
+            /// readWrite, readOnly, httpReadOnly</para>
+            /// 
             /// <b>Example:</b>
             /// <para>readOnly</para>
             /// </summary>
@@ -22,30 +28,56 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AccessType { get; set; }
 
             /// <summary>
+            /// <para>Number of days to automatically archive and save after storage expiration. 0 means no archiving, 3650 means permanent saving.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>165</para>
+            /// <para>90</para>
             /// </summary>
             [NameInMap("archiveDuration")]
             [Validation(Required=false)]
             public int? ArchiveDuration { get; set; }
 
             /// <summary>
+            /// <para>Password-free read policy (supports IP segments and VpcId).</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>0.0.0.0/0</para>
+            /// <para>{
+            ///   &quot;SourceIp&quot;: [
+            ///     &quot;192.168.1.0/24&quot;,
+            ///     &quot;172.168.2.22&quot;
+            ///   ],
+            ///   &quot;SourceVpc&quot;: [
+            ///     &quot;vpc-xx1&quot;,
+            ///     &quot;vpc-xx2&quot;
+            ///   ]
+            /// }</para>
             /// </summary>
             [NameInMap("authFreeReadPolicy")]
             [Validation(Required=false)]
             public string AuthFreeReadPolicy { get; set; }
 
             /// <summary>
+            /// <para>Password-free write policy (supports IP segments and VpcId).</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>0.0.0.0/0</para>
+            /// <para>{
+            ///   &quot;SourceIp&quot;: [
+            ///     &quot;192.168.1.0/24&quot;,
+            ///     &quot;172.168.2.22&quot;
+            ///   ],
+            ///   &quot;SourceVpc&quot;: [
+            ///     &quot;vpc-xx1&quot;,
+            ///     &quot;vpc-xx2&quot;
+            ///   ]
+            /// }</para>
             /// </summary>
             [NameInMap("authFreeWritePolicy")]
             [Validation(Required=false)]
             public string AuthFreeWritePolicy { get; set; }
 
             /// <summary>
+            /// <para>authToken string.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>eJwixxxxx</para>
             /// </summary>
@@ -54,6 +86,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AuthToken { get; set; }
 
             /// <summary>
+            /// <para>Instance creation time, using UTC+0, formatted as yyyy-MM-ddTHH:mmZ.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-08-10T02:07:53Z</para>
             /// </summary>
@@ -62,6 +96,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>Whether to enable password-free reading.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -70,6 +106,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? EnableAuthFreeRead { get; set; }
 
             /// <summary>
+            /// <para>Whether to enable password-free writing.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -78,6 +116,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? EnableAuthFreeWrite { get; set; }
 
             /// <summary>
+            /// <para>Whether to enable authentication token.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -85,11 +125,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public bool? EnableAuthToken { get; set; }
 
+            /// <summary>
+            /// <para>Additional information.</para>
+            /// </summary>
             [NameInMap("extraInfo")]
             [Validation(Required=false)]
             public Dictionary<string, string> ExtraInfo { get; set; }
 
             /// <summary>
+            /// <para>URL of the visualization dashboard directory.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://gnew.console.aliyun.com/dashboards/f/c49a80d2a551d4a20a8c4b996b0be4e52/xxxxxxx">https://gnew.console.aliyun.com/dashboards/f/c49a80d2a551d4a20a8c4b996b0be4e52/xxxxxxx</a></para>
             /// </summary>
@@ -98,6 +143,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string FolderUrl { get; set; }
 
             /// <summary>
+            /// <para>ID of the managed Grafana instance that is bound.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SHARED</para>
             /// </summary>
@@ -105,11 +152,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string GrafanaInstanceId { get; set; }
 
+            /// <summary>
+            /// <para>Name of the managed Grafana instance that is bound.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>共享版</para>
+            /// </summary>
             [NameInMap("grafanaInstanceName")]
             [Validation(Required=false)]
             public string GrafanaInstanceName { get; set; }
 
             /// <summary>
+            /// <para>HTTP public network address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></para>
             /// </summary>
@@ -118,6 +173,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string HttpApiInterUrl { get; set; }
 
             /// <summary>
+            /// <para>HTTP intranet address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></para>
             /// </summary>
@@ -126,40 +183,50 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string HttpApiIntraUrl { get; set; }
 
             /// <summary>
-            /// <para>remote-write（Prometheus for Remote Write）</para>
+            /// <para>Prometheus instance type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>e1</para>
+            /// <para>remote-write</para>
             /// </summary>
             [NameInMap("instanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
             /// <summary>
+            /// <para>Billing method:
+            /// POSTPAY: Pay-as-you-go based on metric reporting volume.
+            /// POSTPAY_GB: Pay-as-you-go based on metric write volume.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>prepaid</para>
+            /// <para>POSTPAY</para>
             /// </summary>
             [NameInMap("paymentType")]
             [Validation(Required=false)]
             public string PaymentType { get; set; }
 
             /// <summary>
+            /// <para>Time when the billing method of the instance was updated.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>null</para>
+            /// <para>2025-08-10T02:07:53Z</para>
             /// </summary>
             [NameInMap("paymentTypeUpdateTime")]
             [Validation(Required=false)]
             public string PaymentTypeUpdateTime { get; set; }
 
             /// <summary>
+            /// <para>The product to which the Prometheus instance belongs (arms or cms).</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>NAS</para>
+            /// <para>cms</para>
             /// </summary>
             [NameInMap("product")]
             [Validation(Required=false)]
             public string Product { get; set; }
 
             /// <summary>
+            /// <para>Instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rw-524ada714221af267c73122af2e1</para>
             /// </summary>
@@ -168,6 +235,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusInstanceId { get; set; }
 
             /// <summary>
+            /// <para>Instance name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-prom-name</para>
             /// </summary>
@@ -176,6 +245,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusInstanceName { get; set; }
 
             /// <summary>
+            /// <para>Public network address of PushGateway.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></para>
             /// </summary>
@@ -184,6 +255,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PushGatewayInterUrl { get; set; }
 
             /// <summary>
+            /// <para>Intranet address of PushGateway.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></para>
             /// </summary>
@@ -192,6 +265,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PushGatewayIntraUrl { get; set; }
 
             /// <summary>
+            /// <para>Region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-heyuan</para>
             /// </summary>
@@ -200,6 +275,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>Public network read address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://workspace-default-cms-xxxxxxx">http://workspace-default-cms-xxxxxxx</a></para>
             /// </summary>
@@ -208,6 +285,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RemoteReadInterUrl { get; set; }
 
             /// <summary>
+            /// <para>Intranet read address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://workspace-default-cms-1xxxxxxxxxx">https://workspace-default-cms-1xxxxxxxxxx</a></para>
             /// </summary>
@@ -216,6 +295,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RemoteReadIntraUrl { get; set; }
 
             /// <summary>
+            /// <para>Public network write address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://workspace-default-cms-xxxxxxxxxx">https://workspace-default-cms-xxxxxxxxxx</a></para>
             /// </summary>
@@ -224,6 +305,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RemoteWriteInterUrl { get; set; }
 
             /// <summary>
+            /// <para>Intranet write address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://workspace-default-cms-xxxxxxxxxx">https://workspace-default-cms-xxxxxxxxxx</a></para>
             /// </summary>
@@ -232,6 +315,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RemoteWriteIntraUrl { get; set; }
 
             /// <summary>
+            /// <para>Resource group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rg-acfm3gn5i6bigbi</para>
             /// </summary>
@@ -240,6 +325,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
+            /// <para>Fixed value: PrometheusInstance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Prometheus</para>
             /// </summary>
@@ -248,6 +335,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceType { get; set; }
 
             /// <summary>
+            /// <para>Instance status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Running</para>
             /// </summary>
@@ -256,6 +345,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>Storage duration (in days).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>90</para>
             /// </summary>
@@ -263,15 +354,23 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public int? StorageDuration { get; set; }
 
+            /// <summary>
+            /// <para>Supported authentication types.</para>
+            /// </summary>
             [NameInMap("supportAuthTypes")]
             [Validation(Required=false)]
             public List<string> SupportAuthTypes { get; set; }
 
+            /// <summary>
+            /// <para>List of tags.</para>
+            /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<GetPrometheusInstanceResponseBodyPrometheusInstanceTags> Tags { get; set; }
             public class GetPrometheusInstanceResponseBodyPrometheusInstanceTags : TeaModel {
                 /// <summary>
+                /// <para>Tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>openStorage</para>
                 /// </summary>
@@ -280,6 +379,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>Matched value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>130303196111114281</para>
                 /// </summary>
@@ -290,6 +391,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
+            /// <para>User ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>170731234567</para>
             /// </summary>
@@ -298,18 +401,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>Version.</para>
+            /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>V1</para>
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]
             public string Version { get; set; }
 
             /// <summary>
+            /// <para>The workspace to which the Prometheus instance belongs.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>rum-monitor-test-aysls-pub-cn-qingdao-monitor</para>
+            /// <para>ws1</para>
             /// </summary>
             [NameInMap("workspace")]
             [Validation(Required=false)]
@@ -318,7 +423,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>Unique identifier for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>

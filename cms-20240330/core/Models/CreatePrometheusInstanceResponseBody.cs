@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreatePrometheusInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rw-abc123</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>264C3E89-BE6E-5F82-A484-CE9C2196C7DC</para>

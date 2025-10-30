@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusVirtualInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>Optional cloud product</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ack-csi-fuse</para>
         /// </summary>

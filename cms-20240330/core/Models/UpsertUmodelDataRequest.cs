@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpsertUmodelDataRequest : TeaModel {
+        /// <summary>
+        /// <para>Element content</para>
+        /// </summary>
         [NameInMap("elements")]
         [Validation(Required=false)]
         public List<object> Elements { get; set; }
 
         /// <summary>
+        /// <para>Method</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Upsert</para>
         /// </summary>

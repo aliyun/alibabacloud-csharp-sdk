@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
+        /// <para>Content encoding type for the compression algorithm</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gzip</para>
         /// </summary>

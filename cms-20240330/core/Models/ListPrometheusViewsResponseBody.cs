@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusViewsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Maximum number of records to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// 
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Token for the next query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2-ba4d-4b9f-aa24-dcb067a30f1c</para>
         /// </summary>
@@ -28,11 +32,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>List of Prometheus view instances.</para>
+        /// </summary>
         [NameInMap("prometheusViews")]
         [Validation(Required=false)]
         public List<ListPrometheusViewsResponseBodyPrometheusViews> PrometheusViews { get; set; }
         public class ListPrometheusViewsResponseBodyPrometheusViews : TeaModel {
             /// <summary>
+            /// <para>Instance creation time, using UTC+0 time, formatted as yyyy-MM-ddTHH:mmZ</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-07-12T02:18:36Z</para>
             /// </summary>
@@ -41,6 +50,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>Instance type:
+            /// prom-view: new version aggregated view
+            /// global-view: old version aggregated view</para>
+            /// 
             /// <b>Example:</b>
             /// <para>prom-view</para>
             /// </summary>
@@ -49,6 +62,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceType { get; set; }
 
             /// <summary>
+            /// <para>Payment type. Currently, the fixed value is FREE (free).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>FREE</para>
             /// </summary>
@@ -57,6 +72,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PaymentType { get; set; }
 
             /// <summary>
+            /// <para>Product that the prom instance belongs to (arms or cms).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cms</para>
             /// </summary>
@@ -65,6 +82,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Product { get; set; }
 
             /// <summary>
+            /// <para>Number of Prometheus instances in the view.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -73,6 +92,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? PrometheusInstanceCount { get; set; }
 
             /// <summary>
+            /// <para>Prometheus view ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>view-xxx</para>
             /// </summary>
@@ -81,6 +102,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusViewId { get; set; }
 
             /// <summary>
+            /// <para>Prometheus view name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>view1</para>
             /// </summary>
@@ -89,6 +112,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusViewName { get; set; }
 
             /// <summary>
+            /// <para>Region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-zhangjiakou</para>
             /// </summary>
@@ -97,6 +122,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>Resource group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rg-acfm3gn5i6bigbi</para>
             /// </summary>
@@ -105,6 +132,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
+            /// <para>Fixed value: PrometheusView.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PrometheusView</para>
             /// </summary>
@@ -113,6 +142,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceType { get; set; }
 
             /// <summary>
+            /// <para>Backend data storage status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Running</para>
             /// </summary>
@@ -120,11 +151,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>Tag values.</para>
+            /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<ListPrometheusViewsResponseBodyPrometheusViewsTags> Tags { get; set; }
             public class ListPrometheusViewsResponseBodyPrometheusViewsTags : TeaModel {
                 /// <summary>
+                /// <para>Tag key</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>key1</para>
                 /// </summary>
@@ -133,6 +169,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>Match value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>value1</para>
                 /// </summary>
@@ -143,6 +181,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
+            /// <para>User ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123xxx</para>
             /// </summary>
@@ -151,6 +191,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>Version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>V2</para>
             /// </summary>
@@ -159,6 +201,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Version { get; set; }
 
             /// <summary>
+            /// <para>Workspace that the prom instance belongs to.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>default-cms-1490404746278495-cn-hangzhou</para>
             /// </summary>
@@ -169,7 +213,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>0CEC5375-C554-562B-A65F-9A629907C1F0</para>
@@ -179,6 +223,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total number of instances</para>
+        /// 
         /// <b>Example:</b>
         /// <para>66</para>
         /// </summary>

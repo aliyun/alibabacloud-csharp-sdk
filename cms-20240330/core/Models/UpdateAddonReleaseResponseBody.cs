@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateAddonReleaseResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9F00A7AF-2728-5424-B321-79D39C00A1EC</para>
         /// </summary>

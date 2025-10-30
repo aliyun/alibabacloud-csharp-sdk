@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateServiceResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123-0F43-23423-AC43-34234</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Service ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>em87vd@c2e25bcfe0e21ce0***</para>
         /// </summary>

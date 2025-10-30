@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListIntegrationPolicyPodMonitorsRequest : TeaModel {
         /// <summary>
+        /// <para>Addon Release name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>release-123456789</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AddonReleaseName { get; set; }
 
         /// <summary>
+        /// <para>Whether to encrypt Yaml.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EncryptYaml { get; set; }
 
         /// <summary>
+        /// <para>Namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
