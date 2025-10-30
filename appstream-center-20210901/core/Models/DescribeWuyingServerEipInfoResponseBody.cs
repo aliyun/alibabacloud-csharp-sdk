@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DescribeWuyingServerEipInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the associated EIP.</para>
+        /// </summary>
         [NameInMap("EipInfoModel")]
         [Validation(Required=false)]
         public DescribeWuyingServerEipInfoResponseBodyEipInfoModel EipInfoModel { get; set; }
         public class DescribeWuyingServerEipInfoResponseBodyEipInfoModel : TeaModel {
             /// <summary>
+            /// <para>The public IP address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>171.xxx.xxx.221</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string IpAddress { get; set; }
 
             /// <summary>
+            /// <para>The ID of the elastic network interface (ENI).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>eni-bp174p2xxxxxbyh02ix</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string NetworkInterfaceId { get; set; }
 
             /// <summary>
+            /// <para>The port range.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6606/6607</para>
             /// </summary>

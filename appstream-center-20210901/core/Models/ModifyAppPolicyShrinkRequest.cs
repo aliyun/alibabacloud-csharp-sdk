@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyAppPolicyShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The policy ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppPolicyId { get; set; }
 
         /// <summary>
+        /// <para>The product type.</para>
+        /// <para>Enumerated values:</para>
+        /// <list type="bullet">
+        /// <item><description>CloudApp: RDS Cloud App</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,6 +35,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
+        /// <summary>
+        /// <para>Displays the policy.</para>
+        /// </summary>
         [NameInMap("VideoPolicy")]
         [Validation(Required=false)]
         public string VideoPolicyShrink { get; set; }

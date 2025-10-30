@@ -799,7 +799,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例创建镜像</para>
+        /// <para>Create a custom image from a deployed instance. This allows you to quickly create more instances with the same configurations and avoid repeatedly configuring the instance environment each time you create the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -873,7 +873,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例创建镜像</para>
+        /// <para>Create a custom image from a deployed instance. This allows you to quickly create more instances with the same configurations and avoid repeatedly configuring the instance environment each time you create the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -947,7 +947,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例创建镜像</para>
+        /// <para>Create a custom image from a deployed instance. This allows you to quickly create more instances with the same configurations and avoid repeatedly configuring the instance environment each time you create the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -965,7 +965,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例创建镜像</para>
+        /// <para>Create a custom image from a deployed instance. This allows you to quickly create more instances with the same configurations and avoid repeatedly configuring the instance environment each time you create the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1119,8 +1119,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一台或多台研发主机</para>
+        /// <para>Create one or more workstations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>Project is equivalent to the Resource Configuration module of the Cloud Flow console</description></item>
+        /// <item><description>If there are multiple versions behind the input parameter ContentId:
+        /// **
+        /// <b>Note</b> The default version is used.
+        /// Bind simultaneously</description></item>
+        /// <item><description>You can call the current interface only if the default version of Content is available.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWuyingServerRequest
@@ -1261,8 +1273,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一台或多台研发主机</para>
+        /// <para>Create one or more workstations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>Project is equivalent to the Resource Configuration module of the Cloud Flow console</description></item>
+        /// <item><description>If there are multiple versions behind the input parameter ContentId:
+        /// **
+        /// <b>Note</b> The default version is used.
+        /// Bind simultaneously</description></item>
+        /// <item><description>You can call the current interface only if the default version of Content is available.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWuyingServerRequest
@@ -1403,8 +1427,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一台或多台研发主机</para>
+        /// <para>Create one or more workstations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>Project is equivalent to the Resource Configuration module of the Cloud Flow console</description></item>
+        /// <item><description>If there are multiple versions behind the input parameter ContentId:
+        /// **
+        /// <b>Note</b> The default version is used.
+        /// Bind simultaneously</description></item>
+        /// <item><description>You can call the current interface only if the default version of Content is available.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWuyingServerRequest
@@ -1421,8 +1457,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一台或多台研发主机</para>
+        /// <para>Create one or more workstations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>Project is equivalent to the Resource Configuration module of the Cloud Flow console</description></item>
+        /// <item><description>If there are multiple versions behind the input parameter ContentId:
+        /// **
+        /// <b>Note</b> The default version is used.
+        /// Bind simultaneously</description></item>
+        /// <item><description>You can call the current interface only if the default version of Content is available.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWuyingServerRequest
@@ -1749,6 +1797,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             return await DeleteAppInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a custom RDS image</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can only delete custom images to which a user belongs.</para>
+        /// <list type="bullet">
+        /// <item><description>If the product line is an image of the RDS cloud computer pool, RDS cloud application, and RDS workstation, make sure that no RDS instances use the image before you delete it.</description></item>
+        /// <item><description>The RDS CloudDesktop template references an image. When you delete an image, the template is also deleted.</description></item>
+        /// <item><description>If the image contains multiple regions, the images in all regions are deleted when the image is deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteImageRequest
         /// </param>
@@ -1786,6 +1849,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             return TeaModel.ToObject<DeleteImageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a custom RDS image</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can only delete custom images to which a user belongs.</para>
+        /// <list type="bullet">
+        /// <item><description>If the product line is an image of the RDS cloud computer pool, RDS cloud application, and RDS workstation, make sure that no RDS instances use the image before you delete it.</description></item>
+        /// <item><description>The RDS CloudDesktop template references an image. When you delete an image, the template is also deleted.</description></item>
+        /// <item><description>If the image contains multiple regions, the images in all regions are deleted when the image is deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteImageRequest
         /// </param>
@@ -1823,6 +1901,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             return TeaModel.ToObject<DeleteImageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a custom RDS image</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can only delete custom images to which a user belongs.</para>
+        /// <list type="bullet">
+        /// <item><description>If the product line is an image of the RDS cloud computer pool, RDS cloud application, and RDS workstation, make sure that no RDS instances use the image before you delete it.</description></item>
+        /// <item><description>The RDS CloudDesktop template references an image. When you delete an image, the template is also deleted.</description></item>
+        /// <item><description>If the image contains multiple regions, the images in all regions are deleted when the image is deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteImageRequest
         /// </param>
@@ -1836,6 +1929,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             return DeleteImageWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a custom RDS image</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can only delete custom images to which a user belongs.</para>
+        /// <list type="bullet">
+        /// <item><description>If the product line is an image of the RDS cloud computer pool, RDS cloud application, and RDS workstation, make sure that no RDS instances use the image before you delete it.</description></item>
+        /// <item><description>The RDS CloudDesktop template references an image. When you delete an image, the template is also deleted.</description></item>
+        /// <item><description>If the image contains multiple regions, the images in all regions are deleted when the image is deleted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteImageRequest
         /// </param>
@@ -1853,6 +1961,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <summary>
         /// <para>删除工作站</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a workstation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWuyingServerRequest
@@ -1896,6 +2009,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>删除工作站</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a workstation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteWuyingServerRequest
         /// </param>
@@ -1938,6 +2056,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>删除工作站</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a workstation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteWuyingServerRequest
         /// </param>
@@ -1956,6 +2079,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>删除工作站</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a workstation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteWuyingServerRequest
         /// </param>
@@ -1971,7 +2099,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询无影工作站EIP信息</para>
+        /// <para>Queries the Elastic IP Addresses (EIPs) of workstations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2017,7 +2145,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询无影工作站EIP信息</para>
+        /// <para>Queries the Elastic IP Addresses (EIPs) of workstations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2063,7 +2191,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询无影工作站EIP信息</para>
+        /// <para>Queries the Elastic IP Addresses (EIPs) of workstations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2081,7 +2209,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询无影工作站EIP信息</para>
+        /// <para>Queries the Elastic IP Addresses (EIPs) of workstations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3423,7 +3551,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过交付组查询展示授权的用户组列表</para>
+        /// <para>Queries the user groups authorized by a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3485,7 +3613,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过交付组查询展示授权的用户组列表</para>
+        /// <para>Queries the user groups authorized by a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3547,7 +3675,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过交付组查询展示授权的用户组列表</para>
+        /// <para>Queries the user groups authorized by a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3565,7 +3693,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过交付组查询展示授权的用户组列表</para>
+        /// <para>Queries the user groups authorized by a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5101,7 +5229,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询研发主机列表</para>
+        /// <para>Queries the list of workstations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5193,7 +5321,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询研发主机列表</para>
+        /// <para>Queries the list of workstations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5285,7 +5413,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询研发主机列表</para>
+        /// <para>Queries the list of workstations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5303,7 +5431,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询研发主机列表</para>
+        /// <para>Queries the list of workstations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5717,7 +5845,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改策略信息</para>
+        /// <para>Modify the delivery group display policy, including settings such as frame rate, resolution, and protocol type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5773,7 +5901,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改策略信息</para>
+        /// <para>Modify the delivery group display policy, including settings such as frame rate, resolution, and protocol type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5829,7 +5957,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改策略信息</para>
+        /// <para>Modify the delivery group display policy, including settings such as frame rate, resolution, and protocol type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5847,7 +5975,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改策略信息</para>
+        /// <para>Modify the delivery group display policy, including settings such as frame rate, resolution, and protocol type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6541,7 +6669,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改研发主机属性</para>
+        /// <para>Modify workstation properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6591,7 +6719,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改研发主机属性</para>
+        /// <para>Modify workstation properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6641,7 +6769,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改研发主机属性</para>
+        /// <para>Modify workstation properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6659,7 +6787,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改研发主机属性</para>
+        /// <para>Modify workstation properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7037,7 +7165,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费研发主机</para>
+        /// <para>Renew one workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7095,7 +7223,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费研发主机</para>
+        /// <para>Renew one workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7153,7 +7281,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费研发主机</para>
+        /// <para>Renew one workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7171,7 +7299,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费研发主机</para>
+        /// <para>Renew one workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7189,7 +7317,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启研发主机</para>
+        /// <para>Restarts the workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7237,7 +7365,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启研发主机</para>
+        /// <para>Restarts the workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7285,7 +7413,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启研发主机</para>
+        /// <para>Restarts the workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7303,7 +7431,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启研发主机</para>
+        /// <para>Restarts the workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7319,6 +7447,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             return await RestartWuyingServerWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a task to replicate an image to another region.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartTaskForDistributeImageRequest
         /// </param>
@@ -7376,6 +7509,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             return TeaModel.ToObject<StartTaskForDistributeImageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a task to replicate an image to another region.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartTaskForDistributeImageRequest
         /// </param>
@@ -7433,6 +7571,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             return TeaModel.ToObject<StartTaskForDistributeImageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a task to replicate an image to another region.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartTaskForDistributeImageRequest
         /// </param>
@@ -7446,6 +7589,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             return StartTaskForDistributeImageWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a task to replicate an image to another region.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartTaskForDistributeImageRequest
         /// </param>
@@ -7461,7 +7609,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动研发主机</para>
+        /// <para>Start the workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7509,7 +7657,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动研发主机</para>
+        /// <para>Start the workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7557,7 +7705,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动研发主机</para>
+        /// <para>Start the workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7575,7 +7723,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动研发主机</para>
+        /// <para>Start the workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7593,7 +7741,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止研发主机</para>
+        /// <para>Stops the workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7645,7 +7793,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止研发主机</para>
+        /// <para>Stops the workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7697,7 +7845,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止研发主机</para>
+        /// <para>Stops the workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7715,7 +7863,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止研发主机</para>
+        /// <para>Stops the workstation.</para>
         /// </summary>
         /// 
         /// <param name="request">

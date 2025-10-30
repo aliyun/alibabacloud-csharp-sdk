@@ -225,6 +225,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string Html5FileTransfer { get; set; }
 
+            [NameInMap("NoOperationDisconnect")]
+            [Validation(Required=false)]
+            public string NoOperationDisconnect { get; set; }
+
+            [NameInMap("NoOperationDisconnectTime")]
+            [Validation(Required=false)]
+            public int? NoOperationDisconnectTime { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>pg-12345</para>

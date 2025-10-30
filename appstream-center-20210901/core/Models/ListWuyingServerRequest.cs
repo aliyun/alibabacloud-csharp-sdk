@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AddVirtualNodePoolStatusList { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
+        /// <para>The billing method of the Internet access package.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
         /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ChargeType { get; set; }
 
         /// <summary>
+        /// <para>The image ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>img-bp13mu****</para>
         /// </summary>
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageId { get; set; }
 
         /// <summary>
+        /// <para>The office network IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-172301****</para>
         /// </summary>
@@ -46,6 +54,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -54,6 +64,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of records per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -62,6 +74,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Workstation specifications.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eds.proworkstation_flagship_elite.32c64g.48g1x</para>
         /// </summary>
@@ -70,6 +84,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ServerInstanceType { get; set; }
 
         /// <summary>
+        /// <para>The status of the workstation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
         /// </summary>
@@ -81,11 +97,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string VirtualNodePoolId { get; set; }
 
+        /// <summary>
+        /// <para>The list of workstation IDs.</para>
+        /// </summary>
         [NameInMap("WuyingServerIdList")]
         [Validation(Required=false)]
         public List<string> WuyingServerIdList { get; set; }
 
         /// <summary>
+        /// <para>The workstation name or workstation ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>exampleServerName</para>
         /// </summary>

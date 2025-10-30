@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class TagCloudResourcesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The cloud resources on which the operation failed and the corresponding tags.</para>
+        /// </summary>
         [NameInMap("FailedResources")]
         [Validation(Required=false)]
         public List<TagCloudResourcesResponseBodyFailedResources> FailedResources { get; set; }
@@ -38,6 +41,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ResourceId { get; set; }
 
             /// <summary>
+            /// <para>The type of the cloud resource.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CenterImageId: center image ID.</description></item>
+            /// <item><description>AppId: app ID.</description></item>
+            /// <item><description>WyId: Alibaba Cloud Workspace user ID.</description></item>
+            /// <item><description>AppInstanceGroupId: delivery group ID.</description></item>
+            /// <item><description>AliUid: tenant ID.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>AppInstanceGroupId</para>
             /// </summary>

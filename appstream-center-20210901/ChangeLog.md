@@ -1,3 +1,8 @@
+2025-10-30 Version: 4.6.1
+- Update API ModifyBrowserInstanceGroup: add request parameters Policy.NoOperationDisconnect.
+- Update API ModifyBrowserInstanceGroup: add request parameters Policy.NoOperationDisconnectTime.
+
+
 2025-10-27 Version: 4.6.0
 - Support API ModifyBrowserInstanceGroup.
 - Update API CreateWuyingServer: add request parameters SavingPlanId.

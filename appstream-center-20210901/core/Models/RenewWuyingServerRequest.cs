@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class RenewWuyingServerRequest : TeaModel {
         /// <summary>
+        /// <para>Automatic payment.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
+        /// <para>The renewal duration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Period { get; set; }
 
         /// <summary>
+        /// <para>The unit of the renewal time.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Month: month.</description></item>
+        /// <item><description>Year: year.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Month</para>
         /// </summary>
@@ -34,6 +45,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
+        /// <para>The discount ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>17440009****</para>
         /// </summary>
@@ -42,6 +55,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PromotionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workstation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ws-0bw2f11****dial</para>
         /// </summary>

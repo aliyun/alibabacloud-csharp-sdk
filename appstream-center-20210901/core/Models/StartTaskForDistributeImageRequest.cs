@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class StartTaskForDistributeImageRequest : TeaModel {
+        /// <summary>
+        /// <para>The regions to which you want to replicate the image.</para>
+        /// </summary>
         [NameInMap("DestinationRegionList")]
         [Validation(Required=false)]
         public List<string> DestinationRegionList { get; set; }
 
         /// <summary>
+        /// <para>The image ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +28,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageId { get; set; }
 
         /// <summary>
+        /// <para>The product type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CloudDesktop: Elastic Desktop Service</description></item>
+        /// <item><description>CloudApp: App Streaming</description></item>
+        /// <item><description>WuyingServer: Workstation</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>CloudApp</para>
         /// </summary>
@@ -32,6 +44,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
+        /// <para>This parameter is not publicly available.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RETRY</para>
         /// </summary>
@@ -40,6 +54,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RetryType { get; set; }
 
         /// <summary>
+        /// <para>The region where the source image is located. If you leave this parameter empty, a random region is selected.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -48,6 +64,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SourceRegion { get; set; }
 
         /// <summary>
+        /// <para>The ID of the image version. If you do not specify this parameter, the latest image version is used by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>iv-07jyldnd9i****</para>
         /// </summary>

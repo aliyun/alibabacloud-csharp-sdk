@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAuthorizedUserGroupsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries returned on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>The information about the user groups.</para>
+        /// </summary>
         [NameInMap("UserGroups")]
         [Validation(Required=false)]
         public List<ListAuthorizedUserGroupsResponseBodyUserGroups> UserGroups { get; set; }
         public class ListAuthorizedUserGroupsResponseBodyUserGroups : TeaModel {
             /// <summary>
+            /// <para>The ID of the delivery group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>aig-9ciijz60n4xsv****</para>
             /// </summary>
@@ -54,6 +67,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
+            /// <para>The authorization mode.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>App: authorizes access to apps.</description></item>
+            /// <item><description>AppInstanceGroup: authorizes access to delivery groups.</description></item>
+            /// <item><description>Session: authorizes access to sessions.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>App</para>
             /// </summary>
@@ -62,6 +83,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AuthMode { get; set; }
 
             /// <summary>
+            /// <para>The ID of the user group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ug-00001</para>
             /// </summary>
@@ -69,6 +92,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string GroupId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the user group.</para>
+            /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }

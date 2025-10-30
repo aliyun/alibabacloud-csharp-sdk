@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DeleteImageRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the RDS image.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>img-bp13mu****</para>
         /// </summary>
