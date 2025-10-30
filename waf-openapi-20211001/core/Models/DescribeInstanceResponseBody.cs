@@ -329,6 +329,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? DlpTemplateMaxCount { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>2000</para>
+            /// </summary>
+            [NameInMap("ElasticQps")]
+            [Validation(Required=false)]
+            public int? ElasticQps { get; set; }
+
+            /// <summary>
             /// <para>Indicates whether exclusive IP addresses are supported. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true:</b> Exclusive IP addresses are supported.</description></item>
@@ -341,6 +349,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [NameInMap("ExclusiveIp")]
             [Validation(Required=false)]
             public bool? ExclusiveIp { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10000</para>
+            /// </summary>
+            [NameInMap("ExtendQps")]
+            [Validation(Required=false)]
+            public int? ExtendQps { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1000</para>
+            /// </summary>
+            [NameInMap("FreeQps")]
+            [Validation(Required=false)]
+            public int? FreeQps { get; set; }
 
             /// <summary>
             /// <para>Indicates whether global server load balancing (GSLB) is supported. Valid values:</para>
@@ -471,6 +495,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [NameInMap("MajorProtectionTemplateMaxCount")]
             [Validation(Required=false)]
             public long? MajorProtectionTemplateMaxCount { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2000</para>
+            /// </summary>
+            [NameInMap("QpsBillingCap")]
+            [Validation(Required=false)]
+            public int? QpsBillingCap { get; set; }
 
             /// <summary>
             /// <para>Indicates whether the website tamper-proofing module is supported. Valid values:</para>
