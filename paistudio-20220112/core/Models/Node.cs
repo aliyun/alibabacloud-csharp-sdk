@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string AllocatableMemory { get; set; }
 
+        [NameInMap("AncestorQuotaWorkloadNum")]
+        [Validation(Required=false)]
+        public long? AncestorQuotaWorkloadNum { get; set; }
+
         [NameInMap("AvailabilityZone")]
         [Validation(Required=false)]
         public string AvailabilityZone { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("CreatorId")]
         [Validation(Required=false)]
         public string CreatorId { get; set; }
+
+        [NameInMap("DescendantQuotaWorkloadNum")]
+        [Validation(Required=false)]
+        public long? DescendantQuotaWorkloadNum { get; set; }
 
         [NameInMap("GPU")]
         [Validation(Required=false)]
@@ -136,6 +144,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }
+
+        [NameInMap("SelfQuotaWorkloadNum")]
+        [Validation(Required=false)]
+        public long? SelfQuotaWorkloadNum { get; set; }
 
         [NameInMap("SystemReservedCPU")]
         [Validation(Required=false)]
