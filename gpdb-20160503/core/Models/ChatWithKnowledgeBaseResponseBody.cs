@@ -43,6 +43,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
                     /// <summary>
                     /// <b>Example:</b>
+                    /// <para>逻辑推理过程</para>
+                    /// </summary>
+                    [NameInMap("ReasoningContent")]
+                    [Validation(Required=false)]
+                    public string ReasoningContent { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
                     /// <para>user</para>
                     /// </summary>
                     [NameInMap("Role")]

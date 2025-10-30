@@ -1278,6 +1278,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["PromptParams"] = request.PromptParams;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1354,6 +1358,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptParams))
             {
                 query["PromptParams"] = request.PromptParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1478,6 +1486,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["PromptParams"] = request.PromptParams;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1554,6 +1566,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptParams))
             {
                 query["PromptParams"] = request.PromptParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -33169,6 +33185,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["NamespacePassword"] = request.NamespacePassword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["Offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -33314,6 +33338,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespacePassword))
             {
                 query["NamespacePassword"] = request.NamespacePassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["Offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -33594,6 +33626,210 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             }
             QueryContentResponse queryContentResp = await QueryContentWithOptionsAsync(queryContentReq, runtime);
             return queryContentResp;
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多知识库查询</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryKnowledgeBasesContentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryKnowledgeBasesContentResponse
+        /// </returns>
+        public QueryKnowledgeBasesContentResponse QueryKnowledgeBasesContentWithOptions(QueryKnowledgeBasesContentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryKnowledgeBasesContentShrinkRequest request = new QueryKnowledgeBasesContentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MergeMethodArgs))
+            {
+                request.MergeMethodArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MergeMethodArgs, "MergeMethodArgs", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceCollection))
+            {
+                request.SourceCollectionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceCollection, "SourceCollection", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeMethod))
+            {
+                query["MergeMethod"] = request.MergeMethod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeMethodArgsShrink))
+            {
+                query["MergeMethodArgs"] = request.MergeMethodArgsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankFactor))
+            {
+                query["RerankFactor"] = request.RerankFactor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCollectionShrink))
+            {
+                query["SourceCollection"] = request.SourceCollectionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
+            {
+                query["TopK"] = request.TopK;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryKnowledgeBasesContent",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryKnowledgeBasesContentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多知识库查询</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryKnowledgeBasesContentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryKnowledgeBasesContentResponse
+        /// </returns>
+        public async Task<QueryKnowledgeBasesContentResponse> QueryKnowledgeBasesContentWithOptionsAsync(QueryKnowledgeBasesContentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryKnowledgeBasesContentShrinkRequest request = new QueryKnowledgeBasesContentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MergeMethodArgs))
+            {
+                request.MergeMethodArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MergeMethodArgs, "MergeMethodArgs", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceCollection))
+            {
+                request.SourceCollectionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceCollection, "SourceCollection", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeMethod))
+            {
+                query["MergeMethod"] = request.MergeMethod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MergeMethodArgsShrink))
+            {
+                query["MergeMethodArgs"] = request.MergeMethodArgsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankFactor))
+            {
+                query["RerankFactor"] = request.RerankFactor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCollectionShrink))
+            {
+                query["SourceCollection"] = request.SourceCollectionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
+            {
+                query["TopK"] = request.TopK;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryKnowledgeBasesContent",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryKnowledgeBasesContentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多知识库查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryKnowledgeBasesContentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryKnowledgeBasesContentResponse
+        /// </returns>
+        public QueryKnowledgeBasesContentResponse QueryKnowledgeBasesContent(QueryKnowledgeBasesContentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryKnowledgeBasesContentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多知识库查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryKnowledgeBasesContentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryKnowledgeBasesContentResponse
+        /// </returns>
+        public async Task<QueryKnowledgeBasesContentResponse> QueryKnowledgeBasesContentAsync(QueryKnowledgeBasesContentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryKnowledgeBasesContentWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
