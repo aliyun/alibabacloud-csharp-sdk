@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class ListVpcEndpointServicesByEndUserRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>50</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>1000</b>. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -87,15 +87,15 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListVpcEndpointServicesByEndUserRequestTag> Tag { get; set; }
         public class ListVpcEndpointServicesByEndUserRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key must be 1 to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -105,8 +105,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

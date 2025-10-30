@@ -9,6 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class UpdateVpcEndpointAttributeRequest : TeaModel {
+        /// <summary>
+        /// <para>The protocol. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>IPv4</b></description></item>
+        /// <item><description><b>DualStack</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> An endpoint supports dual-stack only if its associated endpoint service and VPC support dual-stack.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
+        /// </summary>
         [NameInMap("AddressIpVersion")]
         [Validation(Required=false)]
         public string AddressIpVersion { get; set; }
@@ -109,6 +122,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ZoneAffinityEnabled")]
+        [Validation(Required=false)]
+        public bool? ZoneAffinityEnabled { get; set; }
 
     }
 

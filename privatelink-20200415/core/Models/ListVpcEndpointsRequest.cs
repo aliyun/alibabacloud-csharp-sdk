@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class ListVpcEndpointsRequest : TeaModel {
+        /// <summary>
+        /// <para>The protocol. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>IPv4</b></description></item>
+        /// <item><description><b>DualStack</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
+        /// </summary>
         [NameInMap("AddressIpVersion")]
         [Validation(Required=false)]
         public string AddressIpVersion { get; set; }
@@ -83,7 +93,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string EndpointType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>1000</b>. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -139,15 +149,15 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListVpcEndpointsRequestTag> Tag { get; set; }
         public class ListVpcEndpointsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key must be 1 to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The key of the tag added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -157,8 +167,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

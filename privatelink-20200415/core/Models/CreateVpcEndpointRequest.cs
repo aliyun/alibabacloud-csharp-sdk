@@ -9,6 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class CreateVpcEndpointRequest : TeaModel {
+        /// <summary>
+        /// <para>The protocol. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>IPv4</b> (default)</description></item>
+        /// <item><description><b>DualStack</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> An endpoint supports dual-stack if its associated endpoint service and VPC both support dual-stack.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
+        /// </summary>
         [NameInMap("AddressIpVersion")]
         [Validation(Required=false)]
         public string AddressIpVersion { get; set; }
@@ -218,12 +231,21 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public List<CreateVpcEndpointRequestZone> Zone { get; set; }
         public class CreateVpcEndpointRequestZone : TeaModel {
+            /// <summary>
+            /// <para>The IPv6 address of the zone where the endpoint is deployed.</para>
+            /// <remarks>
+            /// <para> You can specify this parameter only if AddressIpVersion is set to DualStack.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2408:4005:34d:<b><b>:a58b:62a3:6b55:</b></b></para>
+            /// </summary>
             [NameInMap("Ipv6Address")]
             [Validation(Required=false)]
             public string Ipv6Address { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch where you want to create the endpoint ENI in the zone. You can specify up to 10 vSwitch IDs.</para>
+            /// <para>The ID of the vSwitch for which you want to create the endpoint elastic network interface (ENI) in the zone. You can specify up to 10 vSwitches.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-hp3uf6045ljdhd5zr****</para>
@@ -233,8 +255,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone in which the endpoint is deployed.</para>
-            /// <para>You can specify up to 10 zone IDs.</para>
+            /// <para>The ID of the zone where the endpoint service is deployed.</para>
+            /// <para>You can specify up to 10 zones.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-huhehaote-b</para>
@@ -244,8 +266,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string ZoneId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the zone in which the endpoint is deployed.</para>
-            /// <para>You can specify up to 10 IP addresses.</para>
+            /// <para>The IP address of the zone where the endpoint is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -255,6 +276,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string Ip { get; set; }
 
         }
+
+        [NameInMap("ZoneAffinityEnabled")]
+        [Validation(Required=false)]
+        public bool? ZoneAffinityEnabled { get; set; }
 
         /// <summary>
         /// <para>The number of private IP addresses that are assigned to an elastic network interface (ENI) in each zone. Set the value to <b>1</b>.</para>

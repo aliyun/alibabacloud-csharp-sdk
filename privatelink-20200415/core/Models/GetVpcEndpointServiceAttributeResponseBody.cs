@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class GetVpcEndpointServiceAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The protocol. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>IPv4</b></description></item>
+        /// <item><description><b>DualStack</b></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
+        /// </summary>
         [NameInMap("AddressIpVersion")]
         [Validation(Required=false)]
         public string AddressIpVersion { get; set; }

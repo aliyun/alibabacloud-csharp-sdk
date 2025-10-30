@@ -9,6 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class UpdateVpcEndpointServiceAttributeRequest : TeaModel {
+        /// <summary>
+        /// <para>The protocol. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>IPv4</b></description></item>
+        /// <item><description><b>DualStack</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You can set the protocol to DualStack only for endpoint services whose backend resource type is NLB.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
+        /// </summary>
         [NameInMap("AddressIpVersion")]
         [Validation(Required=false)]
         public string AddressIpVersion { get; set; }

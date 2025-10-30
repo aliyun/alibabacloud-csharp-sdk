@@ -45,6 +45,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string EndpointId { get; set; }
 
+        /// <summary>
+        /// <para>The IPv6 address of the endpoint ENI in the zone that you want to add.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2408:4005:3b6:<b><b>:6955:c3cb:34c:</b></b></para>
+        /// </summary>
         [NameInMap("Ipv6Address")]
         [Validation(Required=false)]
         public string Ipv6Address { get; set; }

@@ -9,6 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class CreateVpcEndpointServiceRequest : TeaModel {
+        /// <summary>
+        /// <para>The protocol. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>IPv4</b> (default)</description></item>
+        /// <item><description><b>DualStack</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> You can set the protocol to DualStack only for endpoint services whose backend resource type is NLB. An endpoint service supports dual-stack only if its backend resources support dual-stack.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
+        /// </summary>
         [NameInMap("AddressIpVersion")]
         [Validation(Required=false)]
         public string AddressIpVersion { get; set; }
@@ -79,14 +92,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The service resources of the endpoint service.</para>
+        /// <para>The service resources of the endpoint service. You can create at most 10 resources. After the resource is created, you can continue to add service resources to the endpoint.</para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public List<CreateVpcEndpointServiceRequestResource> Resource { get; set; }
         public class CreateVpcEndpointServiceRequestResource : TeaModel {
             /// <summary>
-            /// <para>The ID of the service resource that is added to the endpoint service. You can specify up to 20 service resource IDs.</para>
+            /// <para>The ID of the service resource that is added to the endpoint service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-hp32z1wp5peaoox2q****</para>
@@ -114,7 +127,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone.</para>
+            /// <para>The zone ID of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-huhehaote-a</para>
