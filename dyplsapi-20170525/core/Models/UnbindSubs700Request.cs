@@ -8,32 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
-    public class DeleteAxnExtensionBindFixedLineRequest : TeaModel {
-        /// <summary>
-        /// <para>号池ID</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>alitest</para>
-        /// </summary>
-        [NameInMap("AppId")]
-        [Validation(Required=false)]
-        public string AppId { get; set; }
-
-        /// <summary>
-        /// <para>消息请求唯一标识</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>12345dkwkd99d</para>
-        /// </summary>
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public string OrderId { get; set; }
-
+    public class UnbindSubs700Request : TeaModel {
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FC10000016848****</para>
+        /// </summary>
+        [NameInMap("PoolKey")]
+        [Validation(Required=false)]
+        public string PoolKey { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -44,26 +32,24 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>绑定id</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>GHX0534X202504221531579290029</para>
+        /// <para>100000****</para>
         /// </summary>
-        [NameInMap("SubId")]
+        [NameInMap("SubsId")]
         [Validation(Required=false)]
-        public string SubId { get; set; }
+        public long? SubsId { get; set; }
 
         /// <summary>
-        /// <para>格式yyyyMMddHHmmssSSS，时间采用北京时间，24小时制，精确至毫秒</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20250421141723098</para>
+        /// <para>700********0000</para>
         /// </summary>
-        [NameInMap("Ts")]
+        [NameInMap("TelX")]
         [Validation(Required=false)]
-        public string Ts { get; set; }
+        public string TelX { get; set; }
 
     }
 

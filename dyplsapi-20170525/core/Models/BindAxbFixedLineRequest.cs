@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string Anucodecalled { get; set; }
 
         /// <summary>
-        /// <para>应用id</para>
+        /// <para>号池ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         }
 
         /// <summary>
-        /// <para>消息请求标识</para>
+        /// <para>消息请求唯一标识。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>接入商自有字段，不能超过100个长度</para>
+        /// <para>接入商自有字段，最大250字符长度</para>
         /// 
         /// <b>Example:</b>
         /// <para>remark</para>

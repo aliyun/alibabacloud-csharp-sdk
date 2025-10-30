@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class DeleteAxnBindFixedLineRequest : TeaModel {
         /// <summary>
-        /// <para>业务id标识，由阿里云分配给客户侧</para>
+        /// <para>号池ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

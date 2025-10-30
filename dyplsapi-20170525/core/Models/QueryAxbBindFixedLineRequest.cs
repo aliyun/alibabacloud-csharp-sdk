@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class QueryAxbBindFixedLineRequest : TeaModel {
         /// <summary>
-        /// <para>应用id</para>
+        /// <para>号池ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>业务id，消息请求标识</para>
+        /// <para>消息请求唯一标识。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

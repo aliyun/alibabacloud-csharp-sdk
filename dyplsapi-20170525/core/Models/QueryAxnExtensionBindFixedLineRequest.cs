@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class QueryAxnExtensionBindFixedLineRequest : TeaModel {
         /// <summary>
-        /// <para>业务id标识，由阿里云分配给客户侧</para>
+        /// <para>号池ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>消息请求标识</para>
+        /// <para>消息请求唯一标识。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>查询类型 0：根据绑定id查询 1：根据A号码查询</para>
+        /// <para>查询类型。取值： 0：根据绑定ID查询。1：根据X和A/B号码查询</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,17 +55,17 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>绑定id，queryType=0时，必传</para>
+        /// <para>绑定ID。QueryType参数为0时必传。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>可参考绑定响应</para>
+        /// <para>A203**************</para>
         /// </summary>
         [NameInMap("SubId")]
         [Validation(Required=false)]
         public string SubId { get; set; }
 
         /// <summary>
-        /// <para>A号码，queryType=1时，必传</para>
+        /// <para>A号码。QueryType参数为1时必传。</para>
         /// 
         /// <b>Example:</b>
         /// <para>15500001111</para>

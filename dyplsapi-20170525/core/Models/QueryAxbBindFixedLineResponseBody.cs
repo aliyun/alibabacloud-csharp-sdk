@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
             }
 
             /// <summary>
-            /// <para>接入商自有字段，最大100字符长度</para>
+            /// <para>接入商自有字段，最大250字符长度</para>
             /// 
             /// <b>Example:</b>
             /// <para>19394</para>
