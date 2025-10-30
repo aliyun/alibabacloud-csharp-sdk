@@ -248,6 +248,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [Validation(Required=false)]
             public bool? EnableHa { get; set; }
 
+            [NameInMap("Encrypted")]
+            [Validation(Required=false)]
+            public string Encrypted { get; set; }
+
             /// <summary>
             /// <para>The expiration time.</para>
             /// 
@@ -285,6 +289,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [NameInMap("InstanceStatus")]
             [Validation(Required=false)]
             public string InstanceStatus { get; set; }
+
+            [NameInMap("KmsKeyId")]
+            [Validation(Required=false)]
+            public string KmsKeyId { get; set; }
 
             [NameInMap("MeasureConfig")]
             [Validation(Required=false)]
