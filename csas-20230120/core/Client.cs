@@ -4805,6 +4805,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await DeleteUserGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>卸载connector的应用</para>
@@ -4820,6 +4824,8 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <returns>
         /// DetachApplication2ConnectorResponse
         /// </returns>
+        [Obsolete("OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.")]
+        // Deprecated
         public DetachApplication2ConnectorResponse DetachApplication2ConnectorWithOptions(DetachApplication2ConnectorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4857,6 +4863,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<DetachApplication2ConnectorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>卸载connector的应用</para>
@@ -4872,6 +4882,8 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <returns>
         /// DetachApplication2ConnectorResponse
         /// </returns>
+        [Obsolete("OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.")]
+        // Deprecated
         public async Task<DetachApplication2ConnectorResponse> DetachApplication2ConnectorWithOptionsAsync(DetachApplication2ConnectorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -4909,6 +4921,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             return TeaModel.ToObject<DetachApplication2ConnectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>卸载connector的应用</para>
@@ -4921,12 +4937,18 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <returns>
         /// DetachApplication2ConnectorResponse
         /// </returns>
+        [Obsolete("OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.")]
+        // Deprecated
         public DetachApplication2ConnectorResponse DetachApplication2Connector(DetachApplication2ConnectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DetachApplication2ConnectorWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>卸载connector的应用</para>
@@ -4939,6 +4961,8 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <returns>
         /// DetachApplication2ConnectorResponse
         /// </returns>
+        [Obsolete("OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.")]
+        // Deprecated
         public async Task<DetachApplication2ConnectorResponse> DetachApplication2ConnectorAsync(DetachApplication2ConnectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
