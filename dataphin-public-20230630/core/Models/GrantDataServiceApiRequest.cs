@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public int? AppId { get; set; }
 
+            [NameInMap("ApplyDev")]
+            [Validation(Required=false)]
+            public bool? ApplyDev { get; set; }
+
+            [NameInMap("ApplyProd")]
+            [Validation(Required=false)]
+            public bool? ApplyProd { get; set; }
+
             [NameInMap("DevFieldList")]
             [Validation(Required=false)]
             public List<GrantDataServiceApiRequestGrantCommandDevFieldList> DevFieldList { get; set; }
