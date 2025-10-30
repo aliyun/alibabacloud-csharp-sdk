@@ -117,6 +117,24 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [Validation(Required=false)]
             public string Path { get; set; }
 
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public GetInstanceResponseBodyCloudDisksStatus Status { get; set; }
+            public class GetInstanceResponseBodyCloudDisksStatus : TeaModel {
+                [NameInMap("Available")]
+                [Validation(Required=false)]
+                public long? Available { get; set; }
+
+                [NameInMap("Capacity")]
+                [Validation(Required=false)]
+                public long? Capacity { get; set; }
+
+                [NameInMap("Usage")]
+                [Validation(Required=false)]
+                public long? Usage { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The usage mode of the cloud disk. The value rootfs indicates that the cloud disk is used as the root file system.</para>
             /// 
