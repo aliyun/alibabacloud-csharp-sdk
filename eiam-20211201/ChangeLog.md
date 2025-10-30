@@ -1,3 +1,16 @@
+2025-10-30 Version: 1.12.0
+- Support API AddCustomPrivacyPoliciesToBrand.
+- Support API CreateCustomPrivacyPolicy.
+- Support API DeleteCustomPrivacyPolicy.
+- Support API DisableCustomPrivacyPolicy.
+- Support API EnableCustomPrivacyPolicy.
+- Support API GetCustomPrivacyPolicy.
+- Support API ListCustomPrivacyPolicies.
+- Support API ListCustomPrivacyPoliciesForBrand.
+- Support API RemoveCustomPrivacyPoliciesFromBrand.
+- Support API UpdateCustomPrivacyPolicy.
+
+
 2025-10-20 Version: 1.11.0
 - Support API CreateBrand.
 - Support API DeleteBrand.

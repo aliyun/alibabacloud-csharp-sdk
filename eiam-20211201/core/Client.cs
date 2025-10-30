@@ -183,6 +183,142 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>添加条款到品牌</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddCustomPrivacyPoliciesToBrandRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddCustomPrivacyPoliciesToBrandResponse
+        /// </returns>
+        public AddCustomPrivacyPoliciesToBrandResponse AddCustomPrivacyPoliciesToBrandWithOptions(AddCustomPrivacyPoliciesToBrandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrandId))
+            {
+                query["BrandId"] = request.BrandId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyIds))
+            {
+                query["CustomPrivacyPolicyIds"] = request.CustomPrivacyPolicyIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddCustomPrivacyPoliciesToBrand",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddCustomPrivacyPoliciesToBrandResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加条款到品牌</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddCustomPrivacyPoliciesToBrandRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddCustomPrivacyPoliciesToBrandResponse
+        /// </returns>
+        public async Task<AddCustomPrivacyPoliciesToBrandResponse> AddCustomPrivacyPoliciesToBrandWithOptionsAsync(AddCustomPrivacyPoliciesToBrandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrandId))
+            {
+                query["BrandId"] = request.BrandId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyIds))
+            {
+                query["CustomPrivacyPolicyIds"] = request.CustomPrivacyPolicyIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddCustomPrivacyPoliciesToBrand",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddCustomPrivacyPoliciesToBrandResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加条款到品牌</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddCustomPrivacyPoliciesToBrandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddCustomPrivacyPoliciesToBrandResponse
+        /// </returns>
+        public AddCustomPrivacyPoliciesToBrandResponse AddCustomPrivacyPoliciesToBrand(AddCustomPrivacyPoliciesToBrandRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddCustomPrivacyPoliciesToBrandWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加条款到品牌</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddCustomPrivacyPoliciesToBrandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddCustomPrivacyPoliciesToBrandResponse
+        /// </returns>
+        public async Task<AddCustomPrivacyPoliciesToBrandResponse> AddCustomPrivacyPoliciesToBrandAsync(AddCustomPrivacyPoliciesToBrandRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddCustomPrivacyPoliciesToBrandWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds an Employee Identity and Access Management (EIAM) account to multiple EIAM organizations of Identity as a Service (IDaaS). If the account already exists in the organizational unit, the system directly returns a success response.</para>
         /// </summary>
         /// 
@@ -1843,6 +1979,174 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateConditionalAccessPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomPrivacyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomPrivacyPolicyResponse
+        /// </returns>
+        public CreateCustomPrivacyPolicyResponse CreateCustomPrivacyPolicyWithOptions(CreateCustomPrivacyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyContents))
+            {
+                query["CustomPrivacyPolicyContents"] = request.CustomPrivacyPolicyContents;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyName))
+            {
+                query["CustomPrivacyPolicyName"] = request.CustomPrivacyPolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultLanguageCode))
+            {
+                query["DefaultLanguageCode"] = request.DefaultLanguageCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserConsentType))
+            {
+                query["UserConsentType"] = request.UserConsentType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCustomPrivacyPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCustomPrivacyPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomPrivacyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomPrivacyPolicyResponse
+        /// </returns>
+        public async Task<CreateCustomPrivacyPolicyResponse> CreateCustomPrivacyPolicyWithOptionsAsync(CreateCustomPrivacyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyContents))
+            {
+                query["CustomPrivacyPolicyContents"] = request.CustomPrivacyPolicyContents;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyName))
+            {
+                query["CustomPrivacyPolicyName"] = request.CustomPrivacyPolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultLanguageCode))
+            {
+                query["DefaultLanguageCode"] = request.DefaultLanguageCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserConsentType))
+            {
+                query["UserConsentType"] = request.UserConsentType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCustomPrivacyPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCustomPrivacyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomPrivacyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomPrivacyPolicyResponse
+        /// </returns>
+        public CreateCustomPrivacyPolicyResponse CreateCustomPrivacyPolicy(CreateCustomPrivacyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCustomPrivacyPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCustomPrivacyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCustomPrivacyPolicyResponse
+        /// </returns>
+        public async Task<CreateCustomPrivacyPolicyResponse> CreateCustomPrivacyPolicyAsync(CreateCustomPrivacyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCustomPrivacyPolicyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4355,6 +4659,134 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteConditionalAccessPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCustomPrivacyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCustomPrivacyPolicyResponse
+        /// </returns>
+        public DeleteCustomPrivacyPolicyResponse DeleteCustomPrivacyPolicyWithOptions(DeleteCustomPrivacyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyId))
+            {
+                query["CustomPrivacyPolicyId"] = request.CustomPrivacyPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCustomPrivacyPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCustomPrivacyPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCustomPrivacyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCustomPrivacyPolicyResponse
+        /// </returns>
+        public async Task<DeleteCustomPrivacyPolicyResponse> DeleteCustomPrivacyPolicyWithOptionsAsync(DeleteCustomPrivacyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyId))
+            {
+                query["CustomPrivacyPolicyId"] = request.CustomPrivacyPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCustomPrivacyPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCustomPrivacyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCustomPrivacyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCustomPrivacyPolicyResponse
+        /// </returns>
+        public DeleteCustomPrivacyPolicyResponse DeleteCustomPrivacyPolicy(DeleteCustomPrivacyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteCustomPrivacyPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCustomPrivacyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCustomPrivacyPolicyResponse
+        /// </returns>
+        public async Task<DeleteCustomPrivacyPolicyResponse> DeleteCustomPrivacyPolicyAsync(DeleteCustomPrivacyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteCustomPrivacyPolicyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7003,6 +7435,134 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>禁用自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCustomPrivacyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCustomPrivacyPolicyResponse
+        /// </returns>
+        public DisableCustomPrivacyPolicyResponse DisableCustomPrivacyPolicyWithOptions(DisableCustomPrivacyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyId))
+            {
+                query["CustomPrivacyPolicyId"] = request.CustomPrivacyPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableCustomPrivacyPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableCustomPrivacyPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>禁用自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCustomPrivacyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCustomPrivacyPolicyResponse
+        /// </returns>
+        public async Task<DisableCustomPrivacyPolicyResponse> DisableCustomPrivacyPolicyWithOptionsAsync(DisableCustomPrivacyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyId))
+            {
+                query["CustomPrivacyPolicyId"] = request.CustomPrivacyPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableCustomPrivacyPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableCustomPrivacyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>禁用自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCustomPrivacyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCustomPrivacyPolicyResponse
+        /// </returns>
+        public DisableCustomPrivacyPolicyResponse DisableCustomPrivacyPolicy(DisableCustomPrivacyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisableCustomPrivacyPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>禁用自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCustomPrivacyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCustomPrivacyPolicyResponse
+        /// </returns>
+        public async Task<DisableCustomPrivacyPolicyResponse> DisableCustomPrivacyPolicyAsync(DisableCustomPrivacyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisableCustomPrivacyPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Disables a proxy token for a domain name of an Employee Identity and Access Management (EIAM) instance. After the proxy token is disabled, the domain name may not be used as expected.</para>
         /// </summary>
         /// 
@@ -8967,6 +9527,134 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>启用自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCustomPrivacyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCustomPrivacyPolicyResponse
+        /// </returns>
+        public EnableCustomPrivacyPolicyResponse EnableCustomPrivacyPolicyWithOptions(EnableCustomPrivacyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyId))
+            {
+                query["CustomPrivacyPolicyId"] = request.CustomPrivacyPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableCustomPrivacyPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableCustomPrivacyPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCustomPrivacyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCustomPrivacyPolicyResponse
+        /// </returns>
+        public async Task<EnableCustomPrivacyPolicyResponse> EnableCustomPrivacyPolicyWithOptionsAsync(EnableCustomPrivacyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyId))
+            {
+                query["CustomPrivacyPolicyId"] = request.CustomPrivacyPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableCustomPrivacyPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableCustomPrivacyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCustomPrivacyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCustomPrivacyPolicyResponse
+        /// </returns>
+        public EnableCustomPrivacyPolicyResponse EnableCustomPrivacyPolicy(EnableCustomPrivacyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnableCustomPrivacyPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启用自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCustomPrivacyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCustomPrivacyPolicyResponse
+        /// </returns>
+        public async Task<EnableCustomPrivacyPolicyResponse> EnableCustomPrivacyPolicyAsync(EnableCustomPrivacyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnableCustomPrivacyPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Enables a proxy token for a domain name of an Employee Identity and Access Management (EIAM) instance. The proxy token is used to verify the security of the domain name.</para>
         /// </summary>
         /// 
@@ -10903,6 +11591,134 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetConditionalAccessPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomPrivacyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomPrivacyPolicyResponse
+        /// </returns>
+        public GetCustomPrivacyPolicyResponse GetCustomPrivacyPolicyWithOptions(GetCustomPrivacyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyId))
+            {
+                query["CustomPrivacyPolicyId"] = request.CustomPrivacyPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCustomPrivacyPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCustomPrivacyPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomPrivacyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomPrivacyPolicyResponse
+        /// </returns>
+        public async Task<GetCustomPrivacyPolicyResponse> GetCustomPrivacyPolicyWithOptionsAsync(GetCustomPrivacyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyId))
+            {
+                query["CustomPrivacyPolicyId"] = request.CustomPrivacyPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCustomPrivacyPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCustomPrivacyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomPrivacyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomPrivacyPolicyResponse
+        /// </returns>
+        public GetCustomPrivacyPolicyResponse GetCustomPrivacyPolicy(GetCustomPrivacyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCustomPrivacyPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomPrivacyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomPrivacyPolicyResponse
+        /// </returns>
+        public async Task<GetCustomPrivacyPolicyResponse> GetCustomPrivacyPolicyAsync(GetCustomPrivacyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCustomPrivacyPolicyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -16091,6 +16907,310 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>自定义条款列表查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomPrivacyPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomPrivacyPoliciesResponse
+        /// </returns>
+        public ListCustomPrivacyPoliciesResponse ListCustomPrivacyPoliciesWithOptions(ListCustomPrivacyPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyNameStartsWith))
+            {
+                query["CustomPrivacyPolicyNameStartsWith"] = request.CustomPrivacyPolicyNameStartsWith;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviousToken))
+            {
+                query["PreviousToken"] = request.PreviousToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCustomPrivacyPolicies",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCustomPrivacyPoliciesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>自定义条款列表查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomPrivacyPoliciesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomPrivacyPoliciesResponse
+        /// </returns>
+        public async Task<ListCustomPrivacyPoliciesResponse> ListCustomPrivacyPoliciesWithOptionsAsync(ListCustomPrivacyPoliciesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyNameStartsWith))
+            {
+                query["CustomPrivacyPolicyNameStartsWith"] = request.CustomPrivacyPolicyNameStartsWith;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviousToken))
+            {
+                query["PreviousToken"] = request.PreviousToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCustomPrivacyPolicies",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCustomPrivacyPoliciesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>自定义条款列表查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomPrivacyPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomPrivacyPoliciesResponse
+        /// </returns>
+        public ListCustomPrivacyPoliciesResponse ListCustomPrivacyPolicies(ListCustomPrivacyPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCustomPrivacyPoliciesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>自定义条款列表查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomPrivacyPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomPrivacyPoliciesResponse
+        /// </returns>
+        public async Task<ListCustomPrivacyPoliciesResponse> ListCustomPrivacyPoliciesAsync(ListCustomPrivacyPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCustomPrivacyPoliciesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取品牌关联资源的资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomPrivacyPoliciesForBrandRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomPrivacyPoliciesForBrandResponse
+        /// </returns>
+        public ListCustomPrivacyPoliciesForBrandResponse ListCustomPrivacyPoliciesForBrandWithOptions(ListCustomPrivacyPoliciesForBrandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrandId))
+            {
+                query["BrandId"] = request.BrandId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviousToken))
+            {
+                query["PreviousToken"] = request.PreviousToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCustomPrivacyPoliciesForBrand",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCustomPrivacyPoliciesForBrandResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取品牌关联资源的资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomPrivacyPoliciesForBrandRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomPrivacyPoliciesForBrandResponse
+        /// </returns>
+        public async Task<ListCustomPrivacyPoliciesForBrandResponse> ListCustomPrivacyPoliciesForBrandWithOptionsAsync(ListCustomPrivacyPoliciesForBrandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrandId))
+            {
+                query["BrandId"] = request.BrandId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviousToken))
+            {
+                query["PreviousToken"] = request.PreviousToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCustomPrivacyPoliciesForBrand",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCustomPrivacyPoliciesForBrandResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取品牌关联资源的资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomPrivacyPoliciesForBrandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomPrivacyPoliciesForBrandResponse
+        /// </returns>
+        public ListCustomPrivacyPoliciesForBrandResponse ListCustomPrivacyPoliciesForBrand(ListCustomPrivacyPoliciesForBrandRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCustomPrivacyPoliciesForBrandWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取品牌关联资源的资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCustomPrivacyPoliciesForBrandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCustomPrivacyPoliciesForBrandResponse
+        /// </returns>
+        public async Task<ListCustomPrivacyPoliciesForBrandResponse> ListCustomPrivacyPoliciesForBrandAsync(ListCustomPrivacyPoliciesForBrandRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCustomPrivacyPoliciesForBrandWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the proxy tokens of a domain name of an Employee Identity and Access Management (EIAM) instance.</para>
         /// </summary>
         /// 
@@ -20105,6 +21225,142 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveApplicationAccountFromUserWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除品牌关联条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveCustomPrivacyPoliciesFromBrandRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveCustomPrivacyPoliciesFromBrandResponse
+        /// </returns>
+        public RemoveCustomPrivacyPoliciesFromBrandResponse RemoveCustomPrivacyPoliciesFromBrandWithOptions(RemoveCustomPrivacyPoliciesFromBrandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrandId))
+            {
+                query["BrandId"] = request.BrandId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyIds))
+            {
+                query["CustomPrivacyPolicyIds"] = request.CustomPrivacyPolicyIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveCustomPrivacyPoliciesFromBrand",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveCustomPrivacyPoliciesFromBrandResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除品牌关联条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveCustomPrivacyPoliciesFromBrandRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveCustomPrivacyPoliciesFromBrandResponse
+        /// </returns>
+        public async Task<RemoveCustomPrivacyPoliciesFromBrandResponse> RemoveCustomPrivacyPoliciesFromBrandWithOptionsAsync(RemoveCustomPrivacyPoliciesFromBrandRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BrandId))
+            {
+                query["BrandId"] = request.BrandId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyIds))
+            {
+                query["CustomPrivacyPolicyIds"] = request.CustomPrivacyPolicyIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveCustomPrivacyPoliciesFromBrand",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveCustomPrivacyPoliciesFromBrandResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除品牌关联条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveCustomPrivacyPoliciesFromBrandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveCustomPrivacyPoliciesFromBrandResponse
+        /// </returns>
+        public RemoveCustomPrivacyPoliciesFromBrandResponse RemoveCustomPrivacyPoliciesFromBrand(RemoveCustomPrivacyPoliciesFromBrandRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveCustomPrivacyPoliciesFromBrandWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除品牌关联条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveCustomPrivacyPoliciesFromBrandRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveCustomPrivacyPoliciesFromBrandResponse
+        /// </returns>
+        public async Task<RemoveCustomPrivacyPoliciesFromBrandResponse> RemoveCustomPrivacyPoliciesFromBrandAsync(RemoveCustomPrivacyPoliciesFromBrandRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveCustomPrivacyPoliciesFromBrandWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -24557,6 +25813,166 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateConditionalAccessPolicyDescriptionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCustomPrivacyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCustomPrivacyPolicyResponse
+        /// </returns>
+        public UpdateCustomPrivacyPolicyResponse UpdateCustomPrivacyPolicyWithOptions(UpdateCustomPrivacyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyContents))
+            {
+                query["CustomPrivacyPolicyContents"] = request.CustomPrivacyPolicyContents;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyId))
+            {
+                query["CustomPrivacyPolicyId"] = request.CustomPrivacyPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyName))
+            {
+                query["CustomPrivacyPolicyName"] = request.CustomPrivacyPolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultLanguageCode))
+            {
+                query["DefaultLanguageCode"] = request.DefaultLanguageCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserConsentType))
+            {
+                query["UserConsentType"] = request.UserConsentType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCustomPrivacyPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCustomPrivacyPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCustomPrivacyPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCustomPrivacyPolicyResponse
+        /// </returns>
+        public async Task<UpdateCustomPrivacyPolicyResponse> UpdateCustomPrivacyPolicyWithOptionsAsync(UpdateCustomPrivacyPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyContents))
+            {
+                query["CustomPrivacyPolicyContents"] = request.CustomPrivacyPolicyContents;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyId))
+            {
+                query["CustomPrivacyPolicyId"] = request.CustomPrivacyPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrivacyPolicyName))
+            {
+                query["CustomPrivacyPolicyName"] = request.CustomPrivacyPolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultLanguageCode))
+            {
+                query["DefaultLanguageCode"] = request.DefaultLanguageCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserConsentType))
+            {
+                query["UserConsentType"] = request.UserConsentType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCustomPrivacyPolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCustomPrivacyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCustomPrivacyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCustomPrivacyPolicyResponse
+        /// </returns>
+        public UpdateCustomPrivacyPolicyResponse UpdateCustomPrivacyPolicy(UpdateCustomPrivacyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCustomPrivacyPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新自定义条款</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCustomPrivacyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCustomPrivacyPolicyResponse
+        /// </returns>
+        public async Task<UpdateCustomPrivacyPolicyResponse> UpdateCustomPrivacyPolicyAsync(UpdateCustomPrivacyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCustomPrivacyPolicyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
