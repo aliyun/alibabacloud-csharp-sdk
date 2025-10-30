@@ -182,6 +182,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string ParentIdentifier { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// <para>The type of the Subject Alternative Name (SAN) extension that is supported by the client certificate. Valid values:</para>
         /// <list type="bullet">
@@ -215,6 +219,20 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateClientCertificateRequestTags> Tags { get; set; }
+        public class CreateClientCertificateRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The validity period of the client certificate. Unit: years.</para>

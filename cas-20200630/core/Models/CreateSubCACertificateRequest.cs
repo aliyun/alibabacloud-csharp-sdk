@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string Algorithm { get; set; }
 
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         /// <summary>
         /// <para>The common name or abbreviation of the organization. The value can contain letters.</para>
         /// <para>This parameter is required.</para>
@@ -122,7 +126,6 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <remarks>
         /// <para>You can call the [DescribeCACertificateList] operation to query the unique identifiers of all CA certificates.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1a83bcbb89e562885e40aa0108f5****</para>
@@ -141,6 +144,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public int? PathLenConstraint { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// <para>The name of the province or state in which the organization is located. The value can contain letters.</para>
         /// <para>This parameter is required.</para>
@@ -151,6 +158,20 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateSubCACertificateRequestTags> Tags { get; set; }
+        public class CreateSubCACertificateRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The validity period of the intermediate CA certificate. Unit: years.</para>

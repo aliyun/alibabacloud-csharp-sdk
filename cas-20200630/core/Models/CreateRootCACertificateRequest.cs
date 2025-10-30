@@ -88,6 +88,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string OrganizationUnit { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// <para>The name of the province, municipality, or autonomous region in which the organization is located. The value can contain letters.</para>
         /// <para>This parameter is required.</para>
@@ -98,6 +102,20 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [NameInMap("State")]
         [Validation(Required=false)]
         public string State { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateRootCACertificateRequestTags> Tags { get; set; }
+        public class CreateRootCACertificateRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The validity period of the root CA certificate. Unit: years.</para>

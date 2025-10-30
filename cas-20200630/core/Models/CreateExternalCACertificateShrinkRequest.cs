@@ -14,8 +14,6 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string ApiPassthroughShrink { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE REQUEST-----
         /// MIIBczCCARgCAQAwgYoxFDASBgNVBAMMC2FsaXl1bi50ZXN0MQ0wCwYDVQQ
@@ -28,8 +26,6 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Csr { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>cas_deposit-cn-1234abcd</para>
         /// </summary>
@@ -37,9 +33,25 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateExternalCACertificateShrinkRequestTags> Tags { get; set; }
+        public class CreateExternalCACertificateShrinkRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>10y</para>
         /// </summary>

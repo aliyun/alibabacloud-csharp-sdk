@@ -245,6 +245,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [Validation(Required=false)]
             public string ParentIdentifier { get; set; }
 
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
             /// <summary>
             /// <para>This parameter is deprecated.</para>
             /// 
@@ -326,6 +330,20 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [NameInMap("SubjectDN")]
             [Validation(Required=false)]
             public string SubjectDN { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeCACertificateResponseBodyCertificateTags> Tags { get; set; }
+            public class DescribeCACertificateResponseBodyCertificateTags : TeaModel {
+                [NameInMap("TagKey")]
+                [Validation(Required=false)]
+                public string TagKey { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The content of the CA certificate.</para>
