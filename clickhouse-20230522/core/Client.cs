@@ -749,6 +749,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             {
                 query["DBInstanceDescription"] = request.DBInstanceDescription;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBTimeZone))
+            {
+                query["DBTimeZone"] = request.DBTimeZone;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploySchema))
             {
                 query["DeploySchema"] = request.DeploySchema;
@@ -872,6 +876,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceDescription))
             {
                 query["DBInstanceDescription"] = request.DBInstanceDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBTimeZone))
+            {
+                query["DBTimeZone"] = request.DBTimeZone;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploySchema))
             {

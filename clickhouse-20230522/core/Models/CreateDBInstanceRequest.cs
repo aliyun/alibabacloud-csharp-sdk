@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
+        [NameInMap("DBTimeZone")]
+        [Validation(Required=false)]
+        public string DBTimeZone { get; set; }
+
         /// <summary>
         /// <para>The deployment status of the cluster.</para>
         /// 
