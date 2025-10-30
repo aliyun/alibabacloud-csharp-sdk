@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string EvaluationTime { get; set; }
 
             /// <summary>
-            /// <para>The check results.</para>
+            /// <para>The check result.</para>
             /// </summary>
             [NameInMap("MetricResults")]
             [Validation(Required=false)]
@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 [Validation(Required=false)]
                 public ListEvaluationResultsResponseBodyResultsMetricResultsAccountSummary AccountSummary { get; set; }
                 public class ListEvaluationResultsResponseBodyResultsMetricResultsAccountSummary : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
                     [NameInMap("NonCompliant")]
                     [Validation(Required=false)]
                     public int? NonCompliant { get; set; }
@@ -114,6 +118,14 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.2</para>
+                /// </summary>
+                [NameInMap("PotentialScoreIncrease")]
+                [Validation(Required=false)]
+                public double? PotentialScoreIncrease { get; set; }
 
                 /// <summary>
                 /// <para>The checked resources.</para>

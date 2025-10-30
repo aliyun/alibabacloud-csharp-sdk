@@ -299,6 +299,14 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 [Validation(Required=false)]
                 public string Stage { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>ResourceUtilization</para>
+                /// </summary>
+                [NameInMap("TopicCode")]
+                [Validation(Required=false)]
+                public string TopicCode { get; set; }
+
             }
 
             /// <summary>

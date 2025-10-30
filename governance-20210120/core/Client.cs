@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("governance", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1425,6 +1424,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicCode))
+            {
+                query["TopicCode"] = request.TopicCode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1474,6 +1477,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicCode))
+            {
+                query["TopicCode"] = request.TopicCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1741,6 +1748,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             {
                 query["SnapshotId"] = request.SnapshotId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicCode))
+            {
+                query["TopicCode"] = request.TopicCode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1802,6 +1813,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotId))
             {
                 query["SnapshotId"] = request.SnapshotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicCode))
+            {
+                query["TopicCode"] = request.TopicCode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

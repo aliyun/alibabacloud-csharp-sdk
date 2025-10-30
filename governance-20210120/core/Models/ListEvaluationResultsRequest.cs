@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>basic</para>
+        /// </summary>
         [NameInMap("LensCode")]
         [Validation(Required=false)]
         public string LensCode { get; set; }
@@ -64,13 +68,29 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ResourceDirectory</para>
+        /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]
         public string Scope { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>es-bp1r**************</para>
+        /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]
         public string SnapshotId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>IdentityAndAccessManagement</para>
+        /// </summary>
+        [NameInMap("TopicCode")]
+        [Validation(Required=false)]
+        public string TopicCode { get; set; }
 
     }
 
