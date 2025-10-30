@@ -45371,7 +45371,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <para>Modifies the retention policy of the log backups in a PolarDB cluster.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifyLogBackupPolicyRequest
         /// </param>
         /// <param name="runtime">
@@ -45381,10 +45381,20 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <returns>
         /// ModifyLogBackupPolicyResponse
         /// </returns>
-        public ModifyLogBackupPolicyResponse ModifyLogBackupPolicyWithOptions(ModifyLogBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyLogBackupPolicyResponse ModifyLogBackupPolicyWithOptions(ModifyLogBackupPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyLogBackupPolicyShrinkRequest request = new ModifyLogBackupPolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdvancedLogPolicies))
+            {
+                request.AdvancedLogPoliciesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdvancedLogPolicies, "AdvancedLogPolicies", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedLogPoliciesShrink))
+            {
+                query["AdvancedLogPolicies"] = request.AdvancedLogPoliciesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -45441,7 +45451,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <para>Modifies the retention policy of the log backups in a PolarDB cluster.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifyLogBackupPolicyRequest
         /// </param>
         /// <param name="runtime">
@@ -45451,10 +45461,20 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <returns>
         /// ModifyLogBackupPolicyResponse
         /// </returns>
-        public async Task<ModifyLogBackupPolicyResponse> ModifyLogBackupPolicyWithOptionsAsync(ModifyLogBackupPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyLogBackupPolicyResponse> ModifyLogBackupPolicyWithOptionsAsync(ModifyLogBackupPolicyRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyLogBackupPolicyShrinkRequest request = new ModifyLogBackupPolicyShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AdvancedLogPolicies))
+            {
+                request.AdvancedLogPoliciesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AdvancedLogPolicies, "AdvancedLogPolicies", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdvancedLogPoliciesShrink))
+            {
+                query["AdvancedLogPolicies"] = request.AdvancedLogPoliciesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;

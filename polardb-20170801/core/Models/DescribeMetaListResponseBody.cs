@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string Database { get; set; }
 
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public List<long?> Size { get; set; }
+
             /// <summary>
             /// <para>The name of the table that can be restored.</para>
             /// </summary>
