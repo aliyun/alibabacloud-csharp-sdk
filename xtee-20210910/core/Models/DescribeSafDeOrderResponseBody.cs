@@ -50,6 +50,24 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             [Validation(Required=false)]
             public int? OpenUserType { get; set; }
 
+            [NameInMap("regions")]
+            [Validation(Required=false)]
+            public List<DescribeSafDeOrderResponseBodyResultObjectRegions> Regions { get; set; }
+            public class DescribeSafDeOrderResponseBodyResultObjectRegions : TeaModel {
+                [NameInMap("expirationDate")]
+                [Validation(Required=false)]
+                public long? ExpirationDate { get; set; }
+
+                [NameInMap("region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                [NameInMap("specification")]
+                [Validation(Required=false)]
+                public int? Specification { get; set; }
+
+            }
+
         }
 
     }
