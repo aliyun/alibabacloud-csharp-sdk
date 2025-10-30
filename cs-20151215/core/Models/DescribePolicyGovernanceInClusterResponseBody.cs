@@ -9,6 +9,96 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribePolicyGovernanceInClusterResponseBody : TeaModel {
+        [NameInMap("Violation")]
+        [Validation(Required=false)]
+        public DescribePolicyGovernanceInClusterResponseBodyViolation Violation { get; set; }
+        public class DescribePolicyGovernanceInClusterResponseBodyViolation : TeaModel {
+            [NameInMap("totalViolations")]
+            [Validation(Required=false)]
+            public DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolations TotalViolations { get; set; }
+            public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolations : TeaModel {
+                [NameInMap("deny")]
+                [Validation(Required=false)]
+                public List<DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsDeny> Deny { get; set; }
+                public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsDeny : TeaModel {
+                    [NameInMap("severity")]
+                    [Validation(Required=false)]
+                    public string Severity { get; set; }
+
+                    [NameInMap("violations")]
+                    [Validation(Required=false)]
+                    public string Violations { get; set; }
+
+                }
+
+                [NameInMap("warn")]
+                [Validation(Required=false)]
+                public List<DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsWarn> Warn { get; set; }
+                public class DescribePolicyGovernanceInClusterResponseBodyViolationTotalViolationsWarn : TeaModel {
+                    [NameInMap("severity")]
+                    [Validation(Required=false)]
+                    public string Severity { get; set; }
+
+                    [NameInMap("violations")]
+                    [Validation(Required=false)]
+                    public long? Violations { get; set; }
+
+                }
+
+            }
+
+            [NameInMap("violations")]
+            [Validation(Required=false)]
+            public DescribePolicyGovernanceInClusterResponseBodyViolationViolations Violations { get; set; }
+            public class DescribePolicyGovernanceInClusterResponseBodyViolationViolations : TeaModel {
+                [NameInMap("deny")]
+                [Validation(Required=false)]
+                public List<DescribePolicyGovernanceInClusterResponseBodyViolationViolationsDeny> Deny { get; set; }
+                public class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsDeny : TeaModel {
+                    [NameInMap("policyDescription")]
+                    [Validation(Required=false)]
+                    public string PolicyDescription { get; set; }
+
+                    [NameInMap("policyName")]
+                    [Validation(Required=false)]
+                    public string PolicyName { get; set; }
+
+                    [NameInMap("severity")]
+                    [Validation(Required=false)]
+                    public string Severity { get; set; }
+
+                    [NameInMap("violations")]
+                    [Validation(Required=false)]
+                    public long? Violations { get; set; }
+
+                }
+
+                [NameInMap("warn")]
+                [Validation(Required=false)]
+                public List<DescribePolicyGovernanceInClusterResponseBodyViolationViolationsWarn> Warn { get; set; }
+                public class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsWarn : TeaModel {
+                    [NameInMap("policyDescription")]
+                    [Validation(Required=false)]
+                    public string PolicyDescription { get; set; }
+
+                    [NameInMap("policyName")]
+                    [Validation(Required=false)]
+                    public string PolicyName { get; set; }
+
+                    [NameInMap("severity")]
+                    [Validation(Required=false)]
+                    public string Severity { get; set; }
+
+                    [NameInMap("violations")]
+                    [Validation(Required=false)]
+                    public long? Violations { get; set; }
+
+                }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The audit logs of the policies in the cluster.</para>
         /// </summary>
@@ -26,72 +116,77 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public long? Count { get; set; }
 
-            /// <summary>
-            /// <para>The audit log content.</para>
-            /// </summary>
-            [NameInMap("log")]
+            [NameInMap("log_project")]
             [Validation(Required=false)]
-            public DescribePolicyGovernanceInClusterResponseBodyAdmitLogLog Log { get; set; }
-            public class DescribePolicyGovernanceInClusterResponseBodyAdmitLogLog : TeaModel {
-                /// <summary>
-                /// <para>The cluster ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>c8155823d057948c69a****</para>
-                /// </summary>
+            public string LogProject { get; set; }
+
+            [NameInMap("log_store")]
+            [Validation(Required=false)]
+            public string LogStore { get; set; }
+
+            [NameInMap("logs")]
+            [Validation(Required=false)]
+            public List<DescribePolicyGovernanceInClusterResponseBodyAdmitLogLogs> Logs { get; set; }
+            public class DescribePolicyGovernanceInClusterResponseBodyAdmitLogLogs : TeaModel {
                 [NameInMap("cluster_id")]
                 [Validation(Required=false)]
                 public string ClusterId { get; set; }
 
-                /// <summary>
-                /// <para>The policy type.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ACKAllowedRepos</para>
-                /// </summary>
+                [NameInMap("constraint_action")]
+                [Validation(Required=false)]
+                public string ConstraintAction { get; set; }
+
+                [NameInMap("constraint_api_version")]
+                [Validation(Required=false)]
+                public string ConstraintApiVersion { get; set; }
+
+                [NameInMap("constraint_category")]
+                [Validation(Required=false)]
+                public string ConstraintCategory { get; set; }
+
+                [NameInMap("constraint_group")]
+                [Validation(Required=false)]
+                public string ConstraintGroup { get; set; }
+
                 [NameInMap("constraint_kind")]
                 [Validation(Required=false)]
                 public string ConstraintKind { get; set; }
 
-                /// <summary>
-                /// <para>The message that appears when an event is generated by a policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>d4hdhs*****</para>
-                /// </summary>
-                [NameInMap("msg")]
+                [NameInMap("constraint_name")]
                 [Validation(Required=false)]
-                public string Msg { get; set; }
+                public string ConstraintName { get; set; }
 
-                /// <summary>
-                /// <para>The resource type.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Pod</para>
-                /// </summary>
+                [NameInMap("event_msg")]
+                [Validation(Required=false)]
+                public string EventMsg { get; set; }
+
+                [NameInMap("event_type")]
+                [Validation(Required=false)]
+                public string EventType { get; set; }
+
+                [NameInMap("request_uid")]
+                [Validation(Required=false)]
+                public string RequestUid { get; set; }
+
+                [NameInMap("request_userinfo")]
+                [Validation(Required=false)]
+                public string RequestUserinfo { get; set; }
+
+                [NameInMap("request_username")]
+                [Validation(Required=false)]
+                public string RequestUsername { get; set; }
+
                 [NameInMap("resource_kind")]
                 [Validation(Required=false)]
                 public string ResourceKind { get; set; }
 
-                /// <summary>
-                /// <para>The resource name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>nginx-deployment-basic2-84ccb74bfc-df22p</para>
-                /// </summary>
                 [NameInMap("resource_name")]
                 [Validation(Required=false)]
                 public string ResourceName { get; set; }
 
-                /// <summary>
-                /// <para>The namespace to which the resource belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>default</para>
-                /// </summary>
-                [NameInMap("resource_namespace")]
+                [NameInMap("time")]
                 [Validation(Required=false)]
-                public string ResourceNamespace { get; set; }
+                public string Time { get; set; }
 
             }
 
@@ -147,180 +242,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("total")]
             [Validation(Required=false)]
             public int? Total { get; set; }
-
-        }
-
-        /// <summary>
-        /// <para>Details about the blocking and alerting events that are triggered by policies of different severity levels.</para>
-        /// </summary>
-        [NameInMap("totalViolations")]
-        [Validation(Required=false)]
-        public DescribePolicyGovernanceInClusterResponseBodyTotalViolations TotalViolations { get; set; }
-        public class DescribePolicyGovernanceInClusterResponseBodyTotalViolations : TeaModel {
-            /// <summary>
-            /// <para>Details about the blocking events that are triggered by the policies of each severity level.</para>
-            /// </summary>
-            [NameInMap("deny")]
-            [Validation(Required=false)]
-            public DescribePolicyGovernanceInClusterResponseBodyTotalViolationsDeny Deny { get; set; }
-            public class DescribePolicyGovernanceInClusterResponseBodyTotalViolationsDeny : TeaModel {
-                /// <summary>
-                /// <para>The severity level of the policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>high</para>
-                /// </summary>
-                [NameInMap("severity")]
-                [Validation(Required=false)]
-                public string Severity { get; set; }
-
-                /// <summary>
-                /// <para>The number of blocking events that are triggered.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
-                [NameInMap("violations")]
-                [Validation(Required=false)]
-                public long? Violations { get; set; }
-
-            }
-
-            /// <summary>
-            /// <para>Details about the alerting events that are triggered by the policies of each severity level.</para>
-            /// </summary>
-            [NameInMap("warn")]
-            [Validation(Required=false)]
-            public DescribePolicyGovernanceInClusterResponseBodyTotalViolationsWarn Warn { get; set; }
-            public class DescribePolicyGovernanceInClusterResponseBodyTotalViolationsWarn : TeaModel {
-                /// <summary>
-                /// <para>The severity level of the policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>low</para>
-                /// </summary>
-                [NameInMap("severity")]
-                [Validation(Required=false)]
-                public string Severity { get; set; }
-
-                /// <summary>
-                /// <para>The number of alerting events that are triggered.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>5</para>
-                /// </summary>
-                [NameInMap("violations")]
-                [Validation(Required=false)]
-                public long? Violations { get; set; }
-
-            }
-
-        }
-
-        /// <summary>
-        /// <para>Details about the blocking and alerting events that are triggered by different policies.</para>
-        /// </summary>
-        [NameInMap("violations")]
-        [Validation(Required=false)]
-        public DescribePolicyGovernanceInClusterResponseBodyViolations Violations { get; set; }
-        public class DescribePolicyGovernanceInClusterResponseBodyViolations : TeaModel {
-            /// <summary>
-            /// <para>Details about the blocking events that are triggered by each policy.</para>
-            /// </summary>
-            [NameInMap("deny")]
-            [Validation(Required=false)]
-            public DescribePolicyGovernanceInClusterResponseBodyViolationsDeny Deny { get; set; }
-            public class DescribePolicyGovernanceInClusterResponseBodyViolationsDeny : TeaModel {
-                /// <summary>
-                /// <para>The policy description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Requires container images to begin with a repo string from a specified list.</para>
-                /// </summary>
-                [NameInMap("policyDescription")]
-                [Validation(Required=false)]
-                public string PolicyDescription { get; set; }
-
-                /// <summary>
-                /// <para>The policy name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>policy-gatekeeper-ackallowedrepos</para>
-                /// </summary>
-                [NameInMap("policyName")]
-                [Validation(Required=false)]
-                public string PolicyName { get; set; }
-
-                /// <summary>
-                /// <para>The severity level of the policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>high</para>
-                /// </summary>
-                [NameInMap("severity")]
-                [Validation(Required=false)]
-                public string Severity { get; set; }
-
-                /// <summary>
-                /// <para>The total number of blocking events that are triggered by the policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>11</para>
-                /// </summary>
-                [NameInMap("violations")]
-                [Validation(Required=false)]
-                public long? Violations { get; set; }
-
-            }
-
-            /// <summary>
-            /// <para>Details about the alerting events that are triggered by the policies of each severity level.</para>
-            /// </summary>
-            [NameInMap("warn")]
-            [Validation(Required=false)]
-            public DescribePolicyGovernanceInClusterResponseBodyViolationsWarn Warn { get; set; }
-            public class DescribePolicyGovernanceInClusterResponseBodyViolationsWarn : TeaModel {
-                /// <summary>
-                /// <para>The policy description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Controls Linux capabilities.</para>
-                /// </summary>
-                [NameInMap("policyDescription")]
-                [Validation(Required=false)]
-                public string PolicyDescription { get; set; }
-
-                /// <summary>
-                /// <para>The policy name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>policy-gatekeeper-ackpspcapabilities</para>
-                /// </summary>
-                [NameInMap("policyName")]
-                [Validation(Required=false)]
-                public string PolicyName { get; set; }
-
-                /// <summary>
-                /// <para>The severity level of the policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>high</para>
-                /// </summary>
-                [NameInMap("severity")]
-                [Validation(Required=false)]
-                public string Severity { get; set; }
-
-                /// <summary>
-                /// <para>The total number of alerting events that are triggered by the policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>81</para>
-                /// </summary>
-                [NameInMap("violations")]
-                [Validation(Required=false)]
-                public long? Violations { get; set; }
-
-            }
 
         }
 
