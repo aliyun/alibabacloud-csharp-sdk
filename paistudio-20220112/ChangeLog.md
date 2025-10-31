@@ -1,3 +1,6 @@
+2025-10-31 Version: 2.1.11
+- Generated csharp 2022-01-12 for PaiStudio.
+
 2025-10-30 Version: 2.1.10
 - Generated csharp 2022-01-12 for PaiStudio.
 
