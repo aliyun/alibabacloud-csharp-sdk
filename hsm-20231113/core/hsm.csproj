@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Hsm20231113</AssemblyName>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud Data Encryption Service (20231113) SDK Library for .NET</Description>

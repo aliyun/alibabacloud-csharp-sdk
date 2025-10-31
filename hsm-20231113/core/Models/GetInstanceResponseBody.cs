@@ -17,6 +17,18 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
         public GetInstanceResponseBodyInstance Instance { get; set; }
         public class GetInstanceResponseBodyInstance : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>GM/T0028_LEVEL_2</para>
+            /// </summary>
+            [NameInMap("Certification")]
+            [Validation(Required=false)]
+            public string Certification { get; set; }
+
+            [NameInMap("CertificationUrl")]
+            [Validation(Required=false)]
+            public string CertificationUrl { get; set; }
+
+            /// <summary>
             /// <para>The ID of the cluster to which the HSM belongs.</para>
             /// 
             /// <b>Example:</b>
