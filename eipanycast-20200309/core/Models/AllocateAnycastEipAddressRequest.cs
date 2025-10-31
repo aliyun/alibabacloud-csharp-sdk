@@ -107,6 +107,20 @@ namespace AlibabaCloud.SDK.Eipanycast20200309.Models
         [Validation(Required=false)]
         public string ServiceLocation { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<AllocateAnycastEipAddressRequestTag> Tag { get; set; }
+        public class AllocateAnycastEipAddressRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
     }
 
 }

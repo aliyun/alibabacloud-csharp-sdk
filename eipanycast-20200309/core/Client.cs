@@ -88,6 +88,10 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             {
                 query["ServiceLocation"] = request.ServiceLocation;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -157,6 +161,10 @@ namespace AlibabaCloud.SDK.Eipanycast20200309
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceLocation))
             {
                 query["ServiceLocation"] = request.ServiceLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
