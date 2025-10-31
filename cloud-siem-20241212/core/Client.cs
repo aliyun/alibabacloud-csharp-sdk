@@ -976,6 +976,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 body["DetectionRuleStatus"] = request.DetectionRuleStatus;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionRuleTemplateId))
+            {
+                body["DetectionRuleTemplateId"] = request.DetectionRuleTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionRuleTemplateVersion))
+            {
+                body["DetectionRuleTemplateVersion"] = request.DetectionRuleTemplateVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionRuleType))
             {
                 body["DetectionRuleType"] = request.DetectionRuleType;
@@ -1133,6 +1141,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionRuleStatus))
             {
                 body["DetectionRuleStatus"] = request.DetectionRuleStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionRuleTemplateId))
+            {
+                body["DetectionRuleTemplateId"] = request.DetectionRuleTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionRuleTemplateVersion))
+            {
+                body["DetectionRuleTemplateVersion"] = request.DetectionRuleTemplateVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionRuleType))
             {

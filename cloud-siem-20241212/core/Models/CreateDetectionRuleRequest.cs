@@ -135,6 +135,22 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DetectionRuleStatus { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>cfw-out-ip_aegis-netstat</para>
+        /// </summary>
+        [NameInMap("DetectionRuleTemplateId")]
+        [Validation(Required=false)]
+        public string DetectionRuleTemplateId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>v1.0.0</para>
+        /// </summary>
+        [NameInMap("DetectionRuleTemplateVersion")]
+        [Validation(Required=false)]
+        public string DetectionRuleTemplateVersion { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

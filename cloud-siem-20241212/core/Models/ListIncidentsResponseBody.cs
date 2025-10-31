@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>[&quot;sys:data_source:siem&quot;,&quot;sys:trigger_type:auto&quot;]</para>
+            /// </summary>
+            [NameInMap("IncidentTags")]
+            [Validation(Required=false)]
+            public string IncidentTags { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>dbb1d7211c9285c862aa89385098****</para>
             /// </summary>
             [NameInMap("IncidentUuid")]
