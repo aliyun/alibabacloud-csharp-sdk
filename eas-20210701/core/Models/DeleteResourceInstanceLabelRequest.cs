@@ -23,12 +23,19 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The keys of the tags that you want to delete.</para>
         /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<string> Keys { get; set; }
+
+        [NameInMap("LabelKeys")]
+        [Validation(Required=false)]
+        public List<string> LabelKeys { get; set; }
 
     }
 

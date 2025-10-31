@@ -3584,6 +3584,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 request.KeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Keys, "Keys", "simple");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelKeys))
+            {
+                request.LabelKeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelKeys, "LabelKeys", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllInstances))
             {
@@ -3596,6 +3600,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeysShrink))
             {
                 query["Keys"] = request.KeysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelKeysShrink))
+            {
+                query["LabelKeys"] = request.LabelKeysShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3648,6 +3656,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 request.KeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Keys, "Keys", "simple");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelKeys))
+            {
+                request.LabelKeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelKeys, "LabelKeys", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllInstances))
             {
@@ -3660,6 +3672,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeysShrink))
             {
                 query["Keys"] = request.KeysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelKeysShrink))
+            {
+                query["LabelKeys"] = request.LabelKeysShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4438,10 +4454,18 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 request.KeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Keys, "Keys", "simple");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelKeys))
+            {
+                request.LabelKeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelKeys, "LabelKeys", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeysShrink))
             {
                 query["Keys"] = request.KeysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelKeysShrink))
+            {
+                query["LabelKeys"] = request.LabelKeysShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4490,10 +4514,18 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 request.KeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Keys, "Keys", "simple");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelKeys))
+            {
+                request.LabelKeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelKeys, "LabelKeys", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeysShrink))
             {
                 query["Keys"] = request.KeysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelKeysShrink))
+            {
+                query["LabelKeys"] = request.LabelKeysShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
