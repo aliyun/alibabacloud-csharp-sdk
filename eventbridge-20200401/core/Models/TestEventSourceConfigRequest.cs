@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public TestEventSourceConfigRequestSourceMySQLParameters SourceMySQLParameters { get; set; }
         public class TestEventSourceConfigRequestSourceMySQLParameters : TeaModel {
+            [NameInMap("AllowedCIDRs")]
+            [Validation(Required=false)]
+            public string AllowedCIDRs { get; set; }
+
             /// <summary>
             /// <para>The database name.</para>
             /// 

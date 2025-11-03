@@ -456,6 +456,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             }
 
+            [NameInMap("SinkApiDestinationParameters")]
+            [Validation(Required=false)]
+            public SinkApiDestinationParameters SinkApiDestinationParameters { get; set; }
+
             [NameInMap("SinkBaiLianParameters")]
             [Validation(Required=false)]
             public SinkBaiLianParameters SinkBaiLianParameters { get; set; }
@@ -551,45 +555,89 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 [NameInMap("DashVectorSchemaParameters")]
                 [Validation(Required=false)]
-                public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters DashVectorSchemaParameters { get; set; }
+                public List<CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters> DashVectorSchemaParameters { get; set; }
                 public class CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>TEMPLATE</para>
-                    /// </summary>
-                    [NameInMap("Form")]
+                    [NameInMap("Name")]
                     [Validation(Required=false)]
-                    public string Form { get; set; }
+                    public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersName Name { get; set; }
+                    public class CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersName : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>[
-                    ///   {
-                    ///     &quot;name&quot;: &quot;schema1&quot;,
-                    ///     &quot;type&quot;: &quot;INT&quot;,
-                    ///     &quot;value&quot;: &quot;${value1}&quot;
-                    ///   },
-                    ///   {
-                    ///     &quot;name&quot;: &quot;schema2&quot;,
-                    ///     &quot;type&quot;: &quot;FLOAT&quot;,
-                    ///     &quot;value&quot;: &quot;${value2}&quot;
-                    ///   }
-                    /// ]</para>
-                    /// </summary>
-                    [NameInMap("Template")]
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>content</para>
+                        /// </summary>
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("Type")]
                     [Validation(Required=false)]
-                    public string Template { get; set; }
+                    public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersType Type { get; set; }
+                    public class CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersType : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>CONSTANT</para>
+                        /// </summary>
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>{
-                    ///   &quot;value1&quot;:&quot;v1&quot;,
-                    ///   &quot;value2&quot;:&quot;v2&quot;
-                    /// }</para>
-                    /// </summary>
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>STRING</para>
+                        /// </summary>
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
                     [NameInMap("Value")]
                     [Validation(Required=false)]
-                    public string Value { get; set; }
+                    public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersValue Value { get; set; }
+                    public class CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersValue : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>JSONPATH</para>
+                        /// </summary>
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>${content}</para>
+                        /// </summary>
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>$.data.content</para>
+                        /// </summary>
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
 
                 }
 
@@ -629,6 +677,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public string Form { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>${partition}</para>
+                    /// </summary>
                     [NameInMap("Template")]
                     [Validation(Required=false)]
                     public string Template { get; set; }
@@ -685,6 +737,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [Validation(Required=false)]
                     public string Form { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>${vector}</para>
+                    /// </summary>
                     [NameInMap("Template")]
                     [Validation(Required=false)]
                     public string Template { get; set; }
@@ -1575,6 +1631,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
             }
+
+            [NameInMap("SinkHttpsParameters")]
+            [Validation(Required=false)]
+            public SinkHttpsParameters SinkHttpsParameters { get; set; }
 
             /// <summary>
             /// <para>The parameters that are configured if you specify ApsaraMQ for Kafka as the event target.</para>
@@ -4708,6 +4768,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public string Arn { get; set; }
+
+            [NameInMap("BaiLianAgentTransformParameters")]
+            [Validation(Required=false)]
+            public BaiLianAgentTransformParameters BaiLianAgentTransformParameters { get; set; }
+
+            [NameInMap("DashScopeTransformParameters")]
+            [Validation(Required=false)]
+            public DashScopeTransformParameters DashScopeTransformParameters { get; set; }
+
+            [NameInMap("EmbeddingTransformParameters")]
+            [Validation(Required=false)]
+            public EmbeddingTransformParameters EmbeddingTransformParameters { get; set; }
 
         }
 

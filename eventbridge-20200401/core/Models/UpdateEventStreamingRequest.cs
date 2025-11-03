@@ -607,6 +607,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             }
 
+            [NameInMap("SinkApiDestinationParameters")]
+            [Validation(Required=false)]
+            public SinkApiDestinationParameters SinkApiDestinationParameters { get; set; }
+
             /// <summary>
             /// <para>The parameters that are configured if you specify BaiLian as the event target.</para>
             /// </summary>
@@ -734,63 +738,61 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 /// </summary>
                 [NameInMap("DashVectorSchemaParameters")]
                 [Validation(Required=false)]
-                public UpdateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters DashVectorSchemaParameters { get; set; }
+                public List<UpdateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters> DashVectorSchemaParameters { get; set; }
                 public class UpdateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters : TeaModel {
-                    /// <summary>
-                    /// <para>The method that you want to use to transform events. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>JSONPATH</description></item>
-                    /// <item><description>CONSTANT</description></item>
-                    /// <item><description>TEMPLATE</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>TEMPLATE</para>
-                    /// </summary>
-                    [NameInMap("Form")]
+                    [NameInMap("Name")]
                     [Validation(Required=false)]
-                    public string Form { get; set; }
+                    public UpdateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersName Name { get; set; }
+                    public class UpdateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersName : TeaModel {
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
 
-                    /// <summary>
-                    /// <para>The schema template. This parameter is required only if you set Form to TEMPLATE. After the event content is transformed, the data must be an array in the JSON format. Each schema corresponds to a JSON object. The properties include only the name, type, and value fields. The value of the type field can be only of the INT, FLOAT, STRING, or BOOL type.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>[
-                    ///   {
-                    ///     &quot;name&quot;: &quot;schema1&quot;,
-                    ///     &quot;type&quot;: &quot;INT&quot;,
-                    ///     &quot;value&quot;: &quot;${value1}&quot;
-                    ///   },
-                    ///   {
-                    ///     &quot;name&quot;: &quot;schema2&quot;,
-                    ///     &quot;type&quot;: &quot;FLOAT&quot;,
-                    ///     &quot;value&quot;: &quot;${value2}&quot;
-                    ///   }
-                    /// ]</para>
-                    /// </summary>
-                    [NameInMap("Template")]
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
+                    [NameInMap("Type")]
                     [Validation(Required=false)]
-                    public string Template { get; set; }
+                    public UpdateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersType Type { get; set; }
+                    public class UpdateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersType : TeaModel {
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
 
-                    /// <summary>
-                    /// <list type="bullet">
-                    /// <item><description>If you set Form to CONSTANT, specify a constant.</description></item>
-                    /// <item><description>If you set Form to JSONPATH, specify a JSONPath rule.</description></item>
-                    /// <item><description>If you set Form to TEMPLATE, specify variables for the template.</description></item>
-                    /// </list>
-                    /// <remarks>
-                    /// <para> The value of this parameter cannot exceed 10,240 characters in length.</para>
-                    /// </remarks>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>{
-                    ///   &quot;value1&quot;:&quot;v1&quot;,
-                    ///   &quot;value2&quot;:&quot;v2&quot;
-                    /// }</para>
-                    /// </summary>
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
+
                     [NameInMap("Value")]
                     [Validation(Required=false)]
-                    public string Value { get; set; }
+                    public UpdateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersValue Value { get; set; }
+                    public class UpdateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParametersValue : TeaModel {
+                        [NameInMap("Form")]
+                        [Validation(Required=false)]
+                        public string Form { get; set; }
+
+                        [NameInMap("Template")]
+                        [Validation(Required=false)]
+                        public string Template { get; set; }
+
+                        [NameInMap("Value")]
+                        [Validation(Required=false)]
+                        public string Value { get; set; }
+
+                    }
 
                 }
 
@@ -1935,6 +1937,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
             }
+
+            [NameInMap("SinkHttpsParameters")]
+            [Validation(Required=false)]
+            public SinkHttpsParameters SinkHttpsParameters { get; set; }
 
             /// <summary>
             /// <para>The parameters that are configured if you specify ApsaraMQ for Kafka as the event target.</para>
@@ -5468,6 +5474,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public string Arn { get; set; }
+
+            [NameInMap("BaiLianAgentTransformParameters")]
+            [Validation(Required=false)]
+            public BaiLianAgentTransformParameters BaiLianAgentTransformParameters { get; set; }
+
+            [NameInMap("DashScopeTransformParameters")]
+            [Validation(Required=false)]
+            public DashScopeTransformParameters DashScopeTransformParameters { get; set; }
 
         }
 

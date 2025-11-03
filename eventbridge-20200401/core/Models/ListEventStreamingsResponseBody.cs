@@ -219,148 +219,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public ListEventStreamingsResponseBodyDataEventStreamingsSink Sink { get; set; }
                 public class ListEventStreamingsResponseBodyDataEventStreamingsSink : TeaModel {
-                    [NameInMap("SinkApacheKafkaParameters")]
-                    [Validation(Required=false)]
-                    public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters SinkApacheKafkaParameters { get; set; }
-                    public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters : TeaModel {
-                        [NameInMap("Acks")]
-                        [Validation(Required=false)]
-                        public string Acks { get; set; }
-
-                        [NameInMap("Bootstraps")]
-                        [Validation(Required=false)]
-                        public string Bootstraps { get; set; }
-
-                        [NameInMap("Key")]
-                        [Validation(Required=false)]
-                        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersKey Key { get; set; }
-                        public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersKey : TeaModel {
-                            [NameInMap("Form")]
-                            [Validation(Required=false)]
-                            public string Form { get; set; }
-
-                            [NameInMap("Template")]
-                            [Validation(Required=false)]
-                            public string Template { get; set; }
-
-                            [NameInMap("Value")]
-                            [Validation(Required=false)]
-                            public string Value { get; set; }
-
-                        }
-
-                        [NameInMap("NetworkType")]
-                        [Validation(Required=false)]
-                        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersNetworkType NetworkType { get; set; }
-                        public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersNetworkType : TeaModel {
-                            [NameInMap("Form")]
-                            [Validation(Required=false)]
-                            public string Form { get; set; }
-
-                            [NameInMap("Template")]
-                            [Validation(Required=false)]
-                            public string Template { get; set; }
-
-                            [NameInMap("Value")]
-                            [Validation(Required=false)]
-                            public string Value { get; set; }
-
-                        }
-
-                        [NameInMap("SaslMechanism")]
-                        [Validation(Required=false)]
-                        public string SaslMechanism { get; set; }
-
-                        [NameInMap("SaslPassword")]
-                        [Validation(Required=false)]
-                        public string SaslPassword { get; set; }
-
-                        [NameInMap("SaslUser")]
-                        [Validation(Required=false)]
-                        public string SaslUser { get; set; }
-
-                        [NameInMap("SecurityGroupId")]
-                        [Validation(Required=false)]
-                        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersSecurityGroupId SecurityGroupId { get; set; }
-                        public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersSecurityGroupId : TeaModel {
-                            [NameInMap("Form")]
-                            [Validation(Required=false)]
-                            public string Form { get; set; }
-
-                            [NameInMap("Template")]
-                            [Validation(Required=false)]
-                            public string Template { get; set; }
-
-                            [NameInMap("Value")]
-                            [Validation(Required=false)]
-                            public string Value { get; set; }
-
-                        }
-
-                        [NameInMap("SecurityProtocol")]
-                        [Validation(Required=false)]
-                        public string SecurityProtocol { get; set; }
-
-                        [NameInMap("Topic")]
-                        [Validation(Required=false)]
-                        public string Topic { get; set; }
-
-                        [NameInMap("VSwitchIds")]
-                        [Validation(Required=false)]
-                        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVSwitchIds VSwitchIds { get; set; }
-                        public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVSwitchIds : TeaModel {
-                            [NameInMap("Form")]
-                            [Validation(Required=false)]
-                            public string Form { get; set; }
-
-                            [NameInMap("Template")]
-                            [Validation(Required=false)]
-                            public string Template { get; set; }
-
-                            [NameInMap("Value")]
-                            [Validation(Required=false)]
-                            public string Value { get; set; }
-
-                        }
-
-                        [NameInMap("Value")]
-                        [Validation(Required=false)]
-                        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersValue Value { get; set; }
-                        public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersValue : TeaModel {
-                            [NameInMap("Form")]
-                            [Validation(Required=false)]
-                            public string Form { get; set; }
-
-                            [NameInMap("Template")]
-                            [Validation(Required=false)]
-                            public string Template { get; set; }
-
-                            [NameInMap("Value")]
-                            [Validation(Required=false)]
-                            public string Value { get; set; }
-
-                        }
-
-                        [NameInMap("VpcId")]
-                        [Validation(Required=false)]
-                        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVpcId VpcId { get; set; }
-                        public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVpcId : TeaModel {
-                            [NameInMap("Form")]
-                            [Validation(Required=false)]
-                            public string Form { get; set; }
-
-                            [NameInMap("Template")]
-                            [Validation(Required=false)]
-                            public string Template { get; set; }
-
-                            [NameInMap("Value")]
-                            [Validation(Required=false)]
-                            public string Value { get; set; }
-
-                        }
-
-                    }
-
                     [NameInMap("SinkApacheRocketMQCheckpointParameters")]
                     [Validation(Required=false)]
                     public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheRocketMQCheckpointParameters SinkApacheRocketMQCheckpointParameters { get; set; }
@@ -503,6 +361,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                     }
 
+                    [NameInMap("SinkApiDestinationParameters")]
+                    [Validation(Required=false)]
+                    public SinkApiDestinationParameters SinkApiDestinationParameters { get; set; }
+
                     [NameInMap("SinkBaiLianParameters")]
                     [Validation(Required=false)]
                     public SinkBaiLianParameters SinkBaiLianParameters { get; set; }
@@ -598,45 +460,61 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         [NameInMap("DashVectorSchemaParameters")]
                         [Validation(Required=false)]
-                        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDashVectorParametersDashVectorSchemaParameters DashVectorSchemaParameters { get; set; }
+                        public List<ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDashVectorParametersDashVectorSchemaParameters> DashVectorSchemaParameters { get; set; }
                         public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDashVectorParametersDashVectorSchemaParameters : TeaModel {
-                            /// <summary>
-                            /// <b>Example:</b>
-                            /// <para>TEMPLATE</para>
-                            /// </summary>
-                            [NameInMap("Form")]
+                            [NameInMap("Name")]
                             [Validation(Required=false)]
-                            public string Form { get; set; }
+                            public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDashVectorParametersDashVectorSchemaParametersName Name { get; set; }
+                            public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDashVectorParametersDashVectorSchemaParametersName : TeaModel {
+                                [NameInMap("Form")]
+                                [Validation(Required=false)]
+                                public string Form { get; set; }
 
-                            /// <summary>
-                            /// <b>Example:</b>
-                            /// <para>[
-                            ///   {
-                            ///     &quot;name&quot;: &quot;schema1&quot;,
-                            ///     &quot;type&quot;: &quot;INT&quot;,
-                            ///     &quot;value&quot;: &quot;${value1}&quot;
-                            ///   },
-                            ///   {
-                            ///     &quot;name&quot;: &quot;schema2&quot;,
-                            ///     &quot;type&quot;: &quot;FLOAT&quot;,
-                            ///     &quot;value&quot;: &quot;${value2}&quot;
-                            ///   }
-                            /// ]</para>
-                            /// </summary>
-                            [NameInMap("Template")]
+                                [NameInMap("Template")]
+                                [Validation(Required=false)]
+                                public string Template { get; set; }
+
+                                [NameInMap("Value")]
+                                [Validation(Required=false)]
+                                public string Value { get; set; }
+
+                            }
+
+                            [NameInMap("Type")]
                             [Validation(Required=false)]
-                            public string Template { get; set; }
+                            public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDashVectorParametersDashVectorSchemaParametersType Type { get; set; }
+                            public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDashVectorParametersDashVectorSchemaParametersType : TeaModel {
+                                [NameInMap("Form")]
+                                [Validation(Required=false)]
+                                public string Form { get; set; }
 
-                            /// <summary>
-                            /// <b>Example:</b>
-                            /// <para>{
-                            ///   &quot;value1&quot;:&quot;v1&quot;,
-                            ///   &quot;value2&quot;:&quot;v2&quot;
-                            /// }</para>
-                            /// </summary>
+                                [NameInMap("Template")]
+                                [Validation(Required=false)]
+                                public string Template { get; set; }
+
+                                [NameInMap("Value")]
+                                [Validation(Required=false)]
+                                public string Value { get; set; }
+
+                            }
+
                             [NameInMap("Value")]
                             [Validation(Required=false)]
-                            public string Value { get; set; }
+                            public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDashVectorParametersDashVectorSchemaParametersValue Value { get; set; }
+                            public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkDashVectorParametersDashVectorSchemaParametersValue : TeaModel {
+                                [NameInMap("Form")]
+                                [Validation(Required=false)]
+                                public string Form { get; set; }
+
+                                [NameInMap("Template")]
+                                [Validation(Required=false)]
+                                public string Template { get; set; }
+
+                                [NameInMap("Value")]
+                                [Validation(Required=false)]
+                                public string Value { get; set; }
+
+                            }
 
                         }
 
@@ -905,10 +783,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         }
 
                     }
-
-                    [NameInMap("SinkDataWorksTriggerParameters")]
-                    [Validation(Required=false)]
-                    public SinkDataWorksTriggerParameters SinkDataWorksTriggerParameters { get; set; }
 
                     [NameInMap("SinkDorisParameters")]
                     [Validation(Required=false)]
@@ -1566,6 +1440,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         }
 
                     }
+
+                    [NameInMap("SinkHttpsParameters")]
+                    [Validation(Required=false)]
+                    public SinkHttpsParameters SinkHttpsParameters { get; set; }
 
                     /// <summary>
                     /// <para>The parameters that are returned if ApsaraMQ for Kafka is specified as the event target.</para>
@@ -3331,64 +3209,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public ListEventStreamingsResponseBodyDataEventStreamingsSource Source { get; set; }
                 public class ListEventStreamingsResponseBodyDataEventStreamingsSource : TeaModel {
-                    [NameInMap("SourceApacheKafkaParameters")]
-                    [Validation(Required=false)]
-                    public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters SourceApacheKafkaParameters { get; set; }
-                    public class ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters : TeaModel {
-                        [NameInMap("Bootstraps")]
-                        [Validation(Required=false)]
-                        public string Bootstraps { get; set; }
-
-                        [NameInMap("ConsumerGroup")]
-                        [Validation(Required=false)]
-                        public string ConsumerGroup { get; set; }
-
-                        [NameInMap("NetworkType")]
-                        [Validation(Required=false)]
-                        public string NetworkType { get; set; }
-
-                        [NameInMap("OffsetReset")]
-                        [Validation(Required=false)]
-                        public string OffsetReset { get; set; }
-
-                        [NameInMap("SaslMechanism")]
-                        [Validation(Required=false)]
-                        public string SaslMechanism { get; set; }
-
-                        [NameInMap("SaslPassword")]
-                        [Validation(Required=false)]
-                        public string SaslPassword { get; set; }
-
-                        [NameInMap("SaslUser")]
-                        [Validation(Required=false)]
-                        public string SaslUser { get; set; }
-
-                        [NameInMap("SecurityGroupId")]
-                        [Validation(Required=false)]
-                        public string SecurityGroupId { get; set; }
-
-                        [NameInMap("SecurityProtocol")]
-                        [Validation(Required=false)]
-                        public string SecurityProtocol { get; set; }
-
-                        [NameInMap("Topic")]
-                        [Validation(Required=false)]
-                        public string Topic { get; set; }
-
-                        [NameInMap("VSwitchIds")]
-                        [Validation(Required=false)]
-                        public string VSwitchIds { get; set; }
-
-                        [NameInMap("ValueDataType")]
-                        [Validation(Required=false)]
-                        public string ValueDataType { get; set; }
-
-                        [NameInMap("VpcId")]
-                        [Validation(Required=false)]
-                        public string VpcId { get; set; }
-
-                    }
-
                     [NameInMap("SourceApacheRocketMQCheckpointParameters")]
                     [Validation(Required=false)]
                     public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheRocketMQCheckpointParameters SourceApacheRocketMQCheckpointParameters { get; set; }
@@ -4432,6 +4252,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     [NameInMap("Arn")]
                     [Validation(Required=false)]
                     public string Arn { get; set; }
+
+                    [NameInMap("BaiLianAgentTransformParameters")]
+                    [Validation(Required=false)]
+                    public BaiLianAgentTransformParameters BaiLianAgentTransformParameters { get; set; }
+
+                    [NameInMap("DashScopeTransformParameters")]
+                    [Validation(Required=false)]
+                    public DashScopeTransformParameters DashScopeTransformParameters { get; set; }
 
                 }
 
