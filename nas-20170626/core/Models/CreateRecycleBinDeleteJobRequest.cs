@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The ID of the file or directory that you want to permanently delete.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/264193.html">ListRecycledDirectoriesAndFiles</a> operation to query the value of the FileId parameter.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2412174.html">ListRecycledDirectoriesAndFiles</a> operation to query the FileId of the deleted data.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

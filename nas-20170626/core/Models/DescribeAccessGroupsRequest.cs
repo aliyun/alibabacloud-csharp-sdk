@@ -28,9 +28,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The type of the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard (default): General-purpose NAS file system</description></item>
-        /// <item><description>extreme: Extreme NAS file system</description></item>
-        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS) file system</description></item>
+        /// <item><description>standard (default): General-purpose NAS file system.</description></item>
+        /// <item><description>extreme: Extreme NAS file system.</description></item>
+        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS) file system.</description></item>
         /// </list>
         /// <remarks>
         /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>

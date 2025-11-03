@@ -2540,6 +2540,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             {
                 query["RootDirectory"] = request.RootDirectory;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
                 query["VpcId"] = request.VpcId;
@@ -2638,6 +2642,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RootDirectory))
             {
                 query["RootDirectory"] = request.RootDirectory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -6443,9 +6451,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>Only General-purpose NAS file systems support this operation.</description></item>
         /// <item><description>You can run only one job at a time for a single file system to restore files to or clear files from the file system. You cannot create a restore or cleanup job when files are being restored from the recycle bin.</description></item>
         /// <item><description>You can restore only one file or directory in a single restore job. If you restore a specified directory, all files in the directory are recursively restored.</description></item>
         /// <item><description>After files are restored, the data of the files is defragmented. When the data is being defragmented, the read performance is slightly degraded.</description></item>
@@ -6492,9 +6499,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>Only General-purpose NAS file systems support this operation.</description></item>
         /// <item><description>You can run only one job at a time for a single file system to restore files to or clear files from the file system. You cannot create a restore or cleanup job when files are being restored from the recycle bin.</description></item>
         /// <item><description>You can restore only one file or directory in a single restore job. If you restore a specified directory, all files in the directory are recursively restored.</description></item>
         /// <item><description>After files are restored, the data of the files is defragmented. When the data is being defragmented, the read performance is slightly degraded.</description></item>
@@ -6541,9 +6547,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>Only General-purpose NAS file systems support this operation.</description></item>
         /// <item><description>You can run only one job at a time for a single file system to restore files to or clear files from the file system. You cannot create a restore or cleanup job when files are being restored from the recycle bin.</description></item>
         /// <item><description>You can restore only one file or directory in a single restore job. If you restore a specified directory, all files in the directory are recursively restored.</description></item>
         /// <item><description>After files are restored, the data of the files is defragmented. When the data is being defragmented, the read performance is slightly degraded.</description></item>
@@ -6570,9 +6575,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
+        /// <para>  Only General-purpose NAS file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>Only General-purpose NAS file systems support this operation.</description></item>
         /// <item><description>You can run only one job at a time for a single file system to restore files to or clear files from the file system. You cannot create a restore or cleanup job when files are being restored from the recycle bin.</description></item>
         /// <item><description>You can restore only one file or directory in a single restore job. If you restore a specified directory, all files in the directory are recursively restored.</description></item>
         /// <item><description>After files are restored, the data of the files is defragmented. When the data is being defragmented, the read performance is slightly degraded.</description></item>
@@ -9340,6 +9344,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9398,6 +9406,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -133,6 +133,28 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string RootDirectory { get; set; }
 
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<CreateAccessPointRequestTag> Tag { get; set; }
+        public class CreateAccessPointRequestTag : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The VPC ID.</para>
         /// <para>This parameter is required.</para>
