@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string OssBucketName { get; set; }
 
+        [NameInMap("ScreenshotId")]
+        [Validation(Required=false)]
+        public string ScreenshotId { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to bypass the snapshot policy control. Default value: false.</para>
         /// 

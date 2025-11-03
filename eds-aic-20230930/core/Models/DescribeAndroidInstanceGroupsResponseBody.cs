@@ -61,6 +61,30 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string BandwidthPackageType { get; set; }
 
+            [NameInMap("BindQosRules")]
+            [Validation(Required=false)]
+            public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules BindQosRules { get; set; }
+            public class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules : TeaModel {
+                [NameInMap("InstanceQosRule")]
+                [Validation(Required=false)]
+                public List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRulesInstanceQosRule> InstanceQosRule { get; set; }
+                public class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRulesInstanceQosRule : TeaModel {
+                    [NameInMap("InstanceId")]
+                    [Validation(Required=false)]
+                    public string InstanceId { get; set; }
+
+                    [NameInMap("QosRuleId")]
+                    [Validation(Required=false)]
+                    public string QosRuleId { get; set; }
+
+                }
+
+                [NameInMap("totalCount")]
+                [Validation(Required=false)]
+                public int? TotalCount { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The billing method.</para>
             /// 
@@ -373,6 +397,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
+
+            [NameInMap("ZoneId")]
+            [Validation(Required=false)]
+            public string ZoneId { get; set; }
 
         }
 

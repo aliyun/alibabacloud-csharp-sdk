@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string AndroidInstanceId { get; set; }
 
+            [NameInMap("ScreenshotId")]
+            [Validation(Required=false)]
+            public string ScreenshotId { get; set; }
+
             /// <summary>
             /// <para>The ID of the task. You can use the task ID with the DescribeTasks operation to get the download link for the screenshot.</para>
             /// 

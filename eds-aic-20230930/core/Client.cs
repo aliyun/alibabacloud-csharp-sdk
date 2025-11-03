@@ -2645,6 +2645,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["OssBucketName"] = request.OssBucketName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScreenshotId))
+            {
+                query["ScreenshotId"] = request.ScreenshotId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipCheckPolicyConfig))
             {
                 query["SkipCheckPolicyConfig"] = request.SkipCheckPolicyConfig;
@@ -2699,6 +2703,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
             {
                 query["OssBucketName"] = request.OssBucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScreenshotId))
+            {
+                query["ScreenshotId"] = request.ScreenshotId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipCheckPolicyConfig))
             {
