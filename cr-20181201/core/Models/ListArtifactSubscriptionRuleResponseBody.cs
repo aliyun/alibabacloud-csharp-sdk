@@ -157,6 +157,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string RuleId { get; set; }
 
+            [NameInMap("SourceDomain")]
+            [Validation(Required=false)]
+            public string SourceDomain { get; set; }
+
             /// <summary>
             /// <para>The source namespace.</para>
             /// 

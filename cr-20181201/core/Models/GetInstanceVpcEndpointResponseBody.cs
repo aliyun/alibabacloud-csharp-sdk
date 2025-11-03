@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The VPCs that are added to the access control list.</para>
+        /// <para>List of linked VPCs</para>
         /// </summary>
         [NameInMap("LinkedVpcs")]
         [Validation(Required=false)]
@@ -82,6 +82,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Ip { get; set; }
 
             /// <summary>
+            /// <para>The error message detected in the linked VPC access control.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PRIVATE_ZONE_CONFLICT_AT_{private_zone_id}</para>
             /// </summary>

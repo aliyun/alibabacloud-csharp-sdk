@@ -6913,6 +6913,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await GetAuthorizationTokenWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取交付链</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetChainRequest
         /// </param>
@@ -6954,6 +6959,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<GetChainResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取交付链</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetChainRequest
         /// </param>
@@ -6995,6 +7005,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<GetChainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取交付链</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetChainRequest
         /// </param>
@@ -7008,6 +7023,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return GetChainWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取交付链</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetChainRequest
         /// </param>
