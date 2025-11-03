@@ -382,6 +382,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
                 [Validation(Required=false)]
                 public int? RequestMem { get; set; }
 
+                [NameInMap("SecurityContext")]
+                [Validation(Required=false)]
+                public string SecurityContext { get; set; }
+
                 /// <summary>
                 /// <para>The configuration information about the Server Load Balancer (SLB).</para>
                 /// 

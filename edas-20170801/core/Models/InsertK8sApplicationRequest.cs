@@ -815,6 +815,10 @@ namespace AlibabaCloud.SDK.Edas20170801.Models
         [Validation(Required=false)]
         public string SecretName { get; set; }
 
+        [NameInMap("SecurityContext")]
+        [Validation(Required=false)]
+        public string SecurityContext { get; set; }
+
         /// <summary>
         /// <para>The configurations of services in a Kubernetes cluster.</para>
         /// 

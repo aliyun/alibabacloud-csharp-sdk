@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Edas20170801</AssemblyName>
-    <Version>2.0.0</Version>
+    <Version>2.1.0</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud Enterprise Distributed Application Service (20170801) SDK Library for .NET</Description>

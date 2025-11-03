@@ -5905,6 +5905,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["RuntimeClassName"] = request.RuntimeClassName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityContext))
+            {
+                query["SecurityContext"] = request.SecurityContext;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sidecars))
             {
                 query["Sidecars"] = request.Sidecars;
@@ -6218,6 +6222,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeClassName))
             {
                 query["RuntimeClassName"] = request.RuntimeClassName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityContext))
+            {
+                query["SecurityContext"] = request.SecurityContext;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sidecars))
             {
@@ -6595,6 +6603,132 @@ namespace AlibabaCloud.SDK.Edas20170801
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DescribeApplicationScalingRulesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <param name="request">
+        /// DescribeLocalitySettingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLocalitySettingResponse
+        /// </returns>
+        public DescribeLocalitySettingResponse DescribeLocalitySettingWithOptions(DescribeLocalitySettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLocalitySetting",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/pop/sp/applications/locality/setting",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLocalitySettingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DescribeLocalitySettingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLocalitySettingResponse
+        /// </returns>
+        public async Task<DescribeLocalitySettingResponse> DescribeLocalitySettingWithOptionsAsync(DescribeLocalitySettingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["Region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLocalitySetting",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/pop/sp/applications/locality/setting",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLocalitySettingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DescribeLocalitySettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLocalitySettingResponse
+        /// </returns>
+        public DescribeLocalitySettingResponse DescribeLocalitySetting(DescribeLocalitySettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeLocalitySettingWithOptions(request, headers, runtime);
+        }
+
+        /// <param name="request">
+        /// DescribeLocalitySettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLocalitySettingResponse
+        /// </returns>
+        public async Task<DescribeLocalitySettingResponse> DescribeLocalitySettingAsync(DescribeLocalitySettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeLocalitySettingWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11337,6 +11471,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             {
                 query["SecretName"] = request.SecretName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityContext))
+            {
+                query["SecurityContext"] = request.SecurityContext;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceConfigs))
             {
                 query["ServiceConfigs"] = request.ServiceConfigs;
@@ -11718,6 +11856,10 @@ namespace AlibabaCloud.SDK.Edas20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecretName))
             {
                 query["SecretName"] = request.SecretName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityContext))
+            {
+                query["SecurityContext"] = request.SecurityContext;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceConfigs))
             {
