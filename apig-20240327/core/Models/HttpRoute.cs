@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public Backend Backend { get; set; }
 
+        [NameInMap("builtin")]
+        [Validation(Required=false)]
+        public string Builtin { get; set; }
+
         [NameInMap("createTimestamp")]
         [Validation(Required=false)]
         public long? CreateTimestamp { get; set; }

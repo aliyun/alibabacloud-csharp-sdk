@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AiServiceConfig : TeaModel {
+        [NameInMap("ApiKeyGenerateMode")]
+        [Validation(Required=false)]
+        public string ApiKeyGenerateMode { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para><a href="https://dashscope.aliyun.com">https://dashscope.aliyun.com</a></para>

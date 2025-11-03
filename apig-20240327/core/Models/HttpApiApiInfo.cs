@@ -279,6 +279,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         }
 
+        [NameInMap("modelCategory")]
+        [Validation(Required=false)]
+        public string ModelCategory { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>test</para>
