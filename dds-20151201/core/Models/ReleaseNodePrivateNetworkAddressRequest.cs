@@ -59,7 +59,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <remarks>
         /// <para> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the ID of the shard or Configserver node.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-bp128a003436****</para>

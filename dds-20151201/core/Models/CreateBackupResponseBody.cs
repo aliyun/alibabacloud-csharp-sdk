@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BackupId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>775051</para>
+        /// </summary>
+        [NameInMap("BackupJobId")]
+        [Validation(Required=false)]
+        public string BackupJobId { get; set; }
+
+        /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>

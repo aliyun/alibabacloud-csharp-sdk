@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BackupId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>775051</para>
+        /// </summary>
+        [NameInMap("BackupJobId")]
+        [Validation(Required=false)]
+        public string BackupJobId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -99,6 +107,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg-xxxx</para>
+        /// </summary>
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

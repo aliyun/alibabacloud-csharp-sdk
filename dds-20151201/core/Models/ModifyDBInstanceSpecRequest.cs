@@ -189,6 +189,30 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>mdb.shard.2x.xlarge.d</para>
+        /// </summary>
+        [NameInMap("SearchNodeClass")]
+        [Validation(Required=false)]
+        public string SearchNodeClass { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
+        [NameInMap("SearchNodeCount")]
+        [Validation(Required=false)]
+        public long? SearchNodeCount { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
+        [NameInMap("SearchNodeStorage")]
+        [Validation(Required=false)]
+        public long? SearchNodeStorage { get; set; }
+
         [NameInMap("TargetHiddenZoneId")]
         [Validation(Required=false)]
         public string TargetHiddenZoneId { get; set; }

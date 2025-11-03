@@ -905,6 +905,30 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>mdb.shard.2x.xlarge.d</para>
+                /// </summary>
+                [NameInMap("SearchNodeClass")]
+                [Validation(Required=false)]
+                public string SearchNodeClass { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
+                [NameInMap("SearchNodeCount")]
+                [Validation(Required=false)]
+                public int? SearchNodeCount { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
+                [NameInMap("SearchNodeStorage")]
+                [Validation(Required=false)]
+                public int? SearchNodeStorage { get; set; }
+
+                /// <summary>
                 /// <para>The ID of the secondary zone 1 of the instance. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>cn-hangzhou-g</b>: Hangzhou Zone G</description></item>
