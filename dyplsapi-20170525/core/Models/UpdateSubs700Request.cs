@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>10000*****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

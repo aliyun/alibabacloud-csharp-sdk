@@ -9,6 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Dyplsapi20170525.Models
 {
     public class UnbindSubs700Request : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>700.100.1/12345678</para>
+        /// </summary>
+        [NameInMap("IndustrialId")]
+        [Validation(Required=false)]
+        public string IndustrialId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>12345678</para>
+        /// </summary>
+        [NameInMap("OrderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
