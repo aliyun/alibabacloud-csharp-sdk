@@ -4421,5 +4421,341 @@ namespace AlibabaCloud.SDK.Domain20180208
             return await UpdatePartnerReservePriceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>域名建站添加DNS记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WebsiteAddDnsRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WebsiteAddDnsRecordResponse
+        /// </returns>
+        public WebsiteAddDnsRecordResponse WebsiteAddDnsRecordWithOptions(WebsiteAddDnsRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rr))
+            {
+                query["Rr"] = request.Rr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                query["Value"] = request.Value;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebsiteNo))
+            {
+                query["WebsiteNo"] = request.WebsiteNo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WebsiteAddDnsRecord",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WebsiteAddDnsRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>域名建站添加DNS记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WebsiteAddDnsRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WebsiteAddDnsRecordResponse
+        /// </returns>
+        public async Task<WebsiteAddDnsRecordResponse> WebsiteAddDnsRecordWithOptionsAsync(WebsiteAddDnsRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rr))
+            {
+                query["Rr"] = request.Rr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                query["Value"] = request.Value;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebsiteNo))
+            {
+                query["WebsiteNo"] = request.WebsiteNo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WebsiteAddDnsRecord",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WebsiteAddDnsRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>域名建站添加DNS记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WebsiteAddDnsRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WebsiteAddDnsRecordResponse
+        /// </returns>
+        public WebsiteAddDnsRecordResponse WebsiteAddDnsRecord(WebsiteAddDnsRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return WebsiteAddDnsRecordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>域名建站添加DNS记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WebsiteAddDnsRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WebsiteAddDnsRecordResponse
+        /// </returns>
+        public async Task<WebsiteAddDnsRecordResponse> WebsiteAddDnsRecordAsync(WebsiteAddDnsRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await WebsiteAddDnsRecordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>域名建站删除DNS记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WebsiteDeleteDnsRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WebsiteDeleteDnsRecordResponse
+        /// </returns>
+        public WebsiteDeleteDnsRecordResponse WebsiteDeleteDnsRecordWithOptions(WebsiteDeleteDnsRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rr))
+            {
+                query["Rr"] = request.Rr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                query["Value"] = request.Value;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebsiteNo))
+            {
+                query["WebsiteNo"] = request.WebsiteNo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WebsiteDeleteDnsRecord",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WebsiteDeleteDnsRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>域名建站删除DNS记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WebsiteDeleteDnsRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WebsiteDeleteDnsRecordResponse
+        /// </returns>
+        public async Task<WebsiteDeleteDnsRecordResponse> WebsiteDeleteDnsRecordWithOptionsAsync(WebsiteDeleteDnsRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rr))
+            {
+                query["Rr"] = request.Rr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                query["Value"] = request.Value;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebsiteNo))
+            {
+                query["WebsiteNo"] = request.WebsiteNo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WebsiteDeleteDnsRecord",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WebsiteDeleteDnsRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>域名建站删除DNS记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WebsiteDeleteDnsRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WebsiteDeleteDnsRecordResponse
+        /// </returns>
+        public WebsiteDeleteDnsRecordResponse WebsiteDeleteDnsRecord(WebsiteDeleteDnsRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return WebsiteDeleteDnsRecordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>域名建站删除DNS记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WebsiteDeleteDnsRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WebsiteDeleteDnsRecordResponse
+        /// </returns>
+        public async Task<WebsiteDeleteDnsRecordResponse> WebsiteDeleteDnsRecordAsync(WebsiteDeleteDnsRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await WebsiteDeleteDnsRecordWithOptionsAsync(request, runtime);
+        }
+
     }
 }
