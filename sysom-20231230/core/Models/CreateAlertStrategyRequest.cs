@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
+        [NameInMap("k8sLabel")]
+        [Validation(Required=false)]
+        public bool? K8sLabel { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 
             }
 
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
             [NameInMap("task_id")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
