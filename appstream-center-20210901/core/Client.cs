@@ -399,7 +399,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云应用交付组</para>
+        /// <para>Creates a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -581,7 +581,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云应用交付组</para>
+        /// <para>Creates a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -763,7 +763,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云应用交付组</para>
+        /// <para>Creates a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -781,7 +781,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云应用交付组</para>
+        /// <para>Creates a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2227,7 +2227,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取交付组详情</para>
+        /// <para>Queries the details of a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2273,7 +2273,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取交付组详情</para>
+        /// <para>Queries the details of a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2319,7 +2319,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取交付组详情</para>
+        /// <para>Queries the details of a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2337,7 +2337,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取交付组详情</para>
+        /// <para>Queries the details of a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2418,6 +2418,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
             {
                 body["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentConfig))
+            {
+                body["EnvironmentConfig"] = request.EnvironmentConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
             {
@@ -2511,6 +2515,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
             {
                 body["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvironmentConfig))
+            {
+                body["EnvironmentConfig"] = request.EnvironmentConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
             {
@@ -3711,7 +3719,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询绑定信息，支持分页</para>
+        /// <para>Queries the bindings between users and resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3777,7 +3785,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询绑定信息，支持分页</para>
+        /// <para>Queries the bindings between users and resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3843,7 +3851,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询绑定信息，支持分页</para>
+        /// <para>Queries the bindings between users and resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3861,7 +3869,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询绑定信息，支持分页</para>
+        /// <para>Queries the bindings between users and resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4675,7 +4683,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询交付组内持久会话列表</para>
+        /// <para>Queries app instances of the persistent session type in a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4733,7 +4741,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询交付组内持久会话列表</para>
+        /// <para>Queries app instances of the persistent session type in a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4791,7 +4799,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询交付组内持久会话列表</para>
+        /// <para>Queries app instances of the persistent session type in a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4809,7 +4817,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询交付组内持久会话列表</para>
+        /// <para>Queries app instances of the persistent session type in a delivery group.</para>
         /// </summary>
         /// 
         /// <param name="request">

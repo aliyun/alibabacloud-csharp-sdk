@@ -1,3 +1,7 @@
+2025-11-03 Version: 4.6.2
+- Update API GetConnectionTicket: add request parameters EnvironmentConfig.
+
+
 2025-10-30 Version: 4.6.1
 - Update API ModifyBrowserInstanceGroup: add request parameters Policy.NoOperationDisconnect.
 - Update API ModifyBrowserInstanceGroup: add request parameters Policy.NoOperationDisconnectTime.

@@ -23,15 +23,25 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>browser.package.5.250.appstreaming.general.basic</para>
+        /// </summary>
         [NameInMap("AppPackageType")]
         [Validation(Required=false)]
         public string AppPackageType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>pg-0clfzcy0adpcf****</para>
+        /// </summary>
         [NameInMap("AppPolicyId")]
         [Validation(Required=false)]
         public string AppPolicyId { get; set; }
 
         /// <summary>
+        /// <para>The authentication mode of the delivery group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>App</para>
         /// 
@@ -88,6 +98,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cls-d39iq73l5c0a8****</para>
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
@@ -112,6 +126,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Week</para>
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
@@ -143,6 +160,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
+        /// <summary>
+        /// <para>The runtime policy.</para>
+        /// </summary>
         [NameInMap("RuntimePolicy")]
         [Validation(Required=false)]
         public string RuntimePolicyShrink { get; set; }
@@ -165,6 +185,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string StoragePolicyShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>postPaid</para>
+        /// </summary>
         [NameInMap("SubPayType")]
         [Validation(Required=false)]
         public string SubPayType { get; set; }
