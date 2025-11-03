@@ -177,6 +177,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the application protection feature is supported. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>0</b>: no.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: yes.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("RaspDefend")]
         [Validation(Required=false)]
         public int? RaspDefend { get; set; }

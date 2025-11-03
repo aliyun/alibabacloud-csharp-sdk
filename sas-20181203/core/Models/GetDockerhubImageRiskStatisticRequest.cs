@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetDockerhubImageRiskStatisticRequest : TeaModel {
         /// <summary>
-        /// <para>The types of image risks to be queried.</para>
+        /// <para>The risk types that you want to query.</para>
         /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]

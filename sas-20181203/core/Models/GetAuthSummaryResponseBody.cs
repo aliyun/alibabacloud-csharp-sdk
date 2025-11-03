@@ -65,6 +65,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? AutoBind { get; set; }
 
+        /// <summary>
+        /// <para>Cluster node need to check the machine version,  Value:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>0</b> : Not required</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b> : Required</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Required</para>
+        /// </summary>
         [NameInMap("ClusterNodeCheck")]
         [Validation(Required=false)]
         public int? ClusterNodeCheck { get; set; }
@@ -118,6 +130,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? HighestVersion { get; set; }
 
+        /// <summary>
+        /// <para>Binding effective status, value:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>NORMAL</b> : Effective</para>
+        /// </description></item>
+        /// <item><description><para><b>INVALID_NODE_VERSION</b>: Invalid</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Effective</para>
+        /// </summary>
         [NameInMap("InvalidBindStatus")]
         [Validation(Required=false)]
         public string InvalidBindStatus { get; set; }

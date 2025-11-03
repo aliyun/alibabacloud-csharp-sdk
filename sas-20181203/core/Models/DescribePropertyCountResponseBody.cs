@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyCountResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The number of AI services.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("AgentlessLlmService")]
         [Validation(Required=false)]
         public int? AgentlessLlmService { get; set; }
 
+        /// <summary>
+        /// <para>The number of AI tools.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>13</para>
+        /// </summary>
         [NameInMap("AgentlessScaAiComponent")]
         [Validation(Required=false)]
         public int? AgentlessScaAiComponent { get; set; }

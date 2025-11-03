@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? AllowPartialBuy { get; set; }
 
+        /// <summary>
+        /// <para>防勒索备份容量，单位GB。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>160</para>
+        /// </summary>
         [NameInMap("AntiRansomwareCapacity")]
         [Validation(Required=false)]
         public int? AntiRansomwareCapacity { get; set; }
@@ -142,6 +148,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? ImageScanCapacity { get; set; }
 
+        /// <summary>
+        /// <para>Instance purchase type. Values: - <b>0</b>: Self-purchased - <b>1</b>: Multi-account allocation</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("InstanceBuyType")]
         [Validation(Required=false)]
         public int? InstanceBuyType { get; set; }
@@ -269,6 +281,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? MergedVersion { get; set; }
 
+        /// <summary>
+        /// <para>Usage of multiple version numbers and license counts</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("MultiVersion")]
         [Validation(Required=false)]
         public string MultiVersion { get; set; }

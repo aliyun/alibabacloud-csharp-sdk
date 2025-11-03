@@ -77,6 +77,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
+            /// <para>CPU architecture, divided into ARM and x86 architectures.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>arm</para>
             /// </summary>
@@ -147,7 +149,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0B48AB3C-84FC-424D-A01D-B9270EF46038</para>

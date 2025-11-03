@@ -87,6 +87,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <summary>
+        /// <para>Whether to force upgrade the version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("UpdateIfNecessary")]
         [Validation(Required=false)]
         public bool? UpdateIfNecessary { get; set; }

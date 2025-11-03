@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>List of supported regions</para>
+        /// </summary>
         [NameInMap("SupportRegion")]
         [Validation(Required=false)]
         public List<string> SupportRegion { get; set; }

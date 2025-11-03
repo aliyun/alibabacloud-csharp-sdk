@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Operator { get; set; }
 
+            [NameInMap("Remark")]
+            [Validation(Required=false)]
+            public string Remark { get; set; }
+
             /// <summary>
             /// <para>The feature to which this operation belongs.</para>
             /// <list type="bullet">

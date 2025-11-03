@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the check item.</para>
         /// <remarks>
-        /// <para>For more information about the IDs and details of the check items that can be used in configuration assessment, see <a href="~~DescribeRiskCheckResult~~">DescribeRiskCheckResult</a>.</para>
+        /// <para> For more information about the IDs and details of the check items that can be used in configuration assessment, see <a href="https://help.aliyun.com/document_detail/113520.html">DescribeRiskCheckResult</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
         /// <remarks>
-        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// <para> We recommend that you do not leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

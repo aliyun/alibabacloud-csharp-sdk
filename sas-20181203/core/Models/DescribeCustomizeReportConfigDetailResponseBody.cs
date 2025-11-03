@@ -47,6 +47,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? IsDefault { get; set; }
 
+        /// <summary>
+        /// <para>Whether the new account is connected by default. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.<remarks>
+        /// <para>Only supported in version 2.0.0.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("MemberAccountSyncFlag")]
         [Validation(Required=false)]
         public bool? MemberAccountSyncFlag { get; set; }

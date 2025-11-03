@@ -710,6 +710,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string VendorName { get; set; }
 
             /// <summary>
+            /// <para>Account ID of the multi-cloud instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -718,6 +720,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string VendorUid { get; set; }
 
             /// <summary>
+            /// <para>Account name of the multi-cloud instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>VendorUserName</para>
             /// </summary>

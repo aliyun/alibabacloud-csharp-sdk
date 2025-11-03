@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>List of task sources.</para>
+        /// </summary>
         [NameInMap("TaskSources")]
         [Validation(Required=false)]
         public List<string> TaskSources { get; set; }

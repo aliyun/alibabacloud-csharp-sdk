@@ -31,6 +31,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> AuthModules { get; set; }
 
+        /// <summary>
+        /// <para>Account ID. &gt; The account ID of the cloud provider, required when permissions include threat analysis and response.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>azure_demo_1</para>
+        /// </summary>
         [NameInMap("CtdrCloudUserId")]
         [Validation(Required=false)]
         public string CtdrCloudUserId { get; set; }
@@ -49,6 +55,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Domain { get; set; }
 
+        /// <summary>
+        /// <para>Extended information.</para>
+        /// <remarks>
+        /// <para>Used to record extended information from different vendors. &gt; For Google Cloud, which is accessed via a service account, ExtendInfo stores the service key file in JSON format, excluding the private_key_id and zprivate_key fields. The file includes the following fields: type, project_id, client_email, client_id, auth_uri, token_uri, auth_provider_x509_cert_url, client_x509_cert_url, universe_domain.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;product\&quot;:\&quot;webFirewall\&quot;,\&quot;remark\&quot;:\&quot;remark\&quot;}</para>
+        /// </summary>
         [NameInMap("ExtendInfo")]
         [Validation(Required=false)]
         public string ExtendInfo { get; set; }

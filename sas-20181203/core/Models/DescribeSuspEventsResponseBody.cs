@@ -678,6 +678,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Stages { get; set; }
 
+            /// <summary>
+            /// <para>Supported alarm operation types: </para>
+            /// <list type="bullet">
+            /// <item><description><b>AI.false_positive</b>: Suspected false positive </description></item>
+            /// <item><description><b>AI.real_attack</b>: Real attack </description></item>
+            /// <item><description><b>AI.Insufficient_information_to_evaluate</b>: Insufficient information to evaluate</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AI.real_attack</para>
+            /// </summary>
             [NameInMap("SupportOperateCode")]
             [Validation(Required=false)]
             public string SupportOperateCode { get; set; }

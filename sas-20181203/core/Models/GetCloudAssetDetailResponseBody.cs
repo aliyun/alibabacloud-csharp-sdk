@@ -154,6 +154,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string InternetIp { get; set; }
 
+            /// <summary>
+            /// <para>Detailed asset information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;owner&quot;:{&quot;displayName&quot;:&quot;123&quot;,&quot;id&quot;:&quot;123&quot;},&quot;intranetEndpoint&quot;:&quot;oss-cn-shanghai-internal.aliyuncs.com&quot;,&quot;extranetEndpoint&quot;:&quot;oss-cn-shanghai.aliyuncs.com&quot;,&quot;storageClass&quot;:&quot;Standard&quot;,&quot;name&quot;:&quot;test&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;creationDate&quot;:1629882579000,&quot;region&quot;:&quot;cn-shanghai&quot;}</para>
+            /// </summary>
             [NameInMap("OriginalAssetInfo")]
             [Validation(Required=false)]
             public string OriginalAssetInfo { get; set; }
@@ -212,10 +218,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Vendor { get; set; }
 
+            /// <summary>
+            /// <para>Account id for multi-cloud instances.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
+            /// </summary>
             [NameInMap("VendorUid")]
             [Validation(Required=false)]
             public string VendorUid { get; set; }
 
+            /// <summary>
+            /// <para>The account name of the multi-cloud instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("VendorUserName")]
             [Validation(Required=false)]
             public string VendorUserName { get; set; }

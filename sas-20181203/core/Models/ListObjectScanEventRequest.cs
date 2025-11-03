@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListObjectScanEventRequest : TeaModel {
+        [NameInMap("BatchType")]
+        [Validation(Required=false)]
+        public string BatchType { get; set; }
+
         /// <summary>
         /// <para>The name of the OSS bucket.</para>
         /// 
@@ -29,6 +33,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
+
+        [NameInMap("EventId")]
+        [Validation(Required=false)]
+        public long? EventId { get; set; }
 
         /// <summary>
         /// <para>The name of the alert.</para>
@@ -123,6 +131,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
 
         /// <summary>
         /// <para>The end of the time range during which the exception is detected.</para>

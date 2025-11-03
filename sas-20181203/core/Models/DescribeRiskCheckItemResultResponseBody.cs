@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageCount { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries returned on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

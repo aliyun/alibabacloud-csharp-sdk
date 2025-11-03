@@ -149,10 +149,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// <para>The Account ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>azure_demo_1</para>
+            /// </summary>
             [NameInMap("CtdrCloudUserId")]
             [Validation(Required=false)]
             public string CtdrCloudUserId { get; set; }
 
+            /// <summary>
+            /// <para>The extended information of the module.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;product\&quot;:\&quot;webFirewall\&quot;,\&quot;remark\&quot;:\&quot;remark\&quot;}</para>
+            /// </summary>
             [NameInMap("ExtendInfo")]
             [Validation(Required=false)]
             public string ExtendInfo { get; set; }
@@ -233,10 +245,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string VendorAuthAlias { get; set; }
 
+            /// <summary>
+            /// <para>Account ID of the multi-cloud instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
+            /// </summary>
             [NameInMap("VendorUid")]
             [Validation(Required=false)]
             public string VendorUid { get; set; }
 
+            /// <summary>
+            /// <para>Account name of the multi-cloud instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VendorUserName</para>
+            /// </summary>
             [NameInMap("VendorUserName")]
             [Validation(Required=false)]
             public string VendorUserName { get; set; }

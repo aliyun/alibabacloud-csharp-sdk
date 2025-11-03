@@ -56,10 +56,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IsNoticed { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to notify the account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("NeedNotice")]
             [Validation(Required=false)]
             public bool? NeedNotice { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to switch.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("NeedSwitch")]
             [Validation(Required=false)]
             public bool? NeedSwitch { get; set; }

@@ -323,10 +323,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Vendor { get; set; }
 
+            /// <summary>
+            /// <para>The account ID of the multi-cloud instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123xxx</para>
+            /// </summary>
             [NameInMap("VendorUid")]
             [Validation(Required=false)]
             public string VendorUid { get; set; }
 
+            /// <summary>
+            /// <para>The user name of the multi-cloud instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testxxx</para>
+            /// </summary>
             [NameInMap("VendorUserName")]
             [Validation(Required=false)]
             public string VendorUserName { get; set; }

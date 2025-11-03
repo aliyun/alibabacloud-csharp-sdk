@@ -100,6 +100,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
+        /// <summary>
+        /// <para>List of supported alarm operation types.</para>
+        /// </summary>
         [NameInMap("SupportOperateCodeList")]
         [Validation(Required=false)]
         public List<string> SupportOperateCodeList { get; set; }

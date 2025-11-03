@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string DisplaySandboxResult { get; set; }
 
+            [NameInMap("ErrorMsg")]
+            [Validation(Required=false)]
+            public string ErrorMsg { get; set; }
+
             /// <summary>
             /// <para>The ID of the alert.</para>
             /// 
@@ -163,6 +167,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? LastTime { get; set; }
 
+            [NameInMap("MatchedWhiteListRuleI18nStr")]
+            [Validation(Required=false)]
+            public string MatchedWhiteListRuleI18nStr { get; set; }
+
             /// <summary>
             /// <para>The MD5 hash value of the file.</para>
             /// 
@@ -173,6 +181,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Md5 { get; set; }
 
+            [NameInMap("OperateResult")]
+            [Validation(Required=false)]
+            public string OperateResult { get; set; }
+
             /// <summary>
             /// <para>The key of the file that is stored in the OSS bucket.</para>
             /// 
@@ -182,6 +194,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("OssKey")]
             [Validation(Required=false)]
             public string OssKey { get; set; }
+
+            [NameInMap("Remark")]
+            [Validation(Required=false)]
+            public string Remark { get; set; }
 
             /// <summary>
             /// <para>The risk level of the alert. Valid values:</para>
@@ -231,6 +247,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
 
         }
 

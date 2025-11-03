@@ -9,6 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspEventDetailResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The unique ID of the alarm event.</para>
+        /// <remarks>
+        /// <para>If querying the anomaly information of a single alarm event, you need to provide the unique ID of the alarm event, which can be obtained by calling the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> interface.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8df914418f4211fb****</para>
+        /// </summary>
         [NameInMap("AlarmUniqueInfo")]
         [Validation(Required=false)]
         public string AlarmUniqueInfo { get; set; }

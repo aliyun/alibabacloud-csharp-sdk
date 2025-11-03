@@ -77,6 +77,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
+            /// <para>CPU architectures are divided into ARM architecture and x86 architecture.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>arm</para>
             /// </summary>

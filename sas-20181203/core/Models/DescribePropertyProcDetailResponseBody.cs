@@ -95,6 +95,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string EuidName { get; set; }
 
+            /// <summary>
+            /// <para>Process file hash information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>935c1861df1f4018d698e8b65abfa02d7e9037d8f68ca3c2065b6ca165d4****</para>
+            /// </summary>
             [NameInMap("FileHash")]
             [Validation(Required=false)]
             public string FileHash { get; set; }

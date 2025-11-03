@@ -12,7 +12,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the check item.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to query the IDs of the check items.</para>
+        /// <para> You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to query the IDs of check items.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para> If you specify this parameter, you must also specify the Uuid parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +26,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CheckId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the alert that is triggered by the check item.</para>
+        /// <para>The ID of the alert triggered by the check item.</para>
         /// <remarks>
         /// <para> To query the details of a check item, you must provide the ID of the alert that is triggered by the check item. You can call the <a href="~~DescribeCheckWarnings~~">DescribeCheckWarnings</a> operation to query the IDs of alerts.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para> If the Uuid and CheckId parameters are not specified, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,6 +41,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? CheckWarningId { get; set; }
 
+        /// <summary>
+        /// <para>Container name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_container</para>
+        /// </summary>
         [NameInMap("ContainerName")]
         [Validation(Required=false)]
         public string ContainerName { get; set; }
@@ -80,6 +92,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The UUID of the server.</para>
         /// <remarks>
         /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para> If you specify this parameter, you must also specify the CheckId parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

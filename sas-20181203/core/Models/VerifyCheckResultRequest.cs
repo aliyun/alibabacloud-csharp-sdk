@@ -16,6 +16,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<long?> CheckIds { get; set; }
 
+        /// <summary>
+        /// <para>The source of task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>YAO_CHI</para>
+        /// </summary>
         [NameInMap("TaskSource")]
         [Validation(Required=false)]
         public string TaskSource { get; set; }

@@ -153,6 +153,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? ExecStatus { get; set; }
 
+            /// <summary>
+            /// <para>The triggering method of baseline scanning. Value:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>Schedule</b> : Periodic configuration of task triggers</para>
+            /// </description></item>
+            /// <item><description><para><b>Manual</b> : Manually triggered</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Manual</para>
+            /// </summary>
             [NameInMap("ExecutionType")]
             [Validation(Required=false)]
             public string ExecutionType { get; set; }

@@ -23,6 +23,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>Whether to overwrite. Value range: - true: Overwrite. - false: Do not overwrite.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Override")]
         [Validation(Required=false)]
         public bool? Override { get; set; }

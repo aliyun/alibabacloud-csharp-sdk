@@ -66,6 +66,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? NoScanBucket { get; set; }
 
+            [NameInMap("PostPayInvokeCount")]
+            [Validation(Required=false)]
+            public long? PostPayInvokeCount { get; set; }
+
+            [NameInMap("PrePayAuthCount")]
+            [Validation(Required=false)]
+            public long? PrePayAuthCount { get; set; }
+
+            [NameInMap("PrePayInvokeCount")]
+            [Validation(Required=false)]
+            public long? PrePayInvokeCount { get; set; }
+
             /// <summary>
             /// <para>The remaining quota.</para>
             /// 

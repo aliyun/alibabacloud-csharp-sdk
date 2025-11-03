@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string EventName { get; set; }
 
+        [NameInMap("IdList")]
+        [Validation(Required=false)]
+        public long? IdList { get; set; }
+
         /// <summary>
         /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">

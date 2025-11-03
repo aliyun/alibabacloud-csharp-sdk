@@ -121,6 +121,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// <para>Account ID. </para>
+            /// <remarks>
+            /// <para>The account ID of the cloud provider being integrated.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>azure_demo_1</para>
+            /// </summary>
             [NameInMap("CtdrCloudUserId")]
             [Validation(Required=false)]
             public string CtdrCloudUserId { get; set; }

@@ -75,10 +75,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>Number of completed subtasks</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("DetailTaskReadyCount")]
             [Validation(Required=false)]
             public int? DetailTaskReadyCount { get; set; }
 
+            /// <summary>
+            /// <para>Total number of subtasks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("DetailTaskTotalCount")]
             [Validation(Required=false)]
             public int? DetailTaskTotalCount { get; set; }
@@ -139,6 +151,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
+            /// <summary>
+            /// <para>Task source. Values: </para>
+            /// <list type="bullet">
+            /// <item><description><b>YAO_CHI</b>: YaoChi.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>YAO_CHI</para>
+            /// </summary>
             [NameInMap("TaskSource")]
             [Validation(Required=false)]
             public string TaskSource { get; set; }

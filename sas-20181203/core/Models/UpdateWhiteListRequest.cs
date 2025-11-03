@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateWhiteListRequest : TeaModel {
         /// <summary>
-        /// <para>Image repository ID.</para>
+        /// <para>The ID of the image repository.</para>
         /// <remarks>
-        /// <para>You can obtain this parameter by calling the <a href="~~PageImageRegistry~~">PageImageRegistry</a> interface.</para>
+        /// <para> You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to obtain the ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RegistryId { get; set; }
 
         /// <summary>
-        /// <para>Whitelist list. If there are multiple whitelisted addresses, separate them with a comma (,).</para>
+        /// <para>The IP address whitelist. Separate multiple IP addresses with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
