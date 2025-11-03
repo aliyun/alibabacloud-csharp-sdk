@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyCdsFileRequest : TeaModel {
         /// <summary>
-        /// <para>The cloud disk ID.</para>
+        /// <para>The enterprise drive ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,35 +21,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The processing mode of files that have the same name.</para>
+        /// <para>The processing policy when a file with the same name appears.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>refuse</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>refuses to create a file that has the same name as the file in the cloud.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>auto_rename</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>automatically renames a file if the file has the same name as another file. By default, the current point in time is appended. Example: xxx20060102_150405.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>ignore</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>allows files with the same name.</para>
-        /// <!-- --></description></item>
+        /// <item><description>refuse: If you want to create a file that uses the same name as an existing file in the cloud, the system denies your request and returns the details of the existing file.</description></item>
+        /// <item><description>auto_rename: automatically renames a file if the file has the same name as an existing file in the cloud. By default, the current point in time is appended to the end of the original file name. Example: xxx20240102_150405.</description></item>
+        /// <item><description>ignore: allows the file to be with the same name.</description></item>
+        /// <item><description>over_write: After you create a file that uses the same name as an existing file in the cloud, the new file overwrites the existing file.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ConflictPolicy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user who uses the cloud disk.</para>
+        /// <para>The ID of the user who uses the network disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user01</para>
@@ -70,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The file ID.</para>
+        /// <para>The ID of the file. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to query the ID of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The file name.</para>
+        /// <para>The name of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The group ID.</para>
+        /// <para>The ID of the team space.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-i1ruuudp92qpj****</para>
@@ -102,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

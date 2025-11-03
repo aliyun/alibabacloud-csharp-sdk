@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListCdsFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud disk.</para>
+        /// <para>The ID of the enterprise drive.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user to whom the cloud disk is allocated.</para>
+        /// <para>The ID of the user to which the network disk is assigned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testUser</para>
@@ -37,6 +37,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> FileIds { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the team space.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cg-i1ruuudp92qpj****</para>
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
@@ -52,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used for the next query. If this parameter is empty, all results are returned.</para>
+        /// <para>The query token. Set the value to the value of the <c>NextToken</c> parameter returned in the last call to the operation. You do not need to set this parameter when you call the operation for the first time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WyI2Mzg4MjAwMzFhNGQwZWVmN2I3MjRkZjZhZjAyMWU4YzY1MmRjZmUyIiwibiIsIm4iLDEsLTEsMTY2OTg2NTQ3NTMxMiwiNjM4ODIwMDNlNTU0YmZiZjFkYTk0MmEyYTZhMjEyZDkxODdjMjAy****</para>
@@ -65,77 +71,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The sorting method of the files.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>CreateTimeDesc</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>sorts files in descending order based on the time when they are created.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>ModifiedTimeAsc</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>sorts files in ascending order based on the time when they are modified.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>NameDesc</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>sorts files in descending order based on their names.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>SizeAsc</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>sorts files in ascending order based on their sizes.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>ModifiedTimeDesc</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>sorts files in descending order based on the time when they are modified.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>CreateTimeAsc</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>sorts files in ascending order based on the time when they are created.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>SizeDesc</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>sorts files in descending order based on their sizes.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>NameAsc</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>sorts files in ascending order based on their names.</para>
-        /// <!-- --></description></item>
+        /// <item><description>CreateTimeDesc: sorts the by creation time in descending order.</description></item>
+        /// <item><description>ModifiedTimeAsc: sort the by modification time in ascending order.</description></item>
+        /// <item><description>NameDesc: sorts the by file name in descending order.</description></item>
+        /// <item><description>SizeAsc: sorts by file size in ascending order.</description></item>
+        /// <item><description>ModifiedTimeDesc: sort the by modification time in descending order.</description></item>
+        /// <item><description>CreateTimeAsc: sorts the by creation time in ascending order.</description></item>
+        /// <item><description>SizeDesc: sorts by file size in descending order.</description></item>
+        /// <item><description>NameAsc: sorts by file name in ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -146,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent file.</para>
+        /// <para>The parent folder ID. You can obtain the value by using the response parameter <c>FileId</c> of this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>63636837e47e5a24a8a940218bef395c210e****</para>
@@ -156,7 +99,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ParentFileId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the logon region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to obtain the list of regions supported by cloud computers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -169,23 +112,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The file status.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>available</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>returns only normal files.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>uploading</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>returns only the files that are being uploaded.</para>
-        /// <!-- --></description></item>
+        /// <item><description>available: returns only normal file.</description></item>
+        /// <item><description>uploading: returns only the of objects that are being uploaded.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

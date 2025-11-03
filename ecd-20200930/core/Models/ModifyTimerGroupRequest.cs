@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyTimerGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The scheduled task groups.</para>
+        /// <para>The scheduled tasks.</para>
         /// </summary>
         [NameInMap("ConfigTimers")]
         [Validation(Required=false)]
         public List<ModifyTimerGroupRequestConfigTimers> ConfigTimers { get; set; }
         public class ModifyTimerGroupRequestConfigTimers : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to allow end users to configure scheduled tasks.</para>
+            /// <para>Specifies whether to allow end users to configure the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OperationType { get; set; }
 
             /// <summary>
-            /// <para>The process whitelist. If whitelisted processes are running, the scheduled task does not take effect upon inactivity.</para>
+            /// <para>The process whitelist. If whitelisted processes are running, the scheduled task does not take effect.</para>
             /// </summary>
             [NameInMap("ProcessWhitelist")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The reset option.</para>
-            /// <para>Valid values:</para>
+            /// <para>Valid value:</para>
             /// <list type="bullet">
             /// <item><description>RESET_TYPE_SYSTEM: resets the system disk.</description></item>
             /// <item><description>RESET_TYPE_USER_DISK: resets the data disk.</description></item>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The scheduled task type.</para>
+            /// <para>The type of the scheduled task.</para>
             /// <para>Valid value:</para>
             /// <list type="bullet">
             /// <item><description>NoOperationDisconnect: scheduled disconnection upon inactivity.</description></item>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <item><description>NoOperationHibernate: scheduled hibernation upon inactivity.</description></item>
             /// <item><description>TimerShutdown: scheduled shutdown.</description></item>
             /// <item><description>NoOperationReboot: scheduled restart upon inactivity.</description></item>
-            /// <item><description>TimerReboot: scheduled restart.</description></item>
+            /// <item><description>TimerReboot: Restarts the cloud computers on schedule.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

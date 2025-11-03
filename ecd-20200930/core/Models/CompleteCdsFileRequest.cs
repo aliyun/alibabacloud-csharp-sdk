@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CompleteCdsFileRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud disk.</para>
+        /// <para>The ID of the enterprise drive.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The name of the end user.</para>
+        /// <para>The username. You must specify at least one of <c>EndUserId</c> and <c>GroupId</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test0</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The file ID. An ID is the unique identifier of a file.</para>
+        /// <para>The file ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,12 +41,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string FileId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the team space. You must specify at least one of <c>EndUserId</c> and <c>GroupId</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cg-i1ruuudp92qpj****</para>
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file uploading task.</para>
+        /// <para>The ID of the file upload task. Callable interface <a href="https://help.aliyun.com/document_detail/2247619.html">CreateCdsFile</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -25,10 +25,25 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<ModifyTemplateRequestDataDiskList> DataDiskList { get; set; }
         public class ModifyTemplateRequestDataDiskList : TeaModel {
+            /// <summary>
+            /// <para>The PL of the data disk. Default value: <c>AutoPL</c>.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PL1: a PL1 ESSD</description></item>
+            /// <item><description>PL0: a PL0 ESSD</description></item>
+            /// <item><description>AutoPL: an AutoPL ESSD</description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
 
+            /// <summary>
+            /// <para>The size of the data disk. Unit: GiB. Valid range: 40 to 2040 GiB with an increment of 10 GiB.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>40</para>
+            /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
             public int? Size { get; set; }

@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Windows</para>
+        /// </summary>
         [NameInMap("OsType")]
         [Validation(Required=false)]
         public string OsType { get; set; }

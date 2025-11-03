@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeAutoSnapshotPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description>Maximum value: 100</description></item>
-        /// <item><description>Default value: 20</description></item>
+        /// <item><description>Maximum value: 50.</description></item>
+        /// <item><description>Default value: 50.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

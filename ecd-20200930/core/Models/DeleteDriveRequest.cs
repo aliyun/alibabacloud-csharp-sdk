@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteDriveRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the user-level storage resource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dri-aaaa****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DriveId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

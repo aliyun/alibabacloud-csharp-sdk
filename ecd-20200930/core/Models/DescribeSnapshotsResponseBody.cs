@@ -117,10 +117,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DesktopStatus { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Available</para>
+            /// </summary>
             [NameInMap("DiskStatus")]
             [Validation(Required=false)]
             public string DiskStatus { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Windows</para>
+            /// </summary>
             [NameInMap("OsType")]
             [Validation(Required=false)]
             public string OsType { get; set; }

@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>eds.enterprise_office.8c16g</para>
+            /// </summary>
             [NameInMap("ResourceInstanceType")]
             [Validation(Required=false)]
             public string ResourceInstanceType { get; set; }
@@ -191,10 +195,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<CreateTemplateRequestSiteConfigList> SiteConfigList { get; set; }
         public class CreateTemplateRequestSiteConfigList : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>bwr-5a5371e0db954d********</para>
+            /// </summary>
             [NameInMap("AppRuleId")]
             [Validation(Required=false)]
             public string AppRuleId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>mainland</para>
+            /// </summary>
             [NameInMap("SiteId")]
             [Validation(Required=false)]
             public string SiteId { get; set; }

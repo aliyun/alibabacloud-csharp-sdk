@@ -8,20 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class StartDesktopsRequest : TeaModel {
+    public class DescribeCloudDiskGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The cloud computer IDs. You can specify the IDs of 1 to 100 cloud computers.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ecd-7w78ozhjcwa3u****</para>
+        /// <para>cn-hangzhou+cds-0456357992</para>
         /// </summary>
-        [NameInMap("DesktopId")]
+        [NameInMap("CdsId")]
         [Validation(Required=false)]
-        public List<string> DesktopId { get; set; }
+        public string CdsId { get; set; }
+
+        [NameInMap("GroupId")]
+        [Validation(Required=false)]
+        public List<string> GroupId { get; set; }
+
+        [NameInMap("GroupName")]
+        [Validation(Required=false)]
+        public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <b>Example:</b>
+        /// <para>root</para>
+        /// </summary>
+        [NameInMap("ParentOrgId")]
+        [Validation(Required=false)]
+        public string ParentOrgId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RemoveFilePermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud disk in Cloud Drive Service.</para>
+        /// <para>The ID of the enterprise drive.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The user ID.</para>
+        /// <para>The ID of the end user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user01</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The file ID. The ID is a unique identifier for the file.</para>
+        /// <para>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to query the ID of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,14 +42,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The group ID.</para>
+        /// <para>The ID of the team space.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cg-1fbmvrc7ug5m7****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The users that you want to authorize.</para>
+        /// <para>The users that you want to authorize to use the cloud disk.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MemberList")]
@@ -79,23 +82,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The object type.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>IT_Group</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>group</para>
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>IT_User</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>user</para>
-                /// <!-- --></description></item>
+                /// <item><description>IT_Group: group.</description></item>
+                /// <item><description>IT_User: user.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -109,125 +97,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The role ID. You can configure permissions on roles or actions. This parameter is used to specify the permissions on roles, which conflicts with the ActionList parameter. When you configure both the parameters, this parameter shall prevail.</para>
+            /// <para>You can set permissions by specifying roles or by customizing operation permissions. This field is used to set permissions by specifying roles. This field is mutually exclusive with <c>ActionList</c>.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>SystemFileEditorWithoutShareLink</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>the role that has the permissions to edit files but cannot share files</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>SystemFileUploaderAndDownloaderWithShareLink</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>the role that has the permissions to upload, download, and share files</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>SystemFileDownloader</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>the role that has the permissions to download files</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>SystemFileEditorWithoutDelete</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>the role that has the permissions to edit files but cannot delete files</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>SystemFileOwner</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>the role that has the permissions to collaborate with others</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>SystemFileDownloaderWithShareLink</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>the role that has the permissions to download and share files</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>SystemFileUploaderAndViewer</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>the role that has the permissions to preview or upload files</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>SystemFileViewer</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>the role that has the permissions to preview files</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>SystemFileEditor</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>the role that has the permissions to edit files</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>SystemFileUploaderWithShareLink</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>the role that has the permissions to upload or share files</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>SystemFileUploader</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>the role that has the permission to upload files</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>SystemFileUploaderAndDownloader</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>the role that has the permissions to upload or download files</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>SystemFileMetaViewer</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>the role that has the permissions to view files</para>
-            /// <!-- --></description></item>
+            /// <item><description>SystemFileEditorWithoutShareLink: the role that has the permissions to edit files but cannot share files.</description></item>
+            /// <item><description>SystemFileUploaderAndDownloaderWithShareLink: the role that has the permissions to upload, download, and share files.</description></item>
+            /// <item><description>SystemFileDownloader: the role that has the permissions to download files.</description></item>
+            /// <item><description>SystemFileEditorWithoutDelete: the role that has the permissions to edit files but cannot delete files.</description></item>
+            /// <item><description>SystemFileOwner: the role that has the permissions to collaborate with others.</description></item>
+            /// <item><description>SystemFileDownloaderWithShareLink: the role that has the permissions to download and share files</description></item>
+            /// <item><description>SystemFileUploaderAndViewer: the role that has the permissions to preview or upload files.</description></item>
+            /// <item><description>SystemFileViewer: the role that has the permissions to preview files.</description></item>
+            /// <item><description>SystemFileEditor: the role that has the permissions to edit files</description></item>
+            /// <item><description>SystemFileUploaderWithShareLink: the role that has the permissions to upload or share files.</description></item>
+            /// <item><description>SystemFileUploader: the role that has the permission to upload files.</description></item>
+            /// <item><description>SystemFileUploaderAndDownloader: the role that has the permissions to upload or download files.</description></item>
+            /// <item><description>SystemFileMetaViewer: the role that has the permissions to view files</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -241,7 +126,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

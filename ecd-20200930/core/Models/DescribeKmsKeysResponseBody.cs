@@ -11,6 +11,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class DescribeKmsKeysResponseBody : TeaModel {
         /// <summary>
         /// <para>The authorization status.</para>
+        /// <para>Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>not_authorized</description></item>
+        /// <item><description>authorized</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>authorized</para>
@@ -20,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AuthorizeStatus { get; set; }
 
         /// <summary>
-        /// <para>Details about the customer master keys (CMKs).</para>
+        /// <para>Customer master key (CMK)</para>
         /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
@@ -70,6 +75,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>Indicates whether KMS is activated.</para>
+        /// <para>Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>disabled</description></item>
+        /// <item><description>enabled</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>enabled</para>

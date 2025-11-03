@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The templates.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeTemplatesResponseBodyData> Data { get; set; }
@@ -255,10 +258,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public List<DescribeTemplatesResponseBodyDataSiteConfigList> SiteConfigList { get; set; }
             public class DescribeTemplatesResponseBodyDataSiteConfigList : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>bwr-5a5371e0*******</para>
+                /// </summary>
                 [NameInMap("AppRuleId")]
                 [Validation(Required=false)]
                 public string AppRuleId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>mainland</para>
+                /// </summary>
                 [NameInMap("SiteId")]
                 [Validation(Required=false)]
                 public string SiteId { get; set; }

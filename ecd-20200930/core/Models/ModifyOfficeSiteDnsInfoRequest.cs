@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyOfficeSiteDnsInfoRequest : TeaModel {
+        /// <summary>
+        /// <para>The IP addresses of the custom DNS servers. Up to 2 IP addresses can be specified.</para>
+        /// </summary>
         [NameInMap("DnsAddress")]
         [Validation(Required=false)]
         public List<string> DnsAddress { get; set; }
 
         /// <summary>
+        /// <para>The office network ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +28,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

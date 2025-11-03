@@ -8,12 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
-    public class ListTransferFilesRequest : TeaModel {
+    public class DescribeCloudDiskGroupDrivesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Maximum value: 100.</para>
-        /// <para>Default value: 20.</para>
+        /// <para>This parameter is required.</para>
         /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou+cds-6805637***</para>
+        /// </summary>
+        [NameInMap("CdsId")]
+        [Validation(Required=false)]
+        public string CdsId { get; set; }
+
+        [NameInMap("GroupName")]
+        [Validation(Required=false)]
+        public string GroupName { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -22,24 +32,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>caeba0bbb2be03f84eb48b699f0****</para>
+        /// <para>MTA0MjA=</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the transmission task.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>trt-03tdwg4tcuwdzv****</para>
+        /// <para>cn-beijing</para>
         /// </summary>
-        [NameInMap("TaskId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

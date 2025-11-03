@@ -495,7 +495,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares a folder of a cloud disk with other users.</para>
+        /// <para>Adds a shared folder to the network disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -568,7 +568,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares a folder of a cloud disk with other users.</para>
+        /// <para>Adds a shared folder to the network disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -641,7 +641,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares a folder of a cloud disk with other users.</para>
+        /// <para>Adds a shared folder to the network disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -664,7 +664,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares a folder of a cloud disk with other users.</para>
+        /// <para>Adds a shared folder to the network disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3523,7 +3523,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Completes a file uploading task.</para>
+        /// <para>After you create an object upload task, call this operation to upload the object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3585,7 +3585,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Completes a file uploading task.</para>
+        /// <para>After you create an object upload task, call this operation to upload the object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3647,7 +3647,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Completes a file uploading task.</para>
+        /// <para>After you create an object upload task, call this operation to upload the object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3665,7 +3665,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Completes a file uploading task.</para>
+        /// <para>After you create an object upload task, call this operation to upload the object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9339,7 +9339,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网盘</para>
+        /// <para>Creates a user-level storage resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9417,7 +9417,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网盘</para>
+        /// <para>Creates a user-level storage resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9495,7 +9495,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网盘</para>
+        /// <para>Creates a user-level storage resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9513,7 +9513,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建网盘</para>
+        /// <para>Creates a user-level storage resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9531,7 +9531,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建无影数据报表导出任务</para>
+        /// <para>Creates a data report export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9589,7 +9589,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建无影数据报表导出任务</para>
+        /// <para>Creates a data report export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9647,7 +9647,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建无影数据报表导出任务</para>
+        /// <para>Creates a data report export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9665,7 +9665,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建无影数据报表导出任务</para>
+        /// <para>Creates a data report export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12479,7 +12479,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板</para>
+        /// <para>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12611,7 +12611,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板</para>
+        /// <para>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12743,7 +12743,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板</para>
+        /// <para>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12761,7 +12761,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板</para>
+        /// <para>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13035,7 +13035,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a file from a cloud disk in Cloud Drive Service.</para>
+        /// <para>Delete files or folders from the network disk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13093,7 +13093,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a file from a cloud disk in Cloud Drive Service.</para>
+        /// <para>Delete files or folders from the network disk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13151,7 +13151,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a file from a cloud disk in Cloud Drive Service.</para>
+        /// <para>Delete files or folders from the network disk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13169,7 +13169,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a file from a cloud disk in Cloud Drive Service.</para>
+        /// <para>Delete files or folders from the network disk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14351,7 +14351,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网盘</para>
+        /// <para>Deletes a drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14397,7 +14397,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网盘</para>
+        /// <para>Deletes a drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14443,7 +14443,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网盘</para>
+        /// <para>Deletes a drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14461,7 +14461,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网盘</para>
+        /// <para>Deletes a drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17975,6 +17975,310 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询云盘团队空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudDiskGroupDrivesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudDiskGroupDrivesResponse
+        /// </returns>
+        public DescribeCloudDiskGroupDrivesResponse DescribeCloudDiskGroupDrivesWithOptions(DescribeCloudDiskGroupDrivesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsId))
+            {
+                query["CdsId"] = request.CdsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCloudDiskGroupDrives",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCloudDiskGroupDrivesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云盘团队空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudDiskGroupDrivesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudDiskGroupDrivesResponse
+        /// </returns>
+        public async Task<DescribeCloudDiskGroupDrivesResponse> DescribeCloudDiskGroupDrivesWithOptionsAsync(DescribeCloudDiskGroupDrivesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsId))
+            {
+                query["CdsId"] = request.CdsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCloudDiskGroupDrives",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCloudDiskGroupDrivesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云盘团队空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudDiskGroupDrivesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudDiskGroupDrivesResponse
+        /// </returns>
+        public DescribeCloudDiskGroupDrivesResponse DescribeCloudDiskGroupDrives(DescribeCloudDiskGroupDrivesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCloudDiskGroupDrivesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云盘团队空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudDiskGroupDrivesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudDiskGroupDrivesResponse
+        /// </returns>
+        public async Task<DescribeCloudDiskGroupDrivesResponse> DescribeCloudDiskGroupDrivesAsync(DescribeCloudDiskGroupDrivesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCloudDiskGroupDrivesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云盘团队列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudDiskGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudDiskGroupsResponse
+        /// </returns>
+        public DescribeCloudDiskGroupsResponse DescribeCloudDiskGroupsWithOptions(DescribeCloudDiskGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsId))
+            {
+                query["CdsId"] = request.CdsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentOrgId))
+            {
+                query["ParentOrgId"] = request.ParentOrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCloudDiskGroups",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCloudDiskGroupsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云盘团队列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudDiskGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudDiskGroupsResponse
+        /// </returns>
+        public async Task<DescribeCloudDiskGroupsResponse> DescribeCloudDiskGroupsWithOptionsAsync(DescribeCloudDiskGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CdsId))
+            {
+                query["CdsId"] = request.CdsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentOrgId))
+            {
+                query["ParentOrgId"] = request.ParentOrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCloudDiskGroups",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCloudDiskGroupsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云盘团队列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudDiskGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudDiskGroupsResponse
+        /// </returns>
+        public DescribeCloudDiskGroupsResponse DescribeCloudDiskGroups(DescribeCloudDiskGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCloudDiskGroupsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询云盘团队列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCloudDiskGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCloudDiskGroupsResponse
+        /// </returns>
+        public async Task<DescribeCloudDiskGroupsResponse> DescribeCloudDiskGroupsAsync(DescribeCloudDiskGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCloudDiskGroupsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of authorized team spaces.</para>
         /// </summary>
         /// 
@@ -18763,7 +19067,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sessions in a desktop group.</para>
+        /// <para>Queries cloud computer shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18849,7 +19153,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sessions in a desktop group.</para>
+        /// <para>Queries cloud computer shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18935,7 +19239,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sessions in a desktop group.</para>
+        /// <para>Queries cloud computer shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18953,7 +19257,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sessions in a desktop group.</para>
+        /// <para>Queries cloud computer shares.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21307,7 +21611,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网盘列表</para>
+        /// <para>Queries user-level storage resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21369,7 +21673,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网盘列表</para>
+        /// <para>Queries user-level storage resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21431,7 +21735,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网盘列表</para>
+        /// <para>Queries user-level storage resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21449,7 +21753,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询网盘列表</para>
+        /// <para>Queries user-level storage resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21467,7 +21771,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据报表导出任务列表</para>
+        /// <para>Queries data report export tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21529,7 +21833,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据报表导出任务列表</para>
+        /// <para>Queries data report export tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21591,7 +21895,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据报表导出任务列表</para>
+        /// <para>Queries data report export tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21609,7 +21913,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据报表导出任务列表</para>
+        /// <para>Queries data report export tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22479,8 +22783,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全局桌面记录</para>
+        /// <para>Queries the basic information of all cloud computers and the corresponding usage duration records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Domestic site users query site selection Shanghai, international site users choose Singapore.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, you can query all cloud computers that are deleted or not deleted.</description></item>
+        /// <item><description>Deleted cloud computers can be queried only if the deletion time is less than three months.</description></item>
+        /// <item><description>Sort criteria cannot be shared with other criteria.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeGlobalDesktopRecordsRequest
@@ -22577,8 +22891,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全局桌面记录</para>
+        /// <para>Queries the basic information of all cloud computers and the corresponding usage duration records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Domestic site users query site selection Shanghai, international site users choose Singapore.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, you can query all cloud computers that are deleted or not deleted.</description></item>
+        /// <item><description>Deleted cloud computers can be queried only if the deletion time is less than three months.</description></item>
+        /// <item><description>Sort criteria cannot be shared with other criteria.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeGlobalDesktopRecordsRequest
@@ -22675,8 +22999,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全局桌面记录</para>
+        /// <para>Queries the basic information of all cloud computers and the corresponding usage duration records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Domestic site users query site selection Shanghai, international site users choose Singapore.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, you can query all cloud computers that are deleted or not deleted.</description></item>
+        /// <item><description>Deleted cloud computers can be queried only if the deletion time is less than three months.</description></item>
+        /// <item><description>Sort criteria cannot be shared with other criteria.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeGlobalDesktopRecordsRequest
@@ -22693,8 +23027,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全局桌面记录</para>
+        /// <para>Queries the basic information of all cloud computers and the corresponding usage duration records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Domestic site users query site selection Shanghai, international site users choose Singapore.</para>
+        /// <list type="bullet">
+        /// <item><description>By default, you can query all cloud computers that are deleted or not deleted.</description></item>
+        /// <item><description>Deleted cloud computers can be queried only if the deletion time is less than three months.</description></item>
+        /// <item><description>Sort criteria cannot be shared with other criteria.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeGlobalDesktopRecordsRequest
@@ -27595,7 +27939,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模板列表</para>
+        /// <para>Queries the details of cloud computer templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27673,7 +28017,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模板列表</para>
+        /// <para>Queries the details of cloud computer templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27751,7 +28095,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模板列表</para>
+        /// <para>Queries the details of cloud computer templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27769,7 +28113,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模板列表</para>
+        /// <para>Queries the details of cloud computer templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31807,7 +32151,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files in a cloud disk.</para>
+        /// <para>Queries the list of files in the network disk and obtain the download link of the file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31891,7 +32235,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files in a cloud disk.</para>
+        /// <para>Queries the list of files in the network disk and obtain the download link of the file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31975,7 +32319,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files in a cloud disk.</para>
+        /// <para>Queries the list of files in the network disk and obtain the download link of the file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31993,7 +32337,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files in a cloud disk.</para>
+        /// <para>Queries the list of files in the network disk and obtain the download link of the file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32215,7 +32559,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about shared files of cloud disks.</para>
+        /// <para>Queries the permissions on a shared file on a drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32273,7 +32617,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about shared files of cloud disks.</para>
+        /// <para>Queries the permissions on a shared file on a drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32331,7 +32675,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about shared files of cloud disks.</para>
+        /// <para>Queries the permissions on a shared file on a drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32349,7 +32693,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about shared files of cloud disks.</para>
+        /// <para>Queries the permissions on a shared file on a drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32363,6 +32707,142 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListFilePermissionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询桌面内安装的应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstalledAppsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstalledAppsResponse
+        /// </returns>
+        public ListInstalledAppsResponse ListInstalledAppsWithOptions(ListInstalledAppsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            {
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstalledApps",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstalledAppsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询桌面内安装的应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstalledAppsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstalledAppsResponse
+        /// </returns>
+        public async Task<ListInstalledAppsResponse> ListInstalledAppsWithOptionsAsync(ListInstalledAppsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            {
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstalledApps",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstalledAppsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询桌面内安装的应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstalledAppsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstalledAppsResponse
+        /// </returns>
+        public ListInstalledAppsResponse ListInstalledApps(ListInstalledAppsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListInstalledAppsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询桌面内安装的应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstalledAppsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstalledAppsResponse
+        /// </returns>
+        public async Task<ListInstalledAppsResponse> ListInstalledAppsAsync(ListInstalledAppsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListInstalledAppsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -32891,7 +33371,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件下载地址</para>
+        /// <para>Queries the file information of a file transmission task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32941,7 +33421,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件下载地址</para>
+        /// <para>Queries the file information of a file transmission task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32991,7 +33471,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件下载地址</para>
+        /// <para>Queries the file information of a file transmission task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33009,7 +33489,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件下载地址</para>
+        /// <para>Queries the file information of a file transmission task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34575,7 +35055,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the files in a cloud disk.</para>
+        /// <para>Modifies the attributes of a disk file or folder, such as the file name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34641,7 +35121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the files in a cloud disk.</para>
+        /// <para>Modifies the attributes of a disk file or folder, such as the file name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34707,7 +35187,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the files in a cloud disk.</para>
+        /// <para>Modifies the attributes of a disk file or folder, such as the file name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34725,7 +35205,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the files in a cloud disk.</para>
+        /// <para>Modifies the attributes of a disk file or folder, such as the file name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40323,7 +40803,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改工作区DNS信息</para>
+        /// <para>Modifies the DNS information of an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40373,7 +40853,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改工作区DNS信息</para>
+        /// <para>Modifies the DNS information of an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40423,7 +40903,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改工作区DNS信息</para>
+        /// <para>Modifies the DNS information of an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40441,7 +40921,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改工作区DNS信息</para>
+        /// <para>Modifies the DNS information of an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41487,7 +41967,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模板全量更新</para>
+        /// <para>Modifies a custom cloud computer template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41615,7 +42095,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模板全量更新</para>
+        /// <para>Modifies a custom cloud computer template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41743,7 +42223,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模板全量更新</para>
+        /// <para>Modifies a custom cloud computer template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41761,7 +42241,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模板全量更新</para>
+        /// <para>Modifies a custom cloud computer template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41784,7 +42264,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
+        /// <para>This operation allows you to modify only the name and description of a custom cloud computer template. To change other parameters of the template, call the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41839,7 +42319,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
+        /// <para>This operation allows you to modify only the name and description of a custom cloud computer template. To change other parameters of the template, call the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41894,7 +42374,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
+        /// <para>This operation allows you to modify only the name and description of a custom cloud computer template. To change other parameters of the template, call the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41917,7 +42397,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
+        /// <para>This operation allows you to modify only the name and description of a custom cloud computer template. To change other parameters of the template, call the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43055,7 +43535,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the file sharing feature of a folder in a cloud disk.</para>
+        /// <para>Unshare a folder on the network disk.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43123,7 +43603,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the file sharing feature of a folder in a cloud disk.</para>
+        /// <para>Unshare a folder on the network disk.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43191,7 +43671,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the file sharing feature of a folder in a cloud disk.</para>
+        /// <para>Unshare a folder on the network disk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43209,7 +43689,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the file sharing feature of a folder in a cloud disk.</para>
+        /// <para>Unshare a folder on the network disk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45691,8 +46171,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置桌面维护模式</para>
+        /// <para>Set the cloud computer maintenance mode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you need to perform some maintenance operations on the cloud computer and want to prohibit end user from connecting and using the cloud computer during this period, you can switch it to maintenance mode.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetDesktopMaintenanceRequest
@@ -45741,8 +46226,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置桌面维护模式</para>
+        /// <para>Set the cloud computer maintenance mode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you need to perform some maintenance operations on the cloud computer and want to prohibit end user from connecting and using the cloud computer during this period, you can switch it to maintenance mode.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetDesktopMaintenanceRequest
@@ -45791,8 +46281,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置桌面维护模式</para>
+        /// <para>Set the cloud computer maintenance mode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you need to perform some maintenance operations on the cloud computer and want to prohibit end user from connecting and using the cloud computer during this period, you can switch it to maintenance mode.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetDesktopMaintenanceRequest
@@ -45809,8 +46304,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置桌面维护模式</para>
+        /// <para>Set the cloud computer maintenance mode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you need to perform some maintenance operations on the cloud computer and want to prohibit end user from connecting and using the cloud computer during this period, you can switch it to maintenance mode.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetDesktopMaintenanceRequest
@@ -47071,7 +47571,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件传输审批回调</para>
+        /// <para>Queries the transmission and approval result for a submitted file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47125,7 +47625,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件传输审批回调</para>
+        /// <para>Queries the transmission and approval result for a submitted file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47179,7 +47679,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件传输审批回调</para>
+        /// <para>Queries the transmission and approval result for a submitted file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47197,7 +47697,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件传输审批回调</para>
+        /// <para>Queries the transmission and approval result for a submitted file.</para>
         /// </summary>
         /// 
         /// <param name="request">

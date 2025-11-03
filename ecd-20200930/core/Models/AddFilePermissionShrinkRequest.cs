@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class AddFilePermissionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud disk whose folder you want to share.</para>
+        /// <para>The ID of the enterprise drive.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user who uses the cloud disk.</para>
+        /// <para>The ID of the user who uses the network disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user01</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file.</para>
+        /// <para>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to query the ID of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the team that uses cloud disks in Cloud Drive Service.</para>
+        /// <para>The ID of the team space.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-i1ruuudp92qpj****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The members who are granted the folder permissions.</para>
+        /// <para>The users that you want to authorize to use the cloud disk.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MemberList")]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string MemberListShrink { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the folder. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

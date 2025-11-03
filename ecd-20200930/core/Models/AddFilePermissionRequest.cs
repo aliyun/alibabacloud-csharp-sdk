@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class AddFilePermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud disk whose folder you want to share.</para>
+        /// <para>The ID of the enterprise drive.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user who uses the cloud disk.</para>
+        /// <para>The ID of the user who uses the network disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user01</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file.</para>
+        /// <para>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to query the ID of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the team that uses cloud disks in Cloud Drive Service.</para>
+        /// <para>The ID of the team space.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-i1ruuudp92qpj****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The members who are granted the folder permissions.</para>
+        /// <para>The users that you want to authorize to use the cloud disk.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MemberList")]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public AddFilePermissionRequestMemberListCdsIdentity CdsIdentity { get; set; }
             public class AddFilePermissionRequestMemberListCdsIdentity : TeaModel {
                 /// <summary>
-                /// <para>The ID of the user.</para>
+                /// <para>The ID of the convenience user.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -79,22 +79,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The type of the user.</para>
-                /// <para>Valid values:</para>
+                /// <para>The user type.</para>
+                /// <para>Set the value to TENANT_ADMIN.</para>
                 /// <list type="bullet">
-                /// <item><description><!-- -->
-                /// 
-                /// <para>IT_Group</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><!-- -->
-                /// 
-                /// <para>IT_User</para>
-                /// <!-- -->
-                /// 
-                /// <!-- --></description></item>
+                /// <item><description>IT_Group: group.</description></item>
+                /// <item><description>IT_User: user.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -128,22 +117,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the role to which you want to attach the folder permissions. To configure the folder permissions: you can specify a role or create custom operation permissions. You can use RoleId to specify a role. RoleId is mutually exclusive with ActionList. If you specify both of them, the value of RoleId takes precedence.</para>
+            /// <para>You can set permissions by specifying roles or by customizing operation permissions. This field is used to set permissions by specifying roles. This field is mutually exclusive with <c>ActionList</c>.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SystemFileEditorWithoutShareLink</description></item>
-            /// <item><description>SystemFileUploaderAndDownloaderWithShareLink</description></item>
-            /// <item><description>SystemFileDownloader</description></item>
-            /// <item><description>SystemFileEditorWithoutDelete</description></item>
-            /// <item><description>SystemFileOwner</description></item>
-            /// <item><description>SystemFileDownloaderWithShareLink</description></item>
-            /// <item><description>SystemFileUploaderAndViewer</description></item>
-            /// <item><description>SystemFileViewer</description></item>
-            /// <item><description>SystemFileEditor</description></item>
-            /// <item><description>SystemFileUploaderWithShareLink</description></item>
-            /// <item><description>SystemFileUploader</description></item>
-            /// <item><description>SystemFileUploaderAndDownloader</description></item>
-            /// <item><description>SystemFileMetaViewer</description></item>
+            /// <item><description>SystemFileEditorWithoutShareLink: The role that can edit but cannot share files.</description></item>
+            /// <item><description>SystemFileUploaderAndDownloaderWithShareLink: The role that can upload, download, and share files.</description></item>
+            /// <item><description>SystemFileDownloader: The role that can download files.</description></item>
+            /// <item><description>SystemFileEditorWithoutDelete: The role that can edit but cannot edit files.</description></item>
+            /// <item><description>SystemFileOwner: The role that can collaborate with others on files.</description></item>
+            /// <item><description>SystemFileDownloaderWithShareLink: The role that can download and share files.</description></item>
+            /// <item><description>SystemFileUploaderAndViewer: The role that can preview and upload files.</description></item>
+            /// <item><description>SystemFileViewer: The role that can preview files.</description></item>
+            /// <item><description>SystemFileEditor: The role that can edit files.</description></item>
+            /// <item><description>SystemFileUploaderWithShareLink: The role that can upload and share files.</description></item>
+            /// <item><description>SystemFileUploader: The role that can upload files.</description></item>
+            /// <item><description>SystemFileUploaderAndDownloader: The role that can upload and download files.</description></item>
+            /// <item><description>SystemFileMetaViewer: The role that can view file list.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -157,7 +146,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The region ID of the folder. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

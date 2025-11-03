@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class StopDesktopsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the cloud computers. You can specify 1 to 20 IDs.</para>
+        /// <para>The cloud computer IDs. You can specify the IDs of 1 to 100 cloud computers.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
+        /// <summary>
+        /// <para>Whether to perform a patch update when the update is ready. A value of true indicates that a patch update is performed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("OsUpdate")]
         [Validation(Required=false)]
         public bool? OsUpdate { get; set; }

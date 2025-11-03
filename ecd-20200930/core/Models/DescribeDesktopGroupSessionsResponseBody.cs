@@ -37,6 +37,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeDesktopGroupSessionsResponseBodySessions> Sessions { get; set; }
         public class DescribeDesktopGroupSessionsResponseBodySessions : TeaModel {
             /// <summary>
+            /// <para>账号类型</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SIMPLE</para>
             /// </summary>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// <para>The OS that the client runs.</para>
+            /// <para>The operating system of the client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>windows_\&quot;Windows10Enterprise\&quot;10.0(Build22000)</para>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the desktop group.</para>
+            /// <para>The ID of the shared cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dg-iaqu3bi2xtie****</para>
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the desktop group.</para>
+            /// <para>The name of the cloud computer share.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>
@@ -95,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupName { get; set; }
 
             /// <summary>
-            /// <para>If the session is being established, the value of this parameter indicates the ID of the current cloud desktop. If the session is disconnected, the value of this parameter indicates the ID of the cloud desktop that was most recently connected.</para>
+            /// <para>If the session status is Connected, it indicates the ID of the cloud computer that is currently connected. If the session status is Disconnected, it indicates the ID of the cloud computer that was last connected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-g6t1ukbaea****</para>
@@ -105,6 +107,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
+            /// <para>办公网络类型</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SIMPLE</para>
             /// </summary>
@@ -123,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? EndUserApplyCoordinateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the end user.</para>
+            /// <para>The user ID of the terminal that connects to the session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xianqiu</para>
@@ -153,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string LastSessionStartTime { get; set; }
 
             /// <summary>
-            /// <para>The duration of the most recent session.</para>
+            /// <para>The duration of the most recent session. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -163,7 +167,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? LatestConnectionTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace.</para>
+            /// <para>The office network ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-8904****</para>
@@ -173,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The name of the workspace.</para>
+            /// <para>The office network name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>
@@ -183,10 +187,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteName { get; set; }
 
             /// <summary>
-            /// <para>The OS. Valid values:</para>
+            /// <para>The operating system type of the cloud computer.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Windows</description></item>
-            /// <item><description>Linux</description></item>
+            /// <item><description>linux.</description></item>
+            /// <item><description>Windows.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -212,7 +217,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? OwnType { get; set; }
 
             /// <summary>
-            /// <para>The type of the protocol.</para>
+            /// <para>The protocol type supported by the rule.</para>
+            /// <para>Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description>High-definition Experience (HDX).</description></item>
+            /// <item><description>ASP.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ASP</para>
@@ -222,7 +232,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// <para>The duration during which the cloud desktop stays in the Idle state.</para>
+            /// <para>The idle duration of the cloud computer. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -257,11 +267,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string SessionStatus { get; set; }
 
+            /// <summary>
+            /// <para>Terminal Info</para>
+            /// </summary>
             [NameInMap("TerminalInfo")]
             [Validation(Required=false)]
             public DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo TerminalInfo { get; set; }
             public class DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo : TeaModel {
                 /// <summary>
+                /// <para>The type of the terminal.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>wuying_mac_x86_64</para>
                 /// </summary>
@@ -270,6 +285,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Model { get; set; }
 
                 /// <summary>
+                /// <para>The terminal type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Mac</para>
                 /// </summary>
@@ -278,6 +295,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ProductName { get; set; }
 
                 /// <summary>
+                /// <para>Terminal Serial Number</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>96c530bc-6095-4014-8bbc-d461b8ac****</para>
                 /// </summary>
@@ -286,6 +305,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string SerialNumber { get; set; }
 
                 /// <summary>
+                /// <para>The terminal UUID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>EBFDC7773BEBAD418A9F89429652****</para>
                 /// </summary>
@@ -296,7 +317,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The total duration of the sessions.</para>
+            /// <para>The total duration of the sessions. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>

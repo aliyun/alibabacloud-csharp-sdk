@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListCdsFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the operation. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.</para>
+        /// <para>The response parameters. If the request was successful, <c>success</c> is returned. If the request failed, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of file list entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<ListCdsFilesResponseBodyFileModels> FileModels { get; set; }
         public class ListCdsFilesResponseBodyFileModels : TeaModel {
             /// <summary>
-            /// <para>The file category. PDS categorizes files based on their suffixes and MIME types. The following major categories are included: doc, image, audio, and video.</para>
+            /// <para>File type classification. The network disk will classify files according to their suffix and MIME Type. The main categories are <c>doc</c>, <c>image</c>, <c>audio</c> and <c>video</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>image</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The URL that is used to download the file. The download URL is valid for only 15 minutes. If the URL is expired, you can call the GetFile operation to obtain the file.</para>
+            /// <para>The download link. The default validity period is 15 minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899ef****?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899ef****?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></para>
@@ -128,6 +128,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The file type.</para>
+            /// <para>Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description>file</description></item>
+            /// <item><description>folder</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>file</para>
@@ -137,7 +142,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileType { get; set; }
 
             /// <summary>
-            /// <para>The MD5 value of the file.</para>
+            /// <para>The MD5 hash of the object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>63c83ececb4e6926c51448fc5ecb****</para>
@@ -157,7 +162,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The user who modified the file.</para>
+            /// <para>Modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user02</para>
@@ -167,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Modifier { get; set; }
 
             /// <summary>
-            /// <para>The file name.</para>
+            /// <para>The name of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fvt-appcenterp4qwa</para>
@@ -207,7 +212,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ParentId { get; set; }
 
             /// <summary>
-            /// <para>The region ID You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+            /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to obtain the list of regions supported by cloud computers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -217,7 +222,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The SHA 1 file.</para>
+            /// <para>The SHA1 hash of the data file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EA4942AA8761213890A5C386F88E6464D2C3****</para>
@@ -227,7 +232,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Sha1 { get; set; }
 
             /// <summary>
-            /// <para>The file size. Unit: bits.</para>
+            /// <para>The size of the file. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>102400</para>
@@ -249,7 +254,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The error message returned if the request failed. This parameter is empty if the value of Code is success.</para>
+        /// <para>Error message. This parameter is not returned if the value of Code is <c>success</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -259,7 +264,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token used for the next query. If this parameter is empty, all results have been returned.</para>
+        /// <para>The token used to start the next query. If the <c>NextToken</c> is empty, the next query does not exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WyI2MzhmMjA2ZTFmZGZlZGVjZDk3OTRlNzVhZmIwMDFiZmM5NWQ3YTgwIiwibiIsIm4iLDEsLTEsMTY3MDMyNDMzNTAzMSwiNjM4ZjIwNmZjNDFkMzIwOTZmZWU0NGYxODkwY2I5ZjI0Mjg0NzM2****</para>
@@ -269,7 +274,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID. An ID is the unique identifier of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40D86754-20FD-53DC-A9B8-25F7FECC****</para>
@@ -279,22 +284,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
-        /// <para>Valid values:</para>
+        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Valid value:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><!-- -->
-        /// 
-        /// <para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

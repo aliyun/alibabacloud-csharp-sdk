@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SetDesktopMaintenanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BA6A1853-3EA9-5EEB-86C8-3D14A3E01905</para>
         /// </summary>

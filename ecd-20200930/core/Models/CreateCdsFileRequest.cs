@@ -152,7 +152,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The ID of the parent folder.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>637c9163b453b1a384874264ba79f3f9eab9****</para>

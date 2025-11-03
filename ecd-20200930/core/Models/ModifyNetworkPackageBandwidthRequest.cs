@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.</para>
+        /// <para>The maximum bandwidth of the premium bandwidth plan, in Mbit/s. Valid range: The allowed range depends on the billing method:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values if the premium bandwidth plan is a subscription plan: 2 to 1000.</description></item>
-        /// <item><description>Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by data transfer (PayByTraffic): 2 to 200.</description></item>
-        /// <item><description>Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by fixed bandwidth (PayByBandwidth): 2 to 1000.</description></item>
+        /// <item><description>Subscription: 2 to 1000</description></item>
+        /// <item><description>Pay-as-you-go, by data transfer (PayByTraffic): 2 to 200</description></item>
+        /// <item><description>Pay-as-you-go, by fixed bandwidth (PayByBandwidth): 2 to 1000</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer policies.</para>
+        /// <para>The details of the cloud computer policies.</para>
         /// </summary>
         [NameInMap("DescribePolicyGroups")]
         [Validation(Required=false)]
@@ -175,6 +175,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
+            /// <para>The automatic client connection recovery configurations.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>off</para>
             /// </summary>
@@ -832,6 +834,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MobileRestart { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the Windows security control is enabled for mobile clients.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>off</para>
             /// </summary>
@@ -858,6 +862,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MobileShutdown { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the Cloud Computer Manager is enabled for mobile clients.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>off</para>
             /// </summary>
@@ -866,6 +872,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MobileWuyingKeeper { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the Xiaoying AI Assistant is enabled for mobile clients.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>off</para>
             /// </summary>
@@ -1082,6 +1090,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? RecordEventDuration { get; set; }
 
+            /// <summary>
+            /// <para>The screen recording file suffix.</para>
+            /// </summary>
             [NameInMap("RecordEventFileExts")]
             [Validation(Required=false)]
             public List<string> RecordEventFileExts { get; set; }
@@ -1093,14 +1104,23 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public List<string> RecordEventFilePaths { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the screen recording event severity is enabled.</para>
+            /// </summary>
             [NameInMap("RecordEventLevels")]
             [Validation(Required=false)]
             public List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels> RecordEventLevels { get; set; }
             public class DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels : TeaModel {
+                /// <summary>
+                /// <para>The event severity.</para>
+                /// </summary>
                 [NameInMap("EventLevel")]
                 [Validation(Required=false)]
                 public string EventLevel { get; set; }
 
+                /// <summary>
+                /// <para>The event type.</para>
+                /// </summary>
                 [NameInMap("EventType")]
                 [Validation(Required=false)]
                 public string EventType { get; set; }

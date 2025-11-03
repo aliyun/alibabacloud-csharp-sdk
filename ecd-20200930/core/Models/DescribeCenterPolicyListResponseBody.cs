@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCenterPolicyListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cloud computer policies.</para>
+        /// <para>The details about the cloud computer policies.</para>
         /// </summary>
         [NameInMap("DescribePolicyGroups")]
         [Validation(Required=false)]
@@ -766,7 +766,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupId { get; set; }
 
             /// <summary>
-            /// <para>The policy type.</para>
+            /// <para>The type of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SYSTEM</para>

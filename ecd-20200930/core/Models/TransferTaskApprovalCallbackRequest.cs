@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class TransferTaskApprovalCallbackRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the OSS bucket where the file resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ed****-17337752804***</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OssBucketName { get; set; }
 
         /// <summary>
+        /// <para>The region where the OSS bucket storing the file resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -26,6 +30,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OssBucketRegionId { get; set; }
 
         /// <summary>
+        /// <para>The approval result.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Approved</description></item>
+        /// <item><description>Rejected</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Approved</para>
         /// </summary>
@@ -34,6 +45,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Result { get; set; }
 
         /// <summary>
+        /// <para>The ID of the transmission task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>trt-msndfksm18fs****</para>
         /// </summary>
