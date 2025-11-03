@@ -53,6 +53,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string FlowLogName { get; set; }
 
         /// <summary>
+        /// <para>The version of the IP address. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>IPV4</b>: the IPv4 address.</description></item>
+        /// <item><description><b>DualStack</b>: includes IPv4 and IPv6 address</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
         /// </summary>

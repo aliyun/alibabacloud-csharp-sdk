@@ -242,6 +242,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string DhcpOptionsSetStatus { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether DNS hostname is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DISABLED</para>
+        /// </summary>
         [NameInMap("DnsHostnameStatus")]
         [Validation(Required=false)]
         public string DnsHostnameStatus { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateNatIpResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
+        /// </summary>
         [NameInMap("Ipv4Prefix")]
         [Validation(Required=false)]
         public string Ipv4Prefix { get; set; }
@@ -32,6 +36,39 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("NatIpId")]
         [Validation(Required=false)]
         public string NatIpId { get; set; }
+
+        [NameInMap("NatIps")]
+        [Validation(Required=false)]
+        public List<CreateNatIpResponseBodyNatIps> NatIps { get; set; }
+        public class CreateNatIpResponseBodyNatIps : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>192.168.1.128/28</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("Ipv4Prefix")]
+            [Validation(Required=false)]
+            public string Ipv4Prefix { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>192.168.2.128</para>
+            /// </summary>
+            [NameInMap("NatIp")]
+            [Validation(Required=false)]
+            public string NatIp { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>vpcnatip-xxxxxxxx</para>
+            /// </summary>
+            [NameInMap("NatIpId")]
+            [Validation(Required=false)]
+            public string NatIpId { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The request ID.</para>

@@ -26,12 +26,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public int? AssociateVpcCount { get; set; }
 
+            /// <summary>
+            /// <para>The creation time of the DHCP options sets.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2025-08-21 ***</para>
+            /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The configuration information about the DHCP options set.</para>
+            /// <para>The details of DHCP options.</para>
             /// </summary>
             [NameInMap("DhcpOptions")]
             [Validation(Required=false)]
@@ -58,10 +64,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DomainNameServers { get; set; }
 
                 /// <summary>
-                /// <para>The lease time of the IPv6 addresses for the DHCP options set.</para>
+                /// <para>The lease time of the IPv6 DHCP options set.</para>
                 /// <list type="bullet">
-                /// <item><description>If you use hours as the unit, valid values are <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>87600h</b>.</description></item>
-                /// <item><description>If you use days as the unit, valid values are <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>3650d</b>.</description></item>
+                /// <item><description><para>If you use hours as the unit, Unit: h. Valid values are <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>24h</b>.</para>
+                /// </description></item>
+                /// <item><description><para>If you use days as the unit, Unit: d. Valid values are <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>1d</b>.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

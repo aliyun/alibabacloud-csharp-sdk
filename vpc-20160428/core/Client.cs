@@ -6256,6 +6256,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return await AssociateVpnGatewayWithCertificateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将DHCP选项集与VPC关联</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  The <b>AttachDhcpOptionsSetToVpc</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of a DHCP options set:
@@ -6335,6 +6340,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<AttachDhcpOptionsSetToVpcResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将DHCP选项集与VPC关联</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  The <b>AttachDhcpOptionsSetToVpc</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of a DHCP options set:
@@ -6414,6 +6424,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return TeaModel.ToObject<AttachDhcpOptionsSetToVpcResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将DHCP选项集与VPC关联</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  The <b>AttachDhcpOptionsSetToVpc</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of a DHCP options set:
@@ -6437,6 +6452,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
             return AttachDhcpOptionsSetToVpcWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将DHCP选项集与VPC关联</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  The <b>AttachDhcpOptionsSetToVpc</b> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of a DHCP options set:
@@ -18657,9 +18677,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>You cannot repeatedly call the <b>CreateSslVpnServer</b> operation within the specified period of time.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Prerequisite</h3>
+        /// <h3><a href="#prerequisite"></a><a href="#"></a>Prerequisite</h3>
         /// <list type="bullet">
-        /// <item><description>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</description></item>
+        /// <item><description>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a> .</description></item>
         /// <item><description>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
         /// </list>
         /// </description>
@@ -18786,9 +18806,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>You cannot repeatedly call the <b>CreateSslVpnServer</b> operation within the specified period of time.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Prerequisite</h3>
+        /// <h3><a href="#prerequisite"></a><a href="#"></a>Prerequisite</h3>
         /// <list type="bullet">
-        /// <item><description>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</description></item>
+        /// <item><description>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a> .</description></item>
         /// <item><description>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
         /// </list>
         /// </description>
@@ -18915,9 +18935,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>You cannot repeatedly call the <b>CreateSslVpnServer</b> operation within the specified period of time.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Prerequisite</h3>
+        /// <h3><a href="#prerequisite"></a><a href="#"></a>Prerequisite</h3>
         /// <list type="bullet">
-        /// <item><description>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</description></item>
+        /// <item><description>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a> .</description></item>
         /// <item><description>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
         /// </list>
         /// </description>
@@ -18948,9 +18968,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>You cannot repeatedly call the <b>CreateSslVpnServer</b> operation within the specified period of time.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Prerequisite</h3>
+        /// <h3><a href="#prerequisite"></a><a href="#"></a>Prerequisite</h3>
         /// <list type="bullet">
-        /// <item><description>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a>.</description></item>
+        /// <item><description>A VPN gateway is created, and the SSL-VPN feature is enabled for the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794049.html">CreateVpnGateway</a> .</description></item>
         /// <item><description>If you want to enable two-factor authentication for the SSL server, make sure that the VPN gateway supports two-factor authentication. You may need to upgrade the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2785320.html">Two-factor authentication supports IDaaS EIAM 2.0</a>.</description></item>
         /// </list>
         /// </description>
@@ -25538,6 +25558,182 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDhcpOptionsSetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Express Connect instance, including the initiator and acceptor.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteExpressConnectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExpressConnectResponse
+        /// </returns>
+        public DeleteExpressConnectResponse DeleteExpressConnectWithOptions(DeleteExpressConnectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouterInterfaceId))
+            {
+                query["RouterInterfaceId"] = request.RouterInterfaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExpressConnect",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExpressConnectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Express Connect instance, including the initiator and acceptor.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteExpressConnectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExpressConnectResponse
+        /// </returns>
+        public async Task<DeleteExpressConnectResponse> DeleteExpressConnectWithOptionsAsync(DeleteExpressConnectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouterInterfaceId))
+            {
+                query["RouterInterfaceId"] = request.RouterInterfaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExpressConnect",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExpressConnectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Express Connect instance, including the initiator and acceptor.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteExpressConnectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExpressConnectResponse
+        /// </returns>
+        public DeleteExpressConnectResponse DeleteExpressConnect(DeleteExpressConnectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteExpressConnectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Express Connect instance, including the initiator and acceptor.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteExpressConnectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExpressConnectResponse
+        /// </returns>
+        public async Task<DeleteExpressConnectResponse> DeleteExpressConnectAsync(DeleteExpressConnectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteExpressConnectWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -40222,6 +40418,166 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the cross-account authorization list of an Express Connect Router (ECR).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantRulesToEcrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantRulesToEcrResponse
+        /// </returns>
+        public DescribeGrantRulesToEcrResponse DescribeGrantRulesToEcrWithOptions(DescribeGrantRulesToEcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGrantRulesToEcr",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGrantRulesToEcrResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the cross-account authorization list of an Express Connect Router (ECR).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantRulesToEcrRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantRulesToEcrResponse
+        /// </returns>
+        public async Task<DescribeGrantRulesToEcrResponse> DescribeGrantRulesToEcrWithOptionsAsync(DescribeGrantRulesToEcrRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGrantRulesToEcr",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGrantRulesToEcrResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the cross-account authorization list of an Express Connect Router (ECR).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantRulesToEcrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantRulesToEcrResponse
+        /// </returns>
+        public DescribeGrantRulesToEcrResponse DescribeGrantRulesToEcr(DescribeGrantRulesToEcrRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeGrantRulesToEcrWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the cross-account authorization list of an Express Connect Router (ECR).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGrantRulesToEcrRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGrantRulesToEcrResponse
+        /// </returns>
+        public async Task<DescribeGrantRulesToEcrResponse> DescribeGrantRulesToEcrAsync(DescribeGrantRulesToEcrRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeGrantRulesToEcrWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries HaVips in a region.</para>
         /// </summary>
         /// 
@@ -42398,7 +42754,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询NAT已绑定ENI信息</para>
+        /// <para>Queries elastic network interfaces (ENIs) associated with a virtual private cloud (VPC) NAT gateway when the VPC NAT gateway serves as a PrivateLink service resource. This feature is not publicly available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42488,7 +42844,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询NAT已绑定ENI信息</para>
+        /// <para>Queries elastic network interfaces (ENIs) associated with a virtual private cloud (VPC) NAT gateway when the VPC NAT gateway serves as a PrivateLink service resource. This feature is not publicly available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42578,7 +42934,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询NAT已绑定ENI信息</para>
+        /// <para>Queries elastic network interfaces (ENIs) associated with a virtual private cloud (VPC) NAT gateway when the VPC NAT gateway serves as a PrivateLink service resource. This feature is not publicly available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42596,7 +42952,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询NAT已绑定ENI信息</para>
+        /// <para>Queries elastic network interfaces (ENIs) associated with a virtual private cloud (VPC) NAT gateway when the VPC NAT gateway serves as a PrivateLink service resource. This feature is not publicly available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48482,7 +48838,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询VPC跨账号授权给ECR</para>
+        /// <para>Queries the cross-account authorization information of an ECR for a specified network instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48572,7 +48928,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询VPC跨账号授权给ECR</para>
+        /// <para>Queries the cross-account authorization information of an ECR for a specified network instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48662,7 +49018,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询VPC跨账号授权给ECR</para>
+        /// <para>Queries the cross-account authorization information of an ECR for a specified network instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48680,7 +49036,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询VPC跨账号授权给ECR</para>
+        /// <para>Queries the cross-account authorization information of an ECR for a specified network instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56374,6 +56730,126 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Query the list of regions available for an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBusinessRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBusinessRegionsResponse
+        /// </returns>
+        public ListBusinessRegionsResponse ListBusinessRegionsWithOptions(ListBusinessRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBusinessRegions",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBusinessRegionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of regions available for an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBusinessRegionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBusinessRegionsResponse
+        /// </returns>
+        public async Task<ListBusinessRegionsResponse> ListBusinessRegionsWithOptionsAsync(ListBusinessRegionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBusinessRegions",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBusinessRegionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of regions available for an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBusinessRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBusinessRegionsResponse
+        /// </returns>
+        public ListBusinessRegionsResponse ListBusinessRegions(ListBusinessRegionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListBusinessRegionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of regions available for an Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBusinessRegionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBusinessRegionsResponse
+        /// </returns>
+        public async Task<ListBusinessRegionsResponse> ListBusinessRegionsAsync(ListBusinessRegionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListBusinessRegionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries Dynamic Host Configuration Protocol (DHCP) options sets.</para>
         /// </summary>
         /// 
@@ -58113,6 +58589,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpOrigin))
+            {
+                query["IpOrigin"] = request.IpOrigin;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -58210,6 +58690,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpOrigin))
+            {
+                query["IpOrigin"] = request.IpOrigin;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -58316,6 +58800,174 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListNatIpsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Querying the connection features supported by a Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPhysicalConnectionFeaturesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPhysicalConnectionFeaturesResponse
+        /// </returns>
+        public ListPhysicalConnectionFeaturesResponse ListPhysicalConnectionFeaturesWithOptions(ListPhysicalConnectionFeaturesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhysicalConnectionId))
+            {
+                query["PhysicalConnectionId"] = request.PhysicalConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPhysicalConnectionFeatures",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPhysicalConnectionFeaturesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Querying the connection features supported by a Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPhysicalConnectionFeaturesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPhysicalConnectionFeaturesResponse
+        /// </returns>
+        public async Task<ListPhysicalConnectionFeaturesResponse> ListPhysicalConnectionFeaturesWithOptionsAsync(ListPhysicalConnectionFeaturesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhysicalConnectionId))
+            {
+                query["PhysicalConnectionId"] = request.PhysicalConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPhysicalConnectionFeatures",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPhysicalConnectionFeaturesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Querying the connection features supported by a Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPhysicalConnectionFeaturesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPhysicalConnectionFeaturesResponse
+        /// </returns>
+        public ListPhysicalConnectionFeaturesResponse ListPhysicalConnectionFeatures(ListPhysicalConnectionFeaturesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListPhysicalConnectionFeaturesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Querying the connection features supported by a Express Connect circuit.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPhysicalConnectionFeaturesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPhysicalConnectionFeaturesResponse
+        /// </returns>
+        public async Task<ListPhysicalConnectionFeaturesResponse> ListPhysicalConnectionFeaturesAsync(ListPhysicalConnectionFeaturesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListPhysicalConnectionFeaturesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -74616,7 +75268,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通IP地址池功能。</para>
+        /// <para>Enables the IP address pool feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -74682,7 +75334,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通IP地址池功能。</para>
+        /// <para>Enables the IP address pool feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -74748,7 +75400,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通IP地址池功能。</para>
+        /// <para>Enables the IP address pool feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -74766,7 +75418,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通IP地址池功能。</para>
+        /// <para>Enables the IP address pool feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -79632,7 +80284,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrate contiguous EIP groups to IP address pool by calling TransformEipSegmentToPublicIpAddressPool.</para>
+        /// <para>Migrate a contiguous EIP group to an IP address pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -79694,7 +80346,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrate contiguous EIP groups to IP address pool by calling TransformEipSegmentToPublicIpAddressPool.</para>
+        /// <para>Migrate a contiguous EIP group to an IP address pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -79756,7 +80408,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrate contiguous EIP groups to IP address pool by calling TransformEipSegmentToPublicIpAddressPool.</para>
+        /// <para>Migrate a contiguous EIP group to an IP address pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -79774,7 +80426,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrate contiguous EIP groups to IP address pool by calling TransformEipSegmentToPublicIpAddressPool.</para>
+        /// <para>Migrate a contiguous EIP group to an IP address pool.</para>
         /// </summary>
         /// 
         /// <param name="request">

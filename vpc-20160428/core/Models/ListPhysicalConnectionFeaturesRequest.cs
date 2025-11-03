@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
-    public class OpenPublicIpAddressPoolServiceRequest : TeaModel {
+    public class ListPhysicalConnectionFeaturesRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para> If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>123e4567-e89b-12d3-a456-426655442455</para>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -32,8 +32,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.
-        /// Call <a href="https://www.alibabacloud.com/help/en/vpc/developer-reference/api-vpc-2016-04-28-describeregions?spm=a2c63.p38356.0.i2">DescribeRegion</a> to get the region ID.</para>
+        /// <para>The ID of the Express Connect circuit.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pc-bp1qrb3044eqixog****</para>
+        /// </summary>
+        [NameInMap("PhysicalConnectionId")]
+        [Validation(Required=false)]
+        public string PhysicalConnectionId { get; set; }
+
+        /// <summary>
+        /// <para>The region ID of the Express Connect circuit.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

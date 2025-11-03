@@ -68,8 +68,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of the <b>NextToken</b> parameter.</description></item>
+        /// <item><description><para>You do not need to specify this parameter for the first request.</para>
+        /// </description></item>
+        /// <item><description><para>You must specify the token that is obtained from the previous query as the value of the <b>NextToken</b> parameter.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

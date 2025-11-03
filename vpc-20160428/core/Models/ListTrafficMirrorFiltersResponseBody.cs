@@ -121,6 +121,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string DestinationPortRange { get; set; }
 
+                /// <summary>
+                /// <para>The version of IP protocol.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>IPv4</para>
+                /// </summary>
                 [NameInMap("IpVersion")]
                 [Validation(Required=false)]
                 public string IpVersion { get; set; }
@@ -264,6 +270,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string DestinationPortRange { get; set; }
 
+                /// <summary>
+                /// <para>The version of IP protocol.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>IPv4</para>
+                /// </summary>
                 [NameInMap("IpVersion")]
                 [Validation(Required=false)]
                 public string IpVersion { get; set; }
