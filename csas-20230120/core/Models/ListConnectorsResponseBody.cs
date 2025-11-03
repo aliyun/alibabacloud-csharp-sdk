@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public List<ListConnectorsResponseBodyConnectors> Connectors { get; set; }
         public class ListConnectorsResponseBodyConnectors : TeaModel {
+            [NameInMap("AccelerateStatus")]
+            [Validation(Required=false)]
+            public string AccelerateStatus { get; set; }
+
             /// <summary>
             /// <para>Collection of associated internal network access applications.</para>
             /// </summary>
