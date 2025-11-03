@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateOriginProtectionRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>off</para>
+        /// </summary>
+        [NameInMap("AutoConfirmIPList")]
+        [Validation(Required=false)]
+        public string AutoConfirmIPList { get; set; }
+
+        /// <summary>
         /// <para>The IP convergence status.</para>
         /// <list type="bullet">
         /// <item><description>on</description></item>

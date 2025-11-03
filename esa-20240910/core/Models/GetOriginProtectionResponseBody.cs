@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetOriginProtectionResponseBody : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>off</para>
+        /// </summary>
+        [NameInMap("AutoConfirmIPList")]
+        [Validation(Required=false)]
+        public string AutoConfirmIPList { get; set; }
+
+        /// <summary>
         /// <para>The IP whitelist for origin protection used by the website.</para>
         /// </summary>
         [NameInMap("CurrentIPWhitelist")]
@@ -174,6 +182,262 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("OriginProtection")]
         [Validation(Required=false)]
         public string OriginProtection { get; set; }
+
+        [NameInMap("RegionalCurrentIPWhitelist")]
+        [Validation(Required=false)]
+        public GetOriginProtectionResponseBodyRegionalCurrentIPWhitelist RegionalCurrentIPWhitelist { get; set; }
+        public class GetOriginProtectionResponseBodyRegionalCurrentIPWhitelist : TeaModel {
+            [NameInMap("RegionalIPv4")]
+            [Validation(Required=false)]
+            public List<GetOriginProtectionResponseBodyRegionalCurrentIPWhitelistRegionalIPv4> RegionalIPv4 { get; set; }
+            public class GetOriginProtectionResponseBodyRegionalCurrentIPWhitelistRegionalIPv4 : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>101.66.250.0/25</para>
+                /// </summary>
+                [NameInMap("Cidr")]
+                [Validation(Required=false)]
+                public string Cidr { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>chinese_mainland</para>
+                /// </summary>
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+            }
+
+            [NameInMap("RegionalIPv6")]
+            [Validation(Required=false)]
+            public List<GetOriginProtectionResponseBodyRegionalCurrentIPWhitelistRegionalIPv6> RegionalIPv6 { get; set; }
+            public class GetOriginProtectionResponseBodyRegionalCurrentIPWhitelistRegionalIPv6 : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>101.66.250.0/25</para>
+                /// </summary>
+                [NameInMap("Cidr")]
+                [Validation(Required=false)]
+                public string Cidr { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>chinese_mainland</para>
+                /// </summary>
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("RegionalDiffIPWhitelist")]
+        [Validation(Required=false)]
+        public GetOriginProtectionResponseBodyRegionalDiffIPWhitelist RegionalDiffIPWhitelist { get; set; }
+        public class GetOriginProtectionResponseBodyRegionalDiffIPWhitelist : TeaModel {
+            [NameInMap("AddedIPRegionWhitelist")]
+            [Validation(Required=false)]
+            public GetOriginProtectionResponseBodyRegionalDiffIPWhitelistAddedIPRegionWhitelist AddedIPRegionWhitelist { get; set; }
+            public class GetOriginProtectionResponseBodyRegionalDiffIPWhitelistAddedIPRegionWhitelist : TeaModel {
+                [NameInMap("RegionalIPv4")]
+                [Validation(Required=false)]
+                public List<GetOriginProtectionResponseBodyRegionalDiffIPWhitelistAddedIPRegionWhitelistRegionalIPv4> RegionalIPv4 { get; set; }
+                public class GetOriginProtectionResponseBodyRegionalDiffIPWhitelistAddedIPRegionWhitelistRegionalIPv4 : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>101.66.250.0/25</para>
+                    /// </summary>
+                    [NameInMap("Cidr")]
+                    [Validation(Required=false)]
+                    public string Cidr { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>chinese_mainland</para>
+                    /// </summary>
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                }
+
+                [NameInMap("RegionalIPv6")]
+                [Validation(Required=false)]
+                public List<GetOriginProtectionResponseBodyRegionalDiffIPWhitelistAddedIPRegionWhitelistRegionalIPv6> RegionalIPv6 { get; set; }
+                public class GetOriginProtectionResponseBodyRegionalDiffIPWhitelistAddedIPRegionWhitelistRegionalIPv6 : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>101.66.250.0/25</para>
+                    /// </summary>
+                    [NameInMap("Cidr")]
+                    [Validation(Required=false)]
+                    public string Cidr { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>chinese_mainland</para>
+                    /// </summary>
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                }
+
+            }
+
+            [NameInMap("NoChangeIpWhitelist")]
+            [Validation(Required=false)]
+            public GetOriginProtectionResponseBodyRegionalDiffIPWhitelistNoChangeIpWhitelist NoChangeIpWhitelist { get; set; }
+            public class GetOriginProtectionResponseBodyRegionalDiffIPWhitelistNoChangeIpWhitelist : TeaModel {
+                [NameInMap("RegionalIPv4")]
+                [Validation(Required=false)]
+                public List<GetOriginProtectionResponseBodyRegionalDiffIPWhitelistNoChangeIpWhitelistRegionalIPv4> RegionalIPv4 { get; set; }
+                public class GetOriginProtectionResponseBodyRegionalDiffIPWhitelistNoChangeIpWhitelistRegionalIPv4 : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>101.66.250.0/25</para>
+                    /// </summary>
+                    [NameInMap("Cidr")]
+                    [Validation(Required=false)]
+                    public string Cidr { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>chinese_mainland</para>
+                    /// </summary>
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                }
+
+                [NameInMap("RegionalIPv6")]
+                [Validation(Required=false)]
+                public List<GetOriginProtectionResponseBodyRegionalDiffIPWhitelistNoChangeIpWhitelistRegionalIPv6> RegionalIPv6 { get; set; }
+                public class GetOriginProtectionResponseBodyRegionalDiffIPWhitelistNoChangeIpWhitelistRegionalIPv6 : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>101.66.250.0/25</para>
+                    /// </summary>
+                    [NameInMap("Cidr")]
+                    [Validation(Required=false)]
+                    public string Cidr { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>chinese_mainland</para>
+                    /// </summary>
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                }
+
+            }
+
+            [NameInMap("RemovedIPRegionWhitelist")]
+            [Validation(Required=false)]
+            public GetOriginProtectionResponseBodyRegionalDiffIPWhitelistRemovedIPRegionWhitelist RemovedIPRegionWhitelist { get; set; }
+            public class GetOriginProtectionResponseBodyRegionalDiffIPWhitelistRemovedIPRegionWhitelist : TeaModel {
+                [NameInMap("RegionalIPv4")]
+                [Validation(Required=false)]
+                public List<GetOriginProtectionResponseBodyRegionalDiffIPWhitelistRemovedIPRegionWhitelistRegionalIPv4> RegionalIPv4 { get; set; }
+                public class GetOriginProtectionResponseBodyRegionalDiffIPWhitelistRemovedIPRegionWhitelistRegionalIPv4 : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>101.66.250.0/25</para>
+                    /// </summary>
+                    [NameInMap("Cidr")]
+                    [Validation(Required=false)]
+                    public string Cidr { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>chinese_mainland</para>
+                    /// </summary>
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                }
+
+                [NameInMap("RegionalIPv6")]
+                [Validation(Required=false)]
+                public List<GetOriginProtectionResponseBodyRegionalDiffIPWhitelistRemovedIPRegionWhitelistRegionalIPv6> RegionalIPv6 { get; set; }
+                public class GetOriginProtectionResponseBodyRegionalDiffIPWhitelistRemovedIPRegionWhitelistRegionalIPv6 : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>101.66.250.0/25</para>
+                    /// </summary>
+                    [NameInMap("Cidr")]
+                    [Validation(Required=false)]
+                    public string Cidr { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>chinese_mainland</para>
+                    /// </summary>
+                    [NameInMap("Region")]
+                    [Validation(Required=false)]
+                    public string Region { get; set; }
+
+                }
+
+            }
+
+        }
+
+        [NameInMap("RegionalLatestIPWhitelist")]
+        [Validation(Required=false)]
+        public GetOriginProtectionResponseBodyRegionalLatestIPWhitelist RegionalLatestIPWhitelist { get; set; }
+        public class GetOriginProtectionResponseBodyRegionalLatestIPWhitelist : TeaModel {
+            [NameInMap("RegionalIPv4")]
+            [Validation(Required=false)]
+            public List<GetOriginProtectionResponseBodyRegionalLatestIPWhitelistRegionalIPv4> RegionalIPv4 { get; set; }
+            public class GetOriginProtectionResponseBodyRegionalLatestIPWhitelistRegionalIPv4 : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>101.66.250.0/25</para>
+                /// </summary>
+                [NameInMap("Cidr")]
+                [Validation(Required=false)]
+                public string Cidr { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>chinese_mainland</para>
+                /// </summary>
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+            }
+
+            [NameInMap("RegionalIPv6")]
+            [Validation(Required=false)]
+            public List<GetOriginProtectionResponseBodyRegionalLatestIPWhitelistRegionalIPv6> RegionalIPv6 { get; set; }
+            public class GetOriginProtectionResponseBodyRegionalLatestIPWhitelistRegionalIPv6 : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>101.66.250.0/25</para>
+                /// </summary>
+                [NameInMap("Cidr")]
+                [Validation(Required=false)]
+                public string Cidr { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>chinese_mainland</para>
+                /// </summary>
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+            }
+
+        }
 
         /// <summary>
         /// <para>The request ID.</para>

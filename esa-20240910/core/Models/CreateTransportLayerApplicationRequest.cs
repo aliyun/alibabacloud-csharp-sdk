@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>Comment information for the rule (optional).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]

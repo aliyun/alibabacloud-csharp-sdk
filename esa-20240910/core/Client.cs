@@ -6865,6 +6865,10 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoConfirmIPList))
+            {
+                query["AutoConfirmIPList"] = request.AutoConfirmIPList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
             {
                 query["SiteId"] = request.SiteId;
@@ -6907,6 +6911,10 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoConfirmIPList))
+            {
+                query["AutoConfirmIPList"] = request.AutoConfirmIPList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
             {
                 query["SiteId"] = request.SiteId;
@@ -45751,6 +45759,10 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoConfirmIPList))
+            {
+                query["AutoConfirmIPList"] = request.AutoConfirmIPList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginConverge))
             {
                 query["OriginConverge"] = request.OriginConverge;
@@ -45797,6 +45809,10 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoConfirmIPList))
+            {
+                query["AutoConfirmIPList"] = request.AutoConfirmIPList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginConverge))
             {
                 query["OriginConverge"] = request.OriginConverge;
