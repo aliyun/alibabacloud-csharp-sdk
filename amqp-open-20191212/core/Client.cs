@@ -559,7 +559,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// <para>*Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/606747.html">billing methods and pricing</a> of ApsaraMQ for RabbitMQ.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateInstanceRequest
         /// </param>
         /// <param name="runtime">
@@ -569,9 +569,15 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// <returns>
         /// CreateInstanceResponse
         /// </returns>
-        public CreateInstanceResponse CreateInstanceWithOptions(CreateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateInstanceResponse CreateInstanceWithOptions(CreateInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateInstanceShrinkRequest request = new CreateInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
@@ -664,6 +670,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupportTracing))
             {
                 query["SupportTracing"] = request.SupportTracing;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TracingStorageTime))
             {
@@ -698,7 +708,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// <para>*Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/606747.html">billing methods and pricing</a> of ApsaraMQ for RabbitMQ.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateInstanceRequest
         /// </param>
         /// <param name="runtime">
@@ -708,9 +718,15 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// <returns>
         /// CreateInstanceResponse
         /// </returns>
-        public async Task<CreateInstanceResponse> CreateInstanceWithOptionsAsync(CreateInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateInstanceResponse> CreateInstanceWithOptionsAsync(CreateInstanceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateInstanceShrinkRequest request = new CreateInstanceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
@@ -803,6 +819,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupportTracing))
             {
                 query["SupportTracing"] = request.SupportTracing;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TracingStorageTime))
             {

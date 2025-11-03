@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
-    public class CreateInstanceRequest : TeaModel {
+    public class CreateInstanceShrinkRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
@@ -304,25 +304,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public List<CreateInstanceRequestTags> Tags { get; set; }
-        public class CreateInstanceRequestTags : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>testKey</para>
-            /// </summary>
-            [NameInMap("Key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>testValue</para>
-            /// </summary>
-            [NameInMap("Value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagsShrink { get; set; }
 
         /// <summary>
         /// <para>The retention period of messages. Unit: days. Valid values:</para>
