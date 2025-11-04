@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class CreateMajorProtectionBlackIpV2Response : TeaModel {
+    public class DescribeApisecEventDetailResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public CreateMajorProtectionBlackIpV2ResponseBody Body { get; set; }
+        public DescribeApisecEventDetailResponseBody Body { get; set; }
 
     }
 

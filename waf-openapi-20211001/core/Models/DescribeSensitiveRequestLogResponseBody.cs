@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeSensitiveRequestLogResponseBodyData> Data { get; set; }
         public class DescribeSensitiveRequestLogResponseBodyData : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>admin</para>
+            /// </summary>
+            [NameInMap("Account")]
+            [Validation(Required=false)]
+            public string Account { get; set; }
+
+            /// <summary>
             /// <para>The API.</para>
             /// 
             /// <b>Example:</b>

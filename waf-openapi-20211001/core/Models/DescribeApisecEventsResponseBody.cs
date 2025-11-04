@@ -115,6 +115,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public List<string> AttackIps { get; set; }
 
+            [NameInMap("AttackerList")]
+            [Validation(Required=false)]
+            public List<string> AttackerList { get; set; }
+
             /// <summary>
             /// <para>The end of the time range to query. This value is a UNIX timestamp in UTC. Unit: seconds.</para>
             /// 

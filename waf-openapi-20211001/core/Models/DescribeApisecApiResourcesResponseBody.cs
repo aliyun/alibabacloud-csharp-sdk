@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AbnormalNum { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("AccountEventNum")]
+            [Validation(Required=false)]
+            public long? AccountEventNum { get; set; }
+
+            /// <summary>
             /// <para>The total number of calls to this API in the previous 30 days.</para>
             /// 
             /// <b>Example:</b>

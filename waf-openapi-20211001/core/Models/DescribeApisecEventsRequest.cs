@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecEventsRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1818743389962696</para>
+        /// </summary>
+        [NameInMap("Account")]
+        [Validation(Required=false)]
+        public string Account { get; set; }
+
+        /// <summary>
         /// <para>The API.</para>
         /// 
         /// <b>Example:</b>
@@ -99,6 +107,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [NameInMap("EventLevel")]
         [Validation(Required=false)]
         public string EventLevel { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ip</para>
+        /// </summary>
+        [NameInMap("EventScope")]
+        [Validation(Required=false)]
+        public string EventScope { get; set; }
 
         /// <summary>
         /// <para>The type of the event.</para>

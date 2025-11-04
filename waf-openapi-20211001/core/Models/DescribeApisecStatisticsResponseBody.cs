@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeApisecStatisticsResponseBodyData Data { get; set; }
         public class DescribeApisecStatisticsResponseBodyData : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Account")]
+            [Validation(Required=false)]
+            public long? Account { get; set; }
+
+            /// <summary>
             /// <para>The number of handled events.</para>
             /// 
             /// <b>Example:</b>
@@ -106,10 +114,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public long? Medium { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("NotFixed")]
             [Validation(Required=false)]
             public long? NotFixed { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("SystemFixed")]
             [Validation(Required=false)]
             public long? SystemFixed { get; set; }
@@ -134,6 +150,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public long? ToBeFixed { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("ToBeVerified")]
             [Validation(Required=false)]
             public long? ToBeVerified { get; set; }
