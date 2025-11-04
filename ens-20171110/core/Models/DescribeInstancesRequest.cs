@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstancesRequest : TeaModel {
+        [NameInMap("EipAddresses")]
+        [Validation(Required=false)]
+        public List<string> EipAddresses { get; set; }
+
         /// <summary>
         /// <para>The region ID.</para>
         /// 

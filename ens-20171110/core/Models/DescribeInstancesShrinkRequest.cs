@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeInstancesShrinkRequest : TeaModel {
+        [NameInMap("EipAddresses")]
+        [Validation(Required=false)]
+        public string EipAddressesShrink { get; set; }
+
         /// <summary>
         /// <para>The region ID.</para>
         /// 

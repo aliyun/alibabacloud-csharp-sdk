@@ -21730,6 +21730,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DescribeInstancesShrinkRequest request = new DescribeInstancesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EipAddresses))
+            {
+                request.EipAddressesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EipAddresses, "EipAddresses", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServiceStatus))
             {
                 request.ServiceStatusShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServiceStatus, "ServiceStatus", "json");
@@ -21739,6 +21743,10 @@ namespace AlibabaCloud.SDK.Ens20171110
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipAddressesShrink))
+            {
+                query["EipAddresses"] = request.EipAddressesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
@@ -21867,6 +21875,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             DescribeInstancesShrinkRequest request = new DescribeInstancesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EipAddresses))
+            {
+                request.EipAddressesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EipAddresses, "EipAddresses", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServiceStatus))
             {
                 request.ServiceStatusShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServiceStatus, "ServiceStatus", "json");
@@ -21876,6 +21888,10 @@ namespace AlibabaCloud.SDK.Ens20171110
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipAddressesShrink))
+            {
+                query["EipAddresses"] = request.EipAddressesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
