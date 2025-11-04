@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public long? MaxExecutionTime { get; set; }
 
+                [NameInMap("MaxExecutionTimeMs")]
+                [Validation(Required=false)]
+                public string MaxExecutionTimeMs { get; set; }
+
                 /// <summary>
                 /// <para>The longest lock duration that was caused by a specific SQL statement in the query. Unit: seconds.</para>
                 /// 
