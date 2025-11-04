@@ -40,6 +40,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public bool? NeedStatusNotify { get; set; }
 
+            [NameInMap("NotifyAuthKey")]
+            [Validation(Required=false)]
+            public string NotifyAuthKey { get; set; }
+
+            [NameInMap("NotifyReqAuth")]
+            [Validation(Required=false)]
+            public bool? NotifyReqAuth { get; set; }
+
             /// <summary>
             /// <para>The recording callback URL.</para>
             /// 

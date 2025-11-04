@@ -5183,6 +5183,14 @@ namespace AlibabaCloud.SDK.Live20161101
             {
                 query["NeedStatusNotify"] = request.NeedStatusNotify;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyAuthKey))
+            {
+                query["NotifyAuthKey"] = request.NotifyAuthKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyReqAuth))
+            {
+                query["NotifyReqAuth"] = request.NotifyReqAuth;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyUrl))
             {
                 query["NotifyUrl"] = request.NotifyUrl;
@@ -5251,6 +5259,14 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedStatusNotify))
             {
                 query["NeedStatusNotify"] = request.NeedStatusNotify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyAuthKey))
+            {
+                query["NotifyAuthKey"] = request.NotifyAuthKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyReqAuth))
+            {
+                query["NotifyReqAuth"] = request.NotifyReqAuth;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyUrl))
             {
@@ -79060,6 +79076,14 @@ namespace AlibabaCloud.SDK.Live20161101
             {
                 query["NeedStatusNotify"] = request.NeedStatusNotify;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyAuthKey))
+            {
+                query["NotifyAuthKey"] = request.NotifyAuthKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyReqAuth))
+            {
+                query["NotifyReqAuth"] = request.NotifyReqAuth;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyUrl))
             {
                 query["NotifyUrl"] = request.NotifyUrl;
@@ -79133,6 +79157,14 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedStatusNotify))
             {
                 query["NeedStatusNotify"] = request.NeedStatusNotify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyAuthKey))
+            {
+                query["NotifyAuthKey"] = request.NotifyAuthKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyReqAuth))
+            {
+                query["NotifyReqAuth"] = request.NotifyReqAuth;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyUrl))
             {
