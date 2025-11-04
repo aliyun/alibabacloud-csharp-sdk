@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ListFileRequest : TeaModel {
         /// <summary>
+        /// <para>The category ID, which is the <c>CategoryId</c> returned by the <a href="~~AddCategory~~">AddCategory</a> operation. To view the category ID, click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

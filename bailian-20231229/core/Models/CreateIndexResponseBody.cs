@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class CreateIndexResponseBody : TeaModel {
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Forbidden</para>
@@ -20,16 +20,16 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned if the request is successful.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateIndexResponseBodyData Data { get; set; }
         public class CreateIndexResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The primary key ID of the knowledge base, <c>IndexId</c>.</para>
+            /// <para>The knowledge base ID, or <c>IndexId</c>, is a unique identifier for the knowledge base created.</para>
             /// <remarks>
-            /// <para> We recommend that you store this ID. It is required for all subsequent API operations related to this knowledge base.</para>
+            /// <para>Keep this ID. It is required for all subsequent API operations related to this knowledge base.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indications whether the API call is successful. Valid values:</para>
+        /// <para>Indications whether the request is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>

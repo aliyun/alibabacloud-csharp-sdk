@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class GetAvailableParserTypesRequest : TeaModel {
         /// <summary>
+        /// <para>The file type. Valid values: pdf, docx, and doc.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

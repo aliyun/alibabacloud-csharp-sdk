@@ -17,10 +17,16 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListFileResponseBodyData Data { get; set; }
         public class ListFileResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of documents in the category.</para>
+            /// </summary>
             [NameInMap("FileList")]
             [Validation(Required=false)]
             public List<ListFileResponseBodyDataFileList> FileList { get; set; }
@@ -42,6 +48,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
+                /// <para>The document ID, which is the <c>FileId</c> parameter returned by the <a href="~~AddFile~~">AddFile</a> operation. To view the ID, click the icon next to the file name on the <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> page.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>file_5ff599b3455a45db8c41b0054b361518_10098576</para>
                 /// </summary>

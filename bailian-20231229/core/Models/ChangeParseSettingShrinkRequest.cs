@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ChangeParseSettingShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The category ID, which is the <c>CategoryId</c> returned by <b>AddCategory</b>. To view the category ID, click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string CategoryId { get; set; }
 
         /// <summary>
+        /// <para>The file type. Valid values: pdf, docx, and doc.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,13 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string FileType { get; set; }
 
         /// <summary>
+        /// <para>The parser code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DOCMIND (Intelligent parsing)</description></item>
+        /// <item><description>DOCMIND_DIGITAL (Digital parsing)</description></item>
+        /// <item><description>DOCMIND_LLM_VERSION (LLM parsing)</description></item>
+        /// <item><description>DASH_QWEN_VL_PARSER (Qwen VL parsing)</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,6 +48,9 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string Parser { get; set; }
 
+        /// <summary>
+        /// <para>The parser configuration. Currently, this is available only for Qwen VL parsing.</para>
+        /// </summary>
         [NameInMap("ParserConfig")]
         [Validation(Required=false)]
         public string ParserConfigShrink { get; set; }

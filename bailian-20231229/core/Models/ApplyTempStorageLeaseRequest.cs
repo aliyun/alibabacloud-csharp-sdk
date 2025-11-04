@@ -8,25 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
-    public class DeleteChunkRequest : TeaModel {
+    public class ApplyTempStorageLeaseRequest : TeaModel {
         /// <summary>
-        /// <para>The list of text chunks to be deleted. You can specify up to 10 chunk IDs at a time.</para>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("ChunkIds")]
-        [Validation(Required=false)]
-        public List<string> ChunkIds { get; set; }
-
-        /// <summary>
-        /// <para>The knowledge base ID, which is the <c>Data.Id</c> parameter returned by <b>CreateIndex</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>79c0alxxxx</para>
+        /// <para>example.txt</para>
         /// </summary>
-        [NameInMap("PipelineId")]
+        [NameInMap("FileName")]
         [Validation(Required=false)]
-        public string PipelineId { get; set; }
+        public string FileName { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1024</para>
+        /// </summary>
+        [NameInMap("SizeInBytes")]
+        [Validation(Required=false)]
+        public long? SizeInBytes { get; set; }
 
     }
 
