@@ -1,3 +1,7 @@
+2025-11-04 Version: 2.6.0
+- Support API GetDasAgentSSE.
+
+
 2025-10-28 Version: 2.5.4
 - Update API DescribeSlowLogHistogramAsync: add response parameters Body.Data.Data.TotalCount.
 - Update API DescribeSlowLogHistogramAsync: add response parameters Body.Data.Data.Item.$.InsRole.
