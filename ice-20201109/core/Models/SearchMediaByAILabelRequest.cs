@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchMediaByAILabelRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("CustomFilters")]
+        [Validation(Required=false)]
+        public string CustomFilters { get; set; }
+
         [NameInMap("MatchingMode")]
         [Validation(Required=false)]
         public string MatchingMode { get; set; }
@@ -122,6 +130,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("Text")]
         [Validation(Required=false)]
         public string Text { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("UtcCreate")]
+        [Validation(Required=false)]
+        public string UtcCreate { get; set; }
 
     }
 

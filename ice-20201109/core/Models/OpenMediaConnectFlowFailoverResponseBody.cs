@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class OpenMediaConnectFlowFailoverResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response body.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The call description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>11357BE8-4C54-58EA-890A-5AB646EDE4B2</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The returned error code. A value of 0 indicates the call is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

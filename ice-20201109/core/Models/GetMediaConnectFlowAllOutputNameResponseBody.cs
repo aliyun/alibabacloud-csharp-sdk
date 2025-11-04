@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetMediaConnectFlowAllOutputNameResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The response body, as an array of strings.</para>
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public List<string> Content { get; set; }
 
         /// <summary>
+        /// <para>The call description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>559E9828-245D-5CBA-9C7A-4E01453F091F</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The returned error code. A value of 0 indicates the call is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

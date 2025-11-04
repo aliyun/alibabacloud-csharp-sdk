@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QueryCopyrightExtractJobRequest : TeaModel {
         /// <summary>
+        /// <para>The job ID. You can obtain the value of this parameter from the response of the SubmitCopyrightExtractJob operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

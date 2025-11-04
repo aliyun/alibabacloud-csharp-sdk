@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateHotwordLibraryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><em>3B-0E1A-586A-AC29-742247</em></para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the hotword library.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>96e8864746a0b6f3</b></b></para>
         /// </summary>

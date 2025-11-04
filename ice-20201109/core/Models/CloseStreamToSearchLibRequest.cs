@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CloseStreamToSearchLibRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the media asset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaId { get; set; }
 
         /// <summary>
+        /// <para>The namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>name-1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The search library.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Stream_xxx</para>
         /// </summary>

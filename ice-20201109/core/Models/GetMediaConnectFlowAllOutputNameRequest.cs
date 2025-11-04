@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetMediaConnectFlowAllOutputNameRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the MediaConnect flow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

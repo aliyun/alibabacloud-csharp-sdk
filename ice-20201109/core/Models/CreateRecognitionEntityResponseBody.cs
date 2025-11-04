@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateRecognitionEntityResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the created entity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>**<b><b><b><b><b><b>544cb84754</b></b></b></b></b></b></para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EntityId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
         /// </summary>

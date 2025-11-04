@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteHotwordLibraryRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the hotword library that you want to delete.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>cdb3e74639973036bc84</b></b></para>
         /// </summary>

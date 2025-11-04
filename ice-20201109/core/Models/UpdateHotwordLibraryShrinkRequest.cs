@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class UpdateHotwordLibraryShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The description of the hotword library. It can be up to 200 characters in length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>存放名人的词库</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ID of the hotword library.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,11 +30,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string HotwordLibraryId { get; set; }
 
+        /// <summary>
+        /// <para>The hotword list. You can add up to 300 hotword entries to a single library.</para>
+        /// </summary>
         [NameInMap("Hotwords")]
         [Validation(Required=false)]
         public string HotwordsShrink { get; set; }
 
         /// <summary>
+        /// <para>The name of the hotword library. It can be up to 100 characters in length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my_hotwords</para>
         /// </summary>

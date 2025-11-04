@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CancelIProductionJobRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b>12e8864746a0a398</b></b></para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the intelligent production job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

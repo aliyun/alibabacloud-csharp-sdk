@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public bool? EnableIntelligentSegment { get; set; }
 
+        [NameInMap("ExperimentalConfig")]
+        [Validation(Required=false)]
+        public string ExperimentalConfig { get; set; }
+
         [NameInMap("Greeting")]
         [Validation(Required=false)]
         public string Greeting { get; set; }

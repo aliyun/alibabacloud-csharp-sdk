@@ -9,11 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitCopyrightJobShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The description of the watermark.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Description</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The source video file that you want to add a watermark to.</para>
+        /// <remarks>
+        /// <para>The OSS object or media asset must reside in the same region as the IMS service region.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +34,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputShrink { get; set; }
 
         /// <summary>
+        /// <para>The watermark level, which specifies the channel to embed watermarks. Valid values: 0 specifies the 0u channel, 1 specifies the 1uv channel, and 2 specifies the 2yuv channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -32,13 +44,21 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? Level { get; set; }
 
         /// <summary>
+        /// <para>The information about the watermark to be added.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The URL of the output file.</para>
+        /// <remarks>
+        /// <para>The OSS bucket must reside in the same region as the IMS service region.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,6 +69,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string OutputShrink { get; set; }
 
         /// <summary>
+        /// <para>The parameters related to watermark jobs. The value is a JSON string. Supported parameter:</para>
+        /// <list type="bullet">
+        /// <item><description><para>algoType: the algorithm type. Default value: v1.</para>
+        /// <list type="bullet">
+        /// <item><description>v1: watermarking for long videos that last at least 3 minutes.</description></item>
+        /// <item><description>v2: watermarking for videos shorter than 3 minutes.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;algoType&quot;:&quot;v2&quot;}</para>
         /// </summary>
@@ -57,6 +87,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Params { get; set; }
 
         /// <summary>
+        /// <para>The start time of the watermark. Unit: seconds. If you do not specify this parameter, the default value 0 is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -65,6 +97,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>The end time of the watermark. Unit: seconds. If you do not specify this parameter, the default value is the video duration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -73,6 +107,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? TotalTime { get; set; }
 
         /// <summary>
+        /// <para>The custom data, which can be up to 1,024 bytes in size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>

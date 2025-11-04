@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateStreamToSearchLibRequest : TeaModel {
         /// <summary>
+        /// <para>The URL of the live stream to be ingested and analyzed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rtmp://xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Input { get; set; }
 
         /// <summary>
+        /// <para>The namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>name-1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The search library.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Stream_xxx</para>
         /// </summary>

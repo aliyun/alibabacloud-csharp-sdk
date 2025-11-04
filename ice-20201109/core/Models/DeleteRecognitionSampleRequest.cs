@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DeleteRecognitionSampleRequest : TeaModel {
         /// <summary>
+        /// <para>The type of recognition algorithm. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>landmark</description></item>
+        /// <item><description>object</description></item>
+        /// <item><description>logo</description></item>
+        /// <item><description>face</description></item>
+        /// <item><description>label</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +28,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Algorithm { get; set; }
 
         /// <summary>
+        /// <para>The ID of the entity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +39,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EntityId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the recognition library.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +66,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the sample that you want to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListMediaConvertJobsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The tasks.</para>
+        /// </summary>
         [NameInMap("Jobs")]
         [Validation(Required=false)]
         public List<MediaConvertJobWithoutDetail> Jobs { get; set; }
 
         /// <summary>
+        /// <para>Indicates the read position returned by the current call. An empty value means all data has been read.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +28,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string NextPageToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>

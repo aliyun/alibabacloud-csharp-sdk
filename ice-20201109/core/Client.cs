@@ -1358,7 +1358,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标流媒资</para>
+        /// <para>Adds tags for a specific live stream media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1412,7 +1412,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标流媒资</para>
+        /// <para>Adds tags for a specific live stream media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1466,7 +1466,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标流媒资</para>
+        /// <para>Adds tags for a specific live stream media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1484,7 +1484,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标流媒资</para>
+        /// <para>Adds tags for a specific live stream media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2442,7 +2442,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消智能生产任务</para>
+        /// <para>Cancels an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2488,7 +2488,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消智能生产任务</para>
+        /// <para>Cancels an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2534,7 +2534,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消智能生产任务</para>
+        /// <para>Cancels an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2552,7 +2552,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消智能生产任务</para>
+        /// <para>Cancels an intelligent production job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2570,8 +2570,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清除声纹ID对应的声纹</para>
+        /// <para>Deletes a voiceprint based on its ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <pre><c>
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ClearAIAgentVoiceprintRequest
@@ -2612,8 +2619,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清除声纹ID对应的声纹</para>
+        /// <para>Deletes a voiceprint based on its ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <pre><c>
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ClearAIAgentVoiceprintRequest
@@ -2654,8 +2668,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清除声纹ID对应的声纹</para>
+        /// <para>Deletes a voiceprint based on its ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <pre><c>
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ClearAIAgentVoiceprintRequest
@@ -2672,8 +2693,15 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清除声纹ID对应的声纹</para>
+        /// <para>Deletes a voiceprint based on its ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <pre><c>
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ClearAIAgentVoiceprintRequest
@@ -2690,8 +2718,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭MediaConnect实例的双流灾备功能</para>
+        /// <para>Disables Source Failover for a MediaConnect flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a flow has two sources, you cannot disable Source Failover. Delete one of them before this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloseMediaConnectFlowFailoverRequest
@@ -2732,8 +2765,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭MediaConnect实例的双流灾备功能</para>
+        /// <para>Disables Source Failover for a MediaConnect flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a flow has two sources, you cannot disable Source Failover. Delete one of them before this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloseMediaConnectFlowFailoverRequest
@@ -2774,8 +2812,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭MediaConnect实例的双流灾备功能</para>
+        /// <para>Disables Source Failover for a MediaConnect flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a flow has two sources, you cannot disable Source Failover. Delete one of them before this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloseMediaConnectFlowFailoverRequest
@@ -2792,8 +2835,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭MediaConnect实例的双流灾备功能</para>
+        /// <para>Disables Source Failover for a MediaConnect flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  If a flow has two sources, you cannot disable Source Failover. Delete one of them before this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloseMediaConnectFlowFailoverRequest
@@ -2810,7 +2858,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭流媒资</para>
+        /// <para>Stops the tagging and analysis process for a live stream media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2860,7 +2908,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭流媒资</para>
+        /// <para>Stops the tagging and analysis process for a live stream media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2910,7 +2958,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭流媒资</para>
+        /// <para>Stops the tagging and analysis process for a live stream media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2928,7 +2976,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭流媒资</para>
+        /// <para>Stops the tagging and analysis process for a live stream media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4090,7 +4138,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热词库</para>
+        /// <para>Creates a hotword library.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4150,7 +4198,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热词库</para>
+        /// <para>Creates a hotword library.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4210,7 +4258,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热词库</para>
+        /// <para>Creates a hotword library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4228,7 +4276,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建热词库</para>
+        /// <para>Creates a hotword library.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6370,8 +6418,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义实体</para>
+        /// <para>Creates an entity to be recognized in a custom recognition library. The entity can be a landmark, object, logo, or person.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRecognitionEntityRequest
@@ -6440,8 +6496,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义实体</para>
+        /// <para>Creates an entity to be recognized in a custom recognition library. The entity can be a landmark, object, logo, or person.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRecognitionEntityRequest
@@ -6510,8 +6574,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义实体</para>
+        /// <para>Creates an entity to be recognized in a custom recognition library. The entity can be a landmark, object, logo, or person.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRecognitionEntityRequest
@@ -6528,8 +6600,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义实体</para>
+        /// <para>Creates an entity to be recognized in a custom recognition library. The entity can be a landmark, object, logo, or person.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRecognitionEntityRequest
@@ -6546,8 +6626,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义库。</para>
+        /// <para>Creates a custom library to store the entity information for recognition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>Workflow for using a custom recognition library: Create a library, create a custom object entity within the library, register sample images for the entity, create an analysis template that uses your custom library, and then submit an analysis task using the template.</description></item>
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRecognitionLibRequest
@@ -6612,8 +6701,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义库。</para>
+        /// <para>Creates a custom library to store the entity information for recognition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>Workflow for using a custom recognition library: Create a library, create a custom object entity within the library, register sample images for the entity, create an analysis template that uses your custom library, and then submit an analysis task using the template.</description></item>
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRecognitionLibRequest
@@ -6678,8 +6776,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义库。</para>
+        /// <para>Creates a custom library to store the entity information for recognition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>Workflow for using a custom recognition library: Create a library, create a custom object entity within the library, register sample images for the entity, create an analysis template that uses your custom library, and then submit an analysis task using the template.</description></item>
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRecognitionLibRequest
@@ -6696,8 +6803,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义库。</para>
+        /// <para>Creates a custom library to store the entity information for recognition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>Workflow for using a custom recognition library: Create a library, create a custom object entity within the library, register sample images for the entity, create an analysis template that uses your custom library, and then submit an analysis task using the template.</description></item>
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRecognitionLibRequest
@@ -6714,8 +6830,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册自定义实体照片</para>
+        /// <para>Adds a sample image or a text label to a specific entity within a recognition library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRecognitionSampleRequest
@@ -6788,8 +6912,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册自定义实体照片</para>
+        /// <para>Adds a sample image or a text label to a specific entity within a recognition library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRecognitionSampleRequest
@@ -6862,8 +6994,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册自定义实体照片</para>
+        /// <para>Adds a sample image or a text label to a specific entity within a recognition library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRecognitionSampleRequest
@@ -6880,8 +7020,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册自定义实体照片</para>
+        /// <para>Adds a sample image or a text label to a specific entity within a recognition library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRecognitionSampleRequest
@@ -7470,7 +7618,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建流媒资</para>
+        /// <para>Registers a live stream as a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7520,7 +7668,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建流媒资</para>
+        /// <para>Registers a live stream as a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7570,7 +7718,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建流媒资</para>
+        /// <para>Registers a live stream as a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7588,7 +7736,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建流媒资</para>
+        /// <para>Registers a live stream as a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8590,7 +8738,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能体的对话历史记录。</para>
+        /// <para>Deletes dialog records of an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8640,7 +8788,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能体的对话历史记录。</para>
+        /// <para>Deletes dialog records of an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8690,7 +8838,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能体的对话历史记录。</para>
+        /// <para>Deletes dialog records of an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8708,7 +8856,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能体的对话历史记录。</para>
+        /// <para>Deletes dialog records of an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10034,8 +10182,18 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除热词词库</para>
+        /// <para>Deletes a specified hotword library based on the ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to delete a specified hotword library.</description></item>
+        /// <item><description>The delete operation is irreversible.</description></item>
+        /// <item><description>You can create up to 100 hotword libraries in an account.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteHotwordLibraryRequest
@@ -10076,8 +10234,18 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除热词词库</para>
+        /// <para>Deletes a specified hotword library based on the ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to delete a specified hotword library.</description></item>
+        /// <item><description>The delete operation is irreversible.</description></item>
+        /// <item><description>You can create up to 100 hotword libraries in an account.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteHotwordLibraryRequest
@@ -10118,8 +10286,18 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除热词词库</para>
+        /// <para>Deletes a specified hotword library based on the ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to delete a specified hotword library.</description></item>
+        /// <item><description>The delete operation is irreversible.</description></item>
+        /// <item><description>You can create up to 100 hotword libraries in an account.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteHotwordLibraryRequest
@@ -10136,8 +10314,18 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除热词词库</para>
+        /// <para>Deletes a specified hotword library based on the ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to delete a specified hotword library.</description></item>
+        /// <item><description>The delete operation is irreversible.</description></item>
+        /// <item><description>You can create up to 100 hotword libraries in an account.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteHotwordLibraryRequest
@@ -13102,8 +13290,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义库实体</para>
+        /// <para>Deletes an entity from the specified custom recognition library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRecognitionEntityRequest
@@ -13168,8 +13364,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义库实体</para>
+        /// <para>Deletes an entity from the specified custom recognition library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRecognitionEntityRequest
@@ -13234,8 +13438,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义库实体</para>
+        /// <para>Deletes an entity from the specified custom recognition library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRecognitionEntityRequest
@@ -13252,8 +13464,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义库实体</para>
+        /// <para>Deletes an entity from the specified custom recognition library.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRecognitionEntityRequest
@@ -13270,8 +13490,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义库</para>
+        /// <para>Deletes a custom recognition library, including all entities and samples within it.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRecognitionLibRequest
@@ -13332,8 +13560,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义库</para>
+        /// <para>Deletes a custom recognition library, including all entities and samples within it.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRecognitionLibRequest
@@ -13394,8 +13630,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义库</para>
+        /// <para>Deletes a custom recognition library, including all entities and samples within it.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRecognitionLibRequest
@@ -13412,8 +13656,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义库</para>
+        /// <para>Deletes a custom recognition library, including all entities and samples within it.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRecognitionLibRequest
@@ -13430,8 +13682,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义实体照片</para>
+        /// <para>Deletes a sample for a custom entity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRecognitionSampleRequest
@@ -13500,8 +13760,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义实体照片</para>
+        /// <para>Deletes a sample for a custom entity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRecognitionSampleRequest
@@ -13570,8 +13838,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义实体照片</para>
+        /// <para>Deletes a sample for a custom entity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRecognitionSampleRequest
@@ -13588,8 +13864,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义实体照片</para>
+        /// <para>Deletes a sample for a custom entity.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRecognitionSampleRequest
@@ -15512,6 +15796,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return await DescribeNotifyConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves playback records based on the player\&quot;s TraceId. This API supports pagination.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePlayListRequest
         /// </param>
@@ -15581,6 +15870,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<DescribePlayListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves playback records based on the player\&quot;s TraceId. This API supports pagination.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePlayListRequest
         /// </param>
@@ -15650,6 +15944,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return TeaModel.ToObject<DescribePlayListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves playback records based on the player\&quot;s TraceId. This API supports pagination.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePlayListRequest
         /// </param>
@@ -15663,6 +15962,11 @@ namespace AlibabaCloud.SDK.ICE20201109
             return DescribePlayListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves playback records based on the player\&quot;s TraceId. This API supports pagination.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePlayListRequest
         /// </param>
@@ -16182,7 +16486,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用某个MediaConnect实例的某个输出</para>
+        /// <para>Disables an output of a MediaConnect flow. When disabled, the output retains its configuration, but no live stream is delivered to the destination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16228,7 +16532,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用某个MediaConnect实例的某个输出</para>
+        /// <para>Disables an output of a MediaConnect flow. When disabled, the output retains its configuration, but no live stream is delivered to the destination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16274,7 +16578,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用某个MediaConnect实例的某个输出</para>
+        /// <para>Disables an output of a MediaConnect flow. When disabled, the output retains its configuration, but no live stream is delivered to the destination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16292,7 +16596,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用某个MediaConnect实例的某个输出</para>
+        /// <para>Disables an output of a MediaConnect flow. When disabled, the output retains its configuration, but no live stream is delivered to the destination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16764,7 +17068,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成直播互动消息所需的token</para>
+        /// <para>Generates the token required for interactive messaging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16818,7 +17122,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成直播互动消息所需的token</para>
+        /// <para>Generates the token required for interactive messaging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16872,7 +17176,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成直播互动消息所需的token</para>
+        /// <para>Generates the token required for interactive messaging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16890,7 +17194,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成直播互动消息所需的token</para>
+        /// <para>Generates the token required for interactive messaging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16904,6 +17208,126 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GenerateMessageChatTokenWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a workflow task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIWorkflowTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIWorkflowTaskResponse
+        /// </returns>
+        public GetAIWorkflowTaskResponse GetAIWorkflowTaskWithOptions(GetAIWorkflowTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAIWorkflowTask",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAIWorkflowTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a workflow task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIWorkflowTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIWorkflowTaskResponse
+        /// </returns>
+        public async Task<GetAIWorkflowTaskResponse> GetAIWorkflowTaskWithOptionsAsync(GetAIWorkflowTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAIWorkflowTask",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAIWorkflowTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a workflow task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIWorkflowTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIWorkflowTaskResponse
+        /// </returns>
+        public GetAIWorkflowTaskResponse GetAIWorkflowTask(GetAIWorkflowTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAIWorkflowTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a workflow task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIWorkflowTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIWorkflowTaskResponse
+        /// </returns>
+        public async Task<GetAIWorkflowTaskResponse> GetAIWorkflowTaskAsync(GetAIWorkflowTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAIWorkflowTaskWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18962,8 +19386,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热词词库</para>
+        /// <para>Queries the information about a specified hotword library based on the ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>You can call this operation to retrieve details of a specified hotword library based on the ID, including the library name, description, and content and attributes of all hotwords in it.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHotwordLibraryRequest
@@ -19004,8 +19434,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热词词库</para>
+        /// <para>Queries the information about a specified hotword library based on the ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>You can call this operation to retrieve details of a specified hotword library based on the ID, including the library name, description, and content and attributes of all hotwords in it.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHotwordLibraryRequest
@@ -19046,8 +19482,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热词词库</para>
+        /// <para>Queries the information about a specified hotword library based on the ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>You can call this operation to retrieve details of a specified hotword library based on the ID, including the library name, description, and content and attributes of all hotwords in it.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHotwordLibraryRequest
@@ -19064,8 +19506,14 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热词词库</para>
+        /// <para>Queries the information about a specified hotword library based on the ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>You can call this operation to retrieve details of a specified hotword library based on the ID, including the library name, description, and content and attributes of all hotwords in it.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHotwordLibraryRequest
@@ -20486,7 +20934,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MediaConnect可用的区域</para>
+        /// <para>Retrieves all regions where MediaConnect is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20519,7 +20967,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MediaConnect可用的区域</para>
+        /// <para>Retrieves all regions where MediaConnect is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20552,7 +21000,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MediaConnect可用的区域</para>
+        /// <para>Retrieves all regions where MediaConnect is available.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -20566,7 +21014,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MediaConnect可用的区域</para>
+        /// <para>Retrieves all regions where MediaConnect is available.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -20732,7 +21180,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取某个MediaConnect实例下的所有output的名字</para>
+        /// <para>Retrieves the names of all outputs for a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20774,7 +21222,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取某个MediaConnect实例下的所有output的名字</para>
+        /// <para>Retrieves the names of all outputs for a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20816,7 +21264,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取某个MediaConnect实例下的所有output的名字</para>
+        /// <para>Retrieves the names of all outputs for a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20834,7 +21282,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取某个MediaConnect实例下的所有output的名字</para>
+        /// <para>Retrieves the names of all outputs for a MediaConnect flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22748,7 +23196,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询工程导出任务</para>
+        /// <para>Queries the information of a project export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22790,7 +23238,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询工程导出任务</para>
+        /// <para>Queries the information of a project export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22832,7 +23280,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询工程导出任务</para>
+        /// <para>Queries the information of a project export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22850,7 +23298,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询工程导出任务</para>
+        /// <para>Queries the information of a project export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23636,7 +24084,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取存储地址列表</para>
+        /// <para>Obtains storage configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23686,7 +24134,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取存储地址列表</para>
+        /// <para>Obtains storage configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23736,7 +24184,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取存储地址列表</para>
+        /// <para>Obtains storage configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23754,7 +24202,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取存储地址列表</para>
+        /// <para>Obtains storage configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23772,7 +24220,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询流媒资打标</para>
+        /// <para>Retrieves tags of a live stream media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23846,7 +24294,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询流媒资打标</para>
+        /// <para>Retrieves tags of a live stream media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23920,7 +24368,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询流媒资打标</para>
+        /// <para>Retrieves tags of a live stream media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23938,7 +24386,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询流媒资打标</para>
+        /// <para>Retrieves tags of a live stream media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25588,7 +26036,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能体的对话历史记录。</para>
+        /// <para>Lists the dialog records of an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25654,7 +26102,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能体的对话历史记录。</para>
+        /// <para>Lists the dialog records of an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25720,7 +26168,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能体的对话历史记录。</para>
+        /// <para>Lists the dialog records of an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25738,7 +26186,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能体的对话历史记录。</para>
+        /// <para>Lists the dialog records of an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26092,7 +26540,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新回调配置</para>
+        /// <para>Lists the registered voiceprints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26142,7 +26590,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新回调配置</para>
+        /// <para>Lists the registered voiceprints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26192,7 +26640,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新回调配置</para>
+        /// <para>Lists the registered voiceprints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26210,7 +26658,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新回调配置</para>
+        /// <para>Lists the registered voiceprints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28624,8 +29072,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有热词库的列表</para>
+        /// <para>Queries hotword libraries that meet specific search conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to get information about all hotword libraries that you created.</description></item>
+        /// <item><description>The API supports fuzzy search by <c>Name</c>, filtering by creation time range, and pagination.</description></item>
+        /// <item><description>By default, the results are sorted by creation time in descending order. You can set <c>SortBy</c> to change the sorting order.</description></item>
+        /// <item><description>The maximum number of entries returned for each request is 100. Default value: 10.</description></item>
+        /// <item><description>Use <c>NextToken</c> for pagination.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListHotwordLibrariesRequest
@@ -28698,8 +29158,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有热词库的列表</para>
+        /// <para>Queries hotword libraries that meet specific search conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to get information about all hotword libraries that you created.</description></item>
+        /// <item><description>The API supports fuzzy search by <c>Name</c>, filtering by creation time range, and pagination.</description></item>
+        /// <item><description>By default, the results are sorted by creation time in descending order. You can set <c>SortBy</c> to change the sorting order.</description></item>
+        /// <item><description>The maximum number of entries returned for each request is 100. Default value: 10.</description></item>
+        /// <item><description>Use <c>NextToken</c> for pagination.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListHotwordLibrariesRequest
@@ -28772,8 +29244,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有热词库的列表</para>
+        /// <para>Queries hotword libraries that meet specific search conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to get information about all hotword libraries that you created.</description></item>
+        /// <item><description>The API supports fuzzy search by <c>Name</c>, filtering by creation time range, and pagination.</description></item>
+        /// <item><description>By default, the results are sorted by creation time in descending order. You can set <c>SortBy</c> to change the sorting order.</description></item>
+        /// <item><description>The maximum number of entries returned for each request is 100. Default value: 10.</description></item>
+        /// <item><description>Use <c>NextToken</c> for pagination.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListHotwordLibrariesRequest
@@ -28790,8 +29274,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有热词库的列表</para>
+        /// <para>Queries hotword libraries that meet specific search conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to get information about all hotword libraries that you created.</description></item>
+        /// <item><description>The API supports fuzzy search by <c>Name</c>, filtering by creation time range, and pagination.</description></item>
+        /// <item><description>By default, the results are sorted by creation time in descending order. You can set <c>SortBy</c> to change the sorting order.</description></item>
+        /// <item><description>The maximum number of entries returned for each request is 100. Default value: 10.</description></item>
+        /// <item><description>Use <c>NextToken</c> for pagination.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListHotwordLibrariesRequest
@@ -30596,7 +31092,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 MediaConvertJob 列表</para>
+        /// <para>Retrieves MediaConvert tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30662,7 +31158,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 MediaConvertJob 列表</para>
+        /// <para>Retrieves MediaConvert tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30728,7 +31224,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 MediaConvertJob 列表</para>
+        /// <para>Retrieves MediaConvert tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30746,7 +31242,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 MediaConvertJob 列表</para>
+        /// <para>Retrieves MediaConvert tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32404,8 +32900,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义库下实体列表</para>
+        /// <para>Retrieves all entities in a specified recognition library. Pagination is supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRecognitionEntitiesRequest
@@ -32474,8 +32978,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义库下实体列表</para>
+        /// <para>Retrieves all entities in a specified recognition library. Pagination is supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRecognitionEntitiesRequest
@@ -32544,8 +33056,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义库下实体列表</para>
+        /// <para>Retrieves all entities in a specified recognition library. Pagination is supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRecognitionEntitiesRequest
@@ -32562,8 +33082,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义库下实体列表</para>
+        /// <para>Retrieves all entities in a specified recognition library. Pagination is supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRecognitionEntitiesRequest
@@ -32580,8 +33108,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义库列表</para>
+        /// <para>Retrieves all custom recognition libraries. Pagination is supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRecognitionLibsRequest
@@ -32646,8 +33182,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义库列表</para>
+        /// <para>Retrieves all custom recognition libraries. Pagination is supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRecognitionLibsRequest
@@ -32712,8 +33256,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义库列表</para>
+        /// <para>Retrieves all custom recognition libraries. Pagination is supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRecognitionLibsRequest
@@ -32730,8 +33282,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义库列表</para>
+        /// <para>Retrieves all custom recognition libraries. Pagination is supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Beijing), China (Shanghai), China (Hangzhou), and China (Shenzhen) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. For more information, see <a href="https://help.aliyun.com/zh/mps/developer-reference/qps-limits?spm=a2c4g.11186623.0.0.647e1081YGcerb">QPS limits</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRecognitionLibsRequest
@@ -32748,7 +33308,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义库实体的图片列表</para>
+        /// <para>Retrieves all samples of a custom entity. Pagination is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32822,7 +33382,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义库实体的图片列表</para>
+        /// <para>Retrieves all samples of a custom entity. Pagination is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32896,7 +33456,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义库实体的图片列表</para>
+        /// <para>Retrieves all samples of a custom entity. Pagination is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32914,7 +33474,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义库实体的图片列表</para>
+        /// <para>Retrieves all samples of a custom entity. Pagination is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35188,8 +35748,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作流任务实例列表</para>
+        /// <para>Retrieves workflow tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API only returns data from the last 90 days.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWorkflowTasksRequest
@@ -35254,8 +35819,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作流任务实例列表</para>
+        /// <para>Retrieves workflow tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API only returns data from the last 90 days.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWorkflowTasksRequest
@@ -35320,8 +35890,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作流任务实例列表</para>
+        /// <para>Retrieves workflow tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API only returns data from the last 90 days.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWorkflowTasksRequest
@@ -35338,8 +35913,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作流任务实例列表</para>
+        /// <para>Retrieves workflow tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API only returns data from the last 90 days.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWorkflowTasksRequest
@@ -35356,8 +35936,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启MediaConnect双流灾备</para>
+        /// <para>Enables Source Failover for a MediaConnect flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before this operation, you must add a source to the flow.</para>
+        /// <list type="bullet">
+        /// <item><description>After Source Failover is enabled, you can add an additional source. The input type of the two sources must be identical.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// OpenMediaConnectFlowFailoverRequest
@@ -35398,8 +35986,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启MediaConnect双流灾备</para>
+        /// <para>Enables Source Failover for a MediaConnect flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before this operation, you must add a source to the flow.</para>
+        /// <list type="bullet">
+        /// <item><description>After Source Failover is enabled, you can add an additional source. The input type of the two sources must be identical.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// OpenMediaConnectFlowFailoverRequest
@@ -35440,8 +36036,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启MediaConnect双流灾备</para>
+        /// <para>Enables Source Failover for a MediaConnect flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before this operation, you must add a source to the flow.</para>
+        /// <list type="bullet">
+        /// <item><description>After Source Failover is enabled, you can add an additional source. The input type of the two sources must be identical.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// OpenMediaConnectFlowFailoverRequest
@@ -35458,8 +36062,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启MediaConnect双流灾备</para>
+        /// <para>Enables Source Failover for a MediaConnect flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before this operation, you must add a source to the flow.</para>
+        /// <list type="bullet">
+        /// <item><description>After Source Failover is enabled, you can add an additional source. The input type of the two sources must be identical.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// OpenMediaConnectFlowFailoverRequest
@@ -35476,7 +36088,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询版权水印提取任务</para>
+        /// <para>Queries a job for extracting a copyright watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35518,7 +36130,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询版权水印提取任务</para>
+        /// <para>Queries a job for extracting a copyright watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35560,7 +36172,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询版权水印提取任务</para>
+        /// <para>Queries a job for extracting a copyright watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35578,7 +36190,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询版权水印提取任务</para>
+        /// <para>Queries a job for extracting a copyright watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35596,8 +36208,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频版权水印任务列表</para>
+        /// <para>Queries copyright watermarking jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCopyrightJobListRequest
@@ -35658,8 +36275,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频版权水印任务列表</para>
+        /// <para>Queries copyright watermarking jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCopyrightJobListRequest
@@ -35720,8 +36342,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频版权水印任务列表</para>
+        /// <para>Queries copyright watermarking jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCopyrightJobListRequest
@@ -35738,8 +36365,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频版权水印任务列表</para>
+        /// <para>Queries copyright watermarking jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCopyrightJobListRequest
@@ -36948,8 +37580,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印ab流任务</para>
+        /// <para>Queries A/B watermarking jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTraceAbJobListRequest
@@ -37010,8 +37647,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印ab流任务</para>
+        /// <para>Queries A/B watermarking jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTraceAbJobListRequest
@@ -37072,8 +37714,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印ab流任务</para>
+        /// <para>Queries A/B watermarking jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTraceAbJobListRequest
@@ -37090,8 +37737,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印ab流任务</para>
+        /// <para>Queries A/B watermarking jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTraceAbJobListRequest
@@ -37108,8 +37760,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询溯源水印提取任务</para>
+        /// <para>Queries a job for extracting a trace watermark.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTraceExtractJobRequest
@@ -37150,8 +37807,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询溯源水印提取任务</para>
+        /// <para>Queries a job for extracting a trace watermark.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTraceExtractJobRequest
@@ -37192,8 +37854,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询溯源水印提取任务</para>
+        /// <para>Queries a job for extracting a trace watermark.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTraceExtractJobRequest
@@ -37210,8 +37877,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询溯源水印提取任务</para>
+        /// <para>Queries a job for extracting a trace watermark.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTraceExtractJobRequest
@@ -37228,8 +37900,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印m3u8任务</para>
+        /// <para>Queries jobs for generating M3U8 files containing specific trace watermark information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>The M3U8 file with absolute paths generated by the SubmitTraceM3u8Job API has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. After the signature expires, the M3U8 file will become inaccessible. You must submit a new M3U8 generation job.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTraceM3u8JobListRequest
@@ -37286,8 +37966,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印m3u8任务</para>
+        /// <para>Queries jobs for generating M3U8 files containing specific trace watermark information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>The M3U8 file with absolute paths generated by the SubmitTraceM3u8Job API has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. After the signature expires, the M3U8 file will become inaccessible. You must submit a new M3U8 generation job.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTraceM3u8JobListRequest
@@ -37344,8 +38032,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印m3u8任务</para>
+        /// <para>Queries jobs for generating M3U8 files containing specific trace watermark information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>The M3U8 file with absolute paths generated by the SubmitTraceM3u8Job API has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. After the signature expires, the M3U8 file will become inaccessible. You must submit a new M3U8 generation job.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTraceM3u8JobListRequest
@@ -37362,8 +38058,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频溯源水印m3u8任务</para>
+        /// <para>Queries jobs for generating M3U8 files containing specific trace watermark information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>The M3U8 file with absolute paths generated by the SubmitTraceM3u8Job API has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. After the signature expires, the M3U8 file will become inaccessible. You must submit a new M3U8 generation job.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTraceM3u8JobListRequest
@@ -37380,7 +38084,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频理解任务结果</para>
+        /// <para>Retrieves the results of an AI analysis and processing task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37436,7 +38140,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频理解任务结果</para>
+        /// <para>Retrieves the results of an AI analysis and processing task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37492,7 +38196,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频理解任务结果</para>
+        /// <para>Retrieves the results of an AI analysis and processing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37510,7 +38214,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频理解任务结果</para>
+        /// <para>Retrieves the results of an AI analysis and processing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38084,7 +38788,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复某个MediaConnect实例的某个输出</para>
+        /// <para>Resumes an output of a MediaConnect flow. When resumed, the output can deliver the live stream to the destination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38130,7 +38834,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复某个MediaConnect实例的某个输出</para>
+        /// <para>Resumes an output of a MediaConnect flow. When resumed, the output can deliver the live stream to the destination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38176,7 +38880,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复某个MediaConnect实例的某个输出</para>
+        /// <para>Resumes an output of a MediaConnect flow. When resumed, the output can deliver the live stream to the destination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38194,7 +38898,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复某个MediaConnect实例的某个输出</para>
+        /// <para>Resumes an output of a MediaConnect flow. When resumed, the output can deliver the live stream to the destination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38562,6 +39266,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFilters))
+            {
+                query["CustomFilters"] = request.CustomFilters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
             {
                 query["EntityId"] = request.EntityId;
@@ -38633,6 +39341,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFilters))
+            {
+                query["CustomFilters"] = request.CustomFilters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
             {
                 query["EntityId"] = request.EntityId;
@@ -38750,6 +39462,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFilters))
+            {
+                query["CustomFilters"] = request.CustomFilters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchingMode))
             {
                 query["MatchingMode"] = request.MatchingMode;
@@ -38793,6 +39509,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
             {
                 query["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UtcCreate))
+            {
+                query["UtcCreate"] = request.UtcCreate;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -38837,6 +39557,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFilters))
+            {
+                query["CustomFilters"] = request.CustomFilters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchingMode))
             {
                 query["MatchingMode"] = request.MatchingMode;
@@ -38880,6 +39604,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
             {
                 query["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UtcCreate))
+            {
+                query["UtcCreate"] = request.UtcCreate;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -38970,6 +39698,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFilters))
+            {
+                query["CustomFilters"] = request.CustomFilters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
             {
                 query["EntityId"] = request.EntityId;
@@ -39001,6 +39733,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
             {
                 query["SearchLibName"] = request.SearchLibName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UtcCreate))
+            {
+                query["UtcCreate"] = request.UtcCreate;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -39045,6 +39781,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFilters))
+            {
+                query["CustomFilters"] = request.CustomFilters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
             {
                 query["EntityId"] = request.EntityId;
@@ -39076,6 +39816,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
             {
                 query["SearchLibName"] = request.SearchLibName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UtcCreate))
+            {
+                query["UtcCreate"] = request.UtcCreate;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -39144,7 +39888,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries media assets by using the hybrid search feature. This operation allows you to search for media assets by using natural language based on intelligent tag text search and the search capabilities of large language models (LLMs). This implements multimodal retrieval.</para>
+        /// <para>Performs a hybrid search for media assets. This API combines multiple recall strategies, including tag-based text search and large language model (LLM) search. You can locate media assets using natural language descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39161,6 +39905,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFilters))
+            {
+                query["CustomFilters"] = request.CustomFilters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
             {
                 query["MediaId"] = request.MediaId;
@@ -39188,6 +39936,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
             {
                 query["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UtcCreate))
+            {
+                query["UtcCreate"] = request.UtcCreate;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -39210,7 +39962,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries media assets by using the hybrid search feature. This operation allows you to search for media assets by using natural language based on intelligent tag text search and the search capabilities of large language models (LLMs). This implements multimodal retrieval.</para>
+        /// <para>Performs a hybrid search for media assets. This API combines multiple recall strategies, including tag-based text search and large language model (LLM) search. You can locate media assets using natural language descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39227,6 +39979,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFilters))
+            {
+                query["CustomFilters"] = request.CustomFilters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
             {
                 query["MediaId"] = request.MediaId;
@@ -39255,6 +40011,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["Text"] = request.Text;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UtcCreate))
+            {
+                query["UtcCreate"] = request.UtcCreate;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -39276,7 +40036,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries media assets by using the hybrid search feature. This operation allows you to search for media assets by using natural language based on intelligent tag text search and the search capabilities of large language models (LLMs). This implements multimodal retrieval.</para>
+        /// <para>Performs a hybrid search for media assets. This API combines multiple recall strategies, including tag-based text search and large language model (LLM) search. You can locate media assets using natural language descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39294,7 +40054,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries media assets by using the hybrid search feature. This operation allows you to search for media assets by using natural language based on intelligent tag text search and the search capabilities of large language models (LLMs). This implements multimodal retrieval.</para>
+        /// <para>Performs a hybrid search for media assets. This API combines multiple recall strategies, including tag-based text search and large language model (LLM) search. You can locate media assets using natural language descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39334,6 +40094,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFilters))
+            {
+                query["CustomFilters"] = request.CustomFilters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaType))
             {
                 query["MediaType"] = request.MediaType;
@@ -39357,6 +40121,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
             {
                 query["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UtcCreate))
+            {
+                query["UtcCreate"] = request.UtcCreate;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -39401,6 +40169,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFilters))
+            {
+                query["CustomFilters"] = request.CustomFilters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaType))
             {
                 query["MediaType"] = request.MediaType;
@@ -39424,6 +40196,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Text))
             {
                 query["Text"] = request.Text;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UtcCreate))
+            {
+                query["UtcCreate"] = request.UtcCreate;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -40164,7 +40940,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>传入消息作为LLM输入。</para>
+        /// <para>Sends a message as input to the large language model (LLM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40210,7 +40986,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>传入消息作为LLM输入。</para>
+        /// <para>Sends a message as input to the large language model (LLM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40256,7 +41032,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>传入消息作为LLM输入。</para>
+        /// <para>Sends a message as input to the large language model (LLM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40274,7 +41050,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>传入消息作为LLM输入。</para>
+        /// <para>Sends a message as input to the large language model (LLM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40548,7 +41324,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向IM客户端发送消息。</para>
+        /// <para>Sends a message to the client.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40614,7 +41390,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向IM客户端发送消息。</para>
+        /// <para>Sends a message to the client.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40680,7 +41456,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向IM客户端发送消息。</para>
+        /// <para>Sends a message to the client.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40698,7 +41474,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>向IM客户端发送消息。</para>
+        /// <para>Sends a message to the client.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40716,7 +41492,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置声纹</para>
+        /// <para>Registers a voiceprint.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40768,7 +41544,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置声纹</para>
+        /// <para>Registers a voiceprint.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40820,7 +41596,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置声纹</para>
+        /// <para>Registers a voiceprint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40838,7 +41614,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置声纹</para>
+        /// <para>Registers a voiceprint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42004,6 +42780,170 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Initiates a workflow task for automated media processing based on a workflow template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You must specify a workflow template. To create one, go to the <a href="https://ims.console.aliyun.com/ai-workflow/template">Intelligent Media Services (IMS)</a> console.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartAIWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartAIWorkflowResponse
+        /// </returns>
+        public StartAIWorkflowResponse StartAIWorkflowWithOptions(StartAIWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DispatchTag))
+            {
+                query["DispatchTag"] = request.DispatchTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Inputs))
+            {
+                query["Inputs"] = request.Inputs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartAIWorkflow",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartAIWorkflowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a workflow task for automated media processing based on a workflow template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You must specify a workflow template. To create one, go to the <a href="https://ims.console.aliyun.com/ai-workflow/template">Intelligent Media Services (IMS)</a> console.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartAIWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartAIWorkflowResponse
+        /// </returns>
+        public async Task<StartAIWorkflowResponse> StartAIWorkflowWithOptionsAsync(StartAIWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DispatchTag))
+            {
+                query["DispatchTag"] = request.DispatchTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Inputs))
+            {
+                query["Inputs"] = request.Inputs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartAIWorkflow",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartAIWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a workflow task for automated media processing based on a workflow template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You must specify a workflow template. To create one, go to the <a href="https://ims.console.aliyun.com/ai-workflow/template">Intelligent Media Services (IMS)</a> console.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartAIWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartAIWorkflowResponse
+        /// </returns>
+        public StartAIWorkflowResponse StartAIWorkflow(StartAIWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartAIWorkflowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a workflow task for automated media processing based on a workflow template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You must specify a workflow template. To create one, go to the <a href="https://ims.console.aliyun.com/ai-workflow/template">Intelligent Media Services (IMS)</a> console.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StartAIWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartAIWorkflowResponse
+        /// </returns>
+        public async Task<StartAIWorkflowResponse> StartAIWorkflowAsync(StartAIWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartAIWorkflowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Starts a channel.</para>
         /// </summary>
         /// 
@@ -42776,6 +43716,146 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Manually stops a workflow task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is only used to stop workflow tasks in real-time scenarios such as live streaming and RTC. It cannot be used to stop tasks in offline scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopAIWorkflowTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopAIWorkflowTaskResponse
+        /// </returns>
+        public StopAIWorkflowTaskResponse StopAIWorkflowTaskWithOptions(StopAIWorkflowTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopAIWorkflowTask",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopAIWorkflowTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually stops a workflow task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is only used to stop workflow tasks in real-time scenarios such as live streaming and RTC. It cannot be used to stop tasks in offline scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopAIWorkflowTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopAIWorkflowTaskResponse
+        /// </returns>
+        public async Task<StopAIWorkflowTaskResponse> StopAIWorkflowTaskWithOptionsAsync(StopAIWorkflowTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopAIWorkflowTask",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopAIWorkflowTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually stops a workflow task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is only used to stop workflow tasks in real-time scenarios such as live streaming and RTC. It cannot be used to stop tasks in offline scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopAIWorkflowTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopAIWorkflowTaskResponse
+        /// </returns>
+        public StopAIWorkflowTaskResponse StopAIWorkflowTask(StopAIWorkflowTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopAIWorkflowTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually stops a workflow task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is only used to stop workflow tasks in real-time scenarios such as live streaming and RTC. It cannot be used to stop tasks in offline scenarios.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// StopAIWorkflowTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopAIWorkflowTaskResponse
+        /// </returns>
+        public async Task<StopAIWorkflowTaskResponse> StopAIWorkflowTaskAsync(StopAIWorkflowTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopAIWorkflowTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Stops a MediaWeaver channel.</para>
         /// </summary>
         /// 
@@ -43160,8 +44240,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频送审任务</para>
+        /// <para>Submits a video to a specified AI agent for content moderation. This operation supports video input from OSS and delivers the results asynchronously via callbacks. You can define custom frame-capturing policies and moderation prompts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call SubmitAIAgentVideoAuditTask to submit a video moderation task with configurations such as a video URL, frame-capturing policies, and review interval. The system returns a unique JobId for tracking. When the task is complete, the service will push the results, including the moderation status and AI-generated analysis, to the configured callback URL. Only OSS URLs are supported as input. The underlying multi-modal large language model (MLLM) only supports interaction via the non-streaming OpenAI protocol.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitAIAgentVideoAuditTaskRequest
@@ -43236,8 +44321,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频送审任务</para>
+        /// <para>Submits a video to a specified AI agent for content moderation. This operation supports video input from OSS and delivers the results asynchronously via callbacks. You can define custom frame-capturing policies and moderation prompts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call SubmitAIAgentVideoAuditTask to submit a video moderation task with configurations such as a video URL, frame-capturing policies, and review interval. The system returns a unique JobId for tracking. When the task is complete, the service will push the results, including the moderation status and AI-generated analysis, to the configured callback URL. Only OSS URLs are supported as input. The underlying multi-modal large language model (MLLM) only supports interaction via the non-streaming OpenAI protocol.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitAIAgentVideoAuditTaskRequest
@@ -43312,8 +44402,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频送审任务</para>
+        /// <para>Submits a video to a specified AI agent for content moderation. This operation supports video input from OSS and delivers the results asynchronously via callbacks. You can define custom frame-capturing policies and moderation prompts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call SubmitAIAgentVideoAuditTask to submit a video moderation task with configurations such as a video URL, frame-capturing policies, and review interval. The system returns a unique JobId for tracking. When the task is complete, the service will push the results, including the moderation status and AI-generated analysis, to the configured callback URL. Only OSS URLs are supported as input. The underlying multi-modal large language model (MLLM) only supports interaction via the non-streaming OpenAI protocol.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitAIAgentVideoAuditTaskRequest
@@ -43330,8 +44425,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频送审任务</para>
+        /// <para>Submits a video to a specified AI agent for content moderation. This operation supports video input from OSS and delivers the results asynchronously via callbacks. You can define custom frame-capturing policies and moderation prompts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call SubmitAIAgentVideoAuditTask to submit a video moderation task with configurations such as a video URL, frame-capturing policies, and review interval. The system returns a unique JobId for tracking. When the task is complete, the service will push the results, including the moderation status and AI-generated analysis, to the configured callback URL. Only OSS URLs are supported as input. The underlying multi-modal large language model (MLLM) only supports interaction via the non-streaming OpenAI protocol.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitAIAgentVideoAuditTaskRequest
@@ -43804,8 +44904,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video rendering job for a digitized virtual human based on text or an audio file of a human voice.</para>
+        /// <para>Submits a task to render a video of an avatar speaking the content of the specified text or a human voice audio file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The input supports only text or a human voice audio file in MP3 or WAV format.</description></item>
+        /// <item><description>The output supports MP4 and WebM formats. For the MP4 format, the task produces two videos: one with the avatar on a green screen background and a separate alpha mask video. This is ideal for post-production. For the WebM format, the task produces a single video with a transparent alpha channel, suitable for direct web front-end display. Rendering WebM is slower due to encoding complexity.</description></item>
+        /// <item><description>The final output includes sentence-level timestamps, which are useful for subsequent video editing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitAvatarVideoJobRequest
@@ -43866,8 +44975,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video rendering job for a digitized virtual human based on text or an audio file of a human voice.</para>
+        /// <para>Submits a task to render a video of an avatar speaking the content of the specified text or a human voice audio file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The input supports only text or a human voice audio file in MP3 or WAV format.</description></item>
+        /// <item><description>The output supports MP4 and WebM formats. For the MP4 format, the task produces two videos: one with the avatar on a green screen background and a separate alpha mask video. This is ideal for post-production. For the WebM format, the task produces a single video with a transparent alpha channel, suitable for direct web front-end display. Rendering WebM is slower due to encoding complexity.</description></item>
+        /// <item><description>The final output includes sentence-level timestamps, which are useful for subsequent video editing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitAvatarVideoJobRequest
@@ -43928,8 +45046,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video rendering job for a digitized virtual human based on text or an audio file of a human voice.</para>
+        /// <para>Submits a task to render a video of an avatar speaking the content of the specified text or a human voice audio file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The input supports only text or a human voice audio file in MP3 or WAV format.</description></item>
+        /// <item><description>The output supports MP4 and WebM formats. For the MP4 format, the task produces two videos: one with the avatar on a green screen background and a separate alpha mask video. This is ideal for post-production. For the WebM format, the task produces a single video with a transparent alpha channel, suitable for direct web front-end display. Rendering WebM is slower due to encoding complexity.</description></item>
+        /// <item><description>The final output includes sentence-level timestamps, which are useful for subsequent video editing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitAvatarVideoJobRequest
@@ -43946,8 +45073,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video rendering job for a digitized virtual human based on text or an audio file of a human voice.</para>
+        /// <para>Submits a task to render a video of an avatar speaking the content of the specified text or a human voice audio file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The input supports only text or a human voice audio file in MP3 or WAV format.</description></item>
+        /// <item><description>The output supports MP4 and WebM formats. For the MP4 format, the task produces two videos: one with the avatar on a green screen background and a separate alpha mask video. This is ideal for post-production. For the WebM format, the task produces a single video with a transparent alpha channel, suitable for direct web front-end display. Rendering WebM is slower due to encoding complexity.</description></item>
+        /// <item><description>The final output includes sentence-level timestamps, which are useful for subsequent video editing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitAvatarVideoJobRequest
@@ -44128,8 +45264,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交版权水印提取作业</para>
+        /// <para>Submits a job that extracts a copyright watermark.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitCopyrightExtractJobRequest
@@ -44184,8 +45325,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交版权水印提取作业</para>
+        /// <para>Submits a job that extracts a copyright watermark.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitCopyrightExtractJobRequest
@@ -44240,8 +45386,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交版权水印提取作业</para>
+        /// <para>Submits a job that extracts a copyright watermark.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitCopyrightExtractJobRequest
@@ -44258,8 +45409,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交版权水印提取作业</para>
+        /// <para>Submits a job that extracts a copyright watermark.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitCopyrightExtractJobRequest
@@ -44276,8 +45432,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交版权水印任务</para>
+        /// <para>Submits a job for adding a copyright watermark to a video.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to add a copyright watermark to a video that lasts at least 3 minutes. If the video is too short, the call may fail, or no output may be returned. To add a copyright watermark to a video shorter than 3 minutes, specify the Params parameter to change the algorithm.</para>
+        /// <list type="bullet">
+        /// <item><description>Each API call supports processing only one video.</description></item>
+        /// <item><description>This API is supported only in the China (Shanghai) and China (Beijing) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitCopyrightJobRequest
@@ -44360,8 +45525,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交版权水印任务</para>
+        /// <para>Submits a job for adding a copyright watermark to a video.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to add a copyright watermark to a video that lasts at least 3 minutes. If the video is too short, the call may fail, or no output may be returned. To add a copyright watermark to a video shorter than 3 minutes, specify the Params parameter to change the algorithm.</para>
+        /// <list type="bullet">
+        /// <item><description>Each API call supports processing only one video.</description></item>
+        /// <item><description>This API is supported only in the China (Shanghai) and China (Beijing) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitCopyrightJobRequest
@@ -44444,8 +45618,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交版权水印任务</para>
+        /// <para>Submits a job for adding a copyright watermark to a video.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to add a copyright watermark to a video that lasts at least 3 minutes. If the video is too short, the call may fail, or no output may be returned. To add a copyright watermark to a video shorter than 3 minutes, specify the Params parameter to change the algorithm.</para>
+        /// <list type="bullet">
+        /// <item><description>Each API call supports processing only one video.</description></item>
+        /// <item><description>This API is supported only in the China (Shanghai) and China (Beijing) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitCopyrightJobRequest
@@ -44462,8 +45645,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交版权水印任务</para>
+        /// <para>Submits a job for adding a copyright watermark to a video.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to add a copyright watermark to a video that lasts at least 3 minutes. If the video is too short, the call may fail, or no output may be returned. To add a copyright watermark to a video shorter than 3 minutes, specify the Params parameter to change the algorithm.</para>
+        /// <list type="bullet">
+        /// <item><description>Each API call supports processing only one video.</description></item>
+        /// <item><description>This API is supported only in the China (Shanghai) and China (Beijing) regions.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitCopyrightJobRequest
@@ -47672,7 +48864,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交工程导出任务</para>
+        /// <para>Submits a project export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47732,7 +48924,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交工程导出任务</para>
+        /// <para>Submits a project export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47792,7 +48984,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交工程导出任务</para>
+        /// <para>Submits a project export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47810,7 +49002,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交工程导出任务</para>
+        /// <para>Submits a project export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47824,6 +49016,194 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitProjectExportJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Selects suitable clips based on the submitted videos, images, and voiceovers, and returns the selection results. Two scenarios are supported: image-text matching and highlight mashup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After a job is submitted, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to query submitted jobs, or <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to query the job status and results.</para>
+        /// <list type="bullet">
+        /// <item><description>The feature is in public preview and charges no fees.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitSceneMediaSelectionJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSceneMediaSelectionJobResponse
+        /// </returns>
+        public SubmitSceneMediaSelectionJobResponse SubmitSceneMediaSelectionJobWithOptions(SubmitSceneMediaSelectionJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
+            {
+                query["JobType"] = request.JobType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditingConfig))
+            {
+                body["EditingConfig"] = request.EditingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfig))
+            {
+                body["InputConfig"] = request.InputConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSceneMediaSelectionJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSceneMediaSelectionJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Selects suitable clips based on the submitted videos, images, and voiceovers, and returns the selection results. Two scenarios are supported: image-text matching and highlight mashup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After a job is submitted, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to query submitted jobs, or <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to query the job status and results.</para>
+        /// <list type="bullet">
+        /// <item><description>The feature is in public preview and charges no fees.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitSceneMediaSelectionJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSceneMediaSelectionJobResponse
+        /// </returns>
+        public async Task<SubmitSceneMediaSelectionJobResponse> SubmitSceneMediaSelectionJobWithOptionsAsync(SubmitSceneMediaSelectionJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
+            {
+                query["JobType"] = request.JobType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditingConfig))
+            {
+                body["EditingConfig"] = request.EditingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfig))
+            {
+                body["InputConfig"] = request.InputConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSceneMediaSelectionJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSceneMediaSelectionJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Selects suitable clips based on the submitted videos, images, and voiceovers, and returns the selection results. Two scenarios are supported: image-text matching and highlight mashup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After a job is submitted, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to query submitted jobs, or <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to query the job status and results.</para>
+        /// <list type="bullet">
+        /// <item><description>The feature is in public preview and charges no fees.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitSceneMediaSelectionJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSceneMediaSelectionJobResponse
+        /// </returns>
+        public SubmitSceneMediaSelectionJobResponse SubmitSceneMediaSelectionJob(SubmitSceneMediaSelectionJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitSceneMediaSelectionJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Selects suitable clips based on the submitted videos, images, and voiceovers, and returns the selection results. Two scenarios are supported: image-text matching and highlight mashup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  After a job is submitted, you can call <a href="https://help.aliyun.com/document_detail/2803751.html">ListBatchMediaProducingJob</a> to query submitted jobs, or <a href="https://help.aliyun.com/document_detail/2693269.html">GetBatchMediaProducingJob</a> to query the job status and results.</para>
+        /// <list type="bullet">
+        /// <item><description>The feature is in public preview and charges no fees.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitSceneMediaSelectionJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSceneMediaSelectionJobResponse
+        /// </returns>
+        public async Task<SubmitSceneMediaSelectionJobResponse> SubmitSceneMediaSelectionJobAsync(SubmitSceneMediaSelectionJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitSceneMediaSelectionJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -47976,7 +49356,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交拆条任务</para>
+        /// <para>Splits a long video into multiple video clips and outputs as video files or media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48036,7 +49416,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交拆条任务</para>
+        /// <para>Splits a long video into multiple video clips and outputs as video files or media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48096,7 +49476,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交拆条任务</para>
+        /// <para>Splits a long video into multiple video clips and outputs as video files or media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48114,7 +49494,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交拆条任务</para>
+        /// <para>Splits a long video into multiple video clips and outputs as video files or media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49196,8 +50576,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印ab流任务</para>
+        /// <para>Submits an A/B watermarking job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API supports only videos that last at least 3 minutes. If the video is too short, the call may fail, or no output may be returned.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitTraceAbJobRequest
@@ -49272,8 +50657,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印ab流任务</para>
+        /// <para>Submits an A/B watermarking job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API supports only videos that last at least 3 minutes. If the video is too short, the call may fail, or no output may be returned.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitTraceAbJobRequest
@@ -49348,8 +50738,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印ab流任务</para>
+        /// <para>Submits an A/B watermarking job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API supports only videos that last at least 3 minutes. If the video is too short, the call may fail, or no output may be returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitTraceAbJobRequest
@@ -49366,8 +50761,13 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印ab流任务</para>
+        /// <para>Submits an A/B watermarking job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API supports only videos that last at least 3 minutes. If the video is too short, the call may fail, or no output may be returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitTraceAbJobRequest
@@ -49384,8 +50784,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交溯源水印提取任务</para>
+        /// <para>Submits a job to extract the trace watermark.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>The input video must be 3 minutes or longer. Jobs submitted with shorter videos will fail.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitTraceExtractJobRequest
@@ -49440,8 +50848,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交溯源水印提取任务</para>
+        /// <para>Submits a job to extract the trace watermark.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>The input video must be 3 minutes or longer. Jobs submitted with shorter videos will fail.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitTraceExtractJobRequest
@@ -49496,8 +50912,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交溯源水印提取任务</para>
+        /// <para>Submits a job to extract the trace watermark.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>The input video must be 3 minutes or longer. Jobs submitted with shorter videos will fail.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitTraceExtractJobRequest
@@ -49514,8 +50938,16 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交溯源水印提取任务</para>
+        /// <para>Submits a job to extract the trace watermark.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation is supported only in the China (Shanghai) and China (Beijing) regions.</para>
+        /// <list type="bullet">
+        /// <item><description>The input video must be 3 minutes or longer. Jobs submitted with shorter videos will fail.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitTraceExtractJobRequest
@@ -49532,8 +50964,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印m3u8文件任务</para>
+        /// <para>Submits a job that generates an M3U8 file containing specific trace watermark information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, you must call SubmitTraceAbJob to get the TraceMediaId from its response.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</description></item>
+        /// <item><description>The M3U8 file generated by this job has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. Once the signature expires, you will no longer be able to trace the watermark information using that specific M3U8 file. If you need to use it after expiration, you must call this API again to generate a new M3U8 file.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitTraceM3u8JobRequest
@@ -49596,8 +51037,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印m3u8文件任务</para>
+        /// <para>Submits a job that generates an M3U8 file containing specific trace watermark information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, you must call SubmitTraceAbJob to get the TraceMediaId from its response.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</description></item>
+        /// <item><description>The M3U8 file generated by this job has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. Once the signature expires, you will no longer be able to trace the watermark information using that specific M3U8 file. If you need to use it after expiration, you must call this API again to generate a new M3U8 file.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitTraceM3u8JobRequest
@@ -49660,8 +51110,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印m3u8文件任务</para>
+        /// <para>Submits a job that generates an M3U8 file containing specific trace watermark information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, you must call SubmitTraceAbJob to get the TraceMediaId from its response.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</description></item>
+        /// <item><description>The M3U8 file generated by this job has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. Once the signature expires, you will no longer be able to trace the watermark information using that specific M3U8 file. If you need to use it after expiration, you must call this API again to generate a new M3U8 file.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitTraceM3u8JobRequest
@@ -49678,8 +51137,17 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频溯源水印m3u8文件任务</para>
+        /// <para>Submits a job that generates an M3U8 file containing specific trace watermark information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Before you call this operation, you must call SubmitTraceAbJob to get the TraceMediaId from its response.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is supported only in the China (Shanghai) and China (Beijing) regions.</description></item>
+        /// <item><description>The M3U8 file generated by this job has a signed URL with an authentication validity period of 24 hours, starting from the moment the job is completed. Once the signature expires, you will no longer be able to trace the watermark information using that specific M3U8 file. If you need to use it after expiration, you must call this API again to generate a new M3U8 file.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitTraceM3u8JobRequest
@@ -49884,7 +51352,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频理解任务</para>
+        /// <para>Submits a video for AI analysis and processing.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -49948,7 +51416,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频理解任务</para>
+        /// <para>Submits a video for AI analysis and processing.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -50012,7 +51480,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频理解任务</para>
+        /// <para>Submits a video for AI analysis and processing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50030,7 +51498,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频理解任务</para>
+        /// <para>Submits a video for AI analysis and processing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51704,8 +53172,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新热词库</para>
+        /// <para>Modifies a specified hotword library, including its name, description, and hotword list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to modify a specified hotword library.</description></item>
+        /// <item><description>The hotword library ID (<c>HotwordLibraryId</c>) is required to identify the library that requires modification.</description></item>
+        /// <item><description>You can modify its name (<c>Name</c> ), description (<c>Description</c> ), and hotword list (<c>HotWords</c>).</description></item>
+        /// <item><description>Each hotword in the list can also be modified, including its content (<c>Text</c>), weight (<c>Weight</c>), language (<c>Language</c>), and translation results (<c>TranspositionResultList</c>).</description></item>
+        /// <item><description>A single account supports up to 100 hotword libraries, each containing a maximum of 300 hotword entries. In a library, the combination of <c>language</c> and <c>text</c> of an entry must be unique. The combination of <c>TranslatedText</c> and <c>TargetLanguage</c> in <c>TranspositionResultList</c> must also be unique.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateHotwordLibraryRequest
@@ -51764,8 +53244,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新热词库</para>
+        /// <para>Modifies a specified hotword library, including its name, description, and hotword list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to modify a specified hotword library.</description></item>
+        /// <item><description>The hotword library ID (<c>HotwordLibraryId</c>) is required to identify the library that requires modification.</description></item>
+        /// <item><description>You can modify its name (<c>Name</c> ), description (<c>Description</c> ), and hotword list (<c>HotWords</c>).</description></item>
+        /// <item><description>Each hotword in the list can also be modified, including its content (<c>Text</c>), weight (<c>Weight</c>), language (<c>Language</c>), and translation results (<c>TranspositionResultList</c>).</description></item>
+        /// <item><description>A single account supports up to 100 hotword libraries, each containing a maximum of 300 hotword entries. In a library, the combination of <c>language</c> and <c>text</c> of an entry must be unique. The combination of <c>TranslatedText</c> and <c>TargetLanguage</c> in <c>TranspositionResultList</c> must also be unique.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateHotwordLibraryRequest
@@ -51824,8 +53316,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新热词库</para>
+        /// <para>Modifies a specified hotword library, including its name, description, and hotword list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to modify a specified hotword library.</description></item>
+        /// <item><description>The hotword library ID (<c>HotwordLibraryId</c>) is required to identify the library that requires modification.</description></item>
+        /// <item><description>You can modify its name (<c>Name</c> ), description (<c>Description</c> ), and hotword list (<c>HotWords</c>).</description></item>
+        /// <item><description>Each hotword in the list can also be modified, including its content (<c>Text</c>), weight (<c>Weight</c>), language (<c>Language</c>), and translation results (<c>TranspositionResultList</c>).</description></item>
+        /// <item><description>A single account supports up to 100 hotword libraries, each containing a maximum of 300 hotword entries. In a library, the combination of <c>language</c> and <c>text</c> of an entry must be unique. The combination of <c>TranslatedText</c> and <c>TargetLanguage</c> in <c>TranspositionResultList</c> must also be unique.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateHotwordLibraryRequest
@@ -51842,8 +53346,20 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新热词库</para>
+        /// <para>Modifies a specified hotword library, including its name, description, and hotword list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to modify a specified hotword library.</description></item>
+        /// <item><description>The hotword library ID (<c>HotwordLibraryId</c>) is required to identify the library that requires modification.</description></item>
+        /// <item><description>You can modify its name (<c>Name</c> ), description (<c>Description</c> ), and hotword list (<c>HotWords</c>).</description></item>
+        /// <item><description>Each hotword in the list can also be modified, including its content (<c>Text</c>), weight (<c>Weight</c>), language (<c>Language</c>), and translation results (<c>TranspositionResultList</c>).</description></item>
+        /// <item><description>A single account supports up to 100 hotword libraries, each containing a maximum of 300 hotword entries. In a library, the combination of <c>language</c> and <c>text</c> of an entry must be unique. The combination of <c>TranslatedText</c> and <c>TargetLanguage</c> in <c>TranspositionResultList</c> must also be unique.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateHotwordLibraryRequest

@@ -399,6 +399,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>{}</para>
+            /// </summary>
+            [NameInMap("CustomFields")]
+            [Validation(Required=false)]
+            public string CustomFields { get; set; }
+
+            /// <summary>
             /// <para>The information about the files.</para>
             /// </summary>
             [NameInMap("FileInfoList")]

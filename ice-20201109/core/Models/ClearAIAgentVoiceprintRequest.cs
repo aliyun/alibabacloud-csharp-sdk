@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ClearAIAgentVoiceprintRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier for the voiceprint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vp_1699123456_8527</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitAIAgentVideoAuditTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the AI agent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AIAgentId { get; set; }
 
         /// <summary>
+        /// <para>The interval, in milliseconds, at which to submit captured frames to the AI agent. Valid values: 0 to 5000. Default value: 3000. If it is set to 0, all captured frames are sent to the model in a single batch request. Otherwise, frames are sent sequentially with the specified interval between each request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3000</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? AuditInterval { get; set; }
 
         /// <summary>
+        /// <para>Callback configurations.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;Url&quot;:&quot;<a href="https://yourcallback%22,%22Token%22:%22yourtoken%22%7D">https://yourcallback&quot;,&quot;Token&quot;:&quot;yourtoken&quot;}</a></para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitAIAgentVideoAuditTaskRequestCallbackConfig CallbackConfig { get; set; }
         public class SubmitAIAgentVideoAuditTaskRequestCallbackConfig : TeaModel {
             /// <summary>
+            /// <para>The authentication token for callback.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Bearer Token</para>
             /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Token { get; set; }
 
             /// <summary>
+            /// <para>The URL for receiving callback notifications.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://yourcallback">https://yourcallback</a></para>
             /// </summary>
@@ -54,6 +63,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>An array of frame-capturing policies. Each policy defines a set of frames to be analyzed and will generate a separate result from the model.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CapturePolicies")]
@@ -61,6 +71,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public List<SubmitAIAgentVideoAuditTaskRequestCapturePolicies> CapturePolicies { get; set; }
         public class SubmitAIAgentVideoAuditTaskRequestCapturePolicies : TeaModel {
             /// <summary>
+            /// <para>The duration over which to capture the specified number of frames. Unit: seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -69,6 +81,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? Duration { get; set; }
 
             /// <summary>
+            /// <para>The number of frames to capture.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -76,11 +90,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public int? FrameCount { get; set; }
 
+            /// <summary>
+            /// <para>The text prompt to send to the MLLM along with the captured frames.</para>
+            /// </summary>
             [NameInMap("Prompt")]
             [Validation(Required=false)]
             public string Prompt { get; set; }
 
             /// <summary>
+            /// <para>The timestamp in the video at which to start capturing frames. Unit: seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -91,6 +110,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The details of the input file.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Input")]
@@ -98,6 +118,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public SubmitAIAgentVideoAuditTaskRequestInput Input { get; set; }
         public class SubmitAIAgentVideoAuditTaskRequestInput : TeaModel {
             /// <summary>
+            /// <para>The OSS URL of the input file. Format:</para>
+            /// <para>http(s)://{BucketName}.{Endpoint}/{ObjectName}</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://my-bucket.cn-shanghai.aliyuncs.com/object-id.mp4">http://my-bucket.cn-shanghai.aliyuncs.com/object-id.mp4</a></para>
             /// </summary>
@@ -106,6 +129,11 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Media { get; set; }
 
             /// <summary>
+            /// <para>The type of the input file. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>OSS: an OSS object.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>OSS</para>
             /// </summary>
@@ -115,6 +143,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        /// <summary>
+        /// <para>The user-defined data.</para>
+        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }

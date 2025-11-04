@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateRecognitionSampleRequest : TeaModel {
         /// <summary>
+        /// <para>The type of recognition this sample is for.</para>
+        /// <list type="bullet">
+        /// <item><description>landmark</description></item>
+        /// <item><description>object</description></item>
+        /// <item><description>logo</description></item>
+        /// <item><description>face</description></item>
+        /// <item><description>label</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +28,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Algorithm { get; set; }
 
         /// <summary>
+        /// <para>The ID of the specific entity within the library.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +39,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string EntityId { get; set; }
 
         /// <summary>
+        /// <para>The URL of the sample image.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/sample.png">https://example.com/sample.png</a></para>
         /// </summary>
@@ -37,11 +48,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string ImageUrl { get; set; }
 
+        /// <summary>
+        /// <para>The custom text label.</para>
+        /// </summary>
         [NameInMap("LabelPrompt")]
         [Validation(Required=false)]
         public string LabelPrompt { get; set; }
 
         /// <summary>
+        /// <para>The ID of the recognition library.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

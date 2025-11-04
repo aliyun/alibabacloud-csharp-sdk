@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QueryCopyrightJobListRequest : TeaModel {
         /// <summary>
+        /// <para>The end of the creation time range for the query, in UNIX timestamp format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1627357325</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? CreateTimeEnd { get; set; }
 
         /// <summary>
+        /// <para>The start of the creation time range for the query, in UNIX timestamp format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1627357322</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? CreateTimeStart { get; set; }
 
         /// <summary>
+        /// <para>The job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>cdb3e74639973036bc84</b></b></para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The watermark level, indicating the color channel for embedding. 0: U. 1: UV. 2: YUV.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? Level { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

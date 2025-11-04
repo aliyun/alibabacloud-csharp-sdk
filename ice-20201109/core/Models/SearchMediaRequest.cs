@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchMediaRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("CustomFilters")]
+        [Validation(Required=false)]
+        public string CustomFilters { get; set; }
+
+        /// <summary>
         /// <para>The ID of the entity.</para>
         /// 
         /// <b>Example:</b>

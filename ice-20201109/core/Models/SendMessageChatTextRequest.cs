@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SendMessageChatTextRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the AI agent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,13 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AIAgentId { get; set; }
 
         /// <summary>
+        /// <para>The mode of message sending. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>online</description></item>
+        /// <item><description>offline</description></item>
+        /// </list>
+        /// <para>Default value: offline.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>online</para>
         /// </summary>
@@ -28,6 +36,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Mode { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to archive chat records. Default value: true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -36,6 +46,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public bool? NeedArchiving { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who receives the message. The ID can be up to 64 bytes in length and can contain letters and digits.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +57,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string ReceiverId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the session.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,13 +68,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The content of the message.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Hello</para>
         /// </summary>
         [NameInMap("Text")]
         [Validation(Required=false)]
         public string Text { get; set; }
 
         /// <summary>
+        /// <para>The type of the message. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>announcement: notification.</description></item>
+        /// <item><description>custom: custom message.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

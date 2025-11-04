@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CreateRecognitionLibRequest : TeaModel {
         /// <summary>
+        /// <para>The type of recognition algorithm. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>landmark</description></item>
+        /// <item><description>object</description></item>
+        /// <item><description>logo</description></item>
+        /// <item><description>face</description></item>
+        /// <item><description>label</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +27,15 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Algorithm { get; set; }
 
+        /// <summary>
+        /// <para>The description of the recognition library. Max length: 128 bytes.</para>
+        /// </summary>
         [NameInMap("LibDescription")]
         [Validation(Required=false)]
         public string LibDescription { get; set; }
 
         /// <summary>
+        /// <para>The name of the recognition library. Max length: 64 bytes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LibName")]

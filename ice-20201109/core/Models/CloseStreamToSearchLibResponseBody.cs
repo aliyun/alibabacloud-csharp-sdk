@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CloseStreamToSearchLibResponseBody : TeaModel {
         /// <summary>
+        /// <para>The return code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The ID of the media asset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>c469e944b5a856828dc2</b></b></para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
@@ -36,6 +40,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchMediaByFaceRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("CustomFilters")]
+        [Validation(Required=false)]
+        public string CustomFilters { get; set; }
+
+        /// <summary>
         /// <para>The ID of the entity.</para>
         /// 
         /// <b>Example:</b>
@@ -88,6 +96,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("SearchLibName")]
         [Validation(Required=false)]
         public string SearchLibName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("UtcCreate")]
+        [Validation(Required=false)]
+        public string UtcCreate { get; set; }
 
     }
 

@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ListRecognitionEntitiesRequest : TeaModel {
         /// <summary>
+        /// <para>The type of recognition algorithm associated with the entity. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>landmark</description></item>
+        /// <item><description>object</description></item>
+        /// <item><description>logo</description></item>
+        /// <item><description>face</description></item>
+        /// <item><description>label</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +28,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Algorithm { get; set; }
 
         /// <summary>
+        /// <para>The ID of the recognition library.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +47,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +58,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Valid values: 1 to 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

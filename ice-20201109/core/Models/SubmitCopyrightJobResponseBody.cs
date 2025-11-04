@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitCopyrightJobResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data returned.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitCopyrightJobResponseBodyData Data { get; set; }
         public class SubmitCopyrightJobResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The job ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>bfb786c63****f4d80648792021eff90</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The message returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ok</para>
         /// </summary>
@@ -32,7 +39,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FA258E67-09B8-4EAA-8F33-BA567834A2C3</para>
@@ -42,6 +49,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class DescribePlayListResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20. Valid values: 1 to 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The playback records.</para>
+        /// </summary>
         [NameInMap("PlayList")]
         [Validation(Required=false)]
         public List<DescribePlayListResponseBodyPlayList> PlayList { get; set; }
         public class DescribePlayListResponseBodyPlayList : TeaModel {
             /// <summary>
+            /// <para>Time to first frame.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string FirstFrameDuration { get; set; }
 
             /// <summary>
+            /// <para>The playback duration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string PlayDuration { get; set; }
 
             /// <summary>
+            /// <para>The timestamp when the playback started.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1675922209572</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string PlayTs { get; set; }
 
             /// <summary>
+            /// <para>The playback type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vod</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string PlayType { get; set; }
 
             /// <summary>
+            /// <para>The ID of the player session.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>91488be2-8381-40c9-8494-e8afe22c4a2d</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string SessionId { get; set; }
 
             /// <summary>
+            /// <para>The playback status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>complete</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The stuttering duration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string StuckDuration { get; set; }
 
             /// <summary>
+            /// <para>The TraceId of the player.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0b736abf16724820210842673d9543</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string TraceId { get; set; }
 
             /// <summary>
+            /// <para>The duration of the video.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2000</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public string VideoDuration { get; set; }
 
             /// <summary>
+            /// <para>The ID of the video.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>250314203f0171eebff17035d0b20102</para>
             /// </summary>
@@ -112,7 +139,7 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
-        /// <para>Id</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B960580D-26FA-5547-8AFC-3CDC812DBF27</para>
@@ -122,6 +149,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total playback count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>49</para>
         /// </summary>

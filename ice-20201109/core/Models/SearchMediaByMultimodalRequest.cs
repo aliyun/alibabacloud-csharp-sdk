@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SearchMediaByMultimodalRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("CustomFilters")]
+        [Validation(Required=false)]
+        public string CustomFilters { get; set; }
+
+        /// <summary>
         /// <para>The type of the media assets.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
@@ -64,6 +72,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("Text")]
         [Validation(Required=false)]
         public string Text { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("UtcCreate")]
+        [Validation(Required=false)]
+        public string UtcCreate { get; set; }
 
     }
 

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ForbidMediaConnectFlowOutputRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the MediaConnect flow.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34900dc6-90ec-4968-af3c-fcd87f231a5f</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string FlowId { get; set; }
 
         /// <summary>
+        /// <para>The name of the output.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AliTestOutput</para>
         /// </summary>

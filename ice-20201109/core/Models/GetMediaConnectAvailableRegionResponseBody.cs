@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GetMediaConnectAvailableRegionResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The rsponse body.</para>
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public GetMediaConnectAvailableRegionResponseBodyContent Content { get; set; }
         public class GetMediaConnectAvailableRegionResponseBodyContent : TeaModel {
             /// <summary>
+            /// <para>The default region. You can ignore the parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
             /// </summary>
@@ -21,6 +26,9 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string DefaultRegion { get; set; }
 
+            /// <summary>
+            /// <para>The supported regions.</para>
+            /// </summary>
             [NameInMap("RegionList")]
             [Validation(Required=false)]
             public List<string> RegionList { get; set; }
@@ -28,6 +36,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         }
 
         /// <summary>
+        /// <para>The call description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -36,6 +46,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>41CB9D4C-4650-5723-BA89-D6824F706ACB</para>
         /// </summary>
@@ -44,6 +56,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The returned error code. A value of 0 indicates the call is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

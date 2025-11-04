@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class CloseMediaConnectFlowFailoverResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response body.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The call description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>391DDF25-705C-5B38-9DB9-7A6B00D6065A</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The returned error code. A value of 0 indicates the call is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

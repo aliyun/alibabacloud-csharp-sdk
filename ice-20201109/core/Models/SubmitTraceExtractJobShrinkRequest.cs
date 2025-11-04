@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitTraceExtractJobShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The source video file from which to extract the watermark.</para>
+        /// <remarks>
+        /// <para>The OSS object or media asset must reside in the same region as the IMS service region.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Input")]
@@ -17,6 +21,16 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string InputShrink { get; set; }
 
         /// <summary>
+        /// <para>Additional parameters for the watermark job, provided as a JSON string. Supported parameter:</para>
+        /// <list type="bullet">
+        /// <item><description><para>m3u8Type: The extraction algorithm type. Defaults to v1.</para>
+        /// <list type="bullet">
+        /// <item><description>v1: Extracts from an M3U8 with absolute paths.</description></item>
+        /// <item><description>v2: Extracts from an M3U8 with relative paths.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;m3u8Type&quot;:&quot;v1&quot;}</para>
         /// </summary>
@@ -25,6 +39,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Params { get; set; }
 
         /// <summary>
+        /// <para>The custom data, which can be up to 1,024 bytes in size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>

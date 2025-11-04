@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class GenerateMessageChatTokenResponseBody : TeaModel {
         /// <summary>
+        /// <para>The AppID of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The application signature.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>H4sIAAAAAAAE******************</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AppSign { get; set; }
 
         /// <summary>
+        /// <para>The nonce used to generate the token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AK-***********</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Nonce { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>req_1234567890abcdef</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The role used to generate the token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>admin</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Role { get; set; }
 
         /// <summary>
+        /// <para>The expiration time. Unit: seconds. Expiration time = Current time + Validity period.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1700000000</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public long? TimeStamp { get; set; }
 
         /// <summary>
+        /// <para>The generated token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acet**********</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Token { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user for joining the channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>YOURUSERID</para>
         /// </summary>

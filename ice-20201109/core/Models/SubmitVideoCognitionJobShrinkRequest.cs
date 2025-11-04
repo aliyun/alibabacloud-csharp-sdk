@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class SubmitVideoCognitionJobShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The media input object.</para>
+        /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public string InputShrink { get; set; }
 
         /// <summary>
+        /// <para>Additional request parameters, provided as a JSON string. This is used to pass specific settings for various AI analysis modules, such as Natural Language Processing (NLP), shot segmentation, tagging, and action recognition.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;nlpParams&quot;: {
@@ -34,6 +39,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Params { get; set; }
 
         /// <summary>
+        /// <para>The ID of the template that specifies the analysis algorithms to be used. For details, see <a href="https://help.aliyun.com/zh/ims/developer-reference/api-ice-2020-11-09-createcustomtemplate?spm=a2c4g.11186623.help-menu-193643.d_5_0_3_3_0_0.17b66afamjKySv">CreateCustomTemplate</a> and <a href="https://help.aliyun.com/zh/ims/user-guide/smart-tagging-template?spm=a2c4g.11186623.0.i15">smart tagging template</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>39f8e0bc00***************</para>
         /// </summary>
@@ -42,6 +49,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string TemplateId { get; set; }
 
         /// <summary>
+        /// <para>The video title. It supports letters, digits, and hyphens (-), and cannot start with a special character. Max length: 256 bytes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example-title-****</para>
         /// </summary>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string Title { get; set; }
 
         /// <summary>
+        /// <para>The user-defined data that is passed through and returned as-is in the response. Max length: 1,024 bytes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;test&quot;:1}</para>
         /// </summary>
