@@ -13011,6 +13011,10 @@ namespace AlibabaCloud.SDK.Eas20210701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hibernate))
+            {
+                body["Hibernate"] = request.Hibernate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Isolate))
             {
                 body["Isolate"] = request.Isolate;
@@ -13057,6 +13061,10 @@ namespace AlibabaCloud.SDK.Eas20210701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hibernate))
+            {
+                body["Hibernate"] = request.Hibernate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Isolate))
             {
                 body["Isolate"] = request.Isolate;

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceInstanceRequest : TeaModel {
+        [NameInMap("Hibernate")]
+        [Validation(Required=false)]
+        public bool? Hibernate { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to isolate the service instance. Valid values:</para>
         /// <list type="bullet">
