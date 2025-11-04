@@ -24,6 +24,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public List<DescribeEndpointsResponseBodyDataEndpoints> Endpoints { get; set; }
             public class DescribeEndpointsResponseBodyDataEndpoints : TeaModel {
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>cc-ad321**-clickhouse</para>
+                /// </summary>
+                [NameInMap("ComputingGroupId")]
+                [Validation(Required=false)]
+                public string ComputingGroupId { get; set; }
+
+                /// <summary>
                 /// <para>The endpoint of the cluster.</para>
                 /// 
                 /// <b>Example:</b>
