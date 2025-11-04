@@ -119,7 +119,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <remarks>
         /// <para>Only data within the last 30 days can be queried.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-08-30</para>
