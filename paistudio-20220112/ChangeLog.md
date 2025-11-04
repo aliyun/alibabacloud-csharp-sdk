@@ -1,3 +1,7 @@
+2025-11-04 Version: 2.1.12
+- Update API ListNodes: add request parameters WorkspaceId.
+
+
 2025-10-31 Version: 2.1.11
 - Generated csharp 2022-01-12 for PaiStudio.
 

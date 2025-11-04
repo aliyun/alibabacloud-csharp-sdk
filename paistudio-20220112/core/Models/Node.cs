@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public long? DescendantQuotaWorkloadNum { get; set; }
 
+        [NameInMap("DiskCapacity")]
+        [Validation(Required=false)]
+        public long? DiskCapacity { get; set; }
+
+        [NameInMap("DiskPL")]
+        [Validation(Required=false)]
+        public string DiskPL { get; set; }
+
         [NameInMap("GPU")]
         [Validation(Required=false)]
         public string GPU { get; set; }

@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public long? Count { get; set; }
 
+        [NameInMap("HyperType")]
+        [Validation(Required=false)]
+        public string HyperType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>ecs.g6.4xlarge</para>
