@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ModifyNotificationConfigurationRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PlainText</para>
+        /// </summary>
         [NameInMap("MessageEncoding")]
         [Validation(Required=false)]
         public string MessageEncoding { get; set; }

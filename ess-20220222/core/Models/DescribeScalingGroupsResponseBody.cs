@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string AllocationStrategy { get; set; }
 
+            [NameInMap("AutoRebalance")]
+            [Validation(Required=false)]
+            public bool? AutoRebalance { get; set; }
+
             /// <summary>
             /// <para>Indicates whether instances in the scaling group are evenly distributed across the specified zones. This parameter takes effect only if you set <c>MultiAZPolicy</c> to <c>COMPOSABLE</c>. Valid values:</para>
             /// <list type="bullet">
@@ -132,6 +136,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("AzBalance")]
             [Validation(Required=false)]
             public bool? AzBalance { get; set; }
+
+            [NameInMap("BalanceMode")]
+            [Validation(Required=false)]
+            public string BalanceMode { get; set; }
 
             /// <summary>
             /// <para>The capacity options.</para>

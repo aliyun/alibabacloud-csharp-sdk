@@ -5013,9 +5013,17 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["AllocationStrategy"] = request.AllocationStrategy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRebalance))
+            {
+                query["AutoRebalance"] = request.AutoRebalance;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AzBalance))
             {
                 query["AzBalance"] = request.AzBalance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BalanceMode))
+            {
+                query["BalanceMode"] = request.BalanceMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapacityOptions))
             {
@@ -5269,9 +5277,17 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["AllocationStrategy"] = request.AllocationStrategy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRebalance))
+            {
+                query["AutoRebalance"] = request.AutoRebalance;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AzBalance))
             {
                 query["AzBalance"] = request.AzBalance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BalanceMode))
+            {
+                query["BalanceMode"] = request.BalanceMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapacityOptions))
             {
@@ -17250,9 +17266,17 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["AllocationStrategy"] = request.AllocationStrategy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRebalance))
+            {
+                query["AutoRebalance"] = request.AutoRebalance;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AzBalance))
             {
                 query["AzBalance"] = request.AzBalance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BalanceMode))
+            {
+                query["BalanceMode"] = request.BalanceMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapacityOptions))
             {
@@ -17443,9 +17467,17 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["AllocationStrategy"] = request.AllocationStrategy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRebalance))
+            {
+                query["AutoRebalance"] = request.AutoRebalance;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AzBalance))
             {
                 query["AzBalance"] = request.AzBalance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BalanceMode))
+            {
+                query["BalanceMode"] = request.BalanceMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapacityOptions))
             {
@@ -19911,7 +19943,7 @@ namespace AlibabaCloud.SDK.Ess20220222
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Auto Scaling detects and removes unhealthy ECS instances or elastic container instances from the corresponding scaling groups. If you want to retain a specific instance in the corresponding scaling group, you can put the instance into the Standby or Protected state. For more information, see <a href="~~EnterStandby~~">EnterStandby</a> and <a href="~~SetInstancesProtection~~">SetInstancesProtection</a>.</para>
+        /// <para>Auto Scaling detects and removes unhealthy ECS instances or elastic container instances from their scaling groups. To prevent a specific instance from being removed, you can put it in either the Standby or Protected state. For more information, see <a href="https://help.aliyun.com/document_detail/459345.html">EnterStandby</a> and <a href="https://help.aliyun.com/document_detail/459342.html">SetInstancesProtection</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19970,7 +20002,7 @@ namespace AlibabaCloud.SDK.Ess20220222
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Auto Scaling detects and removes unhealthy ECS instances or elastic container instances from the corresponding scaling groups. If you want to retain a specific instance in the corresponding scaling group, you can put the instance into the Standby or Protected state. For more information, see <a href="~~EnterStandby~~">EnterStandby</a> and <a href="~~SetInstancesProtection~~">SetInstancesProtection</a>.</para>
+        /// <para>Auto Scaling detects and removes unhealthy ECS instances or elastic container instances from their scaling groups. To prevent a specific instance from being removed, you can put it in either the Standby or Protected state. For more information, see <a href="https://help.aliyun.com/document_detail/459345.html">EnterStandby</a> and <a href="https://help.aliyun.com/document_detail/459342.html">SetInstancesProtection</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20029,7 +20061,7 @@ namespace AlibabaCloud.SDK.Ess20220222
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Auto Scaling detects and removes unhealthy ECS instances or elastic container instances from the corresponding scaling groups. If you want to retain a specific instance in the corresponding scaling group, you can put the instance into the Standby or Protected state. For more information, see <a href="~~EnterStandby~~">EnterStandby</a> and <a href="~~SetInstancesProtection~~">SetInstancesProtection</a>.</para>
+        /// <para>Auto Scaling detects and removes unhealthy ECS instances or elastic container instances from their scaling groups. To prevent a specific instance from being removed, you can put it in either the Standby or Protected state. For more information, see <a href="https://help.aliyun.com/document_detail/459345.html">EnterStandby</a> and <a href="https://help.aliyun.com/document_detail/459342.html">SetInstancesProtection</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20052,7 +20084,7 @@ namespace AlibabaCloud.SDK.Ess20220222
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Auto Scaling detects and removes unhealthy ECS instances or elastic container instances from the corresponding scaling groups. If you want to retain a specific instance in the corresponding scaling group, you can put the instance into the Standby or Protected state. For more information, see <a href="~~EnterStandby~~">EnterStandby</a> and <a href="~~SetInstancesProtection~~">SetInstancesProtection</a>.</para>
+        /// <para>Auto Scaling detects and removes unhealthy ECS instances or elastic container instances from their scaling groups. To prevent a specific instance from being removed, you can put it in either the Standby or Protected state. For more information, see <a href="https://help.aliyun.com/document_detail/459345.html">EnterStandby</a> and <a href="https://help.aliyun.com/document_detail/459342.html">SetInstancesProtection</a>.</para>
         /// </description>
         /// 
         /// <param name="request">

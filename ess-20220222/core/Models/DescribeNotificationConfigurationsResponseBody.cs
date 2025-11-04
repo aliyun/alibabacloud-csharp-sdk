@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels> NotificationConfigurationModels { get; set; }
         public class DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PlainText</para>
+            /// </summary>
             [NameInMap("MessageEncoding")]
             [Validation(Required=false)]
             public string MessageEncoding { get; set; }
