@@ -138,6 +138,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string ProxyName { get; set; }
 
+            [NameInMap("ProxyNetworkInterfaceId")]
+            [Validation(Required=false)]
+            public string ProxyNetworkInterfaceId { get; set; }
+
+            [NameInMap("ProxyRouteTableId")]
+            [Validation(Required=false)]
+            public string ProxyRouteTableId { get; set; }
+
             /// <summary>
             /// <para>The status of the NAT firewall. Valid values:</para>
             /// <list type="bullet">
@@ -156,6 +164,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [NameInMap("ProxyStatus")]
             [Validation(Required=false)]
             public string ProxyStatus { get; set; }
+
+            [NameInMap("ProxyVSwitchId")]
+            [Validation(Required=false)]
+            public string ProxyVSwitchId { get; set; }
 
             /// <summary>
             /// <para>The region ID of your Cloud Firewall.</para>
