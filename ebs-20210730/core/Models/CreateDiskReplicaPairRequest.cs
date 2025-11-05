@@ -10,15 +10,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class CreateDiskReplicaPairRequest : TeaModel {
         /// <summary>
-        /// <para>The bandwidth to use to asynchronously replicate data between the primary disk and secondary disk. Unit: Kbit/s. Valid values:</para>
+        /// <para>The bandwidth to use to asynchronously replicate data from the primary disk to the secondary disk. Unit: Kbit/s. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>10240 : equal to 10 Mbit/s</description></item>
-        /// <item><description>20480 : equal to 20 Mbit/s</description></item>
-        /// <item><description>51200 : equal to 50 Mbit/s</description></item>
-        /// <item><description>102400 : equal to 100 Mbit/s</description></item>
+        /// <item><description>10240</description></item>
+        /// <item><description>20480</description></item>
+        /// <item><description>51200</description></item>
+        /// <item><description>102400</description></item>
         /// </list>
-        /// <para>Default value: 10240.</para>
-        /// <para>When you set the ChargeType parameter to POSTPAY, the Bandwidth parameter is automatically set to 0 and cannot be modified. The value 0 indicates that bandwidth is dynamically allocated based on the volume of data that is asynchronously replicated from the primary disk to the secondary disk.</para>
+        /// <para>Default value: 10240. When you set the ChargeType parameter to POSTPAY, the Bandwidth parameter is automatically set to 0 and cannot be modified. The value 0 indicates that bandwidth is dynamically allocated based on the volume of data that is asynchronously replicated from the primary disk to the secondary disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10240</para>
@@ -43,7 +42,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -106,12 +105,18 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string DiskId { get; set; }
 
+        /// <summary>
+        /// <para>Whether to enable replication time control. By default, this parameter is disabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnableRtc")]
         [Validation(Required=false)]
         public bool? EnableRtc { get; set; }
 
         /// <summary>
-        /// <para>The name of the replication pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the replication pair. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestReplicaPair</para>
@@ -121,11 +126,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string PairName { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the replication pair. This parameter is required when the <c>ChargeType</c> parameter is set to PREPAY. The unit of the subscription duration is specified by the <c>PeriodUnit</c> parameter.</para>
-        /// <list type="bullet">
-        /// <item><description>Valid values when the <c>PeriodUnit</c> parameter is set to Week: 1, 2, 3, and 4.</description></item>
-        /// <item><description>Valid values when the <c>PeriodUnit</c> parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</description></item>
-        /// </list>
+        /// <para>The subscription duration of the replication pair. When <c>ChargeType</c> is set to PREPAY, this parameter must be specified. Valid values: 1, 2, 3, 6, 12, 24, 36, and 60. The subscription duration unit is specified by <c>PeriodUnit</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -135,12 +136,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public long? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration of the replication pair. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Week.</description></item>
-        /// <item><description>Month</description></item>
-        /// </list>
-        /// <para>Default value: Month.</para>
+        /// <para>The unit of the subscription duration of the replication pair. Set the value to Month. Valid value: Month</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -150,7 +146,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The recovery point objective (RPO) of the replication pair. Unit: seconds. Set the value to 900.</para>
+        /// <para>The recovery point objective (RPO) of the replication pair. Unit: seconds. Valid value: 900.</para>
         /// 
         /// <b>Example:</b>
         /// <para>900</para>
@@ -171,7 +167,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which to assign the replication group.</para>
+        /// <para>The ID of the resource group to which the replication pair belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmvs****</para>
@@ -192,14 +188,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string SourceZoneId { get; set; }
 
         /// <summary>
-        /// <para>The resource tags. You can specify up to 20 tags.</para>
+        /// <para>The tags to add to the replication pair-consistent group. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDiskReplicaPairRequestTag> Tag { get; set; }
         public class CreateDiskReplicaPairRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -209,7 +205,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <c>acs:</c> or contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

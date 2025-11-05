@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Details about the replication pairs.</para>
+        /// <para>Details of the replication pairs.</para>
         /// </summary>
         [NameInMap("ReplicaPairs")]
         [Validation(Required=false)]
@@ -120,6 +120,12 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public string DestinationZoneId { get; set; }
 
+            /// <summary>
+            /// <para>Whether the replication time control is enabled. If the replication pair has been added to a replication group, it is consistent with the attributes of the replication group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("EnableRtc")]
             [Validation(Required=false)]
             public bool? EnableRtc { get; set; }

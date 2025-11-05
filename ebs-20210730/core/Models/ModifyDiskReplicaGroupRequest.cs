@@ -44,6 +44,12 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>Whether to enable replication time control.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnableRtc")]
         [Validation(Required=false)]
         public bool? EnableRtc { get; set; }

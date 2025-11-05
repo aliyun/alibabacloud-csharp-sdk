@@ -49,14 +49,15 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string AggreOverLineOps { get; set; }
 
         /// <summary>
-        /// <para>Dimension map, in JSON format, representing the dimensions being queried. The currently available keys are:</para>
+        /// <para>The dimension map, in the JSON format. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DiskId: Cloud disk name, e.g., d-xxx.</description></item>
-        /// <item><description>DeviceType: Type of cloud disk, system indicates system disk, data indicates data disk.</description></item>
-        /// <item><description>DeviceCategory: Category of cloud disk, e.g., cloud_essd.</description></item>
-        /// <item><description>EcsInstanceId: Name of the ECS instance where the disk is located, e.g., i-xxx.</description></item>
+        /// <item><description>DiskId: the disk name. Example: d-xxx.</description></item>
+        /// <item><description>DeviceType: the disk type. system indicates the system disk, and data indicates the data disk.</description></item>
+        /// <item><description>DeviceCategory: the disk category. Example: cloud_essd.</description></item>
+        /// <item><description>EcsInstanceId: the ECS instance name. Example: i-xxx.</description></item>
+        /// <item><description>Azone: the zone, such as cn-hangzhou-a.</description></item>
         /// </list>
-        /// <para>The returned results are the intersection of all dimension filter conditions.</para>
+        /// <para>The returned result is the intersection of all dimension filtering conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;DiskId&quot;:[&quot;d-bp14xxxx&quot;,&quot;d-bp11xxxx&quot;], &quot;DeviceCategory&quot;: [&quot;cloud_essd&quot;]}</para>
@@ -75,6 +76,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// <para>The list of fields used for grouping and aggregation.</para>
+        /// </summary>
         [NameInMap("GroupByLabels")]
         [Validation(Required=false)]
         public string GroupByLabelsShrink { get; set; }
@@ -101,12 +105,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The interval for obtaining metric data. Unit: seconds. The default value is 5 seconds. Possible values include:</para>
+        /// <para>The granularity at which data is collected for the metric. Unit: seconds. Default value: 5. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>5: 5s precision query, can query up to 12 hours of data</description></item>
-        /// <item><description>10: 10s precision query, can query up to 24 hours of data</description></item>
-        /// <item><description>60: 60s precision query, can query up to 7 days of data</description></item>
-        /// <item><description>3600: 3600s precision query, can query up to 30 days of data</description></item>
+        /// <item><description>5: 5 seconds. The query time range can be up to 12 hours.</description></item>
+        /// <item><description>10: 10 seconds. The query time range can be up to 24 hours.</description></item>
+        /// <item><description>60: 60 seconds. The query time range can be up to 7 days.</description></item>
+        /// <item><description>300: 300 seconds. The query time range can be up to 30 days.</description></item>
+        /// <item><description>600: 600 seconds. The query time range can be up to 30 days.</description></item>
+        /// <item><description>3600: 3,600 seconds. The query time range can be up to 30 days.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -127,7 +133,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time point for obtaining metric data. The earliest selectable time is one year before the current moment. When both StartTime and EndTime parameters are empty, it defaults to querying the most recent period\&quot;s monitoring metrics. Represented according to the ISO 8601 standard, using UTC +0 time, in the format yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The beginning of the time range to query. You can specify a point in time that is up to 30 days before the current time. If both StartTime and EndTime are left empty, the monitoring metric data of the most recent statistical period is queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-11-21T01:50:00Z</para>

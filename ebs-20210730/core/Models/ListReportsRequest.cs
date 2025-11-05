@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class ListReportsRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>app-xxx</para>
+        /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }

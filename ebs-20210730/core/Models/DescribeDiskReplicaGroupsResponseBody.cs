@@ -86,6 +86,12 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public string DestinationZoneId { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether to enable replication time control.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("EnableRtc")]
             [Validation(Required=false)]
             public bool? EnableRtc { get; set; }

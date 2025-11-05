@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class CreateDiskReplicaPairResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ReplicaPairId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C123F94F-4E38-19AE-942A-A8D6F44F****</para>
