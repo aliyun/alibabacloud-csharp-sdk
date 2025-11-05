@@ -3096,6 +3096,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["max_nodes"] = request.MaxNodes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeComponents))
+            {
+                body["node_components"] = request.NodeComponents;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeConfig))
             {
                 body["node_config"] = request.NodeConfig;
@@ -3197,6 +3201,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxNodes))
             {
                 body["max_nodes"] = request.MaxNodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeComponents))
+            {
+                body["node_components"] = request.NodeComponents;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeConfig))
             {
@@ -13504,6 +13512,152 @@ namespace AlibabaCloud.SDK.CS20151215
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListOperationPlansWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取单个地域的自动运维执行计划列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationPlansForRegionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationPlansForRegionResponse
+        /// </returns>
+        public ListOperationPlansForRegionResponse ListOperationPlansForRegionWithOptions(string regionId, ListOperationPlansForRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["cluster_id"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["state"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOperationPlansForRegion",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/regions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(regionId) + "/operation/plans",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOperationPlansForRegionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取单个地域的自动运维执行计划列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationPlansForRegionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationPlansForRegionResponse
+        /// </returns>
+        public async Task<ListOperationPlansForRegionResponse> ListOperationPlansForRegionWithOptionsAsync(string regionId, ListOperationPlansForRegionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["cluster_id"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["state"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOperationPlansForRegion",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/regions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(regionId) + "/operation/plans",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOperationPlansForRegionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取单个地域的自动运维执行计划列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationPlansForRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationPlansForRegionResponse
+        /// </returns>
+        public ListOperationPlansForRegionResponse ListOperationPlansForRegion(string regionId, ListOperationPlansForRegionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListOperationPlansForRegionWithOptions(regionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取单个地域的自动运维执行计划列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOperationPlansForRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationPlansForRegionResponse
+        /// </returns>
+        public async Task<ListOperationPlansForRegionResponse> ListOperationPlansForRegionAsync(string regionId, ListOperationPlansForRegionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListOperationPlansForRegionWithOptionsAsync(regionId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

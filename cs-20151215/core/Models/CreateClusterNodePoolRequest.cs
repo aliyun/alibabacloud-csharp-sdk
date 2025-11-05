@@ -673,6 +673,38 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Obsolete]
         public long? MaxNodes { get; set; }
 
+        [NameInMap("node_components")]
+        [Validation(Required=false)]
+        public List<CreateClusterNodePoolRequestNodeComponents> NodeComponents { get; set; }
+        public class CreateClusterNodePoolRequestNodeComponents : TeaModel {
+            [NameInMap("config")]
+            [Validation(Required=false)]
+            public CreateClusterNodePoolRequestNodeComponentsConfig Config { get; set; }
+            public class CreateClusterNodePoolRequestNodeComponentsConfig : TeaModel {
+                [NameInMap("custom_config")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> CustomConfig { get; set; }
+
+            }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>kubelet</para>
+            /// </summary>
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1.33.3-aliyun.1</para>
+            /// </summary>
+            [NameInMap("version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The node configurations.</para>
         /// </summary>
