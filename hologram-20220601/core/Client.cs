@@ -1885,6 +1885,476 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantDatabasePermissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantDatabasePermissionResponse
+        /// </returns>
+        public GrantDatabasePermissionResponse GrantDatabasePermissionWithOptions(string instanceId, GrantDatabasePermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                body["databaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Privileges))
+            {
+                body["privileges"] = request.Privileges;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrantDatabasePermission",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/grantDatabasePermission",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrantDatabasePermissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantDatabasePermissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantDatabasePermissionResponse
+        /// </returns>
+        public async Task<GrantDatabasePermissionResponse> GrantDatabasePermissionWithOptionsAsync(string instanceId, GrantDatabasePermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                body["databaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Privileges))
+            {
+                body["privileges"] = request.Privileges;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrantDatabasePermission",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/grantDatabasePermission",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrantDatabasePermissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantDatabasePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantDatabasePermissionResponse
+        /// </returns>
+        public GrantDatabasePermissionResponse GrantDatabasePermission(string instanceId, GrantDatabasePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GrantDatabasePermissionWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantDatabasePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantDatabasePermissionResponse
+        /// </returns>
+        public async Task<GrantDatabasePermissionResponse> GrantDatabasePermissionAsync(string instanceId, GrantDatabasePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GrantDatabasePermissionWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantSchemaPermissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantSchemaPermissionResponse
+        /// </returns>
+        public GrantSchemaPermissionResponse GrantSchemaPermissionWithOptions(string instanceId, GrantSchemaPermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                body["databaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Privileges))
+            {
+                body["privileges"] = request.Privileges;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaName))
+            {
+                body["schemaName"] = request.SchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrantSchemaPermission",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/grantSchemaPermission",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrantSchemaPermissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantSchemaPermissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantSchemaPermissionResponse
+        /// </returns>
+        public async Task<GrantSchemaPermissionResponse> GrantSchemaPermissionWithOptionsAsync(string instanceId, GrantSchemaPermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                body["databaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Privileges))
+            {
+                body["privileges"] = request.Privileges;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaName))
+            {
+                body["schemaName"] = request.SchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrantSchemaPermission",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/grantSchemaPermission",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrantSchemaPermissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantSchemaPermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantSchemaPermissionResponse
+        /// </returns>
+        public GrantSchemaPermissionResponse GrantSchemaPermission(string instanceId, GrantSchemaPermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GrantSchemaPermissionWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantSchemaPermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantSchemaPermissionResponse
+        /// </returns>
+        public async Task<GrantSchemaPermissionResponse> GrantSchemaPermissionAsync(string instanceId, GrantSchemaPermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GrantSchemaPermissionWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantTablePermissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantTablePermissionResponse
+        /// </returns>
+        public GrantTablePermissionResponse GrantTablePermissionWithOptions(string instanceId, GrantTablePermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllTable))
+            {
+                body["allTable"] = request.AllTable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                body["databaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Privileges))
+            {
+                body["privileges"] = request.Privileges;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaName))
+            {
+                body["schemaName"] = request.SchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                body["tableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrantTablePermission",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/grantTablePermission",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrantTablePermissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantTablePermissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantTablePermissionResponse
+        /// </returns>
+        public async Task<GrantTablePermissionResponse> GrantTablePermissionWithOptionsAsync(string instanceId, GrantTablePermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllTable))
+            {
+                body["allTable"] = request.AllTable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                body["databaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Privileges))
+            {
+                body["privileges"] = request.Privileges;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaName))
+            {
+                body["schemaName"] = request.SchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                body["tableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrantTablePermission",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/grantTablePermission",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrantTablePermissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantTablePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantTablePermissionResponse
+        /// </returns>
+        public GrantTablePermissionResponse GrantTablePermission(string instanceId, GrantTablePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GrantTablePermissionWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantTablePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantTablePermissionResponse
+        /// </returns>
+        public async Task<GrantTablePermissionResponse> GrantTablePermissionAsync(string instanceId, GrantTablePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GrantTablePermissionWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of backups. A backup is a full data snapshot of an instance at the end of the snapshot time. You can purchase another instance to completely restore the original data.</para>
         /// </summary>
         /// 
@@ -2019,6 +2489,136 @@ namespace AlibabaCloud.SDK.Hologram20220601
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListBackupDataWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取DB列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesResponse
+        /// </returns>
+        public ListDatabasesResponse ListDatabasesWithOptions(string instanceId, ListDatabasesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.External))
+            {
+                query["external"] = request.External;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDatabases",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/listDatabases",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDatabasesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取DB列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesResponse
+        /// </returns>
+        public async Task<ListDatabasesResponse> ListDatabasesWithOptionsAsync(string instanceId, ListDatabasesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.External))
+            {
+                query["external"] = request.External;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDatabases",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/listDatabases",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDatabasesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取DB列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesResponse
+        /// </returns>
+        public ListDatabasesResponse ListDatabases(string instanceId, ListDatabasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListDatabasesWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取DB列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabasesResponse
+        /// </returns>
+        public async Task<ListDatabasesResponse> ListDatabasesAsync(string instanceId, ListDatabasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListDatabasesWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3287,6 +3887,476 @@ namespace AlibabaCloud.SDK.Hologram20220601
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ResumeInstanceWithOptionsAsync(instanceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeDatabasePermissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeDatabasePermissionResponse
+        /// </returns>
+        public RevokeDatabasePermissionResponse RevokeDatabasePermissionWithOptions(string instanceId, RevokeDatabasePermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                body["databaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Privileges))
+            {
+                body["privileges"] = request.Privileges;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeDatabasePermission",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/revokeDatabasePermission",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeDatabasePermissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeDatabasePermissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeDatabasePermissionResponse
+        /// </returns>
+        public async Task<RevokeDatabasePermissionResponse> RevokeDatabasePermissionWithOptionsAsync(string instanceId, RevokeDatabasePermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                body["databaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Privileges))
+            {
+                body["privileges"] = request.Privileges;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeDatabasePermission",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/revokeDatabasePermission",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeDatabasePermissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeDatabasePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeDatabasePermissionResponse
+        /// </returns>
+        public RevokeDatabasePermissionResponse RevokeDatabasePermission(string instanceId, RevokeDatabasePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RevokeDatabasePermissionWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消DB授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeDatabasePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeDatabasePermissionResponse
+        /// </returns>
+        public async Task<RevokeDatabasePermissionResponse> RevokeDatabasePermissionAsync(string instanceId, RevokeDatabasePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RevokeDatabasePermissionWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消Schema授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeSchemaPermissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeSchemaPermissionResponse
+        /// </returns>
+        public RevokeSchemaPermissionResponse RevokeSchemaPermissionWithOptions(string instanceId, RevokeSchemaPermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                body["databaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Privileges))
+            {
+                body["privileges"] = request.Privileges;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaName))
+            {
+                body["schemaName"] = request.SchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeSchemaPermission",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/revokeSchemaPermission",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeSchemaPermissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消Schema授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeSchemaPermissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeSchemaPermissionResponse
+        /// </returns>
+        public async Task<RevokeSchemaPermissionResponse> RevokeSchemaPermissionWithOptionsAsync(string instanceId, RevokeSchemaPermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                body["databaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Privileges))
+            {
+                body["privileges"] = request.Privileges;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaName))
+            {
+                body["schemaName"] = request.SchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeSchemaPermission",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/revokeSchemaPermission",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeSchemaPermissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消Schema授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeSchemaPermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeSchemaPermissionResponse
+        /// </returns>
+        public RevokeSchemaPermissionResponse RevokeSchemaPermission(string instanceId, RevokeSchemaPermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RevokeSchemaPermissionWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消Schema授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeSchemaPermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeSchemaPermissionResponse
+        /// </returns>
+        public async Task<RevokeSchemaPermissionResponse> RevokeSchemaPermissionAsync(string instanceId, RevokeSchemaPermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RevokeSchemaPermissionWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消表授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeTablePermissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeTablePermissionResponse
+        /// </returns>
+        public RevokeTablePermissionResponse RevokeTablePermissionWithOptions(string instanceId, RevokeTablePermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllTable))
+            {
+                body["allTable"] = request.AllTable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                body["databaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Privileges))
+            {
+                body["privileges"] = request.Privileges;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaName))
+            {
+                body["schemaName"] = request.SchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                body["tableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeTablePermission",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/revokeTablePermission",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeTablePermissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消表授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeTablePermissionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeTablePermissionResponse
+        /// </returns>
+        public async Task<RevokeTablePermissionResponse> RevokeTablePermissionWithOptionsAsync(string instanceId, RevokeTablePermissionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllTable))
+            {
+                body["allTable"] = request.AllTable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                body["databaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Privileges))
+            {
+                body["privileges"] = request.Privileges;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchemaName))
+            {
+                body["schemaName"] = request.SchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                body["tableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeTablePermission",
+                Version = "2022-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/revokeTablePermission",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeTablePermissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消表授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeTablePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeTablePermissionResponse
+        /// </returns>
+        public RevokeTablePermissionResponse RevokeTablePermission(string instanceId, RevokeTablePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RevokeTablePermissionWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消表授权</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeTablePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeTablePermissionResponse
+        /// </returns>
+        public async Task<RevokeTablePermissionResponse> RevokeTablePermissionAsync(string instanceId, RevokeTablePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RevokeTablePermissionWithOptionsAsync(instanceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
