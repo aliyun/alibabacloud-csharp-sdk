@@ -17,7 +17,75 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Content { get; set; }
+        public DescribeCdnReportResponseBodyContent Content { get; set; }
+        public class DescribeCdnReportResponseBodyContent : TeaModel {
+            [NameInMap("data")]
+            [Validation(Required=false)]
+            public List<DescribeCdnReportResponseBodyContentData> Data { get; set; }
+            public class DescribeCdnReportResponseBodyContentData : TeaModel {
+                [NameInMap("data")]
+                [Validation(Required=false)]
+                public List<Dictionary<string, string>> Data { get; set; }
+
+                [NameInMap("deliver")]
+                [Validation(Required=false)]
+                public DescribeCdnReportResponseBodyContentDataDeliver Deliver { get; set; }
+                public class DescribeCdnReportResponseBodyContentDataDeliver : TeaModel {
+                    [NameInMap("report")]
+                    [Validation(Required=false)]
+                    public DescribeCdnReportResponseBodyContentDataDeliverReport Report { get; set; }
+                    public class DescribeCdnReportResponseBodyContentDataDeliverReport : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>table</para>
+                        /// </summary>
+                        [NameInMap("format")]
+                        [Validation(Required=false)]
+                        public string Format { get; set; }
+
+                        [NameInMap("header")]
+                        [Validation(Required=false)]
+                        public List<string> Header { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>0</para>
+                        /// </summary>
+                        [NameInMap("outLine")]
+                        [Validation(Required=false)]
+                        public long? OutLine { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>0</para>
+                        /// </summary>
+                        [NameInMap("outSize")]
+                        [Validation(Required=false)]
+                        public long? OutSize { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>line</para>
+                        /// </summary>
+                        [NameInMap("shape")]
+                        [Validation(Required=false)]
+                        public string Shape { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>test</para>
+                        /// </summary>
+                        [NameInMap("title")]
+                        [Validation(Required=false)]
+                        public string Title { get; set; }
+
+                    }
+
+                }
+
+            }
+
+        }
 
         /// <summary>
         /// <para>The ID of the request.</para>

@@ -17,7 +17,79 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
-        public string Content { get; set; }
+        public DescribeCdnReportListResponseBodyContent Content { get; set; }
+        public class DescribeCdnReportListResponseBodyContent : TeaModel {
+            [NameInMap("data")]
+            [Validation(Required=false)]
+            public List<DescribeCdnReportListResponseBodyContentData> Data { get; set; }
+            public class DescribeCdnReportListResponseBodyContentData : TeaModel {
+                [NameInMap("deliver")]
+                [Validation(Required=false)]
+                public DescribeCdnReportListResponseBodyContentDataDeliver Deliver { get; set; }
+                public class DescribeCdnReportListResponseBodyContentDataDeliver : TeaModel {
+                    [NameInMap("report")]
+                    [Validation(Required=false)]
+                    public DescribeCdnReportListResponseBodyContentDataDeliverReport Report { get; set; }
+                    public class DescribeCdnReportListResponseBodyContentDataDeliverReport : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>table</para>
+                        /// </summary>
+                        [NameInMap("format")]
+                        [Validation(Required=false)]
+                        public string Format { get; set; }
+
+                        [NameInMap("header")]
+                        [Validation(Required=false)]
+                        public List<string> Header { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>0</para>
+                        /// </summary>
+                        [NameInMap("outLine")]
+                        [Validation(Required=false)]
+                        public long? OutLine { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>0</para>
+                        /// </summary>
+                        [NameInMap("outSize")]
+                        [Validation(Required=false)]
+                        public long? OutSize { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>line</para>
+                        /// </summary>
+                        [NameInMap("shape")]
+                        [Validation(Required=false)]
+                        public string Shape { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>TopUrlByAcc</para>
+                        /// </summary>
+                        [NameInMap("title")]
+                        [Validation(Required=false)]
+                        public string Title { get; set; }
+
+                    }
+
+                }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("reportId")]
+                [Validation(Required=false)]
+                public long? ReportId { get; set; }
+
+            }
+
+        }
 
         /// <summary>
         /// <para>The ID of the request.</para>

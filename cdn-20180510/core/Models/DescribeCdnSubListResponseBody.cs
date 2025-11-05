@@ -17,7 +17,63 @@ namespace AlibabaCloud.SDK.Cdn20180510.Models
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
-        public string Content { get; set; }
+        public DescribeCdnSubListResponseBodyContent Content { get; set; }
+        public class DescribeCdnSubListResponseBodyContent : TeaModel {
+            [NameInMap("data")]
+            [Validation(Required=false)]
+            public List<DescribeCdnSubListResponseBodyContentData> Data { get; set; }
+            public class DescribeCdnSubListResponseBodyContentData : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2024-05-16T09:43:38Z</para>
+                /// </summary>
+                [NameInMap("createTime")]
+                [Validation(Required=false)]
+                public string CreateTime { get; set; }
+
+                [NameInMap("domains")]
+                [Validation(Required=false)]
+                public List<string> Domains { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2024-05-16T09:43:38Z</para>
+                /// </summary>
+                [NameInMap("effectiveEnd")]
+                [Validation(Required=false)]
+                public string EffectiveEnd { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2024-05-16T09:43:38Z</para>
+                /// </summary>
+                [NameInMap("effectiveFrom")]
+                [Validation(Required=false)]
+                public string EffectiveFrom { get; set; }
+
+                [NameInMap("reportId")]
+                [Validation(Required=false)]
+                public List<long?> ReportId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>enable</para>
+                /// </summary>
+                [NameInMap("status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("subId")]
+                [Validation(Required=false)]
+                public long? SubId { get; set; }
+
+            }
+
+        }
 
         /// <summary>
         /// <para>The ID of the request.</para>
