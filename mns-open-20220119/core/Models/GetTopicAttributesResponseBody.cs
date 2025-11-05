@@ -120,6 +120,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>http:// 111111111****.mns.us-west-1-internal.aliyuncs.com/topics/testTopic</para>
+            /// </summary>
+            [NameInMap("TopicInnerUrl")]
+            [Validation(Required=false)]
+            public string TopicInnerUrl { get; set; }
+
+            /// <summary>
             /// <para>The name of the topic.</para>
             /// 
             /// <b>Example:</b>
@@ -132,6 +140,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
             [NameInMap("TopicType")]
             [Validation(Required=false)]
             public string TopicType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>http:// 111111111****.mns.us-west-1.aliyuncs.com/topics/testTopic</para>
+            /// </summary>
+            [NameInMap("TopicUrl")]
+            [Validation(Required=false)]
+            public string TopicUrl { get; set; }
 
         }
 
