@@ -77,6 +77,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
+        /// <para>57</para>
+        /// </summary>
+        [NameInMap("TaskCps")]
+        [Validation(Required=false)]
+        public long? TaskCps { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
         /// <para>1152311212312***</para>
         /// </summary>
         [NameInMap("TaskId")]

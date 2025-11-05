@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
-    public class QueryAiCallDetailPageRequest : TeaModel {
+    public class QueryAiCallDetailPageShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>1212131231****</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
         [NameInMap("DetailIds")]
         [Validation(Required=false)]
-        public List<long?> DetailIds { get; set; }
+        public string DetailIdsShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
