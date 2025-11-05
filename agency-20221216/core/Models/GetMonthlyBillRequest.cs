@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         /// <list type="bullet">
         /// <item><description>MonthlyInvoice</description></item>
         /// <item><description>MonthRefundInvoice</description></item>
-        /// <item><description>MonthlySummary</description></item>
+        /// <item><description>MonthlySummary (Deprecated)</description></item>
         /// <item><description>MonthlyInstanceAddAdjustBill </description></item>
         /// <item><description>MonthlyInstanceRefundBill</description></item>
         /// <item><description>MonthlyAddAdjustInvoce</description></item>

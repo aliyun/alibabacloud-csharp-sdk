@@ -8,38 +8,44 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Agency20221216.Models
 {
-    public class IssueCouponForCustomerRequest : TeaModel {
+    public class ListExportTasksRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>zh-CN</para>
+        /// <para>en</para>
         /// </summary>
-        [NameInMap("AcceptLanguage")]
+        [NameInMap("Language")]
         [Validation(Required=false)]
-        public string AcceptLanguage { get; set; }
+        public string Language { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5075915</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("CouponTemplateId")]
+        [NameInMap("PageNo")]
         [Validation(Required=false)]
-        public long? CouponTemplateId { get; set; }
-
-        [NameInMap("IsUseBenefit")]
-        [Validation(Required=false)]
-        public bool? IsUseBenefit { get; set; }
+        public int? PageNo { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>111,2222</para>
+        /// <para>20</para>
         /// </summary>
-        [NameInMap("Uidlist")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string Uidlist { get; set; }
+        public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>intlExportUsageDeductHistory</para>
+        /// </summary>
+        [NameInMap("SceneCode")]
+        [Validation(Required=false)]
+        public string SceneCode { get; set; }
 
     }
 

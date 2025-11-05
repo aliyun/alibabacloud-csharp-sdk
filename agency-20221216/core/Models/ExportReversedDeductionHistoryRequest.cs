@@ -8,38 +8,44 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Agency20221216.Models
 {
-    public class IssueCouponForCustomerRequest : TeaModel {
+    public class ExportReversedDeductionHistoryRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>zh-CN</para>
+        /// <para>2023-05-01</para>
         /// </summary>
-        [NameInMap("AcceptLanguage")]
+        [NameInMap("EndDate")]
         [Validation(Required=false)]
-        public string AcceptLanguage { get; set; }
+        public string EndDate { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5075915</para>
+        /// <para>123</para>
         /// </summary>
-        [NameInMap("CouponTemplateId")]
+        [NameInMap("ExportUid")]
         [Validation(Required=false)]
-        public long? CouponTemplateId { get; set; }
+        public long? ExportUid { get; set; }
 
-        [NameInMap("IsUseBenefit")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>en</para>
+        /// </summary>
+        [NameInMap("Language")]
         [Validation(Required=false)]
-        public bool? IsUseBenefit { get; set; }
+        public string Language { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>111,2222</para>
+        /// <para>2023-01-01</para>
         /// </summary>
-        [NameInMap("Uidlist")]
+        [NameInMap("StartDate")]
         [Validation(Required=false)]
-        public string Uidlist { get; set; }
+        public string StartDate { get; set; }
 
     }
 

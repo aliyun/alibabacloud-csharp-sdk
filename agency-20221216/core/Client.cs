@@ -1906,6 +1906,150 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>额度冲减明细列表导出接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportReversedDeductionHistoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportReversedDeductionHistoryResponse
+        /// </returns>
+        public ExportReversedDeductionHistoryResponse ExportReversedDeductionHistoryWithOptions(ExportReversedDeductionHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportUid))
+            {
+                query["ExportUid"] = request.ExportUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportReversedDeductionHistory",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportReversedDeductionHistoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>额度冲减明细列表导出接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportReversedDeductionHistoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportReversedDeductionHistoryResponse
+        /// </returns>
+        public async Task<ExportReversedDeductionHistoryResponse> ExportReversedDeductionHistoryWithOptionsAsync(ExportReversedDeductionHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportUid))
+            {
+                query["ExportUid"] = request.ExportUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportReversedDeductionHistory",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportReversedDeductionHistoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>额度冲减明细列表导出接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportReversedDeductionHistoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportReversedDeductionHistoryResponse
+        /// </returns>
+        public ExportReversedDeductionHistoryResponse ExportReversedDeductionHistory(ExportReversedDeductionHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExportReversedDeductionHistoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>额度冲减明细列表导出接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportReversedDeductionHistoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportReversedDeductionHistoryResponse
+        /// </returns>
+        public async Task<ExportReversedDeductionHistoryResponse> ExportReversedDeductionHistoryAsync(ExportReversedDeductionHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExportReversedDeductionHistoryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Return Distribution Customer\&quot;s account information.</para>
         /// </summary>
         /// 
@@ -2014,6 +2158,194 @@ namespace AlibabaCloud.SDK.Agency20221216
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAccountInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提供返佣商品API</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetCommissionableProductsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCommissionableProductsResponse
+        /// </returns>
+        public GetCommissionableProductsResponse GetCommissionableProductsWithOptions(GetCommissionableProductsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetCommissionableProductsShrinkRequest request = new GetCommissionableProductsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListShowStatusList))
+            {
+                request.ListShowStatusListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListShowStatusList, "ListShowStatusList", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCodeList))
+            {
+                query["CommodityCodeList"] = request.CommodityCodeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FiscalYear))
+            {
+                query["FiscalYear"] = request.FiscalYear;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListShowStatusListShrink))
+            {
+                query["ListShowStatusList"] = request.ListShowStatusListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipCodeList))
+            {
+                query["PipCodeList"] = request.PipCodeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealEndMonth))
+            {
+                query["RealEndMonth"] = request.RealEndMonth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealStartMonth))
+            {
+                query["RealStartMonth"] = request.RealStartMonth;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCommissionableProducts",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCommissionableProductsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提供返佣商品API</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetCommissionableProductsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCommissionableProductsResponse
+        /// </returns>
+        public async Task<GetCommissionableProductsResponse> GetCommissionableProductsWithOptionsAsync(GetCommissionableProductsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetCommissionableProductsShrinkRequest request = new GetCommissionableProductsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListShowStatusList))
+            {
+                request.ListShowStatusListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListShowStatusList, "ListShowStatusList", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCodeList))
+            {
+                query["CommodityCodeList"] = request.CommodityCodeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FiscalYear))
+            {
+                query["FiscalYear"] = request.FiscalYear;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListShowStatusListShrink))
+            {
+                query["ListShowStatusList"] = request.ListShowStatusListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipCodeList))
+            {
+                query["PipCodeList"] = request.PipCodeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealEndMonth))
+            {
+                query["RealEndMonth"] = request.RealEndMonth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealStartMonth))
+            {
+                query["RealStartMonth"] = request.RealStartMonth;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCommissionableProducts",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCommissionableProductsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提供返佣商品API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCommissionableProductsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCommissionableProductsResponse
+        /// </returns>
+        public GetCommissionableProductsResponse GetCommissionableProducts(GetCommissionableProductsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCommissionableProductsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提供返佣商品API</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCommissionableProductsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCommissionableProductsResponse
+        /// </returns>
+        public async Task<GetCommissionableProductsResponse> GetCommissionableProductsAsync(GetCommissionableProductsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCommissionableProductsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3143,6 +3475,10 @@ namespace AlibabaCloud.SDK.Agency20221216
             {
                 query["CouponTemplateId"] = request.CouponTemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsUseBenefit))
+            {
+                query["IsUseBenefit"] = request.IsUseBenefit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uidlist))
             {
                 query["Uidlist"] = request.Uidlist;
@@ -3192,6 +3528,10 @@ namespace AlibabaCloud.SDK.Agency20221216
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CouponTemplateId))
             {
                 query["CouponTemplateId"] = request.CouponTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsUseBenefit))
+            {
+                query["IsUseBenefit"] = request.IsUseBenefit;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uidlist))
             {
@@ -3524,6 +3864,310 @@ namespace AlibabaCloud.SDK.Agency20221216
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCouponUsageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用查询导出任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListExportTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExportTasksResponse
+        /// </returns>
+        public ListExportTasksResponse ListExportTasksWithOptions(ListExportTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListExportTasks",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListExportTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用查询导出任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListExportTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExportTasksResponse
+        /// </returns>
+        public async Task<ListExportTasksResponse> ListExportTasksWithOptionsAsync(ListExportTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListExportTasks",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListExportTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用查询导出任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListExportTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExportTasksResponse
+        /// </returns>
+        public ListExportTasksResponse ListExportTasks(ListExportTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListExportTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用查询导出任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListExportTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExportTasksResponse
+        /// </returns>
+        public async Task<ListExportTasksResponse> ListExportTasksAsync(ListExportTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListExportTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>额度冲减明细列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReversedDeductionHistoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReversedDeductionHistoryResponse
+        /// </returns>
+        public QueryReversedDeductionHistoryResponse QueryReversedDeductionHistoryWithOptions(QueryReversedDeductionHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
+            {
+                query["Uid"] = request.Uid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryReversedDeductionHistory",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryReversedDeductionHistoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>额度冲减明细列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReversedDeductionHistoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReversedDeductionHistoryResponse
+        /// </returns>
+        public async Task<QueryReversedDeductionHistoryResponse> QueryReversedDeductionHistoryWithOptionsAsync(QueryReversedDeductionHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
+            {
+                query["Uid"] = request.Uid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryReversedDeductionHistory",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryReversedDeductionHistoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>额度冲减明细列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReversedDeductionHistoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReversedDeductionHistoryResponse
+        /// </returns>
+        public QueryReversedDeductionHistoryResponse QueryReversedDeductionHistory(QueryReversedDeductionHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryReversedDeductionHistoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>额度冲减明细列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryReversedDeductionHistoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryReversedDeductionHistoryResponse
+        /// </returns>
+        public async Task<QueryReversedDeductionHistoryResponse> QueryReversedDeductionHistoryAsync(QueryReversedDeductionHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryReversedDeductionHistoryWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
