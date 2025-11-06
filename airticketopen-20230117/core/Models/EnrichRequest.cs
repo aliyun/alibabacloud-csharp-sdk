@@ -166,8 +166,15 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string DepartureCity { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>2023-03-10</para>
+                /// </summary>
+                [NameInMap("departure_date")]
+                [Validation(Required=false)]
+                public string DepartureDate { get; set; }
+
+                /// <summary>
                 /// <para>departure time in string format (yyyy-MM-dd HH:mm:ss)</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-03-10 07:55:00</para>
