@@ -719,6 +719,158 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>DispatchConsoleAPIForPartner</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DispatchConsoleAPIForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DispatchConsoleAPIForPartnerResponse
+        /// </returns>
+        public DispatchConsoleAPIForPartnerResponse DispatchConsoleAPIForPartnerWithOptions(DispatchConsoleAPIForPartnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveToken))
+            {
+                query["LiveToken"] = request.LiveToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
+            {
+                query["Operation"] = request.Operation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
+            {
+                query["Product"] = request.Product;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteHost))
+            {
+                query["SiteHost"] = request.SiteHost;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DispatchConsoleAPIForPartner",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DispatchConsoleAPIForPartnerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DispatchConsoleAPIForPartner</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DispatchConsoleAPIForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DispatchConsoleAPIForPartnerResponse
+        /// </returns>
+        public async Task<DispatchConsoleAPIForPartnerResponse> DispatchConsoleAPIForPartnerWithOptionsAsync(DispatchConsoleAPIForPartnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiveToken))
+            {
+                query["LiveToken"] = request.LiveToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
+            {
+                query["Operation"] = request.Operation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Params))
+            {
+                query["Params"] = request.Params;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
+            {
+                query["Product"] = request.Product;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteHost))
+            {
+                query["SiteHost"] = request.SiteHost;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DispatchConsoleAPIForPartner",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DispatchConsoleAPIForPartnerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DispatchConsoleAPIForPartner</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DispatchConsoleAPIForPartnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DispatchConsoleAPIForPartnerResponse
+        /// </returns>
+        public DispatchConsoleAPIForPartnerResponse DispatchConsoleAPIForPartner(DispatchConsoleAPIForPartnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DispatchConsoleAPIForPartnerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DispatchConsoleAPIForPartner</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DispatchConsoleAPIForPartnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DispatchConsoleAPIForPartnerResponse
+        /// </returns>
+        public async Task<DispatchConsoleAPIForPartnerResponse> DispatchConsoleAPIForPartnerAsync(DispatchConsoleAPIForPartnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DispatchConsoleAPIForPartnerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询Logo创建任务</para>
         /// </summary>
         /// 
@@ -1099,6 +1251,134 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetIcpFilingInfoForPartnerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过授权码得到accessToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserAccessTokenForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserAccessTokenForPartnerResponse
+        /// </returns>
+        public GetUserAccessTokenForPartnerResponse GetUserAccessTokenForPartnerWithOptions(GetUserAccessTokenForPartnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteHost))
+            {
+                query["SiteHost"] = request.SiteHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ticket))
+            {
+                query["Ticket"] = request.Ticket;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserAccessTokenForPartner",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserAccessTokenForPartnerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过授权码得到accessToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserAccessTokenForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserAccessTokenForPartnerResponse
+        /// </returns>
+        public async Task<GetUserAccessTokenForPartnerResponse> GetUserAccessTokenForPartnerWithOptionsAsync(GetUserAccessTokenForPartnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteHost))
+            {
+                query["SiteHost"] = request.SiteHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ticket))
+            {
+                query["Ticket"] = request.Ticket;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserAccessTokenForPartner",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserAccessTokenForPartnerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过授权码得到accessToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserAccessTokenForPartnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserAccessTokenForPartnerResponse
+        /// </returns>
+        public GetUserAccessTokenForPartnerResponse GetUserAccessTokenForPartner(GetUserAccessTokenForPartnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetUserAccessTokenForPartnerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过授权码得到accessToken</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserAccessTokenForPartnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserAccessTokenForPartnerResponse
+        /// </returns>
+        public async Task<GetUserAccessTokenForPartnerResponse> GetUserAccessTokenForPartnerAsync(GetUserAccessTokenForPartnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetUserAccessTokenForPartnerWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
