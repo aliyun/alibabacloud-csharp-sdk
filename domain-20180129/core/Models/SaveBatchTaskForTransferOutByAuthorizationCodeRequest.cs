@@ -10,14 +10,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class SaveBatchTaskForTransferOutByAuthorizationCodeRequest : TeaModel {
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>en</para>
-        /// </summary>
-        [NameInMap("Long")]
-        [Validation(Required=false)]
-        public string Long { get; set; }
-
-        /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TransferOutParamList")]
@@ -41,14 +33,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             public string DomainName { get; set; }
 
         }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>127.0.0.1</para>
-        /// </summary>
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
 
     }
 

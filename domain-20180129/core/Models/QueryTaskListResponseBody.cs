@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                [NameInMap("TaskBizType")]
+                [Validation(Required=false)]
+                public string TaskBizType { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>INIT</para>
@@ -73,6 +77,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 [Validation(Required=false)]
                 public int? TaskNum { get; set; }
 
+                [NameInMap("TaskResult")]
+                [Validation(Required=false)]
+                public string TaskResult { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>COMPLETE</para>
@@ -96,6 +104,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 [NameInMap("TaskType")]
                 [Validation(Required=false)]
                 public string TaskType { get; set; }
+
+                [NameInMap("TaskTypeCode")]
+                [Validation(Required=false)]
+                public int? TaskTypeCode { get; set; }
 
                 [NameInMap("TaskTypeDescription")]
                 [Validation(Required=false)]

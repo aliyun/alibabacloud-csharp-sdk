@@ -4361,6 +4361,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryArtExtensionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询操作记录</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryChangeLogListRequest
         /// </param>
@@ -4422,6 +4427,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryChangeLogListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询操作记录</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryChangeLogListRequest
         /// </param>
@@ -4483,6 +4493,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryChangeLogListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询操作记录</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryChangeLogListRequest
         /// </param>
@@ -4496,6 +4511,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryChangeLogListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询操作记录</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryChangeLogListRequest
         /// </param>
@@ -5436,6 +5456,10 @@ namespace AlibabaCloud.SDK.Domain20180129
             {
                 query["QueryType"] = request.QueryType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Registrar))
+            {
+                query["Registrar"] = request.Registrar;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -5541,6 +5565,10 @@ namespace AlibabaCloud.SDK.Domain20180129
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
             {
                 query["QueryType"] = request.QueryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Registrar))
+            {
+                query["Registrar"] = request.Registrar;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
@@ -5739,6 +5767,146 @@ namespace AlibabaCloud.SDK.Domain20180129
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryDomainRealNameVerificationInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询域名价格</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryDomainRealTimePriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDomainRealTimePriceResponse
+        /// </returns>
+        public QueryDomainRealTimePriceResponse QueryDomainRealTimePriceWithOptions(QueryDomainRealTimePriceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryDomainRealTimePriceShrinkRequest request = new QueryDomainRealTimePriceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DomainItem))
+            {
+                request.DomainItemShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DomainItem, "DomainItem", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Currency))
+            {
+                query["Currency"] = request.Currency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainItemShrink))
+            {
+                query["DomainItem"] = request.DomainItemShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDomainRealTimePrice",
+                Version = "2018-01-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDomainRealTimePriceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询域名价格</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryDomainRealTimePriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDomainRealTimePriceResponse
+        /// </returns>
+        public async Task<QueryDomainRealTimePriceResponse> QueryDomainRealTimePriceWithOptionsAsync(QueryDomainRealTimePriceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryDomainRealTimePriceShrinkRequest request = new QueryDomainRealTimePriceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DomainItem))
+            {
+                request.DomainItemShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DomainItem, "DomainItem", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Currency))
+            {
+                query["Currency"] = request.Currency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainItemShrink))
+            {
+                query["DomainItem"] = request.DomainItemShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDomainRealTimePrice",
+                Version = "2018-01-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDomainRealTimePriceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询域名价格</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDomainRealTimePriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDomainRealTimePriceResponse
+        /// </returns>
+        public QueryDomainRealTimePriceResponse QueryDomainRealTimePrice(QueryDomainRealTimePriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryDomainRealTimePriceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实时查询域名价格</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryDomainRealTimePriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDomainRealTimePriceResponse
+        /// </returns>
+        public async Task<QueryDomainRealTimePriceResponse> QueryDomainRealTimePriceAsync(QueryDomainRealTimePriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryDomainRealTimePriceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7501,6 +7669,20 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryRegistrantProfileRealNameVerificationInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the registrant profiles that belong to your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use optional request parameters to specify specific query criteria to query registrant profiles as required. For example:</para>
+        /// <list type="bullet">
+        /// <item><description>If you know the ID of the profile that you want to query, you can use the registrant profile ID parameter to query the detailed information about the profile.</description></item>
+        /// <item><description>If you do not know the ID of the profile that you want to query, you can use parameters such as the registrant name parameter to query the detailed information about the profile.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryRegistrantProfilesRequest
         /// </param>
@@ -7586,6 +7768,20 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryRegistrantProfilesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the registrant profiles that belong to your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use optional request parameters to specify specific query criteria to query registrant profiles as required. For example:</para>
+        /// <list type="bullet">
+        /// <item><description>If you know the ID of the profile that you want to query, you can use the registrant profile ID parameter to query the detailed information about the profile.</description></item>
+        /// <item><description>If you do not know the ID of the profile that you want to query, you can use parameters such as the registrant name parameter to query the detailed information about the profile.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryRegistrantProfilesRequest
         /// </param>
@@ -7671,6 +7867,20 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryRegistrantProfilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the registrant profiles that belong to your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use optional request parameters to specify specific query criteria to query registrant profiles as required. For example:</para>
+        /// <list type="bullet">
+        /// <item><description>If you know the ID of the profile that you want to query, you can use the registrant profile ID parameter to query the detailed information about the profile.</description></item>
+        /// <item><description>If you do not know the ID of the profile that you want to query, you can use parameters such as the registrant name parameter to query the detailed information about the profile.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryRegistrantProfilesRequest
         /// </param>
@@ -7684,6 +7894,20 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryRegistrantProfilesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the registrant profiles that belong to your Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use optional request parameters to specify specific query criteria to query registrant profiles as required. For example:</para>
+        /// <list type="bullet">
+        /// <item><description>If you know the ID of the profile that you want to query, you can use the registrant profile ID parameter to query the detailed information about the profile.</description></item>
+        /// <item><description>If you do not know the ID of the profile that you want to query, you can use parameters such as the registrant name parameter to query the detailed information about the profile.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryRegistrantProfilesRequest
         /// </param>
@@ -7969,6 +8193,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryTaskDetailHistoryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specific domain name task by page.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskDetailListRequest
         /// </param>
@@ -8034,6 +8263,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryTaskDetailListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specific domain name task by page.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskDetailListRequest
         /// </param>
@@ -8099,6 +8333,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryTaskDetailListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specific domain name task by page.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskDetailListRequest
         /// </param>
@@ -8112,6 +8351,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryTaskDetailListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specific domain name task by page.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskDetailListRequest
         /// </param>
@@ -8273,6 +8517,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryTaskInfoHistoryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskListRequest
         /// </param>
@@ -8330,6 +8579,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryTaskListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskListRequest
         /// </param>
@@ -8387,6 +8641,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryTaskListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskListRequest
         /// </param>
@@ -8400,6 +8659,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryTaskListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTaskListRequest
         /// </param>
@@ -10593,6 +10857,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await SaveBatchTaskForModifyingDomainDnsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交批量预定删除抢注域名任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForReserveDropListDomainRequest
         /// </param>
@@ -10634,6 +10903,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveBatchTaskForReserveDropListDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交批量预定删除抢注域名任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForReserveDropListDomainRequest
         /// </param>
@@ -10675,6 +10949,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<SaveBatchTaskForReserveDropListDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交批量预定删除抢注域名任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForReserveDropListDomainRequest
         /// </param>
@@ -10688,6 +10967,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return SaveBatchTaskForReserveDropListDomainWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交批量预定删除抢注域名任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveBatchTaskForReserveDropListDomainRequest
         /// </param>
@@ -10720,17 +11004,9 @@ namespace AlibabaCloud.SDK.Domain20180129
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Long))
-            {
-                query["Long"] = request.Long;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransferOutParamList))
             {
                 query["TransferOutParamList"] = request.TransferOutParamList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserClientIp))
-            {
-                query["UserClientIp"] = request.UserClientIp;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10770,17 +11046,9 @@ namespace AlibabaCloud.SDK.Domain20180129
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Long))
-            {
-                query["Long"] = request.Long;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransferOutParamList))
             {
                 query["TransferOutParamList"] = request.TransferOutParamList;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserClientIp))
-            {
-                query["UserClientIp"] = request.UserClientIp;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15911,8 +16179,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于转移码的单个转出任务提交</para>
+        /// <para>Submit a single transfer-out task based on the transfer key of domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The task ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForTransferOutByAuthorizationCodeRequest
@@ -15936,14 +16209,6 @@ namespace AlibabaCloud.SDK.Domain20180129
             {
                 query["DomainName"] = request.DomainName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
-            {
-                query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserClientIp))
-            {
-                query["UserClientIp"] = request.UserClientIp;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -15965,8 +16230,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于转移码的单个转出任务提交</para>
+        /// <para>Submit a single transfer-out task based on the transfer key of domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The task ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForTransferOutByAuthorizationCodeRequest
@@ -15990,14 +16260,6 @@ namespace AlibabaCloud.SDK.Domain20180129
             {
                 query["DomainName"] = request.DomainName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
-            {
-                query["Lang"] = request.Lang;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserClientIp))
-            {
-                query["UserClientIp"] = request.UserClientIp;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -16019,8 +16281,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于转移码的单个转出任务提交</para>
+        /// <para>Submit a single transfer-out task based on the transfer key of domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The task ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForTransferOutByAuthorizationCodeRequest
@@ -16037,8 +16304,13 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于转移码的单个转出任务提交</para>
+        /// <para>Submit a single transfer-out task based on the transfer key of domain names.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The task ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveSingleTaskForTransferOutByAuthorizationCodeRequest

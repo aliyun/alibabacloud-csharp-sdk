@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 [Validation(Required=false)]
                 public string OperationIPAddress { get; set; }
 
+                [NameInMap("Remark")]
+                [Validation(Required=false)]
+                public string Remark { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>Failed</para>

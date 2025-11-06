@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string DomainGroupId { get; set; }
 
         /// <summary>
-        /// <para>The domain name that you want to search for.</para>
+        /// <para>The domain name. You can search for the domain name in the domain name list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test.com</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.</para>
+        /// <para>The end of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed from January 1, 1970, 00:00:00 UTC to the time you perform the query. Only queries by day are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1522080000000</para>
@@ -159,6 +159,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string QueryType { get; set; }
 
+        [NameInMap("Registrar")]
+        [Validation(Required=false)]
+        public string Registrar { get; set; }
+
         /// <summary>
         /// <para>The ID of the resource group.</para>
         /// 
@@ -170,7 +174,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Only queries by day are supported.</para>
+        /// <para>The beginning of the time range to query domain names based on expiration dates. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed from January 1, 1970, 00:00:00 UTC to the time you perform the query. Only queries by day are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1522080000000</para>

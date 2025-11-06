@@ -8,28 +8,23 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
-    public class SaveSingleTaskForTransferOutByAuthorizationCodeRequest : TeaModel {
+    public class QueryDomainRealTimePriceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Schema of Response</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test2o#Lck</para>
+        /// <para>USD</para>
         /// </summary>
-        [NameInMap("AuthorizationCode")]
+        [NameInMap("Currency")]
         [Validation(Required=false)]
-        public string AuthorizationCode { get; set; }
+        public string Currency { get; set; }
 
         /// <summary>
-        /// <para>The transfer key.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>example.com</para>
         /// </summary>
-        [NameInMap("DomainName")]
+        [NameInMap("DomainItem")]
         [Validation(Required=false)]
-        public string DomainName { get; set; }
+        public string DomainItemShrink { get; set; }
 
     }
 

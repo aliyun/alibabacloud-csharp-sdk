@@ -40,6 +40,17 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 [Validation(Required=false)]
                 public string Ccompany { get; set; }
 
+                /// <summary>
+                /// <para>domain transfer status. value:</para>
+                /// <list type="bullet">
+                /// <item><description>0: domain status normal.</description></item>
+                /// <item><description>1: domain is pending change holder.</description></item>
+                /// <item><description>2: change holder failed.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("ChgholderStatus")]
                 [Validation(Required=false)]
                 public string ChgholderStatus { get; set; }
@@ -74,7 +85,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 /// <para>The name of the domain name group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试分组</para>
+                /// <para>test group</para>
                 /// </summary>
                 [NameInMap("DomainGroupName")]
                 [Validation(Required=false)]
@@ -208,6 +219,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 [Validation(Required=false)]
                 public string RegistrantType { get; set; }
 
+                [NameInMap("Registrar")]
+                [Validation(Required=false)]
+                public string Registrar { get; set; }
+
                 /// <summary>
                 /// <para>The time when the domain name was registered.</para>
                 /// 
@@ -232,7 +247,7 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 /// <para>The remarks of the domain name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>备注</para>
+                /// <para>test remark</para>
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]

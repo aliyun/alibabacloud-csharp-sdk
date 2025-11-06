@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string DomainGroupName { get; set; }
 
+        [NameInMap("DomainLifecycleStatus")]
+        [Validation(Required=false)]
+        public string DomainLifecycleStatus { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -142,6 +146,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("Premium")]
         [Validation(Required=false)]
         public bool? Premium { get; set; }
+
+        [NameInMap("PrivacyServiceStatus")]
+        [Validation(Required=false)]
+        public string PrivacyServiceStatus { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
