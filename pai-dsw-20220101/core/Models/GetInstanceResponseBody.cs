@@ -983,6 +983,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
+        [NameInMap("ServiceConfig")]
+        [Validation(Required=false)]
+        public ServiceConfig ServiceConfig { get; set; }
+
         /// <summary>
         /// <para>The instance status.</para>
         /// <para>Valid values:</para>
@@ -1129,6 +1133,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
             [NameInMap("ForwardInfos")]
             [Validation(Required=false)]
             public List<ForwardInfoResponse> ForwardInfos { get; set; }
+
+            [NameInMap("Ip")]
+            [Validation(Required=false)]
+            public string Ip { get; set; }
 
             /// <summary>
             /// <para>The security group ID.</para>
