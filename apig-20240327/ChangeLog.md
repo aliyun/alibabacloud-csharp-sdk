@@ -1,3 +1,8 @@
+2025-11-06 Version: 5.0.3
+- Update API CreateMcpServer: add request parameters body.createFromType.
+- Update API UpdateMcpServer: add request parameters body.createFromType.
+
+
 2025-11-03 Version: 5.0.2
 - Generated csharp 2024-03-27 for APIG.
 

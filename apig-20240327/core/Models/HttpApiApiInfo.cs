@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiApiInfo : TeaModel {
+        [NameInMap("agentProtocols")]
+        [Validation(Required=false)]
+        public List<string> AgentProtocols { get; set; }
+
         [NameInMap("aiProtocols")]
         [Validation(Required=false)]
         public List<string> AiProtocols { get; set; }

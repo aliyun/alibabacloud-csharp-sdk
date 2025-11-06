@@ -2381,6 +2381,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["backendConfig"] = request.BackendConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateFromType))
+            {
+                body["createFromType"] = request.CreateFromType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -2466,6 +2470,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackendConfig))
             {
                 body["backendConfig"] = request.BackendConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateFromType))
+            {
+                body["createFromType"] = request.CreateFromType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -12563,6 +12571,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["backendConfig"] = request.BackendConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateFromType))
+            {
+                body["createFromType"] = request.CreateFromType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -12640,6 +12652,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackendConfig))
             {
                 body["backendConfig"] = request.BackendConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateFromType))
+            {
+                body["createFromType"] = request.CreateFromType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {

@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         }
 
+        [NameInMap("createFromType")]
+        [Validation(Required=false)]
+        public string CreateFromType { get; set; }
+
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
