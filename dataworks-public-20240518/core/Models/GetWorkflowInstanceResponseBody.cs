@@ -120,6 +120,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1000</para>
+            /// </summary>
             [NameInMap("Owner")]
             [Validation(Required=false)]
             public string Owner { get; set; }
@@ -172,6 +176,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<GetWorkflowInstanceResponseBodyWorkflowInstanceTags> Tags { get; set; }
             public class GetWorkflowInstanceResponseBodyWorkflowInstanceTags : TeaModel {
                 /// <summary>
+                /// <para>The key of a tag.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>key1</para>
                 /// </summary>
@@ -180,6 +186,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The value of a tag.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>value1</para>
                 /// </summary>
@@ -192,11 +200,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The type of the workflow instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Normal</description></item>
-            /// <item><description>Manual</description></item>
-            /// <item><description>SmokeTest</description></item>
-            /// <item><description>SupplementData</description></item>
-            /// <item><description>ManualWorkflow</description></item>
+            /// <item><description>Normal: Scheduled execution</description></item>
+            /// <item><description>Manual: Manually triggered node</description></item>
+            /// <item><description>SmokeTest: Testing</description></item>
+            /// <item><description>SupplementData: Data backfill</description></item>
+            /// <item><description>ManualWorkflow: Manually triggered workflow</description></item>
+            /// <item><description>TriggerWorkflow: Triggered Workflow</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -223,6 +232,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string WorkflowParameters { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1234</para>
+            /// </summary>
             [NameInMap("WorkflowTaskInstanceId")]
             [Validation(Required=false)]
             public long? WorkflowTaskInstanceId { get; set; }

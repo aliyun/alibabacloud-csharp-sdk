@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListTaskInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination details.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
@@ -302,6 +302,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
+                /// <para>The script parameter list.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>para1=val1 para2=val2</para>
                 /// </summary>
@@ -423,6 +425,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string TriggerType { get; set; }
 
                 /// <summary>
+                /// <para>The timestamp for when it started waiting for resources.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
                 /// </summary>
@@ -431,6 +435,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? WaitingResourceTime { get; set; }
 
                 /// <summary>
+                /// <para>The timestamp for when it started waiting for the scheduled time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
                 /// </summary>

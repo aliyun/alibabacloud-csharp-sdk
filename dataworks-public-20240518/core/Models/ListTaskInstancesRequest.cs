@@ -126,6 +126,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>The status of the task instance.</para>
+        /// <list type="bullet">
+        /// <item><description><c>NotRun</c>: Not started</description></item>
+        /// <item><description><c>Running</c></description></item>
+        /// <item><description><c>Failure</c></description></item>
+        /// <item><description><c>Success</c></description></item>
+        /// <item><description><c>WaitTime</c>: Awaiting scheduled time</description></item>
+        /// <item><description><c>WaitResource</c>: Awaiting resources</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -222,11 +232,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SmokeTest</description></item>
-        /// <item><description>Manual</description></item>
-        /// <item><description>SupplementData</description></item>
-        /// <item><description>ManualWorkflow</description></item>
-        /// <item><description>Normal</description></item>
+        /// <item><description>SmokeTest: Testing</description></item>
+        /// <item><description>Manual: Manually triggered node</description></item>
+        /// <item><description>SupplementData: Data backfill</description></item>
+        /// <item><description>ManualWorkflow: Manually triggered workflow</description></item>
+        /// <item><description>Normal: Scheduled execution</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

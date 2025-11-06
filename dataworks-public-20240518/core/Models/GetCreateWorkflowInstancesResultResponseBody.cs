@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of asynchronously creating a workflow instance.</para>
+        /// <para>The creation result of the workflow instance.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]

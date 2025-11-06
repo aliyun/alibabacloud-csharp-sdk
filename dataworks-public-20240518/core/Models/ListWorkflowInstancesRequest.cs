@@ -104,6 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <item><description>SmokeTest: Smoke test</description></item>
         /// <item><description>SupplementData: Data backfill</description></item>
         /// <item><description>ManualWorkflow: Manually triggered workflow</description></item>
+        /// <item><description>TriggerWorkflow: Triggered Workflow</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

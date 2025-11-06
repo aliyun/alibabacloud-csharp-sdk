@@ -1,3 +1,8 @@
+2025-11-06 Version: 4.5.0
+- Support API ListResourceGroupAssociateProjects.
+- Support API ListResourceGroupMetricData.
+
+
 2025-10-29 Version: 4.4.1
 - Update API GetCreateWorkflowInstancesResult: add response parameters Body.Result.WorkflowTaskInstanceIds.
 - Update API GetWorkflowInstance: add response parameters Body.WorkflowInstance.Owner.
