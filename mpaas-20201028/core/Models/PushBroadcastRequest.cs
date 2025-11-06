@@ -20,9 +20,17 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("BindEndTime")]
+        [Validation(Required=false)]
+        public long? BindEndTime { get; set; }
+
         [NameInMap("BindPeriod")]
         [Validation(Required=false)]
         public int? BindPeriod { get; set; }
+
+        [NameInMap("BindStartTime")]
+        [Validation(Required=false)]
+        public long? BindStartTime { get; set; }
 
         [NameInMap("ChannelId")]
         [Validation(Required=false)]
@@ -60,6 +68,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [NameInMap("Msgkey")]
         [Validation(Required=false)]
         public string Msgkey { get; set; }
+
+        [NameInMap("NotifyLevel")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> NotifyLevel { get; set; }
 
         [NameInMap("NotifyType")]
         [Validation(Required=false)]
@@ -108,6 +120,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public Dictionary<string, object> ThirdChannelCategory { get; set; }
 
+        [NameInMap("TimeMode")]
+        [Validation(Required=false)]
+        public int? TimeMode { get; set; }
+
         [NameInMap("TransparentMessagePayload")]
         [Validation(Required=false)]
         public object TransparentMessagePayload { get; set; }
@@ -116,9 +132,17 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string TransparentMessageUrgency { get; set; }
 
+        [NameInMap("UnBindEndTime")]
+        [Validation(Required=false)]
+        public long? UnBindEndTime { get; set; }
+
         [NameInMap("UnBindPeriod")]
         [Validation(Required=false)]
         public long? UnBindPeriod { get; set; }
+
+        [NameInMap("UnBindStartTime")]
+        [Validation(Required=false)]
+        public long? UnBindStartTime { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

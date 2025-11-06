@@ -8,31 +8,42 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
-    public class UploadUserAppToMsaRequest : TeaModel {
+    public class ListTemplatePageRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <b>Example:</b>
+        /// <para>ALIPUBE5C3F6D091419</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("FileName")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public string FileName { get; set; }
-
-        [NameInMap("FileUrl")]
-        [Validation(Required=false)]
-        public string FileUrl { get; set; }
+        public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>RTHDCODI</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string MiChannelId { get; set; }
 
+        [NameInMap("NotifyLevel")]
+        [Validation(Required=false)]
+        public string NotifyLevelShrink { get; set; }
+
         [NameInMap("NotifyType")]
         [Validation(Required=false)]
         public string NotifyType { get; set; }

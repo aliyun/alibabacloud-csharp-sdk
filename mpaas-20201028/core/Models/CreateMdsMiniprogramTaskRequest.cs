@@ -25,9 +25,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string GreyNum { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+        [NameInMap("H5Id")]
+        [Validation(Required=false)]
+        public string H5Id { get; set; }
+
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }

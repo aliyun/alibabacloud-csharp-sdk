@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string FileUrl { get; set; }
 
+        [NameInMap("HarmonyLabel")]
+        [Validation(Required=false)]
+        public string HarmonyLabel { get; set; }
+
         [NameInMap("IconFileUrl")]
         [Validation(Required=false)]
         public string IconFileUrl { get; set; }
@@ -56,6 +60,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [NameInMap("IsEnterprise")]
         [Validation(Required=false)]
         public int? IsEnterprise { get; set; }
+
+        [NameInMap("LargeIconUrl")]
+        [Validation(Required=false)]
+        public string LargeIconUrl { get; set; }
 
         [NameInMap("NeedCheck")]
         [Validation(Required=false)]
