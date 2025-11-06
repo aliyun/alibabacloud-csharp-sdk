@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EventId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
+        [NameInMap("EventSource")]
+        [Validation(Required=false)]
+        public string EventSource { get; set; }
+
+        /// <summary>
         /// <para>The language type for request and response, default is <b>zh</b>. Values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>

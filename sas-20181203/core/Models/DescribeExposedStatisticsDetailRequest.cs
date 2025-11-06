@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedStatisticsDetailRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("Criteria")]
+        [Validation(Required=false)]
+        public string Criteria { get; set; }
+
+        /// <summary>
         /// <para>The number of the page to return.</para>
         /// 
         /// <b>Example:</b>
@@ -85,6 +93,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("StatisticsTypeInstanceValue")]
         [Validation(Required=false)]
         public string StatisticsTypeInstanceValue { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>c9107c04-942f-40c1-981a-f1c1***</para>
+        /// </summary>
+        [NameInMap("Uuid")]
+        [Validation(Required=false)]
+        public string Uuid { get; set; }
 
     }
 

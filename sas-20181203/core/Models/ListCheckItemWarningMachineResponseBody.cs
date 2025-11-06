@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<ListCheckItemWarningMachineResponseBodyList> List { get; set; }
         public class ListCheckItemWarningMachineResponseBodyList : TeaModel {
+            [NameInMap("AssetType")]
+            [Validation(Required=false)]
+            public string AssetType { get; set; }
+
             /// <summary>
             /// <para>The edition of Security Center that is authorized to protect the asset. Valid values:</para>
             /// <list type="bullet">

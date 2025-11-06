@@ -158,6 +158,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExposureTypeInstanceName { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>80</para>
+            /// </summary>
+            [NameInMap("ForwardPort")]
+            [Validation(Required=false)]
+            public string ForwardPort { get; set; }
+
+            /// <summary>
             /// <para>The region ID of the asset.</para>
             /// 
             /// <b>Example:</b>
