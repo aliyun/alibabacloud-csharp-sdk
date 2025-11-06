@@ -109,6 +109,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>2020-08-14T05:58:42Z</para>
+            /// </summary>
+            [NameInMap("CreationTime")]
+            [Validation(Required=false)]
+            public string CreationTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>polar.pg.g8.8xlarge.gu30</para>
             /// </summary>
             [NameInMap("DBNodeClass")]

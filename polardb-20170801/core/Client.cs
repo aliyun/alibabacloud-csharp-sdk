@@ -29244,6 +29244,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DescribeRdsVSwitchsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询vpc</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRdsVpcsRequest
         /// </param>
@@ -29309,6 +29314,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeRdsVpcsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询vpc</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRdsVpcsRequest
         /// </param>
@@ -29374,6 +29384,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeRdsVpcsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询vpc</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRdsVpcsRequest
         /// </param>
@@ -29387,6 +29402,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return DescribeRdsVpcsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询vpc</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRdsVpcsRequest
         /// </param>
