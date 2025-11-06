@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string DtsJobId { get; set; }
 
+        [NameInMap("RagInstanceId")]
+        [Validation(Required=false)]
+        public string RagInstanceId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
