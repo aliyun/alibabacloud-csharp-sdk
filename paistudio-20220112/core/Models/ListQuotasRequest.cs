@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListQuotasRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>RayCluster</para>
+        /// </summary>
+        [NameInMap("ClusterType")]
+        [Validation(Required=false)]
+        public string ClusterType { get; set; }
+
         [NameInMap("HasResource")]
         [Validation(Required=false)]
         public string HasResource { get; set; }

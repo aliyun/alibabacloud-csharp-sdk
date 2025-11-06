@@ -613,6 +613,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             {
                 body["AllocateStrategy"] = request.AllocateStrategy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
+            {
+                body["ClusterSpec"] = request.ClusterSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -694,6 +698,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllocateStrategy))
             {
                 body["AllocateStrategy"] = request.AllocateStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
+            {
+                body["ClusterSpec"] = request.ClusterSpec;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -5149,6 +5157,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
+            {
+                query["ClusterType"] = request.ClusterType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasResource))
             {
                 query["HasResource"] = request.HasResource;
@@ -5255,6 +5267,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
+            {
+                query["ClusterType"] = request.ClusterType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasResource))
             {
                 query["HasResource"] = request.HasResource;

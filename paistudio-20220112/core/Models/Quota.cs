@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string QueueStrategy { get; set; }
 
+        [NameInMap("QuotaCluster")]
+        [Validation(Required=false)]
+        public QuotaCluster QuotaCluster { get; set; }
+
         [NameInMap("QuotaConfig")]
         [Validation(Required=false)]
         public QuotaConfig QuotaConfig { get; set; }

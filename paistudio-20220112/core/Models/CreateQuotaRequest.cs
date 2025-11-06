@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string AllocateStrategy { get; set; }
 
+        [NameInMap("ClusterSpec")]
+        [Validation(Required=false)]
+        public ClusterSpec ClusterSpec { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>this is a test quota</para>
