@@ -31,6 +31,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             }
 
+            [NameInMap("CfwTotalGeneralInstanceRegionStatistic")]
+            [Validation(Required=false)]
+            public List<DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwTotalGeneralInstanceRegionStatistic> CfwTotalGeneralInstanceRegionStatistic { get; set; }
+            public class DescribeAssetStatisticResponseBodyGeneralInstanceSpecStatisticCfwTotalGeneralInstanceRegionStatistic : TeaModel {
+                [NameInMap("MemberList")]
+                [Validation(Required=false)]
+                public List<string> MemberList { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-shanghai</para>
+                /// </summary>
+                [NameInMap("RegionNo")]
+                [Validation(Required=false)]
+                public string RegionNo { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
