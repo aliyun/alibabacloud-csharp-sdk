@@ -183,6 +183,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string SpecificationType { get; set; }
 
+                [NameInMap("ToolDecryptStatus")]
+                [Validation(Required=false)]
+                public string ToolDecryptStatus { get; set; }
+
                 [NameInMap("Tools")]
                 [Validation(Required=false)]
                 public List<GetNacosMcpServerResponseBodyDataToolSpecTools> Tools { get; set; }
