@@ -1,3 +1,7 @@
+2025-11-06 Version: 5.1.0
+- Support API CreateImageBuild.
+
+
 2025-10-30 Version: 5.0.2
 - Generated csharp 2021-02-04 for AIWorkSpace.
 

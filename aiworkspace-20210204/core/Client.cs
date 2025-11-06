@@ -2668,6 +2668,220 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建镜像构建任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageBuildRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageBuildResponse
+        /// </returns>
+        public CreateImageBuildResponse CreateImageBuildWithOptions(CreateImageBuildRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildConfig))
+            {
+                body["BuildConfig"] = request.BuildConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Image))
+            {
+                body["Image"] = request.Image;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageBuildJobName))
+            {
+                body["ImageBuildJobName"] = request.ImageBuildJobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverwriteImageTag))
+            {
+                body["OverwriteImageTag"] = request.OverwriteImageTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resource))
+            {
+                body["Resource"] = request.Resource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetRegistry))
+            {
+                body["TargetRegistry"] = request.TargetRegistry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserVpc))
+            {
+                body["UserVpc"] = request.UserVpc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateImageBuild",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/imagebuilds",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateImageBuildResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建镜像构建任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageBuildRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageBuildResponse
+        /// </returns>
+        public async Task<CreateImageBuildResponse> CreateImageBuildWithOptionsAsync(CreateImageBuildRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BuildConfig))
+            {
+                body["BuildConfig"] = request.BuildConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Image))
+            {
+                body["Image"] = request.Image;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageBuildJobName))
+            {
+                body["ImageBuildJobName"] = request.ImageBuildJobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverwriteImageTag))
+            {
+                body["OverwriteImageTag"] = request.OverwriteImageTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resource))
+            {
+                body["Resource"] = request.Resource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetRegistry))
+            {
+                body["TargetRegistry"] = request.TargetRegistry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserVpc))
+            {
+                body["UserVpc"] = request.UserVpc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateImageBuild",
+                Version = "2021-02-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/imagebuilds",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateImageBuildResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建镜像构建任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageBuildRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageBuildResponse
+        /// </returns>
+        public CreateImageBuildResponse CreateImageBuild(CreateImageBuildRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateImageBuildWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建镜像构建任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageBuildRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageBuildResponse
+        /// </returns>
+        public async Task<CreateImageBuildResponse> CreateImageBuildAsync(CreateImageBuildRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateImageBuildWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds a user to a workspace as a member. You can add multiple users as members.</para>
         /// </summary>
         /// 
