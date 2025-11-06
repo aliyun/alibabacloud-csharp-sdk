@@ -21,7 +21,6 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         /// <summary>
         /// <para>The instances that you want to restart. Separate multiple instance names with commas (,). For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>foo-rdsbxxxx,foo-rdsaxxxx</para>
@@ -29,6 +28,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
         public string InstanceList { get; set; }
+
+        [NameInMap("IsReplica")]
+        [Validation(Required=false)]
+        public bool? IsReplica { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to restart only the container process without recreating the instance. Default value: false. Valid values: true and false.</para>

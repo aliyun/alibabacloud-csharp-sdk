@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public float? CurrentAmount { get; set; }
 
+        [NameInMap("Detached")]
+        [Validation(Required=false)]
+        public bool? Detached { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>192.168.1.100</para>
@@ -65,6 +69,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? IsLatest { get; set; }
 
+        [NameInMap("IsReplica")]
+        [Validation(Required=false)]
+        public bool? IsReplica { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>false</para>
@@ -104,6 +112,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("Reason")]
         [Validation(Required=false)]
         public string Reason { get; set; }
+
+        [NameInMap("ReplicaName")]
+        [Validation(Required=false)]
+        public string ReplicaName { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

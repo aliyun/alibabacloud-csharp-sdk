@@ -905,6 +905,144 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建故障注入任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateFaultInjectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFaultInjectionResponse
+        /// </returns>
+        public CreateFaultInjectionResponse CreateFaultInjectionWithOptions(string ClusterId, string ServiceName, string InstanceName, CreateFaultInjectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaultArgs))
+            {
+                body["FaultArgs"] = request.FaultArgs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaultType))
+            {
+                body["FaultType"] = request.FaultType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFaultInjection",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceName) + "/faults",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFaultInjectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建故障注入任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateFaultInjectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFaultInjectionResponse
+        /// </returns>
+        public async Task<CreateFaultInjectionResponse> CreateFaultInjectionWithOptionsAsync(string ClusterId, string ServiceName, string InstanceName, CreateFaultInjectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaultArgs))
+            {
+                body["FaultArgs"] = request.FaultArgs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaultType))
+            {
+                body["FaultType"] = request.FaultType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFaultInjection",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceName) + "/faults",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFaultInjectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建故障注入任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateFaultInjectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFaultInjectionResponse
+        /// </returns>
+        public CreateFaultInjectionResponse CreateFaultInjection(string ClusterId, string ServiceName, string InstanceName, CreateFaultInjectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateFaultInjectionWithOptions(ClusterId, ServiceName, InstanceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建故障注入任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateFaultInjectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFaultInjectionResponse
+        /// </returns>
+        public async Task<CreateFaultInjectionResponse> CreateFaultInjectionAsync(string ClusterId, string ServiceName, string InstanceName, CreateFaultInjectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateFaultInjectionWithOptionsAsync(ClusterId, ServiceName, InstanceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a gateway.</para>
         /// </summary>
         /// 
@@ -2961,6 +3099,108 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除故障注入任务</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaultInjectionResponse
+        /// </returns>
+        public DeleteFaultInjectionResponse DeleteFaultInjectionWithOptions(string ClusterId, string ServiceName, string InstanceName, string FaultType, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFaultInjection",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceName) + "/faults/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(FaultType),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFaultInjectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除故障注入任务</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFaultInjectionResponse
+        /// </returns>
+        public async Task<DeleteFaultInjectionResponse> DeleteFaultInjectionWithOptionsAsync(string ClusterId, string ServiceName, string InstanceName, string FaultType, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFaultInjection",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceName) + "/faults/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(FaultType),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFaultInjectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除故障注入任务</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteFaultInjectionResponse
+        /// </returns>
+        public DeleteFaultInjectionResponse DeleteFaultInjection(string ClusterId, string ServiceName, string InstanceName, string FaultType)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteFaultInjectionWithOptions(ClusterId, ServiceName, InstanceName, FaultType, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除故障注入任务</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteFaultInjectionResponse
+        /// </returns>
+        public async Task<DeleteFaultInjectionResponse> DeleteFaultInjectionAsync(string ClusterId, string ServiceName, string InstanceName, string FaultType)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteFaultInjectionWithOptionsAsync(ClusterId, ServiceName, InstanceName, FaultType, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a private gateway.</para>
         /// </summary>
         /// 
@@ -4311,6 +4551,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 query["InstanceList"] = request.InstanceList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsReplica))
+            {
+                query["IsReplica"] = request.IsReplica;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftRestart))
             {
                 query["SoftRestart"] = request.SoftRestart;
@@ -4364,6 +4608,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceList))
             {
                 query["InstanceList"] = request.InstanceList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsReplica))
+            {
+                query["IsReplica"] = request.IsReplica;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftRestart))
             {
@@ -9621,6 +9869,108 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取故障注入信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceInstanceFaultInjectionInfoResponse
+        /// </returns>
+        public ListServiceInstanceFaultInjectionInfoResponse ListServiceInstanceFaultInjectionInfoWithOptions(string ClusterId, string ServiceName, string InstanceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceInstanceFaultInjectionInfo",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceName) + "/faults",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceInstanceFaultInjectionInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取故障注入信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceInstanceFaultInjectionInfoResponse
+        /// </returns>
+        public async Task<ListServiceInstanceFaultInjectionInfoResponse> ListServiceInstanceFaultInjectionInfoWithOptionsAsync(string ClusterId, string ServiceName, string InstanceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceInstanceFaultInjectionInfo",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceName) + "/faults",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceInstanceFaultInjectionInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取故障注入信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListServiceInstanceFaultInjectionInfoResponse
+        /// </returns>
+        public ListServiceInstanceFaultInjectionInfoResponse ListServiceInstanceFaultInjectionInfo(string ClusterId, string ServiceName, string InstanceName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListServiceInstanceFaultInjectionInfoWithOptions(ClusterId, ServiceName, InstanceName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取故障注入信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListServiceInstanceFaultInjectionInfoResponse
+        /// </returns>
+        public async Task<ListServiceInstanceFaultInjectionInfoResponse> ListServiceInstanceFaultInjectionInfoAsync(string ClusterId, string ServiceName, string InstanceName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListServiceInstanceFaultInjectionInfoWithOptionsAsync(ClusterId, ServiceName, InstanceName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries instances of a service.</para>
         /// </summary>
         /// 
@@ -9669,6 +10019,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 query["IsSpot"] = request.IsSpot;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListReplica))
+            {
+                query["ListReplica"] = request.ListReplica;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberType))
             {
                 query["MemberType"] = request.MemberType;
@@ -9684,6 +10038,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicaName))
+            {
+                query["ReplicaName"] = request.ReplicaName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
@@ -9767,6 +10125,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 query["IsSpot"] = request.IsSpot;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListReplica))
+            {
+                query["ListReplica"] = request.ListReplica;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberType))
             {
                 query["MemberType"] = request.MemberType;
@@ -9782,6 +10144,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicaName))
+            {
+                query["ReplicaName"] = request.ReplicaName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
@@ -13010,7 +13376,16 @@ namespace AlibabaCloud.SDK.Eas20210701
         public UpdateServiceInstanceResponse UpdateServiceInstanceWithOptions(string ClusterId, string ServiceName, string InstanceName, UpdateServiceInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsReplica))
+            {
+                query["IsReplica"] = request.IsReplica;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Detach))
+            {
+                body["Detach"] = request.Detach;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hibernate))
             {
                 body["Hibernate"] = request.Hibernate;
@@ -13022,6 +13397,7 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -13060,7 +13436,16 @@ namespace AlibabaCloud.SDK.Eas20210701
         public async Task<UpdateServiceInstanceResponse> UpdateServiceInstanceWithOptionsAsync(string ClusterId, string ServiceName, string InstanceName, UpdateServiceInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsReplica))
+            {
+                query["IsReplica"] = request.IsReplica;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Detach))
+            {
+                body["Detach"] = request.Detach;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hibernate))
             {
                 body["Hibernate"] = request.Hibernate;
@@ -13072,6 +13457,7 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params

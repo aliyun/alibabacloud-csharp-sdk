@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? IsSpot { get; set; }
 
+        [NameInMap("ListReplica")]
+        [Validation(Required=false)]
+        public bool? ListReplica { get; set; }
+
         [NameInMap("MemberType")]
         [Validation(Required=false)]
         public string MemberType { get; set; }
@@ -135,6 +139,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ReplicaName")]
+        [Validation(Required=false)]
+        public string ReplicaName { get; set; }
 
         /// <summary>
         /// <para>The type of the resource group to which the instance belongs.</para>

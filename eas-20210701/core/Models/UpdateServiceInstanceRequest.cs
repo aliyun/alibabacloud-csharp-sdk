@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceInstanceRequest : TeaModel {
+        [NameInMap("IsReplica")]
+        [Validation(Required=false)]
+        public bool? IsReplica { get; set; }
+
+        [NameInMap("Detach")]
+        [Validation(Required=false)]
+        public bool? Detach { get; set; }
+
         [NameInMap("Hibernate")]
         [Validation(Required=false)]
         public bool? Hibernate { get; set; }
