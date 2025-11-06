@@ -1,3 +1,6 @@
+2025-11-06 Version: 2.6.2
+- Generated csharp 2020-01-16 for DAS.
+
 2025-11-04 Version: 2.6.1
 - Generated csharp 2020-01-16 for DAS.
 
