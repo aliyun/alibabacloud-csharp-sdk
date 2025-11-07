@@ -2044,12 +2044,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enrich supports two modes:</para>
-        /// <ol>
-        /// <item><description>mode1: enter solution_id returned by Search.</description></item>
-        /// <item><description>mode2: enter journeyParamList.
-        /// If you already confirm which flight to fly with, then you can use mode2, otherwise, use mode1(search first, then chose one solution_ID and Enrich).</description></item>
-        /// </ol>
+        /// <para>Choose either <c>solution_id</c> or <c>journey_param_list</c> in the parameters, and <c>solution_id</c> needs to be obtained from the Search interface.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2139,12 +2134,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enrich supports two modes:</para>
-        /// <ol>
-        /// <item><description>mode1: enter solution_id returned by Search.</description></item>
-        /// <item><description>mode2: enter journeyParamList.
-        /// If you already confirm which flight to fly with, then you can use mode2, otherwise, use mode1(search first, then chose one solution_ID and Enrich).</description></item>
-        /// </ol>
+        /// <para>Choose either <c>solution_id</c> or <c>journey_param_list</c> in the parameters, and <c>solution_id</c> needs to be obtained from the Search interface.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2234,12 +2224,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enrich supports two modes:</para>
-        /// <ol>
-        /// <item><description>mode1: enter solution_id returned by Search.</description></item>
-        /// <item><description>mode2: enter journeyParamList.
-        /// If you already confirm which flight to fly with, then you can use mode2, otherwise, use mode1(search first, then chose one solution_ID and Enrich).</description></item>
-        /// </ol>
+        /// <para>Choose either <c>solution_id</c> or <c>journey_param_list</c> in the parameters, and <c>solution_id</c> needs to be obtained from the Search interface.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2263,12 +2248,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enrich supports two modes:</para>
-        /// <ol>
-        /// <item><description>mode1: enter solution_id returned by Search.</description></item>
-        /// <item><description>mode2: enter journeyParamList.
-        /// If you already confirm which flight to fly with, then you can use mode2, otherwise, use mode1(search first, then chose one solution_ID and Enrich).</description></item>
-        /// </ol>
+        /// <para>Choose either <c>solution_id</c> or <c>journey_param_list</c> in the parameters, and <c>solution_id</c> needs to be obtained from the Search interface.</para>
         /// </description>
         /// 
         /// <param name="request">

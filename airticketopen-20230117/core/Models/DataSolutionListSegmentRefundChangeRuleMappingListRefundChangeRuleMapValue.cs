@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue : TeaModel {
         /// <summary>
-        /// <para>refund rule for fully-unused tickets</para>
+        /// <para>Full unused ticket refund rules</para>
         /// </summary>
         [NameInMap("refund_rule_all_unused_list")]
         [Validation(Required=false)]
         public List<DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueRefundRuleAllUnusedList> RefundRuleAllUnusedList { get; set; }
         public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueRefundRuleAllUnusedList : TeaModel {
             /// <summary>
-            /// <para>type: 0 - fully-unused ticket; 1 - partially used ticket</para>
+            /// <para>The type of itinerary this refund rule applies to 0: fully unused; 1: partially unused</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? Type { get; set; }
 
             /// <summary>
-            /// <para>time unit: day/hour</para>
+            /// <para>Time unit: day/hour</para>
             /// 
             /// <b>Example:</b>
             /// <para>hour</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string TimeUnit { get; set; }
 
             /// <summary>
-            /// <para>applicable refund rule start time, time unit (day/hour)</para>
+            /// <para>The start time of the refund time interval for this refund rule, in units of (days/hours)</para>
             /// 
             /// <b>Example:</b>
             /// <para>36</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleStartTime { get; set; }
 
             /// <summary>
-            /// <para>applicable refund rule end time, time unit (day/hour)</para>
+            /// <para>The end time of the refund time interval for this refund rule, in units of (days/hours)</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleEndTime { get; set; }
 
             /// <summary>
-            /// <para>whether refundable X-Y hour(day) before departure</para>
+            /// <para>Whether a refund is allowed X-Y hours (days) before departure</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public bool? CanRefund { get; set; }
 
             /// <summary>
-            /// <para>refund fee X-Y hour(day) before departure</para>
+            /// <para>Refund fee X-Y hours (days) before departure</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public double? RefundFee { get; set; }
 
             /// <summary>
-            /// <para>whether tax is fully refundable X-Y hour(day) before departure</para>
+            /// <para>Whether full tax refund is allowed X-Y hours (days) before departure</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public bool? CanReturnAllTax { get; set; }
 
             /// <summary>
-            /// <para>tax amount refundable X-Y hour(day) before departure</para>
+            /// <para>Partial tax refund amount X-Y hours (days) before departure</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -99,14 +99,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>refund rule for partially-used tickets</para>
+        /// <para>Partial unused ticket refund rules</para>
         /// </summary>
         [NameInMap("refund_rule_part_unused_list")]
         [Validation(Required=false)]
         public List<DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueRefundRulePartUnusedList> RefundRulePartUnusedList { get; set; }
         public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueRefundRulePartUnusedList : TeaModel {
             /// <summary>
-            /// <para>type: 0 - fully-unused ticket; 1 - partially used ticket</para>
+            /// <para>The type of itinerary usage for this refund rule. 0: Entirely unused; 1: Partially unused</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? Type { get; set; }
 
             /// <summary>
-            /// <para>time unit: day/hour</para>
+            /// <para>Time unit: day/hour</para>
             /// 
             /// <b>Example:</b>
             /// <para>hour</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string TimeUnit { get; set; }
 
             /// <summary>
-            /// <para>applicable refund rule start time, time unit (day/hour)</para>
+            /// <para>The start time of the refund time interval for this refund rule, in units of days/hours</para>
             /// 
             /// <b>Example:</b>
             /// <para>36</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleStartTime { get; set; }
 
             /// <summary>
-            /// <para>applicable refund rule end time, time unit (day/hour)</para>
+            /// <para>The end time of the refund time interval for this refund rule, in units of days/hours</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleEndTime { get; set; }
 
             /// <summary>
-            /// <para>whether refundable X-Y hour(day) before departure</para>
+            /// <para>Whether a refund is allowed X-Y hours (days) before departure</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public bool? CanRefund { get; set; }
 
             /// <summary>
-            /// <para>refund fee X-Y hour(day) before departure</para>
+            /// <para>Refund fee X-Y hours (days) before departure</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public double? RefundFee { get; set; }
 
             /// <summary>
-            /// <para>whether tax is fully refundable X-Y hour(day) before departure</para>
+            /// <para>Whether full tax refund is allowed X-Y hours (days) before departure</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public bool? CanReturnAllTax { get; set; }
 
             /// <summary>
-            /// <para>tax amount refundable X-Y hour(day) before departure</para>
+            /// <para>Partial tax refund amount X-Y hours (days) before departure</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -188,14 +188,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>change rule for inbound segment unused tickets</para>
+        /// <para>Unused return flight change rules</para>
         /// </summary>
         [NameInMap("change_rule_in_unused_list")]
         [Validation(Required=false)]
         public List<DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueChangeRuleInUnusedList> ChangeRuleInUnusedList { get; set; }
         public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueChangeRuleInUnusedList : TeaModel {
             /// <summary>
-            /// <para>type: 2 - outbound segment unused; 3 - inbound segment unused</para>
+            /// <para>Type of itinerary usage for the change rule 2: outbound unused; 3: return unused</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? Type { get; set; }
 
             /// <summary>
-            /// <para>time unit: day/hour</para>
+            /// <para>Time unit: day/hour</para>
             /// 
             /// <b>Example:</b>
             /// <para>hour</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string TimeUnit { get; set; }
 
             /// <summary>
-            /// <para>applicable change rule start time, time unit (day/hour)</para>
+            /// <para>Start time of the refund time interval, in units of days/hours, to which this refund rule applies</para>
             /// 
             /// <b>Example:</b>
             /// <para>36</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleStartTime { get; set; }
 
             /// <summary>
-            /// <para>applicable change rule end time, time unit (day/hour)</para>
+            /// <para>End time of the refund time interval, in units of days/hours, to which this refund rule applies</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleEndTime { get; set; }
 
             /// <summary>
-            /// <para>whether changeable X-Y hour(day) before departure</para>
+            /// <para>Whether it is possible to change the ticket X-Y hours (days) before departure</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public bool? CanChange { get; set; }
 
             /// <summary>
-            /// <para>change fee X-Y hour(day) before departure</para>
+            /// <para>Change fee X-Y hours (days) before departure</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -257,14 +257,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>change rule for outbound segment unused tickets</para>
+        /// <para>Unused outbound change rules</para>
         /// </summary>
         [NameInMap("change_rule_out_unused_list")]
         [Validation(Required=false)]
         public List<DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueChangeRuleOutUnusedList> ChangeRuleOutUnusedList { get; set; }
         public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueChangeRuleOutUnusedList : TeaModel {
             /// <summary>
-            /// <para>type: 2 - outbound segment unused; 3 - inbound segment unused</para>
+            /// <para>The type of itinerary usage for this change rule 2: unused outbound; 3: unused return</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? Type { get; set; }
 
             /// <summary>
-            /// <para>time unit: day/hour</para>
+            /// <para>Time unit: day/hour</para>
             /// 
             /// <b>Example:</b>
             /// <para>hour</para>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string TimeUnit { get; set; }
 
             /// <summary>
-            /// <para>applicable change rule start time, time unit (day/hour)</para>
+            /// <para>Start time of the refund time interval for this refund rule, in days/hours</para>
             /// 
             /// <b>Example:</b>
             /// <para>36</para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleStartTime { get; set; }
 
             /// <summary>
-            /// <para>applicable change rule end time, time unit (day/hour)</para>
+            /// <para>End time of the refund time interval for this refund rule, in days/hours</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleEndTime { get; set; }
 
             /// <summary>
-            /// <para>whether changeable X-Y hour(day) before departure</para>
+            /// <para>Whether it is possible to change the ticket X-Y hours (days) before departure</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public bool? CanChange { get; set; }
 
             /// <summary>
-            /// <para>change fee X-Y hour(day) before departure</para>
+            /// <para>Change fee X-Y hours (days) before departure</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

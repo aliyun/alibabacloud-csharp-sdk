@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// <para>access token</para>
+        /// <para>access_token</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string XAcsAirticketAccessToken { get; set; }
 
         /// <summary>
-        /// <para>language code, defaults to the buyer\&quot;s account configuration</para>
+        /// <para>Multi-language, default is based on the buyer\&quot;s account configuration</para>
         /// 
         /// <b>Example:</b>
         /// <para>en_US</para>
