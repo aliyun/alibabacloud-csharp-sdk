@@ -1,3 +1,6 @@
+2025-11-07 Version: 2.1.14
+- Generated csharp 2022-01-12 for PaiStudio.
+
 2025-11-06 Version: 2.1.13
 - Update API CreateQuota: add request parameters body.ClusterSpec.
 - Update API GetQuota: add response parameters Body.QuotaCluster.
