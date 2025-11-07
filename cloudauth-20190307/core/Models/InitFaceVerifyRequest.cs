@@ -248,6 +248,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string FaceGuardOutput { get; set; }
 
+        [NameInMap("H5DegradeConfirmBtn")]
+        [Validation(Required=false)]
+        public string H5DegradeConfirmBtn { get; set; }
+
         /// <summary>
         /// <para>User\&quot;s IP address.</para>
         /// 
