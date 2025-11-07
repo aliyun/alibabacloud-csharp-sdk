@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class UpdateInstancePackageStateRequest : TeaModel {
+        [NameInMap("ConfigurationInfo")]
+        [Validation(Required=false)]
+        public string ConfigurationInfo { get; set; }
+
         /// <summary>
         /// <para>The operation type.</para>
         /// <para>Valid values:</para>

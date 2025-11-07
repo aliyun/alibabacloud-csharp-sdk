@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public List<ListInstancePackageStatesResponseBodyPackageStates> PackageStates { get; set; }
         public class ListInstancePackageStatesResponseBodyPackageStates : TeaModel {
+            [NameInMap("ConfigurationInfo")]
+            [Validation(Required=false)]
+            public string ConfigurationInfo { get; set; }
+
             /// <summary>
             /// <para>Description</para>
             /// 

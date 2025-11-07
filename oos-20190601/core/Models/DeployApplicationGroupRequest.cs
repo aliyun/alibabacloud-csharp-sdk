@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("RevisionId")]
+        [Validation(Required=false)]
+        public string RevisionId { get; set; }
+
     }
 
 }

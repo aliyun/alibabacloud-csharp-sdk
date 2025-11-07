@@ -1,3 +1,25 @@
+2025-11-07 Version: 3.6.0
+- Support API CheckGitRepoFileExists.
+- Support API CheckGitRepositoryExists.
+- Support API CreateGitRepository.
+- Support API GetGitBranch.
+- Support API GetGitRepository.
+- Support API ListGitAccounts.
+- Support API ListGitBranches.
+- Support API ListGitOrganizations.
+- Support API ListGitRepositories.
+- Support API ListGitRepositoryContents.
+- Update API DeployApplicationGroup: add request parameters RevisionId.
+- Update API GetApplicationGroup: add response parameters Body.ApplicationGroup.DeployedRevisionIds.
+- Update API GetApplicationGroup: add response parameters Body.ApplicationGroup.ExecutionId.
+- Update API GetTemplate: add response parameters Body.Template.SharedAccounts.
+- Update API ListApplicationGroups: add response parameters Body.ApplicationGroups.$.DeployedRevisionIds.
+- Update API ListApplicationGroups: add response parameters Body.ApplicationGroups.$.ExecutionId.
+- Update API ListInstancePackageStates: add response parameters Body.PackageStates.$.ConfigurationInfo.
+- Update API UpdateApplicationGroup: add request parameters DeployedRevisionId.
+- Update API UpdateInstancePackageState: add request parameters ConfigurationInfo.
+
+
 2025-06-12 Version: 3.5.2
 - Update API GetApplicationGroup: add response parameters Body.ApplicationGroup.ErrorDetail.
 - Update API GetApplicationGroup: add response parameters Body.ApplicationGroup.ErrorType.

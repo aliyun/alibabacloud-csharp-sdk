@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
+        [NameInMap("DeployedRevisionId")]
+        [Validation(Required=false)]
+        public string DeployedRevisionId { get; set; }
+
         /// <summary>
         /// <para>The name of the application group.</para>
         /// <para>This parameter is required.</para>

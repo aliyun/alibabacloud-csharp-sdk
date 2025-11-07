@@ -106,6 +106,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string ShareType { get; set; }
 
+            [NameInMap("SharedAccounts")]
+            [Validation(Required=false)]
+            public string SharedAccounts { get; set; }
+
             /// <summary>
             /// <para>The tag keys and values. The number of key-value pairs ranges from 1 to 20.</para>
             /// 

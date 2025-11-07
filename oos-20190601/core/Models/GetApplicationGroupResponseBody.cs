@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string DeployRegionId { get; set; }
 
+            [NameInMap("DeployedRevisionIds")]
+            [Validation(Required=false)]
+            public string DeployedRevisionIds { get; set; }
+
             /// <summary>
             /// <para>The description of the application group.</para>
             /// 
@@ -103,6 +107,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [NameInMap("ErrorType")]
             [Validation(Required=false)]
             public string ErrorType { get; set; }
+
+            [NameInMap("ExecutionId")]
+            [Validation(Required=false)]
+            public string ExecutionId { get; set; }
 
             /// <summary>
             /// <para>The tag key.</para>
