@@ -20706,7 +20706,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取架构文件套餐使用情况</para>
+        /// <para>Queries the usage of the upload file quota for API security schema verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20752,7 +20752,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取架构文件套餐使用情况</para>
+        /// <para>Queries the usage of the upload file quota for API security schema verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20798,7 +20798,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取架构文件套餐使用情况</para>
+        /// <para>Queries the usage of the upload file quota for API security schema verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20816,7 +20816,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取架构文件套餐使用情况</para>
+        /// <para>Queries the usage of the upload file quota for API security schema verification.</para>
         /// </summary>
         /// 
         /// <param name="request">

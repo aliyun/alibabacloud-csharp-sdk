@@ -163,6 +163,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            [NameInMap("IpVersionPolicy")]
+            [Validation(Required=false)]
+            public string IpVersionPolicy { get; set; }
+
             /// <summary>
             /// <para>The name of the origin.</para>
             /// 

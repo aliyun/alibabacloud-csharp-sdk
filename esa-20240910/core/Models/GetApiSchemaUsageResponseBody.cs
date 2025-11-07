@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetApiSchemaUsageResponseBody : TeaModel {
         /// <summary>
+        /// <para>The plan ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>esa-site-agknce3n****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The number of files uploaded for schema verification in the plan instance of the website.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -35,11 +39,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Usage details for websites.</para>
+        /// </summary>
         [NameInMap("Usages")]
         [Validation(Required=false)]
         public List<GetApiSchemaUsageResponseBodyUsages> Usages { get; set; }
         public class GetApiSchemaUsageResponseBodyUsages : TeaModel {
             /// <summary>
+            /// <para>The website ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>40000449</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The website name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The number of files uploaded for the website.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
