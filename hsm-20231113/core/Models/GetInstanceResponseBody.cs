@@ -198,6 +198,10 @@ namespace AlibabaCloud.SDK.Hsm20231113.Models
             [Validation(Required=false)]
             public string TenantIsolationType { get; set; }
 
+            [NameInMap("TpsEnabled")]
+            [Validation(Required=false)]
+            public int? TpsEnabled { get; set; }
+
             /// <summary>
             /// <para>The ID of the vSwitch that is configured for the HSM.</para>
             /// 
