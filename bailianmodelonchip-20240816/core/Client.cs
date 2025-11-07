@@ -499,5 +499,155 @@ namespace AlibabaCloud.SDK.BailianModelOnChip20240816
             return await GetTokenWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>模型类型识别</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModelTypeDetermineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelTypeDetermineResponse
+        /// </returns>
+        public ModelTypeDetermineResponse ModelTypeDetermineWithOptions(ModelTypeDetermineRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModelTypeDetermineShrinkRequest request = new ModelTypeDetermineShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.History))
+            {
+                request.HistoryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.History, "history", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryShrink))
+            {
+                body["history"] = request.HistoryShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputText))
+            {
+                body["inputText"] = request.InputText;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelTypeDetermine",
+                Version = "2024-08-16",
+                Protocol = "HTTPS",
+                Pathname = "/open/api/v1/model/type/determine",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelTypeDetermineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>模型类型识别</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModelTypeDetermineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelTypeDetermineResponse
+        /// </returns>
+        public async Task<ModelTypeDetermineResponse> ModelTypeDetermineWithOptionsAsync(ModelTypeDetermineRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModelTypeDetermineShrinkRequest request = new ModelTypeDetermineShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.History))
+            {
+                request.HistoryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.History, "history", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryShrink))
+            {
+                body["history"] = request.HistoryShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputText))
+            {
+                body["inputText"] = request.InputText;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelTypeDetermine",
+                Version = "2024-08-16",
+                Protocol = "HTTPS",
+                Pathname = "/open/api/v1/model/type/determine",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelTypeDetermineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>模型类型识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelTypeDetermineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelTypeDetermineResponse
+        /// </returns>
+        public ModelTypeDetermineResponse ModelTypeDetermine(ModelTypeDetermineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelTypeDetermineWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>模型类型识别</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelTypeDetermineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelTypeDetermineResponse
+        /// </returns>
+        public async Task<ModelTypeDetermineResponse> ModelTypeDetermineAsync(ModelTypeDetermineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelTypeDetermineWithOptionsAsync(request, headers, runtime);
+        }
+
     }
 }
