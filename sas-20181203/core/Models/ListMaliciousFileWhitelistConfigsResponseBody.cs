@@ -125,6 +125,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Operator { get; set; }
 
+            /// <summary>
+            /// <para>Remark</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }

@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListObjectScanEventRequest : TeaModel {
+        /// <summary>
+        /// <para>Batch operation type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>sha256</b>: Same file content</description></item>
+        /// <item><description><b>eventName</b>: Same alert type</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sha256</para>
+        /// </summary>
         [NameInMap("BatchType")]
         [Validation(Required=false)]
         public string BatchType { get; set; }
@@ -34,6 +44,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>Event ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8925****</para>
+        /// </summary>
         [NameInMap("EventId")]
         [Validation(Required=false)]
         public long? EventId { get; set; }
@@ -132,6 +148,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Source { get; set; }
 
+        /// <summary>
+        /// <para>Event status. The values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: Unprocessed </description></item>
+        /// <item><description><b>1</b>: I have processed manually </description></item>
+        /// <item><description><b>2</b>: Whitelisted </description></item>
+        /// <item><description><b>3</b>: Ignored </description></item>
+        /// <item><description><b>4</b>: Access denied</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }

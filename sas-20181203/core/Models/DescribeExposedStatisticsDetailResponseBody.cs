@@ -158,6 +158,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExposureTypeInstanceName { get; set; }
 
             /// <summary>
+            /// <para>The listener port that is used to redirect HTTP requests.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>80</para>
             /// </summary>

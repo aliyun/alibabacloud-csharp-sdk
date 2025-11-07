@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedStatisticsDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The search condition for components.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -95,6 +97,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StatisticsTypeInstanceValue { get; set; }
 
         /// <summary>
+        /// <para>The UUID of the server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c9107c04-942f-40c1-981a-f1c1***</para>
         /// </summary>

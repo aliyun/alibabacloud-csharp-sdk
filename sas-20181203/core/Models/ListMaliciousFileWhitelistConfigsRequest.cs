@@ -32,8 +32,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string EventName { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para>Event ID. <notice>Field is deprecated.</notice></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
+        /// </summary>
         [NameInMap("IdList")]
         [Validation(Required=false)]
+        [Obsolete]
         public long? IdList { get; set; }
 
         /// <summary>

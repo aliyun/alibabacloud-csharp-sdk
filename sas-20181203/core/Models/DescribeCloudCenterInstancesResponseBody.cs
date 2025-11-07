@@ -453,6 +453,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Mem { get; set; }
 
+            [NameInMap("Namespace")]
+            [Validation(Required=false)]
+            public string Namespace { get; set; }
+
             /// <summary>
             /// <para>The operating system of the asset.</para>
             /// 

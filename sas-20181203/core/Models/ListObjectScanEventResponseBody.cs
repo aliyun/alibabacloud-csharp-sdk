@@ -99,6 +99,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string DisplaySandboxResult { get; set; }
 
+            /// <summary>
+            /// <para>Error message.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>connect timed out</para>
+            /// </summary>
             [NameInMap("ErrorMsg")]
             [Validation(Required=false)]
             public string ErrorMsg { get; set; }
@@ -167,6 +173,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? LastTime { get; set; }
 
+            /// <summary>
+            /// <para>Information on whitelisting rule hits.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><b></b>&amp;nbsp&amp;nbspmd5&amp;nbsp&amp;nbsp contains &amp;nbsp&amp;nbsp23&amp;nbsp&amp;nbsp</para>
+            /// </summary>
             [NameInMap("MatchedWhiteListRuleI18nStr")]
             [Validation(Required=false)]
             public string MatchedWhiteListRuleI18nStr { get; set; }
@@ -181,6 +193,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Md5 { get; set; }
 
+            /// <summary>
+            /// <para>Alarm handling result</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>fail</para>
+            /// </summary>
             [NameInMap("OperateResult")]
             [Validation(Required=false)]
             public string OperateResult { get; set; }
@@ -195,6 +213,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string OssKey { get; set; }
 
+            /// <summary>
+            /// <para>Remark.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
@@ -248,6 +272,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Source { get; set; }
 
+            /// <summary>
+            /// <para>Event status. Valid values::</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Unprocessed </description></item>
+            /// <item><description><b>1</b>: Processed manually </description></item>
+            /// <item><description><b>2</b>: Whitelisted </description></item>
+            /// <item><description><b>3</b>: Ignored </description></item>
+            /// <item><description><b>4</b>: Access denied</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }

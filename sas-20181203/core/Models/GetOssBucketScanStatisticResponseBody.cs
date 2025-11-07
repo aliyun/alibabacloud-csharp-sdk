@@ -66,14 +66,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? NoScanBucket { get; set; }
 
+            /// <summary>
+            /// <para>Postpaid usage count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1000</para>
+            /// </summary>
             [NameInMap("PostPayInvokeCount")]
             [Validation(Required=false)]
             public long? PostPayInvokeCount { get; set; }
 
+            /// <summary>
+            /// <para>Prepaid authorized count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000</para>
+            /// </summary>
             [NameInMap("PrePayAuthCount")]
             [Validation(Required=false)]
             public long? PrePayAuthCount { get; set; }
 
+            /// <summary>
+            /// <para>Prepaid usage count.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("PrePayInvokeCount")]
             [Validation(Required=false)]
             public long? PrePayInvokeCount { get; set; }
