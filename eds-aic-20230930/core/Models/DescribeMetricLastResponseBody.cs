@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     [Validation(Required=false)]
                     public double? Average { get; set; }
 
+                    [NameInMap("GpuId")]
+                    [Validation(Required=false)]
+                    public string GpuId { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>100</para>
