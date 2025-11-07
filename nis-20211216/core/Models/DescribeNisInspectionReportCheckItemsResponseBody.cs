@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>item_ep_high_availability_check_description</para>
+            /// </summary>
+            [NameInMap("DescriptionCode")]
+            [Validation(Required=false)]
+            public string DescriptionCode { get; set; }
+
             [NameInMap("RecommendationList")]
             [Validation(Required=false)]
             public List<DescribeNisInspectionReportCheckItemsResponseBodyCheckItemListRecommendationList> RecommendationList { get; set; }
