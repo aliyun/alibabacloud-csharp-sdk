@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 [Validation(Required=false)]
                 public string NotifyContent { get; set; }
 
+                [NameInMap("NotifyHeader")]
+                [Validation(Required=false)]
+                public string NotifyHeader { get; set; }
+
                 [NameInMap("NotifyResponse")]
                 [Validation(Required=false)]
                 public string NotifyResponse { get; set; }
