@@ -154,6 +154,10 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419.Models
             [Validation(Required=false)]
             public string ResourceDirectoryPath { get; set; }
 
+            [NameInMap("SecureMobilePhone")]
+            [Validation(Required=false)]
+            public string SecureMobilePhone { get; set; }
+
             /// <summary>
             /// <para>The status of the member. Valid values:</para>
             /// <list type="bullet">

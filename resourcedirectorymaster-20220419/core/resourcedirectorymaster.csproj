@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.ResourceDirectoryMaster20220419</AssemblyName>
-    <Version>2.2.1</Version>
+    <Version>2.2.2</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud ResourceDirectoryMaster (20220419) SDK Library for .NET</Description>
