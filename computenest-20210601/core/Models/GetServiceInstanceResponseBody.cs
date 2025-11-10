@@ -89,6 +89,20 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string GrafanaDashBoardUrl { get; set; }
 
+        [NameInMap("GrantedPermission")]
+        [Validation(Required=false)]
+        public GetServiceInstanceResponseBodyGrantedPermission GrantedPermission { get; set; }
+        public class GetServiceInstanceResponseBodyGrantedPermission : TeaModel {
+            [NameInMap("OperationEndTime")]
+            [Validation(Required=false)]
+            public string OperationEndTime { get; set; }
+
+            [NameInMap("PolicyNames")]
+            [Validation(Required=false)]
+            public string PolicyNames { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Indicates whether the hosted O\&amp;M feature is enabled for the service instance. Valid values:</para>
         /// <list type="bullet">
@@ -409,6 +423,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
+
+        [NameInMap("PolicyNames")]
+        [Validation(Required=false)]
+        public string PolicyNames { get; set; }
 
         /// <summary>
         /// <para>The package name.</para>

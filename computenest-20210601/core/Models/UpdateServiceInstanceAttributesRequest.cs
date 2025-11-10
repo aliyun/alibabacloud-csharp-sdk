@@ -19,6 +19,20 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public bool? EnableOperation { get; set; }
 
+        [NameInMap("GrantedPermission")]
+        [Validation(Required=false)]
+        public UpdateServiceInstanceAttributesRequestGrantedPermission GrantedPermission { get; set; }
+        public class UpdateServiceInstanceAttributesRequestGrantedPermission : TeaModel {
+            [NameInMap("OperationEndTime")]
+            [Validation(Required=false)]
+            public string OperationEndTime { get; set; }
+
+            [NameInMap("PolicyNames")]
+            [Validation(Required=false)]
+            public string PolicyNames { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>

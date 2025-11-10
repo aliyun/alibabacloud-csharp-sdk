@@ -96,6 +96,20 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            [NameInMap("GrantedPermission")]
+            [Validation(Required=false)]
+            public ListServiceInstancesResponseBodyServiceInstancesGrantedPermission GrantedPermission { get; set; }
+            public class ListServiceInstancesResponseBodyServiceInstancesGrantedPermission : TeaModel {
+                [NameInMap("OperationEndTime")]
+                [Validation(Required=false)]
+                public string OperationEndTime { get; set; }
+
+                [NameInMap("PolicyNames")]
+                [Validation(Required=false)]
+                public string PolicyNames { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ID of the Alibaba Cloud Marketplace instance.</para>
             /// 
@@ -191,6 +205,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [NameInMap("PayType")]
             [Validation(Required=false)]
             public string PayType { get; set; }
+
+            [NameInMap("PolicyNames")]
+            [Validation(Required=false)]
+            public string PolicyNames { get; set; }
 
             /// <summary>
             /// <para>The deployment progress of the service instance, in percentage.</para>
