@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class VerifySendMessageRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>abc</para>
+        /// </summary>
+        [NameInMap("liteTopicName")]
+        [Validation(Required=false)]
+        public string LiteTopicName { get; set; }
+
+        /// <summary>
         /// <para>The message body.</para>
         /// 
         /// <b>Example:</b>

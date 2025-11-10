@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("liteTopicLagMap")]
+            [Validation(Required=false)]
+            public Dictionary<string, DataLiteTopicLagMapValue> LiteTopicLagMap { get; set; }
+
             /// <summary>
             /// <para>Region ID</para>
             /// 
@@ -62,6 +66,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [NameInMap("topicLagMap")]
             [Validation(Required=false)]
             public Dictionary<string, DataTopicLagMapValue> TopicLagMap { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test1</para>
+            /// </summary>
+            [NameInMap("topicName")]
+            [Validation(Required=false)]
+            public string TopicName { get; set; }
 
             /// <summary>
             /// <para>Total lag count</para>

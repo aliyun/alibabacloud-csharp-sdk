@@ -8,24 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
-    public class GetConsumerGroupLagRequest : TeaModel {
+    public class DataLiteTopicLagMapValue : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>abc</para>
+        /// <para>300</para>
         /// </summary>
-        [NameInMap("liteTopicName")]
+        [NameInMap("readyCount")]
         [Validation(Required=false)]
-        public string LiteTopicName { get; set; }
+        public long? ReadyCount { get; set; }
 
         /// <summary>
-        /// <para>The topic name.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>normal-topic-1</para>
+        /// <para>30</para>
         /// </summary>
-        [NameInMap("topicName")]
+        [NameInMap("deliveryDuration")]
         [Validation(Required=false)]
-        public string TopicName { get; set; }
+        public long? DeliveryDuration { get; set; }
 
     }
 

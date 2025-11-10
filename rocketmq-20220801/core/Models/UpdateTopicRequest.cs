@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
     public class UpdateTopicRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
+        [NameInMap("liteTopicExpiration")]
+        [Validation(Required=false)]
+        public long? LiteTopicExpiration { get; set; }
+
+        /// <summary>
         /// <para>Maximum send message tps</para>
         /// 
         /// <b>Example:</b>

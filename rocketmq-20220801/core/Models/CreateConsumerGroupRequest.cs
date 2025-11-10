@@ -97,6 +97,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public long? MaxReceiveTps { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>CLUSTERING</para>
+        /// </summary>
+        [NameInMap("messageModel")]
+        [Validation(Required=false)]
+        public string MessageModel { get; set; }
+
+        /// <summary>
         /// <para>The description of the consumer group.</para>
         /// 
         /// <b>Example:</b>
@@ -105,6 +113,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [NameInMap("remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test1</para>
+        /// </summary>
+        [NameInMap("topicName")]
+        [Validation(Required=false)]
+        public string TopicName { get; set; }
 
     }
 

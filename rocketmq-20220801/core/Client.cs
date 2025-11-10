@@ -366,9 +366,17 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 body["maxReceiveTps"] = request.MaxReceiveTps;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageModel))
+            {
+                body["messageModel"] = request.MessageModel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 body["remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
+            {
+                body["topicName"] = request.TopicName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -435,9 +443,17 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 body["maxReceiveTps"] = request.MaxReceiveTps;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageModel))
+            {
+                body["messageModel"] = request.MessageModel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 body["remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
+            {
+                body["topicName"] = request.TopicName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1423,6 +1439,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicExpiration))
+            {
+                body["liteTopicExpiration"] = request.LiteTopicExpiration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSendTps))
             {
                 body["maxSendTps"] = request.MaxSendTps;
@@ -1477,6 +1497,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicExpiration))
+            {
+                body["liteTopicExpiration"] = request.LiteTopicExpiration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSendTps))
             {
                 body["maxSendTps"] = request.MaxSendTps;
@@ -2963,6 +2987,108 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询topic可重置时间范围</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumeTimespanResponse
+        /// </returns>
+        public GetConsumeTimespanResponse GetConsumeTimespanWithOptions(string instanceId, string consumerGroupId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetConsumeTimespan",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/consumerGroups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId) + "/consumeTimespan/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetConsumeTimespanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询topic可重置时间范围</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConsumeTimespanResponse
+        /// </returns>
+        public async Task<GetConsumeTimespanResponse> GetConsumeTimespanWithOptionsAsync(string instanceId, string consumerGroupId, string topicName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetConsumeTimespan",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/consumerGroups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId) + "/consumeTimespan/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(topicName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetConsumeTimespanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询topic可重置时间范围</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetConsumeTimespanResponse
+        /// </returns>
+        public GetConsumeTimespanResponse GetConsumeTimespan(string instanceId, string consumerGroupId, string topicName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetConsumeTimespanWithOptions(instanceId, consumerGroupId, topicName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询topic可重置时间范围</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetConsumeTimespanResponse
+        /// </returns>
+        public async Task<GetConsumeTimespanResponse> GetConsumeTimespanAsync(string instanceId, string consumerGroupId, string topicName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetConsumeTimespanWithOptionsAsync(instanceId, consumerGroupId, topicName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a specified consumer group.</para>
         /// </summary>
         /// 
@@ -3113,6 +3239,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicName))
+            {
+                query["liteTopicName"] = request.LiteTopicName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
             {
                 query["topicName"] = request.TopicName;
@@ -3159,6 +3289,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicName))
+            {
+                query["liteTopicName"] = request.LiteTopicName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
             {
                 query["topicName"] = request.TopicName;
@@ -4646,6 +4780,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <para>查询消费者客户端连接信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListConsumerConnectionsRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4656,11 +4793,22 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <returns>
         /// ListConsumerConnectionsResponse
         /// </returns>
-        public ListConsumerConnectionsResponse ListConsumerConnectionsWithOptions(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListConsumerConnectionsResponse ListConsumerConnectionsWithOptions(string instanceId, string consumerGroupId, ListConsumerConnectionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicName))
+            {
+                query["liteTopicName"] = request.LiteTopicName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
+            {
+                query["topicName"] = request.TopicName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4682,6 +4830,9 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <para>查询消费者客户端连接信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListConsumerConnectionsRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4692,11 +4843,22 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <returns>
         /// ListConsumerConnectionsResponse
         /// </returns>
-        public async Task<ListConsumerConnectionsResponse> ListConsumerConnectionsWithOptionsAsync(string instanceId, string consumerGroupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListConsumerConnectionsResponse> ListConsumerConnectionsWithOptionsAsync(string instanceId, string consumerGroupId, ListConsumerConnectionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicName))
+            {
+                query["liteTopicName"] = request.LiteTopicName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
+            {
+                query["topicName"] = request.TopicName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4718,14 +4880,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <para>查询消费者客户端连接信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListConsumerConnectionsRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListConsumerConnectionsResponse
         /// </returns>
-        public ListConsumerConnectionsResponse ListConsumerConnections(string instanceId, string consumerGroupId)
+        public ListConsumerConnectionsResponse ListConsumerConnections(string instanceId, string consumerGroupId, ListConsumerConnectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListConsumerConnectionsWithOptions(instanceId, consumerGroupId, headers, runtime);
+            return ListConsumerConnectionsWithOptions(instanceId, consumerGroupId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4733,14 +4899,18 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <para>查询消费者客户端连接信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListConsumerConnectionsRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListConsumerConnectionsResponse
         /// </returns>
-        public async Task<ListConsumerConnectionsResponse> ListConsumerConnectionsAsync(string instanceId, string consumerGroupId)
+        public async Task<ListConsumerConnectionsResponse> ListConsumerConnectionsAsync(string instanceId, string consumerGroupId, ListConsumerConnectionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListConsumerConnectionsWithOptionsAsync(instanceId, consumerGroupId, headers, runtime);
+            return await ListConsumerConnectionsWithOptionsAsync(instanceId, consumerGroupId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6207,6 +6377,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 query["endTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicName))
+            {
+                query["liteTopicName"] = request.LiteTopicName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
             {
                 query["messageId"] = request.MessageId;
@@ -6276,6 +6450,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicName))
+            {
+                query["liteTopicName"] = request.LiteTopicName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
             {
@@ -6657,6 +6835,168 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListMigrationOperationsWithOptionsAsync(migrationId, stageType, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询迁移列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMigrationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMigrationsResponse
+        /// </returns>
+        public ListMigrationsResponse ListMigrationsWithOptions(ListMigrationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationType))
+            {
+                query["migrationType"] = request.MigrationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["resourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMigrations",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/migrations",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMigrationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询迁移列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMigrationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMigrationsResponse
+        /// </returns>
+        public async Task<ListMigrationsResponse> ListMigrationsWithOptionsAsync(ListMigrationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrationType))
+            {
+                query["migrationType"] = request.MigrationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["resourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMigrations",
+                Version = "2022-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/migrations",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMigrationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询迁移列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMigrationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMigrationsResponse
+        /// </returns>
+        public ListMigrationsResponse ListMigrations(ListMigrationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMigrationsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询迁移列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMigrationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMigrationsResponse
+        /// </returns>
+        public async Task<ListMigrationsResponse> ListMigrationsAsync(ListMigrationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMigrationsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7225,6 +7565,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 query["endTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicName))
+            {
+                query["liteTopicName"] = request.LiteTopicName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
             {
                 query["messageId"] = request.MessageId;
@@ -7294,6 +7638,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicName))
+            {
+                query["liteTopicName"] = request.LiteTopicName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
             {
@@ -9131,6 +9479,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicExpiration))
+            {
+                body["liteTopicExpiration"] = request.LiteTopicExpiration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSendTps))
             {
                 body["maxSendTps"] = request.MaxSendTps;
@@ -9181,6 +9533,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicExpiration))
+            {
+                body["liteTopicExpiration"] = request.LiteTopicExpiration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSendTps))
             {
                 body["maxSendTps"] = request.MaxSendTps;
@@ -9407,6 +9763,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicName))
+            {
+                body["liteTopicName"] = request.LiteTopicName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {
                 body["message"] = request.Message;
@@ -9461,6 +9821,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicName))
+            {
+                body["liteTopicName"] = request.LiteTopicName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {
                 body["message"] = request.Message;

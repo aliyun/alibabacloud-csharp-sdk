@@ -84,6 +84,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>abc</para>
+                /// </summary>
+                [NameInMap("liteTopicName")]
+                [Validation(Required=false)]
+                public string LiteTopicName { get; set; }
+
+                /// <summary>
                 /// <para>The message group. This parameter is returned only for ordered messages.</para>
                 /// 
                 /// <b>Example:</b>

@@ -54,6 +54,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
+                [NameInMap("liteTopicExpiration")]
+                [Validation(Required=false)]
+                public long? LiteTopicExpiration { get; set; }
+
+                /// <summary>
                 /// <para>The maximum TPS for message sending.</para>
                 /// 
                 /// <b>Example:</b>

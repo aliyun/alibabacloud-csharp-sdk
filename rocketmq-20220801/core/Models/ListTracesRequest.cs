@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>abc</para>
+        /// </summary>
+        [NameInMap("liteTopicName")]
+        [Validation(Required=false)]
+        public string LiteTopicName { get; set; }
+
+        /// <summary>
         /// <para>The message ID.</para>
         /// <para>This parameter is required if you set queryType to MESSAGE_ID.</para>
         /// 

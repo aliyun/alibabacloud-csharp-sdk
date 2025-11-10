@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
-    public class GetConsumerGroupLagRequest : TeaModel {
+    public class ListConsumerConnectionsRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -18,10 +18,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         public string LiteTopicName { get; set; }
 
         /// <summary>
-        /// <para>The topic name.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>normal-topic-1</para>
+        /// <para>test1</para>
         /// </summary>
         [NameInMap("topicName")]
         [Validation(Required=false)]

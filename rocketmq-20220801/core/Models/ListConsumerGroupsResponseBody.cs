@@ -74,6 +74,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public long? MaxReceiveTps { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>LITE_SELECTIVE</para>
+                /// </summary>
+                [NameInMap("messageModel")]
+                [Validation(Required=false)]
+                public string MessageModel { get; set; }
+
+                /// <summary>
                 /// <para>The region ID to which the instance belongs.</para>
                 /// 
                 /// <b>Example:</b>
@@ -102,6 +110,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 [NameInMap("status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>test1</para>
+                /// </summary>
+                [NameInMap("topicName")]
+                [Validation(Required=false)]
+                public string TopicName { get; set; }
 
                 /// <summary>
                 /// <para>Last update time of the consumer group.</para>
