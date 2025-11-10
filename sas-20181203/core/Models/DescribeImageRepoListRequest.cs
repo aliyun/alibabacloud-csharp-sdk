@@ -96,6 +96,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RepoNamespace { get; set; }
 
+        [NameInMap("Selected")]
+        [Validation(Required=false)]
+        public int? Selected { get; set; }
+
         /// <summary>
         /// <para>The condition by which the feature is applied. Valid values:</para>
         /// <list type="bullet">

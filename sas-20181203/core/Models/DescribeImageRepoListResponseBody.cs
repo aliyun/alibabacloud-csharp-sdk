@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Flag { get; set; }
 
+            [NameInMap("ImageCount")]
+            [Validation(Required=false)]
+            public int? ImageCount { get; set; }
+
             /// <summary>
             /// <para>The name of the image repository.</para>
             /// 
