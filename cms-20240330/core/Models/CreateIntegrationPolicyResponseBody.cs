@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateIntegrationPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Whether it was created.</para>
+        /// <para>Whether it is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

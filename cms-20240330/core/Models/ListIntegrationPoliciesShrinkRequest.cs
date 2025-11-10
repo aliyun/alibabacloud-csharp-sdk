@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListIntegrationPoliciesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Addon Name.</para>
+        /// <para>Addon name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-default</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AddonName { get; set; }
 
         /// <summary>
-        /// <para>Bound Resource ID.</para>
+        /// <para>Bound resource ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>622d27c2e87d49debceeebc7c642610e</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string BindResourceId { get; set; }
 
         /// <summary>
-        /// <para>Filter for entity IDs, separated by commas.</para>
+        /// <para>Filter for entity IDs, separated by commas</para>
         /// 
         /// <b>Example:</b>
         /// <para>eg-1,eg-2,eg-3</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EntityGroupIds { get; set; }
 
         /// <summary>
-        /// <para>Used for Region query, separated by commas.</para>
+        /// <para>Used for Region query, separated by commas</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing,cn-hangzhou</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string FilterRegionIds { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of results to return, default is 30, with a maximum of 100.</para>
+        /// <para>Maximum number of results to return. Default is 30, with a maximum of 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Used to return more results. This parameter is not required for the first query; for subsequent queries, use the Token obtained from the previous response.</para>
+        /// <para>Used to return more results. This parameter is not required for the first query. For subsequent queries, use the Token obtained from the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mvnX6zqg3P</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>Rule Name.</para>
+        /// <para>Rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prod-database</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>Policy Type</para>
+        /// <para>Policy type</para>
         /// 
         /// <b>Example:</b>
         /// <para>CS</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Used for general queries.</para>
+        /// <para>Used for general queries</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>Resource Group ID.</para>
+        /// <para>Resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-xxxxx</para>

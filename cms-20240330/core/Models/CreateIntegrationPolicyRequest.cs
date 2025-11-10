@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>Whether to disable unique binding of the Policy. If enabled, multiple Policies can be created for a single container cluster.</para>
+            /// <para>Whether to disable the unique binding of the Policy. If enabled, multiple Policies can be created for a single container cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ture</para>
@@ -56,12 +56,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string EntityGroupId { get; set; }
 
+            /// <summary>
+            /// <para>User ID to which the cluster belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12xxxx</para>
+            /// </summary>
             [NameInMap("entityUserId")]
             [Validation(Required=false)]
             public string EntityUserId { get; set; }
 
             /// <summary>
-            /// <para>VPC (Virtual Private Cloud) ID.</para>
+            /// <para>VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp18fgg3ffxa9czna40xt</para>

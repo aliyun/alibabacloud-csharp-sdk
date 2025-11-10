@@ -2819,6 +2819,136 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除Umodel配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUmodelCommonSchemaRefRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUmodelCommonSchemaRefResponse
+        /// </returns>
+        public DeleteUmodelCommonSchemaRefResponse DeleteUmodelCommonSchemaRefWithOptions(string workspace, DeleteUmodelCommonSchemaRefRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Group))
+            {
+                query["group"] = request.Group;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteUmodelCommonSchemaRef",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/umodel/common-schema-ref",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteUmodelCommonSchemaRefResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Umodel配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUmodelCommonSchemaRefRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUmodelCommonSchemaRefResponse
+        /// </returns>
+        public async Task<DeleteUmodelCommonSchemaRefResponse> DeleteUmodelCommonSchemaRefWithOptionsAsync(string workspace, DeleteUmodelCommonSchemaRefRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Group))
+            {
+                query["group"] = request.Group;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteUmodelCommonSchemaRef",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/umodel/common-schema-ref",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteUmodelCommonSchemaRefResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Umodel配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUmodelCommonSchemaRefRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUmodelCommonSchemaRefResponse
+        /// </returns>
+        public DeleteUmodelCommonSchemaRefResponse DeleteUmodelCommonSchemaRef(string workspace, DeleteUmodelCommonSchemaRefRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteUmodelCommonSchemaRefWithOptions(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Umodel配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteUmodelCommonSchemaRefRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUmodelCommonSchemaRefResponse
+        /// </returns>
+        public async Task<DeleteUmodelCommonSchemaRefResponse> DeleteUmodelCommonSchemaRefAsync(string workspace, DeleteUmodelCommonSchemaRefRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteUmodelCommonSchemaRefWithOptionsAsync(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Delete Umodel Elements</para>
         /// </summary>
         /// 
@@ -4301,6 +4431,108 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取Umodel配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUmodelCommonSchemaRefResponse
+        /// </returns>
+        public GetUmodelCommonSchemaRefResponse GetUmodelCommonSchemaRefWithOptions(string workspace, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUmodelCommonSchemaRef",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/umodel/common-schema-ref",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUmodelCommonSchemaRefResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Umodel配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUmodelCommonSchemaRefResponse
+        /// </returns>
+        public async Task<GetUmodelCommonSchemaRefResponse> GetUmodelCommonSchemaRefWithOptionsAsync(string workspace, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUmodelCommonSchemaRef",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/umodel/common-schema-ref",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUmodelCommonSchemaRefResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Umodel配置信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetUmodelCommonSchemaRefResponse
+        /// </returns>
+        public GetUmodelCommonSchemaRefResponse GetUmodelCommonSchemaRef(string workspace)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetUmodelCommonSchemaRefWithOptions(workspace, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Umodel配置信息</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetUmodelCommonSchemaRefResponse
+        /// </returns>
+        public async Task<GetUmodelCommonSchemaRefResponse> GetUmodelCommonSchemaRefAsync(string workspace)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetUmodelCommonSchemaRefWithOptionsAsync(workspace, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieve associated Umodel graph data</para>
         /// </summary>
         /// 
@@ -5100,7 +5332,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query Integration List</para>
+        /// <para>Query integration list</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5209,7 +5441,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query Integration List</para>
+        /// <para>Query integration list</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5318,7 +5550,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query Integration List</para>
+        /// <para>Query integration list</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5342,7 +5574,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query Integration List</para>
+        /// <para>Query integration list</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7931,6 +8163,138 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNotifyStrategyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNotifyStrategyResponse
+        /// </returns>
+        public UpdateNotifyStrategyResponse UpdateNotifyStrategyWithOptions(string notifyStrategyId, UpdateNotifyStrategyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNotifyStrategy",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/notifyStrategies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(notifyStrategyId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNotifyStrategyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNotifyStrategyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNotifyStrategyResponse
+        /// </returns>
+        public async Task<UpdateNotifyStrategyResponse> UpdateNotifyStrategyWithOptionsAsync(string notifyStrategyId, UpdateNotifyStrategyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNotifyStrategy",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/notifyStrategies/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(notifyStrategyId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNotifyStrategyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNotifyStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNotifyStrategyResponse
+        /// </returns>
+        public UpdateNotifyStrategyResponse UpdateNotifyStrategy(string notifyStrategyId, UpdateNotifyStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateNotifyStrategyWithOptions(notifyStrategyId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNotifyStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNotifyStrategyResponse
+        /// </returns>
+        public async Task<UpdateNotifyStrategyResponse> UpdateNotifyStrategyAsync(string notifyStrategyId, UpdateNotifyStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateNotifyStrategyWithOptionsAsync(notifyStrategyId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Update Prometheus instance information</para>
         /// </summary>
         /// 
@@ -8513,6 +8877,138 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSubscriptionResponse
+        /// </returns>
+        public UpdateSubscriptionResponse UpdateSubscriptionWithOptions(string subscriptionId, UpdateSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSubscription",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/subscriptions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subscriptionId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSubscriptionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSubscriptionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSubscriptionResponse
+        /// </returns>
+        public async Task<UpdateSubscriptionResponse> UpdateSubscriptionWithOptionsAsync(string subscriptionId, UpdateSubscriptionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSubscription",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/subscriptions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subscriptionId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSubscriptionResponse
+        /// </returns>
+        public UpdateSubscriptionResponse UpdateSubscription(string subscriptionId, UpdateSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateSubscriptionWithOptions(subscriptionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新订阅</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSubscriptionResponse
+        /// </returns>
+        public async Task<UpdateSubscriptionResponse> UpdateSubscriptionAsync(string subscriptionId, UpdateSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateSubscriptionWithOptionsAsync(subscriptionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Update Umodel configuration information</para>
         /// </summary>
         /// 
@@ -8659,6 +9155,144 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateUmodelWithOptionsAsync(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Umodel配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpsertUmodelCommonSchemaRefRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpsertUmodelCommonSchemaRefResponse
+        /// </returns>
+        public UpsertUmodelCommonSchemaRefResponse UpsertUmodelCommonSchemaRefWithOptions(string workspace, UpsertUmodelCommonSchemaRefRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Group))
+            {
+                query["group"] = request.Group;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpsertUmodelCommonSchemaRef",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/umodel/common-schema-ref",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpsertUmodelCommonSchemaRefResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Umodel配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpsertUmodelCommonSchemaRefRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpsertUmodelCommonSchemaRefResponse
+        /// </returns>
+        public async Task<UpsertUmodelCommonSchemaRefResponse> UpsertUmodelCommonSchemaRefWithOptionsAsync(string workspace, UpsertUmodelCommonSchemaRefRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Group))
+            {
+                query["group"] = request.Group;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpsertUmodelCommonSchemaRef",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/umodel/common-schema-ref",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpsertUmodelCommonSchemaRefResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Umodel配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpsertUmodelCommonSchemaRefRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpsertUmodelCommonSchemaRefResponse
+        /// </returns>
+        public UpsertUmodelCommonSchemaRefResponse UpsertUmodelCommonSchemaRef(string workspace, UpsertUmodelCommonSchemaRefRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpsertUmodelCommonSchemaRefWithOptions(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Umodel配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpsertUmodelCommonSchemaRefRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpsertUmodelCommonSchemaRefResponse
+        /// </returns>
+        public async Task<UpsertUmodelCommonSchemaRefResponse> UpsertUmodelCommonSchemaRefAsync(string workspace, UpsertUmodelCommonSchemaRefRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpsertUmodelCommonSchemaRefWithOptionsAsync(workspace, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

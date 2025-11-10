@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Pagination Token</para>
+        /// <para>Pagination token</para>
         /// 
         /// <b>Example:</b>
         /// <para>44ANBjKZmQeKnaB1fXRq06w7sFYK3MUcCALMD9qQbmEiE</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Cs Umodel Status</para>
+            /// <para>Container environment umodel installation status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string Op { get; set; }
 
                         /// <summary>
-                        /// <para>Tag key</para>
+                        /// <para>Tag key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>key</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                         public string FieldKey { get; set; }
 
                         /// <summary>
-                        /// <para>Field content, multiple values separated by commas.</para>
+                        /// <para>Field content, multiple values separated by English commas.</para>
                         /// </summary>
                         [NameInMap("fieldValues")]
                         [Validation(Required=false)]
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                     }
 
                     /// <summary>
-                    /// <para>List of region IDs</para>
+                    /// <para>List of region IDs.</para>
                     /// </summary>
                     [NameInMap("regionIds")]
                     [Validation(Required=false)]
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>Search keyword, supports document library name and description</para>
+                /// <para>Search keywords, supporting document library name and description</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>哈弗</para>
@@ -391,6 +391,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             }
 
+            /// <summary>
+            /// <para>Billing type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CS_Pro</para>
+            /// </summary>
             [NameInMap("feePackage")]
             [Validation(Required=false)]
             public string FeePackage { get; set; }
