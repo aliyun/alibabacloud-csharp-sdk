@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        [NameInMap("JobSpecs")]
+        [Validation(Required=false)]
+        public List<JobSpec> JobSpecs { get; set; }
+
         /// <summary>
         /// <para>The job priority. Valid values: 1 to 9.</para>
         /// <list type="bullet">

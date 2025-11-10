@@ -909,8 +909,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Dashboard 链接</para>
+        /// <para>Gets the DLC task\&quot;s Dashboard URL, if one exists.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDashboardRequest
@@ -959,8 +964,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Dashboard 链接</para>
+        /// <para>Gets the DLC task\&quot;s Dashboard URL, if one exists.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDashboardRequest
@@ -1009,8 +1019,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Dashboard 链接</para>
+        /// <para>Gets the DLC task\&quot;s Dashboard URL, if one exists.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDashboardRequest
@@ -1028,8 +1043,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 Dashboard 链接</para>
+        /// <para>Gets the DLC task\&quot;s Dashboard URL, if one exists.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDashboardRequest
@@ -3983,6 +4003,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["Accessibility"] = request.Accessibility;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSpecs))
+            {
+                body["JobSpecs"] = request.JobSpecs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
             {
                 body["Priority"] = request.Priority;
@@ -4032,6 +4056,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
             {
                 body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSpecs))
+            {
+                body["JobSpecs"] = request.JobSpecs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
             {
