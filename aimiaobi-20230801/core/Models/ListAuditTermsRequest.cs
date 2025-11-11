@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("TermsName")]
+        [Validation(Required=false)]
+        public string TermsName { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

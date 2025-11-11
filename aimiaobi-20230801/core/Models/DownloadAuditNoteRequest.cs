@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class DownloadAuditNoteRequest : TeaModel {
+        [NameInMap("NoteId")]
+        [Validation(Required=false)]
+        public string NoteId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>xxx_Default_1241541251241</para>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class SubmitExportTermsTaskRequest : TeaModel {
+        [NameInMap("TermsName")]
+        [Validation(Required=false)]
+        public string TermsName { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

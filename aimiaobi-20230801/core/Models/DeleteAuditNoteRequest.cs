@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class DeleteAuditNoteRequest : TeaModel {
+        [NameInMap("NoteId")]
+        [Validation(Required=false)]
+        public string NoteId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

@@ -23,9 +23,17 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         }
 
+        [NameInMap("NoteId")]
+        [Validation(Required=false)]
+        public string NoteId { get; set; }
+
         [NameInMap("SubCodes")]
         [Validation(Required=false)]
         public List<string> SubCodes { get; set; }
+
+        [NameInMap("TermsName")]
+        [Validation(Required=false)]
+        public string TermsName { get; set; }
 
         [NameInMap("Text")]
         [Validation(Required=false)]

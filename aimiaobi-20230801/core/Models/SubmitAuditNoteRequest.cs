@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string FileKey { get; set; }
 
+        [NameInMap("NoteId")]
+        [Validation(Required=false)]
+        public string NoteId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
