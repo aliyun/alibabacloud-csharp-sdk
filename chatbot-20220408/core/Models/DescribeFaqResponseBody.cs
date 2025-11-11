@@ -205,6 +205,10 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             [Validation(Required=false)]
             public long? SolutionId { get; set; }
 
+            [NameInMap("TagIdList")]
+            [Validation(Required=false)]
+            public List<long?> TagIdList { get; set; }
+
         }
 
         /// <summary>
