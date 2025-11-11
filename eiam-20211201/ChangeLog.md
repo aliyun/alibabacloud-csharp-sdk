@@ -1,3 +1,9 @@
+2025-11-11 Version: 1.13.0
+- Support API BindUserAuthnSourceMapping.
+- Support API ListUserAuthnSourceMappings.
+- Support API UnbindUserAuthnSourceMapping.
+
+
 2025-10-30 Version: 1.12.0
 - Support API AddCustomPrivacyPoliciesToBrand.
 - Support API CreateCustomPrivacyPolicy.

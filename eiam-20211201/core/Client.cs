@@ -999,6 +999,150 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>绑定三方登录账户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindUserAuthnSourceMappingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindUserAuthnSourceMappingResponse
+        /// </returns>
+        public BindUserAuthnSourceMappingResponse BindUserAuthnSourceMappingWithOptions(BindUserAuthnSourceMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityProviderId))
+            {
+                query["IdentityProviderId"] = request.IdentityProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserExternalId))
+            {
+                query["UserExternalId"] = request.UserExternalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BindUserAuthnSourceMapping",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BindUserAuthnSourceMappingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定三方登录账户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindUserAuthnSourceMappingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindUserAuthnSourceMappingResponse
+        /// </returns>
+        public async Task<BindUserAuthnSourceMappingResponse> BindUserAuthnSourceMappingWithOptionsAsync(BindUserAuthnSourceMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityProviderId))
+            {
+                query["IdentityProviderId"] = request.IdentityProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserExternalId))
+            {
+                query["UserExternalId"] = request.UserExternalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BindUserAuthnSourceMapping",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BindUserAuthnSourceMappingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定三方登录账户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindUserAuthnSourceMappingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindUserAuthnSourceMappingResponse
+        /// </returns>
+        public BindUserAuthnSourceMappingResponse BindUserAuthnSourceMapping(BindUserAuthnSourceMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BindUserAuthnSourceMappingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定三方登录账户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindUserAuthnSourceMappingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindUserAuthnSourceMappingResponse
+        /// </returns>
+        public async Task<BindUserAuthnSourceMappingResponse> BindUserAuthnSourceMappingAsync(BindUserAuthnSourceMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BindUserAuthnSourceMappingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds an application to an Enterprise Identity Access Management (EIAM) instance of Identity as a Service (IDaaS).</para>
         /// </summary>
         /// 
@@ -20149,6 +20293,174 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询三方登录账户绑定关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserAuthnSourceMappingsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserAuthnSourceMappingsResponse
+        /// </returns>
+        public ListUserAuthnSourceMappingsResponse ListUserAuthnSourceMappingsWithOptions(ListUserAuthnSourceMappingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityProviderId))
+            {
+                query["IdentityProviderId"] = request.IdentityProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviousToken))
+            {
+                query["PreviousToken"] = request.PreviousToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserExternalId))
+            {
+                query["UserExternalId"] = request.UserExternalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserAuthnSourceMappings",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserAuthnSourceMappingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询三方登录账户绑定关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserAuthnSourceMappingsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserAuthnSourceMappingsResponse
+        /// </returns>
+        public async Task<ListUserAuthnSourceMappingsResponse> ListUserAuthnSourceMappingsWithOptionsAsync(ListUserAuthnSourceMappingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityProviderId))
+            {
+                query["IdentityProviderId"] = request.IdentityProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviousToken))
+            {
+                query["PreviousToken"] = request.PreviousToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserExternalId))
+            {
+                query["UserExternalId"] = request.UserExternalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserAuthnSourceMappings",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserAuthnSourceMappingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询三方登录账户绑定关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserAuthnSourceMappingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserAuthnSourceMappingsResponse
+        /// </returns>
+        public ListUserAuthnSourceMappingsResponse ListUserAuthnSourceMappings(ListUserAuthnSourceMappingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListUserAuthnSourceMappingsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询三方登录账户绑定关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserAuthnSourceMappingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserAuthnSourceMappingsResponse
+        /// </returns>
+        public async Task<ListUserAuthnSourceMappingsResponse> ListUserAuthnSourceMappingsAsync(ListUserAuthnSourceMappingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListUserAuthnSourceMappingsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of accounts in Identity as a Service (IDaaS) Employee IAM (EIAM) by page.</para>
         /// </summary>
         /// 
@@ -24173,6 +24485,150 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetUserPrimaryOrganizationalUnitWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑三方登录账户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindUserAuthnSourceMappingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindUserAuthnSourceMappingResponse
+        /// </returns>
+        public UnbindUserAuthnSourceMappingResponse UnbindUserAuthnSourceMappingWithOptions(UnbindUserAuthnSourceMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityProviderId))
+            {
+                query["IdentityProviderId"] = request.IdentityProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserExternalId))
+            {
+                query["UserExternalId"] = request.UserExternalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnbindUserAuthnSourceMapping",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnbindUserAuthnSourceMappingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑三方登录账户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindUserAuthnSourceMappingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindUserAuthnSourceMappingResponse
+        /// </returns>
+        public async Task<UnbindUserAuthnSourceMappingResponse> UnbindUserAuthnSourceMappingWithOptionsAsync(UnbindUserAuthnSourceMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentityProviderId))
+            {
+                query["IdentityProviderId"] = request.IdentityProviderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserExternalId))
+            {
+                query["UserExternalId"] = request.UserExternalId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnbindUserAuthnSourceMapping",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnbindUserAuthnSourceMappingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑三方登录账户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindUserAuthnSourceMappingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindUserAuthnSourceMappingResponse
+        /// </returns>
+        public UnbindUserAuthnSourceMappingResponse UnbindUserAuthnSourceMapping(UnbindUserAuthnSourceMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UnbindUserAuthnSourceMappingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑三方登录账户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindUserAuthnSourceMappingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindUserAuthnSourceMappingResponse
+        /// </returns>
+        public async Task<UnbindUserAuthnSourceMappingResponse> UnbindUserAuthnSourceMappingAsync(UnbindUserAuthnSourceMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UnbindUserAuthnSourceMappingWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
