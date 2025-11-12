@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
-    public class GetHyperNodeResponse : TeaModel {
+    public class DeleteHyperNodeResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public GetHyperNodeResponseBody Body { get; set; }
+        public DeleteHyperNodeResponseBody Body { get; set; }
 
     }
 

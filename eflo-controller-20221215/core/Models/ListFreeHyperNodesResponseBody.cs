@@ -71,18 +71,30 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>Using</para>
+            /// </summary>
+            [NameInMap("OperatingState")]
+            [Validation(Required=false)]
+            public string OperatingState { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>rg-acfmwaateahzoii</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
+            /// 
             /// <b>Example:</b>
             /// <para>Using</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
+            [Obsolete]
             public string Status { get; set; }
 
             [NameInMap("Tags")]

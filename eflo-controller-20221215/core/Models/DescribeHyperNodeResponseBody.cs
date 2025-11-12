@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
-    public class GetHyperNodeResponseBody : TeaModel {
+    public class DescribeHyperNodeResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>i112138561737531371671</para>
+        /// <para>i119982311660892626523</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2026-05-14T00:00:00</para>
+        /// <para>2125-06-24T16:52:44.318000</para>
         /// </summary>
         [NameInMap("ExpireTime")]
         [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>efg2.C48cNHmcn</para>
+        /// <para>efg1.nvga1</para>
         /// </summary>
         [NameInMap("MachineType")]
         [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>emr-default</para>
+        /// <para>lisan-nodegroup</para>
         /// </summary>
         [NameInMap("NodeGroupName")]
         [Validation(Required=false)]
@@ -99,12 +99,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         [NameInMap("Nodes")]
         [Validation(Required=false)]
-        public List<GetHyperNodeResponseBodyNodes> Nodes { get; set; }
-        public class GetHyperNodeResponseBodyNodes : TeaModel {
+        public List<DescribeHyperNodeResponseBodyNodes> Nodes { get; set; }
+        public class DescribeHyperNodeResponseBodyNodes : TeaModel {
             [NameInMap("Disks")]
             [Validation(Required=false)]
-            public List<GetHyperNodeResponseBodyNodesDisks> Disks { get; set; }
-            public class GetHyperNodeResponseBodyNodesDisks : TeaModel {
+            public List<DescribeHyperNodeResponseBodyNodesDisks> Disks { get; set; }
+            public class DescribeHyperNodeResponseBodyNodesDisks : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>DOWNLINK_PACKET</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>alywlcb-lingjun-gpu-0025</para>
+            /// <para>457db5ca-241d-11ed-9fd7-acde48001122</para>
             /// </summary>
             [NameInMap("Hostname")]
             [Validation(Required=false)]
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>Alinux3_x86_5.10.134-16.3_NV_RunC_D3_E3C7_570.133.20_V1.0_250428</para>
+            /// <para>Alinux3_x86_gu8xf_P_Host_D3_C7E3_550.127_Legacy_N_241230</para>
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
@@ -173,8 +173,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             [NameInMap("Networks")]
             [Validation(Required=false)]
-            public GetHyperNodeResponseBodyNodesNetworks Networks { get; set; }
-            public class GetHyperNodeResponseBodyNodesNetworks : TeaModel {
+            public DescribeHyperNodeResponseBodyNodesNetworks Networks { get; set; }
+            public class DescribeHyperNodeResponseBodyNodesNetworks : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>bond0</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>172.17.231.113</para>
+                /// <para>192.168.22.2</para>
                 /// </summary>
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
@@ -203,17 +203,29 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>Using</para>
+            /// </summary>
+            [NameInMap("OperatingState")]
+            [Validation(Required=false)]
+            public string OperatingState { get; set; }
+
+            /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// 
+            /// <b>Example:</b>
             /// <para>InProgress</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
+            [Obsolete]
             public string Status { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
             /// <para>#!/bin/bash
             /// uptime
-            /// echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</para>
+            /// echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttttest.sh</para>
             /// </summary>
             [NameInMap("UserData")]
             [Validation(Required=false)]
@@ -223,7 +235,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2FE2B22C-CF9D-59DE-BF63-DC9B9B33A9D1</para>
+        /// <para>Using</para>
+        /// </summary>
+        [NameInMap("OperatingState")]
+        [Validation(Required=false)]
+        public string OperatingState { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>D6058705-1C45-35C9-9461-02504897D4D0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -231,18 +251,22 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>rg-acfmwfm33rlt6zi</para>
+        /// <para>rg-acfmxno4vh5****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
-        /// <para>Using</para>
+        /// <para>Operating</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Status { get; set; }
 
         /// <summary>

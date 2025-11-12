@@ -8,16 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
-    public class GetHyperNodeRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>e01-cn-zvp2tgykr08</para>
-        /// </summary>
-        [NameInMap("HyperNodeId")]
+    public class ChangeNodeTypesShrinkRequest : TeaModel {
+        [NameInMap("NodeIds")]
         [Validation(Required=false)]
-        public string HyperNodeId { get; set; }
+        public string NodeIdsShrink { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>standard</para>
+        /// </summary>
+        [NameInMap("NodeType")]
+        [Validation(Required=false)]
+        public string NodeType { get; set; }
 
     }
 

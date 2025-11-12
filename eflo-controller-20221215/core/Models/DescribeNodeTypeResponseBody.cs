@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeNodeTypeResponseBody : TeaModel {
+        [NameInMap("DiskQuantity")]
+        [Validation(Required=false)]
+        public int? DiskQuantity { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>63</para>
