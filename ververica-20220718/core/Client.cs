@@ -6359,6 +6359,154 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取上传文件URL</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPreSignedUrlForPutObjectRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetPreSignedUrlForPutObjectHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPreSignedUrlForPutObjectResponse
+        /// </returns>
+        public GetPreSignedUrlForPutObjectResponse GetPreSignedUrlForPutObjectWithOptions(string namespace_, GetPreSignedUrlForPutObjectRequest request, GetPreSignedUrlForPutObjectHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["fileName"] = request.FileName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPreSignedUrlForPutObject",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/artifacts/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/getPreSignedUrlForPutObject",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPreSignedUrlForPutObjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取上传文件URL</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPreSignedUrlForPutObjectRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetPreSignedUrlForPutObjectHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPreSignedUrlForPutObjectResponse
+        /// </returns>
+        public async Task<GetPreSignedUrlForPutObjectResponse> GetPreSignedUrlForPutObjectWithOptionsAsync(string namespace_, GetPreSignedUrlForPutObjectRequest request, GetPreSignedUrlForPutObjectHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["fileName"] = request.FileName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPreSignedUrlForPutObject",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/artifacts/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/getPreSignedUrlForPutObject",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPreSignedUrlForPutObjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取上传文件URL</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPreSignedUrlForPutObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPreSignedUrlForPutObjectResponse
+        /// </returns>
+        public GetPreSignedUrlForPutObjectResponse GetPreSignedUrlForPutObject(string namespace_, GetPreSignedUrlForPutObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetPreSignedUrlForPutObjectHeaders headers = new GetPreSignedUrlForPutObjectHeaders();
+            return GetPreSignedUrlForPutObjectWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取上传文件URL</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPreSignedUrlForPutObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPreSignedUrlForPutObjectResponse
+        /// </returns>
+        public async Task<GetPreSignedUrlForPutObjectResponse> GetPreSignedUrlForPutObjectAsync(string namespace_, GetPreSignedUrlForPutObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetPreSignedUrlForPutObjectHeaders headers = new GetPreSignedUrlForPutObjectHeaders();
+            return await GetPreSignedUrlForPutObjectWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries details of a savepoint and checkpoint.</para>
         /// </summary>
         /// 
