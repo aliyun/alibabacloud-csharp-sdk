@@ -8599,7 +8599,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert groups.</para>
+        /// <para>Call the DescribeContactGroupList interface to query the list of alarm contact groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8645,7 +8645,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert groups.</para>
+        /// <para>Call the DescribeContactGroupList interface to query the list of alarm contact groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8691,7 +8691,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert groups.</para>
+        /// <para>Call the DescribeContactGroupList interface to query the list of alarm contact groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8709,7 +8709,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert groups.</para>
+        /// <para>Call the DescribeContactGroupList interface to query the list of alarm contact groups.</para>
         /// </summary>
         /// 
         /// <param name="request">

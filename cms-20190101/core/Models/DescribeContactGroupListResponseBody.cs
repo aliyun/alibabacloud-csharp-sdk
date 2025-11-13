@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeContactGroupListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
-        /// <remarks>
-        /// <para> The status code 200 indicates that the call was successful.</para>
-        /// </remarks>
+        /// <para>Status code. Note that 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -23,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about alert groups that were queried.</para>
+        /// <para>List of alarm contact groups.</para>
         /// </summary>
         [NameInMap("ContactGroupList")]
         [Validation(Required=false)]
@@ -34,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<DescribeContactGroupListResponseBodyContactGroupListContactGroup> ContactGroup { get; set; }
             public class DescribeContactGroupListResponseBodyContactGroupListContactGroup : TeaModel {
                 /// <summary>
-                /// <para>The alert contacts in the alert group.</para>
+                /// <para>List of contacts.</para>
                 /// </summary>
                 [NameInMap("Contacts")]
                 [Validation(Required=false)]
@@ -47,68 +44,66 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the alert group was created. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>Creation time.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1507070598000</para>
+                /// <para>2023-06-07T03:52:30Z</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The description of the alert group.</para>
+                /// <para>Description information of the alarm contact group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Devops-运维组</para>
                 /// </summary>
                 [NameInMap("Describe")]
                 [Validation(Required=false)]
                 public string Describe { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the alert group subscribes to weekly reports. Valid values:</para>
+                /// <para>Indicates whether the weekly report subscription function is enabled. Values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The alert group subscribes to weekly reports.</description></item>
-                /// <item><description>false: The alert group does not subscribe to weekly reports.</description></item>
+                /// <item><description><para>true: Yes.</para>
+                /// </description></item>
+                /// <item><description><para>false: No.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>true</para>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("EnableSubscribed")]
                 [Validation(Required=false)]
                 public bool? EnableSubscribed { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the alert group can subscribe to weekly reports. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true: The alert group can subscribe to weekly reports.</description></item>
-                /// <item><description>false: The alert group cannot subscribe to weekly reports.</description></item>
-                /// </list>
-                /// <remarks>
-                /// <para> The weekly report subscription feature is only available for Alibaba Cloud accounts with more than five Elastic Compute Service (ECS) instances.</para>
-                /// </remarks>
+                /// <para>Indicates whether the weekly report function is enabled.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>true</para>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("EnabledWeeklyReport")]
                 [Validation(Required=false)]
                 public bool? EnabledWeeklyReport { get; set; }
 
                 /// <summary>
-                /// <para>The name of the alert group.</para>
+                /// <para>Name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Contact1</para>
+                /// <para>name</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The time when the alert group was modified. This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>Update time.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1589447759000</para>
+                /// <para>2025-03-04T02:12:06Z</para>
                 /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
@@ -119,7 +114,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The names of alert groups.</para>
+        /// <para>List of alarm contact groups.</para>
         /// </summary>
         [NameInMap("ContactGroups")]
         [Validation(Required=false)]
@@ -132,17 +127,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>Return message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The Request is not authorization.</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of this call request, which is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting and problem localization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>916EE694-03C2-47B6-85EE-5054E3C168D3</para>
@@ -152,10 +147,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
+        /// <item><description><para>true: Success.</para>
+        /// </description></item>
+        /// <item><description><para>false: Failure.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -166,7 +163,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of the returned entries.</para>
+        /// <para>Total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22</para>

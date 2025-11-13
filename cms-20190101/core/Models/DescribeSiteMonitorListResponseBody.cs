@@ -583,6 +583,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 /// <summary>
                 /// <para>The name of the site monitoring task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>域名检测_example.com.cn</para>
                 /// </summary>
                 [NameInMap("TaskName")]
                 [Validation(Required=false)]

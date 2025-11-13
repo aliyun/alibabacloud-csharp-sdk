@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorListRequest : TeaModel {
+        /// <summary>
+        /// <para>Task network type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>PC: Cable Network</para>
+        /// </description></item>
+        /// <item><description><para>MOBILE: Mobile Cellular Network</para>
+        /// </description></item>
+        /// <item><description><para>FC: Alibaba Cloud VPC Network</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PC</para>
+        /// </summary>
         [NameInMap("AgentGroup")]
         [Validation(Required=false)]
         public string AgentGroup { get; set; }
