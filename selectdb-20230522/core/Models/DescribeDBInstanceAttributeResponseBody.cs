@@ -571,6 +571,44 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
+        [NameInMap("VirtualClusterList")]
+        [Validation(Required=false)]
+        public List<DescribeDBInstanceAttributeResponseBodyVirtualClusterList> VirtualClusterList { get; set; }
+        public class DescribeDBInstanceAttributeResponseBodyVirtualClusterList : TeaModel {
+            [NameInMap("ActiveClusterId")]
+            [Validation(Required=false)]
+            public string ActiveClusterId { get; set; }
+
+            [NameInMap("ActiveClusterName")]
+            [Validation(Required=false)]
+            public string ActiveClusterName { get; set; }
+
+            [NameInMap("CreatedTime")]
+            [Validation(Required=false)]
+            public string CreatedTime { get; set; }
+
+            [NameInMap("DbClusterId")]
+            [Validation(Required=false)]
+            public string DbClusterId { get; set; }
+
+            [NameInMap("DbClusterName")]
+            [Validation(Required=false)]
+            public string DbClusterName { get; set; }
+
+            [NameInMap("StandbyClusterId")]
+            [Validation(Required=false)]
+            public string StandbyClusterId { get; set; }
+
+            [NameInMap("StandbyClusterName")]
+            [Validation(Required=false)]
+            public string StandbyClusterName { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The VPC ID.</para>
         /// 
