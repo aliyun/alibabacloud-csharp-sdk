@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListIdentityProvidersRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>pull</para>
+        /// </summary>
+        [NameInMap("Direction")]
+        [Validation(Required=false)]
+        public string Direction { get; set; }
+
+        /// <summary>
         /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 

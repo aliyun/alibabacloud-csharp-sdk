@@ -515,6 +515,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationUnitObjectClass { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>ou</para>
+            /// </summary>
+            [NameInMap("OrganizationalUnitRdn")]
+            [Validation(Required=false)]
+            public string OrganizationalUnitRdn { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>enabled</para>
+            /// </summary>
+            [NameInMap("PasswordSyncStatus")]
+            [Validation(Required=false)]
+            public string PasswordSyncStatus { get; set; }
+
+            /// <summary>
             /// <para>Whether startTLS is enabled. Value range:</para>
             /// <list type="bullet">
             /// <item><description><para>Disabled: disabled</para>
@@ -559,6 +575,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("UserObjectClassCustomFilter")]
             [Validation(Required=false)]
             public string UserObjectClassCustomFilter { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn</para>
+            /// </summary>
+            [NameInMap("UserRdn")]
+            [Validation(Required=false)]
+            public string UserRdn { get; set; }
 
         }
 
@@ -876,6 +900,32 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("IncrementalCallbackStatus")]
             [Validation(Required=false)]
             public string IncrementalCallbackStatus { get; set; }
+
+            [NameInMap("PeriodicSyncConfig")]
+            [Validation(Required=false)]
+            public CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig PeriodicSyncConfig { get; set; }
+            public class CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0 45 1 * * ?</para>
+                /// </summary>
+                [NameInMap("PeriodicSyncCron")]
+                [Validation(Required=false)]
+                public string PeriodicSyncCron { get; set; }
+
+                [NameInMap("PeriodicSyncTimes")]
+                [Validation(Required=false)]
+                public List<int?> PeriodicSyncTimes { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cron</para>
+                /// </summary>
+                [NameInMap("PeriodicSyncType")]
+                [Validation(Required=false)]
+                public string PeriodicSyncType { get; set; }
+
+            }
 
             /// <summary>
             /// <para>Periodic check status. This field is currently not in use, please ignore it.</para>
