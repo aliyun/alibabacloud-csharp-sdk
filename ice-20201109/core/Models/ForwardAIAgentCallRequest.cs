@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string CalledNumber { get; set; }
 
+        [NameInMap("ErrorPrompt")]
+        [Validation(Required=false)]
+        public string ErrorPrompt { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>call_instance_202******</para>
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("TransferPrompt")]
+        [Validation(Required=false)]
+        public string TransferPrompt { get; set; }
 
     }
 

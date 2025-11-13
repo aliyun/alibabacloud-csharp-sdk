@@ -98,6 +98,142 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>激活AI实时互动授权信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveAiRtcLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveAiRtcLicenseResponse
+        /// </returns>
+        public ActiveAiRtcLicenseResponse ActiveAiRtcLicenseWithOptions(ActiveAiRtcLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseItemId))
+            {
+                query["LicenseItemId"] = request.LicenseItemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ActiveAiRtcLicense",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ActiveAiRtcLicenseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>激活AI实时互动授权信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveAiRtcLicenseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveAiRtcLicenseResponse
+        /// </returns>
+        public async Task<ActiveAiRtcLicenseResponse> ActiveAiRtcLicenseWithOptionsAsync(ActiveAiRtcLicenseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseItemId))
+            {
+                query["LicenseItemId"] = request.LicenseItemId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ActiveAiRtcLicense",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ActiveAiRtcLicenseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>激活AI实时互动授权信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveAiRtcLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveAiRtcLicenseResponse
+        /// </returns>
+        public ActiveAiRtcLicenseResponse ActiveAiRtcLicense(ActiveAiRtcLicenseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ActiveAiRtcLicenseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>激活AI实时互动授权信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveAiRtcLicenseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveAiRtcLicenseResponse
+        /// </returns>
+        public async Task<ActiveAiRtcLicenseResponse> ActiveAiRtcLicenseAsync(ActiveAiRtcLicenseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ActiveAiRtcLicenseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds an ad insertion configuration.</para>
         /// </summary>
         /// 
@@ -16635,9 +16771,17 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["CalledNumber"] = request.CalledNumber;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorPrompt))
+            {
+                query["ErrorPrompt"] = request.ErrorPrompt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransferPrompt))
+            {
+                query["TransferPrompt"] = request.TransferPrompt;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -16681,9 +16825,17 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["CalledNumber"] = request.CalledNumber;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorPrompt))
+            {
+                query["ErrorPrompt"] = request.ErrorPrompt;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransferPrompt))
+            {
+                query["TransferPrompt"] = request.TransferPrompt;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -17448,6 +17600,326 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAdInsertionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取AI实时互动授权码列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAiRtcAuthCodeListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAiRtcAuthCodeListResponse
+        /// </returns>
+        public GetAiRtcAuthCodeListResponse GetAiRtcAuthCodeListWithOptions(GetAiRtcAuthCodeListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseItemId))
+            {
+                query["LicenseItemId"] = request.LicenseItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotalCount))
+            {
+                query["NeedTotalCount"] = request.NeedTotalCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAiRtcAuthCodeList",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAiRtcAuthCodeListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取AI实时互动授权码列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAiRtcAuthCodeListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAiRtcAuthCodeListResponse
+        /// </returns>
+        public async Task<GetAiRtcAuthCodeListResponse> GetAiRtcAuthCodeListWithOptionsAsync(GetAiRtcAuthCodeListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseItemId))
+            {
+                query["LicenseItemId"] = request.LicenseItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotalCount))
+            {
+                query["NeedTotalCount"] = request.NeedTotalCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAiRtcAuthCodeList",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAiRtcAuthCodeListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取AI实时互动授权码列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAiRtcAuthCodeListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAiRtcAuthCodeListResponse
+        /// </returns>
+        public GetAiRtcAuthCodeListResponse GetAiRtcAuthCodeList(GetAiRtcAuthCodeListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAiRtcAuthCodeListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取AI实时互动授权码列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAiRtcAuthCodeListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAiRtcAuthCodeListResponse
+        /// </returns>
+        public async Task<GetAiRtcAuthCodeListResponse> GetAiRtcAuthCodeListAsync(GetAiRtcAuthCodeListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAiRtcAuthCodeListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取AI实时互动授权批次列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAiRtcLicenseInfoListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAiRtcLicenseInfoListResponse
+        /// </returns>
+        public GetAiRtcLicenseInfoListResponse GetAiRtcLicenseInfoListWithOptions(GetAiRtcLicenseInfoListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseItemId))
+            {
+                query["LicenseItemId"] = request.LicenseItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotalCount))
+            {
+                query["NeedTotalCount"] = request.NeedTotalCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAiRtcLicenseInfoList",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAiRtcLicenseInfoListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取AI实时互动授权批次列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAiRtcLicenseInfoListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAiRtcLicenseInfoListResponse
+        /// </returns>
+        public async Task<GetAiRtcLicenseInfoListResponse> GetAiRtcLicenseInfoListWithOptionsAsync(GetAiRtcLicenseInfoListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LicenseItemId))
+            {
+                query["LicenseItemId"] = request.LicenseItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotalCount))
+            {
+                query["NeedTotalCount"] = request.NeedTotalCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAiRtcLicenseInfoList",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAiRtcLicenseInfoListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取AI实时互动授权批次列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAiRtcLicenseInfoListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAiRtcLicenseInfoListResponse
+        /// </returns>
+        public GetAiRtcLicenseInfoListResponse GetAiRtcLicenseInfoList(GetAiRtcLicenseInfoListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAiRtcLicenseInfoListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取AI实时互动授权批次列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAiRtcLicenseInfoListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAiRtcLicenseInfoListResponse
+        /// </returns>
+        public async Task<GetAiRtcLicenseInfoListResponse> GetAiRtcLicenseInfoListAsync(GetAiRtcLicenseInfoListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAiRtcLicenseInfoListWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -49020,6 +49492,142 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>提交场景化批量合成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSceneBatchEditingJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSceneBatchEditingJobResponse
+        /// </returns>
+        public SubmitSceneBatchEditingJobResponse SubmitSceneBatchEditingJobWithOptions(SubmitSceneBatchEditingJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectIds))
+            {
+                query["ProjectIds"] = request.ProjectIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSceneBatchEditingJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSceneBatchEditingJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交场景化批量合成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSceneBatchEditingJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSceneBatchEditingJobResponse
+        /// </returns>
+        public async Task<SubmitSceneBatchEditingJobResponse> SubmitSceneBatchEditingJobWithOptionsAsync(SubmitSceneBatchEditingJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectIds))
+            {
+                query["ProjectIds"] = request.ProjectIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSceneBatchEditingJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSceneBatchEditingJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交场景化批量合成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSceneBatchEditingJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSceneBatchEditingJobResponse
+        /// </returns>
+        public SubmitSceneBatchEditingJobResponse SubmitSceneBatchEditingJob(SubmitSceneBatchEditingJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitSceneBatchEditingJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交场景化批量合成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSceneBatchEditingJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSceneBatchEditingJobResponse
+        /// </returns>
+        public async Task<SubmitSceneBatchEditingJobResponse> SubmitSceneBatchEditingJobAsync(SubmitSceneBatchEditingJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitSceneBatchEditingJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Selects suitable clips based on the submitted videos, images, and voiceovers, and returns the selection results. Two scenarios are supported: image-text matching and highlight mashup.</para>
         /// </summary>
         /// 
@@ -49204,6 +49812,170 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitSceneMediaSelectionJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交场景化时间线编排任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSceneTimelineOrganizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSceneTimelineOrganizationJobResponse
+        /// </returns>
+        public SubmitSceneTimelineOrganizationJobResponse SubmitSceneTimelineOrganizationJobWithOptions(SubmitSceneTimelineOrganizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
+            {
+                query["JobType"] = request.JobType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaSelectResult))
+            {
+                query["MediaSelectResult"] = request.MediaSelectResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditingConfig))
+            {
+                body["EditingConfig"] = request.EditingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfig))
+            {
+                body["InputConfig"] = request.InputConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSceneTimelineOrganizationJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSceneTimelineOrganizationJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交场景化时间线编排任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSceneTimelineOrganizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSceneTimelineOrganizationJobResponse
+        /// </returns>
+        public async Task<SubmitSceneTimelineOrganizationJobResponse> SubmitSceneTimelineOrganizationJobWithOptionsAsync(SubmitSceneTimelineOrganizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
+            {
+                query["JobType"] = request.JobType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaSelectResult))
+            {
+                query["MediaSelectResult"] = request.MediaSelectResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EditingConfig))
+            {
+                body["EditingConfig"] = request.EditingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputConfig))
+            {
+                body["InputConfig"] = request.InputConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSceneTimelineOrganizationJob",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSceneTimelineOrganizationJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交场景化时间线编排任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSceneTimelineOrganizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSceneTimelineOrganizationJobResponse
+        /// </returns>
+        public SubmitSceneTimelineOrganizationJobResponse SubmitSceneTimelineOrganizationJob(SubmitSceneTimelineOrganizationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitSceneTimelineOrganizationJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交场景化时间线编排任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSceneTimelineOrganizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSceneTimelineOrganizationJobResponse
+        /// </returns>
+        public async Task<SubmitSceneTimelineOrganizationJobResponse> SubmitSceneTimelineOrganizationJobAsync(SubmitSceneTimelineOrganizationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitSceneTimelineOrganizationJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -1,3 +1,13 @@
+2025-11-13 Version: 6.7.0
+- Support API ActiveAiRtcLicense.
+- Support API GetAiRtcAuthCodeList.
+- Support API GetAiRtcLicenseInfoList.
+- Support API SubmitSceneBatchEditingJob.
+- Support API SubmitSceneTimelineOrganizationJob.
+- Update API ForwardAIAgentCall: add request parameters ErrorPrompt.
+- Update API ForwardAIAgentCall: add request parameters TransferPrompt.
+
+
 2025-11-04 Version: 6.6.0
 - Support API GetAIWorkflowTask.
 - Support API StartAIWorkflow.
