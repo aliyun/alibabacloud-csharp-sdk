@@ -17,6 +17,24 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<AppendCasesResponseBodyData> Data { get; set; }
+        public class AppendCasesResponseBodyData : TeaModel {
+            [NameInMap("CustomVariables")]
+            [Validation(Required=false)]
+            public string CustomVariables { get; set; }
+
+            [NameInMap("PhoneNumber")]
+            [Validation(Required=false)]
+            public string PhoneNumber { get; set; }
+
+            [NameInMap("ReferenceId")]
+            [Validation(Required=false)]
+            public string ReferenceId { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>200</para>

@@ -41,8 +41,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>[&quot;0830011xxxx&quot;, &quot;0830312xxxx&quot;]</para>
         /// </summary>

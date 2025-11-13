@@ -78,6 +78,22 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public bool? ExecutingUntilTimeout { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;applicationId&quot;:&quot;08e6b63a-<b><b>-</b></b>-****-689a288cdbb5&quot;,&quot;templateId&quot;:&quot;325&quot;}</para>
+        /// </summary>
+        [NameInMap("FlashSmsParameters")]
+        [Validation(Required=false)]
+        public string FlashSmsParameters { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0d368091-2c70-4d26-979a-6997ddc9c34f</para>
+        /// </summary>
+        [NameInMap("InstGroupId")]
+        [Validation(Required=false)]
+        public string InstGroupId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,6 +132,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("NumberList")]
+        [Validation(Required=false)]
+        public List<string> NumberList { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
             }
 
+            [NameInMap("AgentType")]
+            [Validation(Required=false)]
+            public string AgentType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>157123456789****</para>
@@ -110,6 +114,20 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [NameInMap("AliyunUid")]
             [Validation(Required=false)]
             public string AliyunUid { get; set; }
+
+            [NameInMap("ChatbotBusinessUnit")]
+            [Validation(Required=false)]
+            public GetInstanceResponseBodyDataChatbotBusinessUnit ChatbotBusinessUnit { get; set; }
+            public class GetInstanceResponseBodyDataChatbotBusinessUnit : TeaModel {
+                [NameInMap("UnitId")]
+                [Validation(Required=false)]
+                public long? UnitId { get; set; }
+
+                [NameInMap("UnitKey")]
+                [Validation(Required=false)]
+                public string UnitKey { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>

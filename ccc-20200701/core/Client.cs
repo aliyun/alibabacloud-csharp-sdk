@@ -4098,6 +4098,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 request.CaseListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CaseList, "CaseList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NumberList))
+            {
+                request.NumberListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NumberList, "NumberList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallableTime))
             {
@@ -4123,6 +4127,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["ExecutingUntilTimeout"] = request.ExecutingUntilTimeout;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlashSmsParameters))
+            {
+                query["FlashSmsParameters"] = request.FlashSmsParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstGroupId))
+            {
+                query["InstGroupId"] = request.InstGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -4138,6 +4150,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberListShrink))
+            {
+                query["NumberList"] = request.NumberListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueId))
             {
@@ -4206,6 +4222,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 request.CaseListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CaseList, "CaseList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NumberList))
+            {
+                request.NumberListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NumberList, "NumberList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallableTime))
             {
@@ -4231,6 +4251,14 @@ namespace AlibabaCloud.SDK.CCC20200701
             {
                 query["ExecutingUntilTimeout"] = request.ExecutingUntilTimeout;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlashSmsParameters))
+            {
+                query["FlashSmsParameters"] = request.FlashSmsParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstGroupId))
+            {
+                query["InstGroupId"] = request.InstGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -4246,6 +4274,10 @@ namespace AlibabaCloud.SDK.CCC20200701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberListShrink))
+            {
+                query["NumberList"] = request.NumberListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueId))
             {
@@ -4726,6 +4758,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await CreateCustomCallTaggingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateInstanceRequest
         /// </param>
@@ -4779,6 +4816,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateInstanceRequest
         /// </param>
@@ -4832,6 +4874,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateInstanceRequest
         /// </param>
@@ -4845,6 +4892,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return CreateInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateInstanceRequest
         /// </param>
@@ -10246,6 +10298,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetHistoricalInstanceReportWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceRequest
         /// </param>
@@ -10283,6 +10340,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceRequest
         /// </param>
@@ -10320,6 +10382,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceRequest
         /// </param>
@@ -10333,6 +10400,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceRequest
         /// </param>
@@ -18814,6 +18886,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListHistoricalAgentSkillGroupReportWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组汇总报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHistoricalSkillGroupReportRequest
         /// </param>
@@ -18877,6 +18954,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListHistoricalSkillGroupReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组汇总报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHistoricalSkillGroupReportRequest
         /// </param>
@@ -18940,6 +19022,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListHistoricalSkillGroupReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组汇总报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHistoricalSkillGroupReportRequest
         /// </param>
@@ -18953,6 +19040,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListHistoricalSkillGroupReportWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>技能组汇总报表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHistoricalSkillGroupReportRequest
         /// </param>
