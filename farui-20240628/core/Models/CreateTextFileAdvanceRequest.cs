@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("ContractId")]
+        [Validation(Required=false)]
+        public string ContractId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1714476549</para>

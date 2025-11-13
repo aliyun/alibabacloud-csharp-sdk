@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
                     [Validation(Required=false)]
                     public string RiskExplain { get; set; }
 
+                    [NameInMap("standardOriginalContent")]
+                    [Validation(Required=false)]
+                    public string StandardOriginalContent { get; set; }
+
                 }
 
             }

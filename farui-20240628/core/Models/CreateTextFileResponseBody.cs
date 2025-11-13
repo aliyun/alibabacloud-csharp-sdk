@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.FaRui20240628.Models
         [Validation(Required=false)]
         public CreateTextFileResponseBodyData Data { get; set; }
         public class CreateTextFileResponseBodyData : TeaModel {
+            [NameInMap("ContractId")]
+            [Validation(Required=false)]
+            public string ContractId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>36d6447d277c4a1c9fd0def1d16341f1</para>

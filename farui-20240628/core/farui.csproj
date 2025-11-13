@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.FaRui20240628</AssemblyName>
-    <Version>1.2.2</Version>
+    <Version>1.2.3</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud FaRui (20240628) SDK Library for .NET</Description>
@@ -44,7 +44,7 @@
     <PackageReference Include="AlibabaCloud.TeaXML" Version="0.0.5"/>
     <PackageReference Include="Aliyun.Credentials" Version="1.5.2"/>
     <PackageReference Include="AlibabaCloud.SDK.TeaFileform" Version="0.0.2"/>
-    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.14"/>
+    <PackageReference Include="AlibabaCloud.OpenApiClient" Version="0.1.15"/>
     <PackageReference Include="AlibabaCloud.OpenApiUtil" Version="1.1.2"/>
     <PackageReference Include="AlibabaCloud.EndpointUtil" Version="0.1.2"/>
     <PackageReference Include="Tea" Version="1.1.3"/>
