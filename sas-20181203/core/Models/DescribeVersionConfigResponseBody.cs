@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? AssetLevel { get; set; }
 
+        [NameInMap("CanTryPostPaidPackage")]
+        [Validation(Required=false)]
+        public int? CanTryPostPaidPackage { get; set; }
+
         /// <summary>
         /// <para>The purchased quota for configuration assessment. Unit: times/month.</para>
         /// 

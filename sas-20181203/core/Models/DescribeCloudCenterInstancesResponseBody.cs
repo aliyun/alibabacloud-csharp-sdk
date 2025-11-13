@@ -453,6 +453,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Mem { get; set; }
 
+            /// <summary>
+            /// <para>The namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>crm-test</para>
+            /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }

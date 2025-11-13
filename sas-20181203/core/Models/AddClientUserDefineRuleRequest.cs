@@ -190,6 +190,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>5</b>: Operation on Registry</description></item>
         /// <item><description><b>6</b>: Dynamic-link Library Loading</description></item>
         /// <item><description><b>7</b>: File Renaming</description></item>
+        /// <item><description><b>8</b>: Network domain name</description></item>
+        /// <item><description><b>9</b>: Network ip</description></item>
+        /// <item><description><b>10</b>: File Path</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
