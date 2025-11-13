@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public bool? Verbose { get; set; }
 
+        [NameInMap("WithNodeMeta")]
+        [Validation(Required=false)]
+        public bool? WithNodeMeta { get; set; }
+
     }
 
 }
