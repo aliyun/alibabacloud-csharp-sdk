@@ -34441,6 +34441,422 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>用于更新域名的状态属性</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</description></item>
+        /// <item><description>必须提供<c>RegistryId</c>和<c>Tld</c>参数以标识要修改的具体TLD。</description></item>
+        /// <item><description>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</description></item>
+        /// <item><description>环境(<c>Env</c>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</description></item>
+        /// <item><description>某些时间戳字段如<c>SunriseStartTimeStamp</c>要求输入Unix时间戳格式的数据。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRspDomainServerHoldStatusOteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRspDomainServerHoldStatusOteResponse
+        /// </returns>
+        public UpdateRspDomainServerHoldStatusOteResponse UpdateRspDomainServerHoldStatusOteWithOptions(UpdateRspDomainServerHoldStatusOteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatorId))
+            {
+                query["OperatorId"] = request.OperatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatorType))
+            {
+                query["OperatorType"] = request.OperatorType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerHoldStatus))
+            {
+                query["ServerHoldStatus"] = request.ServerHoldStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusMsg))
+            {
+                query["StatusMsg"] = request.StatusMsg;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRspDomainServerHoldStatusOte",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRspDomainServerHoldStatusOteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新域名的状态属性</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</description></item>
+        /// <item><description>必须提供<c>RegistryId</c>和<c>Tld</c>参数以标识要修改的具体TLD。</description></item>
+        /// <item><description>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</description></item>
+        /// <item><description>环境(<c>Env</c>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</description></item>
+        /// <item><description>某些时间戳字段如<c>SunriseStartTimeStamp</c>要求输入Unix时间戳格式的数据。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRspDomainServerHoldStatusOteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRspDomainServerHoldStatusOteResponse
+        /// </returns>
+        public async Task<UpdateRspDomainServerHoldStatusOteResponse> UpdateRspDomainServerHoldStatusOteWithOptionsAsync(UpdateRspDomainServerHoldStatusOteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatorId))
+            {
+                query["OperatorId"] = request.OperatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatorType))
+            {
+                query["OperatorType"] = request.OperatorType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerHoldStatus))
+            {
+                query["ServerHoldStatus"] = request.ServerHoldStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusMsg))
+            {
+                query["StatusMsg"] = request.StatusMsg;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRspDomainServerHoldStatusOte",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRspDomainServerHoldStatusOteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新域名的状态属性</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</description></item>
+        /// <item><description>必须提供<c>RegistryId</c>和<c>Tld</c>参数以标识要修改的具体TLD。</description></item>
+        /// <item><description>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</description></item>
+        /// <item><description>环境(<c>Env</c>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</description></item>
+        /// <item><description>某些时间戳字段如<c>SunriseStartTimeStamp</c>要求输入Unix时间戳格式的数据。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRspDomainServerHoldStatusOteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRspDomainServerHoldStatusOteResponse
+        /// </returns>
+        public UpdateRspDomainServerHoldStatusOteResponse UpdateRspDomainServerHoldStatusOte(UpdateRspDomainServerHoldStatusOteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateRspDomainServerHoldStatusOteWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新域名的状态属性</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</description></item>
+        /// <item><description>必须提供<c>RegistryId</c>和<c>Tld</c>参数以标识要修改的具体TLD。</description></item>
+        /// <item><description>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</description></item>
+        /// <item><description>环境(<c>Env</c>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</description></item>
+        /// <item><description>某些时间戳字段如<c>SunriseStartTimeStamp</c>要求输入Unix时间戳格式的数据。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRspDomainServerHoldStatusOteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRspDomainServerHoldStatusOteResponse
+        /// </returns>
+        public async Task<UpdateRspDomainServerHoldStatusOteResponse> UpdateRspDomainServerHoldStatusOteAsync(UpdateRspDomainServerHoldStatusOteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateRspDomainServerHoldStatusOteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新域名的状态属性</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</description></item>
+        /// <item><description>必须提供<c>RegistryId</c>和<c>Tld</c>参数以标识要修改的具体TLD。</description></item>
+        /// <item><description>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</description></item>
+        /// <item><description>环境(<c>Env</c>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</description></item>
+        /// <item><description>某些时间戳字段如<c>SunriseStartTimeStamp</c>要求输入Unix时间戳格式的数据。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRspDomainStatusOteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRspDomainStatusOteResponse
+        /// </returns>
+        public UpdateRspDomainStatusOteResponse UpdateRspDomainStatusOteWithOptions(UpdateRspDomainStatusOteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddStatusList))
+            {
+                query["AddStatusList"] = request.AddStatusList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteStatusList))
+            {
+                query["DeleteStatusList"] = request.DeleteStatusList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatorId))
+            {
+                query["OperatorId"] = request.OperatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatorType))
+            {
+                query["OperatorType"] = request.OperatorType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRspDomainStatusOte",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRspDomainStatusOteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新域名的状态属性</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</description></item>
+        /// <item><description>必须提供<c>RegistryId</c>和<c>Tld</c>参数以标识要修改的具体TLD。</description></item>
+        /// <item><description>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</description></item>
+        /// <item><description>环境(<c>Env</c>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</description></item>
+        /// <item><description>某些时间戳字段如<c>SunriseStartTimeStamp</c>要求输入Unix时间戳格式的数据。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRspDomainStatusOteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRspDomainStatusOteResponse
+        /// </returns>
+        public async Task<UpdateRspDomainStatusOteResponse> UpdateRspDomainStatusOteWithOptionsAsync(UpdateRspDomainStatusOteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddStatusList))
+            {
+                query["AddStatusList"] = request.AddStatusList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteStatusList))
+            {
+                query["DeleteStatusList"] = request.DeleteStatusList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatorId))
+            {
+                query["OperatorId"] = request.OperatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatorType))
+            {
+                query["OperatorType"] = request.OperatorType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRspDomainStatusOte",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRspDomainStatusOteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新域名的状态属性</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</description></item>
+        /// <item><description>必须提供<c>RegistryId</c>和<c>Tld</c>参数以标识要修改的具体TLD。</description></item>
+        /// <item><description>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</description></item>
+        /// <item><description>环境(<c>Env</c>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</description></item>
+        /// <item><description>某些时间戳字段如<c>SunriseStartTimeStamp</c>要求输入Unix时间戳格式的数据。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRspDomainStatusOteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRspDomainStatusOteResponse
+        /// </returns>
+        public UpdateRspDomainStatusOteResponse UpdateRspDomainStatusOte(UpdateRspDomainStatusOteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateRspDomainStatusOteWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新域名的状态属性</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</description></item>
+        /// <item><description>必须提供<c>RegistryId</c>和<c>Tld</c>参数以标识要修改的具体TLD。</description></item>
+        /// <item><description>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</description></item>
+        /// <item><description>环境(<c>Env</c>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</description></item>
+        /// <item><description>某些时间戳字段如<c>SunriseStartTimeStamp</c>要求输入Unix时间戳格式的数据。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRspDomainStatusOteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRspDomainStatusOteResponse
+        /// </returns>
+        public async Task<UpdateRspDomainStatusOteResponse> UpdateRspDomainStatusOteAsync(UpdateRspDomainStatusOteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateRspDomainStatusOteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>检查实例主机名是否可添加</para>
         /// </summary>
         /// 
