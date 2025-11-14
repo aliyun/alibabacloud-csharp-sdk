@@ -277,6 +277,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string Port { get; set; }
 
+            [NameInMap("PortDescription")]
+            [Validation(Required=false)]
+            public string PortDescription { get; set; }
+
         }
 
         /// <summary>
