@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string LoongCollectorStatus { get; set; }
 
+                [NameInMap("LoongCollectorVersion")]
+                [Validation(Required=false)]
+                public string LoongCollectorVersion { get; set; }
+
                 /// <summary>
                 /// <para>Indicates whether the SysAK monitoring feature is enabled.`` Valid values:</para>
                 /// <list type="bullet">
