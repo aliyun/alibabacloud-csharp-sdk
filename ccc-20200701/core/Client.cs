@@ -24504,6 +24504,162 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改活动外呼号码</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyCampaignNumbersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCampaignNumbersResponse
+        /// </returns>
+        public ModifyCampaignNumbersResponse ModifyCampaignNumbersWithOptions(ModifyCampaignNumbersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyCampaignNumbersShrinkRequest request = new ModifyCampaignNumbersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NumberList))
+            {
+                request.NumberListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NumberList, "NumberList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CampaignId))
+            {
+                query["CampaignId"] = request.CampaignId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstGroupId))
+            {
+                query["InstGroupId"] = request.InstGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberListShrink))
+            {
+                query["NumberList"] = request.NumberListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyCampaignNumbers",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyCampaignNumbersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改活动外呼号码</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyCampaignNumbersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCampaignNumbersResponse
+        /// </returns>
+        public async Task<ModifyCampaignNumbersResponse> ModifyCampaignNumbersWithOptionsAsync(ModifyCampaignNumbersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyCampaignNumbersShrinkRequest request = new ModifyCampaignNumbersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NumberList))
+            {
+                request.NumberListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NumberList, "NumberList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CampaignId))
+            {
+                query["CampaignId"] = request.CampaignId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstGroupId))
+            {
+                query["InstGroupId"] = request.InstGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberListShrink))
+            {
+                query["NumberList"] = request.NumberListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyCampaignNumbers",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyCampaignNumbersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改活动外呼号码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCampaignNumbersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCampaignNumbersResponse
+        /// </returns>
+        public ModifyCampaignNumbersResponse ModifyCampaignNumbers(ModifyCampaignNumbersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyCampaignNumbersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改活动外呼号码</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCampaignNumbersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCampaignNumbersResponse
+        /// </returns>
+        public async Task<ModifyCampaignNumbersResponse> ModifyCampaignNumbersAsync(ModifyCampaignNumbersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyCampaignNumbersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>编辑呼入控制号码</para>
         /// </summary>
         /// 
