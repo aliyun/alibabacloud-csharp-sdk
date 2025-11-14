@@ -124,6 +124,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("SaleMode")]
+        [Validation(Required=false)]
+        public string SaleMode { get; set; }
+
         /// <summary>
         /// <para>The beginning of the period for querying generated backup files.</para>
         /// 
