@@ -43,6 +43,30 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("ParentFeatureEntityId")]
+        [Validation(Required=false)]
+        public string ParentFeatureEntityId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>user</para>
+        /// </summary>
+        [NameInMap("ParentFeatureEntityName")]
+        [Validation(Required=false)]
+        public string ParentFeatureEntityName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>user_id</para>
+        /// </summary>
+        [NameInMap("ParentJoinId")]
+        [Validation(Required=false)]
+        public string ParentJoinId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
         [NameInMap("ProjectId")]

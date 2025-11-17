@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("ParentFeatureEntityId")]
+        [Validation(Required=false)]
+        public string ParentFeatureEntityId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
         [NameInMap("ProjectId")]
