@@ -1,3 +1,6 @@
+2025-11-17 Version: 1.7.5
+- Generated csharp 2020-12-03 for pai-dlc.
+
 2025-11-10 Version: 1.7.4
 - Update API UpdateJob: add request parameters body.JobSpecs.
 

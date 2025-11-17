@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string PodIp { get; set; }
 
+        [NameInMap("PodIps")]
+        [Validation(Required=false)]
+        public List<PodNetworkInterface> PodIps { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>fe846462-af2c-4521-bd6f-96787a57591d</para>
