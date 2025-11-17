@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class BatchAddFeishuUsersResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Result of adding members to the user group. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Addition successful</description></item>
+        /// <item><description>false: Addition failed</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public BatchAddFeishuUsersResponseBodyResult Result { get; set; }
         public class BatchAddFeishuUsersResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>Number of failed validations.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -33,15 +43,23 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public int? FailCount { get; set; }
 
+            /// <summary>
+            /// <para>Details of the failures.</para>
+            /// </summary>
             [NameInMap("FailResults")]
             [Validation(Required=false)]
             public List<BatchAddFeishuUsersResponseBodyResultFailResults> FailResults { get; set; }
             public class BatchAddFeishuUsersResponseBodyResultFailResults : TeaModel {
+                /// <summary>
+                /// <para>Reasons for errors.</para>
+                /// </summary>
                 [NameInMap("FailInfos")]
                 [Validation(Required=false)]
                 public List<BatchAddFeishuUsersResponseBodyResultFailResultsFailInfos> FailInfos { get; set; }
                 public class BatchAddFeishuUsersResponseBodyResultFailResultsFailInfos : TeaModel {
                     /// <summary>
+                    /// <para>Error code.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ACCOUNT_EXIST</para>
                     /// </summary>
@@ -49,11 +67,19 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     [Validation(Required=false)]
                     public string Code { get; set; }
 
+                    /// <summary>
+                    /// <para>Description of the error code.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>TEST</para>
+                    /// </summary>
                     [NameInMap("CodeDesc")]
                     [Validation(Required=false)]
                     public string CodeDesc { get; set; }
 
                     /// <summary>
+                    /// <para>Incorrect input value.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>20</para>
                     /// </summary>
@@ -66,6 +92,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
+            /// <para>Count of successes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -76,6 +104,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
+        /// <para>Whether the request was successful. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Request successful</description></item>
+        /// <item><description>false: Request failed</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

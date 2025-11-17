@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListCollectionsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the user. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</para>
+        /// <para>User ID. This refers to the UserID in Quick BI, not the Alibaba Cloud UID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

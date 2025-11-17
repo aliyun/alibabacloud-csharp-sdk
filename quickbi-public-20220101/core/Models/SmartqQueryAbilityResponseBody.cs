@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public string ConclusionText { get; set; }
 
+            [NameInMap("DataList")]
+            [Validation(Required=false)]
+            public List<string> DataList { get; set; }
+
             /// <summary>
             /// <para>Visualized logical SQL.</para>
             /// 

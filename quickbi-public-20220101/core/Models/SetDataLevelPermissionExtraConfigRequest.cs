@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class SetDataLevelPermissionExtraConfigRequest : TeaModel {
         /// <summary>
+        /// <para>Dataset ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CubeId { get; set; }
 
         /// <summary>
+        /// <para>Policy when no rule is matched:</para>
+        /// <list type="bullet">
+        /// <item><description>NONE: No permission</description></item>
+        /// <item><description>ALL: Full permission</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +36,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string MissHitPolicy { get; set; }
 
         /// <summary>
+        /// <para>Type of dataset row and column permissions. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description>ROW_LEVEL: Row-level permission</description></item>
+        /// <item><description>COLUMN_LEVEL: Column-level permission</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

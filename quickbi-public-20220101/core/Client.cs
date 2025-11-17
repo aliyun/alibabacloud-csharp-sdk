@@ -1735,7 +1735,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量添加飞书用户。</para>
+        /// <para>Batch add Feishu users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1799,7 +1799,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量添加飞书用户。</para>
+        /// <para>Batch add Feishu users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1863,7 +1863,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量添加飞书用户。</para>
+        /// <para>Batch add Feishu users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1887,7 +1887,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量添加飞书用户。</para>
+        /// <para>Batch add Feishu users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3635,6 +3635,182 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateUserGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作空间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public CreateWorkspaceResponse CreateWorkspaceWithOptions(CreateWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowPublish))
+            {
+                query["AllowPublish"] = request.AllowPublish;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowShare))
+            {
+                query["AllowShare"] = request.AllowShare;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowViewAll))
+            {
+                query["AllowViewAll"] = request.AllowViewAll;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultShareToAll))
+            {
+                query["DefaultShareToAll"] = request.DefaultShareToAll;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnlyAdminCreateDatasource))
+            {
+                query["OnlyAdminCreateDatasource"] = request.OnlyAdminCreateDatasource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseComment))
+            {
+                query["UseComment"] = request.UseComment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceDescription))
+            {
+                query["WorkspaceDescription"] = request.WorkspaceDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
+            {
+                query["WorkspaceName"] = request.WorkspaceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkspace",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作空间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public async Task<CreateWorkspaceResponse> CreateWorkspaceWithOptionsAsync(CreateWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowPublish))
+            {
+                query["AllowPublish"] = request.AllowPublish;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowShare))
+            {
+                query["AllowShare"] = request.AllowShare;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowViewAll))
+            {
+                query["AllowViewAll"] = request.AllowViewAll;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultShareToAll))
+            {
+                query["DefaultShareToAll"] = request.DefaultShareToAll;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnlyAdminCreateDatasource))
+            {
+                query["OnlyAdminCreateDatasource"] = request.OnlyAdminCreateDatasource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseComment))
+            {
+                query["UseComment"] = request.UseComment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceDescription))
+            {
+                query["WorkspaceDescription"] = request.WorkspaceDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
+            {
+                query["WorkspaceName"] = request.WorkspaceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkspace",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作空间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public CreateWorkspaceResponse CreateWorkspace(CreateWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateWorkspaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作空间</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public async Task<CreateWorkspaceResponse> CreateWorkspaceAsync(CreateWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateWorkspaceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5855,6 +6031,158 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取空间下加速引擎管控页任务信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAccelerationOfWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccelerationOfWorkspaceResponse
+        /// </returns>
+        public ListAccelerationOfWorkspaceResponse ListAccelerationOfWorkspaceWithOptions(ListAccelerationOfWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatorId))
+            {
+                query["CreatorId"] = request.CreatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CubeName))
+            {
+                query["CubeName"] = request.CubeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAccelerationOfWorkspace",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAccelerationOfWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取空间下加速引擎管控页任务信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAccelerationOfWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccelerationOfWorkspaceResponse
+        /// </returns>
+        public async Task<ListAccelerationOfWorkspaceResponse> ListAccelerationOfWorkspaceWithOptionsAsync(ListAccelerationOfWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatorId))
+            {
+                query["CreatorId"] = request.CreatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CubeName))
+            {
+                query["CubeName"] = request.CubeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAccelerationOfWorkspace",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAccelerationOfWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取空间下加速引擎管控页任务信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAccelerationOfWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccelerationOfWorkspaceResponse
+        /// </returns>
+        public ListAccelerationOfWorkspaceResponse ListAccelerationOfWorkspace(ListAccelerationOfWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAccelerationOfWorkspaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取空间下加速引擎管控页任务信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAccelerationOfWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAccelerationOfWorkspaceResponse
+        /// </returns>
+        public async Task<ListAccelerationOfWorkspaceResponse> ListAccelerationOfWorkspaceAsync(ListAccelerationOfWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAccelerationOfWorkspaceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries API data sources.</para>
         /// </summary>
         /// 
@@ -6139,7 +6467,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the work.</para>
+        /// <para>Retrieve the list of works that a user has favorited.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6181,7 +6509,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the work.</para>
+        /// <para>Retrieve the list of works that a user has favorited.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6223,7 +6551,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the work.</para>
+        /// <para>Retrieve the list of works that a user has favorited.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6241,7 +6569,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the work.</para>
+        /// <para>Retrieve the list of works that a user has favorited.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8565,6 +8893,286 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量编辑仪表板的小Q问数状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDashboardNl2sqlStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDashboardNl2sqlStatusResponse
+        /// </returns>
+        public ModifyDashboardNl2sqlStatusResponse ModifyDashboardNl2sqlStatusWithOptions(ModifyDashboardNl2sqlStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DashboardIds))
+            {
+                query["DashboardIds"] = request.DashboardIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDashboardNl2sqlStatus",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDashboardNl2sqlStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量编辑仪表板的小Q问数状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDashboardNl2sqlStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDashboardNl2sqlStatusResponse
+        /// </returns>
+        public async Task<ModifyDashboardNl2sqlStatusResponse> ModifyDashboardNl2sqlStatusWithOptionsAsync(ModifyDashboardNl2sqlStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DashboardIds))
+            {
+                query["DashboardIds"] = request.DashboardIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDashboardNl2sqlStatus",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDashboardNl2sqlStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量编辑仪表板的小Q问数状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDashboardNl2sqlStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDashboardNl2sqlStatusResponse
+        /// </returns>
+        public ModifyDashboardNl2sqlStatusResponse ModifyDashboardNl2sqlStatus(ModifyDashboardNl2sqlStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDashboardNl2sqlStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量编辑仪表板的小Q问数状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDashboardNl2sqlStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDashboardNl2sqlStatusResponse
+        /// </returns>
+        public async Task<ModifyDashboardNl2sqlStatusResponse> ModifyDashboardNl2sqlStatusAsync(ModifyDashboardNl2sqlStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDashboardNl2sqlStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集的加速任务运行日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAccelerationLogByCubeIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAccelerationLogByCubeIdResponse
+        /// </returns>
+        public QueryAccelerationLogByCubeIdResponse QueryAccelerationLogByCubeIdWithOptions(QueryAccelerationLogByCubeIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CubeId))
+            {
+                query["CubeId"] = request.CubeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryAccelerationLogByCubeId",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryAccelerationLogByCubeIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集的加速任务运行日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAccelerationLogByCubeIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAccelerationLogByCubeIdResponse
+        /// </returns>
+        public async Task<QueryAccelerationLogByCubeIdResponse> QueryAccelerationLogByCubeIdWithOptionsAsync(QueryAccelerationLogByCubeIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CubeId))
+            {
+                query["CubeId"] = request.CubeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryAccelerationLogByCubeId",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryAccelerationLogByCubeIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集的加速任务运行日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAccelerationLogByCubeIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAccelerationLogByCubeIdResponse
+        /// </returns>
+        public QueryAccelerationLogByCubeIdResponse QueryAccelerationLogByCubeId(QueryAccelerationLogByCubeIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryAccelerationLogByCubeIdWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集的加速任务运行日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAccelerationLogByCubeIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAccelerationLogByCubeIdResponse
+        /// </returns>
+        public async Task<QueryAccelerationLogByCubeIdResponse> QueryAccelerationLogByCubeIdAsync(QueryAccelerationLogByCubeIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryAccelerationLogByCubeIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Get approval flow information based on the approver.</para>
         /// </summary>
         /// 
@@ -9461,7 +10069,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询仪表板的问数资源信息</para>
+        /// <para>Query Dashboard\&quot;s Question Resource Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9507,7 +10115,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询仪表板的问数资源信息</para>
+        /// <para>Query Dashboard\&quot;s Question Resource Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9553,7 +10161,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询仪表板的问数资源信息</para>
+        /// <para>Query Dashboard\&quot;s Question Resource Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9571,7 +10179,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询仪表板的问数资源信息</para>
+        /// <para>Query Dashboard\&quot;s Question Resource Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10809,8 +11417,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据集的行级权限开关状态。</para>
+        /// <para>Get the row-level permission switch status for a specified dataset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. To migrate to the new row and column permission model, follow these steps: In Organization Management -&gt; Security Configuration -&gt; Upgrade Row and Column Permissions, click <b>One-Click Upgrade</b> to upgrade to the new row-level permissions.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryDatasetSwitchInfoRequest
@@ -10851,8 +11466,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据集的行级权限开关状态。</para>
+        /// <para>Get the row-level permission switch status for a specified dataset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. To migrate to the new row and column permission model, follow these steps: In Organization Management -&gt; Security Configuration -&gt; Upgrade Row and Column Permissions, click <b>One-Click Upgrade</b> to upgrade to the new row-level permissions.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryDatasetSwitchInfoRequest
@@ -10893,8 +11515,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据集的行级权限开关状态。</para>
+        /// <para>Get the row-level permission switch status for a specified dataset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. To migrate to the new row and column permission model, follow these steps: In Organization Management -&gt; Security Configuration -&gt; Upgrade Row and Column Permissions, click <b>One-Click Upgrade</b> to upgrade to the new row-level permissions.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryDatasetSwitchInfoRequest
@@ -10911,8 +11540,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据集的行级权限开关状态。</para>
+        /// <para>Get the row-level permission switch status for a specified dataset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. To migrate to the new row and column permission model, follow these steps: In Organization Management -&gt; Security Configuration -&gt; Upgrade Row and Column Permissions, click <b>One-Click Upgrade</b> to upgrade to the new row-level permissions.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryDatasetSwitchInfoRequest
@@ -11143,7 +11779,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过数据集ID查询最近一次加速任务</para>
+        /// <para>Query the Most Recent Acceleration Task by Dataset ID</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11185,7 +11821,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过数据集ID查询最近一次加速任务</para>
+        /// <para>Query the Most Recent Acceleration Task by Dataset ID</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11227,7 +11863,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过数据集ID查询最近一次加速任务</para>
+        /// <para>Query the Most Recent Acceleration Task by Dataset ID</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11245,7 +11881,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过数据集ID查询最近一次加速任务</para>
+        /// <para>Query the Most Recent Acceleration Task by Dataset ID</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14605,8 +15241,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置行列权限的额外配置</para>
+        /// <para>Set extra configuration for row and column permissions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This interface only supports the new version of Quick BI\&quot;s row and column permission model. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. The steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <b>One-Click Upgrade</b> to upgrade to the new row-level permissions.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetDataLevelPermissionExtraConfigRequest
@@ -14655,8 +15298,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置行列权限的额外配置</para>
+        /// <para>Set extra configuration for row and column permissions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This interface only supports the new version of Quick BI\&quot;s row and column permission model. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. The steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <b>One-Click Upgrade</b> to upgrade to the new row-level permissions.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetDataLevelPermissionExtraConfigRequest
@@ -14705,8 +15355,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置行列权限的额外配置</para>
+        /// <para>Set extra configuration for row and column permissions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This interface only supports the new version of Quick BI\&quot;s row and column permission model. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. The steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <b>One-Click Upgrade</b> to upgrade to the new row-level permissions.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetDataLevelPermissionExtraConfigRequest
@@ -14723,8 +15380,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置行列权限的额外配置</para>
+        /// <para>Set extra configuration for row and column permissions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This interface only supports the new version of Quick BI\&quot;s row and column permission model. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. The steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <b>One-Click Upgrade</b> to upgrade to the new row-level permissions.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetDataLevelPermissionExtraConfigRequest
@@ -14741,8 +15405,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置单条数据集行列权限配置信息（新增和更新）</para>
+        /// <para>Set single dataset row and column permission configuration information (addition and update)</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. Steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <b>One-Click Upgrade</b> to upgrade to the new row-level permissions.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetDataLevelPermissionRuleConfigRequest
@@ -14783,8 +15454,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置单条数据集行列权限配置信息（新增和更新）</para>
+        /// <para>Set single dataset row and column permission configuration information (addition and update)</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. Steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <b>One-Click Upgrade</b> to upgrade to the new row-level permissions.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetDataLevelPermissionRuleConfigRequest
@@ -14825,8 +15503,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置单条数据集行列权限配置信息（新增和更新）</para>
+        /// <para>Set single dataset row and column permission configuration information (addition and update)</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. Steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <b>One-Click Upgrade</b> to upgrade to the new row-level permissions.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetDataLevelPermissionRuleConfigRequest
@@ -14843,8 +15528,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置单条数据集行列权限配置信息（新增和更新）</para>
+        /// <para>Set single dataset row and column permission configuration information (addition and update)</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This interface only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. Steps to migrate to the new row and column permission model: In Organization Management --&gt; Security Configuration --&gt; Upgrade Row and Column Permissions to New Version, click <b>One-Click Upgrade</b> to upgrade to the new row-level permissions.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetDataLevelPermissionRuleConfigRequest
@@ -15343,6 +16035,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             {
                 query["CubeId"] = request.CubeId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultipleCubeIds))
+            {
+                query["MultipleCubeIds"] = request.MultipleCubeIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;
@@ -15397,6 +16093,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CubeId))
             {
                 query["CubeId"] = request.CubeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultipleCubeIds))
+            {
+                query["MultipleCubeIds"] = request.MultipleCubeIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
@@ -15813,7 +16513,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据源配置</para>
+        /// <para>Modify Data Source Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15855,7 +16555,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据源配置</para>
+        /// <para>Modify Data Source Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15897,7 +16597,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据源配置</para>
+        /// <para>Modify Data Source Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15915,7 +16615,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改数据源配置</para>
+        /// <para>Modify Data Source Configuration</para>
         /// </summary>
         /// 
         /// <param name="request">

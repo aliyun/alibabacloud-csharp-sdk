@@ -8,28 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
-    public class QueryDashboardNl2sqlRequest : TeaModel {
+    public class ModifyDashboardNl2sqlStatusRequest : TeaModel {
         /// <summary>
-        /// <para>User ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3d7ebb8***********500078f4</para>
+        /// <para>asda,sadaf</para>
         /// </summary>
-        [NameInMap("UserId")]
+        [NameInMap("DashboardIds")]
         [Validation(Required=false)]
-        public string UserId { get; set; }
+        public string DashboardIds { get; set; }
 
         /// <summary>
-        /// <para>Workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3d7ebb8***********500078f4</para>
+        /// <para>0</para>
         /// </summary>
-        [NameInMap("WorkspaceId")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string WorkspaceId { get; set; }
+        public int? Status { get; set; }
 
     }
 

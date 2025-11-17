@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
-    public class SmartqQueryAbilityRequest : TeaModel {
+    public class QueryAccelerationLogByCubeIdRequest : TeaModel {
         /// <summary>
-        /// <para>Dataset ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7c7223ae-****-3c744528014b</para>
@@ -20,36 +20,40 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CubeId { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>123124</para>
-        /// </summary>
-        [NameInMap("MultipleCubeIds")]
-        [Validation(Required=false)]
-        public string MultipleCubeIds { get; set; }
-
-        /// <summary>
-        /// <para>User ID.</para>
-        /// <remarks>
-        /// <para>Notice: If this field is not filled, the data will be queried by default as the organization owner.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>7c7223ae-****-3c744528014b</para>
-        /// </summary>
-        [NameInMap("UserId")]
-        [Validation(Required=false)]
-        public string UserId { get; set; }
-
-        /// <summary>
-        /// <para>Question text.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This year\&quot;s sales data</para>
+        /// <para>2025-05-15 00:00:00</para>
         /// </summary>
-        [NameInMap("UserQuestion")]
+        [NameInMap("EndDate")]
         [Validation(Required=false)]
-        public string UserQuestion { get; set; }
+        public string EndDate { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("PageNo")]
+        [Validation(Required=false)]
+        public int? PageNo { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2025-04-15 00:00:00</para>
+        /// </summary>
+        [NameInMap("StartDate")]
+        [Validation(Required=false)]
+        public string StartDate { get; set; }
 
     }
 
