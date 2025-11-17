@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string ScheduleConfigShrink { get; set; }
 
+        [NameInMap("TemplateConfig")]
+        [Validation(Required=false)]
+        public string TemplateConfig { get; set; }
+
         /// <summary>
         /// <para>The ID of the template that specifies the analysis algorithms. For more information about template operations, see <a href="https://help.aliyun.com/document_detail/445702.html">Configure templates</a>.</para>
         /// 

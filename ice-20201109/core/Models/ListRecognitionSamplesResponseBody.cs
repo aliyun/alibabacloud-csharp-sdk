@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public List<ListRecognitionSamplesResponseBodySamplesSample> Sample { get; set; }
             public class ListRecognitionSamplesResponseBodySamplesSample : TeaModel {
+                [NameInMap("EntityId")]
+                [Validation(Required=false)]
+                public string EntityId { get; set; }
+
                 /// <summary>
                 /// <para>The URL of the image sample.</para>
                 /// 
@@ -59,6 +63,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [NameInMap("ImageUrl")]
                 [Validation(Required=false)]
                 public string ImageUrl { get; set; }
+
+                [NameInMap("LibId")]
+                [Validation(Required=false)]
+                public string LibId { get; set; }
 
                 /// <summary>
                 /// <para>The sample ID.</para>

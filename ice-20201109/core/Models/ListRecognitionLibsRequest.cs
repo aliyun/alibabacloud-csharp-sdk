@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Algorithm { get; set; }
 
+        [NameInMap("LibId")]
+        [Validation(Required=false)]
+        public string LibId { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Params { get; set; }
 
+        [NameInMap("TemplateConfig")]
+        [Validation(Required=false)]
+        public string TemplateConfig { get; set; }
+
         /// <summary>
         /// <para>The ID of the template that specifies the analysis algorithms to be used. For details, see <a href="https://help.aliyun.com/zh/ims/developer-reference/api-ice-2020-11-09-createcustomtemplate?spm=a2c4g.11186623.help-menu-193643.d_5_0_3_3_0_0.17b66afamjKySv">CreateCustomTemplate</a> and <a href="https://help.aliyun.com/zh/ims/user-guide/smart-tagging-template?spm=a2c4g.11186623.0.i15">smart tagging template</a>.</para>
         /// 

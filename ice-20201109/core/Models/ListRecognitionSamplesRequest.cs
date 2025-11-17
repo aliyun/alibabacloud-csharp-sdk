@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string EntityId { get; set; }
 
+        [NameInMap("EntityName")]
+        [Validation(Required=false)]
+        public string EntityName { get; set; }
+
         /// <summary>
         /// <para>The ID of the recognition library.</para>
         /// <para>This parameter is required.</para>
