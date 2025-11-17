@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
+            [NameInMap("SavingPlanPeriod")]
+            [Validation(Required=false)]
+            public string SavingPlanPeriod { get; set; }
+
         }
 
         /// <summary>

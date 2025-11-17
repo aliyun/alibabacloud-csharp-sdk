@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                         [Validation(Required=false)]
                         public float? OriginalPrice { get; set; }
 
+                        [NameInMap("SavingPlanDiscountPrice")]
+                        [Validation(Required=false)]
+                        public float? SavingPlanDiscountPrice { get; set; }
+
                         /// <summary>
                         /// <b>Example:</b>
                         /// <para>292.2</para>
@@ -130,6 +134,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                         [NameInMap("ResourceType")]
                         [Validation(Required=false)]
                         public string ResourceType { get; set; }
+
+                        [NameInMap("SavingPlanRecommendPrice")]
+                        [Validation(Required=false)]
+                        public float? SavingPlanRecommendPrice { get; set; }
 
                         /// <summary>
                         /// <b>Example:</b>
