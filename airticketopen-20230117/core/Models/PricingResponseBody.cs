@@ -500,26 +500,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>product type description</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>description</para>
-                /// </summary>
-                [NameInMap("product_type_description")]
-                [Validation(Required=false)]
-                public string ProductTypeDescription { get; set; }
-
-                /// <summary>
-                /// <para>refund coupon description</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>description</para>
-                /// </summary>
-                [NameInMap("refund_ticket_coupon_description")]
-                [Validation(Required=false)]
-                public string RefundTicketCouponDescription { get; set; }
-
-                /// <summary>
                 /// <para>through check-in baggage policy</para>
                 /// </summary>
                 [NameInMap("segment_baggage_check_in_info_list")]
@@ -597,24 +577,39 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 
                 }
 
+                /// <summary>
+                /// <para>Quotation attributes</para>
+                /// </summary>
                 [NameInMap("solution_attribute")]
                 [Validation(Required=false)]
                 public PricingResponseBodyDataSolutionSolutionAttribute SolutionAttribute { get; set; }
                 public class PricingResponseBodyDataSolutionSolutionAttribute : TeaModel {
+                    /// <summary>
+                    /// <para>Issue ticket time related</para>
+                    /// </summary>
                     [NameInMap("issue_time_info")]
                     [Validation(Required=false)]
                     public PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo IssueTimeInfo { get; set; }
                     public class PricingResponseBodyDataSolutionSolutionAttributeIssueTimeInfo : TeaModel {
+                        /// <summary>
+                        /// <para>Issue ticket type: 1: after payment; 2: before departure; -1: unknown</para>
+                        /// </summary>
                         [NameInMap("issue_ticket_type")]
                         [Validation(Required=false)]
                         public int? IssueTicketType { get; set; }
 
+                        /// <summary>
+                        /// <para>Estimated issue ticket time, unit: minutes</para>
+                        /// </summary>
                         [NameInMap("issue_time_limit")]
                         [Validation(Required=false)]
                         public int? IssueTimeLimit { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <para>Supply source type 1: Self-operated; 2: Agent; 3: Flagship store</para>
+                    /// </summary>
                     [NameInMap("supply_source_type")]
                     [Validation(Required=false)]
                     public string SupplySourceType { get; set; }
@@ -666,7 +661,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>http reqeust has been processed successfully，status code is 200</para>
+        /// <para>http request has been processed successfully，status code is 200</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

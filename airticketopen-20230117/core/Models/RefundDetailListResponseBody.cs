@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class RefundDetailListResponseBody : TeaModel {
         /// <summary>
-        /// <para>request ID</para>
+        /// <para>Request RequestId</para>
         /// 
         /// <b>Example:</b>
         /// <para>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>data</para>
+        /// <para>Properly processed return data</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public RefundDetailListResponseBodyData Data { get; set; }
         public class RefundDetailListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>refund order list</para>
+            /// <para>Data list</para>
             /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<RefundDetailListResponseBodyDataList> List { get; set; }
             public class RefundDetailListResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>whether it is a supplementary refund order (if the refund amount is not enough, you can use RefundApply to create a supplementary refund order)</para>
+                /// <para>Whether it is a supplementary refund</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public bool? IsMultiRefund { get; set; }
 
                 /// <summary>
-                /// <para>order number that returned by Book</para>
+                /// <para>Order number （ Ticketing Order Number）</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>49884*****2345</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public long? OrderNum { get; set; }
 
                 /// <summary>
-                /// <para>refund order number that returned by RefundApply</para>
+                /// <para>Refund order number</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>49884*****950</para>
@@ -64,11 +64,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public long? RefundOrderNum { get; set; }
 
                 /// <summary>
-                /// <para>refund order status </para>
-                /// <para>0: refund application</para>
-                /// <para>1: refund in progress</para>
-                /// <para>2: refund failed</para>
-                /// <para>3: refund succeeded</para>
+                /// <para>Refund order status: 0: Refund application; 1: Refund in progress; 2: Refund failed; 3: Refund succeeded</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -78,7 +74,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? RefundOrderStatus { get; set; }
 
                 /// <summary>
-                /// <para>the original refund order number associated with this supplementary refund order, only avaliable when is_multi_refund=true</para>
+                /// <para>The original refund order number associated with this supplementary refund. Only present for supplementary refunds, indicating the ID of the original refund order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>49884*****2387</para>
@@ -88,7 +84,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string RelatedRefundOrderNum { get; set; }
 
                 /// <summary>
-                /// <para>transaction number</para>
+                /// <para>Transaction serial number</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>49884**tde-95za</para>
@@ -98,7 +94,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string TransactionNo { get; set; }
 
                 /// <summary>
-                /// <para>refund time(timestamp)</para>
+                /// <para>Creation time, UTC timestamp</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1677229002000</para>
@@ -110,14 +106,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             }
 
             /// <summary>
-            /// <para>information of pagination</para>
+            /// <para>Pagination information</para>
             /// </summary>
             [NameInMap("pagination")]
             [Validation(Required=false)]
             public RefundDetailListResponseBodyDataPagination Pagination { get; set; }
             public class RefundDetailListResponseBodyDataPagination : TeaModel {
                 /// <summary>
-                /// <para>current page index</para>
+                /// <para>Current page number</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -127,7 +123,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
-                /// <para>page size</para>
+                /// <para>Number of items per page</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -137,7 +133,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
-                /// <para>the number of total refund orders</para>
+                /// <para>Total count</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -147,7 +143,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? TotalCount { get; set; }
 
                 /// <summary>
-                /// <para>the number of total pages</para>
+                /// <para>Total pages</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -171,7 +167,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>error data</para>
+        /// <para>Data carried in error handling</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -181,7 +177,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public object ErrorData { get; set; }
 
         /// <summary>
-        /// <para>error message</para>
+        /// <para>Error message</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -191,7 +187,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>http reqeust has been processed successfully，status code is 200</para>
+        /// <para>HTTP request successful, status value is 200</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -201,7 +197,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>true represents success, false represents failure</para>
+        /// <para>Whether the operation was successful</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

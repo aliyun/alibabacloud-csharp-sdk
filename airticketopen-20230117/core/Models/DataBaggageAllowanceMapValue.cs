@@ -89,6 +89,70 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [Validation(Required=false)]
         public bool? IsAllCarryOnWeight { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>55</para>
+        /// </summary>
+        [NameInMap("carry_length")]
+        [Validation(Required=false)]
+        public int? CarryLength { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>40</para>
+        /// </summary>
+        [NameInMap("carry_width")]
+        [Validation(Required=false)]
+        public int? CarryWidth { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
+        [NameInMap("carry_height")]
+        [Validation(Required=false)]
+        public int? CarryHeight { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>115</para>
+        /// </summary>
+        [NameInMap("carry_sum_of_length_width_height")]
+        [Validation(Required=false)]
+        public int? CarrySumOfLengthWidthHeight { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
+        [NameInMap("length")]
+        [Validation(Required=false)]
+        public int? Length { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>40</para>
+        /// </summary>
+        [NameInMap("width")]
+        [Validation(Required=false)]
+        public int? Width { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
+        [NameInMap("height")]
+        [Validation(Required=false)]
+        public int? Height { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
+        [NameInMap("sum_of_length_width_height")]
+        [Validation(Required=false)]
+        public int? SumOfLengthWidthHeight { get; set; }
+
     }
 
 }

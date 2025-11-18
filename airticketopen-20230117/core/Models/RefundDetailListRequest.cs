@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class RefundDetailListRequest : TeaModel {
         /// <summary>
-        /// <para>order number returned by Book</para>
+        /// <para>Order number</para>
         /// 
         /// <b>Example:</b>
         /// <para>49884*****950</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? OrderNum { get; set; }
 
         /// <summary>
-        /// <para>pagination query parameters, from which page to start querying</para>
+        /// <para>Page index</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>pagination query parameters, how many orders to return</para>
+        /// <para>Page size</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>the earliest time(timestamp) of refund order creation</para>
+        /// <para>Refund order creation start time, UTC timestamp</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? RefundCreateBeginTime { get; set; }
 
         /// <summary>
-        /// <para>the latest time(timestamp) of refund order creation</para>
+        /// <para>Refund order creation end time, UTC timestamp</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

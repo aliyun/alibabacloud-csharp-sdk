@@ -1363,7 +1363,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-Detail</para>
+        /// <para>Change-Detail</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1422,7 +1422,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-Detail</para>
+        /// <para>Change-Detail</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1481,7 +1481,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-Detail</para>
+        /// <para>Change-Detail</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1500,7 +1500,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-Detail</para>
+        /// <para>Change-Detail</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3285,7 +3285,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trade - Seat and Price Verification</para>
+        /// <para>Transaction - Seat and Price Verification</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3349,7 +3349,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trade - Seat and Price Verification</para>
+        /// <para>Transaction - Seat and Price Verification</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3413,7 +3413,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trade - Seat and Price Verification</para>
+        /// <para>Transaction - Seat and Price Verification</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3437,7 +3437,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trade - Seat and Price Verification</para>
+        /// <para>Transaction - Seat and Price Verification</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3461,13 +3461,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>退票-申请</para>
+        /// <para>Ticket Refund - Application</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Apply for a refund and generate a refund order.</para>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RefundApplyRequest
@@ -3551,13 +3546,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>退票-申请</para>
+        /// <para>Ticket Refund - Application</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Apply for a refund and generate a refund order.</para>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RefundApplyRequest
@@ -3641,13 +3631,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>退票-申请</para>
+        /// <para>Ticket Refund - Application</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Apply for a refund and generate a refund order.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// RefundApplyRequest
@@ -3665,13 +3650,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>退票-申请</para>
+        /// <para>Ticket Refund - Application</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Apply for a refund and generate a refund order.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// RefundApplyRequest
@@ -3691,11 +3671,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
         /// <summary>
         /// <para>Refund - Detail</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Query refund order detail.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// RefundDetailRequest
@@ -3756,11 +3731,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
         /// <para>Refund - Detail</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Query refund order detail.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// RefundDetailRequest
         /// </param>
@@ -3820,11 +3790,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
         /// <para>Refund - Detail</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Query refund order detail.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// RefundDetailRequest
         /// </param>
@@ -3844,11 +3809,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
         /// <para>Refund - Detail</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Query refund order detail.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// RefundDetailRequest
         /// </param>
@@ -3867,11 +3827,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
         /// <summary>
         /// <para>Refund - Detail List</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Query refund order detail.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// RefundDetailListRequest
@@ -3948,11 +3903,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
         /// <para>Refund - Detail List</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Query refund order detail.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// RefundDetailListRequest
         /// </param>
@@ -4028,11 +3978,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
         /// <para>Refund - Detail List</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Query refund order detail.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// RefundDetailListRequest
         /// </param>
@@ -4052,11 +3997,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
         /// <para>Refund - Detail List</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Query refund order detail.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// RefundDetailListRequest
         /// </param>
@@ -4073,7 +4013,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>search</para>
+        /// <para>Search</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4167,7 +4107,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>search</para>
+        /// <para>Search</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4261,7 +4201,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>search</para>
+        /// <para>Search</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4285,7 +4225,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>search</para>
+        /// <para>Search</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4305,6 +4245,222 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             SearchHeaders headers = new SearchHeaders();
             return await SearchWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标准搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// StandardSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// StandardSearchHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StandardSearchResponse
+        /// </returns>
+        public StandardSearchResponse StandardSearchWithOptions(StandardSearchRequest tmpReq, StandardSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StandardSearchShrinkRequest request = new StandardSearchShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AirLegs))
+            {
+                request.AirLegsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AirLegs, "air_legs", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SearchControlOptions))
+            {
+                request.SearchControlOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SearchControlOptions, "search_control_options", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Adults))
+            {
+                body["adults"] = request.Adults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AirLegsShrink))
+            {
+                body["air_legs"] = request.AirLegsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CabinClass))
+            {
+                body["cabin_class"] = request.CabinClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Children))
+            {
+                body["children"] = request.Children;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Infants))
+            {
+                body["infants"] = request.Infants;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchControlOptionsShrink))
+            {
+                body["search_control_options"] = request.SearchControlOptionsShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAirticketAccessToken))
+            {
+                realHeaders["x-acs-airticket-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAirticketAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAirticketLanguage))
+            {
+                realHeaders["x-acs-airticket-language"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAirticketLanguage);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StandardSearch",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/airticket/v1/trade/action-standardsearch",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StandardSearchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标准搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// StandardSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// StandardSearchHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StandardSearchResponse
+        /// </returns>
+        public async Task<StandardSearchResponse> StandardSearchWithOptionsAsync(StandardSearchRequest tmpReq, StandardSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            StandardSearchShrinkRequest request = new StandardSearchShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AirLegs))
+            {
+                request.AirLegsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AirLegs, "air_legs", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SearchControlOptions))
+            {
+                request.SearchControlOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SearchControlOptions, "search_control_options", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Adults))
+            {
+                body["adults"] = request.Adults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AirLegsShrink))
+            {
+                body["air_legs"] = request.AirLegsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CabinClass))
+            {
+                body["cabin_class"] = request.CabinClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Children))
+            {
+                body["children"] = request.Children;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Infants))
+            {
+                body["infants"] = request.Infants;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchControlOptionsShrink))
+            {
+                body["search_control_options"] = request.SearchControlOptionsShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAirticketAccessToken))
+            {
+                realHeaders["x-acs-airticket-access-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAirticketAccessToken);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsAirticketLanguage))
+            {
+                realHeaders["x-acs-airticket-language"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsAirticketLanguage);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StandardSearch",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/airticket/v1/trade/action-standardsearch",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StandardSearchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标准搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StandardSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StandardSearchResponse
+        /// </returns>
+        public StandardSearchResponse StandardSearch(StandardSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            StandardSearchHeaders headers = new StandardSearchHeaders();
+            return StandardSearchWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标准搜索</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StandardSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StandardSearchResponse
+        /// </returns>
+        public async Task<StandardSearchResponse> StandardSearchAsync(StandardSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            StandardSearchHeaders headers = new StandardSearchHeaders();
+            return await StandardSearchWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

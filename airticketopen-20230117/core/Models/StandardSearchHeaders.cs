@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
-    public class RefundDetailHeaders : TeaModel {
+    public class StandardSearchHeaders : TeaModel {
         [NameInMap("commonHeaders")]
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
@@ -25,8 +25,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string XAcsAirticketAccessToken { get; set; }
 
         /// <summary>
-        /// <para>Multi-language, default to buyer account configuration</para>
-        /// 
         /// <b>Example:</b>
         /// <para>en_US</para>
         /// </summary>
