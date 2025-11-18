@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        [NameInMap("EipStatus")]
+        [Validation(Required=false)]
+        public string EipStatus { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>rdsai.supabase.basic</para>
@@ -56,6 +60,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
+
+        [NameInMap("NatStatus")]
+        [Validation(Required=false)]
+        public string NatStatus { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
