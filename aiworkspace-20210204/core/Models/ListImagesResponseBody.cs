@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// </summary>
             [NameInMap("Size")]
             [Validation(Required=false)]
-            public int? Size { get; set; }
+            public long? Size { get; set; }
 
             /// <summary>
             /// <para>镜像来源 ID</para>
