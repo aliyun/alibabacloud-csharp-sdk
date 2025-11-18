@@ -1,3 +1,6 @@
+2025-11-18 Version: 4.0.1
+- Generated csharp 2023-01-17 for airticketOpen.
+
 2025-11-18 Version: 4.0.0
 - Support API StandardSearch.
 - Update API OrderDetail: add response parameters Body.data.baggage_allowance_map.carry_length.
