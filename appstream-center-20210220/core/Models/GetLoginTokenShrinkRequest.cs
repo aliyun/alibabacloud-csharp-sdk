@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210220.Models
 {
     public class GetLoginTokenShrinkRequest : TeaModel {
+        [NameInMap("AreaSite")]
+        [Validation(Required=false)]
+        public string AreaSite { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>182901</para>

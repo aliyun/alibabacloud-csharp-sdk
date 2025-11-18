@@ -262,6 +262,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
                 request.AvailableFeaturesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AvailableFeatures, "AvailableFeatures", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AreaSite))
+            {
+                query["AreaSite"] = request.AreaSite;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthenticationCode))
             {
                 query["AuthenticationCode"] = request.AuthenticationCode;
@@ -454,6 +458,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
                 request.AvailableFeaturesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AvailableFeatures, "AvailableFeatures", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AreaSite))
+            {
+                query["AreaSite"] = request.AreaSite;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthenticationCode))
             {
                 query["AuthenticationCode"] = request.AuthenticationCode;
