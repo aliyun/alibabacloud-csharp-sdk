@@ -280,6 +280,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public List<GetJobResponseBodyPods> Pods { get; set; }
         public class GetJobResponseBodyPods : TeaModel {
+            [NameInMap("Duration")]
+            [Validation(Required=false)]
+            public double? Duration { get; set; }
+
             /// <summary>
             /// <para>The time when the node was created (UTC).</para>
             /// 
@@ -317,6 +321,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [Validation(Required=false)]
             public List<GetJobResponseBodyPodsHistoryPods> HistoryPods { get; set; }
             public class GetJobResponseBodyPodsHistoryPods : TeaModel {
+                [NameInMap("Duration")]
+                [Validation(Required=false)]
+                public double? Duration { get; set; }
+
                 /// <summary>
                 /// <para>The time when the node was created (UTC).</para>
                 /// 
@@ -357,6 +365,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 [Validation(Required=false)]
                 public string Ip { get; set; }
 
+                [NameInMap("NodeName")]
+                [Validation(Required=false)]
+                public string NodeName { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the node.</para>
                 /// 
@@ -366,6 +378,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 [NameInMap("PodId")]
                 [Validation(Required=false)]
                 public string PodId { get; set; }
+
+                [NameInMap("PodIps")]
+                [Validation(Required=false)]
+                public List<PodNetworkInterface> PodIps { get; set; }
 
                 /// <summary>
                 /// <para>The UID of the node.</para>
@@ -433,6 +449,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [Validation(Required=false)]
             public string Ip { get; set; }
 
+            [NameInMap("NodeName")]
+            [Validation(Required=false)]
+            public string NodeName { get; set; }
+
             /// <summary>
             /// <para>The node ID. It can be used in the GetPodLogs and GetPodEvents operations to obtain the detailed logs and events of the node.</para>
             /// 
@@ -442,6 +462,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [NameInMap("PodId")]
             [Validation(Required=false)]
             public string PodId { get; set; }
+
+            [NameInMap("PodIps")]
+            [Validation(Required=false)]
+            public List<PodNetworkInterface> PodIps { get; set; }
 
             /// <summary>
             /// <para>The UID of the node.</para>

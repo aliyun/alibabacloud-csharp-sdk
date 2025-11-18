@@ -1,3 +1,12 @@
+2025-11-18 Version: 1.7.6
+- Update API GetJob: add response parameters Body.Pods.$.Duration.
+- Update API GetJob: add response parameters Body.Pods.$.NodeName.
+- Update API GetJob: add response parameters Body.Pods.$.PodIps.
+- Update API GetJob: add response parameters Body.Pods.$.HistoryPods.$.Duration.
+- Update API GetJob: add response parameters Body.Pods.$.HistoryPods.$.NodeName.
+- Update API GetJob: add response parameters Body.Pods.$.HistoryPods.$.PodIps.
+
+
 2025-11-17 Version: 1.7.5
 - Generated csharp 2020-12-03 for pai-dlc.
 
