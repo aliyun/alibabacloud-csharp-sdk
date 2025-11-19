@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyCloudResourceRequest : TeaModel {
+        [NameInMap("CloudResourceId")]
+        [Validation(Required=false)]
+        public string CloudResourceId { get; set; }
+
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
@@ -117,15 +121,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public bool? Http2Enabled { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The port of the cloud service instance that is added to WAF.</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
+            [Obsolete]
             public int? Port { get; set; }
 
             /// <summary>
@@ -143,17 +149,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The ID of the cloud service instance that is added to WAF.</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-***</para>
             /// </summary>
             [NameInMap("ResourceInstanceId")]
             [Validation(Required=false)]
+            [Obsolete]
             public string ResourceInstanceId { get; set; }
 
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The type of the cloud service. Valid values:</para>
             /// <list type="bullet">
@@ -162,13 +172,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <item><description><b>ecs</b>: Elastic Compute Service (ECS).</description></item>
             /// <item><description><b>nlb</b>: Network Load Balancer (NLB).</description></item>
             /// </list>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>clb7</para>
             /// </summary>
             [NameInMap("ResourceProduct")]
             [Validation(Required=false)]
+            [Obsolete]
             public string ResourceProduct { get; set; }
 
             /// <summary>

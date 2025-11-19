@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public int? CipherSuite { get; set; }
 
+            [NameInMap("CloudResourceId")]
+            [Validation(Required=false)]
+            public string CloudResourceId { get; set; }
+
             /// <summary>
             /// <para>The custom cipher suites that you want to add. This parameter is available only if you set <b>CipherSuite</b> to <b>99</b>.</para>
             /// </summary>

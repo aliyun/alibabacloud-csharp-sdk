@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyCloudResourceShrinkRequest : TeaModel {
+        [NameInMap("CloudResourceId")]
+        [Validation(Required=false)]
+        public string CloudResourceId { get; set; }
+
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>

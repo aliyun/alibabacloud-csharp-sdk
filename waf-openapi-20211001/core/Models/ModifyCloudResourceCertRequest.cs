@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         }
 
+        [NameInMap("CloudResourceId")]
+        [Validation(Required=false)]
+        public string CloudResourceId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,14 +52,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>443</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? Port { get; set; }
 
         /// <summary>
@@ -68,24 +74,28 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-bp1*****jqnnqk5uj2p</para>
         /// </summary>
         [NameInMap("ResourceInstanceId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ResourceInstanceId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>clb4</para>
         /// </summary>
         [NameInMap("ResourceProduct")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ResourceProduct { get; set; }
 
     }

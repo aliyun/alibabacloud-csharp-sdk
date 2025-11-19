@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public List<DescribeAbnormalCloudResourcesResponseBodyAbnormalCloudResources> AbnormalCloudResources { get; set; }
         public class DescribeAbnormalCloudResourcesResponseBodyAbnormalCloudResources : TeaModel {
+            [NameInMap("CloudResourceId")]
+            [Validation(Required=false)]
+            public string CloudResourceId { get; set; }
+
             [NameInMap("Details")]
             [Validation(Required=false)]
             public List<DescribeAbnormalCloudResourcesResponseBodyAbnormalCloudResourcesDetails> Details { get; set; }
