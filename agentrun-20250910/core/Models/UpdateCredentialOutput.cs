@@ -9,17 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateCredentialOutput : TeaModel {
-        [NameInMap("id")]
+        [NameInMap("createdAt")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public string CreatedAt { get; set; }
 
-        [NameInMap("name")]
+        [NameInMap("credentialAuthType")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string CredentialAuthType { get; set; }
 
-        [NameInMap("type")]
+        [NameInMap("credentialId")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string CredentialId { get; set; }
+
+        [NameInMap("credentialName")]
+        [Validation(Required=false)]
+        public string CredentialName { get; set; }
+
+        [NameInMap("credentialPublicConfig")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> CredentialPublicConfig { get; set; }
+
+        [NameInMap("credentialSecret")]
+        [Validation(Required=false)]
+        public string CredentialSecret { get; set; }
+
+        [NameInMap("credentialSourceType")]
+        [Validation(Required=false)]
+        public string CredentialSourceType { get; set; }
+
+        [NameInMap("description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("enabled")]
+        [Validation(Required=false)]
+        public bool? Enabled { get; set; }
+
+        [NameInMap("relatedResources")]
+        [Validation(Required=false)]
+        public List<RelatedResource> RelatedResources { get; set; }
 
         [NameInMap("updatedAt")]
         [Validation(Required=false)]

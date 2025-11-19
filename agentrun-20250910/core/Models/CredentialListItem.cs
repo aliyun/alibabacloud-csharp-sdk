@@ -13,21 +13,29 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string CreatedAt { get; set; }
 
-        [NameInMap("id")]
+        [NameInMap("credentialAuthType")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public string CredentialAuthType { get; set; }
 
-        [NameInMap("name")]
+        [NameInMap("credentialId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string CredentialId { get; set; }
 
-        [NameInMap("relatedWorloads")]
+        [NameInMap("credentialName")]
         [Validation(Required=false)]
-        public List<RelatedWorkload> RelatedWorloads { get; set; }
+        public string CredentialName { get; set; }
 
-        [NameInMap("type")]
+        [NameInMap("credentialSourceType")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string CredentialSourceType { get; set; }
+
+        [NameInMap("enabled")]
+        [Validation(Required=false)]
+        public bool? Enabled { get; set; }
+
+        [NameInMap("relatedResourceCount")]
+        [Validation(Required=false)]
+        public int? RelatedResourceCount { get; set; }
 
         [NameInMap("updatedAt")]
         [Validation(Required=false)]

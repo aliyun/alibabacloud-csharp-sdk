@@ -19,14 +19,6 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
-        [NameInMap("permanent")]
-        [Validation(Required=false)]
-        public bool? Permanent { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
         [NameInMap("shortTtl")]

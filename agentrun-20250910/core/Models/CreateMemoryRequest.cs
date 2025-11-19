@@ -30,14 +30,6 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
-        [NameInMap("permanent")]
-        [Validation(Required=false)]
-        public bool? Permanent { get; set; }
-
-        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

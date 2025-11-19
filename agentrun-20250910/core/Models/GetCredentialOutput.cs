@@ -9,39 +9,45 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class GetCredentialOutput : TeaModel {
-        /// <summary>
-        /// <para>凭证的配置参数，以键值对形式存储</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>api_endpoint=<a href="https://api.example.com,timeout=30">https://api.example.com,timeout=30</a></para>
-        /// </summary>
-        [NameInMap("config")]
-        [Validation(Required=false)]
-        public Dictionary<string, string> Config { get; set; }
-
         [NameInMap("createdAt")]
         [Validation(Required=false)]
         public string CreatedAt { get; set; }
+
+        [NameInMap("credentialAuthType")]
+        [Validation(Required=false)]
+        public string CredentialAuthType { get; set; }
+
+        [NameInMap("credentialId")]
+        [Validation(Required=false)]
+        public string CredentialId { get; set; }
+
+        [NameInMap("credentialName")]
+        [Validation(Required=false)]
+        public string CredentialName { get; set; }
+
+        [NameInMap("credentialPublicConfig")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> CredentialPublicConfig { get; set; }
+
+        [NameInMap("credentialSecret")]
+        [Validation(Required=false)]
+        public string CredentialSecret { get; set; }
+
+        [NameInMap("credentialSourceType")]
+        [Validation(Required=false)]
+        public string CredentialSourceType { get; set; }
 
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("id")]
+        [NameInMap("enabled")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public bool? Enabled { get; set; }
 
-        [NameInMap("name")]
+        [NameInMap("relatedResources")]
         [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("secret")]
-        [Validation(Required=false)]
-        public string Secret { get; set; }
-
-        [NameInMap("type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
+        public List<RelatedResource> RelatedResources { get; set; }
 
         [NameInMap("updatedAt")]
         [Validation(Required=false)]

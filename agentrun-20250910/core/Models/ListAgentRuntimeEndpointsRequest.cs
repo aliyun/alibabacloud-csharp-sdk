@@ -39,6 +39,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>查询模式，支持精确查询和模糊查询</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fuzzy</para>
+        /// </summary>
+        [NameInMap("searchMode")]
+        [Validation(Required=false)]
+        public string SearchMode { get; set; }
+
     }
 
 }

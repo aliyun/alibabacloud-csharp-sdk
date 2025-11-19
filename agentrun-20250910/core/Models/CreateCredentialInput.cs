@@ -10,30 +10,41 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateCredentialInput : TeaModel {
         /// <summary>
-        /// <para>凭证的配置参数，以键值对形式存储</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>api_endpoint=<a href="https://api.example.com,timeout=30">https://api.example.com,timeout=30</a></para>
+        /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("config")]
+        [NameInMap("credentialAuthType")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Config { get; set; }
+        public string CredentialAuthType { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("credentialName")]
+        [Validation(Required=false)]
+        public string CredentialName { get; set; }
+
+        [NameInMap("credentialPublicConfig")]
+        [Validation(Required=false)]
+        public CredentialPublicConfig CredentialPublicConfig { get; set; }
+
+        [NameInMap("credentialSecret")]
+        [Validation(Required=false)]
+        public string CredentialSecret { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("credentialSourceType")]
+        [Validation(Required=false)]
+        public string CredentialSourceType { get; set; }
 
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("name")]
+        [NameInMap("enabled")]
         [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("secret")]
-        [Validation(Required=false)]
-        public string Secret { get; set; }
-
-        [NameInMap("type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
+        public bool? Enabled { get; set; }
 
     }
 

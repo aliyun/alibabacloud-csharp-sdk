@@ -16,6 +16,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>发布此版本的用户或系统标识</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>user123</para>
+        /// </summary>
+        [NameInMap("publisher")]
+        [Validation(Required=false)]
+        public string Publisher { get; set; }
+
     }
 
 }

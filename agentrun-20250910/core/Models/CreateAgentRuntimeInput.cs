@@ -62,6 +62,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public float? Cpu { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>用于访问外部服务的凭证ID，智能体运行时将使用此凭证进行身份验证</para>
         /// 
@@ -70,7 +72,18 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// </summary>
         [NameInMap("credentialId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string CredentialId { get; set; }
+
+        /// <summary>
+        /// <para>用于访问智能体的凭证名称，访问智能体运行时将使用此凭证进行身份验证</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-credential</para>
+        /// </summary>
+        [NameInMap("credentialName")]
+        [Validation(Required=false)]
+        public string CredentialName { get; set; }
 
         /// <summary>
         /// <para>智能体运行时的描述信息，用于说明该运行时的用途和功能</para>

@@ -10,14 +10,6 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListMemoryRequest : TeaModel {
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>test</para>
-        /// </summary>
-        [NameInMap("namePrefix")]
-        [Validation(Required=false)]
-        public string NamePrefix { get; set; }
-
-        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +28,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
+        [NameInMap("pattern")]
+        [Validation(Required=false)]
+        public string Pattern { get; set; }
 
     }
 

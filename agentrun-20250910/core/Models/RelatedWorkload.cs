@@ -9,17 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class RelatedWorkload : TeaModel {
-        [NameInMap("workloadId")]
+        [NameInMap("resourceId")]
         [Validation(Required=false)]
-        public string WorkloadId { get; set; }
+        public string ResourceId { get; set; }
 
-        [NameInMap("workloadName")]
+        [NameInMap("resourceName")]
         [Validation(Required=false)]
-        public string WorkloadName { get; set; }
+        public string ResourceName { get; set; }
 
-        [NameInMap("workloadType")]
+        [NameInMap("resourceType")]
         [Validation(Required=false)]
-        public string WorkloadType { get; set; }
+        public string ResourceType { get; set; }
 
     }
 

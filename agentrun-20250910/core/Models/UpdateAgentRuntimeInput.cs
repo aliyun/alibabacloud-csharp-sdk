@@ -56,6 +56,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public float? Cpu { get; set; }
 
         /// <summary>
+        /// <para>用于访问智能体的凭证名称，访问智能体运行时将使用此凭证进行身份验证</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-credential</para>
+        /// </summary>
+        [NameInMap("credentialName")]
+        [Validation(Required=false)]
+        public string CredentialName { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>更新后的智能体运行时描述</para>
         /// </summary>

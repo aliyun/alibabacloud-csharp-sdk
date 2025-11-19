@@ -11,11 +11,11 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
     public class ListCredentialsOutput : TeaModel {
         [NameInMap("items")]
         [Validation(Required=false)]
-        public CredentialListItem Items { get; set; }
+        public List<CredentialListItem> Items { get; set; }
 
-        [NameInMap("pageNum")]
+        [NameInMap("pageNumber")]
         [Validation(Required=false)]
-        public string PageNum { get; set; }
+        public string PageNumber { get; set; }
 
         [NameInMap("pageSize")]
         [Validation(Required=false)]

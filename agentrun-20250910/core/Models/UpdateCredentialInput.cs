@@ -9,31 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateCredentialInput : TeaModel {
-        /// <summary>
-        /// <para>凭证的配置参数，以键值对形式存储</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>api_endpoint=<a href="https://api.example.com,timeout=30">https://api.example.com,timeout=30</a></para>
-        /// </summary>
-        [NameInMap("config")]
+        [NameInMap("credentialPublicConfig")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Config { get; set; }
+        public CredentialPublicConfig CredentialPublicConfig { get; set; }
+
+        [NameInMap("credentialSecret")]
+        [Validation(Required=false)]
+        public string CredentialSecret { get; set; }
 
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        [NameInMap("name")]
+        [NameInMap("enabled")]
         [Validation(Required=false)]
-        public string Name { get; set; }
-
-        [NameInMap("secret")]
-        [Validation(Required=false)]
-        public string Secret { get; set; }
-
-        [NameInMap("type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
+        public bool? Enabled { get; set; }
 
     }
 

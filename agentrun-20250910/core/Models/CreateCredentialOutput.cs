@@ -13,17 +13,45 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string CreatedAt { get; set; }
 
-        [NameInMap("id")]
+        [NameInMap("credentialAuthType")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public string CredentialAuthType { get; set; }
 
-        [NameInMap("name")]
+        [NameInMap("credentialId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string CredentialId { get; set; }
 
-        [NameInMap("type")]
+        [NameInMap("credentialName")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string CredentialName { get; set; }
+
+        [NameInMap("credentialPublicConfig")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> CredentialPublicConfig { get; set; }
+
+        [NameInMap("credentialSecret")]
+        [Validation(Required=false)]
+        public string CredentialSecret { get; set; }
+
+        [NameInMap("credentialSourceType")]
+        [Validation(Required=false)]
+        public string CredentialSourceType { get; set; }
+
+        [NameInMap("description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("enabled")]
+        [Validation(Required=false)]
+        public bool? Enabled { get; set; }
+
+        [NameInMap("relatedResources")]
+        [Validation(Required=false)]
+        public List<RelatedResource> RelatedResources { get; set; }
+
+        [NameInMap("updatedAt")]
+        [Validation(Required=false)]
+        public string UpdatedAt { get; set; }
 
     }
 
