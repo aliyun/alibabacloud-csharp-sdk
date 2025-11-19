@@ -203,6 +203,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string NodeId { get; set; }
 
+            [NameInMap("NodeType")]
+            [Validation(Required=false)]
+            public string NodeType { get; set; }
+
             /// <summary>
             /// <para>The node status.</para>
             /// <para>Valid values:</para>
