@@ -468,6 +468,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public string Duration { get; set; }
 
+                [NameInMap("FileMD5")]
+                [Validation(Required=false)]
+                public string FileMD5 { get; set; }
+
                 /// <summary>
                 /// <para>The name of the file.</para>
                 /// 
