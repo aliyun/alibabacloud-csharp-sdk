@@ -15941,6 +15941,11 @@ namespace AlibabaCloud.SDK.MPaaS20201028
         public StartUserAppAsyncEnhanceInMsaResponse StartUserAppAsyncEnhanceInMsaWithOptions(StartUserAppAsyncEnhanceInMsaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewShieldConfig))
+            {
+                query["NewShieldConfig"] = request.NewShieldConfig;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApkProtector))
             {
@@ -16018,12 +16023,17 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             {
                 body["UseAShield"] = request.UseAShield;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseYShield))
+            {
+                body["UseYShield"] = request.UseYShield;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 body["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -16054,6 +16064,11 @@ namespace AlibabaCloud.SDK.MPaaS20201028
         public async Task<StartUserAppAsyncEnhanceInMsaResponse> StartUserAppAsyncEnhanceInMsaWithOptionsAsync(StartUserAppAsyncEnhanceInMsaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewShieldConfig))
+            {
+                query["NewShieldConfig"] = request.NewShieldConfig;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApkProtector))
             {
@@ -16131,12 +16146,17 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             {
                 body["UseAShield"] = request.UseAShield;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseYShield))
+            {
+                body["UseYShield"] = request.UseYShield;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 body["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -17406,6 +17426,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             {
                 body["TenantId"] = request.TenantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseYShield))
+            {
+                body["UseYShield"] = request.UseYShield;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 body["WorkspaceId"] = request.WorkspaceId;
@@ -17458,6 +17482,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseYShield))
+            {
+                body["UseYShield"] = request.UseYShield;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {

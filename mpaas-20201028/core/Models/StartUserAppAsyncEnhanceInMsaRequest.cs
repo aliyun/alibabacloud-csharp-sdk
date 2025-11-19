@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public int? NativeHook { get; set; }
 
+        [NameInMap("NewShieldConfig")]
+        [Validation(Required=false)]
+        public string NewShieldConfig { get; set; }
+
         [NameInMap("PackageTampered")]
         [Validation(Required=false)]
         public int? PackageTampered { get; set; }
@@ -93,6 +97,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [NameInMap("UseAShield")]
         [Validation(Required=false)]
         public bool? UseAShield { get; set; }
+
+        [NameInMap("UseYShield")]
+        [Validation(Required=false)]
+        public bool? UseYShield { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

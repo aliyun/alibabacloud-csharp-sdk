@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
+        [NameInMap("UseYShield")]
+        [Validation(Required=false)]
+        public bool? UseYShield { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
