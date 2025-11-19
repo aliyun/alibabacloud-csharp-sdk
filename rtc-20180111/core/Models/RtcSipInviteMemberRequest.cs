@@ -128,6 +128,14 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         public string SipUserPassword { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>taskId</para>
+        /// </summary>
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

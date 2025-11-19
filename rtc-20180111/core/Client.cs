@@ -15042,6 +15042,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             {
                 query["SipUserPassword"] = request.SipUserPassword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
             {
                 query["Uid"] = request.Uid;
@@ -15135,6 +15139,10 @@ namespace AlibabaCloud.SDK.Rtc20180111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SipUserPassword))
             {
                 query["SipUserPassword"] = request.SipUserPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
             {
