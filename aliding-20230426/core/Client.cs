@@ -5825,6 +5825,218 @@ namespace AlibabaCloud.SDK.Aliding20230426
             return await CopyDentryWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过NodeId创建知识库节点副本</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CopyDentryByNodeIdRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// CopyDentryByNodeIdHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CopyDentryByNodeIdResponse
+        /// </returns>
+        public CopyDentryByNodeIdResponse CopyDentryByNodeIdWithOptions(CopyDentryByNodeIdRequest tmpReq, CopyDentryByNodeIdHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CopyDentryByNodeIdShrinkRequest request = new CopyDentryByNodeIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            CopyDentryByNodeIdShrinkHeaders headers = new CopyDentryByNodeIdShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DentryUuid))
+            {
+                body["DentryUuid"] = request.DentryUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToNextNodeId))
+            {
+                body["ToNextNodeId"] = request.ToNextNodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToParentNodeId))
+            {
+                body["ToParentNodeId"] = request.ToParentNodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToPrevNodeId))
+            {
+                body["ToPrevNodeId"] = request.ToPrevNodeId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CopyDentryByNodeId",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v2/documents/copyDentryByNodeId",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CopyDentryByNodeIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过NodeId创建知识库节点副本</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CopyDentryByNodeIdRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// CopyDentryByNodeIdHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CopyDentryByNodeIdResponse
+        /// </returns>
+        public async Task<CopyDentryByNodeIdResponse> CopyDentryByNodeIdWithOptionsAsync(CopyDentryByNodeIdRequest tmpReq, CopyDentryByNodeIdHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CopyDentryByNodeIdShrinkRequest request = new CopyDentryByNodeIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            CopyDentryByNodeIdShrinkHeaders headers = new CopyDentryByNodeIdShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DentryUuid))
+            {
+                body["DentryUuid"] = request.DentryUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToNextNodeId))
+            {
+                body["ToNextNodeId"] = request.ToNextNodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToParentNodeId))
+            {
+                body["ToParentNodeId"] = request.ToParentNodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToPrevNodeId))
+            {
+                body["ToPrevNodeId"] = request.ToPrevNodeId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CopyDentryByNodeId",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v2/documents/copyDentryByNodeId",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CopyDentryByNodeIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过NodeId创建知识库节点副本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CopyDentryByNodeIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CopyDentryByNodeIdResponse
+        /// </returns>
+        public CopyDentryByNodeIdResponse CopyDentryByNodeId(CopyDentryByNodeIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CopyDentryByNodeIdHeaders headers = new CopyDentryByNodeIdHeaders();
+            return CopyDentryByNodeIdWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过NodeId创建知识库节点副本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CopyDentryByNodeIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CopyDentryByNodeIdResponse
+        /// </returns>
+        public async Task<CopyDentryByNodeIdResponse> CopyDentryByNodeIdAsync(CopyDentryByNodeIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CopyDentryByNodeIdHeaders headers = new CopyDentryByNodeIdHeaders();
+            return await CopyDentryByNodeIdWithOptionsAsync(request, headers, runtime);
+        }
+
         /// <param name="tmpReq">
         /// CreateAlidingAssistantRequest
         /// </param>
