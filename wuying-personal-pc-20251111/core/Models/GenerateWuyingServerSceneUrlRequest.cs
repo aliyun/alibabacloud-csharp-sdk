@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Wuying_personal_pc20251111.Models
 {
     public class GenerateWuyingServerSceneUrlRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("ApiKey")]
+        [Validation(Required=false)]
+        public string ApiKey { get; set; }
+
         [NameInMap("ClientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }
@@ -37,9 +44,6 @@ namespace AlibabaCloud.SDK.Wuying_personal_pc20251111.Models
         [Validation(Required=false)]
         public string LoginRegionId { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("LoginToken")]
         [Validation(Required=false)]
         public string LoginToken { get; set; }
@@ -58,9 +62,6 @@ namespace AlibabaCloud.SDK.Wuying_personal_pc20251111.Models
         [Validation(Required=false)]
         public string Scene { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("SessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }

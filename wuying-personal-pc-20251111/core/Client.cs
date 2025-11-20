@@ -1540,6 +1540,10 @@ namespace AlibabaCloud.SDK.Wuying_personal_pc20251111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["ApiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 body["ClientId"] = request.ClientId;
@@ -1630,6 +1634,10 @@ namespace AlibabaCloud.SDK.Wuying_personal_pc20251111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["ApiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 body["ClientId"] = request.ClientId;
