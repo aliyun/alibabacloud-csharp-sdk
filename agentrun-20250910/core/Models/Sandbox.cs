@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class Sandbox : TeaModel {
+        [NameInMap("SandboxIdleTTLInSeconds")]
+        [Validation(Required=false)]
+        public int? SandboxIdleTTLInSeconds { get; set; }
+
         /// <summary>
         /// <para>沙箱创建时间</para>
         /// <para>This parameter is required.</para>
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [NameInMap("createdAt")]
         [Validation(Required=false)]
         public string CreatedAt { get; set; }
+
+        [NameInMap("endedAt")]
+        [Validation(Required=false)]
+        public string EndedAt { get; set; }
 
         /// <summary>
         /// <para>最后更新时间</para>
