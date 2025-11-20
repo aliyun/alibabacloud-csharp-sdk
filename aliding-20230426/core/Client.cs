@@ -31655,6 +31655,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["Stream"] = request.Stream;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfAssistantId))
+            {
+                body["sourceIdOfAssistantId"] = request.SourceIdOfAssistantId;
+            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -31729,6 +31733,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
             {
                 body["Stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIdOfAssistantId))
+            {
+                body["sourceIdOfAssistantId"] = request.SourceIdOfAssistantId;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))

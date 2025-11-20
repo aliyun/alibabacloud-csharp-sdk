@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public bool? Stream { get; set; }
 
+        [NameInMap("sourceIdOfAssistantId")]
+        [Validation(Required=false)]
+        public string SourceIdOfAssistantId { get; set; }
+
     }
 
 }
