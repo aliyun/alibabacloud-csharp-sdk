@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DeletePluginAttachmentResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response message returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>76BDFFC7-0764-5168-B047-92EE0BC7FDDE</para>

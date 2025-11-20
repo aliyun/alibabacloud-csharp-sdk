@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateMcpServerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The status message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3ACFC7A7-45A9-58CF-B2D5-765B60254695</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumersRequest : TeaModel {
         /// <summary>
+        /// <para>The instance type. Valid values: <b>AI</b> and <b>API</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AI</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
+        /// <para>The name used to perform a fuzzy search for operations.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UI-test</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NameLike { get; set; }
 
         /// <summary>
+        /// <para>The page number to return. Pages start from 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

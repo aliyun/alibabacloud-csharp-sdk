@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListMcpServersRequest : TeaModel {
         /// <summary>
+        /// <para>The type of source to create from.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ApiGatewayHttpToMCP</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CreateFromTypes { get; set; }
 
         /// <summary>
+        /// <para>The deployment status of the MCP server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Deployed</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DeployStatuses { get; set; }
 
         /// <summary>
+        /// <para>The gateway instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
+        /// <para>The name to perform a fuzzy search on the MCP server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NameLike { get; set; }
 
         /// <summary>
+        /// <para>The page number to return. Pages start from 1. Default value: 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +62,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +73,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The type of the MCP server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RealMCP</para>
         /// </summary>

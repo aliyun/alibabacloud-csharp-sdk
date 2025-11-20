@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateConsumerAuthorizationRuleRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of resource authorization information.</para>
+        /// </summary>
         [NameInMap("authorizationResourceInfos")]
         [Validation(Required=false)]
         public List<AuthorizationResourceInfo> AuthorizationResourceInfos { get; set; }
 
         /// <summary>
+        /// <para>The expiry mode. Valid values: LongTerm and ShortTerm.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>LongTerm</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ExpireMode { get; set; }
 
         /// <summary>
+        /// <para>The expiration time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1750852089975</para>
         /// </summary>

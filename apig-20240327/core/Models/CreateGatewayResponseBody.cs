@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateGatewayResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response payload.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateGatewayResponseBodyData Data { get; set; }
         public class CreateGatewayResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>gw-cq2vundlhtg***</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The status message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -40,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9CDE3E69-69C2-5402-83AD-ACA80B1AF35B</para>

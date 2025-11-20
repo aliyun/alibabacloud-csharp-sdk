@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPluginAttachmentsRequest : TeaModel {
         /// <summary>
+        /// <para>The resource attachment ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hr-cv2h58em1hkg7c6vt43g</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource attachment type (not yet in use).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>GatewayRoute</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
+        /// <para>The resource attachment types, separated by commas.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>GatewayRoute</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceTypes { get; set; }
 
         /// <summary>
+        /// <para>The environment ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>env-crlnqhtlhtgqflkqislg</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
+        /// <para>The gateway ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gw-cr79f75lhtgme744084g</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
+        /// <para>The page number to return. Pages start from 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The plug-in ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pl-ct8181um1hkiqns9f6e0</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PluginId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return parent resource attachments.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

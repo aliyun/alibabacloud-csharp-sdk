@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateAndAttachPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>The association IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("attachResourceIds")]
@@ -17,6 +18,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> AttachResourceIds { get; set; }
 
         /// <summary>
+        /// <para>The supported associated resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>HttpApi: an HTTP API</description></item>
+        /// <item><description>Operation: an operation in an HTTP API</description></item>
+        /// <item><description>GatewayRoute: a route</description></item>
+        /// <item><description>GatewayService: a service</description></item>
+        /// <item><description>GatewayServicePort: a service port</description></item>
+        /// <item><description>Domain: a domain name</description></item>
+        /// <item><description>Gateway: an instance</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +38,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
+        /// <para>The policy configurations. The value is a JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,11 +48,19 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Config { get; set; }
 
+        /// <summary>
+        /// <para>The policy description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is the description.</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The environment ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>env-cq2avtllhtgja4dk5djg</para>
         /// </summary>
@@ -49,6 +69,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gw-cq2avtllhtgja4dk5djg</para>
         /// </summary>
@@ -57,6 +79,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
+        /// <para>The policy name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

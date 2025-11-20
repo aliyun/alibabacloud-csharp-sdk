@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPoliciesRequest : TeaModel {
         /// <summary>
+        /// <para>The attachment point ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>api-cq7l5s5lhtgi6qasrdc0</para>
         /// </summary>
@@ -18,6 +20,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceId { get; set; }
 
         /// <summary>
+        /// <para>The types of attachment points supported by the policy. Valid values: </para>
+        /// <list type="bullet">
+        /// <item><description>HttpApi</description></item>
+        /// <item><description>Operation</description></item>
+        /// <item><description>GatewayRoute</description></item>
+        /// <item><description>GatewayService</description></item>
+        /// <item><description>GatewayServicePort</description></item>
+        /// <item><description>Domain</description></item>
+        /// <item><description>Gateway</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>HttpApi</para>
         /// </summary>
@@ -26,6 +39,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
+        /// <para>The environment ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>env-cq7l5s5lhtgi6qasrdc0</para>
         /// </summary>
@@ -34,6 +49,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
+        /// <para>The gateway ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gw-cq2fm65lhtgm9nrrl7ag</para>
         /// </summary>
@@ -42,6 +59,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return attachment information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -49,6 +68,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public bool? WithAttachments { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether it is a system policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("withSystemPolicy")]
         [Validation(Required=false)]
         public bool? WithSystemPolicy { get; set; }

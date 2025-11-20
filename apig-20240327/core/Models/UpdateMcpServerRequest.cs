@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateMcpServerRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of assembly sources. This parameter is required when the type parameter is set to AssemblyMCP.</para>
+        /// </summary>
         [NameInMap("assembledSources")]
         [Validation(Required=false)]
         public List<UpdateMcpServerRequestAssembledSources> AssembledSources { get; set; }
         public class UpdateMcpServerRequestAssembledSources : TeaModel {
             /// <summary>
-            /// <para>MCP Server ID</para>
+            /// <para>The MCP server ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mcp-afaefaefaf</para>
@@ -24,6 +27,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string McpServerId { get; set; }
 
             /// <summary>
+            /// <para>The name of the MCP server.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-mcp</para>
             /// </summary>
@@ -31,17 +36,25 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string McpServerName { get; set; }
 
+            /// <summary>
+            /// <para>The MCP tools.</para>
+            /// </summary>
             [NameInMap("tools")]
             [Validation(Required=false)]
             public List<string> Tools { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The backend service configurations for the route.</para>
+        /// </summary>
         [NameInMap("backendConfig")]
         [Validation(Required=false)]
         public UpdateMcpServerRequestBackendConfig BackendConfig { get; set; }
         public class UpdateMcpServerRequestBackendConfig : TeaModel {
             /// <summary>
+            /// <para>The backend service scenario.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SingleService</para>
             /// </summary>
@@ -49,11 +62,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string Scene { get; set; }
 
+            /// <summary>
+            /// <para>The backend services.</para>
+            /// </summary>
             [NameInMap("services")]
             [Validation(Required=false)]
             public List<UpdateMcpServerRequestBackendConfigServices> Services { get; set; }
             public class UpdateMcpServerRequestBackendConfigServices : TeaModel {
                 /// <summary>
+                /// <para>The service port (omit for dynamic ports).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>8080</para>
                 /// </summary>
@@ -62,6 +80,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? Port { get; set; }
 
                 /// <summary>
+                /// <para>The service protocol. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>TCP</description></item>
+                /// <item><description>HTTP</description></item>
+                /// <item><description>DUBBO</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>HTTP</para>
                 /// </summary>
@@ -70,6 +95,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
+                /// <para>The service ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>svc-cr6pk4tlhtgm58e***</para>
                 /// </summary>
@@ -78,6 +105,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ServiceId { get; set; }
 
                 /// <summary>
+                /// <para>The service version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>v1</para>
                 /// </summary>
@@ -86,6 +115,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Version { get; set; }
 
                 /// <summary>
+                /// <para>The traffic weight percentage.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>49</para>
                 /// </summary>
@@ -97,19 +128,30 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         }
 
+        /// <summary>
+        /// <para>Specifies the type of source for MCP server creation.</para>
+        /// </summary>
         [NameInMap("createFromType")]
         [Validation(Required=false)]
         public string CreateFromType { get; set; }
 
+        /// <summary>
+        /// <para>The description.</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The domain IDs.</para>
+        /// </summary>
         [NameInMap("domainIds")]
         [Validation(Required=false)]
         public List<string> DomainIds { get; set; }
 
         /// <summary>
+        /// <para>The exposed URI path. This parameter is required when the protocol parameter is set to SSE or StreamableHTTP and the type parameter is set to RealMCP.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/sse</para>
         /// </summary>
@@ -117,11 +159,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string ExposedUriPath { get; set; }
 
+        /// <summary>
+        /// <para>The route match rule.</para>
+        /// </summary>
         [NameInMap("match")]
         [Validation(Required=false)]
         public HttpRouteMatch Match { get; set; }
 
         /// <summary>
+        /// <para>Specifies if MCP observability is enabled. Default value: false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -130,6 +177,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? McpStatisticsEnable { get; set; }
 
         /// <summary>
+        /// <para>The service protocol. Valid values: HTTP, HTTPS, SSE, and StreamableHTTP.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -140,6 +188,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Protocol { get; set; }
 
         /// <summary>
+        /// <para>The MCP server type. Valid values: RealMCP and AssemblyMCP.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
