@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ValidateEmailRequest : TeaModel {
+        [NameInMap("CheckGraylist")]
+        [Validation(Required=false)]
+        public bool? CheckGraylist { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
