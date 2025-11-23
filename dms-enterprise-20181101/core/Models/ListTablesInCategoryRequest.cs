@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListTablesInCategoryRequest : TeaModel {
         /// <summary>
+        /// <para>The category ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public long? CategoryId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3***</para>
         /// </summary>

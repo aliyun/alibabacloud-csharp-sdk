@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class DeleteWorkspaceResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the workspace is deleted successfully.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation is called successfully.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

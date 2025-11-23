@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class OptimizeSqlByMetaAgentRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/141873.html">ListDatabases</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string DbId { get; set; }
 
         /// <summary>
+        /// <para>The name of the selected model. You can use only Qwen series models.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qwen-plus</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string Model { get; set; }
 
         /// <summary>
+        /// <para>The remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>是否为慢SQL</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>The SQL statement that you want to analyze.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateDataLakeFunctionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// <para>The details about the function.</para>
+        /// </summary>
         [NameInMap("Function")]
         [Validation(Required=false)]
         public DLFunction Function { get; set; }
 
         /// <summary>
+        /// <para>The request ID. You can use the ID to query logs and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C1D39814-9808-47F8-AFE0-AF167239AC9B</para>
         /// </summary>
@@ -38,6 +47,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request succeeded.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateDataLakePartitionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code returned if the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message that is returned if the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The request ID. You can use the ID to query logs and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>427688B8-ADFB-4C4E-9D45-EF5C1FD6E23D</para>
         /// </summary>
@@ -34,6 +40,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

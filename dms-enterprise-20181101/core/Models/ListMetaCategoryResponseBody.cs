@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListMetaCategoryResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of categories.</para>
+        /// </summary>
         [NameInMap("CategoryList")]
         [Validation(Required=false)]
         public ListMetaCategoryResponseBodyCategoryList CategoryList { get; set; }
@@ -20,6 +23,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
+        /// <para>The error code returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -28,6 +33,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -36,6 +43,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</para>
         /// </summary>
@@ -44,6 +53,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -52,6 +67,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateAbacPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>The content of the policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///   &quot;Statement&quot;: [
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string AbacPolicyContent { get; set; }
 
         /// <summary>
+        /// <para>The description of the policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -42,6 +46,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string AbacPolicyDesc { get; set; }
 
         /// <summary>
+        /// <para>The ID of the policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +57,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public long? AbacPolicyId { get; set; }
 
         /// <summary>
+        /// <para>The name of the permission policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>policy_test</para>
         /// </summary>
@@ -60,6 +67,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string AbacPolicyName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the tenant.</para>
+        /// <remarks>
+        /// <para>To view the ID of the tenant, go to the DMS console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>3***</para>
         /// </summary>

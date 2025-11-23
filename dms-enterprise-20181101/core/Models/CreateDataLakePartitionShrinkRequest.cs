@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateDataLakePartitionShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the data catalog.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string CatalogName { get; set; }
 
         /// <summary>
+        /// <para>The region where the data lake resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string DataRegion { get; set; }
 
         /// <summary>
+        /// <para>The database name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string DbName { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to ignore the exception if the name of the created partition is the same as the name of an existing partition.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -48,6 +53,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public bool? IfNotExists { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return information about the created partition. If the value is true, the Partition parameter is returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: returns information about the created partition.</description></item>
+        /// <item><description>false: does not return information about the created partition.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -56,6 +67,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public bool? NeedResult { get; set; }
 
         /// <summary>
+        /// <para>The information about the created partition.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PartitionInput")]
@@ -63,6 +75,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string PartitionInputShrink { get; set; }
 
         /// <summary>
+        /// <para>The name of the table</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,6 +86,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string TableName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the tenant.</para>
+        /// <remarks>
+        /// <para>To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>3***</para>
         /// </summary>
@@ -80,6 +98,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
+        /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12****</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public long? WorkspaceId { get; set; }

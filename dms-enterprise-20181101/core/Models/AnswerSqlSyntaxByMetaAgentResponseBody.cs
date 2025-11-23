@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class AnswerSqlSyntaxByMetaAgentResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data returned.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AnswerSqlSyntaxByMetaAgentResponseBodyData Data { get; set; }
         public class AnswerSqlSyntaxByMetaAgentResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The answer to the question.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mysql数据库类型下...</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>The session ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>f63a6eed-0e3c-4564-8533-b1295db8d6ff</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         }
 
         /// <summary>
+        /// <para>The error code that is returned if the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message that is returned if the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -58,6 +69,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

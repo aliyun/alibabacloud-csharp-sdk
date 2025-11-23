@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateDataLakeTableShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the data catalog.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string CatalogName { get; set; }
 
         /// <summary>
+        /// <para>The region where the data lake resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string DataRegion { get; set; }
 
         /// <summary>
+        /// <para>The database name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string DbName { get; set; }
 
         /// <summary>
+        /// <para>The information about the table.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TableInput")]
@@ -47,6 +51,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string TableInputShrink { get; set; }
 
         /// <summary>
+        /// <para>The ID of the tenant.</para>
+        /// <remarks>
+        /// <para>You can move the pointer over the profile picture in the upper-right corner of the DMS console to obtain the tenant ID.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>3***</para>
         /// </summary>
@@ -54,6 +63,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? Tid { get; set; }
 
+        /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12****</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public long? WorkspaceId { get; set; }

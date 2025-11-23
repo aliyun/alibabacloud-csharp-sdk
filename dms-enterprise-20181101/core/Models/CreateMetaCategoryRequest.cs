@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateMetaCategoryRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the category.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the parent category. The new category is created under this parent category. If this value is left empty, the new category is of the first level.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30000322682</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public long? ParentCategoryId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3***</para>
         /// </summary>

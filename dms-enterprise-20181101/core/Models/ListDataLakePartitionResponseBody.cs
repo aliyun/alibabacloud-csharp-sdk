@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class ListDataLakePartitionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code that is returned if the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message that is returned if the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The number of records per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The information about the token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NesLoKLEdIZrKhDT7I2gS****</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The queried partitions.</para>
+        /// </summary>
         [NameInMap("PartitionList")]
         [Validation(Required=false)]
         public List<DLPartition> PartitionList { get; set; }
 
         /// <summary>
+        /// <para>The request ID. You can use the ID to query logs and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</para>
         /// </summary>
@@ -54,6 +67,12 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

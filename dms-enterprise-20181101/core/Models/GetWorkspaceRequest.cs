@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class GetWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the DMS workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

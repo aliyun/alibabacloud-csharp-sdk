@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class UpdateWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>token-xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The new description of the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public long? WorkspaceId { get; set; }
 
         /// <summary>
+        /// <para>The new name of the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>workspace_xxx</para>
         /// </summary>

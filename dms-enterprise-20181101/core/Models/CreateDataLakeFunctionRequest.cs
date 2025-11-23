@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
     public class CreateDataLakeFunctionRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the data catalog.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string CatalogName { get; set; }
 
         /// <summary>
+        /// <para>The region where the data lake resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string DataRegion { get; set; }
 
         /// <summary>
+        /// <para>The database name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string DbName { get; set; }
 
         /// <summary>
+        /// <para>The details about the function.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FunctionInput")]
@@ -47,6 +51,11 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public DLFunctionInput FunctionInput { get; set; }
 
         /// <summary>
+        /// <para>The ID of the tenant.</para>
+        /// <remarks>
+        /// <para>To view the ID of the tenant, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see the <a href="https://help.aliyun.com/document_detail/181330.html">View information about the current tenant</a> section of the &quot;Manage DMS tenants&quot; topic.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>3****</para>
         /// </summary>
@@ -55,6 +64,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public long? Tid { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12****</para>
         /// </summary>

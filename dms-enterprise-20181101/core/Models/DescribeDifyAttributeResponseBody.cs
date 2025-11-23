@@ -61,6 +61,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string AppUuid { get; set; }
 
+            [NameInMap("BillingInstanceId")]
+            [Validation(Required=false)]
+            public string BillingInstanceId { get; set; }
+
+            [NameInMap("ChargeType")]
+            [Validation(Required=false)]
+            public string ChargeType { get; set; }
+
+            [NameInMap("ExpireTime")]
+            [Validation(Required=false)]
+            public long? ExpireTime { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
@@ -92,6 +104,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("StorageType")]
+            [Validation(Required=false)]
+            public string StorageType { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
