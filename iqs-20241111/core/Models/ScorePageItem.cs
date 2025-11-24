@@ -163,6 +163,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string Title { get; set; }
 
+        [NameInMap("websiteAuthorityScore")]
+        [Validation(Required=false)]
+        public int? WebsiteAuthorityScore { get; set; }
+
     }
 
 }
