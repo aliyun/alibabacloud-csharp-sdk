@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
-    public class StopSandboxResponse : TeaModel {
-        [NameInMap("headers")]
+    public class StopSandboxResult : TeaModel {
+        [NameInMap("code")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string Code { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("data")]
         [Validation(Required=false)]
-        public int? StatusCode { get; set; }
+        public Sandbox Data { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
-        public StopSandboxResult Body { get; set; }
+        public string RequestId { get; set; }
 
     }
 

@@ -30,6 +30,22 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>READY</para>
+        /// </summary>
+        [NameInMap("status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>temp-abc</para>
+        /// </summary>
+        [NameInMap("templateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
+
+        /// <summary>
         /// <para>按模板类型过滤</para>
         /// 
         /// <b>Example:</b>

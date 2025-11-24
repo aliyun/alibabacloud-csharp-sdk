@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateSandboxInput : TeaModel {
+        [NameInMap("sandboxId")]
+        [Validation(Required=false)]
+        public string SandboxId { get; set; }
+
         /// <summary>
         /// <para>沙箱空闲超时时间（秒）</para>
         /// </summary>

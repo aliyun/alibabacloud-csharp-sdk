@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
-    public class StopSandboxResponse : TeaModel {
+    public class DeleteSandboxResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public StopSandboxResult Body { get; set; }
+        public DeleteSandboxResult Body { get; set; }
 
     }
 

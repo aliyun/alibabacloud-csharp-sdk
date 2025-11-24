@@ -2537,6 +2537,108 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除Sandbox</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSandboxResponse
+        /// </returns>
+        public DeleteSandboxResponse DeleteSandboxWithOptions(string sandboxId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSandbox",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/sandboxes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sandboxId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSandboxResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Sandbox</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSandboxResponse
+        /// </returns>
+        public async Task<DeleteSandboxResponse> DeleteSandboxWithOptionsAsync(string sandboxId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSandbox",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/sandboxes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sandboxId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSandboxResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Sandbox</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteSandboxResponse
+        /// </returns>
+        public DeleteSandboxResponse DeleteSandbox(string sandboxId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteSandboxWithOptions(sandboxId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Sandbox</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteSandboxResponse
+        /// </returns>
+        public async Task<DeleteSandboxResponse> DeleteSandboxAsync(string sandboxId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteSandboxWithOptionsAsync(sandboxId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除模板</para>
         /// </summary>
         /// 
@@ -6428,6 +6530,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910
             {
                 query["pageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["templateName"] = request.TemplateName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
                 query["templateType"] = request.TemplateType;
@@ -6486,6 +6596,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["templateName"] = request.TemplateName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
@@ -6863,7 +6981,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止沙箱</para>
+        /// <para>删除沙箱</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6892,8 +7010,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910
                 Action = "StopSandbox",
                 Version = "2025-09-10",
                 Protocol = "HTTPS",
-                Pathname = "/2025-09-10/sandboxes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sandboxId),
-                Method = "DELETE",
+                Pathname = "/2025-09-10/sandboxes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sandboxId) + "/stop",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
@@ -6904,7 +7022,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止沙箱</para>
+        /// <para>删除沙箱</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6933,8 +7051,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910
                 Action = "StopSandbox",
                 Version = "2025-09-10",
                 Protocol = "HTTPS",
-                Pathname = "/2025-09-10/sandboxes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sandboxId),
-                Method = "DELETE",
+                Pathname = "/2025-09-10/sandboxes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sandboxId) + "/stop",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
@@ -6945,7 +7063,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止沙箱</para>
+        /// <para>删除沙箱</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6965,7 +7083,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止沙箱</para>
+        /// <para>删除沙箱</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
