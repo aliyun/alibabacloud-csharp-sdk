@@ -10,24 +10,34 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class ModifyApiServerEipResourceRequest : TeaModel {
         /// <summary>
-        /// The ID of the EIP.
+        /// <para>The ID of the EIP.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eip-bp1adu9jegmxnaoq****</para>
         /// </summary>
         [NameInMap("ApiServerEipId")]
         [Validation(Required=false)]
         public string ApiServerEipId { get; set; }
 
         /// <summary>
-        /// The type of the operation. Valid values:
+        /// <para>The type of the operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>UnBindEip</c>: disassociates an EIP from the API server.</description></item>
+        /// <item><description><c>BindEip</c>: associates an EIP with the API server.</description></item>
+        /// </list>
         /// 
-        /// *   `UnBindEip`: disassociates an EIP from the API server.
-        /// *   `BindEip`: associates an EIP with the API server.
+        /// <b>Example:</b>
+        /// <para>BindEip</para>
         /// </summary>
         [NameInMap("Operation")]
         [Validation(Required=false)]
         public string Operation { get; set; }
 
         /// <summary>
-        /// The ID of the Alibaba Cloud Service Mesh (ASM) instance.
+        /// <para>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cb8963379255149cb98c8686f274x****</para>
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

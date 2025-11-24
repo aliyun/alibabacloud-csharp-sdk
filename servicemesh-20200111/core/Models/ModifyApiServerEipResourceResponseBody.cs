@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class ModifyApiServerEipResourceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BD65C0AD-D3C6-48D3-8D93-38D2015C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

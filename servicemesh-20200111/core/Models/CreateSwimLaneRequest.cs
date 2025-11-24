@@ -10,42 +10,61 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class CreateSwimLaneRequest : TeaModel {
         /// <summary>
-        /// The name of the lane group.
+        /// <para>The name of the lane group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The label key of the associated service workload. Set the value to `ASM_TRAFFIC_TAG`.
+        /// <para>The label key of the associated service workload. Set the value to <c>ASM_TRAFFIC_TAG</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ASM_TRAFFIC_TAG</para>
         /// </summary>
         [NameInMap("LabelSelectorKey")]
         [Validation(Required=false)]
         public string LabelSelectorKey { get; set; }
 
         /// <summary>
-        /// The label value of the associated service workload.``
+        /// <para>The label value of the associated service workload.``</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v3</para>
         /// </summary>
         [NameInMap("LabelSelectorValue")]
         [Validation(Required=false)]
         public string LabelSelectorValue { get; set; }
 
         /// <summary>
-        /// The ID of the Service Mesh (ASM) instance.
+        /// <para>The ID of the Service Mesh (ASM) instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
         /// <summary>
-        /// The list of services associated with the lane. The value is a JSON array. The format of a single service is `$Cluster name/$Cluster ID/$Namespace/$Service name`.
+        /// <para>The list of services associated with the lane. The value is a JSON array. The format of a single service is <c>$Cluster name/$Cluster ID/$Namespace/$Service name</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[\&quot;sh01/c089443ea9e50403fa4f0a6237d11e0a9/default/mocka\&quot;,\&quot;sh01/c089443ea9e50403fa4f0a6237d11e0a9/default/mockb\&quot;,\&quot;sh01/c089443ea9e50403fa4f0a6237d11e0a9/default/mockc\&quot;]</para>
         /// </summary>
         [NameInMap("ServicesList")]
         [Validation(Required=false)]
         public string ServicesList { get; set; }
 
         /// <summary>
-        /// The name of the lane.
+        /// <para>The name of the lane.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>s3</para>
         /// </summary>
         [NameInMap("SwimLaneName")]
         [Validation(Required=false)]

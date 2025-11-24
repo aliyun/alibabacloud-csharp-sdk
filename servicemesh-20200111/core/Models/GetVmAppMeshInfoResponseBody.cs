@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetVmAppMeshInfoResponseBody : TeaModel {
         /// <summary>
-        /// The response parameters.
+        /// <para>The response parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>...</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9522f7c9-63a1-4603-b850-37d12a****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

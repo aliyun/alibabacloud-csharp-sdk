@@ -10,38 +10,55 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class GetRegisteredServiceEndpointsRequest : TeaModel {
         /// <summary>
-        /// The name of the registered service.
+        /// <para>The name of the registered service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c8b054ee8c3914d079b5ce9733328****,c58faedb8a78640d3aeb0372e4c02****</para>
         /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]
         public string ClusterIds { get; set; }
 
         /// <summary>
-        /// The type of the registered service. Valid values:
+        /// <para>The type of the registered service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>ServiceEntry</c>: indicates that the service is registered by creating a service entry.</description></item>
+        /// <item><description><c>Kubernetes</c>: indicates that the service is registered on a Kubernetes cluster on the data plane.</description></item>
+        /// </list>
         /// 
-        /// *   `ServiceEntry`: indicates that the service is registered by creating a service entry.
-        /// *   `Kubernetes`: indicates that the service is registered on a Kubernetes cluster on the data plane.
+        /// <b>Example:</b>
+        /// <para>reviews</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The IDs of clusters in the ASM instance. Separate multiple cluster IDs with commas (,).
+        /// <para>The IDs of clusters in the ASM instance. Separate multiple cluster IDs with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The name of the namespace.
+        /// <para>The name of the namespace.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c08ba3fd1e6484b0f8cc1ad8fe10d****</para>
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
         /// <summary>
-        /// The endpoints of the registered service.
+        /// <para>The endpoints of the registered service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Kubernetes</para>
         /// </summary>
         [NameInMap("ServiceType")]
         [Validation(Required=false)]

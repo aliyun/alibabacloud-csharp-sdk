@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeGuestClusterAccessLogDashboardsResponseBody : TeaModel {
         /// <summary>
-        /// The access log dashboards of the cluster on the data plane.
+        /// <para>The access log dashboards of the cluster on the data plane.</para>
         /// </summary>
         [NameInMap("Dashboards")]
         [Validation(Required=false)]
         public List<DescribeGuestClusterAccessLogDashboardsResponseBodyDashboards> Dashboards { get; set; }
         public class DescribeGuestClusterAccessLogDashboardsResponseBodyDashboards : TeaModel {
             /// <summary>
-            /// The title of the dashboard.
+            /// <para>The title of the dashboard.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// The URL of a dashboard.
+            /// <para>The URL of a dashboard.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test.com</para>
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
@@ -33,14 +39,20 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         }
 
         /// <summary>
-        /// The ID of the cluster on the data plane.
+        /// <para>The ID of the cluster on the data plane.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ce3c25e247da24f3aab9b7edfae83****</para>
         /// </summary>
         [NameInMap("K8sClusterId")]
         [Validation(Required=false)]
         public string K8sClusterId { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BD65C0AD-D3C6-48D3-8D93-38D2015C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

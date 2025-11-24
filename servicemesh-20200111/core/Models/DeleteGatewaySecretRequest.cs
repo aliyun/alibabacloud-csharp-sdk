@@ -10,21 +10,31 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DeleteGatewaySecretRequest : TeaModel {
         /// <summary>
-        /// The name of the ASM gateway.
+        /// <para>The name of the ASM gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ingressgateway</para>
         /// </summary>
         [NameInMap("IstioGatewayName")]
         [Validation(Required=false)]
         public string IstioGatewayName { get; set; }
 
         /// <summary>
-        /// The name of the secret.
+        /// <para>The name of the secret.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bookinfo-secret</para>
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]
         public string SecretName { get; set; }
 
         /// <summary>
-        /// The ASM instance ID.
+        /// <para>The ASM instance ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c08ba3fd1e6484b0f8cc1ad8fe10d****</para>
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

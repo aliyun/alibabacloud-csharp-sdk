@@ -10,74 +10,96 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeIstioGatewayRoutesResponseBody : TeaModel {
         /// <summary>
-        /// The routing rules.
+        /// <para>The routing rules.</para>
         /// </summary>
         [NameInMap("ManagementRoutes")]
         [Validation(Required=false)]
         public List<DescribeIstioGatewayRoutesResponseBodyManagementRoutes> ManagementRoutes { get; set; }
         public class DescribeIstioGatewayRoutesResponseBodyManagementRoutes : TeaModel {
             /// <summary>
-            /// The name of the ASM gateway.
+            /// <para>The name of the ASM gateway.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ingressgateway</para>
             /// </summary>
             [NameInMap("ASMGatewayName")]
             [Validation(Required=false)]
             public string ASMGatewayName { get; set; }
 
             /// <summary>
-            /// The description of the routing rule.
+            /// <para>The description of the routing rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demo route</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// Destination hosts list.
+            /// <para>Destination hosts list.</para>
             /// </summary>
             [NameInMap("DestinationHost")]
             [Validation(Required=false)]
             public List<string> DestinationHost { get; set; }
 
             /// <summary>
-            /// Destination subset list.
+            /// <para>Destination subset list.</para>
             /// </summary>
             [NameInMap("DestinationSubSet")]
             [Validation(Required=false)]
             public List<string> DestinationSubSet { get; set; }
 
             /// <summary>
-            /// The namespace.
+            /// <para>The namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>istio-demo</para>
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
             /// <summary>
-            /// The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.
+            /// <para>The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
             /// <summary>
-            /// The name of the routing rule.
+            /// <para>The name of the routing rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>http-route</para>
             /// </summary>
             [NameInMap("RouteName")]
             [Validation(Required=false)]
             public string RouteName { get; set; }
 
             /// <summary>
-            /// The path that is used to match request URLs.
+            /// <para>The path that is used to match request URLs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/reviews/v1</para>
             /// </summary>
             [NameInMap("RoutePath")]
             [Validation(Required=false)]
             public string RoutePath { get; set; }
 
             /// <summary>
-            /// The status of the routing rule. Valid values:
+            /// <para>The status of the routing rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>0</c>: The routing rule is valid.</description></item>
+            /// <item><description><c>1</c>: The routing rule is invalid.</description></item>
+            /// <item><description><c>2</c>: An error occurs during the creation or update of the routing rule.</description></item>
+            /// </list>
             /// 
-            /// *   `0`: The routing rule is valid.
-            /// *   `1`: The routing rule is invalid.
-            /// *   `2`: An error occurs during the creation or update of the routing rule.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -86,7 +108,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>31d3a0f0-07ed-4f6e-9004-1804498c****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

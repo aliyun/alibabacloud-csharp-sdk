@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "central";
             CheckConfig(config);
             this._endpoint = GetEndpoint("servicemesh", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -38,6 +37,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a cluster to an ASM instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddClusterIntoServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddClusterIntoServiceMeshResponse
+        /// </returns>
         public AddClusterIntoServiceMeshResponse AddClusterIntoServiceMeshWithOptions(AddClusterIntoServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -46,9 +60,17 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiscoveryOnly))
+            {
+                body["DiscoveryOnly"] = request.DiscoveryOnly;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreNamespaceCheck))
             {
                 body["IgnoreNamespaceCheck"] = request.IgnoreNamespaceCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kubeconfig))
+            {
+                body["Kubeconfig"] = request.Kubeconfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
@@ -73,6 +95,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<AddClusterIntoServiceMeshResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a cluster to an ASM instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddClusterIntoServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddClusterIntoServiceMeshResponse
+        /// </returns>
         public async Task<AddClusterIntoServiceMeshResponse> AddClusterIntoServiceMeshWithOptionsAsync(AddClusterIntoServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -81,9 +118,17 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiscoveryOnly))
+            {
+                body["DiscoveryOnly"] = request.DiscoveryOnly;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreNamespaceCheck))
             {
                 body["IgnoreNamespaceCheck"] = request.IgnoreNamespaceCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Kubeconfig))
+            {
+                body["Kubeconfig"] = request.Kubeconfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
@@ -108,25 +153,62 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<AddClusterIntoServiceMeshResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a cluster to an ASM instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddClusterIntoServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddClusterIntoServiceMeshResponse
+        /// </returns>
         public AddClusterIntoServiceMeshResponse AddClusterIntoServiceMesh(AddClusterIntoServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddClusterIntoServiceMeshWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a cluster to an ASM instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddClusterIntoServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddClusterIntoServiceMeshResponse
+        /// </returns>
         public async Task<AddClusterIntoServiceMeshResponse> AddClusterIntoServiceMeshAsync(AddClusterIntoServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddClusterIntoServiceMeshWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request AddVMIntoServiceMeshRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddVMIntoServiceMeshResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddVMIntoServiceMesh is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a virtual machine (VM) to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddVMIntoServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddVMIntoServiceMeshResponse
+        /// </returns>
+        [Obsolete("OpenAPI AddVMIntoServiceMesh is deprecated")]
         // Deprecated
         public AddVMIntoServiceMeshResponse AddVMIntoServiceMeshWithOptions(AddVMIntoServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -159,13 +241,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<AddVMIntoServiceMeshResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request AddVMIntoServiceMeshRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return AddVMIntoServiceMeshResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddVMIntoServiceMesh is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a virtual machine (VM) to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddVMIntoServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddVMIntoServiceMeshResponse
+        /// </returns>
+        [Obsolete("OpenAPI AddVMIntoServiceMesh is deprecated")]
         // Deprecated
         public async Task<AddVMIntoServiceMeshResponse> AddVMIntoServiceMeshWithOptionsAsync(AddVMIntoServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -198,12 +293,23 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<AddVMIntoServiceMeshResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request AddVMIntoServiceMeshRequest
-          * @return AddVMIntoServiceMeshResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddVMIntoServiceMesh is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a virtual machine (VM) to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddVMIntoServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddVMIntoServiceMeshResponse
+        /// </returns>
+        [Obsolete("OpenAPI AddVMIntoServiceMesh is deprecated")]
         // Deprecated
         public AddVMIntoServiceMeshResponse AddVMIntoServiceMesh(AddVMIntoServiceMeshRequest request)
         {
@@ -211,12 +317,23 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return AddVMIntoServiceMeshWithOptions(request, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request AddVMIntoServiceMeshRequest
-          * @return AddVMIntoServiceMeshResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddVMIntoServiceMesh is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a virtual machine (VM) to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddVMIntoServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddVMIntoServiceMeshResponse
+        /// </returns>
+        [Obsolete("OpenAPI AddVMIntoServiceMesh is deprecated")]
         // Deprecated
         public async Task<AddVMIntoServiceMeshResponse> AddVMIntoServiceMeshAsync(AddVMIntoServiceMeshRequest request)
         {
@@ -224,6 +341,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await AddVMIntoServiceMeshWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateASMGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateASMGatewayResponse
+        /// </returns>
         public CreateASMGatewayResponse CreateASMGatewayWithOptions(CreateASMGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -259,6 +391,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateASMGatewayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateASMGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateASMGatewayResponse
+        /// </returns>
         public async Task<CreateASMGatewayResponse> CreateASMGatewayWithOptionsAsync(CreateASMGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -294,18 +441,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateASMGatewayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateASMGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateASMGatewayResponse
+        /// </returns>
         public CreateASMGatewayResponse CreateASMGateway(CreateASMGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateASMGatewayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateASMGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateASMGatewayResponse
+        /// </returns>
         public async Task<CreateASMGatewayResponse> CreateASMGatewayAsync(CreateASMGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateASMGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a secret for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGatewaySecretRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewaySecretResponse
+        /// </returns>
         public CreateGatewaySecretResponse CreateGatewaySecretWithOptions(CreateGatewaySecretRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -349,6 +535,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateGatewaySecretResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a secret for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGatewaySecretRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewaySecretResponse
+        /// </returns>
         public async Task<CreateGatewaySecretResponse> CreateGatewaySecretWithOptionsAsync(CreateGatewaySecretRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -392,18 +593,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateGatewaySecretResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a secret for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGatewaySecretRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewaySecretResponse
+        /// </returns>
         public CreateGatewaySecretResponse CreateGatewaySecret(CreateGatewaySecretRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateGatewaySecretWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a secret for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGatewaySecretRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewaySecretResponse
+        /// </returns>
         public async Task<CreateGatewaySecretResponse> CreateGatewaySecretAsync(CreateGatewaySecretRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateGatewaySecretWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds domain names for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIstioGatewayDomainsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIstioGatewayDomainsResponse
+        /// </returns>
         public CreateIstioGatewayDomainsResponse CreateIstioGatewayDomainsWithOptions(CreateIstioGatewayDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -467,6 +707,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateIstioGatewayDomainsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds domain names for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIstioGatewayDomainsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIstioGatewayDomainsResponse
+        /// </returns>
         public async Task<CreateIstioGatewayDomainsResponse> CreateIstioGatewayDomainsWithOptionsAsync(CreateIstioGatewayDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -530,18 +785,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateIstioGatewayDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds domain names for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIstioGatewayDomainsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIstioGatewayDomainsResponse
+        /// </returns>
         public CreateIstioGatewayDomainsResponse CreateIstioGatewayDomains(CreateIstioGatewayDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateIstioGatewayDomainsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds domain names for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIstioGatewayDomainsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIstioGatewayDomainsResponse
+        /// </returns>
         public async Task<CreateIstioGatewayDomainsResponse> CreateIstioGatewayDomainsAsync(CreateIstioGatewayDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateIstioGatewayDomainsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateIstioGatewayRoutesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIstioGatewayRoutesResponse
+        /// </returns>
         public CreateIstioGatewayRoutesResponse CreateIstioGatewayRoutesWithOptions(CreateIstioGatewayRoutesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -595,6 +889,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateIstioGatewayRoutesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateIstioGatewayRoutesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIstioGatewayRoutesResponse
+        /// </returns>
         public async Task<CreateIstioGatewayRoutesResponse> CreateIstioGatewayRoutesWithOptionsAsync(CreateIstioGatewayRoutesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -648,18 +957,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateIstioGatewayRoutesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIstioGatewayRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIstioGatewayRoutesResponse
+        /// </returns>
         public CreateIstioGatewayRoutesResponse CreateIstioGatewayRoutes(CreateIstioGatewayRoutesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateIstioGatewayRoutesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIstioGatewayRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIstioGatewayRoutesResponse
+        /// </returns>
         public async Task<CreateIstioGatewayRoutesResponse> CreateIstioGatewayRoutesAsync(CreateIstioGatewayRoutesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateIstioGatewayRoutesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceMeshResponse
+        /// </returns>
         public CreateServiceMeshResponse CreateServiceMeshWithOptions(CreateServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -721,6 +1069,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["CRAggregationEnabled"] = request.CRAggregationEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertChain))
+            {
+                body["CertChain"] = request.CertChain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 body["ChargeType"] = request.ChargeType;
@@ -768,6 +1120,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Edition))
             {
                 body["Edition"] = request.Edition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableACMG))
+            {
+                body["EnableACMG"] = request.EnableACMG;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAmbient))
             {
@@ -904,6 +1260,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PilotLoadBalancerSpec))
             {
                 body["PilotLoadBalancerSpec"] = request.PilotLoadBalancerSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlaygroundScene))
+            {
+                body["PlaygroundScene"] = request.PlaygroundScene;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrometheusUrl))
             {
@@ -985,6 +1345,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateServiceMeshResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceMeshResponse
+        /// </returns>
         public async Task<CreateServiceMeshResponse> CreateServiceMeshWithOptionsAsync(CreateServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1046,6 +1421,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["CRAggregationEnabled"] = request.CRAggregationEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertChain))
+            {
+                body["CertChain"] = request.CertChain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 body["ChargeType"] = request.ChargeType;
@@ -1093,6 +1472,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Edition))
             {
                 body["Edition"] = request.Edition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableACMG))
+            {
+                body["EnableACMG"] = request.EnableACMG;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAmbient))
             {
@@ -1230,6 +1613,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["PilotLoadBalancerSpec"] = request.PilotLoadBalancerSpec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlaygroundScene))
+            {
+                body["PlaygroundScene"] = request.PlaygroundScene;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrometheusUrl))
             {
                 body["PrometheusUrl"] = request.PrometheusUrl;
@@ -1310,18 +1697,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateServiceMeshResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceMeshResponse
+        /// </returns>
         public CreateServiceMeshResponse CreateServiceMesh(CreateServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateServiceMeshWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceMeshResponse
+        /// </returns>
         public async Task<CreateServiceMeshResponse> CreateServiceMeshAsync(CreateServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateServiceMeshWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSwimLaneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSwimLaneResponse
+        /// </returns>
         public CreateSwimLaneResponse CreateSwimLaneWithOptions(CreateSwimLaneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1369,6 +1795,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateSwimLaneResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSwimLaneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSwimLaneResponse
+        /// </returns>
         public async Task<CreateSwimLaneResponse> CreateSwimLaneWithOptionsAsync(CreateSwimLaneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1416,18 +1857,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateSwimLaneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSwimLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSwimLaneResponse
+        /// </returns>
         public CreateSwimLaneResponse CreateSwimLane(CreateSwimLaneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSwimLaneWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSwimLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSwimLaneResponse
+        /// </returns>
         public async Task<CreateSwimLaneResponse> CreateSwimLaneAsync(CreateSwimLaneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSwimLaneWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSwimLaneGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSwimLaneGroupResponse
+        /// </returns>
         public CreateSwimLaneGroupResponse CreateSwimLaneGroupWithOptions(CreateSwimLaneGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1439,6 +1919,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IngressGatewayName))
             {
                 body["IngressGatewayName"] = request.IngressGatewayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IngressGatewayNamespace))
+            {
+                body["IngressGatewayNamespace"] = request.IngressGatewayNamespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IngressType))
             {
@@ -1483,6 +1967,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateSwimLaneGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSwimLaneGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSwimLaneGroupResponse
+        /// </returns>
         public async Task<CreateSwimLaneGroupResponse> CreateSwimLaneGroupWithOptionsAsync(CreateSwimLaneGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1494,6 +1993,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IngressGatewayName))
             {
                 body["IngressGatewayName"] = request.IngressGatewayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IngressGatewayNamespace))
+            {
+                body["IngressGatewayNamespace"] = request.IngressGatewayNamespace;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IngressType))
             {
@@ -1538,18 +2041,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateSwimLaneGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSwimLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSwimLaneGroupResponse
+        /// </returns>
         public CreateSwimLaneGroupResponse CreateSwimLaneGroup(CreateSwimLaneGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateSwimLaneGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSwimLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSwimLaneGroupResponse
+        /// </returns>
         public async Task<CreateSwimLaneGroupResponse> CreateSwimLaneGroupAsync(CreateSwimLaneGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSwimLaneGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Waypoint</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWaypointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWaypointResponse
+        /// </returns>
         public CreateWaypointResponse CreateWaypointWithOptions(CreateWaypointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1633,6 +2175,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateWaypointResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Waypoint</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWaypointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWaypointResponse
+        /// </returns>
         public async Task<CreateWaypointResponse> CreateWaypointWithOptionsAsync(CreateWaypointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1716,18 +2273,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<CreateWaypointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Waypoint</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWaypointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWaypointResponse
+        /// </returns>
         public CreateWaypointResponse CreateWaypoint(CreateWaypointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateWaypointWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Waypoint</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWaypointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWaypointResponse
+        /// </returns>
         public async Task<CreateWaypointResponse> CreateWaypointAsync(CreateWaypointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateWaypointWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGatewayRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewayRouteResponse
+        /// </returns>
         public DeleteGatewayRouteResponse DeleteGatewayRouteWithOptions(DeleteGatewayRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1763,6 +2359,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DeleteGatewayRouteResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGatewayRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewayRouteResponse
+        /// </returns>
         public async Task<DeleteGatewayRouteResponse> DeleteGatewayRouteWithOptionsAsync(DeleteGatewayRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1798,18 +2409,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DeleteGatewayRouteResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGatewayRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewayRouteResponse
+        /// </returns>
         public DeleteGatewayRouteResponse DeleteGatewayRoute(DeleteGatewayRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteGatewayRouteWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGatewayRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewayRouteResponse
+        /// </returns>
         public async Task<DeleteGatewayRouteResponse> DeleteGatewayRouteAsync(DeleteGatewayRouteRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteGatewayRouteWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a secret for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGatewaySecretRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewaySecretResponse
+        /// </returns>
         public DeleteGatewaySecretResponse DeleteGatewaySecretWithOptions(DeleteGatewaySecretRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1845,6 +2495,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DeleteGatewaySecretResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a secret for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGatewaySecretRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewaySecretResponse
+        /// </returns>
         public async Task<DeleteGatewaySecretResponse> DeleteGatewaySecretWithOptionsAsync(DeleteGatewaySecretRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1880,18 +2545,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DeleteGatewaySecretResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a secret for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGatewaySecretRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewaySecretResponse
+        /// </returns>
         public DeleteGatewaySecretResponse DeleteGatewaySecret(DeleteGatewaySecretRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteGatewaySecretWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a secret for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGatewaySecretRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewaySecretResponse
+        /// </returns>
         public async Task<DeleteGatewaySecretResponse> DeleteGatewaySecretAsync(DeleteGatewaySecretRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteGatewaySecretWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes one or more domain names for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIstioGatewayDomainsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIstioGatewayDomainsResponse
+        /// </returns>
         public DeleteIstioGatewayDomainsResponse DeleteIstioGatewayDomainsWithOptions(DeleteIstioGatewayDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1939,6 +2643,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DeleteIstioGatewayDomainsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes one or more domain names for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIstioGatewayDomainsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIstioGatewayDomainsResponse
+        /// </returns>
         public async Task<DeleteIstioGatewayDomainsResponse> DeleteIstioGatewayDomainsWithOptionsAsync(DeleteIstioGatewayDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1986,18 +2705,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DeleteIstioGatewayDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes one or more domain names for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIstioGatewayDomainsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIstioGatewayDomainsResponse
+        /// </returns>
         public DeleteIstioGatewayDomainsResponse DeleteIstioGatewayDomains(DeleteIstioGatewayDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteIstioGatewayDomainsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes one or more domain names for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteIstioGatewayDomainsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteIstioGatewayDomainsResponse
+        /// </returns>
         public async Task<DeleteIstioGatewayDomainsResponse> DeleteIstioGatewayDomainsAsync(DeleteIstioGatewayDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteIstioGatewayDomainsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceMeshResponse
+        /// </returns>
         public DeleteServiceMeshResponse DeleteServiceMeshWithOptions(DeleteServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2033,6 +2791,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DeleteServiceMeshResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceMeshResponse
+        /// </returns>
         public async Task<DeleteServiceMeshResponse> DeleteServiceMeshWithOptionsAsync(DeleteServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2068,18 +2841,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DeleteServiceMeshResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceMeshResponse
+        /// </returns>
         public DeleteServiceMeshResponse DeleteServiceMesh(DeleteServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteServiceMeshWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceMeshResponse
+        /// </returns>
         public async Task<DeleteServiceMeshResponse> DeleteServiceMeshAsync(DeleteServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteServiceMeshWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimLaneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimLaneResponse
+        /// </returns>
         public DeleteSwimLaneResponse DeleteSwimLaneWithOptions(DeleteSwimLaneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2115,6 +2927,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DeleteSwimLaneResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimLaneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimLaneResponse
+        /// </returns>
         public async Task<DeleteSwimLaneResponse> DeleteSwimLaneWithOptionsAsync(DeleteSwimLaneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2150,18 +2977,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DeleteSwimLaneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimLaneResponse
+        /// </returns>
         public DeleteSwimLaneResponse DeleteSwimLane(DeleteSwimLaneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSwimLaneWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimLaneResponse
+        /// </returns>
         public async Task<DeleteSwimLaneResponse> DeleteSwimLaneAsync(DeleteSwimLaneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSwimLaneWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lane group. If a lane group is deleted, the lanes in the group and the traffic routing rules attached to the lanes are deleted.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimLaneGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimLaneGroupResponse
+        /// </returns>
         public DeleteSwimLaneGroupResponse DeleteSwimLaneGroupWithOptions(DeleteSwimLaneGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2193,6 +3059,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DeleteSwimLaneGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lane group. If a lane group is deleted, the lanes in the group and the traffic routing rules attached to the lanes are deleted.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimLaneGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimLaneGroupResponse
+        /// </returns>
         public async Task<DeleteSwimLaneGroupResponse> DeleteSwimLaneGroupWithOptionsAsync(DeleteSwimLaneGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2224,18 +3105,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DeleteSwimLaneGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lane group. If a lane group is deleted, the lanes in the group and the traffic routing rules attached to the lanes are deleted.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimLaneGroupResponse
+        /// </returns>
         public DeleteSwimLaneGroupResponse DeleteSwimLaneGroup(DeleteSwimLaneGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteSwimLaneGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a lane group. If a lane group is deleted, the lanes in the group and the traffic routing rules attached to the lanes are deleted.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSwimLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSwimLaneGroupResponse
+        /// </returns>
         public async Task<DeleteSwimLaneGroupResponse> DeleteSwimLaneGroupAsync(DeleteSwimLaneGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSwimLaneGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Waypoint资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWaypointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWaypointResponse
+        /// </returns>
         public DeleteWaypointResponse DeleteWaypointWithOptions(DeleteWaypointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2275,6 +3195,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DeleteWaypointResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Waypoint资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWaypointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWaypointResponse
+        /// </returns>
         public async Task<DeleteWaypointResponse> DeleteWaypointWithOptionsAsync(DeleteWaypointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2314,18 +3249,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DeleteWaypointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Waypoint资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWaypointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWaypointResponse
+        /// </returns>
         public DeleteWaypointResponse DeleteWaypoint(DeleteWaypointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteWaypointWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Waypoint资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWaypointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWaypointResponse
+        /// </returns>
         public async Task<DeleteWaypointResponse> DeleteWaypointAsync(DeleteWaypointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteWaypointWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about imported services on a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeASMGatewayImportedServicesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeASMGatewayImportedServicesResponse
+        /// </returns>
         public DescribeASMGatewayImportedServicesResponse DescribeASMGatewayImportedServicesWithOptions(DescribeASMGatewayImportedServicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2361,6 +3335,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeASMGatewayImportedServicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about imported services on a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeASMGatewayImportedServicesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeASMGatewayImportedServicesResponse
+        /// </returns>
         public async Task<DescribeASMGatewayImportedServicesResponse> DescribeASMGatewayImportedServicesWithOptionsAsync(DescribeASMGatewayImportedServicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2396,18 +3385,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeASMGatewayImportedServicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about imported services on a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeASMGatewayImportedServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeASMGatewayImportedServicesResponse
+        /// </returns>
         public DescribeASMGatewayImportedServicesResponse DescribeASMGatewayImportedServices(DescribeASMGatewayImportedServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeASMGatewayImportedServicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about imported services on a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeASMGatewayImportedServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeASMGatewayImportedServicesResponse
+        /// </returns>
         public async Task<DescribeASMGatewayImportedServicesResponse> DescribeASMGatewayImportedServicesAsync(DescribeASMGatewayImportedServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeASMGatewayImportedServicesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the versions of the Cloud Controller Manager (CCM) component.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCCMVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCCMVersionResponse
+        /// </returns>
         public DescribeCCMVersionResponse DescribeCCMVersionWithOptions(DescribeCCMVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2435,6 +3463,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeCCMVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the versions of the Cloud Controller Manager (CCM) component.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCCMVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCCMVersionResponse
+        /// </returns>
         public async Task<DescribeCCMVersionResponse> DescribeCCMVersionWithOptionsAsync(DescribeCCMVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2462,18 +3505,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeCCMVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the versions of the Cloud Controller Manager (CCM) component.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCCMVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCCMVersionResponse
+        /// </returns>
         public DescribeCCMVersionResponse DescribeCCMVersion(DescribeCCMVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCCMVersionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the versions of the Cloud Controller Manager (CCM) component.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCCMVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCCMVersionResponse
+        /// </returns>
         public async Task<DescribeCCMVersionResponse> DescribeCCMVersionAsync(DescribeCCMVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCCMVersionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network connectivity between clusters that are deployed across virtual private clouds (VPCs) in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCensRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCensResponse
+        /// </returns>
         public DescribeCensResponse DescribeCensWithOptions(DescribeCensRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2501,6 +3583,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeCensResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network connectivity between clusters that are deployed across virtual private clouds (VPCs) in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCensRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCensResponse
+        /// </returns>
         public async Task<DescribeCensResponse> DescribeCensWithOptionsAsync(DescribeCensRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2528,18 +3625,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeCensResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network connectivity between clusters that are deployed across virtual private clouds (VPCs) in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCensRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCensResponse
+        /// </returns>
         public DescribeCensResponse DescribeCens(DescribeCensRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCensWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network connectivity between clusters that are deployed across virtual private clouds (VPCs) in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCensRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCensResponse
+        /// </returns>
         public async Task<DescribeCensResponse> DescribeCensAsync(DescribeCensRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCensWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about Grafana dashboards of a cluster in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterGrafanaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterGrafanaResponse
+        /// </returns>
         public DescribeClusterGrafanaResponse DescribeClusterGrafanaWithOptions(DescribeClusterGrafanaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2547,6 +3683,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.K8sClusterId))
             {
                 query["K8sClusterId"] = request.K8sClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReAddPrometheusIntegration))
+            {
+                query["ReAddPrometheusIntegration"] = request.ReAddPrometheusIntegration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
@@ -2571,6 +3711,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeClusterGrafanaResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about Grafana dashboards of a cluster in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterGrafanaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterGrafanaResponse
+        /// </returns>
         public async Task<DescribeClusterGrafanaResponse> DescribeClusterGrafanaWithOptionsAsync(DescribeClusterGrafanaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2578,6 +3733,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.K8sClusterId))
             {
                 query["K8sClusterId"] = request.K8sClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReAddPrometheusIntegration))
+            {
+                query["ReAddPrometheusIntegration"] = request.ReAddPrometheusIntegration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
@@ -2602,18 +3761,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeClusterGrafanaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about Grafana dashboards of a cluster in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterGrafanaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterGrafanaResponse
+        /// </returns>
         public DescribeClusterGrafanaResponse DescribeClusterGrafana(DescribeClusterGrafanaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeClusterGrafanaWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about Grafana dashboards of a cluster in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterGrafanaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterGrafanaResponse
+        /// </returns>
         public async Task<DescribeClusterGrafanaResponse> DescribeClusterGrafanaAsync(DescribeClusterGrafanaRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeClusterGrafanaWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the public endpoint of the Prometheus service that is used to monitor a cluster in an Alibaba Cloud Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterPrometheusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterPrometheusResponse
+        /// </returns>
         public DescribeClusterPrometheusResponse DescribeClusterPrometheusWithOptions(DescribeClusterPrometheusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2649,6 +3847,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeClusterPrometheusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the public endpoint of the Prometheus service that is used to monitor a cluster in an Alibaba Cloud Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterPrometheusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterPrometheusResponse
+        /// </returns>
         public async Task<DescribeClusterPrometheusResponse> DescribeClusterPrometheusWithOptionsAsync(DescribeClusterPrometheusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2684,18 +3897,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeClusterPrometheusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the public endpoint of the Prometheus service that is used to monitor a cluster in an Alibaba Cloud Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterPrometheusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterPrometheusResponse
+        /// </returns>
         public DescribeClusterPrometheusResponse DescribeClusterPrometheus(DescribeClusterPrometheusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeClusterPrometheusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the public endpoint of the Prometheus service that is used to monitor a cluster in an Alibaba Cloud Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterPrometheusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterPrometheusResponse
+        /// </returns>
         public async Task<DescribeClusterPrometheusResponse> DescribeClusterPrometheusAsync(DescribeClusterPrometheusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeClusterPrometheusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about clusters in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClustersInServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClustersInServiceMeshResponse
+        /// </returns>
         public DescribeClustersInServiceMeshResponse DescribeClustersInServiceMeshWithOptions(DescribeClustersInServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2723,6 +3975,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeClustersInServiceMeshResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about clusters in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClustersInServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClustersInServiceMeshResponse
+        /// </returns>
         public async Task<DescribeClustersInServiceMeshResponse> DescribeClustersInServiceMeshWithOptionsAsync(DescribeClustersInServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2750,18 +4017,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeClustersInServiceMeshResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about clusters in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClustersInServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClustersInServiceMeshResponse
+        /// </returns>
         public DescribeClustersInServiceMeshResponse DescribeClustersInServiceMesh(DescribeClustersInServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeClustersInServiceMeshWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about clusters in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClustersInServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClustersInServiceMeshResponse
+        /// </returns>
         public async Task<DescribeClustersInServiceMeshResponse> DescribeClustersInServiceMeshAsync(DescribeClustersInServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeClustersInServiceMeshWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the common YAML templates of Istio resources used by Service Mesh (ASM) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCrTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCrTemplatesResponse
+        /// </returns>
         public DescribeCrTemplatesResponse DescribeCrTemplatesWithOptions(DescribeCrTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2793,6 +4099,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeCrTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the common YAML templates of Istio resources used by Service Mesh (ASM) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCrTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCrTemplatesResponse
+        /// </returns>
         public async Task<DescribeCrTemplatesResponse> DescribeCrTemplatesWithOptionsAsync(DescribeCrTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2824,18 +4145,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeCrTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the common YAML templates of Istio resources used by Service Mesh (ASM) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCrTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCrTemplatesResponse
+        /// </returns>
         public DescribeCrTemplatesResponse DescribeCrTemplates(DescribeCrTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeCrTemplatesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the common YAML templates of Istio resources used by Service Mesh (ASM) instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCrTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCrTemplatesResponse
+        /// </returns>
         public async Task<DescribeCrTemplatesResponse> DescribeCrTemplatesAsync(DescribeCrTemplatesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCrTemplatesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeEipResources</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEipResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEipResourcesResponse
+        /// </returns>
         public DescribeEipResourcesResponse DescribeEipResourcesWithOptions(DescribeEipResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2871,6 +4231,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeEipResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeEipResources</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEipResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEipResourcesResponse
+        /// </returns>
         public async Task<DescribeEipResourcesResponse> DescribeEipResourcesWithOptionsAsync(DescribeEipResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2906,18 +4281,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeEipResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeEipResources</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEipResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEipResourcesResponse
+        /// </returns>
         public DescribeEipResourcesResponse DescribeEipResources(DescribeEipResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeEipResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeEipResources</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEipResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEipResourcesResponse
+        /// </returns>
         public async Task<DescribeEipResourcesResponse> DescribeEipResourcesAsync(DescribeEipResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeEipResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a secret of a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGatewaySecretDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGatewaySecretDetailsResponse
+        /// </returns>
         public DescribeGatewaySecretDetailsResponse DescribeGatewaySecretDetailsWithOptions(DescribeGatewaySecretDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2949,6 +4363,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeGatewaySecretDetailsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a secret of a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGatewaySecretDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGatewaySecretDetailsResponse
+        /// </returns>
         public async Task<DescribeGatewaySecretDetailsResponse> DescribeGatewaySecretDetailsWithOptionsAsync(DescribeGatewaySecretDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2980,18 +4409,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeGatewaySecretDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a secret of a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGatewaySecretDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGatewaySecretDetailsResponse
+        /// </returns>
         public DescribeGatewaySecretDetailsResponse DescribeGatewaySecretDetails(DescribeGatewaySecretDetailsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeGatewaySecretDetailsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a secret of a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGatewaySecretDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGatewaySecretDetailsResponse
+        /// </returns>
         public async Task<DescribeGatewaySecretDetailsResponse> DescribeGatewaySecretDetailsAsync(DescribeGatewaySecretDetailsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeGatewaySecretDetailsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access log dashboards of a cluster on the data plane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGuestClusterAccessLogDashboardsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGuestClusterAccessLogDashboardsResponse
+        /// </returns>
         public DescribeGuestClusterAccessLogDashboardsResponse DescribeGuestClusterAccessLogDashboardsWithOptions(DescribeGuestClusterAccessLogDashboardsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3019,6 +4487,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeGuestClusterAccessLogDashboardsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access log dashboards of a cluster on the data plane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGuestClusterAccessLogDashboardsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGuestClusterAccessLogDashboardsResponse
+        /// </returns>
         public async Task<DescribeGuestClusterAccessLogDashboardsResponse> DescribeGuestClusterAccessLogDashboardsWithOptionsAsync(DescribeGuestClusterAccessLogDashboardsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3046,18 +4529,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeGuestClusterAccessLogDashboardsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access log dashboards of a cluster on the data plane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGuestClusterAccessLogDashboardsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGuestClusterAccessLogDashboardsResponse
+        /// </returns>
         public DescribeGuestClusterAccessLogDashboardsResponse DescribeGuestClusterAccessLogDashboards(DescribeGuestClusterAccessLogDashboardsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeGuestClusterAccessLogDashboardsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access log dashboards of a cluster on the data plane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGuestClusterAccessLogDashboardsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGuestClusterAccessLogDashboardsResponse
+        /// </returns>
         public async Task<DescribeGuestClusterAccessLogDashboardsResponse> DescribeGuestClusterAccessLogDashboardsAsync(DescribeGuestClusterAccessLogDashboardsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeGuestClusterAccessLogDashboardsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the namespaces of a Kubernetes cluster that is added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGuestClusterNamespacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGuestClusterNamespacesResponse
+        /// </returns>
         public DescribeGuestClusterNamespacesResponse DescribeGuestClusterNamespacesWithOptions(DescribeGuestClusterNamespacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3093,6 +4615,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeGuestClusterNamespacesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the namespaces of a Kubernetes cluster that is added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGuestClusterNamespacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGuestClusterNamespacesResponse
+        /// </returns>
         public async Task<DescribeGuestClusterNamespacesResponse> DescribeGuestClusterNamespacesWithOptionsAsync(DescribeGuestClusterNamespacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3128,18 +4665,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeGuestClusterNamespacesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the namespaces of a Kubernetes cluster that is added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGuestClusterNamespacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGuestClusterNamespacesResponse
+        /// </returns>
         public DescribeGuestClusterNamespacesResponse DescribeGuestClusterNamespaces(DescribeGuestClusterNamespacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeGuestClusterNamespacesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the namespaces of a Kubernetes cluster that is added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGuestClusterNamespacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGuestClusterNamespacesResponse
+        /// </returns>
         public async Task<DescribeGuestClusterNamespacesResponse> DescribeGuestClusterNamespacesAsync(DescribeGuestClusterNamespacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeGuestClusterNamespacesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the pods in a specified namespace of a Kubernetes cluster that is added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGuestClusterPodsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGuestClusterPodsResponse
+        /// </returns>
         public DescribeGuestClusterPodsResponse DescribeGuestClusterPodsWithOptions(DescribeGuestClusterPodsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3175,6 +4751,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeGuestClusterPodsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the pods in a specified namespace of a Kubernetes cluster that is added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGuestClusterPodsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGuestClusterPodsResponse
+        /// </returns>
         public async Task<DescribeGuestClusterPodsResponse> DescribeGuestClusterPodsWithOptionsAsync(DescribeGuestClusterPodsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3210,18 +4801,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeGuestClusterPodsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the pods in a specified namespace of a Kubernetes cluster that is added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGuestClusterPodsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGuestClusterPodsResponse
+        /// </returns>
         public DescribeGuestClusterPodsResponse DescribeGuestClusterPods(DescribeGuestClusterPodsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeGuestClusterPodsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the pods in a specified namespace of a Kubernetes cluster that is added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGuestClusterPodsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGuestClusterPodsResponse
+        /// </returns>
         public async Task<DescribeGuestClusterPodsResponse> DescribeGuestClusterPodsAsync(DescribeGuestClusterPodsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeGuestClusterPodsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the imported services on a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeImportedServicesDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeImportedServicesDetailResponse
+        /// </returns>
         public DescribeImportedServicesDetailResponse DescribeImportedServicesDetailWithOptions(DescribeImportedServicesDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3257,6 +4887,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeImportedServicesDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the imported services on a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeImportedServicesDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeImportedServicesDetailResponse
+        /// </returns>
         public async Task<DescribeImportedServicesDetailResponse> DescribeImportedServicesDetailWithOptionsAsync(DescribeImportedServicesDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3292,18 +4937,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeImportedServicesDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the imported services on a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeImportedServicesDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeImportedServicesDetailResponse
+        /// </returns>
         public DescribeImportedServicesDetailResponse DescribeImportedServicesDetail(DescribeImportedServicesDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeImportedServicesDetailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the imported services on a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeImportedServicesDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeImportedServicesDetailResponse
+        /// </returns>
         public async Task<DescribeImportedServicesDetailResponse> DescribeImportedServicesDetailAsync(DescribeImportedServicesDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeImportedServicesDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the domain names that are exposed by a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIstioGatewayDomainsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIstioGatewayDomainsResponse
+        /// </returns>
         public DescribeIstioGatewayDomainsResponse DescribeIstioGatewayDomainsWithOptions(DescribeIstioGatewayDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3343,6 +5027,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeIstioGatewayDomainsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the domain names that are exposed by a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIstioGatewayDomainsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIstioGatewayDomainsResponse
+        /// </returns>
         public async Task<DescribeIstioGatewayDomainsResponse> DescribeIstioGatewayDomainsWithOptionsAsync(DescribeIstioGatewayDomainsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3382,18 +5081,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeIstioGatewayDomainsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the domain names that are exposed by a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIstioGatewayDomainsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIstioGatewayDomainsResponse
+        /// </returns>
         public DescribeIstioGatewayDomainsResponse DescribeIstioGatewayDomains(DescribeIstioGatewayDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeIstioGatewayDomainsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of the domain names that are exposed by a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIstioGatewayDomainsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIstioGatewayDomainsResponse
+        /// </returns>
         public async Task<DescribeIstioGatewayDomainsResponse> DescribeIstioGatewayDomainsAsync(DescribeIstioGatewayDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeIstioGatewayDomainsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a routing rule of an Alibaba Cloud Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIstioGatewayRouteDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIstioGatewayRouteDetailResponse
+        /// </returns>
         public DescribeIstioGatewayRouteDetailResponse DescribeIstioGatewayRouteDetailWithOptions(DescribeIstioGatewayRouteDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3429,6 +5167,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeIstioGatewayRouteDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a routing rule of an Alibaba Cloud Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIstioGatewayRouteDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIstioGatewayRouteDetailResponse
+        /// </returns>
         public async Task<DescribeIstioGatewayRouteDetailResponse> DescribeIstioGatewayRouteDetailWithOptionsAsync(DescribeIstioGatewayRouteDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3464,18 +5217,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeIstioGatewayRouteDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a routing rule of an Alibaba Cloud Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIstioGatewayRouteDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIstioGatewayRouteDetailResponse
+        /// </returns>
         public DescribeIstioGatewayRouteDetailResponse DescribeIstioGatewayRouteDetail(DescribeIstioGatewayRouteDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeIstioGatewayRouteDetailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the detailed information about a routing rule of an Alibaba Cloud Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIstioGatewayRouteDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIstioGatewayRouteDetailResponse
+        /// </returns>
         public async Task<DescribeIstioGatewayRouteDetailResponse> DescribeIstioGatewayRouteDetailAsync(DescribeIstioGatewayRouteDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeIstioGatewayRouteDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the routing rules for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIstioGatewayRoutesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIstioGatewayRoutesResponse
+        /// </returns>
         public DescribeIstioGatewayRoutesResponse DescribeIstioGatewayRoutesWithOptions(DescribeIstioGatewayRoutesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3507,6 +5299,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeIstioGatewayRoutesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the routing rules for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIstioGatewayRoutesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIstioGatewayRoutesResponse
+        /// </returns>
         public async Task<DescribeIstioGatewayRoutesResponse> DescribeIstioGatewayRoutesWithOptionsAsync(DescribeIstioGatewayRoutesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3538,18 +5345,177 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeIstioGatewayRoutesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the routing rules for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIstioGatewayRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIstioGatewayRoutesResponse
+        /// </returns>
         public DescribeIstioGatewayRoutesResponse DescribeIstioGatewayRoutes(DescribeIstioGatewayRoutesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeIstioGatewayRoutesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the routing rules for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIstioGatewayRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIstioGatewayRoutesResponse
+        /// </returns>
         public async Task<DescribeIstioGatewayRoutesResponse> DescribeIstioGatewayRoutesAsync(DescribeIstioGatewayRoutesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeIstioGatewayRoutesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ASM网格网络分区设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMeshMultiClusterNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMeshMultiClusterNetworkResponse
+        /// </returns>
+        public DescribeMeshMultiClusterNetworkResponse DescribeMeshMultiClusterNetworkWithOptions(DescribeMeshMultiClusterNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMeshMultiClusterNetwork",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMeshMultiClusterNetworkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ASM网格网络分区设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMeshMultiClusterNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMeshMultiClusterNetworkResponse
+        /// </returns>
+        public async Task<DescribeMeshMultiClusterNetworkResponse> DescribeMeshMultiClusterNetworkWithOptionsAsync(DescribeMeshMultiClusterNetworkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMeshMultiClusterNetwork",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMeshMultiClusterNetworkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ASM网格网络分区设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMeshMultiClusterNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMeshMultiClusterNetworkResponse
+        /// </returns>
+        public DescribeMeshMultiClusterNetworkResponse DescribeMeshMultiClusterNetwork(DescribeMeshMultiClusterNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeMeshMultiClusterNetworkWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ASM网格网络分区设置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMeshMultiClusterNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMeshMultiClusterNetworkResponse
+        /// </returns>
+        public async Task<DescribeMeshMultiClusterNetworkResponse> DescribeMeshMultiClusterNetworkAsync(DescribeMeshMultiClusterNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeMeshMultiClusterNetworkWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries basic information about a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMetadataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMetadataResponse
+        /// </returns>
         public DescribeMetadataResponse DescribeMetadataWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -3568,6 +5534,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeMetadataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries basic information about a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMetadataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMetadataResponse
+        /// </returns>
         public async Task<DescribeMetadataResponse> DescribeMetadataWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -3586,18 +5567,49 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeMetadataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries basic information about a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeMetadataResponse
+        /// </returns>
         public DescribeMetadataResponse DescribeMetadata()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeMetadataWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries basic information about a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeMetadataResponse
+        /// </returns>
         public async Task<DescribeMetadataResponse> DescribeMetadataAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMetadataWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of sidecar proxies at the namespace level.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNamespaceScopeSidecarConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNamespaceScopeSidecarConfigResponse
+        /// </returns>
         public DescribeNamespaceScopeSidecarConfigResponse DescribeNamespaceScopeSidecarConfigWithOptions(DescribeNamespaceScopeSidecarConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3629,6 +5641,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeNamespaceScopeSidecarConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of sidecar proxies at the namespace level.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNamespaceScopeSidecarConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNamespaceScopeSidecarConfigResponse
+        /// </returns>
         public async Task<DescribeNamespaceScopeSidecarConfigResponse> DescribeNamespaceScopeSidecarConfigWithOptionsAsync(DescribeNamespaceScopeSidecarConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3660,18 +5687,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeNamespaceScopeSidecarConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of sidecar proxies at the namespace level.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNamespaceScopeSidecarConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNamespaceScopeSidecarConfigResponse
+        /// </returns>
         public DescribeNamespaceScopeSidecarConfigResponse DescribeNamespaceScopeSidecarConfig(DescribeNamespaceScopeSidecarConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNamespaceScopeSidecarConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of sidecar proxies at the namespace level.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNamespaceScopeSidecarConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNamespaceScopeSidecarConfigResponse
+        /// </returns>
         public async Task<DescribeNamespaceScopeSidecarConfigResponse> DescribeNamespaceScopeSidecarConfigAsync(DescribeNamespaceScopeSidecarConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeNamespaceScopeSidecarConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the instance types of nodes on the data plane and whether the instance types support Multi-Buffer acceleration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNodesInstanceTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNodesInstanceTypeResponse
+        /// </returns>
         public DescribeNodesInstanceTypeResponse DescribeNodesInstanceTypeWithOptions(DescribeNodesInstanceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3699,6 +5765,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeNodesInstanceTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the instance types of nodes on the data plane and whether the instance types support Multi-Buffer acceleration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNodesInstanceTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNodesInstanceTypeResponse
+        /// </returns>
         public async Task<DescribeNodesInstanceTypeResponse> DescribeNodesInstanceTypeWithOptionsAsync(DescribeNodesInstanceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3726,18 +5807,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeNodesInstanceTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the instance types of nodes on the data plane and whether the instance types support Multi-Buffer acceleration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNodesInstanceTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNodesInstanceTypeResponse
+        /// </returns>
         public DescribeNodesInstanceTypeResponse DescribeNodesInstanceType(DescribeNodesInstanceTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeNodesInstanceTypeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the instance types of nodes on the data plane and whether the instance types support Multi-Buffer acceleration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeNodesInstanceTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeNodesInstanceTypeResponse
+        /// </returns>
         public async Task<DescribeNodesInstanceTypeResponse> DescribeNodesInstanceTypeAsync(DescribeNodesInstanceTypeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeNodesInstanceTypeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Server Load Balancer (SLB) instances that can be reused.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeReusableSlbRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeReusableSlbResponse
+        /// </returns>
         public DescribeReusableSlbResponse DescribeReusableSlbWithOptions(DescribeReusableSlbRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3746,9 +5866,17 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["K8sClusterId"] = request.K8sClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LbType))
+            {
+                body["LbType"] = request.LbType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
             {
                 body["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3769,6 +5897,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeReusableSlbResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Server Load Balancer (SLB) instances that can be reused.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeReusableSlbRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeReusableSlbResponse
+        /// </returns>
         public async Task<DescribeReusableSlbResponse> DescribeReusableSlbWithOptionsAsync(DescribeReusableSlbRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3777,9 +5920,17 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["K8sClusterId"] = request.K8sClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LbType))
+            {
+                body["LbType"] = request.LbType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
             {
                 body["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3800,18 +5951,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeReusableSlbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Server Load Balancer (SLB) instances that can be reused.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeReusableSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeReusableSlbResponse
+        /// </returns>
         public DescribeReusableSlbResponse DescribeReusableSlb(DescribeReusableSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeReusableSlbWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Server Load Balancer (SLB) instances that can be reused.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeReusableSlbRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeReusableSlbResponse
+        /// </returns>
         public async Task<DescribeReusableSlbResponse> DescribeReusableSlbAsync(DescribeReusableSlbRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeReusableSlbWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the check results of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshAdditionalStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshAdditionalStatusResponse
+        /// </returns>
         public DescribeServiceMeshAdditionalStatusResponse DescribeServiceMeshAdditionalStatusWithOptions(DescribeServiceMeshAdditionalStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3843,6 +6033,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshAdditionalStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the check results of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshAdditionalStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshAdditionalStatusResponse
+        /// </returns>
         public async Task<DescribeServiceMeshAdditionalStatusResponse> DescribeServiceMeshAdditionalStatusWithOptionsAsync(DescribeServiceMeshAdditionalStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3874,18 +6079,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshAdditionalStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the check results of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshAdditionalStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshAdditionalStatusResponse
+        /// </returns>
         public DescribeServiceMeshAdditionalStatusResponse DescribeServiceMeshAdditionalStatus(DescribeServiceMeshAdditionalStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeServiceMeshAdditionalStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the check results of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshAdditionalStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshAdditionalStatusResponse
+        /// </returns>
         public async Task<DescribeServiceMeshAdditionalStatusResponse> DescribeServiceMeshAdditionalStatusAsync(DescribeServiceMeshAdditionalStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeServiceMeshAdditionalStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the clusters that can be added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshClustersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshClustersResponse
+        /// </returns>
         public DescribeServiceMeshClustersResponse DescribeServiceMeshClustersWithOptions(DescribeServiceMeshClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3923,6 +6167,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshClustersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the clusters that can be added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshClustersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshClustersResponse
+        /// </returns>
         public async Task<DescribeServiceMeshClustersResponse> DescribeServiceMeshClustersWithOptionsAsync(DescribeServiceMeshClustersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3960,18 +6219,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshClustersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the clusters that can be added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshClustersResponse
+        /// </returns>
         public DescribeServiceMeshClustersResponse DescribeServiceMeshClusters(DescribeServiceMeshClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeServiceMeshClustersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the clusters that can be added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshClustersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshClustersResponse
+        /// </returns>
         public async Task<DescribeServiceMeshClustersResponse> DescribeServiceMeshClustersAsync(DescribeServiceMeshClustersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeServiceMeshClustersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshDetailResponse
+        /// </returns>
         public DescribeServiceMeshDetailResponse DescribeServiceMeshDetailWithOptions(DescribeServiceMeshDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3999,6 +6297,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshDetailResponse
+        /// </returns>
         public async Task<DescribeServiceMeshDetailResponse> DescribeServiceMeshDetailWithOptionsAsync(DescribeServiceMeshDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4026,18 +6339,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshDetailResponse
+        /// </returns>
         public DescribeServiceMeshDetailResponse DescribeServiceMeshDetail(DescribeServiceMeshDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeServiceMeshDetailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshDetailResponse
+        /// </returns>
         public async Task<DescribeServiceMeshDetailResponse> DescribeServiceMeshDetailAsync(DescribeServiceMeshDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeServiceMeshDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the content of the kubeconfig file of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshKubeconfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshKubeconfigResponse
+        /// </returns>
         public DescribeServiceMeshKubeconfigResponse DescribeServiceMeshKubeconfigWithOptions(DescribeServiceMeshKubeconfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4069,6 +6421,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshKubeconfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the content of the kubeconfig file of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshKubeconfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshKubeconfigResponse
+        /// </returns>
         public async Task<DescribeServiceMeshKubeconfigResponse> DescribeServiceMeshKubeconfigWithOptionsAsync(DescribeServiceMeshKubeconfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4100,18 +6467,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshKubeconfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the content of the kubeconfig file of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshKubeconfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshKubeconfigResponse
+        /// </returns>
         public DescribeServiceMeshKubeconfigResponse DescribeServiceMeshKubeconfig(DescribeServiceMeshKubeconfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeServiceMeshKubeconfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the content of the kubeconfig file of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshKubeconfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshKubeconfigResponse
+        /// </returns>
         public async Task<DescribeServiceMeshKubeconfigResponse> DescribeServiceMeshKubeconfigAsync(DescribeServiceMeshKubeconfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeServiceMeshKubeconfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshLogsResponse
+        /// </returns>
         public DescribeServiceMeshLogsResponse DescribeServiceMeshLogsWithOptions(DescribeServiceMeshLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4139,6 +6545,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshLogsResponse
+        /// </returns>
         public async Task<DescribeServiceMeshLogsResponse> DescribeServiceMeshLogsWithOptionsAsync(DescribeServiceMeshLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4166,18 +6587,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshLogsResponse
+        /// </returns>
         public DescribeServiceMeshLogsResponse DescribeServiceMeshLogs(DescribeServiceMeshLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeServiceMeshLogsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the logs of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshLogsResponse
+        /// </returns>
         public async Task<DescribeServiceMeshLogsResponse> DescribeServiceMeshLogsAsync(DescribeServiceMeshLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeServiceMeshLogsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of proxies on the data plane of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshProxyStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshProxyStatusResponse
+        /// </returns>
         public DescribeServiceMeshProxyStatusResponse DescribeServiceMeshProxyStatusWithOptions(DescribeServiceMeshProxyStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4205,6 +6665,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshProxyStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of proxies on the data plane of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshProxyStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshProxyStatusResponse
+        /// </returns>
         public async Task<DescribeServiceMeshProxyStatusResponse> DescribeServiceMeshProxyStatusWithOptionsAsync(DescribeServiceMeshProxyStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4232,18 +6707,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshProxyStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of proxies on the data plane of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshProxyStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshProxyStatusResponse
+        /// </returns>
         public DescribeServiceMeshProxyStatusResponse DescribeServiceMeshProxyStatus(DescribeServiceMeshProxyStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeServiceMeshProxyStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status of proxies on the data plane of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshProxyStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshProxyStatusResponse
+        /// </returns>
         public async Task<DescribeServiceMeshProxyStatusResponse> DescribeServiceMeshProxyStatusAsync(DescribeServiceMeshProxyStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeServiceMeshProxyStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the upgrade details of a Service Mesh (ASM) instance and its ingress gateways.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshUpgradeStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshUpgradeStatusResponse
+        /// </returns>
         public DescribeServiceMeshUpgradeStatusResponse DescribeServiceMeshUpgradeStatusWithOptions(DescribeServiceMeshUpgradeStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4281,6 +6795,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshUpgradeStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the upgrade details of a Service Mesh (ASM) instance and its ingress gateways.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshUpgradeStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshUpgradeStatusResponse
+        /// </returns>
         public async Task<DescribeServiceMeshUpgradeStatusResponse> DescribeServiceMeshUpgradeStatusWithOptionsAsync(DescribeServiceMeshUpgradeStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4318,25 +6847,62 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshUpgradeStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the upgrade details of a Service Mesh (ASM) instance and its ingress gateways.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshUpgradeStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshUpgradeStatusResponse
+        /// </returns>
         public DescribeServiceMeshUpgradeStatusResponse DescribeServiceMeshUpgradeStatus(DescribeServiceMeshUpgradeStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeServiceMeshUpgradeStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the upgrade details of a Service Mesh (ASM) instance and its ingress gateways.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshUpgradeStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshUpgradeStatusResponse
+        /// </returns>
         public async Task<DescribeServiceMeshUpgradeStatusResponse> DescribeServiceMeshUpgradeStatusAsync(DescribeServiceMeshUpgradeStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeServiceMeshUpgradeStatusWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request DescribeServiceMeshVMsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeServiceMeshVMsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeServiceMeshVMs is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elastic Compute Service (ECS) instances that reside in the same virtual private cloud (VPC) as a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshVMsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshVMsResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeServiceMeshVMs is deprecated")]
         // Deprecated
         public DescribeServiceMeshVMsResponse DescribeServiceMeshVMsWithOptions(DescribeServiceMeshVMsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4365,13 +6931,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshVMsResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request DescribeServiceMeshVMsRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeServiceMeshVMsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeServiceMeshVMs is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elastic Compute Service (ECS) instances that reside in the same virtual private cloud (VPC) as a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshVMsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshVMsResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeServiceMeshVMs is deprecated")]
         // Deprecated
         public async Task<DescribeServiceMeshVMsResponse> DescribeServiceMeshVMsWithOptionsAsync(DescribeServiceMeshVMsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4400,12 +6979,23 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshVMsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request DescribeServiceMeshVMsRequest
-          * @return DescribeServiceMeshVMsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeServiceMeshVMs is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elastic Compute Service (ECS) instances that reside in the same virtual private cloud (VPC) as a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshVMsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshVMsResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeServiceMeshVMs is deprecated")]
         // Deprecated
         public DescribeServiceMeshVMsResponse DescribeServiceMeshVMs(DescribeServiceMeshVMsRequest request)
         {
@@ -4413,12 +7003,23 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return DescribeServiceMeshVMsWithOptions(request, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request DescribeServiceMeshVMsRequest
-          * @return DescribeServiceMeshVMsResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeServiceMeshVMs is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Elastic Compute Service (ECS) instances that reside in the same virtual private cloud (VPC) as a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshVMsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshVMsResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeServiceMeshVMs is deprecated")]
         // Deprecated
         public async Task<DescribeServiceMeshVMsResponse> DescribeServiceMeshVMsAsync(DescribeServiceMeshVMsRequest request)
         {
@@ -4426,6 +7027,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await DescribeServiceMeshVMsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries ASM instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshesResponse
+        /// </returns>
         public DescribeServiceMeshesResponse DescribeServiceMeshesWithOptions(DescribeServiceMeshesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4449,6 +7065,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries ASM instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshesResponse
+        /// </returns>
         public async Task<DescribeServiceMeshesResponse> DescribeServiceMeshesWithOptionsAsync(DescribeServiceMeshesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4472,18 +7103,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeServiceMeshesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries ASM instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshesResponse
+        /// </returns>
         public DescribeServiceMeshesResponse DescribeServiceMeshes(DescribeServiceMeshesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeServiceMeshesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries ASM instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceMeshesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceMeshesResponse
+        /// </returns>
         public async Task<DescribeServiceMeshesResponse> DescribeServiceMeshesAsync(DescribeServiceMeshesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeServiceMeshesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the update status of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUpgradeVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUpgradeVersionResponse
+        /// </returns>
         public DescribeUpgradeVersionResponse DescribeUpgradeVersionWithOptions(DescribeUpgradeVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4511,6 +7181,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeUpgradeVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the update status of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUpgradeVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUpgradeVersionResponse
+        /// </returns>
         public async Task<DescribeUpgradeVersionResponse> DescribeUpgradeVersionWithOptionsAsync(DescribeUpgradeVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4538,18 +7223,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeUpgradeVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the update status of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUpgradeVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUpgradeVersionResponse
+        /// </returns>
         public DescribeUpgradeVersionResponse DescribeUpgradeVersion(DescribeUpgradeVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUpgradeVersionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the update status of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUpgradeVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUpgradeVersionResponse
+        /// </returns>
         public async Task<DescribeUpgradeVersionResponse> DescribeUpgradeVersionAsync(DescribeUpgradeVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUpgradeVersionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains role-based access control (RBAC) permissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserPermissionsResponse
+        /// </returns>
         public DescribeUserPermissionsResponse DescribeUserPermissionsWithOptions(DescribeUserPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4577,6 +7301,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeUserPermissionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains role-based access control (RBAC) permissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserPermissionsResponse
+        /// </returns>
         public async Task<DescribeUserPermissionsResponse> DescribeUserPermissionsWithOptionsAsync(DescribeUserPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4604,18 +7343,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeUserPermissionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains role-based access control (RBAC) permissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserPermissionsResponse
+        /// </returns>
         public DescribeUserPermissionsResponse DescribeUserPermissions(DescribeUserPermissionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUserPermissionsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains role-based access control (RBAC) permissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserPermissionsResponse
+        /// </returns>
         public async Task<DescribeUserPermissionsResponse> DescribeUserPermissionsAsync(DescribeUserPermissionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserPermissionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of all RAM users or RAM roles to which a Role-based Access Control (RBAC) role is assigned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUsersWithPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUsersWithPermissionsResponse
+        /// </returns>
         public DescribeUsersWithPermissionsResponse DescribeUsersWithPermissionsWithOptions(DescribeUsersWithPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4643,6 +7421,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeUsersWithPermissionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of all RAM users or RAM roles to which a Role-based Access Control (RBAC) role is assigned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUsersWithPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUsersWithPermissionsResponse
+        /// </returns>
         public async Task<DescribeUsersWithPermissionsResponse> DescribeUsersWithPermissionsWithOptionsAsync(DescribeUsersWithPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4670,25 +7463,62 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeUsersWithPermissionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of all RAM users or RAM roles to which a Role-based Access Control (RBAC) role is assigned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUsersWithPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUsersWithPermissionsResponse
+        /// </returns>
         public DescribeUsersWithPermissionsResponse DescribeUsersWithPermissions(DescribeUsersWithPermissionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeUsersWithPermissionsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IDs of all RAM users or RAM roles to which a Role-based Access Control (RBAC) role is assigned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUsersWithPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUsersWithPermissionsResponse
+        /// </returns>
         public async Task<DescribeUsersWithPermissionsResponse> DescribeUsersWithPermissionsAsync(DescribeUsersWithPermissionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUsersWithPermissionsWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request DescribeVMsInServiceMeshRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeVMsInServiceMeshResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeVMsInServiceMesh is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the virtual machines (VMs) that are added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVMsInServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVMsInServiceMeshResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeVMsInServiceMesh is deprecated")]
         // Deprecated
         public DescribeVMsInServiceMeshResponse DescribeVMsInServiceMeshWithOptions(DescribeVMsInServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4717,13 +7547,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeVMsInServiceMeshResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request DescribeVMsInServiceMeshRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return DescribeVMsInServiceMeshResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeVMsInServiceMesh is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the virtual machines (VMs) that are added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVMsInServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVMsInServiceMeshResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeVMsInServiceMesh is deprecated")]
         // Deprecated
         public async Task<DescribeVMsInServiceMeshResponse> DescribeVMsInServiceMeshWithOptionsAsync(DescribeVMsInServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -4752,12 +7595,23 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeVMsInServiceMeshResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request DescribeVMsInServiceMeshRequest
-          * @return DescribeVMsInServiceMeshResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeVMsInServiceMesh is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the virtual machines (VMs) that are added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVMsInServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVMsInServiceMeshResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeVMsInServiceMesh is deprecated")]
         // Deprecated
         public DescribeVMsInServiceMeshResponse DescribeVMsInServiceMesh(DescribeVMsInServiceMeshRequest request)
         {
@@ -4765,12 +7619,23 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return DescribeVMsInServiceMeshWithOptions(request, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request DescribeVMsInServiceMeshRequest
-          * @return DescribeVMsInServiceMeshResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeVMsInServiceMesh is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the virtual machines (VMs) that are added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVMsInServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVMsInServiceMeshResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeVMsInServiceMesh is deprecated")]
         // Deprecated
         public async Task<DescribeVMsInServiceMeshResponse> DescribeVMsInServiceMeshAsync(DescribeVMsInServiceMeshRequest request)
         {
@@ -4778,6 +7643,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await DescribeVMsInServiceMeshWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of vSwitches that are deployed in a specified virtual private cloud (VPC) in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVSwitchesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVSwitchesResponse
+        /// </returns>
         public DescribeVSwitchesResponse DescribeVSwitchesWithOptions(DescribeVSwitchesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4809,6 +7689,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeVSwitchesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of vSwitches that are deployed in a specified virtual private cloud (VPC) in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVSwitchesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVSwitchesResponse
+        /// </returns>
         public async Task<DescribeVSwitchesResponse> DescribeVSwitchesWithOptionsAsync(DescribeVSwitchesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4840,18 +7735,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeVSwitchesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of vSwitches that are deployed in a specified virtual private cloud (VPC) in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVSwitchesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVSwitchesResponse
+        /// </returns>
         public DescribeVSwitchesResponse DescribeVSwitches(DescribeVSwitchesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVSwitchesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of vSwitches that are deployed in a specified virtual private cloud (VPC) in a region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVSwitchesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVSwitchesResponse
+        /// </returns>
         public async Task<DescribeVSwitchesResponse> DescribeVSwitchesAsync(DescribeVSwitchesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVSwitchesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available Service Mesh (ASM) versions when you create an ASM instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVersionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVersionsResponse
+        /// </returns>
         public DescribeVersionsResponse DescribeVersionsWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -4870,6 +7804,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeVersionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available Service Mesh (ASM) versions when you create an ASM instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVersionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVersionsResponse
+        /// </returns>
         public async Task<DescribeVersionsResponse> DescribeVersionsWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -4888,18 +7837,49 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeVersionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available Service Mesh (ASM) versions when you create an ASM instance.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeVersionsResponse
+        /// </returns>
         public DescribeVersionsResponse DescribeVersions()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVersionsWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available Service Mesh (ASM) versions when you create an ASM instance.</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeVersionsResponse
+        /// </returns>
         public async Task<DescribeVersionsResponse> DescribeVersionsAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVersionsWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the virtual private clouds (VPCs) that are available in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcsResponse
+        /// </returns>
         public DescribeVpcsResponse DescribeVpcsWithOptions(DescribeVpcsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4927,6 +7907,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeVpcsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the virtual private clouds (VPCs) that are available in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcsResponse
+        /// </returns>
         public async Task<DescribeVpcsResponse> DescribeVpcsWithOptionsAsync(DescribeVpcsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4954,18 +7949,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<DescribeVpcsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the virtual private clouds (VPCs) that are available in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcsResponse
+        /// </returns>
         public DescribeVpcsResponse DescribeVpcs(DescribeVpcsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribeVpcsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the virtual private clouds (VPCs) that are available in a specified region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcsResponse
+        /// </returns>
         public async Task<DescribeVpcsResponse> DescribeVpcsAsync(DescribeVpcsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVpcsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a certificate issued by a certificate authority (CA).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCaCertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCaCertResponse
+        /// </returns>
         public GetCaCertResponse GetCaCertWithOptions(GetCaCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4993,6 +8027,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetCaCertResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a certificate issued by a certificate authority (CA).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCaCertRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCaCertResponse
+        /// </returns>
         public async Task<GetCaCertResponse> GetCaCertWithOptionsAsync(GetCaCertRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5020,18 +8069,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetCaCertResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a certificate issued by a certificate authority (CA).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCaCertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCaCertResponse
+        /// </returns>
         public GetCaCertResponse GetCaCert(GetCaCertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetCaCertWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains a certificate issued by a certificate authority (CA).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCaCertRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCaCertResponse
+        /// </returns>
         public async Task<GetCaCertResponse> GetCaCertAsync(GetCaCertRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCaCertWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of workloads specified by a label selector.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDeploymentBySelectorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentBySelectorResponse
+        /// </returns>
         public GetDeploymentBySelectorResponse GetDeploymentBySelectorWithOptions(GetDeploymentBySelectorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5085,6 +8173,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetDeploymentBySelectorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of workloads specified by a label selector.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetDeploymentBySelectorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentBySelectorResponse
+        /// </returns>
         public async Task<GetDeploymentBySelectorResponse> GetDeploymentBySelectorWithOptionsAsync(GetDeploymentBySelectorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5138,18 +8241,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetDeploymentBySelectorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of workloads specified by a label selector.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeploymentBySelectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentBySelectorResponse
+        /// </returns>
         public GetDeploymentBySelectorResponse GetDeploymentBySelector(GetDeploymentBySelectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDeploymentBySelectorWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of workloads specified by a label selector.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeploymentBySelectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentBySelectorResponse
+        /// </returns>
         public async Task<GetDeploymentBySelectorResponse> GetDeploymentBySelectorAsync(GetDeploymentBySelectorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetDeploymentBySelectorWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Grafana dashboard URL from Application Real-Time Monitoring Service (ARMS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGrafanaDashboardUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGrafanaDashboardUrlResponse
+        /// </returns>
         public GetGrafanaDashboardUrlResponse GetGrafanaDashboardUrlWithOptions(GetGrafanaDashboardUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5185,6 +8327,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetGrafanaDashboardUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Grafana dashboard URL from Application Real-Time Monitoring Service (ARMS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGrafanaDashboardUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGrafanaDashboardUrlResponse
+        /// </returns>
         public async Task<GetGrafanaDashboardUrlResponse> GetGrafanaDashboardUrlWithOptionsAsync(GetGrafanaDashboardUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5220,18 +8377,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetGrafanaDashboardUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Grafana dashboard URL from Application Real-Time Monitoring Service (ARMS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGrafanaDashboardUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGrafanaDashboardUrlResponse
+        /// </returns>
         public GetGrafanaDashboardUrlResponse GetGrafanaDashboardUrl(GetGrafanaDashboardUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetGrafanaDashboardUrlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Grafana dashboard URL from Application Real-Time Monitoring Service (ARMS).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGrafanaDashboardUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGrafanaDashboardUrlResponse
+        /// </returns>
         public async Task<GetGrafanaDashboardUrlResponse> GetGrafanaDashboardUrlAsync(GetGrafanaDashboardUrlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetGrafanaDashboardUrlWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述ServiceEndpoints信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRegisteredServiceEndpointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRegisteredServiceEndpointsResponse
+        /// </returns>
         public GetRegisteredServiceEndpointsResponse GetRegisteredServiceEndpointsWithOptions(GetRegisteredServiceEndpointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5275,6 +8471,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetRegisteredServiceEndpointsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述ServiceEndpoints信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRegisteredServiceEndpointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRegisteredServiceEndpointsResponse
+        /// </returns>
         public async Task<GetRegisteredServiceEndpointsResponse> GetRegisteredServiceEndpointsWithOptionsAsync(GetRegisteredServiceEndpointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5318,18 +8529,52 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetRegisteredServiceEndpointsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述ServiceEndpoints信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRegisteredServiceEndpointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRegisteredServiceEndpointsResponse
+        /// </returns>
         public GetRegisteredServiceEndpointsResponse GetRegisteredServiceEndpoints(GetRegisteredServiceEndpointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetRegisteredServiceEndpointsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述ServiceEndpoints信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRegisteredServiceEndpointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRegisteredServiceEndpointsResponse
+        /// </returns>
         public async Task<GetRegisteredServiceEndpointsResponse> GetRegisteredServiceEndpointsAsync(GetRegisteredServiceEndpointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetRegisteredServiceEndpointsWithOptionsAsync(request, runtime);
         }
 
+        /// <param name="request">
+        /// GetRegisteredServiceNamespacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRegisteredServiceNamespacesResponse
+        /// </returns>
         public GetRegisteredServiceNamespacesResponse GetRegisteredServiceNamespacesWithOptions(GetRegisteredServiceNamespacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5357,6 +8602,16 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetRegisteredServiceNamespacesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// GetRegisteredServiceNamespacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRegisteredServiceNamespacesResponse
+        /// </returns>
         public async Task<GetRegisteredServiceNamespacesResponse> GetRegisteredServiceNamespacesWithOptionsAsync(GetRegisteredServiceNamespacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5384,18 +8639,47 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetRegisteredServiceNamespacesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// GetRegisteredServiceNamespacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRegisteredServiceNamespacesResponse
+        /// </returns>
         public GetRegisteredServiceNamespacesResponse GetRegisteredServiceNamespaces(GetRegisteredServiceNamespacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetRegisteredServiceNamespacesWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// GetRegisteredServiceNamespacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRegisteredServiceNamespacesResponse
+        /// </returns>
         public async Task<GetRegisteredServiceNamespacesResponse> GetRegisteredServiceNamespacesAsync(GetRegisteredServiceNamespacesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetRegisteredServiceNamespacesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries detailed information about a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSwimLaneDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSwimLaneDetailResponse
+        /// </returns>
         public GetSwimLaneDetailResponse GetSwimLaneDetailWithOptions(GetSwimLaneDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5431,6 +8715,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetSwimLaneDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries detailed information about a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSwimLaneDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSwimLaneDetailResponse
+        /// </returns>
         public async Task<GetSwimLaneDetailResponse> GetSwimLaneDetailWithOptionsAsync(GetSwimLaneDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5466,18 +8765,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetSwimLaneDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries detailed information about a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSwimLaneDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSwimLaneDetailResponse
+        /// </returns>
         public GetSwimLaneDetailResponse GetSwimLaneDetail(GetSwimLaneDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetSwimLaneDetailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries detailed information about a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSwimLaneDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSwimLaneDetailResponse
+        /// </returns>
         public async Task<GetSwimLaneDetailResponse> GetSwimLaneDetailAsync(GetSwimLaneDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetSwimLaneDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of all lane groups in an Alibaba Cloud Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSwimLaneGroupListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSwimLaneGroupListResponse
+        /// </returns>
         public GetSwimLaneGroupListResponse GetSwimLaneGroupListWithOptions(GetSwimLaneGroupListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5505,6 +8843,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetSwimLaneGroupListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of all lane groups in an Alibaba Cloud Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSwimLaneGroupListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSwimLaneGroupListResponse
+        /// </returns>
         public async Task<GetSwimLaneGroupListResponse> GetSwimLaneGroupListWithOptionsAsync(GetSwimLaneGroupListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5532,18 +8885,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetSwimLaneGroupListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of all lane groups in an Alibaba Cloud Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSwimLaneGroupListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSwimLaneGroupListResponse
+        /// </returns>
         public GetSwimLaneGroupListResponse GetSwimLaneGroupList(GetSwimLaneGroupListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetSwimLaneGroupListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of all lane groups in an Alibaba Cloud Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSwimLaneGroupListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSwimLaneGroupListResponse
+        /// </returns>
         public async Task<GetSwimLaneGroupListResponse> GetSwimLaneGroupListAsync(GetSwimLaneGroupListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetSwimLaneGroupListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of all the lanes in a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSwimLaneListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSwimLaneListResponse
+        /// </returns>
         public GetSwimLaneListResponse GetSwimLaneListWithOptions(GetSwimLaneListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5575,6 +8967,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetSwimLaneListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of all the lanes in a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSwimLaneListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSwimLaneListResponse
+        /// </returns>
         public async Task<GetSwimLaneListResponse> GetSwimLaneListWithOptionsAsync(GetSwimLaneListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5606,25 +9013,62 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetSwimLaneListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of all the lanes in a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSwimLaneListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSwimLaneListResponse
+        /// </returns>
         public GetSwimLaneListResponse GetSwimLaneList(GetSwimLaneListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetSwimLaneListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of all the lanes in a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSwimLaneListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSwimLaneListResponse
+        /// </returns>
         public async Task<GetSwimLaneListResponse> GetSwimLaneListAsync(GetSwimLaneListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetSwimLaneListWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request GetVmAppMeshInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetVmAppMeshInfoResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetVmAppMeshInfo is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about VMs that are added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVmAppMeshInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVmAppMeshInfoResponse
+        /// </returns>
+        [Obsolete("OpenAPI GetVmAppMeshInfo is deprecated")]
         // Deprecated
         public GetVmAppMeshInfoResponse GetVmAppMeshInfoWithOptions(GetVmAppMeshInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5649,13 +9093,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetVmAppMeshInfoResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request GetVmAppMeshInfoRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetVmAppMeshInfoResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetVmAppMeshInfo is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about VMs that are added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVmAppMeshInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVmAppMeshInfoResponse
+        /// </returns>
+        [Obsolete("OpenAPI GetVmAppMeshInfo is deprecated")]
         // Deprecated
         public async Task<GetVmAppMeshInfoResponse> GetVmAppMeshInfoWithOptionsAsync(GetVmAppMeshInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5680,12 +9137,23 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetVmAppMeshInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request GetVmAppMeshInfoRequest
-          * @return GetVmAppMeshInfoResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetVmAppMeshInfo is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about VMs that are added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVmAppMeshInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVmAppMeshInfoResponse
+        /// </returns>
+        [Obsolete("OpenAPI GetVmAppMeshInfo is deprecated")]
         // Deprecated
         public GetVmAppMeshInfoResponse GetVmAppMeshInfo(GetVmAppMeshInfoRequest request)
         {
@@ -5693,12 +9161,23 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return GetVmAppMeshInfoWithOptions(request, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request GetVmAppMeshInfoRequest
-          * @return GetVmAppMeshInfoResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetVmAppMeshInfo is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about VMs that are added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVmAppMeshInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVmAppMeshInfoResponse
+        /// </returns>
+        [Obsolete("OpenAPI GetVmAppMeshInfo is deprecated")]
         // Deprecated
         public async Task<GetVmAppMeshInfoResponse> GetVmAppMeshInfoAsync(GetVmAppMeshInfoRequest request)
         {
@@ -5706,13 +9185,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await GetVmAppMeshInfoWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request GetVmMetaRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetVmMetaResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetVmMeta is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata that is required to add a non-containerized application to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVmMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVmMetaResponse
+        /// </returns>
+        [Obsolete("OpenAPI GetVmMeta is deprecated")]
         // Deprecated
         public GetVmMetaResponse GetVmMetaWithOptions(GetVmMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5737,13 +9229,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetVmMetaResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request GetVmMetaRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return GetVmMetaResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetVmMeta is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata that is required to add a non-containerized application to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVmMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVmMetaResponse
+        /// </returns>
+        [Obsolete("OpenAPI GetVmMeta is deprecated")]
         // Deprecated
         public async Task<GetVmMetaResponse> GetVmMetaWithOptionsAsync(GetVmMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -5768,12 +9273,23 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GetVmMetaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request GetVmMetaRequest
-          * @return GetVmMetaResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetVmMeta is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata that is required to add a non-containerized application to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVmMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVmMetaResponse
+        /// </returns>
+        [Obsolete("OpenAPI GetVmMeta is deprecated")]
         // Deprecated
         public GetVmMetaResponse GetVmMeta(GetVmMetaRequest request)
         {
@@ -5781,12 +9297,23 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return GetVmMetaWithOptions(request, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request GetVmMetaRequest
-          * @return GetVmMetaResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetVmMeta is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata that is required to add a non-containerized application to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVmMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVmMetaResponse
+        /// </returns>
+        [Obsolete("OpenAPI GetVmMeta is deprecated")]
         // Deprecated
         public async Task<GetVmMetaResponse> GetVmMetaAsync(GetVmMetaRequest request)
         {
@@ -5794,6 +9321,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await GetVmMetaWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants permissions to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GrantUserPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantUserPermissionsResponse
+        /// </returns>
         public GrantUserPermissionsResponse GrantUserPermissionsWithOptions(GrantUserPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5835,6 +9377,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GrantUserPermissionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants permissions to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GrantUserPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantUserPermissionsResponse
+        /// </returns>
         public async Task<GrantUserPermissionsResponse> GrantUserPermissionsWithOptionsAsync(GrantUserPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -5876,18 +9433,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<GrantUserPermissionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants permissions to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantUserPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantUserPermissionsResponse
+        /// </returns>
         public GrantUserPermissionsResponse GrantUserPermissions(GrantUserPermissionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GrantUserPermissionsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants permissions to a Resource Access Management (RAM) user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrantUserPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrantUserPermissionsResponse
+        /// </returns>
         public async Task<GrantUserPermissionsResponse> GrantUserPermissionsAsync(GrantUserPermissionsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GrantUserPermissionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举所有服务账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServiceAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceAccountsResponse
+        /// </returns>
         public ListServiceAccountsResponse ListServiceAccountsWithOptions(ListServiceAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5923,6 +9519,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<ListServiceAccountsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举所有服务账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServiceAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceAccountsResponse
+        /// </returns>
         public async Task<ListServiceAccountsResponse> ListServiceAccountsWithOptionsAsync(ListServiceAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5958,18 +9569,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<ListServiceAccountsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举所有服务账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServiceAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceAccountsResponse
+        /// </returns>
         public ListServiceAccountsResponse ListServiceAccounts(ListServiceAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListServiceAccountsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举所有服务账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListServiceAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceAccountsResponse
+        /// </returns>
         public async Task<ListServiceAccountsResponse> ListServiceAccountsAsync(ListServiceAccountsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListServiceAccountsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user tags on a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6013,6 +9663,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user tags on a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6056,18 +9721,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user tags on a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListTagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user tags on a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
         public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of all waypoint proxies in a namespace of a cluster on the data plane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWaypointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWaypointsResponse
+        /// </returns>
         public ListWaypointsResponse ListWaypointsWithOptions(ListWaypointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6115,6 +9819,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<ListWaypointsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of all waypoint proxies in a namespace of a cluster on the data plane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWaypointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWaypointsResponse
+        /// </returns>
         public async Task<ListWaypointsResponse> ListWaypointsWithOptionsAsync(ListWaypointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6162,18 +9881,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<ListWaypointsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of all waypoint proxies in a namespace of a cluster on the data plane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWaypointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWaypointsResponse
+        /// </returns>
         public ListWaypointsResponse ListWaypoints(ListWaypointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListWaypointsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configurations of all waypoint proxies in a namespace of a cluster on the data plane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWaypointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWaypointsResponse
+        /// </returns>
         public async Task<ListWaypointsResponse> ListWaypointsAsync(ListWaypointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListWaypointsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyApiServerEipResource</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApiServerEipResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApiServerEipResourceResponse
+        /// </returns>
         public ModifyApiServerEipResourceResponse ModifyApiServerEipResourceWithOptions(ModifyApiServerEipResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6209,6 +9967,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<ModifyApiServerEipResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyApiServerEipResource</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApiServerEipResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApiServerEipResourceResponse
+        /// </returns>
         public async Task<ModifyApiServerEipResourceResponse> ModifyApiServerEipResourceWithOptionsAsync(ModifyApiServerEipResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6244,18 +10017,201 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<ModifyApiServerEipResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyApiServerEipResource</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApiServerEipResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApiServerEipResourceResponse
+        /// </returns>
         public ModifyApiServerEipResourceResponse ModifyApiServerEipResource(ModifyApiServerEipResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyApiServerEipResourceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyApiServerEipResource</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyApiServerEipResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyApiServerEipResourceResponse
+        /// </returns>
         public async Task<ModifyApiServerEipResourceResponse> ModifyApiServerEipResourceAsync(ModifyApiServerEipResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyApiServerEipResourceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyPilotEipResource</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPilotEipResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPilotEipResourceResponse
+        /// </returns>
+        public ModifyPilotEipResourceResponse ModifyPilotEipResourceWithOptions(ModifyPilotEipResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipId))
+            {
+                body["EipId"] = request.EipId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsCanary))
+            {
+                body["IsCanary"] = request.IsCanary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
+            {
+                body["Operation"] = request.Operation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyPilotEipResource",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyPilotEipResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyPilotEipResource</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPilotEipResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPilotEipResourceResponse
+        /// </returns>
+        public async Task<ModifyPilotEipResourceResponse> ModifyPilotEipResourceWithOptionsAsync(ModifyPilotEipResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipId))
+            {
+                body["EipId"] = request.EipId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsCanary))
+            {
+                body["IsCanary"] = request.IsCanary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
+            {
+                body["Operation"] = request.Operation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyPilotEipResource",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyPilotEipResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyPilotEipResource</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPilotEipResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPilotEipResourceResponse
+        /// </returns>
+        public ModifyPilotEipResourceResponse ModifyPilotEipResource(ModifyPilotEipResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyPilotEipResourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyPilotEipResource</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPilotEipResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPilotEipResourceResponse
+        /// </returns>
+        public async Task<ModifyPilotEipResourceResponse> ModifyPilotEipResourceAsync(ModifyPilotEipResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyPilotEipResourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyServiceMeshNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyServiceMeshNameResponse
+        /// </returns>
         public ModifyServiceMeshNameResponse ModifyServiceMeshNameWithOptions(ModifyServiceMeshNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6287,6 +10243,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<ModifyServiceMeshNameResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyServiceMeshNameRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyServiceMeshNameResponse
+        /// </returns>
         public async Task<ModifyServiceMeshNameResponse> ModifyServiceMeshNameWithOptionsAsync(ModifyServiceMeshNameRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6318,25 +10289,62 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<ModifyServiceMeshNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyServiceMeshNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyServiceMeshNameResponse
+        /// </returns>
         public ModifyServiceMeshNameResponse ModifyServiceMeshName(ModifyServiceMeshNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyServiceMeshNameWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyServiceMeshNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyServiceMeshNameResponse
+        /// </returns>
         public async Task<ModifyServiceMeshNameResponse> ModifyServiceMeshNameAsync(ModifyServiceMeshNameRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyServiceMeshNameWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
-          *
-          * @param request ReActivateAuditRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ReActivateAuditResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Recreates a project that is used to store audit logs. After mesh audit is enabled, if you delete the log project that stores audit logs by mistake, you can recreate a project for storing audit logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the <a href="https://www.alibabacloud.com/zh/pricing-calculator?_p_lc=1%5C&spm=a2796.7960336.3034855210.1.44e6b91aaSp2M7#/commodity/vm_intl">pricing page</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReActivateAuditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReActivateAuditResponse
+        /// </returns>
         public ReActivateAuditResponse ReActivateAuditWithOptions(ReActivateAuditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6368,13 +10376,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<ReActivateAuditResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
-          *
-          * @param request ReActivateAuditRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return ReActivateAuditResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Recreates a project that is used to store audit logs. After mesh audit is enabled, if you delete the log project that stores audit logs by mistake, you can recreate a project for storing audit logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the <a href="https://www.alibabacloud.com/zh/pricing-calculator?_p_lc=1%5C&spm=a2796.7960336.3034855210.1.44e6b91aaSp2M7#/commodity/vm_intl">pricing page</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReActivateAuditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReActivateAuditResponse
+        /// </returns>
         public async Task<ReActivateAuditResponse> ReActivateAuditWithOptionsAsync(ReActivateAuditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6406,30 +10427,67 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<ReActivateAuditResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
-          *
-          * @param request ReActivateAuditRequest
-          * @return ReActivateAuditResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Recreates a project that is used to store audit logs. After mesh audit is enabled, if you delete the log project that stores audit logs by mistake, you can recreate a project for storing audit logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the <a href="https://www.alibabacloud.com/zh/pricing-calculator?_p_lc=1%5C&spm=a2796.7960336.3034855210.1.44e6b91aaSp2M7#/commodity/vm_intl">pricing page</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReActivateAuditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReActivateAuditResponse
+        /// </returns>
         public ReActivateAuditResponse ReActivateAudit(ReActivateAuditRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ReActivateAuditWithOptions(request, runtime);
         }
 
-        /**
-          * Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the [pricing page](https://www.aliyun.com/price/product?spm=5176.10695662.1119587.4.194c6a67rcPWQH#/sls/detail).
-          *
-          * @param request ReActivateAuditRequest
-          * @return ReActivateAuditResponse
-         */
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Recreates a project that is used to store audit logs. After mesh audit is enabled, if you delete the log project that stores audit logs by mistake, you can recreate a project for storing audit logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods of Simple Log Service. For more information, visit the <a href="https://www.alibabacloud.com/zh/pricing-calculator?_p_lc=1%5C&spm=a2796.7960336.3034855210.1.44e6b91aaSp2M7#/commodity/vm_intl">pricing page</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReActivateAuditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReActivateAuditResponse
+        /// </returns>
         public async Task<ReActivateAuditResponse> ReActivateAuditAsync(ReActivateAuditRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReActivateAuditWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a cluster from a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveClusterFromServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveClusterFromServiceMeshResponse
+        /// </returns>
         public RemoveClusterFromServiceMeshResponse RemoveClusterFromServiceMeshWithOptions(RemoveClusterFromServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6465,6 +10523,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<RemoveClusterFromServiceMeshResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a cluster from a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveClusterFromServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveClusterFromServiceMeshResponse
+        /// </returns>
         public async Task<RemoveClusterFromServiceMeshResponse> RemoveClusterFromServiceMeshWithOptionsAsync(RemoveClusterFromServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6500,25 +10573,62 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<RemoveClusterFromServiceMeshResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a cluster from a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveClusterFromServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveClusterFromServiceMeshResponse
+        /// </returns>
         public RemoveClusterFromServiceMeshResponse RemoveClusterFromServiceMesh(RemoveClusterFromServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemoveClusterFromServiceMeshWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a cluster from a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveClusterFromServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveClusterFromServiceMeshResponse
+        /// </returns>
         public async Task<RemoveClusterFromServiceMeshResponse> RemoveClusterFromServiceMeshAsync(RemoveClusterFromServiceMeshRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveClusterFromServiceMeshWithOptionsAsync(request, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request RemoveVMFromServiceMeshRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RemoveVMFromServiceMeshResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI RemoveVMFromServiceMesh is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a virtual machine (VM) from a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveVMFromServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveVMFromServiceMeshResponse
+        /// </returns>
+        [Obsolete("OpenAPI RemoveVMFromServiceMesh is deprecated")]
         // Deprecated
         public RemoveVMFromServiceMeshResponse RemoveVMFromServiceMeshWithOptions(RemoveVMFromServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6551,13 +10661,26 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<RemoveVMFromServiceMeshResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request RemoveVMFromServiceMeshRequest
-          * @param runtime runtime options for this request RuntimeOptions
-          * @return RemoveVMFromServiceMeshResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI RemoveVMFromServiceMesh is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a virtual machine (VM) from a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveVMFromServiceMeshRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveVMFromServiceMeshResponse
+        /// </returns>
+        [Obsolete("OpenAPI RemoveVMFromServiceMesh is deprecated")]
         // Deprecated
         public async Task<RemoveVMFromServiceMeshResponse> RemoveVMFromServiceMeshWithOptionsAsync(RemoveVMFromServiceMeshRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -6590,12 +10713,23 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<RemoveVMFromServiceMeshResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request RemoveVMFromServiceMeshRequest
-          * @return RemoveVMFromServiceMeshResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI RemoveVMFromServiceMesh is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a virtual machine (VM) from a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveVMFromServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveVMFromServiceMeshResponse
+        /// </returns>
+        [Obsolete("OpenAPI RemoveVMFromServiceMesh is deprecated")]
         // Deprecated
         public RemoveVMFromServiceMeshResponse RemoveVMFromServiceMesh(RemoveVMFromServiceMeshRequest request)
         {
@@ -6603,12 +10737,23 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return RemoveVMFromServiceMeshWithOptions(request, runtime);
         }
 
-        /**
-          * @deprecated
-          *
-          * @param request RemoveVMFromServiceMeshRequest
-          * @return RemoveVMFromServiceMeshResponse
-         */
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI RemoveVMFromServiceMesh is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a virtual machine (VM) from a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveVMFromServiceMeshRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveVMFromServiceMeshResponse
+        /// </returns>
+        [Obsolete("OpenAPI RemoveVMFromServiceMesh is deprecated")]
         // Deprecated
         public async Task<RemoveVMFromServiceMeshResponse> RemoveVMFromServiceMeshAsync(RemoveVMFromServiceMeshRequest request)
         {
@@ -6616,6 +10761,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return await RemoveVMFromServiceMeshWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the kubeconfig file of a Service Mesh (ASM) instance and generates a new kubeconfig file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeKubeconfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeKubeconfigResponse
+        /// </returns>
         public RevokeKubeconfigResponse RevokeKubeconfigWithOptions(RevokeKubeconfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6647,6 +10807,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<RevokeKubeconfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the kubeconfig file of a Service Mesh (ASM) instance and generates a new kubeconfig file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeKubeconfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeKubeconfigResponse
+        /// </returns>
         public async Task<RevokeKubeconfigResponse> RevokeKubeconfigWithOptionsAsync(RevokeKubeconfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6678,18 +10853,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<RevokeKubeconfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the kubeconfig file of a Service Mesh (ASM) instance and generates a new kubeconfig file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeKubeconfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeKubeconfigResponse
+        /// </returns>
         public RevokeKubeconfigResponse RevokeKubeconfig(RevokeKubeconfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RevokeKubeconfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Revokes the kubeconfig file of a Service Mesh (ASM) instance and generates a new kubeconfig file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeKubeconfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeKubeconfigResponse
+        /// </returns>
         public async Task<RevokeKubeconfigResponse> RevokeKubeconfigAsync(RevokeKubeconfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RevokeKubeconfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds or modifies user tags on a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6729,6 +10943,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds or modifies user tags on a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6768,18 +10997,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds or modifies user tags on a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public TagResourcesResponse TagResources(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds or modifies user tags on a resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
         public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes user tags on a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6823,6 +11091,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes user tags on a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6866,18 +11149,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes user tags on a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UntagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes user tags on a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
         public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateASMGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateASMGatewayResponse
+        /// </returns>
         public UpdateASMGatewayResponse UpdateASMGatewayWithOptions(UpdateASMGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6913,6 +11235,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateASMGatewayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateASMGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateASMGatewayResponse
+        /// </returns>
         public async Task<UpdateASMGatewayResponse> UpdateASMGatewayWithOptionsAsync(UpdateASMGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6948,18 +11285,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateASMGatewayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateASMGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateASMGatewayResponse
+        /// </returns>
         public UpdateASMGatewayResponse UpdateASMGateway(UpdateASMGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateASMGatewayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateASMGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateASMGatewayResponse
+        /// </returns>
         public async Task<UpdateASMGatewayResponse> UpdateASMGatewayAsync(UpdateASMGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateASMGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates imported services on a Service Mesh (ASM) gateway to import or delete upstream services associated with the gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateASMGatewayImportedServicesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateASMGatewayImportedServicesResponse
+        /// </returns>
         public UpdateASMGatewayImportedServicesResponse UpdateASMGatewayImportedServicesWithOptions(UpdateASMGatewayImportedServicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6999,6 +11375,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateASMGatewayImportedServicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates imported services on a Service Mesh (ASM) gateway to import or delete upstream services associated with the gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateASMGatewayImportedServicesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateASMGatewayImportedServicesResponse
+        /// </returns>
         public async Task<UpdateASMGatewayImportedServicesResponse> UpdateASMGatewayImportedServicesWithOptionsAsync(UpdateASMGatewayImportedServicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7038,18 +11429,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateASMGatewayImportedServicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates imported services on a Service Mesh (ASM) gateway to import or delete upstream services associated with the gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateASMGatewayImportedServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateASMGatewayImportedServicesResponse
+        /// </returns>
         public UpdateASMGatewayImportedServicesResponse UpdateASMGatewayImportedServices(UpdateASMGatewayImportedServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateASMGatewayImportedServicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates imported services on a Service Mesh (ASM) gateway to import or delete upstream services associated with the gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateASMGatewayImportedServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateASMGatewayImportedServicesResponse
+        /// </returns>
         public async Task<UpdateASMGatewayImportedServicesResponse> UpdateASMGatewayImportedServicesAsync(UpdateASMGatewayImportedServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateASMGatewayImportedServicesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes namespaces of a Kubernetes cluster that is added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateASMNamespaceFromGuestClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateASMNamespaceFromGuestClusterResponse
+        /// </returns>
         public UpdateASMNamespaceFromGuestClusterResponse UpdateASMNamespaceFromGuestClusterWithOptions(UpdateASMNamespaceFromGuestClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7081,6 +11511,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateASMNamespaceFromGuestClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes namespaces of a Kubernetes cluster that is added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateASMNamespaceFromGuestClusterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateASMNamespaceFromGuestClusterResponse
+        /// </returns>
         public async Task<UpdateASMNamespaceFromGuestClusterResponse> UpdateASMNamespaceFromGuestClusterWithOptionsAsync(UpdateASMNamespaceFromGuestClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7112,18 +11557,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateASMNamespaceFromGuestClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes namespaces of a Kubernetes cluster that is added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateASMNamespaceFromGuestClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateASMNamespaceFromGuestClusterResponse
+        /// </returns>
         public UpdateASMNamespaceFromGuestClusterResponse UpdateASMNamespaceFromGuestCluster(UpdateASMNamespaceFromGuestClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateASMNamespaceFromGuestClusterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes namespaces of a Kubernetes cluster that is added to a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateASMNamespaceFromGuestClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateASMNamespaceFromGuestClusterResponse
+        /// </returns>
         public async Task<UpdateASMNamespaceFromGuestClusterResponse> UpdateASMNamespaceFromGuestClusterAsync(UpdateASMNamespaceFromGuestClusterRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateASMNamespaceFromGuestClusterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration for collecting control plane logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateControlPlaneLogConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateControlPlaneLogConfigResponse
+        /// </returns>
         public UpdateControlPlaneLogConfigResponse UpdateControlPlaneLogConfigWithOptions(UpdateControlPlaneLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7163,6 +11647,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateControlPlaneLogConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration for collecting control plane logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateControlPlaneLogConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateControlPlaneLogConfigResponse
+        /// </returns>
         public async Task<UpdateControlPlaneLogConfigResponse> UpdateControlPlaneLogConfigWithOptionsAsync(UpdateControlPlaneLogConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7202,18 +11701,193 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateControlPlaneLogConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration for collecting control plane logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateControlPlaneLogConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateControlPlaneLogConfigResponse
+        /// </returns>
         public UpdateControlPlaneLogConfigResponse UpdateControlPlaneLogConfig(UpdateControlPlaneLogConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateControlPlaneLogConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration for collecting control plane logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateControlPlaneLogConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateControlPlaneLogConfigResponse
+        /// </returns>
         public async Task<UpdateControlPlaneLogConfigResponse> UpdateControlPlaneLogConfigAsync(UpdateControlPlaneLogConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateControlPlaneLogConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Guest Cluster配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGuestClusterConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGuestClusterConfigResponse
+        /// </returns>
+        public UpdateGuestClusterConfigResponse UpdateGuestClusterConfigWithOptions(UpdateGuestClusterConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GuestClusterId))
+            {
+                body["GuestClusterId"] = request.GuestClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SMCEnabled))
+            {
+                body["SMCEnabled"] = request.SMCEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGuestClusterConfig",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGuestClusterConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Guest Cluster配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGuestClusterConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGuestClusterConfigResponse
+        /// </returns>
+        public async Task<UpdateGuestClusterConfigResponse> UpdateGuestClusterConfigWithOptionsAsync(UpdateGuestClusterConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GuestClusterId))
+            {
+                body["GuestClusterId"] = request.GuestClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SMCEnabled))
+            {
+                body["SMCEnabled"] = request.SMCEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGuestClusterConfig",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGuestClusterConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Guest Cluster配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGuestClusterConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGuestClusterConfigResponse
+        /// </returns>
+        public UpdateGuestClusterConfigResponse UpdateGuestClusterConfig(UpdateGuestClusterConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateGuestClusterConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Guest Cluster配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGuestClusterConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGuestClusterConfigResponse
+        /// </returns>
+        public async Task<UpdateGuestClusterConfigResponse> UpdateGuestClusterConfigAsync(UpdateGuestClusterConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateGuestClusterConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateIstioGatewayRoutesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIstioGatewayRoutesResponse
+        /// </returns>
         public UpdateIstioGatewayRoutesResponse UpdateIstioGatewayRoutesWithOptions(UpdateIstioGatewayRoutesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7267,6 +11941,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateIstioGatewayRoutesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateIstioGatewayRoutesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIstioGatewayRoutesResponse
+        /// </returns>
         public async Task<UpdateIstioGatewayRoutesResponse> UpdateIstioGatewayRoutesWithOptionsAsync(UpdateIstioGatewayRoutesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -7320,18 +12009,52 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateIstioGatewayRoutesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIstioGatewayRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIstioGatewayRoutesResponse
+        /// </returns>
         public UpdateIstioGatewayRoutesResponse UpdateIstioGatewayRoutes(UpdateIstioGatewayRoutesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateIstioGatewayRoutesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIstioGatewayRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIstioGatewayRoutesResponse
+        /// </returns>
         public async Task<UpdateIstioGatewayRoutesResponse> UpdateIstioGatewayRoutesAsync(UpdateIstioGatewayRoutesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateIstioGatewayRoutesWithOptionsAsync(request, runtime);
         }
 
+        /// <param name="request">
+        /// UpdateIstioInjectionConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIstioInjectionConfigResponse
+        /// </returns>
         public UpdateIstioInjectionConfigResponse UpdateIstioInjectionConfigWithOptions(UpdateIstioInjectionConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7379,6 +12102,16 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateIstioInjectionConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// UpdateIstioInjectionConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIstioInjectionConfigResponse
+        /// </returns>
         public async Task<UpdateIstioInjectionConfigResponse> UpdateIstioInjectionConfigWithOptionsAsync(UpdateIstioInjectionConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7426,18 +12159,47 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateIstioInjectionConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <param name="request">
+        /// UpdateIstioInjectionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIstioInjectionConfigResponse
+        /// </returns>
         public UpdateIstioInjectionConfigResponse UpdateIstioInjectionConfig(UpdateIstioInjectionConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateIstioInjectionConfigWithOptions(request, runtime);
         }
 
+        /// <param name="request">
+        /// UpdateIstioInjectionConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIstioInjectionConfigResponse
+        /// </returns>
         public async Task<UpdateIstioInjectionConfigResponse> UpdateIstioInjectionConfigAsync(UpdateIstioInjectionConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateIstioInjectionConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIstioRouteAdditionalStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIstioRouteAdditionalStatusResponse
+        /// </returns>
         public UpdateIstioRouteAdditionalStatusResponse UpdateIstioRouteAdditionalStatusWithOptions(UpdateIstioRouteAdditionalStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7487,6 +12249,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateIstioRouteAdditionalStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIstioRouteAdditionalStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIstioRouteAdditionalStatusResponse
+        /// </returns>
         public async Task<UpdateIstioRouteAdditionalStatusResponse> UpdateIstioRouteAdditionalStatusWithOptionsAsync(UpdateIstioRouteAdditionalStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7536,18 +12313,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateIstioRouteAdditionalStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIstioRouteAdditionalStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIstioRouteAdditionalStatusResponse
+        /// </returns>
         public UpdateIstioRouteAdditionalStatusResponse UpdateIstioRouteAdditionalStatus(UpdateIstioRouteAdditionalStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateIstioRouteAdditionalStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a routing rule for a Service Mesh (ASM) gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateIstioRouteAdditionalStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateIstioRouteAdditionalStatusResponse
+        /// </returns>
         public async Task<UpdateIstioRouteAdditionalStatusResponse> UpdateIstioRouteAdditionalStatusAsync(UpdateIstioRouteAdditionalStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateIstioRouteAdditionalStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the settings of whether to enable the Kubernetes API on the data plane to access Istio resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMeshCRAggregationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMeshCRAggregationResponse
+        /// </returns>
         public UpdateMeshCRAggregationResponse UpdateMeshCRAggregationWithOptions(UpdateMeshCRAggregationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7599,6 +12415,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateMeshCRAggregationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the settings of whether to enable the Kubernetes API on the data plane to access Istio resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMeshCRAggregationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMeshCRAggregationResponse
+        /// </returns>
         public async Task<UpdateMeshCRAggregationResponse> UpdateMeshCRAggregationWithOptionsAsync(UpdateMeshCRAggregationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7650,18 +12481,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateMeshCRAggregationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the settings of whether to enable the Kubernetes API on the data plane to access Istio resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMeshCRAggregationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMeshCRAggregationResponse
+        /// </returns>
         public UpdateMeshCRAggregationResponse UpdateMeshCRAggregation(UpdateMeshCRAggregationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateMeshCRAggregationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the settings of whether to enable the Kubernetes API on the data plane to access Istio resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMeshCRAggregationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMeshCRAggregationResponse
+        /// </returns>
         public async Task<UpdateMeshCRAggregationResponse> UpdateMeshCRAggregationAsync(UpdateMeshCRAggregationRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateMeshCRAggregationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMeshFeatureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMeshFeatureResponse
+        /// </returns>
         public UpdateMeshFeatureResponse UpdateMeshFeatureWithOptions(UpdateMeshFeatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7673,6 +12543,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLogSidecarEnabled))
             {
                 query["AccessLogSidecarEnabled"] = request.AccessLogSidecarEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsForOffloadedWorkloads))
+            {
+                query["LabelsForOffloadedWorkloads"] = request.LabelsForOffloadedWorkloads;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLogEnabled))
@@ -7722,6 +12596,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CRAggregationEnabled))
             {
                 body["CRAggregationEnabled"] = request.CRAggregationEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertChain))
+            {
+                body["CertChain"] = request.CertChain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
             {
@@ -7806,6 +12684,18 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeOutboundPorts))
             {
                 body["ExcludeOutboundPorts"] = request.ExcludeOutboundPorts;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExistingCaCert))
+            {
+                body["ExistingCaCert"] = request.ExistingCaCert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExistingCaKey))
+            {
+                body["ExistingCaKey"] = request.ExistingCaKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExistingRootCaCert))
+            {
+                body["ExistingRootCaCert"] = request.ExistingRootCaCert;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterGatewayClusterConfig))
             {
@@ -7947,6 +12837,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["OutboundTrafficPolicy"] = request.OutboundTrafficPolicy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PilotEnableQuicListeners))
+            {
+                body["PilotEnableQuicListeners"] = request.PilotEnableQuicListeners;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrometheusUrl))
             {
                 body["PrometheusUrl"] = request.PrometheusUrl;
@@ -7990,6 +12884,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedisFilterEnabled))
             {
                 body["RedisFilterEnabled"] = request.RedisFilterEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SMCEnabled))
+            {
+                body["SMCEnabled"] = request.SMCEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
@@ -8050,6 +12948,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TracingOnExtZipkinLimitMemory))
             {
                 body["TracingOnExtZipkinLimitMemory"] = request.TracingOnExtZipkinLimitMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TracingOnExtZipkinReplicaCount))
+            {
+                body["TracingOnExtZipkinReplicaCount"] = request.TracingOnExtZipkinReplicaCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TracingOnExtZipkinRequestCPU))
             {
@@ -8083,6 +12985,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateMeshFeatureResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMeshFeatureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMeshFeatureResponse
+        /// </returns>
         public async Task<UpdateMeshFeatureResponse> UpdateMeshFeatureWithOptionsAsync(UpdateMeshFeatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8094,6 +13011,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLogSidecarEnabled))
             {
                 query["AccessLogSidecarEnabled"] = request.AccessLogSidecarEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsForOffloadedWorkloads))
+            {
+                query["LabelsForOffloadedWorkloads"] = request.LabelsForOffloadedWorkloads;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLogEnabled))
@@ -8143,6 +13064,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CRAggregationEnabled))
             {
                 body["CRAggregationEnabled"] = request.CRAggregationEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertChain))
+            {
+                body["CertChain"] = request.CertChain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
             {
@@ -8227,6 +13152,18 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeOutboundPorts))
             {
                 body["ExcludeOutboundPorts"] = request.ExcludeOutboundPorts;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExistingCaCert))
+            {
+                body["ExistingCaCert"] = request.ExistingCaCert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExistingCaKey))
+            {
+                body["ExistingCaKey"] = request.ExistingCaKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExistingRootCaCert))
+            {
+                body["ExistingRootCaCert"] = request.ExistingRootCaCert;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterGatewayClusterConfig))
             {
@@ -8368,6 +13305,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["OutboundTrafficPolicy"] = request.OutboundTrafficPolicy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PilotEnableQuicListeners))
+            {
+                body["PilotEnableQuicListeners"] = request.PilotEnableQuicListeners;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrometheusUrl))
             {
                 body["PrometheusUrl"] = request.PrometheusUrl;
@@ -8411,6 +13352,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedisFilterEnabled))
             {
                 body["RedisFilterEnabled"] = request.RedisFilterEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SMCEnabled))
+            {
+                body["SMCEnabled"] = request.SMCEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
@@ -8472,6 +13417,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["TracingOnExtZipkinLimitMemory"] = request.TracingOnExtZipkinLimitMemory;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TracingOnExtZipkinReplicaCount))
+            {
+                body["TracingOnExtZipkinReplicaCount"] = request.TracingOnExtZipkinReplicaCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TracingOnExtZipkinRequestCPU))
             {
                 body["TracingOnExtZipkinRequestCPU"] = request.TracingOnExtZipkinRequestCPU;
@@ -8504,21 +13453,206 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateMeshFeatureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMeshFeatureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMeshFeatureResponse
+        /// </returns>
         public UpdateMeshFeatureResponse UpdateMeshFeature(UpdateMeshFeatureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateMeshFeatureWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMeshFeatureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMeshFeatureResponse
+        /// </returns>
         public async Task<UpdateMeshFeatureResponse> UpdateMeshFeatureAsync(UpdateMeshFeatureRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateMeshFeatureWithOptionsAsync(request, runtime);
         }
 
-        public UpdateNamespaceScopeSidecarConfigResponse UpdateNamespaceScopeSidecarConfigWithOptions(UpdateNamespaceScopeSidecarConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the network configurations of multiple Kubernetes clusters in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMeshMultiClusterNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMeshMultiClusterNetworkResponse
+        /// </returns>
+        public UpdateMeshMultiClusterNetworkResponse UpdateMeshMultiClusterNetworkWithOptions(UpdateMeshMultiClusterNetworkRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMeshMultiClusterNetworkShrinkRequest request = new UpdateMeshMultiClusterNetworkShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MultiClusterNetworks))
+            {
+                request.MultiClusterNetworksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultiClusterNetworks, "MultiClusterNetworks", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiClusterNetworksShrink))
+            {
+                body["MultiClusterNetworks"] = request.MultiClusterNetworksShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMeshMultiClusterNetwork",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMeshMultiClusterNetworkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the network configurations of multiple Kubernetes clusters in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMeshMultiClusterNetworkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMeshMultiClusterNetworkResponse
+        /// </returns>
+        public async Task<UpdateMeshMultiClusterNetworkResponse> UpdateMeshMultiClusterNetworkWithOptionsAsync(UpdateMeshMultiClusterNetworkRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMeshMultiClusterNetworkShrinkRequest request = new UpdateMeshMultiClusterNetworkShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MultiClusterNetworks))
+            {
+                request.MultiClusterNetworksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MultiClusterNetworks, "MultiClusterNetworks", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiClusterNetworksShrink))
+            {
+                body["MultiClusterNetworks"] = request.MultiClusterNetworksShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
+            {
+                body["ServiceMeshId"] = request.ServiceMeshId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMeshMultiClusterNetwork",
+                Version = "2020-01-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMeshMultiClusterNetworkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the network configurations of multiple Kubernetes clusters in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMeshMultiClusterNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMeshMultiClusterNetworkResponse
+        /// </returns>
+        public UpdateMeshMultiClusterNetworkResponse UpdateMeshMultiClusterNetwork(UpdateMeshMultiClusterNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateMeshMultiClusterNetworkWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the network configurations of multiple Kubernetes clusters in a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMeshMultiClusterNetworkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMeshMultiClusterNetworkResponse
+        /// </returns>
+        public async Task<UpdateMeshMultiClusterNetworkResponse> UpdateMeshMultiClusterNetworkAsync(UpdateMeshMultiClusterNetworkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateMeshMultiClusterNetworkWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of sidecar proxies at the namespace level.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateNamespaceScopeSidecarConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNamespaceScopeSidecarConfigResponse
+        /// </returns>
+        public UpdateNamespaceScopeSidecarConfigResponse UpdateNamespaceScopeSidecarConfigWithOptions(UpdateNamespaceScopeSidecarConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateNamespaceScopeSidecarConfigShrinkRequest request = new UpdateNamespaceScopeSidecarConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScaledSidecarResource))
+            {
+                request.ScaledSidecarResourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScaledSidecarResource, "ScaledSidecarResource", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Concurrency))
             {
@@ -8639,6 +13773,18 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReadinessPeriodSeconds))
             {
                 body["ReadinessPeriodSeconds"] = request.ReadinessPeriodSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeValues))
+            {
+                body["RuntimeValues"] = request.RuntimeValues;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SMCEnabled))
+            {
+                body["SMCEnabled"] = request.SMCEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaledSidecarResourceShrink))
+            {
+                body["ScaledSidecarResource"] = request.ScaledSidecarResourceShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
@@ -8703,9 +13849,30 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateNamespaceScopeSidecarConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        public async Task<UpdateNamespaceScopeSidecarConfigResponse> UpdateNamespaceScopeSidecarConfigWithOptionsAsync(UpdateNamespaceScopeSidecarConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of sidecar proxies at the namespace level.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateNamespaceScopeSidecarConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNamespaceScopeSidecarConfigResponse
+        /// </returns>
+        public async Task<UpdateNamespaceScopeSidecarConfigResponse> UpdateNamespaceScopeSidecarConfigWithOptionsAsync(UpdateNamespaceScopeSidecarConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateNamespaceScopeSidecarConfigShrinkRequest request = new UpdateNamespaceScopeSidecarConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScaledSidecarResource))
+            {
+                request.ScaledSidecarResourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScaledSidecarResource, "ScaledSidecarResource", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Concurrency))
             {
@@ -8827,6 +13994,18 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["ReadinessPeriodSeconds"] = request.ReadinessPeriodSeconds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeValues))
+            {
+                body["RuntimeValues"] = request.RuntimeValues;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SMCEnabled))
+            {
+                body["SMCEnabled"] = request.SMCEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaledSidecarResourceShrink))
+            {
+                body["ScaledSidecarResource"] = request.ScaledSidecarResourceShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
                 body["ServiceMeshId"] = request.ServiceMeshId;
@@ -8890,18 +14069,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateNamespaceScopeSidecarConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of sidecar proxies at the namespace level.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNamespaceScopeSidecarConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNamespaceScopeSidecarConfigResponse
+        /// </returns>
         public UpdateNamespaceScopeSidecarConfigResponse UpdateNamespaceScopeSidecarConfig(UpdateNamespaceScopeSidecarConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateNamespaceScopeSidecarConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configurations of sidecar proxies at the namespace level.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNamespaceScopeSidecarConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNamespaceScopeSidecarConfigResponse
+        /// </returns>
         public async Task<UpdateNamespaceScopeSidecarConfigResponse> UpdateNamespaceScopeSidecarConfigAsync(UpdateNamespaceScopeSidecarConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateNamespaceScopeSidecarConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimLaneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimLaneResponse
+        /// </returns>
         public UpdateSwimLaneResponse UpdateSwimLaneWithOptions(UpdateSwimLaneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8949,6 +14167,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateSwimLaneResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimLaneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimLaneResponse
+        /// </returns>
         public async Task<UpdateSwimLaneResponse> UpdateSwimLaneWithOptionsAsync(UpdateSwimLaneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8996,18 +14229,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateSwimLaneResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimLaneResponse
+        /// </returns>
         public UpdateSwimLaneResponse UpdateSwimLane(UpdateSwimLaneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSwimLaneWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information about a lane.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimLaneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimLaneResponse
+        /// </returns>
         public async Task<UpdateSwimLaneResponse> UpdateSwimLaneAsync(UpdateSwimLaneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSwimLaneWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimLaneGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimLaneGroupResponse
+        /// </returns>
         public UpdateSwimLaneGroupResponse UpdateSwimLaneGroupWithOptions(UpdateSwimLaneGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9020,6 +14292,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["GroupName"] = request.GroupName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IngressRoutingStrategy))
+            {
+                body["IngressRoutingStrategy"] = request.IngressRoutingStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceLevelFallbackTarget))
+            {
+                body["ServiceLevelFallbackTarget"] = request.ServiceLevelFallbackTarget;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
                 body["ServiceMeshId"] = request.ServiceMeshId;
@@ -9027,6 +14307,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServicesList))
             {
                 body["ServicesList"] = request.ServicesList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WeightedIngressRule))
+            {
+                body["WeightedIngressRule"] = request.WeightedIngressRule;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9047,6 +14331,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateSwimLaneGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimLaneGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimLaneGroupResponse
+        /// </returns>
         public async Task<UpdateSwimLaneGroupResponse> UpdateSwimLaneGroupWithOptionsAsync(UpdateSwimLaneGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9059,6 +14358,14 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             {
                 body["GroupName"] = request.GroupName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IngressRoutingStrategy))
+            {
+                body["IngressRoutingStrategy"] = request.IngressRoutingStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceLevelFallbackTarget))
+            {
+                body["ServiceLevelFallbackTarget"] = request.ServiceLevelFallbackTarget;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceMeshId))
             {
                 body["ServiceMeshId"] = request.ServiceMeshId;
@@ -9066,6 +14373,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServicesList))
             {
                 body["ServicesList"] = request.ServicesList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WeightedIngressRule))
+            {
+                body["WeightedIngressRule"] = request.WeightedIngressRule;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9086,18 +14397,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateSwimLaneGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimLaneGroupResponse
+        /// </returns>
         public UpdateSwimLaneGroupResponse UpdateSwimLaneGroup(UpdateSwimLaneGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateSwimLaneGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the information of a lane group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSwimLaneGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSwimLaneGroupResponse
+        /// </returns>
         public async Task<UpdateSwimLaneGroupResponse> UpdateSwimLaneGroupAsync(UpdateSwimLaneGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateSwimLaneGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Waypoint</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWaypointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWaypointResponse
+        /// </returns>
         public UpdateWaypointResponse UpdateWaypointWithOptions(UpdateWaypointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9181,6 +14531,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateWaypointResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Waypoint</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWaypointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWaypointResponse
+        /// </returns>
         public async Task<UpdateWaypointResponse> UpdateWaypointWithOptionsAsync(UpdateWaypointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9264,18 +14629,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpdateWaypointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Waypoint</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWaypointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWaypointResponse
+        /// </returns>
         public UpdateWaypointResponse UpdateWaypoint(UpdateWaypointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateWaypointWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Waypoint</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWaypointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWaypointResponse
+        /// </returns>
         public async Task<UpdateWaypointResponse> UpdateWaypointAsync(UpdateWaypointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateWaypointWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a Service Mesh (ASM) instance to Professional Edition that is commercially released.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeMeshEditionPartiallyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeMeshEditionPartiallyResponse
+        /// </returns>
         public UpgradeMeshEditionPartiallyResponse UpgradeMeshEditionPartiallyWithOptions(UpgradeMeshEditionPartiallyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9323,6 +14727,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpgradeMeshEditionPartiallyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a Service Mesh (ASM) instance to Professional Edition that is commercially released.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeMeshEditionPartiallyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeMeshEditionPartiallyResponse
+        /// </returns>
         public async Task<UpgradeMeshEditionPartiallyResponse> UpgradeMeshEditionPartiallyWithOptionsAsync(UpgradeMeshEditionPartiallyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9370,18 +14789,57 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpgradeMeshEditionPartiallyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a Service Mesh (ASM) instance to Professional Edition that is commercially released.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeMeshEditionPartiallyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeMeshEditionPartiallyResponse
+        /// </returns>
         public UpgradeMeshEditionPartiallyResponse UpgradeMeshEditionPartially(UpgradeMeshEditionPartiallyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeMeshEditionPartiallyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades a Service Mesh (ASM) instance to Professional Edition that is commercially released.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeMeshEditionPartiallyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeMeshEditionPartiallyResponse
+        /// </returns>
         public async Task<UpgradeMeshEditionPartiallyResponse> UpgradeMeshEditionPartiallyAsync(UpgradeMeshEditionPartiallyRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeMeshEditionPartiallyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the version of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeMeshVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeMeshVersionResponse
+        /// </returns>
         public UpgradeMeshVersionResponse UpgradeMeshVersionWithOptions(UpgradeMeshVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9413,6 +14871,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpgradeMeshVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the version of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeMeshVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeMeshVersionResponse
+        /// </returns>
         public async Task<UpgradeMeshVersionResponse> UpgradeMeshVersionWithOptionsAsync(UpgradeMeshVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -9444,12 +14917,36 @@ namespace AlibabaCloud.SDK.Servicemesh20200111
             return TeaModel.ToObject<UpgradeMeshVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the version of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeMeshVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeMeshVersionResponse
+        /// </returns>
         public UpgradeMeshVersionResponse UpgradeMeshVersion(UpgradeMeshVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpgradeMeshVersionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the version of a Service Mesh (ASM) instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeMeshVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeMeshVersionResponse
+        /// </returns>
         public async Task<UpgradeMeshVersionResponse> UpgradeMeshVersionAsync(UpgradeMeshVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

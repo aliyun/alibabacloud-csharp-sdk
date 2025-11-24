@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class TagResourcesResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public TagResourcesResponseBody Body { get; set; }
 
     }

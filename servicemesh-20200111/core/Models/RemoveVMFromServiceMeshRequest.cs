@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class RemoveVMFromServiceMeshRequest : TeaModel {
         /// <summary>
-        /// The ID of the ECS instance.
+        /// <para>The ID of the ECS instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-2ze90ts4edj3650****</para>
         /// </summary>
         [NameInMap("EcsId")]
         [Validation(Required=false)]
         public string EcsId { get; set; }
 
         /// <summary>
-        /// The ASM instance ID.
+        /// <para>The ASM instance ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccb37ff104caf419fbf48fb38e6f3****</para>
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

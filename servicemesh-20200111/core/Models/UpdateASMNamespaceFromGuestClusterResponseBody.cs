@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class UpdateASMNamespaceFromGuestClusterResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9DEC6122-ACEC-183D-8451-8E0A1A******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

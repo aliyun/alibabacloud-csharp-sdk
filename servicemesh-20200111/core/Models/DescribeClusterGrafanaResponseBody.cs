@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeClusterGrafanaResponseBody : TeaModel {
         /// <summary>
-        /// The information of Grafana dashboards.
+        /// <para>The information about Grafana dashboards.</para>
         /// </summary>
         [NameInMap("Dashboards")]
         [Validation(Required=false)]
         public List<DescribeClusterGrafanaResponseBodyDashboards> Dashboards { get; set; }
         public class DescribeClusterGrafanaResponseBodyDashboards : TeaModel {
             /// <summary>
-            /// The title of the Grafana dashboard.
+            /// <para>The title of the Grafana dashboard.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// The endpoint of a Grafana dashboard.
+            /// <para>The endpoint of the Grafana dashboard.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test.com</para>
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
@@ -33,7 +39,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BD65C0AD-D3C6-48D3-8D93-38D2015C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

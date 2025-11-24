@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeEipResourcesRequest : TeaModel {
         /// <summary>
-        /// The number of the page to return. Default value: 1.
+        /// <para>The number of the page to return. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the ASM instance.
+        /// <para>The ID of the ASM instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cb8963379255149cb98c8686f274x****</para>
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

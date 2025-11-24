@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeCensResponseBody : TeaModel {
         /// <summary>
-        /// The list of Kubernetes clusters that are added to the same ASM instance but are in different VPCs and are not connected by using a Cloud Enterprise Network (CEN) instance.
+        /// <para>The list of Kubernetes clusters that are added to the same ASM instance but are in different VPCs and are not connected by using a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         [NameInMap("Clusters")]
         [Validation(Required=false)]
         public List<string> Clusters { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BD65C0AD-D3C6-48D3-8D93-38D2015C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

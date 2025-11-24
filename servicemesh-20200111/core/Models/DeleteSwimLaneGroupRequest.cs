@@ -10,14 +10,21 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DeleteSwimLaneGroupRequest : TeaModel {
         /// <summary>
-        /// The name of the lane group.
+        /// <para>The name of the lane group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// The ID of the Service Mesh (ASM) instance.
+        /// <para>The ID of the Service Mesh (ASM) instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx</para>
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

@@ -10,28 +10,38 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class UpgradeDetailGatewayStatusRecordValue : TeaModel {
         /// <summary>
-        /// The upgrade status of the ingress gateway. Valid values:
+        /// <para>The upgrade status of the ingress gateway. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>upgrading</c>: The ingress gateway is being upgraded.</description></item>
+        /// <item><description><c>pending</c>: The ingress gateway waits to be upgraded.</description></item>
+        /// <item><description><c>finished</c>: The ingress gateway upgrade is complete.</description></item>
+        /// <item><description><c>notStart</c>: The ingress gateway upgrade does not start.</description></item>
+        /// <item><description><c>failed</c>: The ingress gateway upgrade fails.</description></item>
+        /// <item><description><c>unknown</c>: The upgrade status of the ingress gateway is unknown.</description></item>
+        /// </list>
         /// 
-        /// *   `upgrading`: The ingress gateway is being upgraded.
-        /// *   `pending`: The ingress gateway waits to be upgraded.
-        /// *   `finished`: The ingress gateway upgrade is complete.
-        /// *   `notStart`: The ingress gateway upgrade does not start.
-        /// *   `failed`: The ingress gateway upgrade fails.
-        /// *   `unknown`: The upgrade status of the ingress gateway is unknown.
+        /// <b>Example:</b>
+        /// <para>upgrading</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// Additional status information of the ingress gateway.
+        /// <para>Additional status information of the ingress gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The version of the ingress gateway.
+        /// <para>The version of the ingress gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1.9.7</para>
         /// </summary>
         [NameInMap("Version")]
         [Validation(Required=false)]

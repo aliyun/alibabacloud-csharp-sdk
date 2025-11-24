@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class CreateGatewaySecretResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>31d3a0f0-07ed-4f6e-9004-1804498c****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The record of creating the secret.
+        /// <para>The record of creating the secret.</para>
         /// </summary>
         [NameInMap("SecretCreateRecord")]
         [Validation(Required=false)]

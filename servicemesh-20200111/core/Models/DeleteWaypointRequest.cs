@@ -10,28 +10,44 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DeleteWaypointRequest : TeaModel {
         /// <summary>
-        /// The ID of the cluster on the data plane.
+        /// <para>The ID of the cluster on the data plane.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ce3c25e247da24f3aab9b7edfae83****</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// Waypoint名称。
+        /// <para>Waypoint name.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bookinfo-reviews</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The namespace.
+        /// <para>The namespace.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
         /// <summary>
-        /// The Service Mesh (ASM) instance ID.
+        /// <para>The Service Mesh (ASM) instance ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cb8963379255149cb98c8686f274x****</para>
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

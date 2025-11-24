@@ -10,94 +10,122 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeServiceMeshAdditionalStatusResponseBody : TeaModel {
         /// <summary>
-        /// The status of the cluster.
+        /// <para>The cluster status.</para>
         /// </summary>
         [NameInMap("ClusterStatus")]
         [Validation(Required=false)]
         public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatus ClusterStatus { get; set; }
         public class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatus : TeaModel {
             /// <summary>
-            /// Indicates whether access logs exist. Valid values:
+            /// <para>Indicates whether access logs exist. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>exist</c>: Access logs exist.</description></item>
+            /// <item><description><c>not_exist</c>: Access logs do not exist.</description></item>
+            /// <item><description><c>failed</c>: The check fails.</description></item>
+            /// <item><description><c>time_out</c>: The check times out.</description></item>
+            /// </list>
             /// 
-            /// *   `exist`: Access logs exist.
-            /// *   `not_exist`: Access logs do not exist.
-            /// *   `failed`: The check fails.
-            /// *   `time_out`: The check times out.
+            /// <b>Example:</b>
+            /// <para>exist</para>
             /// </summary>
             [NameInMap("AccessLogProjectStatus")]
             [Validation(Required=false)]
             public string AccessLogProjectStatus { get; set; }
 
             /// <summary>
-            /// The check result of the EIP associated with the API server. Valid values:
+            /// <para>The check result of the EIP associated with the API server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>exist</c>: The EIP exists.</description></item>
+            /// <item><description><c>not_exist</c>: The EIP does not exist.</description></item>
+            /// <item><description><c>failed</c>: The check fails.</description></item>
+            /// <item><description><c>time_out</c>: The check times out.</description></item>
+            /// <item><description><c>not_in_use</c>: The EIP is not associated with the API Server.</description></item>
+            /// <item><description><c>locked</c>: The EIP is locked.</description></item>
+            /// </list>
             /// 
-            /// *   `exist`: The EIP exists.
-            /// *   `not_exist`: The EIP does not exist.
-            /// *   `failed`: The check fails.
-            /// *   `time_out`: The check times out.
-            /// *   `not_in_use`: The EIP is not associated with the API Server.
-            /// *   `locked`: The EIP is locked.
+            /// <b>Example:</b>
+            /// <para>exist</para>
             /// </summary>
             [NameInMap("ApiServerEIPStatus")]
             [Validation(Required=false)]
             public string ApiServerEIPStatus { get; set; }
 
             /// <summary>
-            /// The check results of the SLB instance created for exposing the API server.
+            /// <para>The check results of the CLB instance created for exposing the API server.</para>
             /// </summary>
             [NameInMap("ApiServerLoadBalancerStatus")]
             [Validation(Required=false)]
             public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus ApiServerLoadBalancerStatus { get; set; }
             public class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus : TeaModel {
                 /// <summary>
-                /// Indicates whether the SLB instance is locked. Valid values:
+                /// <para>Indicates whether the CLB instance is locked. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>true</c></description></item>
+                /// <item><description><c>false</c></description></item>
+                /// </list>
                 /// 
-                /// *   `true`
-                /// *   `false`
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Locked")]
                 [Validation(Required=false)]
                 public bool? Locked { get; set; }
 
                 /// <summary>
-                /// The billing method of the SLB instance. Valid values:
+                /// <para>The billing method of the CLB instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>PrePay</c>: subscription</description></item>
+                /// <item><description><c>PayOnDemand</c>: pay-as-you-go</description></item>
+                /// </list>
                 /// 
-                /// *   `PrePay`: subscription
-                /// *   `PayOnDemand`: pay-as-you-go
+                /// <b>Example:</b>
+                /// <para>PrePay</para>
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
                 public string PayType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the SLB instance is reused. Valid values:
+                /// <para>Indicates whether the CLB instance is reused. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>true</c></description></item>
+                /// <item><description><c>false</c></description></item>
+                /// </list>
                 /// 
-                /// *   `true`
-                /// *   `false`
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Reused")]
                 [Validation(Required=false)]
                 public bool? Reused { get; set; }
 
                 /// <summary>
-                /// The check result of the number of backend servers of the SLB instance created for exposing the API server. Valid values:
+                /// <para>The check results of the number of backend servers of the CLB instance created for exposing Istio Pilot. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>too_much</c>: An excessive number of backend servers are created.</description></item>
+                /// <item><description><c>num_exact</c>: A proper number of backend servers are created.</description></item>
+                /// <item><description><c>too_little</c>: The number of backend servers falls short.</description></item>
+                /// </list>
                 /// 
-                /// *   `too_much`: An excessive number of backend servers are created.
-                /// *   `num_exact`: A proper number of backend servers are created.
-                /// *   `too_little`: The number of backend servers falls short.
+                /// <b>Example:</b>
+                /// <para>num_exact</para>
                 /// </summary>
                 [NameInMap("SLBBackEndServerNumStatus")]
                 [Validation(Required=false)]
                 public string SLBBackEndServerNumStatus { get; set; }
 
                 /// <summary>
-                /// The check result of the SLB instance. Valid values:
+                /// <para>The check results of the CLB instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>exist</c>: The CLB instance exists.</description></item>
+                /// <item><description><c>not_exist</c>: The CLB instance does not exist.</description></item>
+                /// <item><description><c>conflict</c>: Conflicts are detected.</description></item>
+                /// <item><description><c>failed</c>: The check fails.</description></item>
+                /// <item><description><c>time_out</c>: The check times out.</description></item>
+                /// </list>
                 /// 
-                /// *   `exist`: The SLB instance exists.
-                /// *   `not_exist`: The SLB instance does not exist.
-                /// *   `conflict`: Conflicts are detected.
-                /// *   `failed`: The check fails.
-                /// *   `time_out`: The check times out.
+                /// <b>Example:</b>
+                /// <para>exist</para>
                 /// </summary>
                 [NameInMap("SLBExistStatus")]
                 [Validation(Required=false)]
@@ -106,61 +134,98 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             }
 
             /// <summary>
-            /// Indicates whether audit logs exist. Valid values:
+            /// <para>Indicates whether audit logs exist. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>exist</c></description></item>
+            /// <item><description><c>not exist</c></description></item>
+            /// </list>
             /// 
-            /// *   `exist`
-            /// *   `not exist`
+            /// <b>Example:</b>
+            /// <para>exist</para>
             /// </summary>
             [NameInMap("AuditProjectStatus")]
             [Validation(Required=false)]
             public string AuditProjectStatus { get; set; }
 
+            [NameInMap("CanaryPilotEIPStatus")]
+            [Validation(Required=false)]
+            public string CanaryPilotEIPStatus { get; set; }
+
             /// <summary>
-            /// The check results of the SLB instance that is created for exposing Istio Pilot and used during canary release.
+            /// <para>The check results of the CLB instance that is created for exposing Istio Pilot and used during canary release.</para>
             /// </summary>
             [NameInMap("CanaryPilotLoadBalancerStatus")]
             [Validation(Required=false)]
             public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus CanaryPilotLoadBalancerStatus { get; set; }
             public class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus : TeaModel {
                 /// <summary>
-                /// Indicates whether the SLB instance is locked due to overdue payments. Valid values: `true` `false`
+                /// <para>Indicates whether the CLB instance is locked due to overdue payments. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>true</c></description></item>
+                /// <item><description><c>false</c></description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Locked")]
                 [Validation(Required=false)]
                 public bool? Locked { get; set; }
 
+                /// <summary>
+                /// <para>The billing method of the CLB instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>PrePay</c>: subscription</description></item>
+                /// <item><description><c>PayOnDemand</c> (default): pay-as-you-go</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PayOnDemand</para>
+                /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
                 public string PayType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the SLB instance is reused. Valid values:
+                /// <para>Indicates whether the CLB instance is reused. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>true</c>: The CLB instance is reused. Non-ASM listener configuration is detected in the listener configurations of the CLB instance.</description></item>
+                /// <item><description><c>false</c>: The CLB instance is not reused.</description></item>
+                /// </list>
                 /// 
-                /// *   `true`: The SLB instance is reused. Non-ASM listener configuration is detected in the listener configurations of the SLB instance.
-                /// *   `false`: The SLB instance is not reused.
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Reused")]
                 [Validation(Required=false)]
                 public bool? Reused { get; set; }
 
                 /// <summary>
-                /// The check result of the number of backend servers of the SLB instance created for exposing Istio Pilot. Valid values:
+                /// <para>The check result of the number of backend servers of the CLB instance created for exposing Istio Pilot. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>num_exact</c>: A proper number of backend servers are created.</description></item>
+                /// <item><description><c>too_much</c>: An excessive number of backend servers are created.</description></item>
+                /// <item><description><c>too_little</c>: The number of backend servers falls short.</description></item>
+                /// </list>
                 /// 
-                /// *   `num_exact`: A proper number of backend servers are created.
-                /// *   `too_much`: An excessive number of backend servers are created.
-                /// *   `too_little`: The number of backend servers falls short.
+                /// <b>Example:</b>
+                /// <para>num_exact</para>
                 /// </summary>
                 [NameInMap("SLBBackEndServerNumStatus")]
                 [Validation(Required=false)]
                 public string SLBBackEndServerNumStatus { get; set; }
 
                 /// <summary>
-                /// The check result of the SLB instance. Valid values:
+                /// <para>The check result of the CLB instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>exist</c>: The CLB instance exists.</description></item>
+                /// <item><description><c>not_exist</c>: The CLB instance does not exist.</description></item>
+                /// <item><description><c>time_out</c>: The check times out.</description></item>
+                /// <item><description><c>failed</c>: The CLB instance has expired.</description></item>
+                /// </list>
                 /// 
-                /// *   `exist`: The SLB instance exists.
-                /// *   `not_exist`: The SLB instance does not exist.
-                /// *   `time_out`: The check times out.
-                /// *   `failed`: The SLB instance has expired.
+                /// <b>Example:</b>
+                /// <para>exist</para>
                 /// </summary>
                 [NameInMap("SLBExistStatus")]
                 [Validation(Required=false)]
@@ -169,80 +234,122 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             }
 
             /// <summary>
-            /// Indicates whether control plane logs exist. Valid values:
+            /// <para>Indicates whether control plane logs exist. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>exist</c>: Control plane logs exist.</description></item>
+            /// <item><description><c>not_exist</c>: Control plane logs do not exist.</description></item>
+            /// <item><description><c>failed</c>: The check fails.</description></item>
+            /// <item><description><c>time_out</c>: The check times out.</description></item>
+            /// </list>
             /// 
-            /// *   `exist`: Control plane logs exist.
-            /// *   `not_exist`: Control plane logs do not exist.
-            /// *   `failed`: The check fails.
-            /// *   `time_out`: The check times out.
+            /// <b>Example:</b>
+            /// <para>exist</para>
             /// </summary>
             [NameInMap("ControlPlaneProjectStatus")]
             [Validation(Required=false)]
             public string ControlPlaneProjectStatus { get; set; }
 
             /// <summary>
-            /// Indicates whether Logtail is installed in clusters on the data plane.
+            /// <para>Indicates whether Logtail is installed in clusters on the data plane.</para>
             /// </summary>
             [NameInMap("LogtailStatusRecord")]
             [Validation(Required=false)]
             public Dictionary<string, object> LogtailStatusRecord { get; set; }
 
             /// <summary>
-            /// The check results of the SLB instance created for exposing Istio Pilot.
+            /// <para>The check result of whether the EIP is associated with the API server. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>exist</c>: The EIP exists.</description></item>
+            /// <item><description><c>not_exist</c>: The EIP does not exist.</description></item>
+            /// <item><description><c>failed</c>: The check fails.</description></item>
+            /// <item><description><c>time_out</c>: The check is timed out.</description></item>
+            /// <item><description><c>not_in_use</c>: The EIP is not associated with the API server.</description></item>
+            /// <item><description><c>locked</c>: The EIP is locked.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>exist</para>
+            /// </summary>
+            [NameInMap("PilotEIPStatus")]
+            [Validation(Required=false)]
+            public string PilotEIPStatus { get; set; }
+
+            /// <summary>
+            /// <para>The check results of the CLB instance created for exposing Istio Pilot.</para>
             /// </summary>
             [NameInMap("PilotLoadBalancerStatus")]
             [Validation(Required=false)]
             public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus PilotLoadBalancerStatus { get; set; }
             public class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus : TeaModel {
                 /// <summary>
-                /// Indicates whether the SLB instance is locked. Valid values:
+                /// <para>Indicates whether the CLB instance is locked. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>true</c></description></item>
+                /// <item><description><c>false</c></description></item>
+                /// </list>
                 /// 
-                /// *   `true`
-                /// *   `false`
+                /// <b>Example:</b>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Locked")]
                 [Validation(Required=false)]
                 public bool? Locked { get; set; }
 
                 /// <summary>
-                /// The billing method of the SLB instance. Valid values:
+                /// <para>The billing method of the CLB instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>PrePay</c>: subscription</description></item>
+                /// <item><description><c>PayOnDemand</c>: pay-as-you-go</description></item>
+                /// </list>
                 /// 
-                /// *   `PrePay`: subscription
-                /// *   `PayOnDemand`: pay-as-you-go
+                /// <b>Example:</b>
+                /// <para>PayOnDemand</para>
                 /// </summary>
                 [NameInMap("PayType")]
                 [Validation(Required=false)]
                 public string PayType { get; set; }
 
                 /// <summary>
-                /// Indicates whether the SLB instance is reused. Valid values:
+                /// <para>Indicates whether the CLB instance is reused. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>true</c></description></item>
+                /// <item><description><c>false</c></description></item>
+                /// </list>
                 /// 
-                /// *   `true`
-                /// *   `false`
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Reused")]
                 [Validation(Required=false)]
                 public bool? Reused { get; set; }
 
                 /// <summary>
-                /// The check result of the number of backend servers of the SLB instance created for exposing Istio Pilot. Valid values:
+                /// <para>The check results of the number of backend servers of the CLB instance created for exposing Istio Pilot. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>too_much</c>: An excessive number of backend servers are created.</description></item>
+                /// <item><description><c>num_exact</c>: A proper number of backend servers are created.</description></item>
+                /// <item><description><c>too_little</c>: The number of backend servers falls short.</description></item>
+                /// </list>
                 /// 
-                /// *   `too_much`: An excessive number of backend servers are created.
-                /// *   `num_exact`: A proper number of backend servers are created.
-                /// *   `too_little`: The number of backend servers falls short.
+                /// <b>Example:</b>
+                /// <para>num_exact</para>
                 /// </summary>
                 [NameInMap("SLBBackEndServerNumStatus")]
                 [Validation(Required=false)]
                 public string SLBBackEndServerNumStatus { get; set; }
 
                 /// <summary>
-                /// The check result of the SLB instance. Valid values:
+                /// <para>The check results of the CLB instance. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>exist</c>: The CLB instance exists.</description></item>
+                /// <item><description><c>not_exist</c>: The CLB instance does not exist.</description></item>
+                /// <item><description><c>conflict</c>: Conflicts are detected.</description></item>
+                /// <item><description><c>failed</c>: The check fails.</description></item>
+                /// <item><description><c>time_out</c>: The check times out.</description></item>
+                /// </list>
                 /// 
-                /// *   `exist`: The SLB instance exists.
-                /// *   `not_exist`: The SLB instance does not exist.
-                /// *   `conflict`: Conflicts are detected.
-                /// *   `failed`: The check fails.
-                /// *   `time_out`: The check times out.
+                /// <b>Example:</b>
+                /// <para>exist</para>
                 /// </summary>
                 [NameInMap("SLBExistStatus")]
                 [Validation(Required=false)]
@@ -251,25 +358,33 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
             }
 
             /// <summary>
-            /// The status of the RAM OAuth application that is integrated with Mesh Topology. Valid values:
+            /// <para>The status of the RAM OAuth application that is integrated with Mesh Topology. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>exist</c>: The RAM OAuth application exists.</description></item>
+            /// <item><description><c>reused</c>: The RAM OAuth application is reused.</description></item>
+            /// <item><description><c>not_exist</c>: The RAM OAuth application does not exist.</description></item>
+            /// <item><description><c>failed</c>: The check fails.</description></item>
+            /// <item><description><c>time_out</c>: The check times out.</description></item>
+            /// </list>
             /// 
-            /// *   `exist`: The RAM OAuth application exists.
-            /// *   `reused`: The RAM OAuth application is reused.
-            /// *   `not_exist`: The RAM OAuth application does not exist.
-            /// *   `failed`: The check fails.
-            /// *   `time_out`: The check times out.
+            /// <b>Example:</b>
+            /// <para>reused</para>
             /// </summary>
             [NameInMap("RAMApplicationStatus")]
             [Validation(Required=false)]
             public string RAMApplicationStatus { get; set; }
 
             /// <summary>
-            /// Indicates whether the security group is reused. Valid values:
+            /// <para>Indicates whether the security group is reused. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>reused</c>: The security group is reused.</description></item>
+            /// <item><description><c>not_reused</c>: The security group is not reused.</description></item>
+            /// <item><description><c>failed</c>: The check fails.</description></item>
+            /// <item><description><c>time_out</c>: The check times out.</description></item>
+            /// </list>
             /// 
-            /// *   `reused`: The security group is reused.
-            /// *   `not_reused`: The security group is not reused.
-            /// *   `failed`: The check fails.
-            /// *   `time_out`: The check times out.
+            /// <b>Example:</b>
+            /// <para>reused</para>
             /// </summary>
             [NameInMap("SgStatus")]
             [Validation(Required=false)]
@@ -278,7 +393,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
         }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11fd0027-c27e-41bb-a565-75583054****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

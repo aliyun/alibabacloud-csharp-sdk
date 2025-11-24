@@ -10,21 +10,32 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeGuestClusterNamespacesRequest : TeaModel {
         /// <summary>
-        /// The ID of the Kubernetes cluster that is added to the ASM instance.
+        /// <para>The ID of the Kubernetes cluster that is added to the ASM instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c584d805c7bd442b8bac421f9849f****</para>
         /// </summary>
         [NameInMap("GuestClusterID")]
         [Validation(Required=false)]
         public string GuestClusterID { get; set; }
 
         /// <summary>
-        /// The ASM instance ID.
+        /// <para>The ASM instance ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ce134b0727aa2492db69f6c3880e****</para>
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
         public string ServiceMeshId { get; set; }
 
         /// <summary>
-        /// Specifies whether to return the labels of the namespaces.
+        /// <para>Specifies whether to return the labels of the namespaces.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ShowNsLabels")]
         [Validation(Required=false)]

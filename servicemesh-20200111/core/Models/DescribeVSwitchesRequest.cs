@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeVSwitchesRequest : TeaModel {
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The VPC ID.
+        /// <para>The VPC ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp17gig441u0msmd78****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeCCMVersionRequest : TeaModel {
         /// <summary>
-        /// The versions of the CCM component in all clusters on the data plane.
+        /// <para>The ID of the Service Mesh (ASM) instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c08ba3fd1e6484b0f8cc1ad8fe10d****</para>
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

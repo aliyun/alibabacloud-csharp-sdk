@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class CreateSwimLaneResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

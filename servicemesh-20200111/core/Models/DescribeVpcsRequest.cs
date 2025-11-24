@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeVpcsRequest : TeaModel {
         /// <summary>
-        /// The region ID.
+        /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

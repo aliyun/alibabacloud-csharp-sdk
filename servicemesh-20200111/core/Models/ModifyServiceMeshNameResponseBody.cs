@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class ModifyServiceMeshNameResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EDDC0D86-2FC3-56FB-9213-96EB0A3523F1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

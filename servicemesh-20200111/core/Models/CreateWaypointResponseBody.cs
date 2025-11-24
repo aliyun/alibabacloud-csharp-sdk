@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class CreateWaypointResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>71680038-8009-5073-B43E-C057E9******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

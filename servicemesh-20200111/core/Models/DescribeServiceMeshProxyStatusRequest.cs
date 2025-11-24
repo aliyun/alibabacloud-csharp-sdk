@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeServiceMeshProxyStatusRequest : TeaModel {
         /// <summary>
-        /// The ASM instance ID.
+        /// <para>The ASM instance ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ca04bc38979214bf2882be79d39b4****</para>
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

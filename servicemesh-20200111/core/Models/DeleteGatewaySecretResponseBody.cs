@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DeleteGatewaySecretResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BD65C0AD-D3C6-48D3-8D93-38D2015C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The records of deleting the secret in all clusters.
+        /// <para>The records of deleting the secret in all clusters.</para>
         /// </summary>
         [NameInMap("SecretDeleteRecord")]
         [Validation(Required=false)]

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DescribeClustersInServiceMeshRequest : TeaModel {
         /// <summary>
-        /// The ASM instance ID.
+        /// <para>The ASM instance ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cb8963379255149cb98c8686f274x****</para>
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]

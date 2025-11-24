@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DeleteServiceMeshResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11fd0027-c27e-41bb-a565-75583054****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

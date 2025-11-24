@@ -10,21 +10,31 @@ namespace AlibabaCloud.SDK.Servicemesh20200111.Models
 {
     public class DeleteGatewayRouteRequest : TeaModel {
         /// <summary>
-        /// The name of the ASM gateway.
+        /// <para>The name of the ASM gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ingressgateway</para>
         /// </summary>
         [NameInMap("IstioGatewayName")]
         [Validation(Required=false)]
         public string IstioGatewayName { get; set; }
 
         /// <summary>
-        /// The name of the routing rule.
+        /// <para>The name of the routing rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>http-route</para>
         /// </summary>
         [NameInMap("RouteName")]
         [Validation(Required=false)]
         public string RouteName { get; set; }
 
         /// <summary>
-        /// The ASM instance ID.
+        /// <para>The ASM instance ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c08ba3fd1e6484b0f8cc1ad8fe10d****</para>
         /// </summary>
         [NameInMap("ServiceMeshId")]
         [Validation(Required=false)]
