@@ -23,6 +23,22 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>default</para>
+            /// </summary>
+            [NameInMap("dstName")]
+            [Validation(Required=false)]
+            public string DstName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>mma_test</para>
+            /// </summary>
+            [NameInMap("dstProjectName")]
+            [Validation(Required=false)]
+            public string DstProjectName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
             [NameInMap("extra")]

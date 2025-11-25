@@ -93,6 +93,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>20323</para>
+        /// </summary>
+        [NameInMap("tableId")]
+        [Validation(Required=false)]
+        public long? TableId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>t1</para>
         /// </summary>
         [NameInMap("tableName")]

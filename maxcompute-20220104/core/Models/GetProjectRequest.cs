@@ -19,6 +19,22 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public bool? Verbose { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("withQuotaProductType")]
+        [Validation(Required=false)]
+        public bool? WithQuotaProductType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("withStorageTierInfo")]
+        [Validation(Required=false)]
+        public bool? WithStorageTierInfo { get; set; }
+
     }
 
 }

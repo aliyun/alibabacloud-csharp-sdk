@@ -13,11 +13,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public GetMmsPartitionResponseBodyData Data { get; set; }
         public class GetMmsPartitionResponseBodyData : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2</para>
-            /// </summary>
-            [NameInMap("DbId")]
+            [NameInMap("dbId")]
             [Validation(Required=false)]
             public long? DbId { get; set; }
 
@@ -28,6 +24,38 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             [NameInMap("dbName")]
             [Validation(Required=false)]
             public string DbName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>mms_test</para>
+            /// </summary>
+            [NameInMap("dstProjectName")]
+            [Validation(Required=false)]
+            public string DstProjectName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>default</para>
+            /// </summary>
+            [NameInMap("dstSchemaName")]
+            [Validation(Required=false)]
+            public string DstSchemaName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
+            [NameInMap("dstTableName")]
+            [Validation(Required=false)]
+            public string DstTableName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>p1=1/p2=abc</para>
+            /// </summary>
+            [NameInMap("dstValue")]
+            [Validation(Required=false)]
+            public string DstValue { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

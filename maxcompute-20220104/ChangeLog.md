@@ -1,3 +1,54 @@
+2025-11-25 Version: 3.0.0
+- Support API DeleteProject.
+- Support API QueryQuotaMetric.
+- Support API UpdateProjectModelTier.
+- Update API CreateMmsJob: add request parameters body.enableDataMigration.
+- Update API CreateMmsJob: add request parameters body.enableSchemaMigration.
+- Update API GetMmsDataSource: add response parameters Body.data.dstProject.
+- Update API GetMmsDataSource: add response parameters Body.data.dstProjects.
+- Update API GetMmsDb: add response parameters Body.data.dstName.
+- Update API GetMmsDb: add response parameters Body.data.dstProjectName.
+- Update API GetMmsPartition: add response parameters Body.data.dbId.
+- Update API GetMmsPartition: add response parameters Body.data.dstProjectName.
+- Update API GetMmsPartition: add response parameters Body.data.dstSchemaName.
+- Update API GetMmsPartition: add response parameters Body.data.dstTableName.
+- Update API GetMmsPartition: add response parameters Body.data.dstValue.
+- Update API GetMmsPartition: delete response parameters Body.data.DbId.
+- Update API GetMmsTable: add response parameters Body.data.dstName.
+- Update API GetMmsTable: add response parameters Body.data.dstProjectName.
+- Update API GetMmsTable: add response parameters Body.data.dstSchemaName.
+- Update API GetProject: add request parameters withQuotaProductType.
+- Update API GetProject: add request parameters withStorageTierInfo.
+- Update API ListMmsDataSources: add response parameters Body.data.objectList.$.dstProject.
+- Update API ListMmsDataSources: add response parameters Body.data.objectList.$.dstProjects.
+- Update API ListMmsDbs: add response parameters Body.data.objectList.$.dstName.
+- Update API ListMmsDbs: add response parameters Body.data.objectList.$.dstProjectName.
+- Update API ListMmsJobs: add request parameters timerId.
+- Update API ListMmsPartitions: add request parameters tableId.
+- Update API ListMmsPartitions: add response parameters Body.data.objectList.$.dbId.
+- Update API ListMmsPartitions: add response parameters Body.data.objectList.$.dstProjectName.
+- Update API ListMmsPartitions: add response parameters Body.data.objectList.$.dstSchemaName.
+- Update API ListMmsPartitions: add response parameters Body.data.objectList.$.dstTableName.
+- Update API ListMmsPartitions: add response parameters Body.data.objectList.$.dstValue.
+- Update API ListMmsPartitions: delete response parameters Body.data.objectList.$.DbId.
+- Update API ListMmsTables: add request parameters dstName.
+- Update API ListMmsTables: add request parameters dstProjectName.
+- Update API ListMmsTables: add request parameters dstSchemaName.
+- Update API ListMmsTables: add response parameters Body.data.objectList.$.dstName.
+- Update API ListMmsTables: add response parameters Body.data.objectList.$.dstProjectName.
+- Update API ListMmsTables: add response parameters Body.data.objectList.$.dstSchemaName.
+- Update API ListQuotas: add response parameters Body.data.quotaInfoList.$.subQuotaInfoList.$.parameter.adhocSlot.
+- Update API ListQuotas: add response parameters Body.data.quotaInfoList.$.subQuotaInfoList.$.parameter.autoScaleCPULimit.
+- Update API ListQuotas: add response parameters Body.data.quotaInfoList.$.subQuotaInfoList.$.parameter.maxGu.
+- Update API ListQuotas: add response parameters Body.data.quotaInfoList.$.subQuotaInfoList.$.parameter.minGu.
+- Update API ListQuotas: add response parameters Body.data.quotaInfoList.$.subQuotaInfoList.$.parameter.slotNum.
+- Update API ListQuotas: add response parameters Body.quotaInfoList.$.subQuotaInfoList.$.parameter.adhocSlot.
+- Update API ListQuotas: add response parameters Body.quotaInfoList.$.subQuotaInfoList.$.parameter.autoScaleCPULimit.
+- Update API ListQuotas: add response parameters Body.quotaInfoList.$.subQuotaInfoList.$.parameter.maxGu.
+- Update API ListQuotas: add response parameters Body.quotaInfoList.$.subQuotaInfoList.$.parameter.minGu.
+- Update API ListQuotas: add response parameters Body.quotaInfoList.$.subQuotaInfoList.$.parameter.slotNum.
+
+
 2025-08-05 Version: 1.7.0
 - Support API SumStorageMetricsByDate.
 - Update API GetProject: add response parameters Body.data.properties.externalProjectProperties.externalCatalogId.

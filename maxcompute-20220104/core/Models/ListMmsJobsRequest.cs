@@ -95,6 +95,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public long? Stopped { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("timerId")]
+        [Validation(Required=false)]
+        public long? TimerId { get; set; }
+
     }
 
 }

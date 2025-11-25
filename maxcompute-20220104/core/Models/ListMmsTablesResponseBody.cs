@@ -35,6 +35,30 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
+                [NameInMap("dstName")]
+                [Validation(Required=false)]
+                public string DstName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>mms_test</para>
+                /// </summary>
+                [NameInMap("dstProjectName")]
+                [Validation(Required=false)]
+                public string DstProjectName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>default</para>
+                /// </summary>
+                [NameInMap("dstSchemaName")]
+                [Validation(Required=false)]
+                public string DstSchemaName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>{&quot;mapkey.delim&quot;:&quot;:&quot;,&quot;collection.delim&quot;:&quot;,&quot;,&quot;serialization.format&quot;:&quot;|&quot;,&quot;field.delim&quot;:&quot;|&quot;}</para>
                 /// </summary>
                 [NameInMap("extra")]

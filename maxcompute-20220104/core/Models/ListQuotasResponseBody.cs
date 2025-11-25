@@ -478,6 +478,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     [Validation(Required=false)]
                     public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter Parameter { get; set; }
                     public class ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter : TeaModel {
+                        [NameInMap("adhocSlot")]
+                        [Validation(Required=false)]
+                        public long? AdhocSlot { get; set; }
+
+                        [NameInMap("autoScaleCPULimit")]
+                        [Validation(Required=false)]
+                        public long? AutoScaleCPULimit { get; set; }
+
                         [NameInMap("elasticReservedCU")]
                         [Validation(Required=false)]
                         public long? ElasticReservedCU { get; set; }
@@ -497,12 +505,20 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         [Validation(Required=false)]
                         public long? MaxCU { get; set; }
 
+                        [NameInMap("maxGu")]
+                        [Validation(Required=false)]
+                        public long? MaxGu { get; set; }
+
                         /// <summary>
                         /// <para>This parameter is required.</para>
                         /// </summary>
                         [NameInMap("minCU")]
                         [Validation(Required=false)]
                         public long? MinCU { get; set; }
+
+                        [NameInMap("minGu")]
+                        [Validation(Required=false)]
+                        public long? MinGu { get; set; }
 
                         [NameInMap("schedulerType")]
                         [Validation(Required=false)]
@@ -511,6 +527,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         [NameInMap("singleJobCULimit")]
                         [Validation(Required=false)]
                         public long? SingleJobCULimit { get; set; }
+
+                        [NameInMap("slotNum")]
+                        [Validation(Required=false)]
+                        public long? SlotNum { get; set; }
 
                     }
 
@@ -1187,6 +1207,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter Parameter { get; set; }
                 public class ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter : TeaModel {
+                    [NameInMap("adhocSlot")]
+                    [Validation(Required=false)]
+                    public long? AdhocSlot { get; set; }
+
+                    [NameInMap("autoScaleCPULimit")]
+                    [Validation(Required=false)]
+                    public long? AutoScaleCPULimit { get; set; }
+
                     [NameInMap("elasticReservedCU")]
                     [Validation(Required=false)]
                     public long? ElasticReservedCU { get; set; }
@@ -1206,12 +1234,20 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     [Validation(Required=false)]
                     public long? MaxCU { get; set; }
 
+                    [NameInMap("maxGu")]
+                    [Validation(Required=false)]
+                    public long? MaxGu { get; set; }
+
                     /// <summary>
                     /// <para>This parameter is required.</para>
                     /// </summary>
                     [NameInMap("minCU")]
                     [Validation(Required=false)]
                     public long? MinCU { get; set; }
+
+                    [NameInMap("minGu")]
+                    [Validation(Required=false)]
+                    public long? MinGu { get; set; }
 
                     [NameInMap("schedulerType")]
                     [Validation(Required=false)]
@@ -1220,6 +1256,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     [NameInMap("singleJobCULimit")]
                     [Validation(Required=false)]
                     public long? SingleJobCULimit { get; set; }
+
+                    [NameInMap("slotNum")]
+                    [Validation(Required=false)]
+                    public long? SlotNum { get; set; }
 
                 }
 

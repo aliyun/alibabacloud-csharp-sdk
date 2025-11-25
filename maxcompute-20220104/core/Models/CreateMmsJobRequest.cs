@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public string DstSchemaName { get; set; }
 
+        [NameInMap("enableDataMigration")]
+        [Validation(Required=false)]
+        public bool? EnableDataMigration { get; set; }
+
+        [NameInMap("enableSchemaMigration")]
+        [Validation(Required=false)]
+        public bool? EnableSchemaMigration { get; set; }
+
         [NameInMap("enableVerification")]
         [Validation(Required=false)]
         public bool? EnableVerification { get; set; }

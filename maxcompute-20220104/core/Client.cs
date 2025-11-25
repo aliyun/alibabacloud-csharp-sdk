@@ -672,6 +672,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             {
                 body["dstSchemaName"] = request.DstSchemaName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDataMigration))
+            {
+                body["enableDataMigration"] = request.EnableDataMigration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSchemaMigration))
+            {
+                body["enableSchemaMigration"] = request.EnableSchemaMigration;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableVerification))
             {
                 body["enableVerification"] = request.EnableVerification;
@@ -793,6 +801,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstSchemaName))
             {
                 body["dstSchemaName"] = request.DstSchemaName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDataMigration))
+            {
+                body["enableDataMigration"] = request.EnableDataMigration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSchemaMigration))
+            {
+                body["enableSchemaMigration"] = request.EnableSchemaMigration;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableVerification))
             {
@@ -1736,6 +1752,136 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteMmsJobWithOptionsAsync(sourceId, jobId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MaxCompute project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
+        public DeleteProjectResponse DeleteProjectWithOptions(string projectName, DeleteProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsLogical))
+            {
+                query["isLogical"] = request.IsLogical;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProject",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(projectName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MaxCompute project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
+        public async Task<DeleteProjectResponse> DeleteProjectWithOptionsAsync(string projectName, DeleteProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsLogical))
+            {
+                query["isLogical"] = request.IsLogical;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProject",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(projectName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MaxCompute project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
+        public DeleteProjectResponse DeleteProject(string projectName, DeleteProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteProjectWithOptions(projectName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MaxCompute project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
+        public async Task<DeleteProjectResponse> DeleteProjectAsync(string projectName, DeleteProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteProjectWithOptionsAsync(projectName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3502,6 +3648,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             {
                 query["verbose"] = request.Verbose;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithQuotaProductType))
+            {
+                query["withQuotaProductType"] = request.WithQuotaProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithStorageTierInfo))
+            {
+                query["withStorageTierInfo"] = request.WithStorageTierInfo;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3547,6 +3701,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Verbose))
             {
                 query["verbose"] = request.Verbose;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithQuotaProductType))
+            {
+                query["withQuotaProductType"] = request.WithQuotaProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithStorageTierInfo))
+            {
+                query["withStorageTierInfo"] = request.WithStorageTierInfo;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7190,6 +7352,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             {
                 query["stopped"] = request.Stopped;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimerId))
+            {
+                query["timerId"] = request.TimerId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sorter))
             {
                 query["sorter"] = request.Sorter;
@@ -7271,6 +7437,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stopped))
             {
                 query["stopped"] = request.Stopped;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimerId))
+            {
+                query["timerId"] = request.TimerId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sorter))
             {
@@ -7390,6 +7560,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             {
                 query["status"] = request.StatusShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableId))
+            {
+                query["tableId"] = request.TableId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
                 query["tableName"] = request.TableName;
@@ -7481,6 +7655,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusShrink))
             {
                 query["status"] = request.StatusShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableId))
+            {
+                query["tableId"] = request.TableId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
@@ -7592,6 +7770,18 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             {
                 query["dbName"] = request.DbName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstName))
+            {
+                query["dstName"] = request.DstName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstProjectName))
+            {
+                query["dstProjectName"] = request.DstProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstSchemaName))
+            {
+                query["dstSchemaName"] = request.DstSchemaName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasPartitions))
             {
                 query["hasPartitions"] = request.HasPartitions;
@@ -7687,6 +7877,18 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["dbName"] = request.DbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstName))
+            {
+                query["dstName"] = request.DstName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstProjectName))
+            {
+                query["dstProjectName"] = request.DstProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstSchemaName))
+            {
+                query["dstSchemaName"] = request.DstSchemaName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasPartitions))
             {
@@ -10346,6 +10548,180 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询quota的资源使用信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryQuotaMetricRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryQuotaMetricResponse
+        /// </returns>
+        public QueryQuotaMetricResponse QueryQuotaMetricWithOptions(string metric, QueryQuotaMetricRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                query["strategy"] = request.Strategy;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                body["interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nickname))
+            {
+                body["nickname"] = request.Nickname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubQuotaNickname))
+            {
+                body["subQuotaNickname"] = request.SubQuotaNickname;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryQuotaMetric",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/observations/quota/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(metric),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryQuotaMetricResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询quota的资源使用信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryQuotaMetricRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryQuotaMetricResponse
+        /// </returns>
+        public async Task<QueryQuotaMetricResponse> QueryQuotaMetricWithOptionsAsync(string metric, QueryQuotaMetricRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                query["strategy"] = request.Strategy;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                body["interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nickname))
+            {
+                body["nickname"] = request.Nickname;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubQuotaNickname))
+            {
+                body["subQuotaNickname"] = request.SubQuotaNickname;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryQuotaMetric",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/observations/quota/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(metric),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryQuotaMetricResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询quota的资源使用信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryQuotaMetricRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryQuotaMetricResponse
+        /// </returns>
+        public QueryQuotaMetricResponse QueryQuotaMetric(string metric, QueryQuotaMetricRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return QueryQuotaMetricWithOptions(metric, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询quota的资源使用信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryQuotaMetricRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryQuotaMetricResponse
+        /// </returns>
+        public async Task<QueryQuotaMetricResponse> QueryQuotaMetricAsync(string metric, QueryQuotaMetricRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await QueryQuotaMetricWithOptionsAsync(metric, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查看存储数据的时序指标</para>
         /// </summary>
         /// 
@@ -12478,6 +12854,108 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateProjectIpWhiteListWithOptionsAsync(projectName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将project的二层模型升级为三层模型</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProjectModelTierResponse
+        /// </returns>
+        public UpdateProjectModelTierResponse UpdateProjectModelTierWithOptions(string projectName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProjectModelTier",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(projectName) + "/modelTier",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProjectModelTierResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将project的二层模型升级为三层模型</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProjectModelTierResponse
+        /// </returns>
+        public async Task<UpdateProjectModelTierResponse> UpdateProjectModelTierWithOptionsAsync(string projectName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProjectModelTier",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(projectName) + "/modelTier",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProjectModelTierResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将project的二层模型升级为三层模型</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// UpdateProjectModelTierResponse
+        /// </returns>
+        public UpdateProjectModelTierResponse UpdateProjectModelTier(string projectName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateProjectModelTierWithOptions(projectName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将project的二层模型升级为三层模型</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// UpdateProjectModelTierResponse
+        /// </returns>
+        public async Task<UpdateProjectModelTierResponse> UpdateProjectModelTierAsync(string projectName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateProjectModelTierWithOptionsAsync(projectName, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

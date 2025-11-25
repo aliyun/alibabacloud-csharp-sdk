@@ -113,6 +113,18 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>mms_test</para>
+            /// </summary>
+            [NameInMap("dstProject")]
+            [Validation(Required=false)]
+            public string DstProject { get; set; }
+
+            [NameInMap("dstProjects")]
+            [Validation(Required=false)]
+            public List<string> DstProjects { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>unexpected exception</para>
             /// </summary>
             [NameInMap("errMsg")]
