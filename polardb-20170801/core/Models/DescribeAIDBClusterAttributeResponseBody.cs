@@ -283,6 +283,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>pkv-xxxxx</para>
+        /// </summary>
+        [NameInMap("KVCacheInstanceId")]
+        [Validation(Required=false)]
+        public string KVCacheInstanceId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>xxxxxxxxxxxxxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("KubeClusterId")]

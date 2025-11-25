@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public double? BandwidthBaseLine { get; set; }
 
+        [NameInMap("BucketId")]
+        [Validation(Required=false)]
+        public string BucketId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>high_performance</para>
@@ -84,6 +88,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("Expired")]
         [Validation(Required=false)]
         public string Expired { get; set; }
+
+        [NameInMap("FileSystemId")]
+        [Validation(Required=false)]
+        public string FileSystemId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -194,6 +202,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("RelativeDbClusterId")]
         [Validation(Required=false)]
         public string RelativeDbClusterId { get; set; }
+
+        [NameInMap("RelativePfsClusterId")]
+        [Validation(Required=false)]
+        public string RelativePfsClusterId { get; set; }
 
         /// <summary>
         /// <para>Id of the request</para>
