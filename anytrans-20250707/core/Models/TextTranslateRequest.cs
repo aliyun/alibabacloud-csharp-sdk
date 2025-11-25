@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         [Validation(Required=false)]
         public TextTranslateRequestExt Ext { get; set; }
         public class TextTranslateRequestExt : TeaModel {
+            [NameInMap("agent")]
+            [Validation(Required=false)]
+            public string Agent { get; set; }
+
             [NameInMap("config")]
             [Validation(Required=false)]
             public TextTranslateRequestExtConfig Config { get; set; }

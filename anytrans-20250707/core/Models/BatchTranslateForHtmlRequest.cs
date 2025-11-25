@@ -8,19 +8,27 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 {
-    public class SubmitHtmlTranslateTaskRequest : TeaModel {
+    public class BatchTranslateForHtmlRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>baidufanyi</para>
+        /// </summary>
+        [NameInMap("appName")]
+        [Validation(Required=false)]
+        public string AppName { get; set; }
+
         [NameInMap("ext")]
         [Validation(Required=false)]
-        public SubmitHtmlTranslateTaskRequestExt Ext { get; set; }
-        public class SubmitHtmlTranslateTaskRequestExt : TeaModel {
+        public BatchTranslateForHtmlRequestExt Ext { get; set; }
+        public class BatchTranslateForHtmlRequestExt : TeaModel {
             [NameInMap("config")]
             [Validation(Required=false)]
-            public SubmitHtmlTranslateTaskRequestExtConfig Config { get; set; }
-            public class SubmitHtmlTranslateTaskRequestExtConfig : TeaModel {
-                [NameInMap("callbackUrl")]
-                [Validation(Required=false)]
-                public string CallbackUrl { get; set; }
-
+            public BatchTranslateForHtmlRequestExtConfig Config { get; set; }
+            public class BatchTranslateForHtmlRequestExtConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>fasle</para>
+                /// </summary>
                 [NameInMap("skipCsiCheck")]
                 [Validation(Required=false)]
                 public bool? SkipCsiCheck { get; set; }
@@ -29,7 +37,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>technology</para>
+            /// <para>this sentence from an e-commerce product image, please provide a translation that is both highly concise and no more than 1.2 times the length of the original.</para>
             /// </summary>
             [NameInMap("domainHint")]
             [Validation(Required=false)]
@@ -37,8 +45,8 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 
             [NameInMap("examples")]
             [Validation(Required=false)]
-            public List<SubmitHtmlTranslateTaskRequestExtExamples> Examples { get; set; }
-            public class SubmitHtmlTranslateTaskRequestExtExamples : TeaModel {
+            public List<BatchTranslateForHtmlRequestExtExamples> Examples { get; set; }
+            public class BatchTranslateForHtmlRequestExtExamples : TeaModel {
                 [NameInMap("src")]
                 [Validation(Required=false)]
                 public string Src { get; set; }
@@ -59,15 +67,15 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 
             [NameInMap("terminologies")]
             [Validation(Required=false)]
-            public List<SubmitHtmlTranslateTaskRequestExtTerminologies> Terminologies { get; set; }
-            public class SubmitHtmlTranslateTaskRequestExtTerminologies : TeaModel {
+            public List<BatchTranslateForHtmlRequestExtTerminologies> Terminologies { get; set; }
+            public class BatchTranslateForHtmlRequestExtTerminologies : TeaModel {
                 [NameInMap("src")]
                 [Validation(Required=false)]
                 public string Src { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>ML</para>
+                /// <para>API</para>
                 /// </summary>
                 [NameInMap("tgt")]
                 [Validation(Required=false)]
@@ -77,8 +85,8 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 
             [NameInMap("textTransform")]
             [Validation(Required=false)]
-            public SubmitHtmlTranslateTaskRequestExtTextTransform TextTransform { get; set; }
-            public class SubmitHtmlTranslateTaskRequestExtTextTransform : TeaModel {
+            public BatchTranslateForHtmlRequestExtTextTransform TextTransform { get; set; }
+            public class BatchTranslateForHtmlRequestExtTextTransform : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -124,6 +132,8 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string Scene { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -132,6 +142,8 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -139,9 +151,12 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         [Validation(Required=false)]
         public string TargetLanguage { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("text")]
         [Validation(Required=false)]
-        public string Text { get; set; }
+        public Dictionary<string, object> Text { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
