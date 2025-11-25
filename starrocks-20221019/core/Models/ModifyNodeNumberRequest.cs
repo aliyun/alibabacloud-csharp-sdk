@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string NodeGroupId { get; set; }
 
+        [NameInMap("Parallelism")]
+        [Validation(Required=false)]
+        public int? Parallelism { get; set; }
+
         [NameInMap("PromotionOptionNo")]
         [Validation(Required=false)]
         public string PromotionOptionNo { get; set; }
@@ -45,6 +49,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [NameInMap("Target")]
         [Validation(Required=false)]
         public int? Target { get; set; }
+
+        [NameInMap("TerminationGracePeriodSeconds")]
+        [Validation(Required=false)]
+        public int? TerminationGracePeriodSeconds { get; set; }
 
     }
 
