@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
         [Validation(Required=false)]
         public StartCloudNoteRequestRealtimeSubtitle RealtimeSubtitle { get; set; }
         public class StartCloudNoteRequestRealtimeSubtitle : TeaModel {
+            [NameInMap("AsrCallback")]
+            [Validation(Required=false)]
+            public bool? AsrCallback { get; set; }
+
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }

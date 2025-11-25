@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Rtc20180111</AssemblyName>
-    <Version>5.3.1</Version>
+    <Version>5.3.2</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud Real-Time Communication (20180111) SDK Library for .NET</Description>
