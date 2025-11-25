@@ -161,6 +161,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     [Validation(Required=false)]
                     public bool? GatewayDefault { get; set; }
 
+                    [NameInMap("ipv4Addresses")]
+                    [Validation(Required=false)]
+                    public List<string> Ipv4Addresses { get; set; }
+
+                    [NameInMap("ipv6Addresses")]
+                    [Validation(Required=false)]
+                    public List<string> Ipv6Addresses { get; set; }
+
                     /// <summary>
                     /// <para>The load balancer ID.</para>
                     /// 
