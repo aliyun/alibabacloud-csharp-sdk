@@ -1,3 +1,11 @@
+2025-11-25 Version: 4.6.0
+- Support API CreateComputeResource.
+- Support API DeleteComputeResource.
+- Support API GetComputeResource.
+- Support API ListComputeResources.
+- Support API UpdateComputeResource.
+
+
 2025-11-06 Version: 4.5.0
 - Support API ListResourceGroupAssociateProjects.
 - Support API ListResourceGroupMetricData.

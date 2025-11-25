@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListResourceGroupMetricDataResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Monitoring metric data.</para>
+        /// </summary>
         [NameInMap("MetricData")]
         [Validation(Required=false)]
         public ListResourceGroupMetricDataResponseBodyMetricData MetricData { get; set; }
@@ -22,6 +25,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The metric name. Available metrics include:</para>
+            /// <list type="bullet">
+            /// <item><description>CUSpec: Maximum CU capacity of the resource group, in CUs.</description></item>
+            /// <item><description>CUUsage: CU usage of the resource group, in CUs.</description></item>
+            /// <item><description>CUUtilization: CU utilization of the resource group, in %.</description></item>
+            /// <item><description>SlotSpec: Maximum concurrency for resource group scheduling, in slots.</description></item>
+            /// <item><description>SlotUsage: Used concurrency for resource group scheduling, in slots.</description></item>
+            /// <item><description>SchedulerCUMaxSpec: Maximum CU quota for data computing, in CUs.</description></item>
+            /// <item><description>SchedulerCUUsage: CU usage for data computing, in CUs.</description></item>
+            /// <item><description>SchedulerCUMinSpec: Minimum guaranteed CUs for data computing, in CUs.</description></item>
+            /// <item><description>DataIntegrationCUMaxSpec: Maximum CU quota for Data Integration, in CUs.</description></item>
+            /// <item><description>DataIntegrationCUUsage: CU usage for Data Integration, in CUs.</description></item>
+            /// <item><description>DataIntegrationCUMinSpec: Minimum guaranteed CUs for Data Integration, in CUs.</description></item>
+            /// <item><description>DataServiceCUMaxSpec: Maximum CU quota for DataService Studio, in CUs.</description></item>
+            /// <item><description>DataServiceCUUsage: CU usage for DataService Studio, in CUs.</description></item>
+            /// <item><description>DataServiceCUMinSpec: Minimum guaranteed CUs for DataService Studio, in CUs.</description></item>
+            /// <item><description>ServerIdeCUMaxSpec: Maximum CU quota for personal development environment, in CUs.</description></item>
+            /// <item><description>ServerIdeCUUsage: CU usage for personal development environment, in CUs.</description></item>
+            /// <item><description>ServerIdeCUMinSpec: Minimum guaranteed CUs for personal development environment, in CUs.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>CUSpec</para>
             /// </summary>
