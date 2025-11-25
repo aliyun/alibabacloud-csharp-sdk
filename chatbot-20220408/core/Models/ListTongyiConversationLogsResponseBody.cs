@@ -29,6 +29,24 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("SessionFlowDebugInfo")]
+        [Validation(Required=false)]
+        public ListTongyiConversationLogsResponseBodySessionFlowDebugInfo SessionFlowDebugInfo { get; set; }
+        public class ListTongyiConversationLogsResponseBodySessionFlowDebugInfo : TeaModel {
+            [NameInMap("ApiParams")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> ApiParams { get; set; }
+
+            [NameInMap("SlotParams")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> SlotParams { get; set; }
+
+        }
+
     }
 
 }
