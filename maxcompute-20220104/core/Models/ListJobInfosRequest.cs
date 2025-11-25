@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public List<string> ExtNodeIdList { get; set; }
 
+        [NameInMap("extNodeNameList")]
+        [Validation(Required=false)]
+        public List<string> ExtNodeNameList { get; set; }
+
         /// <summary>
         /// <para>The start timestamp.</para>
         /// <para>This parameter is required.</para>
@@ -109,6 +113,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [NameInMap("statusList")]
         [Validation(Required=false)]
         public List<string> StatusList { get; set; }
+
+        [NameInMap("taskNameList")]
+        [Validation(Required=false)]
+        public List<string> TaskNameList { get; set; }
 
         /// <summary>
         /// <para>The end timestamp.</para>

@@ -6255,6 +6255,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             {
                 body["extNodeIdList"] = request.ExtNodeIdList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtNodeNameList))
+            {
+                body["extNodeNameList"] = request.ExtNodeNameList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 body["from"] = request.From;
@@ -6298,6 +6302,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
             {
                 body["statusList"] = request.StatusList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskNameList))
+            {
+                body["taskNameList"] = request.TaskNameList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
             {
@@ -6379,6 +6387,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             {
                 body["extNodeIdList"] = request.ExtNodeIdList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtNodeNameList))
+            {
+                body["extNodeNameList"] = request.ExtNodeNameList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 body["from"] = request.From;
@@ -6422,6 +6434,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
             {
                 body["statusList"] = request.StatusList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskNameList))
+            {
+                body["taskNameList"] = request.TaskNameList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
             {

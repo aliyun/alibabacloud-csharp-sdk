@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string ExtPlantFrom { get; set; }
 
+                [NameInMap("extPlatformId")]
+                [Validation(Required=false)]
+                public string ExtPlatformId { get; set; }
+
                 /// <summary>
                 /// <para>The instance ID.</para>
                 /// 

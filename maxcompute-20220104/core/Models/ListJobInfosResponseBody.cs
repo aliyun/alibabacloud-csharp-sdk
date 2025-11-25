@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string ExtNodeId { get; set; }
 
+                [NameInMap("extNodeName")]
+                [Validation(Required=false)]
+                public string ExtNodeName { get; set; }
+
                 /// <summary>
                 /// <para>The account of the node owner.</para>
                 /// 
@@ -92,6 +96,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [NameInMap("extPlantFrom")]
                 [Validation(Required=false)]
                 public string ExtPlantFrom { get; set; }
+
+                [NameInMap("extPlatformId")]
+                [Validation(Required=false)]
+                public string ExtPlatformId { get; set; }
 
                 /// <summary>
                 /// <para>The amount of scanned data for the job. Unit: byte.</para>
@@ -338,6 +346,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [NameInMap("tags")]
                 [Validation(Required=false)]
                 public string Tags { get; set; }
+
+                [NameInMap("taskName")]
+                [Validation(Required=false)]
+                public string TaskName { get; set; }
 
                 /// <summary>
                 /// <para>The tenant ID.</para>
