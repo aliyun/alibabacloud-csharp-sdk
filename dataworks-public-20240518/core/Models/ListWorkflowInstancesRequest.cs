@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? BizDate { get; set; }
 
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public string Filter { get; set; }
+
         /// <summary>
         /// <para>The IDs of the workflow instances. You can query multiple instances at a time by instance ID.</para>
         /// </summary>
@@ -96,6 +100,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<string> Tags { get; set; }
+
         /// <summary>
         /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
@@ -113,6 +121,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        [NameInMap("UnifiedWorkflowInstanceId")]
+        [Validation(Required=false)]
+        public long? UnifiedWorkflowInstanceId { get; set; }
 
         /// <summary>
         /// <para>The ID of the workflow to which the instance belongs.</para>

@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string TagsShrink { get; set; }
+
         /// <summary>
         /// <para>The trigger type.</para>
         /// <list type="bullet">

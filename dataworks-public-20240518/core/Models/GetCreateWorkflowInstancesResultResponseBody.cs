@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("UnifiedWorkflowInstanceIds")]
+            [Validation(Required=false)]
+            public List<long?> UnifiedWorkflowInstanceIds { get; set; }
+
             /// <summary>
             /// <para>The workflow instance IDs. This parameter is returned only if the creation is successful.</para>
             /// </summary>

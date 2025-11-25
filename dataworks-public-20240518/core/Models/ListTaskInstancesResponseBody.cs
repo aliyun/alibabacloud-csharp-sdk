@@ -424,6 +424,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public string TriggerType { get; set; }
 
+                [NameInMap("UnifiedWorkflowInstanceId")]
+                [Validation(Required=false)]
+                public long? UnifiedWorkflowInstanceId { get; set; }
+
                 /// <summary>
                 /// <para>The timestamp for when it started waiting for resources.</para>
                 /// 

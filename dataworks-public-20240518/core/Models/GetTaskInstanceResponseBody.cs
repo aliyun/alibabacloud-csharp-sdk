@@ -577,6 +577,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string TriggerType { get; set; }
 
+            [NameInMap("UnifiedWorkflowInstanceId")]
+            [Validation(Required=false)]
+            public long? UnifiedWorkflowInstanceId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1710239005403</para>

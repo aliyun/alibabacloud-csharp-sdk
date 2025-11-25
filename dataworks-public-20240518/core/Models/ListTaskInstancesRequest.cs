@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? Bizdate { get; set; }
 
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public string Filter { get; set; }
+
         /// <summary>
         /// <para>The ID of the instance. The instance may be rerun. If the instance is rerun and you configure this parameter, the system returns the historical information of the instance, including the rerun information. You can use the RunNumber parameter to distinguish each entry in the historical information.</para>
         /// 
@@ -208,6 +212,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [NameInMap("TriggerType")]
         [Validation(Required=false)]
         public string TriggerType { get; set; }
+
+        [NameInMap("UnifiedWorkflowInstanceId")]
+        [Validation(Required=false)]
+        public long? UnifiedWorkflowInstanceId { get; set; }
 
         /// <summary>
         /// <para>The ID of the workflow to which the instance belongs.</para>
