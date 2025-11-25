@@ -106,6 +106,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string BillingCycle { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Open</para>
+            /// </summary>
+            [NameInMap("BillingType")]
+            [Validation(Required=false)]
+            public string BillingType { get; set; }
+
             [NameInMap("CreationDiskType")]
             [Validation(Required=false)]
             public string CreationDiskType { get; set; }

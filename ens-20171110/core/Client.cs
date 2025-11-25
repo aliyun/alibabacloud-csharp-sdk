@@ -8643,6 +8643,146 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>调用CreateSecurityGroupPermissions创建安全组规则。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateSecurityGroupPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecurityGroupPermissionsResponse
+        /// </returns>
+        public CreateSecurityGroupPermissionsResponse CreateSecurityGroupPermissionsWithOptions(CreateSecurityGroupPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSecurityGroupPermissionsShrinkRequest request = new CreateSecurityGroupPermissionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Permissions))
+            {
+                request.PermissionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Permissions, "Permissions", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionsShrink))
+            {
+                query["Permissions"] = request.PermissionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSecurityGroupPermissions",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSecurityGroupPermissionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用CreateSecurityGroupPermissions创建安全组规则。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateSecurityGroupPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecurityGroupPermissionsResponse
+        /// </returns>
+        public async Task<CreateSecurityGroupPermissionsResponse> CreateSecurityGroupPermissionsWithOptionsAsync(CreateSecurityGroupPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSecurityGroupPermissionsShrinkRequest request = new CreateSecurityGroupPermissionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Permissions))
+            {
+                request.PermissionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Permissions, "Permissions", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionsShrink))
+            {
+                query["Permissions"] = request.PermissionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSecurityGroupPermissions",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSecurityGroupPermissionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用CreateSecurityGroupPermissions创建安全组规则。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSecurityGroupPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecurityGroupPermissionsResponse
+        /// </returns>
+        public CreateSecurityGroupPermissionsResponse CreateSecurityGroupPermissions(CreateSecurityGroupPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSecurityGroupPermissionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用CreateSecurityGroupPermissions创建安全组规则。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSecurityGroupPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecurityGroupPermissionsResponse
+        /// </returns>
+        public async Task<CreateSecurityGroupPermissionsResponse> CreateSecurityGroupPermissionsAsync(CreateSecurityGroupPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSecurityGroupPermissionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a snapshot.</para>
         /// </summary>
         /// 
@@ -12835,6 +12975,146 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSecurityGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用DeleteSecurityGroupPermissions删除安全组规则。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteSecurityGroupPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityGroupPermissionsResponse
+        /// </returns>
+        public DeleteSecurityGroupPermissionsResponse DeleteSecurityGroupPermissionsWithOptions(DeleteSecurityGroupPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteSecurityGroupPermissionsShrinkRequest request = new DeleteSecurityGroupPermissionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Permissions))
+            {
+                request.PermissionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Permissions, "Permissions", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionsShrink))
+            {
+                query["Permissions"] = request.PermissionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSecurityGroupPermissions",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSecurityGroupPermissionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用DeleteSecurityGroupPermissions删除安全组规则。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteSecurityGroupPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityGroupPermissionsResponse
+        /// </returns>
+        public async Task<DeleteSecurityGroupPermissionsResponse> DeleteSecurityGroupPermissionsWithOptionsAsync(DeleteSecurityGroupPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteSecurityGroupPermissionsShrinkRequest request = new DeleteSecurityGroupPermissionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Permissions))
+            {
+                request.PermissionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Permissions, "Permissions", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionsShrink))
+            {
+                query["Permissions"] = request.PermissionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSecurityGroupPermissions",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSecurityGroupPermissionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用DeleteSecurityGroupPermissions删除安全组规则。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSecurityGroupPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityGroupPermissionsResponse
+        /// </returns>
+        public DeleteSecurityGroupPermissionsResponse DeleteSecurityGroupPermissions(DeleteSecurityGroupPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSecurityGroupPermissionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用DeleteSecurityGroupPermissions删除安全组规则。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSecurityGroupPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityGroupPermissionsResponse
+        /// </returns>
+        public async Task<DeleteSecurityGroupPermissionsResponse> DeleteSecurityGroupPermissionsAsync(DeleteSecurityGroupPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSecurityGroupPermissionsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -19747,6 +20027,126 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeFileSystemsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用DescribeForwardEntryAttribute查询DNAT条目明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeForwardEntryAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeForwardEntryAttributeResponse
+        /// </returns>
+        public DescribeForwardEntryAttributeResponse DescribeForwardEntryAttributeWithOptions(DescribeForwardEntryAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForwardEntryId))
+            {
+                query["ForwardEntryId"] = request.ForwardEntryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeForwardEntryAttribute",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeForwardEntryAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用DescribeForwardEntryAttribute查询DNAT条目明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeForwardEntryAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeForwardEntryAttributeResponse
+        /// </returns>
+        public async Task<DescribeForwardEntryAttributeResponse> DescribeForwardEntryAttributeWithOptionsAsync(DescribeForwardEntryAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForwardEntryId))
+            {
+                query["ForwardEntryId"] = request.ForwardEntryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeForwardEntryAttribute",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeForwardEntryAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用DescribeForwardEntryAttribute查询DNAT条目明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeForwardEntryAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeForwardEntryAttributeResponse
+        /// </returns>
+        public DescribeForwardEntryAttributeResponse DescribeForwardEntryAttribute(DescribeForwardEntryAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeForwardEntryAttributeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>调用DescribeForwardEntryAttribute查询DNAT条目明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeForwardEntryAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeForwardEntryAttributeResponse
+        /// </returns>
+        public async Task<DescribeForwardEntryAttributeResponse> DescribeForwardEntryAttributeAsync(DescribeForwardEntryAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeForwardEntryAttributeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -34569,6 +34969,142 @@ namespace AlibabaCloud.SDK.Ens20171110
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstanceChargeTypeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例网络</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceNetworkAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceNetworkAttributeResponse
+        /// </returns>
+        public ModifyInstanceNetworkAttributeResponse ModifyInstanceNetworkAttributeWithOptions(ModifyInstanceNetworkAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
+            {
+                query["PrivateIpAddress"] = request.PrivateIpAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceNetworkAttribute",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceNetworkAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例网络</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceNetworkAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceNetworkAttributeResponse
+        /// </returns>
+        public async Task<ModifyInstanceNetworkAttributeResponse> ModifyInstanceNetworkAttributeWithOptionsAsync(ModifyInstanceNetworkAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddress))
+            {
+                query["PrivateIpAddress"] = request.PrivateIpAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceNetworkAttribute",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceNetworkAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例网络</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceNetworkAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceNetworkAttributeResponse
+        /// </returns>
+        public ModifyInstanceNetworkAttributeResponse ModifyInstanceNetworkAttribute(ModifyInstanceNetworkAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyInstanceNetworkAttributeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例网络</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceNetworkAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceNetworkAttributeResponse
+        /// </returns>
+        public async Task<ModifyInstanceNetworkAttributeResponse> ModifyInstanceNetworkAttributeAsync(ModifyInstanceNetworkAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyInstanceNetworkAttributeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
