@@ -249,6 +249,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? KeepaliveTimeout { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
+            [NameInMap("MaxBodySize")]
+            [Validation(Required=false)]
+            public int? MaxBodySize { get; set; }
+
+            /// <summary>
             /// <para>The timeout period of read connections. Unit: seconds. Valid values: 1 to 3600.</para>
             /// 
             /// <b>Example:</b>

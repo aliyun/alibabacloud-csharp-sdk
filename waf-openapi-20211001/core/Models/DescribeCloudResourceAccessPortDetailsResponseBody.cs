@@ -186,6 +186,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("MaxBodySize")]
+            [Validation(Required=false)]
+            public int? MaxBodySize { get; set; }
+
+            /// <summary>
             /// <para>The ID of the Alibaba Cloud account to which the resource belongs.</para>
             /// 
             /// <b>Example:</b>

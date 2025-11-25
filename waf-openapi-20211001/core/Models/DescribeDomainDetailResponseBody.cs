@@ -473,6 +473,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Loadbalance { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("MaxBodySize")]
+            [Validation(Required=false)]
+            public int? MaxBodySize { get; set; }
+
+            /// <summary>
             /// <para>The read timeout period. Unit: seconds. Valid values: 5 to 1800.</para>
             /// 
             /// <b>Example:</b>
