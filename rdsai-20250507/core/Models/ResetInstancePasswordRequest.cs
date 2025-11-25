@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ResetInstancePasswordRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>test_Password</para>
         /// </summary>
         [NameInMap("DashboardPassword")]
         [Validation(Required=false)]
         public string DashboardPassword { get; set; }
+
+        [NameInMap("DatabasePassword")]
+        [Validation(Required=false)]
+        public string DatabasePassword { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

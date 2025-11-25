@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string InstanceClass { get; set; }
 
+        [NameInMap("PublicEndpointEnabled")]
+        [Validation(Required=false)]
+        public bool? PublicEndpointEnabled { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>false</para>
