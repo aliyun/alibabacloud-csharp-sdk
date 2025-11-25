@@ -1,3 +1,9 @@
+2025-11-25 Version: 2.1.16
+- Update API CreateTrainingJob: add request parameters body.AssignNodeSpec.
+- Update API GetTrainingJob: add response parameters Body.AssignNodeSpec.
+- Update API ListTrainingJobs: add response parameters Body.TrainingJobs.$.AssignNodeSpec.
+
+
 2025-11-13 Version: 2.1.15
 - Update API GetQuota: add request parameters WithNodeMeta.
 

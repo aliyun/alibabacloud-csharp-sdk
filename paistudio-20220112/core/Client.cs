@@ -1013,6 +1013,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             {
                 body["AlgorithmVersion"] = request.AlgorithmVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssignNodeSpec))
+            {
+                body["AssignNodeSpec"] = request.AssignNodeSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeDir))
             {
                 body["CodeDir"] = request.CodeDir;
@@ -1138,6 +1142,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlgorithmVersion))
             {
                 body["AlgorithmVersion"] = request.AlgorithmVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssignNodeSpec))
+            {
+                body["AssignNodeSpec"] = request.AssignNodeSpec;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeDir))
             {

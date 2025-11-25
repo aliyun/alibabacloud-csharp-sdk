@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             [Validation(Required=false)]
             public string AlgorithmVersion { get; set; }
 
+            [NameInMap("AssignNodeSpec")]
+            [Validation(Required=false)]
+            public AssignNodeSpec AssignNodeSpec { get; set; }
+
             [NameInMap("ComputeResource")]
             [Validation(Required=false)]
             public ListTrainingJobsResponseBodyTrainingJobsComputeResource ComputeResource { get; set; }
