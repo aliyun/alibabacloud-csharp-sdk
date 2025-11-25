@@ -1278,6 +1278,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public long? SystemDiskSize { get; set; }
 
+            [NameInMap("system_disk_snapshot_policy_id")]
+            [Validation(Required=false)]
+            public string SystemDiskSnapshotPolicyId { get; set; }
+
             /// <summary>
             /// <para>The labels that you want to add only to ECS instances.</para>
             /// <para>The label key must be unique and cannot exceed 128 characters in length. The label key and value cannot start with aliyun or acs: or contain https:// or http://.</para>
@@ -1305,6 +1309,32 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public DescribeClusterNodePoolDetailResponseBodyStatus Status { get; set; }
         public class DescribeClusterNodePoolDetailResponseBodyStatus : TeaModel {
+            [NameInMap("conditions")]
+            [Validation(Required=false)]
+            public List<DescribeClusterNodePoolDetailResponseBodyStatusConditions> Conditions { get; set; }
+            public class DescribeClusterNodePoolDetailResponseBodyStatusConditions : TeaModel {
+                [NameInMap("last_transition_time")]
+                [Validation(Required=false)]
+                public string LastTransitionTime { get; set; }
+
+                [NameInMap("message")]
+                [Validation(Required=false)]
+                public string Message { get; set; }
+
+                [NameInMap("reason")]
+                [Validation(Required=false)]
+                public string Reason { get; set; }
+
+                [NameInMap("status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The number of failed nodes.</para>
             /// 

@@ -61,6 +61,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string State { get; set; }
 
+            [NameInMap("state_reason")]
+            [Validation(Required=false)]
+            public ListOperationPlansForRegionResponseBodyPlansStateReason StateReason { get; set; }
+            public class ListOperationPlansForRegionResponseBodyPlansStateReason : TeaModel {
+                [NameInMap("code")]
+                [Validation(Required=false)]
+                public string Code { get; set; }
+
+                [NameInMap("message")]
+                [Validation(Required=false)]
+                public string Message { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>c29ced64b3dfe4f33b57ca0aa9f68****</para>

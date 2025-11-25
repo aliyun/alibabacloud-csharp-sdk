@@ -1332,6 +1332,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public long? SystemDiskSize { get; set; }
 
+                [NameInMap("system_disk_snapshot_policy_id")]
+                [Validation(Required=false)]
+                public string SystemDiskSnapshotPolicyId { get; set; }
+
                 /// <summary>
                 /// <para>The label to be added to the ECS instances.</para>
                 /// </summary>

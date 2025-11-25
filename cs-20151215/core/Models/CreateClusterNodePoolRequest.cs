@@ -1399,6 +1399,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public long? SystemDiskSize { get; set; }
 
+            [NameInMap("system_disk_snapshot_policy_id")]
+            [Validation(Required=false)]
+            public string SystemDiskSnapshotPolicyId { get; set; }
+
             /// <summary>
             /// <para>The tags that you want to add only to ECS instances.</para>
             /// <para>The tag key must be unique and cannot exceed 128 characters in length. The tag key and value cannot start with aliyun or acs: or contain https:// or http://.</para>
