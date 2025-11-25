@@ -1981,6 +1981,18 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidOpenUrl"] = request.AndroidOpenUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOppoDeleteIntentData))
+            {
+                query["AndroidOppoDeleteIntentData"] = request.AndroidOppoDeleteIntentData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOppoIntelligentIntent))
+            {
+                query["AndroidOppoIntelligentIntent"] = request.AndroidOppoIntelligentIntent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOppoIntentEnv))
+            {
+                query["AndroidOppoIntentEnv"] = request.AndroidOppoIntentEnv;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOppoPrivateContentParametersShrink))
             {
                 query["AndroidOppoPrivateContentParameters"] = request.AndroidOppoPrivateContentParametersShrink;
@@ -2476,6 +2488,18 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOpenUrl))
             {
                 query["AndroidOpenUrl"] = request.AndroidOpenUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOppoDeleteIntentData))
+            {
+                query["AndroidOppoDeleteIntentData"] = request.AndroidOppoDeleteIntentData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOppoIntelligentIntent))
+            {
+                query["AndroidOppoIntelligentIntent"] = request.AndroidOppoIntelligentIntent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOppoIntentEnv))
+            {
+                query["AndroidOppoIntentEnv"] = request.AndroidOppoIntentEnv;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidOppoPrivateContentParametersShrink))
             {

@@ -236,6 +236,18 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public string AndroidOpenUrl { get; set; }
 
+        [NameInMap("AndroidOppoDeleteIntentData")]
+        [Validation(Required=false)]
+        public string AndroidOppoDeleteIntentData { get; set; }
+
+        [NameInMap("AndroidOppoIntelligentIntent")]
+        [Validation(Required=false)]
+        public string AndroidOppoIntelligentIntent { get; set; }
+
+        [NameInMap("AndroidOppoIntentEnv")]
+        [Validation(Required=false)]
+        public int? AndroidOppoIntentEnv { get; set; }
+
         [NameInMap("AndroidOppoPrivateContentParameters")]
         [Validation(Required=false)]
         public Dictionary<string, string> AndroidOppoPrivateContentParameters { get; set; }

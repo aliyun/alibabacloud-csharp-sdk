@@ -167,6 +167,14 @@ namespace AlibabaCloud.SDK.Push20160801.Models
                         [Validation(Required=false)]
                         public string Category { get; set; }
 
+                        [NameInMap("DeleteIntentData")]
+                        [Validation(Required=false)]
+                        public string DeleteIntentData { get; set; }
+
+                        [NameInMap("IntelligentIntent")]
+                        [Validation(Required=false)]
+                        public string IntelligentIntent { get; set; }
+
                         [NameInMap("NotifyLevel")]
                         [Validation(Required=false)]
                         public long? NotifyLevel { get; set; }
