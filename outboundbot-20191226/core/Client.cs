@@ -39,126 +39,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生效号码库解析结果</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ApplyNumberDistrictInfoParsingResultRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ApplyNumberDistrictInfoParsingResultResponse
-        /// </returns>
-        public ApplyNumberDistrictInfoParsingResultResponse ApplyNumberDistrictInfoParsingResultWithOptions(ApplyNumberDistrictInfoParsingResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
-            {
-                query["VersionId"] = request.VersionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ApplyNumberDistrictInfoParsingResult",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ApplyNumberDistrictInfoParsingResultResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>生效号码库解析结果</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ApplyNumberDistrictInfoParsingResultRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ApplyNumberDistrictInfoParsingResultResponse
-        /// </returns>
-        public async Task<ApplyNumberDistrictInfoParsingResultResponse> ApplyNumberDistrictInfoParsingResultWithOptionsAsync(ApplyNumberDistrictInfoParsingResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
-            {
-                query["VersionId"] = request.VersionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ApplyNumberDistrictInfoParsingResult",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ApplyNumberDistrictInfoParsingResultResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>生效号码库解析结果</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ApplyNumberDistrictInfoParsingResultRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ApplyNumberDistrictInfoParsingResultResponse
-        /// </returns>
-        public ApplyNumberDistrictInfoParsingResultResponse ApplyNumberDistrictInfoParsingResult(ApplyNumberDistrictInfoParsingResultRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ApplyNumberDistrictInfoParsingResultWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>生效号码库解析结果</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ApplyNumberDistrictInfoParsingResultRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ApplyNumberDistrictInfoParsingResultResponse
-        /// </returns>
-        public async Task<ApplyNumberDistrictInfoParsingResultResponse> ApplyNumberDistrictInfoParsingResultAsync(ApplyNumberDistrictInfoParsingResultRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ApplyNumberDistrictInfoParsingResultWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>创建外呼任务</para>
         /// </summary>
         /// 
@@ -957,6 +837,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await CreateAgentProfileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建标注任务</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateAnnotationMissionRequest
         /// </param>
@@ -1068,6 +953,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateAnnotationMissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建标注任务</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateAnnotationMissionRequest
         /// </param>
@@ -1179,6 +1069,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateAnnotationMissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建标注任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAnnotationMissionRequest
         /// </param>
@@ -1192,6 +1087,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return CreateAnnotationMissionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建标注任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAnnotationMissionRequest
         /// </param>
@@ -1205,6 +1105,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await CreateAnnotationMissionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateBatchJobsRequest
         /// </param>
@@ -1274,6 +1179,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateBatchJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateBatchJobsRequest
         /// </param>
@@ -1343,6 +1253,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateBatchJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateBatchJobsRequest
         /// </param>
@@ -1356,6 +1271,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return CreateBatchJobsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateBatchJobsRequest
         /// </param>
@@ -2909,6 +2829,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await CreateJobDataParsingTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateJobGroupRequest
         /// </param>
@@ -2994,6 +2919,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateJobGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateJobGroupRequest
         /// </param>
@@ -3079,6 +3009,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateJobGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateJobGroupRequest
         /// </param>
@@ -3092,6 +3027,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return CreateJobGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateJobGroupRequest
         /// </param>
@@ -3105,6 +3045,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await CreateJobGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务组到处任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateJobGroupExportTaskRequest
         /// </param>
@@ -3150,6 +3095,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateJobGroupExportTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务组到处任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateJobGroupExportTaskRequest
         /// </param>
@@ -3195,6 +3145,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateJobGroupExportTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务组到处任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateJobGroupExportTaskRequest
         /// </param>
@@ -3208,6 +3163,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return CreateJobGroupExportTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务组到处任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateJobGroupExportTaskRequest
         /// </param>
@@ -3219,398 +3179,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateJobGroupExportTaskWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建号码库下载链接</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateNumberDistrictInfoDownloadUrlRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateNumberDistrictInfoDownloadUrlResponse
-        /// </returns>
-        public CreateNumberDistrictInfoDownloadUrlResponse CreateNumberDistrictInfoDownloadUrlWithOptions(CreateNumberDistrictInfoDownloadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
-            {
-                query["VersionId"] = request.VersionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateNumberDistrictInfoDownloadUrl",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateNumberDistrictInfoDownloadUrlResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建号码库下载链接</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateNumberDistrictInfoDownloadUrlRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateNumberDistrictInfoDownloadUrlResponse
-        /// </returns>
-        public async Task<CreateNumberDistrictInfoDownloadUrlResponse> CreateNumberDistrictInfoDownloadUrlWithOptionsAsync(CreateNumberDistrictInfoDownloadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
-            {
-                query["VersionId"] = request.VersionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateNumberDistrictInfoDownloadUrl",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateNumberDistrictInfoDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建号码库下载链接</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateNumberDistrictInfoDownloadUrlRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateNumberDistrictInfoDownloadUrlResponse
-        /// </returns>
-        public CreateNumberDistrictInfoDownloadUrlResponse CreateNumberDistrictInfoDownloadUrl(CreateNumberDistrictInfoDownloadUrlRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateNumberDistrictInfoDownloadUrlWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建号码库下载链接</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateNumberDistrictInfoDownloadUrlRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateNumberDistrictInfoDownloadUrlResponse
-        /// </returns>
-        public async Task<CreateNumberDistrictInfoDownloadUrlResponse> CreateNumberDistrictInfoDownloadUrlAsync(CreateNumberDistrictInfoDownloadUrlRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateNumberDistrictInfoDownloadUrlWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建号码库解析任务</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateNumberDistrictInfoParsingTaskRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateNumberDistrictInfoParsingTaskResponse
-        /// </returns>
-        public CreateNumberDistrictInfoParsingTaskResponse CreateNumberDistrictInfoParsingTaskWithOptions(CreateNumberDistrictInfoParsingTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
-            {
-                query["FilePath"] = request.FilePath;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSize))
-            {
-                query["FileSize"] = request.FileSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateNumberDistrictInfoParsingTask",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateNumberDistrictInfoParsingTaskResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建号码库解析任务</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateNumberDistrictInfoParsingTaskRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateNumberDistrictInfoParsingTaskResponse
-        /// </returns>
-        public async Task<CreateNumberDistrictInfoParsingTaskResponse> CreateNumberDistrictInfoParsingTaskWithOptionsAsync(CreateNumberDistrictInfoParsingTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
-            {
-                query["FilePath"] = request.FilePath;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSize))
-            {
-                query["FileSize"] = request.FileSize;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateNumberDistrictInfoParsingTask",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateNumberDistrictInfoParsingTaskResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建号码库解析任务</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateNumberDistrictInfoParsingTaskRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateNumberDistrictInfoParsingTaskResponse
-        /// </returns>
-        public CreateNumberDistrictInfoParsingTaskResponse CreateNumberDistrictInfoParsingTask(CreateNumberDistrictInfoParsingTaskRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateNumberDistrictInfoParsingTaskWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>创建号码库解析任务</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateNumberDistrictInfoParsingTaskRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateNumberDistrictInfoParsingTaskResponse
-        /// </returns>
-        public async Task<CreateNumberDistrictInfoParsingTaskResponse> CreateNumberDistrictInfoParsingTaskAsync(CreateNumberDistrictInfoParsingTaskRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateNumberDistrictInfoParsingTaskWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>CreateOutboundCallNumber</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateOutboundCallNumberRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateOutboundCallNumberResponse
-        /// </returns>
-        public CreateOutboundCallNumberResponse CreateOutboundCallNumberWithOptions(CreateOutboundCallNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Number))
-            {
-                query["Number"] = request.Number;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RateLimitCount))
-            {
-                query["RateLimitCount"] = request.RateLimitCount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RateLimitPeriod))
-            {
-                query["RateLimitPeriod"] = request.RateLimitPeriod;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateOutboundCallNumber",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateOutboundCallNumberResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>CreateOutboundCallNumber</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateOutboundCallNumberRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateOutboundCallNumberResponse
-        /// </returns>
-        public async Task<CreateOutboundCallNumberResponse> CreateOutboundCallNumberWithOptionsAsync(CreateOutboundCallNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                query["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Number))
-            {
-                query["Number"] = request.Number;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RateLimitCount))
-            {
-                query["RateLimitCount"] = request.RateLimitCount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RateLimitPeriod))
-            {
-                query["RateLimitPeriod"] = request.RateLimitPeriod;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "CreateOutboundCallNumber",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<CreateOutboundCallNumberResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>CreateOutboundCallNumber</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateOutboundCallNumberRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateOutboundCallNumberResponse
-        /// </returns>
-        public CreateOutboundCallNumberResponse CreateOutboundCallNumber(CreateOutboundCallNumberRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return CreateOutboundCallNumberWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>CreateOutboundCallNumber</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// CreateOutboundCallNumberRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// CreateOutboundCallNumberResponse
-        /// </returns>
-        public async Task<CreateOutboundCallNumberResponse> CreateOutboundCallNumberAsync(CreateOutboundCallNumberRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await CreateOutboundCallNumberWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6987,6 +6555,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DescribeIntentWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeIntentStatistics</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIntentStatisticsRequest
         /// </param>
@@ -7032,6 +6605,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeIntentStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeIntentStatistics</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIntentStatisticsRequest
         /// </param>
@@ -7077,6 +6655,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeIntentStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeIntentStatistics</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIntentStatisticsRequest
         /// </param>
@@ -7090,6 +6673,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DescribeIntentStatisticsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeIntentStatistics</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIntentStatisticsRequest
         /// </param>
@@ -7589,100 +7177,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeJobGroupExportTaskProgressWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>查询号码库状态</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeNumberDistrictInfoStatusRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeNumberDistrictInfoStatusResponse
-        /// </returns>
-        public DescribeNumberDistrictInfoStatusResponse DescribeNumberDistrictInfoStatusWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeNumberDistrictInfoStatus",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeNumberDistrictInfoStatusResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>查询号码库状态</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DescribeNumberDistrictInfoStatusRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeNumberDistrictInfoStatusResponse
-        /// </returns>
-        public async Task<DescribeNumberDistrictInfoStatusResponse> DescribeNumberDistrictInfoStatusWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeNumberDistrictInfoStatus",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeNumberDistrictInfoStatusResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>查询号码库状态</para>
-        /// </summary>
-        /// 
-        /// <returns>
-        /// DescribeNumberDistrictInfoStatusResponse
-        /// </returns>
-        public DescribeNumberDistrictInfoStatusResponse DescribeNumberDistrictInfoStatus()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeNumberDistrictInfoStatusWithOptions(runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>查询号码库状态</para>
-        /// </summary>
-        /// 
-        /// <returns>
-        /// DescribeNumberDistrictInfoStatusResponse
-        /// </returns>
-        public async Task<DescribeNumberDistrictInfoStatusResponse> DescribeNumberDistrictInfoStatusAsync()
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeNumberDistrictInfoStatusWithOptionsAsync(runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8639,126 +8133,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DialogueWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>取消号码库解析结果</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DismissNumberDistrictInfoParsingResultRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DismissNumberDistrictInfoParsingResultResponse
-        /// </returns>
-        public DismissNumberDistrictInfoParsingResultResponse DismissNumberDistrictInfoParsingResultWithOptions(DismissNumberDistrictInfoParsingResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
-            {
-                query["VersionId"] = request.VersionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DismissNumberDistrictInfoParsingResult",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DismissNumberDistrictInfoParsingResultResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>取消号码库解析结果</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DismissNumberDistrictInfoParsingResultRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DismissNumberDistrictInfoParsingResultResponse
-        /// </returns>
-        public async Task<DismissNumberDistrictInfoParsingResultResponse> DismissNumberDistrictInfoParsingResultWithOptionsAsync(DismissNumberDistrictInfoParsingResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
-            {
-                query["VersionId"] = request.VersionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DismissNumberDistrictInfoParsingResult",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DismissNumberDistrictInfoParsingResultResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>取消号码库解析结果</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DismissNumberDistrictInfoParsingResultRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DismissNumberDistrictInfoParsingResultResponse
-        /// </returns>
-        public DismissNumberDistrictInfoParsingResultResponse DismissNumberDistrictInfoParsingResult(DismissNumberDistrictInfoParsingResultRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DismissNumberDistrictInfoParsingResultWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>取消号码库解析结果</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// DismissNumberDistrictInfoParsingResultRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DismissNumberDistrictInfoParsingResultResponse
-        /// </returns>
-        public async Task<DismissNumberDistrictInfoParsingResultResponse> DismissNumberDistrictInfoParsingResultAsync(DismissNumberDistrictInfoParsingResultRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DismissNumberDistrictInfoParsingResultWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10711,114 +10085,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GetCurrentConcurrencyWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
-        /// GetEffectiveDaysRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetEffectiveDaysResponse
-        /// </returns>
-        public GetEffectiveDaysResponse GetEffectiveDaysWithOptions(GetEffectiveDaysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntryId))
-            {
-                query["EntryId"] = request.EntryId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyLevel))
-            {
-                query["StrategyLevel"] = request.StrategyLevel;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetEffectiveDays",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetEffectiveDaysResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// GetEffectiveDaysRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetEffectiveDaysResponse
-        /// </returns>
-        public async Task<GetEffectiveDaysResponse> GetEffectiveDaysWithOptionsAsync(GetEffectiveDaysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntryId))
-            {
-                query["EntryId"] = request.EntryId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyLevel))
-            {
-                query["StrategyLevel"] = request.StrategyLevel;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetEffectiveDays",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetEffectiveDaysResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// GetEffectiveDaysRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetEffectiveDaysResponse
-        /// </returns>
-        public GetEffectiveDaysResponse GetEffectiveDays(GetEffectiveDaysRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetEffectiveDaysWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// GetEffectiveDaysRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetEffectiveDaysResponse
-        /// </returns>
-        public async Task<GetEffectiveDaysResponse> GetEffectiveDaysAsync(GetEffectiveDaysRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetEffectiveDaysWithOptionsAsync(request, runtime);
-        }
-
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>GetEmptyNumberNoMoreCallsInfo</para>
@@ -11553,6 +10819,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GetSummaryInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据TaskId获取Task信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTaskByUuidRequest
         /// </param>
@@ -11586,6 +10857,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetTaskByUuidResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据TaskId获取Task信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTaskByUuidRequest
         /// </param>
@@ -11619,6 +10895,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetTaskByUuidResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据TaskId获取Task信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTaskByUuidRequest
         /// </param>
@@ -11632,6 +10913,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return GetTaskByUuidWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据TaskId获取Task信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTaskByUuidRequest
         /// </param>
@@ -12201,6 +11487,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListAllTenantBindNumberBindingWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标注中心</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAnnotationMissionRequest
         /// </param>
@@ -12270,6 +11561,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListAnnotationMissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标注中心</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAnnotationMissionRequest
         /// </param>
@@ -12339,6 +11635,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListAnnotationMissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标注中心</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAnnotationMissionRequest
         /// </param>
@@ -12352,6 +11653,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListAnnotationMissionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标注中心</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAnnotationMissionRequest
         /// </param>
@@ -12365,6 +11671,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListAnnotationMissionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListAnnotationMissionSession</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAnnotationMissionSessionRequest
         /// </param>
@@ -12422,6 +11733,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListAnnotationMissionSessionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListAnnotationMissionSession</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAnnotationMissionSessionRequest
         /// </param>
@@ -12479,6 +11795,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListAnnotationMissionSessionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListAnnotationMissionSession</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAnnotationMissionSessionRequest
         /// </param>
@@ -12492,6 +11813,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListAnnotationMissionSessionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListAnnotationMissionSession</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAnnotationMissionSessionRequest
         /// </param>
@@ -14835,106 +14161,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListResourceTagsWithOptionsAsync(request, runtime);
-        }
-
-        /// <param name="request">
-        /// ListSchedulerInstancesRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListSchedulerInstancesResponse
-        /// </returns>
-        public ListSchedulerInstancesResponse ListSchedulerInstancesWithOptions(ListSchedulerInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceOwnerId))
-            {
-                query["InstanceOwnerId"] = request.InstanceOwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListSchedulerInstances",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListSchedulerInstancesResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// ListSchedulerInstancesRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListSchedulerInstancesResponse
-        /// </returns>
-        public async Task<ListSchedulerInstancesResponse> ListSchedulerInstancesWithOptionsAsync(ListSchedulerInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceOwnerId))
-            {
-                query["InstanceOwnerId"] = request.InstanceOwnerId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListSchedulerInstances",
-                Version = "2019-12-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListSchedulerInstancesResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// ListSchedulerInstancesRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListSchedulerInstancesResponse
-        /// </returns>
-        public ListSchedulerInstancesResponse ListSchedulerInstances(ListSchedulerInstancesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ListSchedulerInstancesWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// ListSchedulerInstancesRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListSchedulerInstancesResponse
-        /// </returns>
-        public async Task<ListSchedulerInstancesResponse> ListSchedulerInstancesAsync(ListSchedulerInstancesRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ListSchedulerInstancesWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -17389,6 +16615,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ModifyIntentWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改任务组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyJobGroupRequest
         /// </param>
@@ -17482,6 +16713,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyJobGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改任务组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyJobGroupRequest
         /// </param>
@@ -17575,6 +16811,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyJobGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改任务组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyJobGroupRequest
         /// </param>
@@ -17588,6 +16829,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ModifyJobGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改任务组</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyJobGroupRequest
         /// </param>
@@ -18936,6 +18182,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             {
                 query["JobStatusFilter"] = request.JobStatusFilter;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsJson))
+            {
+                query["LabelsJson"] = request.LabelsJson;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -19025,6 +18275,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobStatusFilter))
             {
                 query["JobStatusFilter"] = request.JobStatusFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsJson))
+            {
+                query["LabelsJson"] = request.LabelsJson;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -19753,6 +19007,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await RollbackScriptWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存接听后延迟播报时间</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveAfterAnswerDelayPlaybackRequest
         /// </param>
@@ -19798,6 +19057,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveAfterAnswerDelayPlaybackResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存接听后延迟播报时间</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveAfterAnswerDelayPlaybackRequest
         /// </param>
@@ -19843,6 +19107,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveAfterAnswerDelayPlaybackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存接听后延迟播报时间</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveAfterAnswerDelayPlaybackRequest
         /// </param>
@@ -19856,6 +19125,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return SaveAfterAnswerDelayPlaybackWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存接听后延迟播报时间</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveAfterAnswerDelayPlaybackRequest
         /// </param>
@@ -20141,6 +19415,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await SaveAnnotationMissionTagInfoListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑基础策略有效时间窗口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveBaseStrategyPeriodRequest
         /// </param>
@@ -20198,6 +19477,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveBaseStrategyPeriodResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑基础策略有效时间窗口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveBaseStrategyPeriodRequest
         /// </param>
@@ -20255,6 +19539,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveBaseStrategyPeriodResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑基础策略有效时间窗口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveBaseStrategyPeriodRequest
         /// </param>
@@ -20268,6 +19557,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return SaveBaseStrategyPeriodWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>编辑基础策略有效时间窗口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveBaseStrategyPeriodRequest
         /// </param>
@@ -20281,6 +19575,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await SaveBaseStrategyPeriodWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存外呼黑名单列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveContactBlockListRequest
         /// </param>
@@ -20326,6 +19625,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveContactBlockListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存外呼黑名单列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveContactBlockListRequest
         /// </param>
@@ -20371,6 +19675,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveContactBlockListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存外呼黑名单列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveContactBlockListRequest
         /// </param>
@@ -20384,6 +19693,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return SaveContactBlockListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存外呼黑名单列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveContactBlockListRequest
         /// </param>
@@ -20397,6 +19711,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await SaveContactBlockListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存外呼白名单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveContactWhiteListRequest
         /// </param>
@@ -20442,6 +19761,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveContactWhiteListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存外呼白名单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveContactWhiteListRequest
         /// </param>
@@ -20487,6 +19811,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveContactWhiteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存外呼白名单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveContactWhiteListRequest
         /// </param>
@@ -20500,6 +19829,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return SaveContactWhiteListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存外呼白名单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveContactWhiteListRequest
         /// </param>
@@ -20629,6 +19963,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await SaveEffectiveDaysWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存每日最大外呼量</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveMaxAttemptsPerDayRequest
         /// </param>
@@ -20674,6 +20013,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveMaxAttemptsPerDayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存每日最大外呼量</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveMaxAttemptsPerDayRequest
         /// </param>
@@ -20719,6 +20063,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveMaxAttemptsPerDayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存每日最大外呼量</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveMaxAttemptsPerDayRequest
         /// </param>
@@ -20732,6 +20081,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return SaveMaxAttemptsPerDayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存每日最大外呼量</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveMaxAttemptsPerDayRequest
         /// </param>
@@ -20857,6 +20211,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await SearchTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启一个任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartJobRequest
         /// </param>
@@ -20914,6 +20273,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<StartJobResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启一个任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartJobRequest
         /// </param>
@@ -20971,6 +20335,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<StartJobResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启一个任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartJobRequest
         /// </param>
@@ -20984,6 +20353,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return StartJobWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启一个任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartJobRequest
         /// </param>
@@ -21353,6 +20727,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await SubmitScriptReviewWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>止呼</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendCallRequest
         /// </param>
@@ -21398,6 +20777,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SuspendCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>止呼</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendCallRequest
         /// </param>
@@ -21443,6 +20827,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SuspendCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>止呼</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendCallRequest
         /// </param>
@@ -21456,6 +20845,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return SuspendCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>止呼</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendCallRequest
         /// </param>
@@ -21469,6 +20863,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await SuspendCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SuspendCallWithFile</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendCallWithFileRequest
         /// </param>
@@ -21514,6 +20913,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SuspendCallWithFileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SuspendCallWithFile</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendCallWithFileRequest
         /// </param>
@@ -21559,6 +20963,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SuspendCallWithFileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SuspendCallWithFile</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendCallWithFileRequest
         /// </param>
@@ -21572,6 +20981,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return SuspendCallWithFileWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SuspendCallWithFile</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendCallWithFileRequest
         /// </param>

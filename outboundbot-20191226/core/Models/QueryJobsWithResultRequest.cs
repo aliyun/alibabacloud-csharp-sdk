@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string JobStatusFilter { get; set; }
 
+        [NameInMap("LabelsJson")]
+        [Validation(Required=false)]
+        public List<string> LabelsJson { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>

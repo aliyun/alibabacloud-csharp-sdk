@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string JobStatusStringList { get; set; }
 
+        [NameInMap("LabelsJson")]
+        [Validation(Required=false)]
+        public List<string> LabelsJson { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>AVD-2021-39685</para>

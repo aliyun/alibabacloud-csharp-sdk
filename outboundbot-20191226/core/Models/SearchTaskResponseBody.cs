@@ -25,6 +25,20 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public List<SearchTaskResponseBodyLabels> Labels { get; set; }
+        public class SearchTaskResponseBodyLabels : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("ValueList")]
+            [Validation(Required=false)]
+            public List<string> ValueList { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -205,6 +219,20 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public string JobStatusString { get; set; }
 
+            [NameInMap("Labels")]
+            [Validation(Required=false)]
+            public List<SearchTaskResponseBodySearchTaskInfoListLabels> Labels { get; set; }
+            public class SearchTaskResponseBodySearchTaskInfoListLabels : TeaModel {
+                [NameInMap("K")]
+                [Validation(Required=false)]
+                public string K { get; set; }
+
+                [NameInMap("V")]
+                [Validation(Required=false)]
+                public string V { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>10</para>
@@ -298,6 +326,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [NameInMap("Total")]
         [Validation(Required=false)]
         public long? Total { get; set; }
+
+        [NameInMap("VariableNames")]
+        [Validation(Required=false)]
+        public List<string> VariableNames { get; set; }
 
     }
 

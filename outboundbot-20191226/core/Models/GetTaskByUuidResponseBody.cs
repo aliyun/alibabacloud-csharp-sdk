@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// </summary>
             [NameInMap("EndReason")]
             [Validation(Required=false)]
-            public int? EndReason { get; set; }
+            public string EndReason { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

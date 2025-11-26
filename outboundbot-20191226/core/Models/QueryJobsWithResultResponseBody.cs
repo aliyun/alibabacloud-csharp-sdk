@@ -303,6 +303,20 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 
         }
 
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public List<QueryJobsWithResultResponseBodyLabels> Labels { get; set; }
+        public class QueryJobsWithResultResponseBodyLabels : TeaModel {
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("ValueList")]
+            [Validation(Required=false)]
+            public List<string> ValueList { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Success</para>
