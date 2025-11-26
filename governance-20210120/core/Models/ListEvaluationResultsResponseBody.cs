@@ -67,6 +67,16 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 
                 }
 
+                [NameInMap("AvailableRemediation")]
+                [Validation(Required=false)]
+                public List<ListEvaluationResultsResponseBodyResultsMetricResultsAvailableRemediation> AvailableRemediation { get; set; }
+                public class ListEvaluationResultsResponseBodyResultsMetricResultsAvailableRemediation : TeaModel {
+                    [NameInMap("RemediationTemplateId")]
+                    [Validation(Required=false)]
+                    public string RemediationTemplateId { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The error information.</para>
                 /// <remarks>
