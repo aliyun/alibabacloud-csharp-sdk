@@ -5067,6 +5067,138 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建身份凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateIdentifyCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIdentifyCredentialResponse
+        /// </returns>
+        public CreateIdentifyCredentialResponse CreateIdentifyCredentialWithOptions(CreateIdentifyCredentialRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateIdentifyCredentialShrinkRequest request = new CreateIdentifyCredentialShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IdentifyCredential))
+            {
+                request.IdentifyCredentialShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IdentifyCredential, "IdentifyCredential", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyCredentialShrink))
+            {
+                body["IdentifyCredential"] = request.IdentifyCredentialShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIdentifyCredential",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIdentifyCredentialResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建身份凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateIdentifyCredentialRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIdentifyCredentialResponse
+        /// </returns>
+        public async Task<CreateIdentifyCredentialResponse> CreateIdentifyCredentialWithOptionsAsync(CreateIdentifyCredentialRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateIdentifyCredentialShrinkRequest request = new CreateIdentifyCredentialShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IdentifyCredential))
+            {
+                request.IdentifyCredentialShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IdentifyCredential, "IdentifyCredential", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifyCredentialShrink))
+            {
+                body["IdentifyCredential"] = request.IdentifyCredentialShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateIdentifyCredential",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateIdentifyCredentialResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建身份凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIdentifyCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIdentifyCredentialResponse
+        /// </returns>
+        public CreateIdentifyCredentialResponse CreateIdentifyCredential(CreateIdentifyCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateIdentifyCredentialWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建身份凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateIdentifyCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateIdentifyCredentialResponse
+        /// </returns>
+        public async Task<CreateIdentifyCredentialResponse> CreateIdentifyCredentialAsync(CreateIdentifyCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateIdentifyCredentialWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a lineage between a source entity and a destination entity. Either the source or destination entity must be a custom entity.</para>
         /// </summary>
         /// 
