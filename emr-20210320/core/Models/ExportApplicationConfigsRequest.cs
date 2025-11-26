@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("ConfigScope")]
+        [Validation(Required=false)]
+        public string ConfigScope { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>MODIFICATION</para>
@@ -44,6 +48,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [NameInMap("FileFormat")]
         [Validation(Required=false)]
         public string FileFormat { get; set; }
+
+        [NameInMap("NodeGroupIds")]
+        [Validation(Required=false)]
+        public List<string> NodeGroupIds { get; set; }
+
+        [NameInMap("NodeIds")]
+        [Validation(Required=false)]
+        public List<string> NodeIds { get; set; }
 
         /// <summary>
         /// <para>区域ID。</para>

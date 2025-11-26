@@ -1690,6 +1690,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await DeleteUsersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出应用服务配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportApplicationConfigsRequest
         /// </param>
@@ -1712,6 +1717,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             {
                 query["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigScope))
+            {
+                query["ConfigScope"] = request.ConfigScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportMode))
             {
                 query["ExportMode"] = request.ExportMode;
@@ -1719,6 +1728,14 @@ namespace AlibabaCloud.SDK.Emr20210320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFormat))
             {
                 query["FileFormat"] = request.FileFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupIds))
+            {
+                query["NodeGroupIds"] = request.NodeGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIds))
+            {
+                query["NodeIds"] = request.NodeIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1743,6 +1760,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<ExportApplicationConfigsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出应用服务配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportApplicationConfigsRequest
         /// </param>
@@ -1765,6 +1787,10 @@ namespace AlibabaCloud.SDK.Emr20210320
             {
                 query["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigScope))
+            {
+                query["ConfigScope"] = request.ConfigScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportMode))
             {
                 query["ExportMode"] = request.ExportMode;
@@ -1772,6 +1798,14 @@ namespace AlibabaCloud.SDK.Emr20210320
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFormat))
             {
                 query["FileFormat"] = request.FileFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupIds))
+            {
+                query["NodeGroupIds"] = request.NodeGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIds))
+            {
+                query["NodeIds"] = request.NodeIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1796,6 +1830,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<ExportApplicationConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出应用服务配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportApplicationConfigsRequest
         /// </param>
@@ -1809,6 +1848,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return ExportApplicationConfigsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出应用服务配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportApplicationConfigsRequest
         /// </param>
@@ -12124,6 +12168,154 @@ namespace AlibabaCloud.SDK.Emr20210320
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateClusterAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <param name="request">
+        /// UpdateClusterAutoRenewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateClusterAutoRenewResponse
+        /// </returns>
+        public UpdateClusterAutoRenewResponse UpdateClusterAutoRenewWithOptions(UpdateClusterAutoRenewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewInstances))
+            {
+                query["AutoRenewInstances"] = request.AutoRenewInstances;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterAutoRenew))
+            {
+                query["ClusterAutoRenew"] = request.ClusterAutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterAutoRenewDuration))
+            {
+                query["ClusterAutoRenewDuration"] = request.ClusterAutoRenewDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterAutoRenewDurationUnit))
+            {
+                query["ClusterAutoRenewDurationUnit"] = request.ClusterAutoRenewDurationUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewAllInstances))
+            {
+                query["RenewAllInstances"] = request.RenewAllInstances;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateClusterAutoRenew",
+                Version = "2021-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateClusterAutoRenewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// UpdateClusterAutoRenewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateClusterAutoRenewResponse
+        /// </returns>
+        public async Task<UpdateClusterAutoRenewResponse> UpdateClusterAutoRenewWithOptionsAsync(UpdateClusterAutoRenewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewInstances))
+            {
+                query["AutoRenewInstances"] = request.AutoRenewInstances;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterAutoRenew))
+            {
+                query["ClusterAutoRenew"] = request.ClusterAutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterAutoRenewDuration))
+            {
+                query["ClusterAutoRenewDuration"] = request.ClusterAutoRenewDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterAutoRenewDurationUnit))
+            {
+                query["ClusterAutoRenewDurationUnit"] = request.ClusterAutoRenewDurationUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenewAllInstances))
+            {
+                query["RenewAllInstances"] = request.RenewAllInstances;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateClusterAutoRenew",
+                Version = "2021-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateClusterAutoRenewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// UpdateClusterAutoRenewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateClusterAutoRenewResponse
+        /// </returns>
+        public UpdateClusterAutoRenewResponse UpdateClusterAutoRenew(UpdateClusterAutoRenewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateClusterAutoRenewWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// UpdateClusterAutoRenewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateClusterAutoRenewResponse
+        /// </returns>
+        public async Task<UpdateClusterAutoRenewResponse> UpdateClusterAutoRenewAsync(UpdateClusterAutoRenewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateClusterAutoRenewWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -42,7 +42,6 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// <para>The list of resource IDs. Number of array elements N Valid values: 1 to 1</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>

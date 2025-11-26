@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public List<ScalingPolicy> ScalingPolicies { get; set; }
 
+        [NameInMap("ScalingTimeZone")]
+        [Validation(Required=false)]
+        public string ScalingTimeZone { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>

@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             [Validation(Required=false)]
             public string ClusterType { get; set; }
 
+            [NameInMap("CollationTimeZone")]
+            [Validation(Required=false)]
+            public CollationTimeZone CollationTimeZone { get; set; }
+
             /// <summary>
             /// <para>Indicates whether release protection is enabled for the cluster. Valid values:</para>
             /// <list type="bullet">

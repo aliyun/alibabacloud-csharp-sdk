@@ -126,6 +126,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 [Validation(Required=false)]
                 public int? AdjustmentValue { get; set; }
 
+                [NameInMap("CollationTimeZone")]
+                [Validation(Required=false)]
+                public CollationTimeZone CollationTimeZone { get; set; }
+
                 /// <summary>
                 /// <para>The description of load-based scaling.</para>
                 /// </summary>
