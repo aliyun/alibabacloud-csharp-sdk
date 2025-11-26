@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Polardb20170801</AssemblyName>
-    <Version>6.1.6</Version>
+    <Version>6.1.7</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud ApsaraDB for POLARDB (20170801) SDK Library for .NET</Description>

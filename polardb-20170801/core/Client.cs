@@ -24587,6 +24587,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBName"] = request.DBName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtensionName))
+            {
+                query["ExtensionName"] = request.ExtensionName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -24648,6 +24652,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
             {
                 query["DBName"] = request.DBName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtensionName))
+            {
+                query["ExtensionName"] = request.ExtensionName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {

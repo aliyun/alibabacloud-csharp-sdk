@@ -47,10 +47,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Extensions { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="mailto:test@example.com">test@example.com</a></para>
+        /// </summary>
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1234567890123456</para>
+        /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -71,10 +79,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="mailto:test@example.com">test@example.com</a></para>
+        /// </summary>
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1234567890123456</para>
+        /// </summary>
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
