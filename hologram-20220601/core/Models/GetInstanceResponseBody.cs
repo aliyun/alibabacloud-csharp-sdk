@@ -228,6 +228,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             [Validation(Required=false)]
             public string EnableHiveAccess { get; set; }
 
+            [NameInMap("EnableSSL")]
+            [Validation(Required=false)]
+            public bool? EnableSSL { get; set; }
+
             /// <summary>
             /// <para>EnableServerless</para>
             /// 
