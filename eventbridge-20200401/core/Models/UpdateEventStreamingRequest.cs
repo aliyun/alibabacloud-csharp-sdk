@@ -2315,6 +2315,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             }
 
+            [NameInMap("SinkOSSParameters")]
+            [Validation(Required=false)]
+            public SinkOSSParameters SinkOSSParameters { get; set; }
+
             /// <summary>
             /// <para>The parameters that are configured if you specify open source RabbitMQ as the event target.</para>
             /// </summary>
@@ -5063,6 +5067,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string VpcId { get; set; }
 
             }
+
+            [NameInMap("SourcePostgreSQLParameters")]
+            [Validation(Required=false)]
+            public SourcePostgreSQLParameters SourcePostgreSQLParameters { get; set; }
 
             /// <summary>
             /// <para>The parameters that are configured if you specify Managed Service for Prometheus as the event source.</para>
