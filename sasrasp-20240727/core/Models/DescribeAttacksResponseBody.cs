@@ -95,6 +95,22 @@ namespace AlibabaCloud.SDK.SasRasp20240727.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
+            [NameInMap("HandleStatus")]
+            [Validation(Required=false)]
+            public int? HandleStatus { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1758607200</para>
+            /// </summary>
+            [NameInMap("HandleTimestamp")]
+            [Validation(Required=false)]
+            public long? HandleTimestamp { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>{\&quot;X-Total-Count\&quot;: 1}</para>
             /// </summary>
             [NameInMap("Headers")]
