@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class NotifyStrategyForModify : TeaModel {
+        [NameInMap("autoRecoverSeconds")]
+        [Validation(Required=false)]
+        public int? AutoRecoverSeconds { get; set; }
+
         [NameInMap("customTemplateEntries")]
         [Validation(Required=false)]
         public List<NotifyStrategyForModifyCustomTemplateEntries> CustomTemplateEntries { get; set; }
@@ -32,6 +36,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("enableIncidentManagement")]
+        [Validation(Required=false)]
+        public bool? EnableIncidentManagement { get; set; }
+
+        [NameInMap("escalationId")]
+        [Validation(Required=false)]
+        public List<string> EscalationId { get; set; }
+
+        [NameInMap("filterSetting")]
+        [Validation(Required=false)]
+        public FilterSetting FilterSetting { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -68,6 +84,38 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("notifyStrategyName")]
         [Validation(Required=false)]
         public string NotifyStrategyName { get; set; }
+
+        [NameInMap("pushingSetting")]
+        [Validation(Required=false)]
+        public NotifyStrategyForModifyPushingSetting PushingSetting { get; set; }
+        public class NotifyStrategyForModifyPushingSetting : TeaModel {
+            [NameInMap("alertActionIds")]
+            [Validation(Required=false)]
+            public List<string> AlertActionIds { get; set; }
+
+            [NameInMap("restoreActionIds")]
+            [Validation(Required=false)]
+            public List<string> RestoreActionIds { get; set; }
+
+            [NameInMap("templateUuid")]
+            [Validation(Required=false)]
+            public string TemplateUuid { get; set; }
+
+        }
+
+        [NameInMap("repeatNotifySetting")]
+        [Validation(Required=false)]
+        public NotifyStrategyForModifyRepeatNotifySetting RepeatNotifySetting { get; set; }
+        public class NotifyStrategyForModifyRepeatNotifySetting : TeaModel {
+            [NameInMap("endIncidentState")]
+            [Validation(Required=false)]
+            public string EndIncidentState { get; set; }
+
+            [NameInMap("repeatInterval")]
+            [Validation(Required=false)]
+            public int? RepeatInterval { get; set; }
+
+        }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -131,6 +179,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<string> Severities { get; set; }
 
         }
+
+        [NameInMap("workspaceFilterSetting")]
+        [Validation(Required=false)]
+        public WorkspaceFilterSetting WorkspaceFilterSetting { get; set; }
 
     }
 

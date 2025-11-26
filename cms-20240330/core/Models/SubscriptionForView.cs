@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string SubscriptionName { get; set; }
 
+        [NameInMap("syncFromType")]
+        [Validation(Required=false)]
+        public string SyncFromType { get; set; }
+
         [NameInMap("updateTime")]
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
