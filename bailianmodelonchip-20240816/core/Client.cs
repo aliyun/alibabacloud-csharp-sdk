@@ -169,6 +169,136 @@ namespace AlibabaCloud.SDK.BailianModelOnChip20240816
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>主动交互消息生成eu</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveInteractionEuCreateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveInteractionEuCreateResponse
+        /// </returns>
+        public ActiveInteractionEuCreateResponse ActiveInteractionEuCreateWithOptions(ActiveInteractionEuCreateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Image))
+            {
+                body["image"] = request.Image;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ActiveInteractionEuCreate",
+                Version = "2024-08-16",
+                Protocol = "HTTPS",
+                Pathname = "/open/api/eu/active/interaction/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ActiveInteractionEuCreateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>主动交互消息生成eu</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveInteractionEuCreateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveInteractionEuCreateResponse
+        /// </returns>
+        public async Task<ActiveInteractionEuCreateResponse> ActiveInteractionEuCreateWithOptionsAsync(ActiveInteractionEuCreateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Image))
+            {
+                body["image"] = request.Image;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ActiveInteractionEuCreate",
+                Version = "2024-08-16",
+                Protocol = "HTTPS",
+                Pathname = "/open/api/eu/active/interaction/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ActiveInteractionEuCreateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>主动交互消息生成eu</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveInteractionEuCreateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveInteractionEuCreateResponse
+        /// </returns>
+        public ActiveInteractionEuCreateResponse ActiveInteractionEuCreate(ActiveInteractionEuCreateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ActiveInteractionEuCreateWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>主动交互消息生成eu</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActiveInteractionEuCreateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActiveInteractionEuCreateResponse
+        /// </returns>
+        public async Task<ActiveInteractionEuCreateResponse> ActiveInteractionEuCreateAsync(ActiveInteractionEuCreateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ActiveInteractionEuCreateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>设备注册</para>
         /// </summary>
         /// 
@@ -647,6 +777,152 @@ namespace AlibabaCloud.SDK.BailianModelOnChip20240816
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ModelTypeDetermineWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>音频-供机械臂调用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OmniRealtimeConversationEURequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OmniRealtimeConversationEUResponse
+        /// </returns>
+        public OmniRealtimeConversationEUResponse OmniRealtimeConversationEUWithOptions(OmniRealtimeConversationEURequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputAudio))
+            {
+                body["inputAudio"] = request.InputAudio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrompt))
+            {
+                body["userPrompt"] = request.UserPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
+            {
+                body["voice"] = request.Voice;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OmniRealtimeConversationEU",
+                Version = "2024-08-16",
+                Protocol = "HTTPS",
+                Pathname = "/open/api/eu/active/interaction/audio",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OmniRealtimeConversationEUResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>音频-供机械臂调用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OmniRealtimeConversationEURequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OmniRealtimeConversationEUResponse
+        /// </returns>
+        public async Task<OmniRealtimeConversationEUResponse> OmniRealtimeConversationEUWithOptionsAsync(OmniRealtimeConversationEURequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputAudio))
+            {
+                body["inputAudio"] = request.InputAudio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrompt))
+            {
+                body["userPrompt"] = request.UserPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
+            {
+                body["voice"] = request.Voice;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OmniRealtimeConversationEU",
+                Version = "2024-08-16",
+                Protocol = "HTTPS",
+                Pathname = "/open/api/eu/active/interaction/audio",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OmniRealtimeConversationEUResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>音频-供机械臂调用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OmniRealtimeConversationEURequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OmniRealtimeConversationEUResponse
+        /// </returns>
+        public OmniRealtimeConversationEUResponse OmniRealtimeConversationEU(OmniRealtimeConversationEURequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return OmniRealtimeConversationEUWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>音频-供机械臂调用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OmniRealtimeConversationEURequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OmniRealtimeConversationEUResponse
+        /// </returns>
+        public async Task<OmniRealtimeConversationEUResponse> OmniRealtimeConversationEUAsync(OmniRealtimeConversationEURequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await OmniRealtimeConversationEUWithOptionsAsync(request, headers, runtime);
         }
 
     }
