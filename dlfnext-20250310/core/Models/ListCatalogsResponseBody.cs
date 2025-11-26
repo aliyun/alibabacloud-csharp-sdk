@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string NextPageToken { get; set; }
 
+        [NameInMap("prepayResource")]
+        [Validation(Required=false)]
+        public List<PrepayResource> PrepayResource { get; set; }
+
     }
 
 }

@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Database { get; set; }
 
+        [NameInMap("expireTime")]
+        [Validation(Required=false)]
+        public string ExpireTime { get; set; }
+
         [NameInMap("function")]
         [Validation(Required=false)]
         public string Function { get; set; }
