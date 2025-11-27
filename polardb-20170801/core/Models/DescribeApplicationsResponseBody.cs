@@ -43,6 +43,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>pc-xxxxxx</para>
+                /// </summary>
+                [NameInMap("DBClusterId")]
+                [Validation(Required=false)]
+                public string DBClusterId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>myapp</para>
                 /// </summary>
                 [NameInMap("Description")]
