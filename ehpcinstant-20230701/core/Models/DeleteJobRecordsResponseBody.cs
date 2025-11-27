@@ -8,17 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
-    public class CreateActionPlanResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The ID of the execution plan.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ap-hz036ubmx2qmw93k****</para>
-        /// </summary>
-        [NameInMap("ActionPlanId")]
-        [Validation(Required=false)]
-        public string ActionPlanId { get; set; }
-
+    public class DeleteJobRecordsResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
         /// 

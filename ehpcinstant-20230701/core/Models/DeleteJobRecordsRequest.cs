@@ -8,16 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
-    public class GetActionPlanRequest : TeaModel {
+    public class DeleteJobRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the execution plan.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ap-hz036ubmx2qmw93k****</para>
+        /// <para>The list of job IDs.</para>
         /// </summary>
-        [NameInMap("ActionPlanId")]
+        [NameInMap("JobIds")]
         [Validation(Required=false)]
-        public string ActionPlanId { get; set; }
+        public List<string> JobIds { get; set; }
 
     }
 

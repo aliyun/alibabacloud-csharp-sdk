@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class RemoveImageResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>896D338C-E4F4-41EC-A154-D605E5DE****</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

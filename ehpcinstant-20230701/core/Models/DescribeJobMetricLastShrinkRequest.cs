@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class DescribeJobMetricLastShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of array job indexes.</para>
+        /// </summary>
         [NameInMap("ArrayIndex")]
         [Validation(Required=false)]
         public string ArrayIndexShrink { get; set; }
 
         /// <summary>
+        /// <para>The job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>job-xxxxx</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The name of the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Task0</para>
         /// </summary>

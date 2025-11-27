@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class ListActionPlansShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The IDs of the execution plans to be queried.</para>
+        /// </summary>
         [NameInMap("ActionPlanIds")]
         [Validation(Required=false)]
         public string ActionPlanIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries per page.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -22,6 +29,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>A pagination token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1d2db86scXXXXXXXXXX</para>
         /// </summary>

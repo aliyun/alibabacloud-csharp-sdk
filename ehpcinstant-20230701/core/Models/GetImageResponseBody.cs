@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class GetImageResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the image.</para>
+        /// </summary>
         [NameInMap("Image")]
         [Validation(Required=false)]
         public GetImageResponseBodyImage Image { get; set; }
@@ -35,6 +38,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string AppId { get; set; }
 
+            /// <summary>
+            /// <para>The configuration details of the container image.</para>
+            /// </summary>
             [NameInMap("ContainerImageSpec")]
             [Validation(Required=false)]
             public GetImageResponseBodyImageContainerImageSpec ContainerImageSpec { get; set; }
@@ -44,6 +50,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string Architecture { get; set; }
 
                 /// <summary>
+                /// <para>Whether the instance is an Alibaba Cloud image repository Enterprise Edition.</para>
+                /// <list type="bullet">
+                /// <item><description>True</description></item>
+                /// <item><description>False</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -52,6 +64,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public bool? IsACREnterprise { get; set; }
 
                 /// <summary>
+                /// <para>Whether it is an Alibaba Cloud image repository.</para>
+                /// <list type="bullet">
+                /// <item><description>True</description></item>
+                /// <item><description>False</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -67,11 +85,16 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 [Validation(Required=false)]
                 public string Platform { get; set; }
 
+                /// <summary>
+                /// <para>The authentication of the private image repository.</para>
+                /// </summary>
                 [NameInMap("RegistryCredential")]
                 [Validation(Required=false)]
                 public GetImageResponseBodyImageContainerImageSpecRegistryCredential RegistryCredential { get; set; }
                 public class GetImageResponseBodyImageContainerImageSpecRegistryCredential : TeaModel {
                     /// <summary>
+                    /// <para>The password of the logon user.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>userpassword</para>
                     /// </summary>
@@ -80,6 +103,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     public string Password { get; set; }
 
                     /// <summary>
+                    /// <para>The registered address of the image repository.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>registry-vpc.cn-hangzhou.aliyuncs.com</para>
                     /// </summary>
@@ -88,6 +113,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                     public string Server { get; set; }
 
                     /// <summary>
+                    /// <para>The username of the logon user.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>username</para>
                     /// </summary>
@@ -98,6 +125,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 }
 
                 /// <summary>
+                /// <para>The ID of the Container Registry Enterprise Edition image repository.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cri-xyz795ygf8k9****</para>
                 /// </summary>
@@ -106,6 +135,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string RegistryCriId { get; set; }
 
                 /// <summary>
+                /// <para>The endpoint of the container image.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc_open/nginx:latest</para>
                 /// </summary>
@@ -116,6 +147,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             }
 
             /// <summary>
+            /// <para>The time when the image was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-12-23T09:51:39Z</para>
             /// </summary>
@@ -123,6 +156,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The description of the image.</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -146,6 +182,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             }
 
             /// <summary>
+            /// <para>The type of the image.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -156,6 +193,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string ImageType { get; set; }
 
             /// <summary>
+            /// <para>The name of the image.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>app-image</para>
             /// </summary>
@@ -164,6 +203,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The size of the image. Unit: GiB.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>40 GiB</para>
             /// </summary>
@@ -175,11 +216,16 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The configuration details of the virtual machine image.</para>
+            /// </summary>
             [NameInMap("VMImageSpec")]
             [Validation(Required=false)]
             public GetImageResponseBodyImageVMImageSpec VMImageSpec { get; set; }
             public class GetImageResponseBodyImageVMImageSpec : TeaModel {
                 /// <summary>
+                /// <para>The type of the architecture.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>x86_64</para>
                 /// </summary>
@@ -188,6 +234,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string Architecture { get; set; }
 
                 /// <summary>
+                /// <para>The image ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>m-uf60twafjtaart******</para>
                 /// </summary>
@@ -196,6 +244,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string ImageId { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the specific OS version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>CentOS  7.6 64 bit</para>
                 /// </summary>
@@ -204,6 +254,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string OsTag { get; set; }
 
                 /// <summary>
+                /// <para>The type of the platform.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>CentOS</para>
                 /// </summary>
@@ -214,6 +266,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             }
 
             /// <summary>
+            /// <para>The version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>v1.0</para>
             /// </summary>
@@ -224,6 +278,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
@@ -232,6 +288,12 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The task is successful.</description></item>
+        /// <item><description>false: The error occurred.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -240,6 +302,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total amount of data in this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

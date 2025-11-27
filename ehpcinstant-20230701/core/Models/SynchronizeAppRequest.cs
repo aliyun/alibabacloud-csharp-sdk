@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class SynchronizeAppRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +20,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// <para>The list of arrays that are synchronized to the specified region. If \&quot;all\&quot; is included, it is synchronized to all other unsynchronized regions by default.</para>
+        /// </summary>
         [NameInMap("TargetRegionIds")]
         [Validation(Required=false)]
         public List<string> TargetRegionIds { get; set; }

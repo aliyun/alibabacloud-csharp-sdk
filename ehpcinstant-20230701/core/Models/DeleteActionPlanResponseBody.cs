@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class DeleteActionPlanResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE7****</para>
         /// </summary>

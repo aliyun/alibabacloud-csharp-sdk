@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class ListActionPlanActivitiesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the execution plan.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ap-hz036ubmx2qmw93k****</para>
         /// </summary>
@@ -18,6 +20,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ActionPlanId { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries per page.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -26,6 +32,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>A pagination token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1d2db86scXXXXXXXXXX</para>
         /// </summary>

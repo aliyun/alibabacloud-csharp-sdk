@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class GetAppVersionsRequest : TeaModel {
         /// <summary>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The source of the image. Valid values:</para>
+        /// <para>Public: public images provided by Alibaba Cloud.</para>
+        /// <para>Custom: the custom image that you added.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Public</para>
         /// </summary>
@@ -28,6 +33,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ImageCategory { get; set; }
 
         /// <summary>
+        /// <para>The type of the images. Valid values:</para>
+        /// <para>VM: Virtual Machine Image</para>
+        /// <para>Container: container image</para>
+        /// 
         /// <b>Example:</b>
         /// <para>VM</para>
         /// </summary>
@@ -36,6 +45,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string ImageType { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -44,6 +55,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

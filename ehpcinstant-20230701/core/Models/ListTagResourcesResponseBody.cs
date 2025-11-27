@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1d2db86scXXXXXXXXXX</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE7****</para>
         /// </summary>
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The resource list.</para>
+        /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyTagResources TagResources { get; set; }
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
                 /// <summary>
+                /// <para>The ID of the resource.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>job-xxxxxxxx</para>
                 /// </summary>
@@ -42,6 +51,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
+                /// <para>The type of the resource.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Job</para>
                 /// </summary>
@@ -50,6 +61,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
+                /// <para>The key of the tag that is added to the resource.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
                 /// </summary>
@@ -58,6 +71,8 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
+                /// <para>The value of the tag.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>
                 /// </summary>
