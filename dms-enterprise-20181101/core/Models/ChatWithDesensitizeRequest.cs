@@ -11,11 +11,35 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
     public class ChatWithDesensitizeRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("AudioJson")]
+        [Validation(Required=false)]
+        public string AudioJson { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>UserInfo</para>
         /// </summary>
         [NameInMap("DesensitizationRule")]
         [Validation(Required=false)]
         public string DesensitizationRule { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("EnableCodeInterpreter")]
+        [Validation(Required=false)]
+        public bool? EnableCodeInterpreter { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("EnableSearch")]
+        [Validation(Required=false)]
+        public bool? EnableSearch { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -37,6 +61,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("Logprobs")]
+        [Validation(Required=false)]
+        public bool? Logprobs { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>256</para>
         /// </summary>
         [NameInMap("MaxTokens")]
@@ -44,8 +76,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public int? MaxTokens { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>[
         ///     {
@@ -56,7 +86,15 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// </summary>
         [NameInMap("Messages")]
         [Validation(Required=false)]
-        public List<Dictionary<string, object>> Messages { get; set; }
+        public List<object> Messages { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[&quot;text&quot;,&quot;audio&quot;]</para>
+        /// </summary>
+        [NameInMap("ModalitiesList")]
+        [Validation(Required=false)]
+        public List<string> ModalitiesList { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -80,7 +118,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// </summary>
         [NameInMap("PresencePenalty")]
         [Validation(Required=false)]
-        public float? PresencePenalty { get; set; }
+        public string PresencePenalty { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -89,6 +127,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("ResponseFormat")]
         [Validation(Required=false)]
         public string ResponseFormat { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("SearchOptions")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> SearchOptions { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -108,7 +154,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// </summary>
         [NameInMap("Temperature")]
         [Validation(Required=false)]
-        public float? Temperature { get; set; }
+        public string Temperature { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -140,7 +186,23 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// </summary>
         [NameInMap("TopP")]
         [Validation(Required=false)]
-        public float? TopP { get; set; }
+        public string TopP { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("VlHighResolutionImages")]
+        [Validation(Required=false)]
+        public bool? VlHighResolutionImages { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("XDashScopeDataInspection")]
+        [Validation(Required=false)]
+        public string XDashScopeDataInspection { get; set; }
 
     }
 

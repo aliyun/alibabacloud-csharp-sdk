@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string FinishReason { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>{}</para>
+                /// </summary>
+                [NameInMap("Logprobs")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> Logprobs { get; set; }
+
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public ChatWithDesensitizeResponseBodyDataChoicesMessage Message { get; set; }
@@ -65,6 +73,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public string Created { get; set; }
 
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>qwen-plus</para>
@@ -72,6 +84,18 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [NameInMap("Model")]
             [Validation(Required=false)]
             public string Model { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>200</para>
+            /// </summary>
+            [NameInMap("StatusCode")]
+            [Validation(Required=false)]
+            public string StatusCode { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
 
             [NameInMap("Usage")]
             [Validation(Required=false)]
@@ -87,11 +111,27 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>{}</para>
+                /// </summary>
+                [NameInMap("CompletionTokensDetails")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> CompletionTokensDetails { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>9</para>
                 /// </summary>
                 [NameInMap("PromptTokens")]
                 [Validation(Required=false)]
                 public string PromptTokens { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>{}</para>
+                /// </summary>
+                [NameInMap("PromptTokensDetails")]
+                [Validation(Required=false)]
+                public Dictionary<string, string> PromptTokensDetails { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -122,6 +162,8 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0C1CB646-1DE4-4AD0-B4A4-7D47DD52E931</para>
         /// </summary>
