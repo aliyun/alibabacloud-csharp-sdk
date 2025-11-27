@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public CredentialConfiguration CredentialConfiguration { get; set; }
 
+        [NameInMap("description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("diskSize")]
         [Validation(Required=false)]
         public int? DiskSize { get; set; }

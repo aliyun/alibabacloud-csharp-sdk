@@ -49,6 +49,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string SearchMode { get; set; }
 
+        /// <summary>
+        /// <para>根据状态进行过滤，多个状态用逗号分隔，支持精确匹配</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>READY,CREATING</para>
+        /// </summary>
+        [NameInMap("status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
     }
 
 }

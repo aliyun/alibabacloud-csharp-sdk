@@ -34,6 +34,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string Prefix { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ch-hangzhou</para>
+        /// </summary>
+        [NameInMap("region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
     }
 
 }
