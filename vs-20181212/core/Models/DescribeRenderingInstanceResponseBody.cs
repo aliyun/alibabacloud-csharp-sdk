@@ -213,6 +213,44 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("ResourceAttributes")]
+        [Validation(Required=false)]
+        public DescribeRenderingInstanceResponseBodyResourceAttributes ResourceAttributes { get; set; }
+        public class DescribeRenderingInstanceResponseBodyResourceAttributes : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ON</para>
+            /// </summary>
+            [NameInMap("EdgeMediaService")]
+            [Validation(Required=false)]
+            public string EdgeMediaService { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ON</para>
+            /// </summary>
+            [NameInMap("InAccess")]
+            [Validation(Required=false)]
+            public string InAccess { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ON</para>
+            /// </summary>
+            [NameInMap("OutAccess")]
+            [Validation(Required=false)]
+            public string OutAccess { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Public</para>
+            /// </summary>
+            [NameInMap("Zone")]
+            [Validation(Required=false)]
+            public string Zone { get; set; }
+
+        }
+
         [NameInMap("StorageSize")]
         [Validation(Required=false)]
         public int? StorageSize { get; set; }
