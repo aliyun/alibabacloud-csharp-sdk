@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [Validation(Required=false)]
             public string CertificateType { get; set; }
 
+            [NameInMap("ClusterId")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
             /// <summary>
             /// <para>The common name or abbreviation of the organization that is associated with the CA certificate.</para>
             /// 
@@ -181,6 +185,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [NameInMap("IssuerType")]
             [Validation(Required=false)]
             public string IssuerType { get; set; }
+
+            [NameInMap("KeyIndex")]
+            [Validation(Required=false)]
+            public int? KeyIndex { get; set; }
 
             /// <summary>
             /// <para>The key length of the CA certificate.</para>
