@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class ModifyOrgRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the organization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string OrgId { get; set; }
 
         /// <summary>
+        /// <para>The name of the organization.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OrgName")]

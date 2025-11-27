@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class ModifyGroupRequest : TeaModel {
+        /// <summary>
+        /// <para>The new description of the user group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestGroup</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +31,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The name of the new user group.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NewGroupName")]

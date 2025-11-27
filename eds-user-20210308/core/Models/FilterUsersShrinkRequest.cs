@@ -78,14 +78,23 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public bool? IncludeDesktopGroupCount { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to return the organization information.</para>
+        /// </summary>
         [NameInMap("IncludeOrgInfo")]
         [Validation(Required=false)]
         public bool? IncludeOrgInfo { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to return the supported logon types.</para>
+        /// </summary>
         [NameInMap("IncludeSupportIdps")]
         [Validation(Required=false)]
         public bool? IncludeSupportIdps { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to query all sub-organizations.</para>
+        /// </summary>
         [NameInMap("IsQueryAllSubOrgs")]
         [Validation(Required=false)]
         public bool? IsQueryAllSubOrgs { get; set; }
@@ -200,6 +209,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         }
 
+        /// <summary>
+        /// <para>The status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public int? Status { get; set; }

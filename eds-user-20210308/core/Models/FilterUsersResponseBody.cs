@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The convenience accounts.</para>
+        /// <para>The information about the convenience accounts.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
@@ -141,6 +141,20 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             }
 
+            [NameInMap("Groups")]
+            [Validation(Required=false)]
+            public List<FilterUsersResponseBodyUsersGroups> Groups { get; set; }
+            public class FilterUsersResponseBodyUsersGroups : TeaModel {
+                [NameInMap("GroupId")]
+                [Validation(Required=false)]
+                public string GroupId { get; set; }
+
+                [NameInMap("GroupName")]
+                [Validation(Required=false)]
+                public string GroupName { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The ID of the convenience user.</para>
             /// 
@@ -177,18 +191,30 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public bool? IsTenantManager { get; set; }
 
+            /// <summary>
+            /// <para>The organizations to which the user belongs.</para>
+            /// </summary>
             [NameInMap("OrgList")]
             [Validation(Required=false)]
             public List<FilterUsersResponseBodyUsersOrgList> OrgList { get; set; }
             public class FilterUsersResponseBodyUsersOrgList : TeaModel {
+                /// <summary>
+                /// <para>The organization ID.</para>
+                /// </summary>
                 [NameInMap("OrgId")]
                 [Validation(Required=false)]
                 public string OrgId { get; set; }
 
+                /// <summary>
+                /// <para>The organization name.</para>
+                /// </summary>
                 [NameInMap("OrgName")]
                 [Validation(Required=false)]
                 public string OrgName { get; set; }
 
+                /// <summary>
+                /// <para>The organization name path.</para>
+                /// </summary>
                 [NameInMap("OrgNamePath")]
                 [Validation(Required=false)]
                 public string OrgNamePath { get; set; }
@@ -278,14 +304,23 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public long? Status { get; set; }
 
+            /// <summary>
+            /// <para>The supported identity provider logon methods.</para>
+            /// </summary>
             [NameInMap("SupportLoginIdps")]
             [Validation(Required=false)]
             public List<FilterUsersResponseBodyUsersSupportLoginIdps> SupportLoginIdps { get; set; }
             public class FilterUsersResponseBodyUsersSupportLoginIdps : TeaModel {
+                /// <summary>
+                /// <para>The enterprise identity provider ID.</para>
+                /// </summary>
                 [NameInMap("IdpId")]
                 [Validation(Required=false)]
                 public string IdpId { get; set; }
 
+                /// <summary>
+                /// <para>The enterprise identity provider name.</para>
+                /// </summary>
                 [NameInMap("IdpName")]
                 [Validation(Required=false)]
                 public string IdpName { get; set; }

@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public int? ConsecutiveFails { get; set; }
 
             /// <summary>
-            /// <para>The type of the virtual MFA device. The value can only be TOTP_VIRTUAL. This value indicates that the virtual MFA device follows the Time-based One-time Password (TOTP) algorithm.</para>
+            /// <para>The type of the virtual MFA device. The value can only be <c>TOTP_VIRTUAL</c>. This value indicates that the virtual MFA device follows the Time-based One-time Password (TOTP) algorithm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TOTP_VIRTUAL</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The username of the convenience user that uses the virtual MFA device.</para>
+            /// <para>The username of the convenience account that uses the virtual MFA device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// <para>The time when the virtual MFA device was enabled. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the virtual MFA device was enabled. The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-22T06:20:49Z</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string GmtEnabled { get; set; }
 
             /// <summary>
-            /// <para>The time when the locked virtual MFA device was automatically unlocked. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the locked virtual MFA device was automatically unlocked. The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-23T06:20:49Z</para>
@@ -101,9 +101,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string GmtUnlock { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para> This parameter is not publicly available.</para>
-            /// </remarks>
+            /// <para>The ID of the virtual MFA device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>36</para>
@@ -113,7 +111,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The serial number of the virtual MFA device. The serial number is unique for each device.</para>
+            /// <para>The serial number of the virtual MFA device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dc856334-446b-4035-bfbc-18af261e****</para>

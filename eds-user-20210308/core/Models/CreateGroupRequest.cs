@@ -17,6 +17,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string BizType { get; set; }
 
+        /// <summary>
+        /// <para>The description of the user group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestGroup</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -26,6 +32,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string GroupName { get; set; }
 
         /// <summary>
+        /// <remarks>
+        /// <para>This parameter is not publicly available.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>root</para>
         /// </summary>
@@ -34,6 +44,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string ParentGroupId { get; set; }
 
         /// <summary>
+        /// <remarks>
+        /// <para>This parameter is not publicly available.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>co-0esnf80jab***</para>
         /// </summary>

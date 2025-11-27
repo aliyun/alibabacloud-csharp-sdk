@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeMfaDevicesRequest : TeaModel {
         /// <summary>
-        /// <para>The domain of the Active Directory (AD) workspace.</para>
+        /// <para>The address of the AD office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn.misumi.pri</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string AdDomain { get; set; }
 
         /// <summary>
-        /// <para>The usernames of the convenience users.</para>
+        /// <para>The usernames of the convenience accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

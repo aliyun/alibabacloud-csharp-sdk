@@ -39,8 +39,13 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置桌面管理员</para>
+        /// <para>Grants or revokes the local administrator permissions on cloud computers for convenience accounts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Convenience accounts with the local administrator permissions on cloud computers can install software and modify system settings on cloud computers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchSetDesktopManagerRequest
@@ -85,8 +90,13 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置桌面管理员</para>
+        /// <para>Grants or revokes the local administrator permissions on cloud computers for convenience accounts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Convenience accounts with the local administrator permissions on cloud computers can install software and modify system settings on cloud computers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchSetDesktopManagerRequest
@@ -131,8 +141,13 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置桌面管理员</para>
+        /// <para>Grants or revokes the local administrator permissions on cloud computers for convenience accounts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Convenience accounts with the local administrator permissions on cloud computers can install software and modify system settings on cloud computers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchSetDesktopManagerRequest
@@ -149,8 +164,13 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量设置桌面管理员</para>
+        /// <para>Grants or revokes the local administrator permissions on cloud computers for convenience accounts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Convenience accounts with the local administrator permissions on cloud computers can install software and modify system settings on cloud computers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchSetDesktopManagerRequest
@@ -563,7 +583,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建角色.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -621,7 +641,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建角色.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -679,7 +699,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建角色.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -697,7 +717,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建角色.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -715,7 +735,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建组织</para>
+        /// <para>Creates an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -761,7 +781,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建组织</para>
+        /// <para>Creates an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -807,7 +827,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建组织</para>
+        /// <para>Creates an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -825,7 +845,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建组织</para>
+        /// <para>Creates an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -971,7 +991,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源组</para>
+        /// <para>Creates a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1021,7 +1041,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源组</para>
+        /// <para>Creates a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1071,7 +1091,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源组</para>
+        /// <para>Creates a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1089,7 +1109,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资源组</para>
+        /// <para>Creates a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1567,7 +1587,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全量同步初始化</para>
+        /// <para>Queries the members of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1629,7 +1649,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全量同步初始化</para>
+        /// <para>Queries the members of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1691,7 +1711,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全量同步初始化</para>
+        /// <para>Queries the members of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1709,7 +1729,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全量同步初始化</para>
+        /// <para>Queries the members of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1727,7 +1747,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全量同步初始化.</para>
+        /// <para>Queries user groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1759,6 +1779,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
                 query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdpId))
+            {
+                query["IdpId"] = request.IdpId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginPolicyId))
             {
@@ -1801,7 +1825,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全量同步初始化.</para>
+        /// <para>Queries user groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1833,6 +1857,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
                 query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdpId))
+            {
+                query["IdpId"] = request.IdpId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginPolicyId))
             {
@@ -1875,7 +1903,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全量同步初始化.</para>
+        /// <para>Queries user groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1893,7 +1921,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>全量同步初始化.</para>
+        /// <para>Queries user groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1911,7 +1939,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience users.</para>
+        /// <para>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1973,7 +2001,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience users.</para>
+        /// <para>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2035,7 +2063,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience users.</para>
+        /// <para>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2053,7 +2081,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience users.</para>
+        /// <para>Queries the information about virtual multi-factor authentication (MFA) devices that are bound to convenience accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2071,7 +2099,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查找下级组织</para>
+        /// <para>Queries subordinate organizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2117,7 +2145,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查找下级组织</para>
+        /// <para>Queries subordinate organizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2163,7 +2191,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查找下级组织</para>
+        /// <para>Queries subordinate organizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2181,7 +2209,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查找下级组织</para>
+        /// <para>Queries subordinate organizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2383,7 +2411,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看资源组</para>
+        /// <para>Queries resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2445,7 +2473,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看资源组</para>
+        /// <para>Queries resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2507,7 +2535,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看资源组</para>
+        /// <para>Queries resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2525,7 +2553,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看资源组</para>
+        /// <para>Queries resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3171,7 +3199,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>初始化TenantAlias</para>
+        /// <para>Initializes an organization ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3204,7 +3232,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>初始化TenantAlias</para>
+        /// <para>Initializes an organization ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3237,7 +3265,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>初始化TenantAlias</para>
+        /// <para>Initializes an organization ID.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3251,7 +3279,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>初始化TenantAlias</para>
+        /// <para>Initializes an organization ID.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3759,7 +3787,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改角色.</para>
+        /// <para>Modifies the name and description of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3809,7 +3837,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改角色.</para>
+        /// <para>Modifies the name and description of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3859,7 +3887,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改角色.</para>
+        /// <para>Modifies the name and description of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3877,7 +3905,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改角色.</para>
+        /// <para>Modifies the name and description of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3895,7 +3923,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改组织</para>
+        /// <para>Modifies an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3941,7 +3969,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改组织</para>
+        /// <para>Modifies an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3987,7 +4015,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改组织</para>
+        /// <para>Modifies an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4005,7 +4033,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改组织</para>
+        /// <para>Modifies an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4159,7 +4187,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动组织</para>
+        /// <para>Moves an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4205,7 +4233,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动组织</para>
+        /// <para>Moves an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4251,7 +4279,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动组织</para>
+        /// <para>Moves an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4269,7 +4297,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动组织</para>
+        /// <para>Moves an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4287,7 +4315,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动用户组织</para>
+        /// <para>Moves users to a specific organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4333,7 +4361,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动用户组织</para>
+        /// <para>Moves users to a specific organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4379,7 +4407,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动用户组织</para>
+        /// <para>Moves users to a specific organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4397,7 +4425,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动用户组织</para>
+        /// <para>Moves users to a specific organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4509,7 +4537,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除角色.</para>
+        /// <para>Deletes a single user group or multiple user groups at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4555,7 +4583,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除角色.</para>
+        /// <para>Deletes a single user group or multiple user groups at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4601,7 +4629,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除角色.</para>
+        /// <para>Deletes a single user group or multiple user groups at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4619,7 +4647,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除角色.</para>
+        /// <para>Deletes a single user group or multiple user groups at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4637,12 +4665,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// <para>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.</para>
+        /// <para>If you remove a virtual MFA device that is bound to a convenience account, the convenience account can no longer use the virtual MFA device to log on to cloud computers. Before the convenience account can log on to Alibaba Cloud Workspace terminals again, a new virtual MFA device must be bound to the convenience account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4688,12 +4716,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// <para>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.</para>
+        /// <para>If you remove a virtual MFA device that is bound to a convenience account, the convenience account can no longer use the virtual MFA device to log on to cloud computers. Before the convenience account can log on to Alibaba Cloud Workspace terminals again, a new virtual MFA device must be bound to the convenience account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4739,12 +4767,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// <para>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.</para>
+        /// <para>If you remove a virtual MFA device that is bound to a convenience account, the convenience account can no longer use the virtual MFA device to log on to cloud computers. Before the convenience account can log on to Alibaba Cloud Workspace terminals again, a new virtual MFA device must be bound to the convenience account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4762,12 +4790,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience user.</para>
+        /// <para>Removes a virtual multi-factor authentication (MFA) device that is bound to a convenience account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you remove a virtual MFA device that is bound to a convenience user, the convenience user can no longer use the virtual MFA device to log on to cloud desktops. Before the convenience user can log on to cloud desktops again, a new virtual MFA device must be bound to the convenience user.</para>
+        /// <para>If you remove a virtual MFA device that is bound to a convenience account, the convenience account can no longer use the virtual MFA device to log on to cloud computers. Before the convenience account can log on to Alibaba Cloud Workspace terminals again, a new virtual MFA device must be bound to the convenience account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4785,7 +4813,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除组织</para>
+        /// <para>Removes an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4827,7 +4855,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除组织</para>
+        /// <para>Removes an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4869,7 +4897,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除组织</para>
+        /// <para>Removes an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4887,7 +4915,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除组织</para>
+        /// <para>Removes an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5907,7 +5935,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户批量分配角色</para>
+        /// <para>Add multiple users to a user group at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5953,7 +5981,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户批量分配角色</para>
+        /// <para>Add multiple users to a user group at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5999,7 +6027,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户批量分配角色</para>
+        /// <para>Add multiple users to a user group at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6017,7 +6045,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户批量分配角色</para>
+        /// <para>Add multiple users to a user group at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6035,7 +6063,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户批量移出角色</para>
+        /// <para>Removes multiple users from a user group at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6081,7 +6109,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户批量移出角色</para>
+        /// <para>Removes multiple users from a user group at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6127,7 +6155,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户批量移出角色</para>
+        /// <para>Removes multiple users from a user group at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6145,7 +6173,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用户批量移出角色</para>
+        /// <para>Removes multiple users from a user group at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">

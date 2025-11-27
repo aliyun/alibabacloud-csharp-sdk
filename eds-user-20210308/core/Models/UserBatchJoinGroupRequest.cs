@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class UserBatchJoinGroupRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of user IDs.</para>
+        /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
         public List<string> EndUserIds { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

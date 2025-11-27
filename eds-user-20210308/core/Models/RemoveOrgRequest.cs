@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class RemoveOrgRequest : TeaModel {
         /// <summary>
+        /// <para>The organization ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

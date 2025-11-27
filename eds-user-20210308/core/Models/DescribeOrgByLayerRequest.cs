@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeOrgByLayerRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the organization.</para>
+        /// </summary>
         [NameInMap("OrgName")]
         [Validation(Required=false)]
         public string OrgName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the parent organization.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>org-11fs****</para>
         /// </summary>

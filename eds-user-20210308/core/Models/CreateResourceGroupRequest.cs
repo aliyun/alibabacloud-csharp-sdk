@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CreateResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <remarks>
+        /// <para> This parameter is not publicly available.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +22,13 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? IsResourceGroupWithOfficeSite { get; set; }
 
         /// <summary>
+        /// <remarks>
+        /// <para> Set the value to AliyunConsole.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is not publicly available in other platforms.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>AliyunConsole</para>
         /// </summary>
@@ -25,6 +36,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string Platform { get; set; }
 
+        /// <summary>
+        /// <para>The name of the resource group.</para>
+        /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }

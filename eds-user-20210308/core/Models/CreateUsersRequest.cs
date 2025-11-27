@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public string EndUserId { get; set; }
 
+            [NameInMap("GroupIdList")]
+            [Validation(Required=false)]
+            public List<string> GroupIdList { get; set; }
+
             /// <summary>
             /// <para>The organization to which the convenience user belongs.</para>
             /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class RemoveMfaDeviceRequest : TeaModel {
         /// <summary>
-        /// <para>The domain of the Active Directory (AD) workspace.</para>
+        /// <para>The address of the AD office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alpha.lftltd.net</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string AdDomain { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the virtual MFA device. The serial number is unique for each device.</para>
+        /// <para>The serial number of the virtual MFA device. You can call the <a href="~~DescribeMfaDevices~~">DescribeMfaDevices</a> operation to get this information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class MoveUserOrgRequest : TeaModel {
         /// <summary>
+        /// <para>The user IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EndUserIds")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public List<string> EndUserIds { get; set; }
 
         /// <summary>
+        /// <para>The organization ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

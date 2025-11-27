@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The convenience accounts.</para>
+        /// <para>The information about the convenience accounts.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
@@ -66,6 +66,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public string Email { get; set; }
 
+            /// <summary>
+            /// <para>Enables the administrator permissions.</para>
+            /// </summary>
             [NameInMap("EnableAdminAccess")]
             [Validation(Required=false)]
             public bool? EnableAdminAccess { get; set; }
@@ -243,6 +246,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public string OwnerType { get; set; }
 
+            [NameInMap("PasswordExpireDays")]
+            [Validation(Required=false)]
+            public int? PasswordExpireDays { get; set; }
+
+            [NameInMap("PasswordExpireRestDays")]
+            [Validation(Required=false)]
+            public int? PasswordExpireRestDays { get; set; }
+
             /// <summary>
             /// <para>The mobile number of the convenience user. If you leave this parameter empty, the value of this parameter is not returned.</para>
             /// 
@@ -257,10 +268,18 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public List<DescribeUsersResponseBodyUsersProperties> Properties { get; set; }
             public class DescribeUsersResponseBodyUsersProperties : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Role</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Student</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
