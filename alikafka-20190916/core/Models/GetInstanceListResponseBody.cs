@@ -567,6 +567,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public string SaslEndPoint { get; set; }
 
+                [NameInMap("ScheduledRetirement")]
+                [Validation(Required=false)]
+                public bool? ScheduledRetirement { get; set; }
+
                 /// <summary>
                 /// <para>The security group to which the instance belongs.</para>
                 /// <list type="bullet">

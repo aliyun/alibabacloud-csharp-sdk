@@ -3631,6 +3631,438 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>降配后付费实例</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DowngradePostPayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradePostPayOrderResponse
+        /// </returns>
+        public DowngradePostPayOrderResponse DowngradePostPayOrderWithOptions(DowngradePostPayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DowngradePostPayOrderShrinkRequest request = new DowngradePostPayOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfig))
+            {
+                request.ServerlessConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfig, "ServerlessConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
+            {
+                query["DiskSize"] = request.DiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipMax))
+            {
+                query["EipMax"] = request.EipMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipModel))
+            {
+                query["EipModel"] = request.EipModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoMax))
+            {
+                query["IoMax"] = request.IoMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoMaxSpec))
+            {
+                query["IoMaxSpec"] = request.IoMaxSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
+            {
+                query["PartitionNum"] = request.PartitionNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessConfigShrink))
+            {
+                query["ServerlessConfig"] = request.ServerlessConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecType))
+            {
+                query["SpecType"] = request.SpecType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicQuota))
+            {
+                query["TopicQuota"] = request.TopicQuota;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DowngradePostPayOrder",
+                Version = "2019-09-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DowngradePostPayOrderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>降配后付费实例</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DowngradePostPayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradePostPayOrderResponse
+        /// </returns>
+        public async Task<DowngradePostPayOrderResponse> DowngradePostPayOrderWithOptionsAsync(DowngradePostPayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DowngradePostPayOrderShrinkRequest request = new DowngradePostPayOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ServerlessConfig))
+            {
+                request.ServerlessConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ServerlessConfig, "ServerlessConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
+            {
+                query["DiskSize"] = request.DiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipMax))
+            {
+                query["EipMax"] = request.EipMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipModel))
+            {
+                query["EipModel"] = request.EipModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoMax))
+            {
+                query["IoMax"] = request.IoMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoMaxSpec))
+            {
+                query["IoMaxSpec"] = request.IoMaxSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
+            {
+                query["PartitionNum"] = request.PartitionNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessConfigShrink))
+            {
+                query["ServerlessConfig"] = request.ServerlessConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecType))
+            {
+                query["SpecType"] = request.SpecType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicQuota))
+            {
+                query["TopicQuota"] = request.TopicQuota;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DowngradePostPayOrder",
+                Version = "2019-09-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DowngradePostPayOrderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>降配后付费实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DowngradePostPayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradePostPayOrderResponse
+        /// </returns>
+        public DowngradePostPayOrderResponse DowngradePostPayOrder(DowngradePostPayOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DowngradePostPayOrderWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>降配后付费实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DowngradePostPayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradePostPayOrderResponse
+        /// </returns>
+        public async Task<DowngradePostPayOrderResponse> DowngradePostPayOrderAsync(DowngradePostPayOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DowngradePostPayOrderWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>降配预付费实例</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DowngradePrePayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradePrePayOrderResponse
+        /// </returns>
+        public DowngradePrePayOrderResponse DowngradePrePayOrderWithOptions(DowngradePrePayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DowngradePrePayOrderShrinkRequest request = new DowngradePrePayOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConfluentConfig))
+            {
+                request.ConfluentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfluentConfig, "ConfluentConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfluentConfigShrink))
+            {
+                query["ConfluentConfig"] = request.ConfluentConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
+            {
+                query["DiskSize"] = request.DiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipMax))
+            {
+                query["EipMax"] = request.EipMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipModel))
+            {
+                query["EipModel"] = request.EipModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoMax))
+            {
+                query["IoMax"] = request.IoMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoMaxSpec))
+            {
+                query["IoMaxSpec"] = request.IoMaxSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidType))
+            {
+                query["PaidType"] = request.PaidType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
+            {
+                query["PartitionNum"] = request.PartitionNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecType))
+            {
+                query["SpecType"] = request.SpecType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicQuota))
+            {
+                query["TopicQuota"] = request.TopicQuota;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DowngradePrePayOrder",
+                Version = "2019-09-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DowngradePrePayOrderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>降配预付费实例</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DowngradePrePayOrderRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradePrePayOrderResponse
+        /// </returns>
+        public async Task<DowngradePrePayOrderResponse> DowngradePrePayOrderWithOptionsAsync(DowngradePrePayOrderRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DowngradePrePayOrderShrinkRequest request = new DowngradePrePayOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ConfluentConfig))
+            {
+                request.ConfluentConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfluentConfig, "ConfluentConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfluentConfigShrink))
+            {
+                query["ConfluentConfig"] = request.ConfluentConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
+            {
+                query["DiskSize"] = request.DiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipMax))
+            {
+                query["EipMax"] = request.EipMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipModel))
+            {
+                query["EipModel"] = request.EipModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoMax))
+            {
+                query["IoMax"] = request.IoMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IoMaxSpec))
+            {
+                query["IoMaxSpec"] = request.IoMaxSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidType))
+            {
+                query["PaidType"] = request.PaidType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionNum))
+            {
+                query["PartitionNum"] = request.PartitionNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecType))
+            {
+                query["SpecType"] = request.SpecType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicQuota))
+            {
+                query["TopicQuota"] = request.TopicQuota;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DowngradePrePayOrder",
+                Version = "2019-09-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DowngradePrePayOrderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>降配预付费实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DowngradePrePayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradePrePayOrderResponse
+        /// </returns>
+        public DowngradePrePayOrderResponse DowngradePrePayOrder(DowngradePrePayOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DowngradePrePayOrderWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>降配预付费实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DowngradePrePayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DowngradePrePayOrderResponse
+        /// </returns>
+        public async Task<DowngradePrePayOrderResponse> DowngradePrePayOrderAsync(DowngradePrePayOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DowngradePrePayOrderWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Enables and disables the flexible group creation feature.</para>
         /// </summary>
         /// 
