@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                [NameInMap("Database")]
+                [Validation(Required=false)]
+                public string Database { get; set; }
+
                 /// <summary>
                 /// <para>The error log information.</para>
                 /// 
@@ -39,6 +43,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("ErrorInfo")]
                 [Validation(Required=false)]
                 public string ErrorInfo { get; set; }
+
+                [NameInMap("User")]
+                [Validation(Required=false)]
+                public string User { get; set; }
+
+                [NameInMap("UserIp")]
+                [Validation(Required=false)]
+                public string UserIp { get; set; }
 
             }
 

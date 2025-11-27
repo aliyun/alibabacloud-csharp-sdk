@@ -122,6 +122,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("CustomExtraInfo")]
+        [Validation(Required=false)]
+        public string CustomExtraInfo { get; set; }
+
         /// <summary>
         /// <para>The instance type of the read-only instance. For more information, see <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>. We recommend that you specify an instance type whose specifications are higher than or equal to the specifications of the instance type of the primary instance. If the specifications of the read-only instance are lower than the specifications of the primary instance, the read-only instance may encounter issues such as high latency and heavy load.</para>
         /// <para>This parameter is required.</para>
@@ -281,6 +285,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("IoAccelerationEnabled")]
         [Validation(Required=false)]
         public string IoAccelerationEnabled { get; set; }
+
+        [NameInMap("IsAnalyticReadOnlyIns")]
+        [Validation(Required=false)]
+        public bool? IsAnalyticReadOnlyIns { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

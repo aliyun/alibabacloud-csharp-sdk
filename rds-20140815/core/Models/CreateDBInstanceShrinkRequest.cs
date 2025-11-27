@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically create a database proxy. Valid values:</para>
+        /// <para>Specifies whether to automatically create a proxy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: automatically creates a database proxy. By default, a general-purpose database proxy is created.</description></item>
         /// <item><description><b>false</b>: does not automatically create a database proxy.</description></item>
@@ -253,6 +253,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string CreateStrategy { get; set; }
 
+        [NameInMap("CustomExtraInfo")]
+        [Validation(Required=false)]
+        public string CustomExtraInfo { get; set; }
+
         /// <summary>
         /// <para>The instance type of the instance. You can specify an instance type of the standard or YiTian product type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</para>
         /// <para>To create a serverless instance, set this parameter to one of the following values:</para>
@@ -273,9 +277,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The instance name. The name must be 2 to 255 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The instance name. The value must be 2 to 255 characters in length The name can contain letters, digits, and hyphens (-) and must start with a letter.</para>
         /// <remarks>
-        /// <para>The name cannot start with http:// or https://.</para>
+        /// <para> The value cannot start with http:// or https://.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -408,8 +412,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable the release protection feature for the instance. This feature is available only for pay-as-you-go instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>true</b>: enables the feature.</description></item>
+        /// <item><description><b>false</b> (default): disables the feature.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -517,16 +521,19 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The network type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: a virtual private cloud (VPC)</description></item>
-        /// <item><description><b>Classic</b>: the classic network</description></item>
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
+        /// <item><description><b>Classic</b>: classic network</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>If the instance runs MySQL and uses cloud disks, you must set this parameter to <b>VPC</b>.</description></item>
-        /// <item><description>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <b>VPC</b>.</description></item>
-        /// <item><description>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <b>VPC</b>.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>If the instance runs MySQL and uses cloud disks, you must set this parameter to <b>VPC</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <b>VPC</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engines, you must set this parameter to <b>VPC</b>.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Classic</para>
@@ -595,7 +602,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>Month</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set the PayType parameter to <b>Prepaid</b>, you must also specify this parameter.</para>
+        /// <para> If you set the PayType parameter to <b>Prepaid</b>, you must specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -703,10 +710,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ServerlessConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the automatic storage expansion feature for the instance. If the instance runs MySQL or PostgreSQL, this feature is supported. Valid values:</para>
+        /// <para>Specifies whether to enable the automatic storage expansion feature for the instance. This feature is supported if the instance runs MySQL or PostgreSQL. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b></description></item>
-        /// <item><description><b>Disable</b> (default)</description></item>
+        /// <item><description><b>Enable</b>: enables the feature.</description></item>
+        /// <item><description><b>Disable</b> (default): disables the feature.</description></item>
         /// </list>
         /// <remarks>
         /// <para> After the instance is created, you can call the ModifyDasInstanceConfig operation to adjust the settings. For more information, see <a href="https://help.aliyun.com/document_detail/173826.html">Configure automatic storage expansion</a>.</para>
@@ -720,7 +727,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string StorageAutoScale { get; set; }
 
         /// <summary>
-        /// <para>The threshold in percentage based on which automatic storage expansion is triggered. Valid values:</para>
+        /// <para>The threshold in percentage based on which automatic storage expansion is triggered.</para>
         /// <list type="bullet">
         /// <item><description><b>10</b></description></item>
         /// <item><description><b>20</b></description></item>
@@ -729,7 +736,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>50</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set the <b>StorageAutoScale</b> parameter to <b>Enable</b>, you must also specify this parameter.</para>
+        /// <para> If you set the <b>StorageAutoScale</b> parameter to <b>Enable</b>, you must specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

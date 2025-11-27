@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RunRCInstancesShrinkRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>gn8is</para>
+        /// </summary>
+        [NameInMap("AcuType")]
+        [Validation(Required=false)]
+        public string AcuType { get; set; }
+
+        /// <summary>
         /// <para>The number of RDS Custom instances that you want to create. The parameter is available if you want to create multiple RDS Custom instances at a time.</para>
         /// <para>Valid values: <b>1</b> to <b>10</b>. Default value: <b>1</b>.</para>
         /// 
@@ -217,6 +225,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        [NameInMap("PasswordInherit")]
+        [Validation(Required=false)]
+        public bool? PasswordInherit { get; set; }
+
         /// <summary>
         /// <para>The subscription duration of the instance. Default value: <b>1</b>.</para>
         /// 
@@ -259,6 +271,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;rule&quot;:[{&quot;beginTime&quot;:&quot;09:00&quot;,&quot;endTime&quot;:&quot;17:00&quot;,&quot;acu&quot;:4}]}</para>
+        /// </summary>
+        [NameInMap("ScheduledRule")]
+        [Validation(Required=false)]
+        public string ScheduledRule { get; set; }
 
         /// <summary>
         /// <para>The reserved parameter. This parameter is not supported.</para>

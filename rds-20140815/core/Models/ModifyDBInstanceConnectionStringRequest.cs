@@ -111,6 +111,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("RetainVip")]
+        [Validation(Required=false)]
+        public bool? RetainVip { get; set; }
+
+        [NameInMap("TargetDBInstanceId")]
+        [Validation(Required=false)]
+        public string TargetDBInstanceId { get; set; }
+
     }
 
 }

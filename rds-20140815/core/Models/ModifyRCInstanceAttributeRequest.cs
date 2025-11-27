@@ -48,6 +48,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>k8s-node</para>
+        /// </summary>
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
+        /// <summary>
         /// <para>The new password of the instance.</para>
         /// <list type="bullet">
         /// <item><description>The value must be 8 to 30 characters in length.</description></item>

@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string SwitchTime { get; set; }
 
+        [NameInMap("TargetMinorVersion")]
+        [Validation(Required=false)]
+        public string TargetMinorVersion { get; set; }
+
         /// <summary>
         /// <para>The time when you want to upgrade the database proxy version of the instance. Valid values:</para>
         /// <list type="bullet">

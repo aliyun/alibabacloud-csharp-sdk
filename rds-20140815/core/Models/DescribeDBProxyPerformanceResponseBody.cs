@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string Node { get; set; }
 
+                [NameInMap("Server")]
+                [Validation(Required=false)]
+                public string Server { get; set; }
+
                 /// <summary>
                 /// <para>The service dimension.</para>
                 /// 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class UpgradeDBInstanceMajorVersionRequest : TeaModel {
+        [NameInMap("AllowDDL")]
+        [Validation(Required=false)]
+        public bool? AllowDDL { get; set; }
+
         /// <summary>
         /// <para>Specify the point in time at which the system collects the statistics of the instance.</para>
         /// <list type="bullet">
@@ -25,6 +29,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("CollectStatMode")]
         [Validation(Required=false)]
         public string CollectStatMode { get; set; }
+
+        [NameInMap("CustomExtraInfo")]
+        [Validation(Required=false)]
+        public string CustomExtraInfo { get; set; }
 
         /// <summary>
         /// <para>The new instance type of the instance. The new CPU and memory specifications of the instance must be higher than or equal to the original CPU and memory specifications. If you set the <b>UpgradeMode</b> parameter to <b>inPlaceUpgrade</b>, you <b>do not need to configure</b> this parameter.</para>

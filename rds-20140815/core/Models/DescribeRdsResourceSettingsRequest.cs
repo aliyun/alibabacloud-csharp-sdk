@@ -14,7 +14,15 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The location of the notification.</para>
+        /// <list type="bullet">
+        /// <item><description>noticeBar: notification bar</description></item>
+        /// <item><description>popUp: popup</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>noticeBar</para>
         /// </summary>
         [NameInMap("ResourceNiche")]
         [Validation(Required=false)]

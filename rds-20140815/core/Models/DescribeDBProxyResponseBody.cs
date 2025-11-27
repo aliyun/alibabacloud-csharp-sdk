@@ -166,6 +166,16 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyInstanceLatestMinorVersion { get; set; }
 
+        [NameInMap("DBProxyInstanceMinorVersions")]
+        [Validation(Required=false)]
+        public DescribeDBProxyResponseBodyDBProxyInstanceMinorVersions DBProxyInstanceMinorVersions { get; set; }
+        public class DescribeDBProxyResponseBodyDBProxyInstanceMinorVersions : TeaModel {
+            [NameInMap("DBProxyInstanceMinorVersions")]
+            [Validation(Required=false)]
+            public List<string> DBProxyInstanceMinorVersions { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The name of the proxy instance.</para>
         /// 

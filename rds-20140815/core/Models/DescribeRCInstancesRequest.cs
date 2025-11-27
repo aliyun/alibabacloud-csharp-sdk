@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCInstancesRequest : TeaModel {
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("HostIp")]
         [Validation(Required=false)]
         public string HostIp { get; set; }
+
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
 
         /// <summary>
         /// <para>The instance ID.</para>
@@ -26,6 +34,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>k8s-node</para>
+        /// </summary>
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
 
         /// <summary>
         /// <para>The page number.</para>

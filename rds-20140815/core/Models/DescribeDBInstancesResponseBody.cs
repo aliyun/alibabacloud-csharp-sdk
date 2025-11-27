@@ -439,6 +439,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string IoAccelerationEnabled { get; set; }
 
+                [NameInMap("IsAnalyticIns")]
+                [Validation(Required=false)]
+                public string IsAnalyticIns { get; set; }
+
+                [NameInMap("IsAnalyticReadOnlyIns")]
+                [Validation(Required=false)]
+                public bool? IsAnalyticReadOnlyIns { get; set; }
+
                 /// <summary>
                 /// <para>The lock mode of the instance. Valid values:</para>
                 /// <list type="bullet">

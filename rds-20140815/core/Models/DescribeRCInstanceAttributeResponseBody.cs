@@ -96,6 +96,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public bool? DeleteWithInstance { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>/dev/xvdb</para>
+                /// </summary>
+                [NameInMap("Device")]
+                [Validation(Required=false)]
+                public string Device { get; set; }
+
+                /// <summary>
                 /// <para>Indicates whether the data disk is encrypted. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>true</b></description></item>
@@ -128,6 +136,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("Size")]
                 [Validation(Required=false)]
                 public long? Size { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>rcds-bp18um4r4f2fve24**</para>
+                /// </summary>
+                [NameInMap("SnapshotId")]
+                [Validation(Required=false)]
+                public string SnapshotId { get; set; }
 
             }
 

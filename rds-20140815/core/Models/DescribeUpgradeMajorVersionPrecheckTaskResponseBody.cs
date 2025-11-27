@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the upgrade check report.</para>
+        /// <para>The information about the upgrade check reports.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string EffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The minimum recommended disk capacity for upgrading. Unit: GB.</para>
+            /// <para>The minimum recommended disk capacity during the upgrade. Unit: GB.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for RDS PostgreSQL instances.</para>
+            /// <para> This parameter is returned only for RDS for PostgreSQL instances.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? RecommendDiskSize { get; set; }
 
             /// <summary>
-            /// <para>The minimum recommended memory for upgrading. Unit: GB.</para>
+            /// <para>The minimum recommended memory size during the upgrade. Unit: GB.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for RDS PostgreSQL instances.</para>
+            /// <para> This parameter is returned only for RDS for PostgreSQL instances.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -75,10 +75,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public int? RecommendLeastMemSize { get; set; }
 
             /// <summary>
-            /// <para>Recommended memory when upgrading. Unit: GB.</para>
-            /// <para>When the memory of the instance is greater than or equal to the recommended memory, it will be upgraded at the fastest speed to minimize the read-only time of the instance.</para>
+            /// <para>The recommended memory size during the upgrade. Unit: GB.</para>
+            /// <para>If the memory size of an RDS instance is greater than or equal to the recommended memory size, the RDS instance is immediately upgraded to reduce the read-only time of the instance.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for RDS PostgreSQL instances.</para>
+            /// <para> This parameter is returned only for RDS for PostgreSQL instances.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

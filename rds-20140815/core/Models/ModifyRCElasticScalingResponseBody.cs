@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
-    public class CreateDiagnosticReportResponseBody : TeaModel {
+    public class ModifyRCElasticScalingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the diagnostic report.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>10166270</para>
+        /// <para>264008926210869</para>
         /// </summary>
-        [NameInMap("ReportId")]
+        [NameInMap("OrderId")]
         [Validation(Required=false)]
-        public string ReportId { get; set; }
+        public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>8DA8956A-53DA-423E-9540-387428ED37FF-5711</para>
+        /// <para>1F7B8B09-36F3-1165-BADB-13E376FE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

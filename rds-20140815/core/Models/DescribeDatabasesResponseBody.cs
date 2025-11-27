@@ -198,6 +198,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string DBStatus { get; set; }
 
+                [NameInMap("DuckDBEnabled")]
+                [Validation(Required=false)]
+                public bool? DuckDBEnabled { get; set; }
+
                 /// <summary>
                 /// <para>The database engine of the instance.</para>
                 /// 

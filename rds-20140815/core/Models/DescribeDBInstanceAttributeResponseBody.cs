@@ -349,6 +349,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                         [Validation(Required=false)]
                         public string Cpu { get; set; }
 
+                        [NameInMap("DisasterRecoveryNode")]
+                        [Validation(Required=false)]
+                        public bool? DisasterRecoveryNode { get; set; }
+
                         /// <summary>
                         /// <para>The memory capacity of the node. Unit: MB.</para>
                         /// 
@@ -799,6 +803,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("IoAccelerationEnabled")]
                 [Validation(Required=false)]
                 public string IoAccelerationEnabled { get; set; }
+
+                [NameInMap("IsAnalyticIns")]
+                [Validation(Required=false)]
+                public bool? IsAnalyticIns { get; set; }
+
+                [NameInMap("IsAnalyticReadOnlyIns")]
+                [Validation(Required=false)]
+                public bool? IsAnalyticReadOnlyIns { get; set; }
 
                 /// <summary>
                 /// <para>The latest minor engine version that is supported by the instance.</para>
@@ -1258,6 +1270,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>ON</para>
+                /// </summary>
+                [NameInMap("VectorSupportStatus")]
+                [Validation(Required=false)]
+                public string VectorSupportStatus { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the VPC. This parameter is returned only when the instance resides in a VPC.</para>

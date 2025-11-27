@@ -34,6 +34,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public int? CpuCoreCount { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>16</para>
+                /// </summary>
+                [NameInMap("DiskQuantity")]
+                [Validation(Required=false)]
+                public long? DiskQuantity { get; set; }
+
+                /// <summary>
                 /// <para>The ID of the instance family.</para>
                 /// 
                 /// <b>Example:</b>

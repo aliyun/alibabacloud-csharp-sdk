@@ -43,6 +43,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ReplicationErrorMessage { get; set; }
 
+        [NameInMap("ReplicationIp")]
+        [Validation(Required=false)]
+        public string ReplicationIp { get; set; }
+
+        [NameInMap("ReplicationPort")]
+        [Validation(Required=false)]
+        public string ReplicationPort { get; set; }
+
         /// <summary>
         /// <para>The source of the native replication.</para>
         /// 

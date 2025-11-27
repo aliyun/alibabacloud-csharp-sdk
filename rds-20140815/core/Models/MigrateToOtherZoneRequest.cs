@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        [NameInMap("CustomExtraInfo")]
+        [Validation(Required=false)]
+        public string CustomExtraInfo { get; set; }
+
         /// <summary>
         /// <para>The new instance type of the instance. You can change the instance type of the instance. You cannot change the storage type of the instance. If you set <b>IsModifySpec</b> to <b>true</b>, you must specify at least one of DBInstanceClass and <b>DBInstanceStorage</b>.</para>
         /// <para>For more information about instance types, see <a href="https://help.aliyun.com/document_detail/276975.html">Primary ApsaraDB RDS for MySQL instance types</a>.</para>

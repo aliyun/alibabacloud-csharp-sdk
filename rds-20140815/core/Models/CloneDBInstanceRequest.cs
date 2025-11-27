@@ -110,6 +110,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("CustomExtraInfo")]
+        [Validation(Required=false)]
+        public string CustomExtraInfo { get; set; }
+
         /// <summary>
         /// <para>The instance type of the new instance. For information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</para>
         /// <remarks>
