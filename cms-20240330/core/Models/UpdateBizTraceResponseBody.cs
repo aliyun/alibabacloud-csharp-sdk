@@ -1,0 +1,30 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Cms20240330.Models
+{
+    public class UpdateBizTraceResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>e339260ed64c95d</para>
+        /// </summary>
+        [NameInMap("bizTraceId")]
+        [Validation(Required=false)]
+        public string BizTraceId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}

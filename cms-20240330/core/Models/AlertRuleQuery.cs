@@ -25,6 +25,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public long? Duration { get; set; }
 
+        [NameInMap("entityFields")]
+        [Validation(Required=false)]
+        public List<AlertRuleQueryEntityFields> EntityFields { get; set; }
+        public class AlertRuleQueryEntityFields : TeaModel {
+            [NameInMap("field")]
+            [Validation(Required=false)]
+            public string Field { get; set; }
+
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         [NameInMap("entityFilter")]
         [Validation(Required=false)]
         public AlertRuleQueryEntityFilter EntityFilter { get; set; }
@@ -76,6 +90,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("groupType")]
         [Validation(Required=false)]
         public string GroupType { get; set; }
+
+        [NameInMap("labelFilters")]
+        [Validation(Required=false)]
+        public List<AlertRuleQueryLabelFilters> LabelFilters { get; set; }
+        public class AlertRuleQueryLabelFilters : TeaModel {
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("operator")]
+            [Validation(Required=false)]
+            public string Operator { get; set; }
+
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         [NameInMap("metric")]
         [Validation(Required=false)]
