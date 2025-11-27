@@ -1,3 +1,8 @@
+2025-11-27 Version: 4.1.0
+- Support API GetSmsOcrOssInfo.
+- Update API QuerySmsTemplateList: add response parameters Body.SmsTemplateList.$.TrafficDriving.
+
+
 2025-09-24 Version: 4.0.1
 - Generated csharp 2017-05-25 for Dysmsapi.
 
