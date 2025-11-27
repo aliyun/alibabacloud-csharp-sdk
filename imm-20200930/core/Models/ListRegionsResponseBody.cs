@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The regions.</para>
+        /// <para>List of Regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<RegionType> Regions { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID for the interface.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7F7D235C-76FF-4B65-800C-8238AE3F****</para>

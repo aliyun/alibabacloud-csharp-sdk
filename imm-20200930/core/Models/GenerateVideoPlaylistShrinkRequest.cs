@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GenerateVideoPlaylistShrinkRequest : TeaModel {
         /// <summary>
-        /// <para><b>If you do not have special requirements, leave this parameter empty.</b></para>
+        /// <para><b>If you have no special requirements, leave this parameter empty.</b></para>
         /// <para>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string MasterURI { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. To view details, click Notification. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
@@ -130,9 +130,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The live transcoding playlists. Up to 6 playlists are supported. Each output corresponds to at most one video media playlist and one or more subtitle media playlists.</para>
+        /// <para>The array of live transcoding playlists. The maximum length of the array is 6. Each element corresponds to at most one video media playlist and one or more subtitle media playlists.</para>
         /// <remarks>
-        /// <para> If more than one output is configured, the <b>MasterURI</b> parameter is required.</para>
+        /// <para> If the array contains more than one element, the <b>MasterURI</b> parameter cannot be left empty.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>

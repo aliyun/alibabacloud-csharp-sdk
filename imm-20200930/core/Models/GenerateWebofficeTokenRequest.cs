@@ -10,38 +10,35 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GenerateWebofficeTokenRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable cache preview.</para>
+        /// <para>Cache preview flag: </para>
         /// <list type="bullet">
-        /// <item><description>true: enables cache preview. The document can be previewed only and cannot be collaboratively edited.</description></item>
-        /// <item><description>false: does not enable cache preview. The document can be collaboratively edited when it is being previewed.</description></item>
+        /// <item><description>true: When enabled, the document preview will no longer update collaborative editing content, suitable for scenarios where only preview is needed. </description></item>
+        /// <item><description>false: When disabled, it defaults to collaborative preview, allowing the preview to synchronously update collaborative editing content.<remarks>
+        /// <para>Notice: The price for cache preview and non-cache preview differs. Please refer to the billing item description for more details.</notice> &gt;Notice: Search and print functions are not supported during cache preview.</notice> <notice>Updating cached content is currently not supported in cache preview mode.</notice></para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para> The pricing for document previews varies based on whether cache preview is enabled or disabled.</para>
-        /// </remarks>
-        /// <remarks>
-        /// <para> During a cache preview, document content search and printing are not supported.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true、false</para>
         /// </summary>
         [NameInMap("CachePreview")]
         [Validation(Required=false)]
         public bool? CachePreview { get; set; }
 
         /// <summary>
-        /// <para><b>If you have no special requirements, leave this parameter empty.</b></para>
-        /// <para>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
+        /// <para><b>If there are no special requirements, leave this blank.</b></para>
+        /// <para>Chained authorization configuration, not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Using Chained Authorization to Access Other Entity Resources</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public CredentialConfig CredentialConfig { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow an upload of a document to the Object Storage Service (OSS) bucket. Valid values:</para>
+        /// <para>Indicates whether uploading a file with the same name to OSS is an expected behavior. Possible values are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>true: Documents can be directly uploaded to OSS. The uploaded document overwrites the existing document and a new version is generated for the document. Before you upload a new document, close the existing document if it is being edited. After the document is uploaded, wait for approximately 5 minutes before you open the document again so that the new version can successfully load. Upload a new document only when the existing is closed. Otherwise, the uploaded document is overwritten when the existing document is saved.</description></item>
-        /// <item><description>false: Documents cannot be directly uploaded to OSS. If you try to upload a document, an error is returned. This is the default value.</description></item>
+        /// <item><description>true: Uploading a file with the same name to OSS is an expected behavior. The uploaded document will overwrite the original document and generate a new version. After setting it to true, you still need to close the currently editing document and wait for about 5 minutes before reopening it to load the new document. The upload is only effective when the document is closed; if the document is open, the new save will overwrite the uploaded file.</description></item>
+        /// <item><description>false (default): Uploading a file with the same name to OSS is not an expected behavior, and the interface will return an error.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,23 +49,28 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public bool? ExternalUploaded { get; set; }
 
         /// <summary>
-        /// <para>The name of the file. The extension must be included in the file name. By default, this parameter is set to the last depth level of the <b>SourceURI</b> parameter value.</para>
-        /// <para>Supported extensions (only preview supported for .pdf):</para>
+        /// <para>Filename, which must include the file extension. By default, it is the last segment of the <b>SourceURI</b> parameter.
+        /// Supported file extensions (PDF is only supported for preview):</para>
         /// <list type="bullet">
-        /// <item><description>Word documents: .doc, .docx, .txt, .dot, .wps, .wpt, .dotx, .docm, .dotm, and .rtf</description></item>
-        /// <item><description>Presentation documents: .ppt, .pptx, .pptm, .ppsx, .ppsm, .pps, .potx, .potm, .dpt, and .dps</description></item>
-        /// <item><description>Table documents: .et, .xls, .xlt, .xlsx, .xlsm, .xltx, .xltm, and .csv</description></item>
-        /// <item><description>PDF documents: .pdf</description></item>
+        /// <item><description>Text documents (Word): doc, docx, txt, dot, wps, wpt, dotx, docm, dotm, rtf </description></item>
+        /// <item><description>Presentation documents (PPT): ppt, pptx, pptm, ppsx, ppsm, pps, potx, potm, dpt, dps - Spreadsheet documents (Excel): et, xls, xlt, xlsx, xlsm, xltx, xltm, csv </description></item>
+        /// <item><description>PDF documents: pdf</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>test.pptx</para>
+        /// <para>test-Object.pptx</para>
         /// </summary>
         [NameInMap("Filename")]
         [Validation(Required=false)]
         public string Filename { get; set; }
 
         /// <summary>
+        /// <para>Whether to hide the toolbar. This parameter can be set in document preview mode. Possible values are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>false (default): Do not hide the toolbar.</description></item>
+        /// <item><description>true: Hide the toolbar.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -77,9 +79,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public bool? Hidecmb { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. Only SMQ messages are supported. For more information, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.</para>
+        /// <para>Notification message configuration, currently supporting only MNS. For the asynchronous notification message format, refer to <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice Message Notification Format</a>.</para>
         /// <remarks>
-        /// <para> A notification is sent after the document is saved or renamed.</para>
+        /// <para>There will be message notifications when the file is saved or renamed.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Notification")]
@@ -87,14 +89,21 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public Notification Notification { get; set; }
 
         /// <summary>
+        /// <para>Supports notifying some events to customers via MNS messages. This parameter is the topic for MNS asynchronous message notifications.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>topic1</para>
+        /// <para>test-topic</para>
         /// </summary>
         [NameInMap("NotifyTopicName")]
         [Validation(Required=false)]
         public string NotifyTopicName { get; set; }
 
         /// <summary>
+        /// <para>The password to open the document.</para>
+        /// <remarks>
+        /// <para>If you need to preview or edit a password-protected document, set this parameter.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>
@@ -103,25 +112,23 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The user permission settings in the JSON format.</para>
-        /// <para>The parameter supports the following permission fields:</para>
-        /// <para>Each field is of type Boolean and can have a value of true and false (the default value):</para>
+        /// <para>User permission information, represented in JSON format.</para>
+        /// <para>User permissions include the following options:</para>
+        /// <para>Each option is of type Boolean, with a default value of false, and can be set to true or false.</para>
         /// <list type="bullet">
-        /// <item><description>Readonly: grants the permission to preview the document. This field is optional.</description></item>
-        /// <item><description>Rename: grants the permission to rename the document. Notification messages of a rename event can be sent only by using SMQ. This field is optional.</description></item>
-        /// <item><description>History: grants the permission to view historical versions. This field is optional.</description></item>
-        /// <item><description>Copy: grants the permission to copy the document. This field is optional.</description></item>
-        /// <item><description>Export: grants the permission to export the document as a PDF file. This field is optional.</description></item>
-        /// <item><description>Print: grants the permission to print the document. This field is optional.</description></item>
+        /// <item><description>Readonly (optional): Preview mode.</description></item>
+        /// <item><description>Rename (optional): File renaming permission, which only provides message notification functionality. The renaming event will be sent to MNS.</description></item>
+        /// <item><description>History (optional): Permission to view historical versions.</description></item>
+        /// <item><description>Copy (optional): Copy permission.</description></item>
+        /// <item><description>Export (optional): PDF export permission.</description></item>
+        /// <item><description>Print (optional): Print permission.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Only online preview is supported for PDF documents. When you call the operation on a PDF document, you can set Readonly only to true.</para>
-        /// </remarks>
-        /// <remarks>
-        /// <para> To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</para>
-        /// </remarks>
-        /// <remarks>
-        /// <para> Printing is not supported during cache preview.</para>
+        /// <para>PDF only supports preview functionality, so the &quot;Readonly&quot; parameter must be set to true.</para>
+        /// <para>PDF files do not support exporting.</para>
+        /// <para>To use the multi-version feature, you must first enable the multi-version feature in OSS and then set the &quot;History&quot; parameter to true.</para>
+        /// <para>Notice: Printing is not supported in cached preview.
+        /// Notice: Historical versions can be viewed in edit mode but not in preview mode.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Permission")]
@@ -129,6 +136,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public WebofficePermission Permission { get; set; }
 
         /// <summary>
+        /// <para>Limits the number of pages that can be previewed. By default, there is no limit. The maximum cannot exceed 5000.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -137,16 +146,22 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? PreviewPages { get; set; }
 
         /// <summary>
+        /// <para>Project name, for how to obtain it, please refer to <a href="https://help.aliyun.com/document_detail/478153.html">Create Project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>immtest</para>
+        /// <para>test-project</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>OSS anti-leeching. IMM needs to obtain the source file from OSS. If OSS has set up anti-leeching, IMM must pass the corresponding header to OSS to get the source file.</para>
+        /// <remarks>
+        /// <para>If the Bucket where the document is located has Referer set, please configure this parameter.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -157,32 +172,41 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Referer { get; set; }
 
         /// <summary>
+        /// <para>OSS address of the document to be previewed or edited. The OSS address follows the rule <c>oss://${Bucket}/${Object}</c>, where <c>Bucket</c> is the name of the OSS Bucket in the same region as the current project, and <c>Object</c> is the full path of the file including the file extension.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://imm-test/test.pptx</para>
+        /// <para>oss://test-bucket/test-object.docx</para>
         /// </summary>
         [NameInMap("SourceURI")]
         [Validation(Required=false)]
         public string SourceURI { get; set; }
 
         /// <summary>
-        /// <para>The user information. The user information that you want to display on the WebOffice page. If you do not specify this parameter, the user name displayed is Unknown.</para>
+        /// <para>User information. You can pass in user information from the business side, which will be displayed on the WebOffice page.</para>
+        /// <para>The system distinguishes different users by User.Id, and User.Name is used only for front-end display. If User.Id is not provided, the backend will generate a random ID. Users with different IDs are considered different entities and cannot modify or delete each other\&quot;s comments.</para>
+        /// <para>The default format is: Unknown_random string. If User.Id is not provided, the user information will default to &quot;Unknown&quot;.</para>
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
         public WebofficeUser User { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data that you want to return in asynchronous messages. This parameter takes effect only when you specify the MNS settings in the Notification parameter. The maximum length of the value is 2,048 bytes.</para>
+        /// <para>User-defined information. It only takes effect when Notification parameters are filled in for MNS configuration. It will be returned in asynchronous message notifications, which can help you correlate and process messages within your system. The maximum length is 2048 bytes.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;file_id&quot;: &quot;abc&quot;}</para>
+        /// <para>{
+        ///       &quot;id&quot;: &quot;test-id&quot;,
+        ///       &quot;name&quot;: &quot;test-name&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
 
+        /// <summary>
+        /// <para>Watermark information. The watermark is generated on the front end and is not written into the source document. The same document with different parameters will result in different watermarks.</para>
+        /// </summary>
         [NameInMap("Watermark")]
         [Validation(Required=false)]
         public WebofficeWatermark Watermark { get; set; }

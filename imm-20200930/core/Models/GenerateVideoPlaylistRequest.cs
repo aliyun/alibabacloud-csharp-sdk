@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GenerateVideoPlaylistRequest : TeaModel {
         /// <summary>
-        /// <para><b>If you do not have special requirements, leave this parameter empty.</b></para>
+        /// <para><b>If you have no special requirements, leave this parameter empty.</b></para>
         /// <para>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string MasterURI { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. To view details, click Notification. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
@@ -157,9 +157,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public Dictionary<string, string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The live transcoding playlists. Up to 6 playlists are supported. Each output corresponds to at most one video media playlist and one or more subtitle media playlists.</para>
+        /// <para>The array of live transcoding playlists. The maximum length of the array is 6. Each element corresponds to at most one video media playlist and one or more subtitle media playlists.</para>
         /// <remarks>
-        /// <para> If more than one output is configured, the <b>MasterURI</b> parameter is required.</para>
+        /// <para> If the array contains more than one element, the <b>MasterURI</b> parameter cannot be left empty.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             /// <summary>
             /// <para>The audio processing configuration. If you set this parameter to null (default), audio processing is disabled. The generated TS files do not contain audio streams.</para>
             /// <remarks>
-            /// <para> The Audio and Subtitle parameters in the same output are mutually exclusive. If the Audio parameter is configured, the Subtitle parameter is ignored. The Audio and Video parameters can be configured at the same time. You can also configure only the Audio parameter to generate only audio information.</para>
+            /// <para> The Audio and Subtitle parameters in the same element are mutually exclusive. If the Audio parameter is configured, the Subtitle parameter is ignored. The Audio and Video parameters can be configured at the same time. You can also configure only the Audio parameter to generate only audio.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Audio")]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public float? Duration { get; set; }
 
             /// <summary>
-            /// <para>The array of the durations of the pre-transcoded TS files. The array can contain the durations of up to six pre-transcoded TS files. By default, this parameter is left empty. This parameter is independent of the <b>Duration</b> parameter.</para>
+            /// <para>The array of the durations of the pre-transcoded TS files. The maximum length of the array is 6. By default, this parameter is left empty. This parameter is independent of the <b>Duration</b> parameter.</para>
             /// </summary>
             [NameInMap("InitialSegments")]
             [Validation(Required=false)]
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             /// <item><description>If you set this parameter to a value that is within the middle of the playback duration of a TS file, the transcoding continues until the end of the playback duration.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter is used to reduce the time spent in waiting for the initial playback of a video and improve the playback experience. If you want to replace the traditional video on demand (VOD) business scenario, you can try to pre-transcode the entire video.</para>
+            /// <para> This parameter reduces the time required to start the first playback, which enhances the viewing experience. If you want to use live transcoding in traditional video-on-demand scenarios, you can pre-transcode entire videos.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             /// <summary>
             /// <para>The subtitle processing configuration.</para>
             /// <remarks>
-            /// <para> The Subtitle and Video or Audio parameters in the same output are mutually exclusive. You must configure the Subtitle parameter independently to generate subtitles.</para>
+            /// <para> The Subtitle and Video or Audio parameters in the same element are mutually exclusive. You must configure the Subtitle parameter independently to generate subtitles.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Subtitle")]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             /// <summary>
             /// <para>The <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> that you want to add to a TS file in OSS. You can use tags to manage the lifecycles of TS files in OSS.</para>
             /// <remarks>
-            /// <para> The combination of the value of the Tags parameter and the value of the Tags parameter in the upper level is used as the tag value of the current output. If the value of the Tags parameter in the current level is the same as the value of the Tags parameter in the upper level, use the value of the Tags parameter in the current level.</para>
+            /// <para> The combination of the value of the Tags parameter and the value of the Tags parameter in the upper level is used as the tag value of the current output. If the value of the Tags parameter in the current level is the same as the value of the Tags parameter in the upper level, the value of the Tags parameter in the current level is used.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Tags")]
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             /// <summary>
             /// <para>The number of TS files that are pre-transcoded when the live transcoding is triggered. By default, a 2-minute video is pre-transcoded.</para>
             /// <list type="bullet">
-            /// <item><description>Example: If you set the <b>Duration</b> parameter to 10, the value of the <b>TranscodeAhead</b> parameter is 12 by default. You can configure this parameter to manage the number of pre-transcoded files in an asynchronous manner. Valid values: 10 to 30.</description></item>
+            /// <item><description>Example: If you set the <b>Duration</b> parameter to 10, the value of the <b>TranscodeAhead</b> parameter is 12 by default. You can configure this parameter to manage the number of pre-transcoded files. Valid values: 10 to 30.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -247,12 +247,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
             /// <summary>
             /// <para>The prefix of the OSS path that is used to store the live transcoding files. The live transcoding files include a M3U8 file and multiple TS files.</para>
-            /// <para>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the prefix of the full path of the file that does not contain the file name extension.</para>
+            /// <para>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the prefix of the full path that does not contain the file name extension.</para>
             /// <list type="bullet">
             /// <item><description>Example: If the URI is oss://test-bucket/test-object/output-video, the output-video.m3u8 file and multiple output-video-${token}-${index}.ts files are generated in the oss://test-bucket/test-object/ directory. ${token} is a unique string generated based on the transcoding parameters. The ${token} parameter is included in the response of the operation. ${index} is the serial number of the generated TS files that are numbered starting from 0.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> If the <b>MasterURI</b> parameter is not left empty, the URI specified by this parameter must be in the directory specified by the <b>MasterURI</b> parameter or its subdirectory.</para>
+            /// <para> If the <b>MasterURI</b> parameter is not left empty, the path specified by this parameter must be in the directory specified by the <b>MasterURI</b> parameter or its subdirectory.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             /// <summary>
             /// <para>The video processing configuration. If you set this parameter to null (default), video processing is disabled. The generated TS files do not contain video streams.</para>
             /// <remarks>
-            /// <para> The Video and Subtitle parameters in the same output are mutually exclusive. If the Video parameter is configured, the Subtitle parameter is ignored.</para>
+            /// <para> The Video and Subtitle parameters in the same element are mutually exclusive. If the Video parameter is configured, the Subtitle parameter is ignored.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Video")]

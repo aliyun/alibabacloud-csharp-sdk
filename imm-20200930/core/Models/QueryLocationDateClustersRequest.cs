@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public TimeRange CreateTimeRange { get; set; }
 
         /// <summary>
-        /// <para>The custom labels, which can be used as query conditions.</para>
+        /// <para>The custom labels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key=value</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string CustomLabels { get; set; }
 
         /// <summary>
-        /// <para>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
+        /// <para>The name of the dataset. For information about how to create a dataset, see <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public TimeRange LocationDateClusterEndTimeRange { get; set; }
 
         /// <summary>
-        /// <para>The administrative level of the spatiotemporal clustering groups to be queried.</para>
+        /// <para>The container for the administrative division level of the spatiotemporal clusters to be queried.</para>
         /// </summary>
         [NameInMap("LocationDateClusterLevels")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the group that you want to query. Specify this parameter if you want to obtain the information about a specific spatiotemporal clustering group. Otherwise, leave this parameter empty and use other parameters to query the groups that meet the matching conditions.</para>
+        /// <para>The ID of the cluster that you want to query. Specify this parameter if you want to query a specific spatiotemporal cluster. Otherwise, leave this parameter empty to query spatiotemporal clusters that meet the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>location-date-cluster-71dd4f32-9597-4085-a2ab-3a7b0fd0aff9</para>
@@ -96,10 +96,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ObjectId { get; set; }
 
         /// <summary>
-        /// <para>The sorting order.</para>
-        /// <para>Default value: asc. Valid values:</para>
+        /// <para>The order that you use to sort the query results.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: ascending order.</description></item>
+        /// <item><description>asc: ascending order. This is the default value.</description></item>
         /// <item><description>desc: descending order.</description></item>
         /// </list>
         /// 
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <para>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -122,13 +122,13 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The condition by which the results are sorted.</para>
+        /// <para>The field that you use to sort the query results.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LocationDateClusterEndTime: by the end time of the spatiotemporal clustering groups.</description></item>
-        /// <item><description>CreateTime: by the creation time of the spatiotemporal clustering groups.</description></item>
-        /// <item><description>UpdateTime: by the update time of the spatiotemporal clustering groups.</description></item>
-        /// <item><description>LocationDateClusterStartTime: by the start time of the spatiotemporal clustering groups. This is the default value.</description></item>
+        /// <item><description>LocationDateClusterEndTime: by the time at which the latest photo in a cluster was taken.</description></item>
+        /// <item><description>CreateTime: by the creation time of a spatiotemporal cluster.</description></item>
+        /// <item><description>UpdateTime: by the update time of a spatiotemporal cluster.</description></item>
+        /// <item><description>LocationDateClusterStartTime: by the time at which the earliest photo in a cluster was taken. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The title of spatiotemporal clustering. Fuzzy matching is performed.</para>
+        /// <para>The characters that are included in the titles of spatiotemporal clusters to be queried. Matches are found by using fuzzy matching.</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

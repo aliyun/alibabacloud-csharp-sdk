@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetVideoModerationResultRequest : TeaModel {
         /// <summary>
+        /// <para>The project name.<a href="~~478153~~"></a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The task type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

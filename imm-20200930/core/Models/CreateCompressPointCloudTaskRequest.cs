@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <remarks>
+        /// <para> The IMM operation does not support a callback URL. We recommend that you use Simple Message Queue (SMQ) to receive notifications.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]

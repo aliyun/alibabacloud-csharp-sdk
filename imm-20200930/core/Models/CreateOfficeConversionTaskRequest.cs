@@ -248,9 +248,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? Quality { get; set; }
 
         /// <summary>
-        /// <para>The percentage scale relative to the source document. Valid values: 20 to 200. The default value is 100, which indicates that the document is not scaled.</para>
+        /// <para>The percentage scale relative to the source document. Valid values: 20 to 199. The default value is 100, which indicates that the document is not scaled.</para>
         /// <remarks>
-        /// <para> A value that is less than 100 indicates a size reduction. A value that is greater than 100 indicates an enlargement.</para>
+        /// <para>A value that is less than 100 indicates a size reduction. A value that is greater than 100 indicates an enlargement.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -321,14 +321,40 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string SourceURI { get; set; }
 
+        /// <summary>
+        /// <para>The list of images. The sequence of image URIs in the list determines the order in which they are converted. (<b>This parameter is not officially available and is not recommended.</b>)</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss://imm-test/test.pptx</para>
+        /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public List<CreateOfficeConversionTaskRequestSources> Sources { get; set; }
         public class CreateOfficeConversionTaskRequestSources : TeaModel {
+            /// <summary>
+            /// <para>The rotation angle. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0 (default)</description></item>
+            /// <item><description>90</description></item>
+            /// <item><description>180</description></item>
+            /// <item><description>270</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>90</para>
+            /// </summary>
             [NameInMap("Rotate")]
             [Validation(Required=false)]
             public long? Rotate { get; set; }
 
+            /// <summary>
+            /// <para>The OSS URI of the input image.</para>
+            /// <para>The URI must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that contains the file name extension.</para>
+            /// <para>The operation supports the following image formats: JPG, JP2, PNG, TIFF, WebP, BMP, and SVG.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>oss://examplebucket/sampleobject.jpg</para>
+            /// </summary>
             [NameInMap("URI")]
             [Validation(Required=false)]
             public string URI { get; set; }

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateFileCompressionTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The format of the package. Default value: zip.</para>
+        /// <para>The format of the output file.</para>
         /// <remarks>
-        /// <para> Only the ZIP format is supported.</para>
+        /// <para>Only the ZIP format is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

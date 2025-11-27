@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string URI { get; set; }
 
+        /// <summary>
+        /// <para>The metadata fields that you want to include in the response. You can use this parameter to reduce the size of the response.</para>
+        /// <para>If you do not specify this parameter or leave this parameter empty, the operation returns all metadata fields of the file.</para>
+        /// </summary>
         [NameInMap("WithFields")]
         [Validation(Required=false)]
         public string WithFieldsShrink { get; set; }

@@ -10,40 +10,43 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateMediaConvertTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The sequence number of the main media file in the concatenation list of media files. The main media file provides the default transcoding settings, such as the resolution and the frame rate, for videos and audios. Default value: <c>0</c>. A value of <c>0</c> specifies that the main media file is aligned with the first media file in the concatenation list.</para>
+        /// <para>When performing media concatenation, the index of the primary media file (which provides the default transcoding parameters for <c>Video</c> and <c>Audio</c>, including resolution, frame rate, etc.) in the concatenation list. The default value is 0 (aligning with the first media file in the concatenation list).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("AlignmentIndex")]
         [Validation(Required=false)]
         public int? AlignmentIndex { get; set; }
 
         /// <summary>
-        /// <para><b>If you have no special requirements, leave this parameter empty.</b></para>
-        /// <para>The authorization chain. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
+        /// <para><b>If there are no special requirements, please leave this blank.</b></para>
+        /// <para>Chain authorization configuration. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Using Chain Authorization to Access Other Entity Resources</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public string CredentialConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For more information, see &quot;Notification&quot;. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification format</a>.</para>
+        /// <para>Notification configuration. For details, click Notification. The format of asynchronous notification messages can be found in <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous Notification Message Format</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public string NotificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</para>
+        /// <para>The name of the project. For how to obtain it, see <a href="https://help.aliyun.com/document_detail/478153.html">Creating a Project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>immtest</para>
+        /// <para>test-project</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The source media files. If multiple files exist at the same time, the Concat feature is enabled. The video files are concatenated in the order of their URI inputs.</para>
+        /// <para>A list of media files. If the list contains more than one element, it indicates that the Concat (concatenation) function is enabled. The Concat order follows the sequence of the input video file URIs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Sources")]
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string SourcesShrink { get; set; }
 
         /// <summary>
-        /// <para>The custom tags. You can search for or filter asynchronous tasks by custom tag.</para>
+        /// <para>Custom tags used for searching and filtering asynchronous tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;test&quot;:&quot;val1&quot;}</para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The media processing tasks. You can specify multiple values for this parameter.</para>
+        /// <para>List of media processing tasks, supporting multiple task configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Targets")]
@@ -69,10 +72,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TargetsShrink { get; set; }
 
         /// <summary>
-        /// <para>The custom information, which is returned as asynchronous notifications to facilitate notification management in your system. The maximum information length is 2,048 bytes.</para>
+        /// <para>User-defined information that will be returned in asynchronous message notifications, used for convenient association and processing within your system. The maximum length is 2048 bytes.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></para>
+        /// <para>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

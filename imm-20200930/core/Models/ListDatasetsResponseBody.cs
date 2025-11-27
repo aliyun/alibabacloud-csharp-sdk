@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListDatasetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of datasets.</para>
+        /// <para>The datasets.</para>
         /// </summary>
         [NameInMap("Datasets")]
         [Validation(Required=false)]

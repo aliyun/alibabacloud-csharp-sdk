@@ -77,7 +77,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string SourceURI { get; set; }
 
         /// <summary>
-        /// <para>The watermark strength level. The higher the strength level, the more resistant the watermarked image is to attacks, but the more the image is distorted. Valid values: low, medium, and high. Default value: low.</para>
+        /// <para>The level of watermark extraction. A higher level indicates a longer time and a higher quality. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>low</description></item>
+        /// <item><description>medium</description></item>
+        /// <item><description>high</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>low</para>

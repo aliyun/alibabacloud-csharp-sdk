@@ -21,7 +21,26 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the initial request parameters that are used to create the task. Default value: False.</para>
+        /// <para>Specifies whether to return original request parameters specified to create the task.</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false (default)</description></item>
+        /// </list>
+        /// <para>This parameter applies only to the following tasks:</para>
+        /// <list type="bullet">
+        /// <item><description>MediaConvert</description></item>
+        /// <item><description>VideoLabelClassification</description></item>
+        /// <item><description>FaceClustering</description></item>
+        /// <item><description>FileCompression</description></item>
+        /// <item><description>ArchiveFileInspection</description></item>
+        /// <item><description>FileUncompression</description></item>
+        /// <item><description>PointCloudCompress</description></item>
+        /// <item><description>ImageToPDF</description></item>
+        /// <item><description>StoryCreation</description></item>
+        /// <item><description>LocationDateClustering</description></item>
+        /// <item><description>ImageSplicing</description></item>
+        /// <item><description>FacesSearching</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

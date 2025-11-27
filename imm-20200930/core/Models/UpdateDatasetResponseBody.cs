@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class UpdateDatasetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The dataset.</para>
+        /// <para>数据集。</para>
         /// </summary>
         [NameInMap("Dataset")]
         [Validation(Required=false)]
         public Dataset Dataset { get; set; }
 
         /// <summary>
+        /// <para>请求ID。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>45234D4A-A3E3-4B23-AACA-8D897514****</para>
         /// </summary>

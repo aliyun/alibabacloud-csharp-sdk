@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string FileShrink { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For more information, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</para>
+        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
@@ -46,6 +46,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        /// <summary>
+        /// <para>The custom user information, which is returned in an asynchronous notification. The maximum length of a notification is 2048 bytes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></para>
+        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }

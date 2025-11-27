@@ -46,6 +46,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        /// <summary>
+        /// <para>The user-defined data that you want to return in asynchronous messages. This parameter takes effect only when you specify the MNS settings in the Notification parameter. The maximum information length is 2,048 bytes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///       &quot;id&quot;: &quot;test-id&quot;,
+        ///       &quot;name&quot;: &quot;test-name&quot;
+        /// }</para>
+        /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }

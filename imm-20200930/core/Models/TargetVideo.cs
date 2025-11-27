@@ -237,6 +237,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public string ScaleType { get; set; }
 
+            [NameInMap("VideoSlim")]
+            [Validation(Required=false)]
+            public int? VideoSlim { get; set; }
+
         }
 
     }

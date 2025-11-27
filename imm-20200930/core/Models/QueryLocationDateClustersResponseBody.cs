@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<LocationDateCluster> LocationDateClusters { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MzQNjmY2MzYxNhNjk2ZNjEu****</para>

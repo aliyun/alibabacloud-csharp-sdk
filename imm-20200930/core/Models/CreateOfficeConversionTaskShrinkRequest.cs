@@ -248,9 +248,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? Quality { get; set; }
 
         /// <summary>
-        /// <para>The percentage scale relative to the source document. Valid values: 20 to 200. The default value is 100, which indicates that the document is not scaled.</para>
+        /// <para>The percentage scale relative to the source document. Valid values: 20 to 199. The default value is 100, which indicates that the document is not scaled.</para>
         /// <remarks>
-        /// <para> A value that is less than 100 indicates a size reduction. A value that is greater than 100 indicates an enlargement.</para>
+        /// <para>A value that is less than 100 indicates a size reduction. A value that is greater than 100 indicates an enlargement.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -321,6 +321,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string SourceURI { get; set; }
 
+        /// <summary>
+        /// <para>The list of images. The sequence of image URIs in the list determines the order in which they are converted. (<b>This parameter is not officially available and is not recommended.</b>)</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss://imm-test/test.pptx</para>
+        /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
         public string SourcesShrink { get; set; }

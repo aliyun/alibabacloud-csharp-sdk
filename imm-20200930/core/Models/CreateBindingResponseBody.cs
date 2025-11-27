@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateBindingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The binding relationship.</para>
+        /// <para>The information about the binding.</para>
         /// </summary>
         [NameInMap("Binding")]
         [Validation(Required=false)]
