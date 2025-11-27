@@ -758,6 +758,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("SupportUserGroupMixedAuth")]
+            [Validation(Required=false)]
+            public bool? SupportUserGroupMixedAuth { get; set; }
+
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags> Tags { get; set; }
@@ -775,6 +779,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Value { get; set; }
 
             }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Mixed</para>
+            /// </summary>
+            [NameInMap("UserGroupAuthMode")]
+            [Validation(Required=false)]
+            public string UserGroupAuthMode { get; set; }
 
         }
 

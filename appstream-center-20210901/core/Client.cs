@@ -547,6 +547,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["SubPayType"] = request.SubPayType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                body["UserGroupIds"] = request.UserGroupIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserInfoShrink))
             {
                 body["UserInfo"] = request.UserInfoShrink;
@@ -728,6 +732,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubPayType))
             {
                 body["SubPayType"] = request.SubPayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                body["UserGroupIds"] = request.UserGroupIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserInfoShrink))
             {
@@ -3229,9 +3237,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
                 query["Tag"] = request.Tag;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludedUserGroupIds))
+            {
+                body["ExcludedUserGroupIds"] = request.ExcludedUserGroupIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                body["UserGroupIds"] = request.UserGroupIds;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3317,9 +3333,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
                 query["Tag"] = request.Tag;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludedUserGroupIds))
+            {
+                body["ExcludedUserGroupIds"] = request.ExcludedUserGroupIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                body["UserGroupIds"] = request.UserGroupIds;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3887,7 +3911,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表显示镜像</para>
+        /// <para>Queries the image information about an ECS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4011,7 +4035,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表显示镜像</para>
+        /// <para>Queries the image information about an ECS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4135,7 +4159,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表显示镜像</para>
+        /// <para>Queries the image information about an ECS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4153,7 +4177,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表显示镜像</para>
+        /// <para>Queries the image information about an ECS instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6001,8 +6025,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改浏览器交付组</para>
+        /// <para>Modifies the properties of the cloud browser.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the properties of the cloud browser.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyBrowserInstanceGroupRequest
@@ -6083,8 +6112,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改浏览器交付组</para>
+        /// <para>Modifies the properties of the cloud browser.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the properties of the cloud browser.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyBrowserInstanceGroupRequest
@@ -6165,8 +6199,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改浏览器交付组</para>
+        /// <para>Modifies the properties of the cloud browser.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the properties of the cloud browser.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyBrowserInstanceGroupRequest
@@ -6183,8 +6222,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改浏览器交付组</para>
+        /// <para>Modifies the properties of the cloud browser.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the properties of the cloud browser.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyBrowserInstanceGroupRequest

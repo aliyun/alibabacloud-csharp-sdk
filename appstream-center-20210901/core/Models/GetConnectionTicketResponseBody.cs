@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string AppInstancePersistentId { get; set; }
 
+        /// <summary>
+        /// <para>The avatar ID.</para>
+        /// </summary>
         [NameInMap("AvatarId")]
         [Validation(Required=false)]
         public string AvatarId { get; set; }

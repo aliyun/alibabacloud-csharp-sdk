@@ -197,6 +197,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string UserDefinePolicyShrink { get; set; }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("UserGroupIds")]
+        [Validation(Required=false)]
+        public List<string> UserGroupIds { get; set; }
+
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public string UserInfoShrink { get; set; }

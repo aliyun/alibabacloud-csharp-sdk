@@ -120,6 +120,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
+        /// <summary>
+        /// <para>The environment configuration.</para>
+        /// </summary>
         [NameInMap("EnvironmentConfig")]
         [Validation(Required=false)]
         public string EnvironmentConfig { get; set; }

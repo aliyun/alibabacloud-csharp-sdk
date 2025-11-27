@@ -573,6 +573,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         }
 
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("UserGroupIds")]
+        [Validation(Required=false)]
+        public List<string> UserGroupIds { get; set; }
+
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public CreateAppInstanceGroupRequestUserInfo UserInfo { get; set; }

@@ -52,6 +52,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("ExcludedUserGroupIds")]
+        [Validation(Required=false)]
+        public List<string> ExcludedUserGroupIds { get; set; }
+
+        /// <summary>
         /// <para>The ID of the resource specification that you purchase. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
@@ -141,6 +149,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Value { get; set; }
 
         }
+
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("UserGroupIds")]
+        [Validation(Required=false)]
+        public List<string> UserGroupIds { get; set; }
 
     }
 

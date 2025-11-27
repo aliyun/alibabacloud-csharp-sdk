@@ -1,3 +1,13 @@
+2025-11-27 Version: 4.6.3
+- Update API CreateAppInstanceGroup: add request parameters UserGroupIds.
+- Update API GetAppInstanceGroup: add response parameters Body.AppInstanceGroupModels.SupportUserGroupMixedAuth.
+- Update API GetAppInstanceGroup: add response parameters Body.AppInstanceGroupModels.UserGroupAuthMode.
+- Update API ListAppInstanceGroup: add request parameters ExcludedUserGroupIds.
+- Update API ListAppInstanceGroup: add request parameters UserGroupIds.
+- Update API ListAppInstanceGroup: add response parameters Body.AppInstanceGroupModels.$.SupportUserGroupMixedAuth.
+- Update API ListAppInstanceGroup: add response parameters Body.AppInstanceGroupModels.$.UserGroupAuthMode.
+
+
 2025-11-03 Version: 4.6.2
 - Update API GetConnectionTicket: add request parameters EnvironmentConfig.
 
