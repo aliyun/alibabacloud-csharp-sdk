@@ -8,22 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Agency20221216.Models
 {
-    public class ListExportTasksRequest : TeaModel {
+    public class GetShutdownPolicyRecordRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>12343</para>
+        /// <para>292828565558721922</para>
         /// </summary>
-        [NameInMap("Id")]
+        [NameInMap("CustomerUID")]
         [Validation(Required=false)]
-        public long? Id { get; set; }
+        public long? CustomerUID { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>en</para>
+        /// <para>2025-12-15 10:34:36</para>
         /// </summary>
-        [NameInMap("Language")]
+        [NameInMap("OperationTime")]
         [Validation(Required=false)]
-        public string Language { get; set; }
+        public string OperationTime { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -44,16 +46,6 @@ namespace AlibabaCloud.SDK.Agency20221216.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>intlExportUsageDeductHistory</para>
-        /// </summary>
-        [NameInMap("SceneCode")]
-        [Validation(Required=false)]
-        public string SceneCode { get; set; }
 
     }
 

@@ -3198,6 +3198,294 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>下单控制记录查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPurchaseControlRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPurchaseControlRecordResponse
+        /// </returns>
+        public GetPurchaseControlRecordResponse GetPurchaseControlRecordWithOptions(GetPurchaseControlRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUID))
+            {
+                query["CustomerUID"] = request.CustomerUID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTime))
+            {
+                query["OperationTime"] = request.OperationTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPurchaseControlRecord",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPurchaseControlRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下单控制记录查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPurchaseControlRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPurchaseControlRecordResponse
+        /// </returns>
+        public async Task<GetPurchaseControlRecordResponse> GetPurchaseControlRecordWithOptionsAsync(GetPurchaseControlRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUID))
+            {
+                query["CustomerUID"] = request.CustomerUID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTime))
+            {
+                query["OperationTime"] = request.OperationTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPurchaseControlRecord",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPurchaseControlRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下单控制记录查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPurchaseControlRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPurchaseControlRecordResponse
+        /// </returns>
+        public GetPurchaseControlRecordResponse GetPurchaseControlRecord(GetPurchaseControlRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetPurchaseControlRecordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下单控制记录查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPurchaseControlRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPurchaseControlRecordResponse
+        /// </returns>
+        public async Task<GetPurchaseControlRecordResponse> GetPurchaseControlRecordAsync(GetPurchaseControlRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetPurchaseControlRecordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询延停策略修改记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetShutdownPolicyRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetShutdownPolicyRecordResponse
+        /// </returns>
+        public GetShutdownPolicyRecordResponse GetShutdownPolicyRecordWithOptions(GetShutdownPolicyRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUID))
+            {
+                query["CustomerUID"] = request.CustomerUID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTime))
+            {
+                query["OperationTime"] = request.OperationTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetShutdownPolicyRecord",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetShutdownPolicyRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询延停策略修改记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetShutdownPolicyRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetShutdownPolicyRecordResponse
+        /// </returns>
+        public async Task<GetShutdownPolicyRecordResponse> GetShutdownPolicyRecordWithOptionsAsync(GetShutdownPolicyRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUID))
+            {
+                query["CustomerUID"] = request.CustomerUID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTime))
+            {
+                query["OperationTime"] = request.OperationTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetShutdownPolicyRecord",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetShutdownPolicyRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询延停策略修改记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetShutdownPolicyRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetShutdownPolicyRecordResponse
+        /// </returns>
+        public GetShutdownPolicyRecordResponse GetShutdownPolicyRecord(GetShutdownPolicyRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetShutdownPolicyRecordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询延停策略修改记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetShutdownPolicyRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetShutdownPolicyRecordResponse
+        /// </returns>
+        public async Task<GetShutdownPolicyRecordResponse> GetShutdownPolicyRecordAsync(GetShutdownPolicyRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetShutdownPolicyRecordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Query all the Unassociated Customer.</para>
         /// </summary>
         /// 
@@ -3885,6 +4173,10 @@ namespace AlibabaCloud.SDK.Agency20221216
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
@@ -3939,6 +4231,10 @@ namespace AlibabaCloud.SDK.Agency20221216
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
