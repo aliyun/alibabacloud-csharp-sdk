@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 
         }
 
+        [NameInMap("EnableEventCallback")]
+        [Validation(Required=false)]
+        public bool? EnableEventCallback { get; set; }
+
         [NameInMap("EnhancementMode")]
         [Validation(Required=false)]
         public string EnhancementMode { get; set; }

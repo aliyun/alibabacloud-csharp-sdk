@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public bool? AllowPptFormat { get; set; }
 
+        [NameInMap("EnableEventCallback")]
+        [Validation(Required=false)]
+        public bool? EnableEventCallback { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>docStructure.pdf</para>

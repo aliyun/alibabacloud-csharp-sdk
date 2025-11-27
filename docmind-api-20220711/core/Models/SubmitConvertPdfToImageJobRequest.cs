@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 {
     public class SubmitConvertPdfToImageJobRequest : TeaModel {
+        [NameInMap("EnableEventCallback")]
+        [Validation(Required=false)]
+        public bool? EnableEventCallback { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>convertPdfToImage.pdf</para>
