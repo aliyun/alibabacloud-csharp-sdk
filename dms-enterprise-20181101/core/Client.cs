@@ -3743,6 +3743,386 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ChatWithDesensitizeSSERequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatWithDesensitizeSSEResponse
+        /// </returns>
+        public ChatWithDesensitizeSSEResponse ChatWithDesensitizeSSEWithOptions(ChatWithDesensitizeSSERequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ChatWithDesensitizeSSEShrinkRequest request = new ChatWithDesensitizeSSEShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Messages))
+            {
+                request.MessagesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Messages, "Messages", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ModalitiesList))
+            {
+                request.ModalitiesListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ModalitiesList, "ModalitiesList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SearchOptions))
+            {
+                request.SearchOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SearchOptions, "SearchOptions", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Stop))
+            {
+                request.StopShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Stop, "Stop", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioJson))
+            {
+                query["AudioJson"] = request.AudioJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesensitizationRule))
+            {
+                query["DesensitizationRule"] = request.DesensitizationRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCodeInterpreter))
+            {
+                query["EnableCodeInterpreter"] = request.EnableCodeInterpreter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSearch))
+            {
+                query["EnableSearch"] = request.EnableSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableThinking))
+            {
+                query["EnableThinking"] = request.EnableThinking;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeUsage))
+            {
+                query["IncludeUsage"] = request.IncludeUsage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Logprobs))
+            {
+                query["Logprobs"] = request.Logprobs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTokens))
+            {
+                query["MaxTokens"] = request.MaxTokens;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModalitiesListShrink))
+            {
+                query["ModalitiesList"] = request.ModalitiesListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedDesensitization))
+            {
+                query["NeedDesensitization"] = request.NeedDesensitization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PresencePenalty))
+            {
+                query["PresencePenalty"] = request.PresencePenalty;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseFormat))
+            {
+                query["ResponseFormat"] = request.ResponseFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchOptionsShrink))
+            {
+                query["SearchOptions"] = request.SearchOptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Seed))
+            {
+                query["Seed"] = request.Seed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopShrink))
+            {
+                query["Stop"] = request.StopShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                query["Stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Temperature))
+            {
+                query["Temperature"] = request.Temperature;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingBudget))
+            {
+                query["ThinkingBudget"] = request.ThinkingBudget;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
+            {
+                query["TopK"] = request.TopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopLogprobs))
+            {
+                query["TopLogprobs"] = request.TopLogprobs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopP))
+            {
+                query["TopP"] = request.TopP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VlHighResolutionImages))
+            {
+                query["VlHighResolutionImages"] = request.VlHighResolutionImages;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDashScopeDataInspection))
+            {
+                query["XDashScopeDataInspection"] = request.XDashScopeDataInspection;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessagesShrink))
+            {
+                body["Messages"] = request.MessagesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChatWithDesensitizeSSE",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChatWithDesensitizeSSEResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ChatWithDesensitizeSSERequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatWithDesensitizeSSEResponse
+        /// </returns>
+        public async Task<ChatWithDesensitizeSSEResponse> ChatWithDesensitizeSSEWithOptionsAsync(ChatWithDesensitizeSSERequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ChatWithDesensitizeSSEShrinkRequest request = new ChatWithDesensitizeSSEShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Messages))
+            {
+                request.MessagesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Messages, "Messages", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ModalitiesList))
+            {
+                request.ModalitiesListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ModalitiesList, "ModalitiesList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SearchOptions))
+            {
+                request.SearchOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SearchOptions, "SearchOptions", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Stop))
+            {
+                request.StopShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Stop, "Stop", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioJson))
+            {
+                query["AudioJson"] = request.AudioJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesensitizationRule))
+            {
+                query["DesensitizationRule"] = request.DesensitizationRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCodeInterpreter))
+            {
+                query["EnableCodeInterpreter"] = request.EnableCodeInterpreter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSearch))
+            {
+                query["EnableSearch"] = request.EnableSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableThinking))
+            {
+                query["EnableThinking"] = request.EnableThinking;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeUsage))
+            {
+                query["IncludeUsage"] = request.IncludeUsage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Logprobs))
+            {
+                query["Logprobs"] = request.Logprobs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTokens))
+            {
+                query["MaxTokens"] = request.MaxTokens;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModalitiesListShrink))
+            {
+                query["ModalitiesList"] = request.ModalitiesListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedDesensitization))
+            {
+                query["NeedDesensitization"] = request.NeedDesensitization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PresencePenalty))
+            {
+                query["PresencePenalty"] = request.PresencePenalty;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseFormat))
+            {
+                query["ResponseFormat"] = request.ResponseFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchOptionsShrink))
+            {
+                query["SearchOptions"] = request.SearchOptionsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Seed))
+            {
+                query["Seed"] = request.Seed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopShrink))
+            {
+                query["Stop"] = request.StopShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                query["Stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Temperature))
+            {
+                query["Temperature"] = request.Temperature;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingBudget))
+            {
+                query["ThinkingBudget"] = request.ThinkingBudget;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
+            {
+                query["TopK"] = request.TopK;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopLogprobs))
+            {
+                query["TopLogprobs"] = request.TopLogprobs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopP))
+            {
+                query["TopP"] = request.TopP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VlHighResolutionImages))
+            {
+                query["VlHighResolutionImages"] = request.VlHighResolutionImages;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDashScopeDataInspection))
+            {
+                query["XDashScopeDataInspection"] = request.XDashScopeDataInspection;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessagesShrink))
+            {
+                body["Messages"] = request.MessagesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChatWithDesensitizeSSE",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChatWithDesensitizeSSEResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ChatWithDesensitizeSSERequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatWithDesensitizeSSEResponse
+        /// </returns>
+        public ChatWithDesensitizeSSEResponse ChatWithDesensitizeSSE(ChatWithDesensitizeSSERequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChatWithDesensitizeSSEWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>带有DMS脱敏能力的聊天SSE API接口</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ChatWithDesensitizeSSERequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatWithDesensitizeSSEResponse
+        /// </returns>
+        public async Task<ChatWithDesensitizeSSEResponse> ChatWithDesensitizeSSEAsync(ChatWithDesensitizeSSERequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChatWithDesensitizeSSEWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>批量校验是否有表访问权限</para>
         /// </summary>
         /// 
