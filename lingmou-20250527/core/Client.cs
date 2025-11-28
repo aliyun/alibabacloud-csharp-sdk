@@ -457,6 +457,298 @@ namespace AlibabaCloud.SDK.LingMou20250527
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建播报贴图</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBroadcastStickerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBroadcastStickerResponse
+        /// </returns>
+        public CreateBroadcastStickerResponse CreateBroadcastStickerWithOptions(CreateBroadcastStickerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
+            {
+                body["ossKey"] = request.OssKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBroadcastSticker",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/customer/broadcast/material/sticker/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBroadcastStickerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建播报贴图</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBroadcastStickerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBroadcastStickerResponse
+        /// </returns>
+        public async Task<CreateBroadcastStickerResponse> CreateBroadcastStickerWithOptionsAsync(CreateBroadcastStickerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
+            {
+                body["ossKey"] = request.OssKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBroadcastSticker",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/customer/broadcast/material/sticker/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBroadcastStickerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建播报贴图</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBroadcastStickerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBroadcastStickerResponse
+        /// </returns>
+        public CreateBroadcastStickerResponse CreateBroadcastSticker(CreateBroadcastStickerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateBroadcastStickerWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建播报贴图</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBroadcastStickerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBroadcastStickerResponse
+        /// </returns>
+        public async Task<CreateBroadcastStickerResponse> CreateBroadcastStickerAsync(CreateBroadcastStickerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateBroadcastStickerWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于模板创建播报视频</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBroadcastVideoFromTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBroadcastVideoFromTemplateResponse
+        /// </returns>
+        public CreateBroadcastVideoFromTemplateResponse CreateBroadcastVideoFromTemplateWithOptions(CreateBroadcastVideoFromTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["templateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Variables))
+            {
+                body["variables"] = request.Variables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoOptions))
+            {
+                body["videoOptions"] = request.VideoOptions;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBroadcastVideoFromTemplate",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/amp/customer/broadcast/video/createFromTemplate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBroadcastVideoFromTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于模板创建播报视频</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBroadcastVideoFromTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBroadcastVideoFromTemplateResponse
+        /// </returns>
+        public async Task<CreateBroadcastVideoFromTemplateResponse> CreateBroadcastVideoFromTemplateWithOptionsAsync(CreateBroadcastVideoFromTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["templateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Variables))
+            {
+                body["variables"] = request.Variables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoOptions))
+            {
+                body["videoOptions"] = request.VideoOptions;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBroadcastVideoFromTemplate",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/amp/customer/broadcast/video/createFromTemplate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBroadcastVideoFromTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于模板创建播报视频</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBroadcastVideoFromTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBroadcastVideoFromTemplateResponse
+        /// </returns>
+        public CreateBroadcastVideoFromTemplateResponse CreateBroadcastVideoFromTemplate(CreateBroadcastVideoFromTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateBroadcastVideoFromTemplateWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于模板创建播报视频</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBroadcastVideoFromTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBroadcastVideoFromTemplateResponse
+        /// </returns>
+        public async Task<CreateBroadcastVideoFromTemplateResponse> CreateBroadcastVideoFromTemplateAsync(CreateBroadcastVideoFromTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateBroadcastVideoFromTemplateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>背景配置</para>
         /// </summary>
         /// 
@@ -1243,6 +1535,136 @@ namespace AlibabaCloud.SDK.LingMou20250527
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询播报模板详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBroadcastTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBroadcastTemplateResponse
+        /// </returns>
+        public GetBroadcastTemplateResponse GetBroadcastTemplateWithOptions(GetBroadcastTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["templateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBroadcastTemplate",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/customer/broadcast/template/detail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBroadcastTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询播报模板详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBroadcastTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBroadcastTemplateResponse
+        /// </returns>
+        public async Task<GetBroadcastTemplateResponse> GetBroadcastTemplateWithOptionsAsync(GetBroadcastTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["templateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBroadcastTemplate",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/customer/broadcast/template/detail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBroadcastTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询播报模板详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBroadcastTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBroadcastTemplateResponse
+        /// </returns>
+        public GetBroadcastTemplateResponse GetBroadcastTemplate(GetBroadcastTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetBroadcastTemplateWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询播报模板详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBroadcastTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBroadcastTemplateResponse
+        /// </returns>
+        public async Task<GetBroadcastTemplateResponse> GetBroadcastTemplateAsync(GetBroadcastTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetBroadcastTemplateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询图片训练数字人的状态</para>
         /// </summary>
         /// 
@@ -1507,6 +1929,302 @@ namespace AlibabaCloud.SDK.LingMou20250527
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetUploadPolicyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举播报模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBroadcastTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBroadcastTemplatesResponse
+        /// </returns>
+        public ListBroadcastTemplatesResponse ListBroadcastTemplatesWithOptions(ListBroadcastTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBroadcastTemplates",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/customer/broadcast/template/list",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBroadcastTemplatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举播报模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBroadcastTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBroadcastTemplatesResponse
+        /// </returns>
+        public async Task<ListBroadcastTemplatesResponse> ListBroadcastTemplatesWithOptionsAsync(ListBroadcastTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBroadcastTemplates",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/customer/broadcast/template/list",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBroadcastTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举播报模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBroadcastTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBroadcastTemplatesResponse
+        /// </returns>
+        public ListBroadcastTemplatesResponse ListBroadcastTemplates(ListBroadcastTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListBroadcastTemplatesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举播报模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBroadcastTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBroadcastTemplatesResponse
+        /// </returns>
+        public async Task<ListBroadcastTemplatesResponse> ListBroadcastTemplatesAsync(ListBroadcastTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListBroadcastTemplatesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据视频id批量查询播报视频（最多查询100个）</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListBroadcastVideosByIdRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBroadcastVideosByIdResponse
+        /// </returns>
+        public ListBroadcastVideosByIdResponse ListBroadcastVideosByIdWithOptions(ListBroadcastVideosByIdRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListBroadcastVideosByIdShrinkRequest request = new ListBroadcastVideosByIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VideoIds))
+            {
+                request.VideoIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoIds, "videoIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoIdsShrink))
+            {
+                query["videoIds"] = request.VideoIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBroadcastVideosById",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/amp/customer/broadcast/video/batchQuery",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBroadcastVideosByIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据视频id批量查询播报视频（最多查询100个）</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListBroadcastVideosByIdRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBroadcastVideosByIdResponse
+        /// </returns>
+        public async Task<ListBroadcastVideosByIdResponse> ListBroadcastVideosByIdWithOptionsAsync(ListBroadcastVideosByIdRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListBroadcastVideosByIdShrinkRequest request = new ListBroadcastVideosByIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VideoIds))
+            {
+                request.VideoIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoIds, "videoIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoIdsShrink))
+            {
+                query["videoIds"] = request.VideoIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListBroadcastVideosById",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/amp/customer/broadcast/video/batchQuery",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListBroadcastVideosByIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据视频id批量查询播报视频（最多查询100个）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBroadcastVideosByIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBroadcastVideosByIdResponse
+        /// </returns>
+        public ListBroadcastVideosByIdResponse ListBroadcastVideosById(ListBroadcastVideosByIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListBroadcastVideosByIdWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据视频id批量查询播报视频（最多查询100个）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListBroadcastVideosByIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListBroadcastVideosByIdResponse
+        /// </returns>
+        public async Task<ListBroadcastVideosByIdResponse> ListBroadcastVideosByIdAsync(ListBroadcastVideosByIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListBroadcastVideosByIdWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
