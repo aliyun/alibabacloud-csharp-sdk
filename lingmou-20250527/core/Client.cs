@@ -181,6 +181,282 @@ namespace AlibabaCloud.SDK.LingMou20250527
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建背景素材</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBackgroundPicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackgroundPicResponse
+        /// </returns>
+        public CreateBackgroundPicResponse CreateBackgroundPicWithOptions(CreateBackgroundPicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filename))
+            {
+                query["filename"] = request.Filename;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
+            {
+                query["ossKey"] = request.OssKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBackgroundPic",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/chat/createBackgroundPic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBackgroundPicResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建背景素材</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBackgroundPicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackgroundPicResponse
+        /// </returns>
+        public async Task<CreateBackgroundPicResponse> CreateBackgroundPicWithOptionsAsync(CreateBackgroundPicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filename))
+            {
+                query["filename"] = request.Filename;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
+            {
+                query["ossKey"] = request.OssKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBackgroundPic",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/chat/createBackgroundPic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBackgroundPicResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建背景素材</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBackgroundPicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackgroundPicResponse
+        /// </returns>
+        public CreateBackgroundPicResponse CreateBackgroundPic(CreateBackgroundPicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateBackgroundPicWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建背景素材</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBackgroundPicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackgroundPicResponse
+        /// </returns>
+        public async Task<CreateBackgroundPicResponse> CreateBackgroundPicAsync(CreateBackgroundPicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateBackgroundPicWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>背景配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatConfigResponse
+        /// </returns>
+        public CreateChatConfigResponse CreateChatConfigWithOptions(CreateChatConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarId))
+            {
+                query["avatarId"] = request.AvatarId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackgroundId))
+            {
+                query["backgroundId"] = request.BackgroundId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateChatConfig",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/chat/createChatConfig",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateChatConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>背景配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatConfigResponse
+        /// </returns>
+        public async Task<CreateChatConfigResponse> CreateChatConfigWithOptionsAsync(CreateChatConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarId))
+            {
+                query["avatarId"] = request.AvatarId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackgroundId))
+            {
+                query["backgroundId"] = request.BackgroundId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateChatConfig",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/chat/createChatConfig",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateChatConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>背景配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatConfigResponse
+        /// </returns>
+        public CreateChatConfigResponse CreateChatConfig(CreateChatConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateChatConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>背景配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateChatConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatConfigResponse
+        /// </returns>
+        public async Task<CreateChatConfigResponse> CreateChatConfigAsync(CreateChatConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateChatConfigWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建数字人会话</para>
         /// </summary>
         /// 
@@ -323,6 +599,322 @@ namespace AlibabaCloud.SDK.LingMou20250527
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateChatSessionWithOptionsAsync(id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建对话免训照片数字人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNoTrainPicAvatarRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNoTrainPicAvatarResponse
+        /// </returns>
+        public CreateNoTrainPicAvatarResponse CreateNoTrainPicAvatarWithOptions(CreateNoTrainPicAvatarRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expressiveness))
+            {
+                query["expressiveness"] = request.Expressiveness;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                query["gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateAssets))
+            {
+                query["generateAssets"] = request.GenerateAssets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageOssPath))
+            {
+                query["imageOssPath"] = request.ImageOssPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JwtToken))
+            {
+                query["jwtToken"] = request.JwtToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Transparent))
+            {
+                query["transparent"] = request.Transparent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNoTrainPicAvatar",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/chat/createNoTrainPicAvatar",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNoTrainPicAvatarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建对话免训照片数字人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNoTrainPicAvatarRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNoTrainPicAvatarResponse
+        /// </returns>
+        public async Task<CreateNoTrainPicAvatarResponse> CreateNoTrainPicAvatarWithOptionsAsync(CreateNoTrainPicAvatarRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expressiveness))
+            {
+                query["expressiveness"] = request.Expressiveness;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                query["gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateAssets))
+            {
+                query["generateAssets"] = request.GenerateAssets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageOssPath))
+            {
+                query["imageOssPath"] = request.ImageOssPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JwtToken))
+            {
+                query["jwtToken"] = request.JwtToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Transparent))
+            {
+                query["transparent"] = request.Transparent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNoTrainPicAvatar",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/chat/createNoTrainPicAvatar",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNoTrainPicAvatarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建对话免训照片数字人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNoTrainPicAvatarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNoTrainPicAvatarResponse
+        /// </returns>
+        public CreateNoTrainPicAvatarResponse CreateNoTrainPicAvatar(CreateNoTrainPicAvatarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateNoTrainPicAvatarWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建对话免训照片数字人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateNoTrainPicAvatarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNoTrainPicAvatarResponse
+        /// </returns>
+        public async Task<CreateNoTrainPicAvatarResponse> CreateNoTrainPicAvatarAsync(CreateNoTrainPicAvatarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateNoTrainPicAvatarWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取对话免训图片素材上传凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUploadPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUploadPolicyResponse
+        /// </returns>
+        public GetUploadPolicyResponse GetUploadPolicyWithOptions(GetUploadPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JwtToken))
+            {
+                query["jwtToken"] = request.JwtToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUploadPolicy",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/chat/getUploadPolicy",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUploadPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取对话免训图片素材上传凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUploadPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUploadPolicyResponse
+        /// </returns>
+        public async Task<GetUploadPolicyResponse> GetUploadPolicyWithOptionsAsync(GetUploadPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JwtToken))
+            {
+                query["jwtToken"] = request.JwtToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUploadPolicy",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/chat/getUploadPolicy",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUploadPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取对话免训图片素材上传凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUploadPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUploadPolicyResponse
+        /// </returns>
+        public GetUploadPolicyResponse GetUploadPolicy(GetUploadPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetUploadPolicyWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取对话免训图片素材上传凭证</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUploadPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUploadPolicyResponse
+        /// </returns>
+        public async Task<GetUploadPolicyResponse> GetUploadPolicyAsync(GetUploadPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetUploadPolicyWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
