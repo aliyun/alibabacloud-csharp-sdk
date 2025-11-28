@@ -220,6 +220,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public string Bootstraps { get; set; }
 
+                [NameInMap("CompressionType")]
+                [Validation(Required=false)]
+                public string CompressionType { get; set; }
+
                 [NameInMap("Headers")]
                 [Validation(Required=false)]
                 public CreateEventStreamingRequestSinkSinkApacheKafkaParametersHeaders Headers { get; set; }
@@ -307,6 +311,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [NameInMap("SecurityProtocol")]
                 [Validation(Required=false)]
                 public string SecurityProtocol { get; set; }
+
+                [NameInMap("SslTruststoreCertificates")]
+                [Validation(Required=false)]
+                public string SslTruststoreCertificates { get; set; }
 
                 [NameInMap("Topic")]
                 [Validation(Required=false)]
@@ -1692,6 +1700,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 }
 
+                [NameInMap("CompressionType")]
+                [Validation(Required=false)]
+                public string CompressionType { get; set; }
+
                 [NameInMap("Headers")]
                 [Validation(Required=false)]
                 public CreateEventStreamingRequestSinkSinkKafkaParametersHeaders Headers { get; set; }
@@ -2485,6 +2497,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
             }
+
+            [NameInMap("SinkRabbitMQMetaParameters")]
+            [Validation(Required=false)]
+            public SinkRabbitMQMetaParameters SinkRabbitMQMetaParameters { get; set; }
+
+            [NameInMap("SinkRabbitMQMsgSyncParameters")]
+            [Validation(Required=false)]
+            public SinkRabbitMQMsgSyncParameters SinkRabbitMQMsgSyncParameters { get; set; }
 
             /// <summary>
             /// <para>The parameters that are configured if you specify ApsaraMQ for RabbitMQ as the event target.</para>
@@ -3803,6 +3823,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public string SecurityProtocol { get; set; }
 
+                [NameInMap("SslTruststoreCertificates")]
+                [Validation(Required=false)]
+                public string SslTruststoreCertificates { get; set; }
+
                 [NameInMap("Topic")]
                 [Validation(Required=false)]
                 public string Topic { get; set; }
@@ -4381,6 +4405,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string RoleName { get; set; }
 
             }
+
+            [NameInMap("SourceRabbitMQMetaParameters")]
+            [Validation(Required=false)]
+            public SourceRabbitMQMetaParameters SourceRabbitMQMetaParameters { get; set; }
+
+            [NameInMap("SourceRabbitMQMsgSyncParameters")]
+            [Validation(Required=false)]
+            public SourceRabbitMQMsgSyncParameters SourceRabbitMQMsgSyncParameters { get; set; }
 
             /// <summary>
             /// <para>The parameters that are configured if you specify ApsaraMQ for RabbitMQ as the event source.</para>

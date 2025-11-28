@@ -1498,6 +1498,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         }
 
+                        [NameInMap("CompressionType")]
+                        [Validation(Required=false)]
+                        public string CompressionType { get; set; }
+
                         /// <summary>
                         /// <para>The ID of the ApsaraMQ for Kafka instance.</para>
                         /// </summary>
@@ -2004,6 +2008,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string VpcId { get; set; }
 
                     }
+
+                    [NameInMap("SinkRabbitMQMetaParameters")]
+                    [Validation(Required=false)]
+                    public SinkRabbitMQMetaParameters SinkRabbitMQMetaParameters { get; set; }
+
+                    [NameInMap("SinkRabbitMQMsgSyncParameters")]
+                    [Validation(Required=false)]
+                    public SinkRabbitMQMsgSyncParameters SinkRabbitMQMsgSyncParameters { get; set; }
 
                     /// <summary>
                     /// <para>The parameters that are returned if ApsaraMQ for RabbitMQ is specified as the event target.</para>
@@ -3860,6 +3872,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string RoleName { get; set; }
 
                     }
+
+                    [NameInMap("SourceRabbitMQMetaParameters")]
+                    [Validation(Required=false)]
+                    public SourceRabbitMQMetaParameters SourceRabbitMQMetaParameters { get; set; }
+
+                    [NameInMap("SourceRabbitMQMsgSyncParameters")]
+                    [Validation(Required=false)]
+                    public SourceRabbitMQMsgSyncParameters SourceRabbitMQMsgSyncParameters { get; set; }
 
                     /// <summary>
                     /// <para>The parameters that are returned if ApsaraMQ for RabbitMQ is specified as the event source.</para>
