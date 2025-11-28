@@ -1,3 +1,12 @@
+2025-11-28 Version: 1.3.0
+- Support API ConfirmTrainPicAvatar.
+- Support API CreateTTSVoiceCustom.
+- Support API CreateTrainPicAvatar.
+- Support API GetTrainPicAvatarStatus.
+- Support API ListPrivateTTSVoicesCustom.
+- Support API ListTemplateMaterial.
+
+
 2025-11-28 Version: 1.2.0
 - Support API CreateBackgroundPic.
 - Support API CreateChatConfig.

@@ -181,6 +181,144 @@ namespace AlibabaCloud.SDK.LingMou20250527
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>用户确认</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConfirmTrainPicAvatarRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfirmTrainPicAvatarResponse
+        /// </returns>
+        public ConfirmTrainPicAvatarResponse ConfirmTrainPicAvatarWithOptions(ConfirmTrainPicAvatarRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarId))
+            {
+                query["avatarId"] = request.AvatarId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConfirmTrainPicAvatar",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/train/confirmTrainPicAvatar",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConfirmTrainPicAvatarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户确认</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConfirmTrainPicAvatarRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfirmTrainPicAvatarResponse
+        /// </returns>
+        public async Task<ConfirmTrainPicAvatarResponse> ConfirmTrainPicAvatarWithOptionsAsync(ConfirmTrainPicAvatarRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarId))
+            {
+                query["avatarId"] = request.AvatarId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConfirmTrainPicAvatar",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/train/confirmTrainPicAvatar",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConfirmTrainPicAvatarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户确认</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConfirmTrainPicAvatarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfirmTrainPicAvatarResponse
+        /// </returns>
+        public ConfirmTrainPicAvatarResponse ConfirmTrainPicAvatar(ConfirmTrainPicAvatarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ConfirmTrainPicAvatarWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户确认</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConfirmTrainPicAvatarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfirmTrainPicAvatarResponse
+        /// </returns>
+        public async Task<ConfirmTrainPicAvatarResponse> ConfirmTrainPicAvatarAsync(ConfirmTrainPicAvatarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ConfirmTrainPicAvatarWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建背景素材</para>
         /// </summary>
         /// 
@@ -781,6 +919,460 @@ namespace AlibabaCloud.SDK.LingMou20250527
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建TTS音色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTTSVoiceCustomRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTTSVoiceCustomResponse
+        /// </returns>
+        public CreateTTSVoiceCustomResponse CreateTTSVoiceCustomWithOptions(CreateTTSVoiceCustomRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                query["gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
+            {
+                query["ossKey"] = request.OssKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTTSVoiceCustom",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/voice/createTTSVoiceCustom",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTTSVoiceCustomResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建TTS音色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTTSVoiceCustomRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTTSVoiceCustomResponse
+        /// </returns>
+        public async Task<CreateTTSVoiceCustomResponse> CreateTTSVoiceCustomWithOptionsAsync(CreateTTSVoiceCustomRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                query["gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
+            {
+                query["ossKey"] = request.OssKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTTSVoiceCustom",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/voice/createTTSVoiceCustom",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTTSVoiceCustomResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建TTS音色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTTSVoiceCustomRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTTSVoiceCustomResponse
+        /// </returns>
+        public CreateTTSVoiceCustomResponse CreateTTSVoiceCustom(CreateTTSVoiceCustomRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateTTSVoiceCustomWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建TTS音色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTTSVoiceCustomRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTTSVoiceCustomResponse
+        /// </returns>
+        public async Task<CreateTTSVoiceCustomResponse> CreateTTSVoiceCustomAsync(CreateTTSVoiceCustomRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateTTSVoiceCustomWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建图片训练数字人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrainPicAvatarRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrainPicAvatarResponse
+        /// </returns>
+        public CreateTrainPicAvatarResponse CreateTrainPicAvatarWithOptions(CreateTrainPicAvatarRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                query["gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateAssets))
+            {
+                query["generateAssets"] = request.GenerateAssets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageOssPath))
+            {
+                query["imageOssPath"] = request.ImageOssPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["templateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Transparent))
+            {
+                query["transparent"] = request.Transparent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTrainPicAvatar",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/train/createTrainPicAvatar",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTrainPicAvatarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建图片训练数字人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrainPicAvatarRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrainPicAvatarResponse
+        /// </returns>
+        public async Task<CreateTrainPicAvatarResponse> CreateTrainPicAvatarWithOptionsAsync(CreateTrainPicAvatarRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gender))
+            {
+                query["gender"] = request.Gender;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateAssets))
+            {
+                query["generateAssets"] = request.GenerateAssets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageOssPath))
+            {
+                query["imageOssPath"] = request.ImageOssPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["templateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Transparent))
+            {
+                query["transparent"] = request.Transparent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTrainPicAvatar",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/train/createTrainPicAvatar",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTrainPicAvatarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建图片训练数字人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrainPicAvatarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrainPicAvatarResponse
+        /// </returns>
+        public CreateTrainPicAvatarResponse CreateTrainPicAvatar(CreateTrainPicAvatarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateTrainPicAvatarWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建图片训练数字人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrainPicAvatarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrainPicAvatarResponse
+        /// </returns>
+        public async Task<CreateTrainPicAvatarResponse> CreateTrainPicAvatarAsync(CreateTrainPicAvatarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateTrainPicAvatarWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询图片训练数字人的状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrainPicAvatarStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrainPicAvatarStatusResponse
+        /// </returns>
+        public GetTrainPicAvatarStatusResponse GetTrainPicAvatarStatusWithOptions(GetTrainPicAvatarStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarId))
+            {
+                query["avatarId"] = request.AvatarId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTrainPicAvatarStatus",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/train/getTrainPicAvatarStatus",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTrainPicAvatarStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询图片训练数字人的状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrainPicAvatarStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrainPicAvatarStatusResponse
+        /// </returns>
+        public async Task<GetTrainPicAvatarStatusResponse> GetTrainPicAvatarStatusWithOptionsAsync(GetTrainPicAvatarStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarId))
+            {
+                query["avatarId"] = request.AvatarId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTrainPicAvatarStatus",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/train/getTrainPicAvatarStatus",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTrainPicAvatarStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询图片训练数字人的状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrainPicAvatarStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrainPicAvatarStatusResponse
+        /// </returns>
+        public GetTrainPicAvatarStatusResponse GetTrainPicAvatarStatus(GetTrainPicAvatarStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetTrainPicAvatarStatusWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询图片训练数字人的状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrainPicAvatarStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrainPicAvatarStatusResponse
+        /// </returns>
+        public async Task<GetTrainPicAvatarStatusResponse> GetTrainPicAvatarStatusAsync(GetTrainPicAvatarStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetTrainPicAvatarStatusWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取对话免训图片素材上传凭证</para>
         /// </summary>
         /// 
@@ -915,6 +1507,330 @@ namespace AlibabaCloud.SDK.LingMou20250527
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetUploadPolicyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举私有TTS音色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPrivateTTSVoicesCustomRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPrivateTTSVoicesCustomResponse
+        /// </returns>
+        public ListPrivateTTSVoicesCustomResponse ListPrivateTTSVoicesCustomWithOptions(ListPrivateTTSVoicesCustomRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPrivateTTSVoicesCustom",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/voice/listPrivateTTSVoicesCustom",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPrivateTTSVoicesCustomResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举私有TTS音色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPrivateTTSVoicesCustomRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPrivateTTSVoicesCustomResponse
+        /// </returns>
+        public async Task<ListPrivateTTSVoicesCustomResponse> ListPrivateTTSVoicesCustomWithOptionsAsync(ListPrivateTTSVoicesCustomRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPrivateTTSVoicesCustom",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/voice/listPrivateTTSVoicesCustom",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPrivateTTSVoicesCustomResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举私有TTS音色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPrivateTTSVoicesCustomRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPrivateTTSVoicesCustomResponse
+        /// </returns>
+        public ListPrivateTTSVoicesCustomResponse ListPrivateTTSVoicesCustom(ListPrivateTTSVoicesCustomRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListPrivateTTSVoicesCustomWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举私有TTS音色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPrivateTTSVoicesCustomRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPrivateTTSVoicesCustomResponse
+        /// </returns>
+        public async Task<ListPrivateTTSVoicesCustomResponse> ListPrivateTTSVoicesCustomAsync(ListPrivateTTSVoicesCustomRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListPrivateTTSVoicesCustomWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询底板素材</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTemplateMaterialRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTemplateMaterialResponse
+        /// </returns>
+        public ListTemplateMaterialResponse ListTemplateMaterialWithOptions(ListTemplateMaterialRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateIds))
+            {
+                query["templateIds"] = request.TemplateIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTemplateMaterial",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/train/listTemplateMaterial",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTemplateMaterialResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询底板素材</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTemplateMaterialRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTemplateMaterialResponse
+        /// </returns>
+        public async Task<ListTemplateMaterialResponse> ListTemplateMaterialWithOptionsAsync(ListTemplateMaterialRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateIds))
+            {
+                query["templateIds"] = request.TemplateIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTemplateMaterial",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/train/listTemplateMaterial",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTemplateMaterialResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询底板素材</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTemplateMaterialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTemplateMaterialResponse
+        /// </returns>
+        public ListTemplateMaterialResponse ListTemplateMaterial(ListTemplateMaterialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListTemplateMaterialWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询底板素材</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTemplateMaterialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTemplateMaterialResponse
+        /// </returns>
+        public async Task<ListTemplateMaterialResponse> ListTemplateMaterialAsync(ListTemplateMaterialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListTemplateMaterialWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
