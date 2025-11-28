@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string EmbeddingTokens { get; set; }
 
+        /// <summary>
+        /// <para>The entities.</para>
+        /// </summary>
         [NameInMap("Entities")]
         [Validation(Required=false)]
         public QueryContentResponseBodyEntities Entities { get; set; }
@@ -30,22 +33,52 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<QueryContentResponseBodyEntitiesEntities> Entities { get; set; }
             public class QueryContentResponseBodyEntitiesEntities : TeaModel {
+                /// <summary>
+                /// <para>Entity description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>A former advisor at DeepMind.</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>The entity name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Dr. Wang</para>
+                /// </summary>
                 [NameInMap("Entity")]
                 [Validation(Required=false)]
                 public string Entity { get; set; }
 
+                /// <summary>
+                /// <para>The file name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>my_doc.txt</para>
+                /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
+                /// <summary>
+                /// <para>The entity ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// <para>The entity type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Figure</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -193,6 +226,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The list of relationship edges.</para>
+        /// </summary>
         [NameInMap("Relations")]
         [Validation(Required=false)]
         public QueryContentResponseBodyRelations Relations { get; set; }
@@ -201,22 +237,52 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<QueryContentResponseBodyRelationsRelations> Relations { get; set; }
             public class QueryContentResponseBodyRelationsRelations : TeaModel {
+                /// <summary>
+                /// <para>The description of the relationship edge.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Dr. Wang previously served as an advisor at DeepMind.</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>The file name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>my_doc.txt</para>
+                /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the relationship edge.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// <para>The source entity.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Former DeepMind consultant</para>
+                /// </summary>
                 [NameInMap("SourceEntity")]
                 [Validation(Required=false)]
                 public string SourceEntity { get; set; }
 
+                /// <summary>
+                /// <para>The destination entity.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Dr. Wang</para>
+                /// </summary>
                 [NameInMap("TargetEntity")]
                 [Validation(Required=false)]
                 public string TargetEntity { get; set; }

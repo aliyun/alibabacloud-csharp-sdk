@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDocumentRequest : TeaModel {
         /// <summary>
-        /// <para>Document collection name.</para>
+        /// <para>The name of the document collection.</para>
         /// <remarks>
-        /// <para>Created by the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> API. You can use the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> API to view the already created document collections.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection. and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Collection { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB PostgreSQL instances in the target region, including the instance ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Document name.</para>
+        /// <para>The name of the document.</para>
         /// <remarks>
-        /// <para>You can view the list of documents using the <a href="https://help.aliyun.com/document_detail/2618453.html">ListDocuments</a> API.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2618453.html">ListDocuments</a> operation to query a list of documents.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,9 +52,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>Namespace, default is public.</para>
+        /// <para>The name of the namespace. Default value: public.</para>
         /// <remarks>
-        /// <para>You can create it via the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API and view the list through the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -65,9 +65,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>Password for the namespace.</para>
+        /// <para>The password of the namespace.</para>
         /// <remarks>
-        /// <para>This value is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API.</para>
+        /// <para>The value of this parameter is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Region ID where the instance is located.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

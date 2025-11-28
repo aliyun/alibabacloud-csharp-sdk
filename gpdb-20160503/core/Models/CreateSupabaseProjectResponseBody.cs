@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateSupabaseProjectResponseBody : TeaModel {
         /// <summary>
+        /// <para>The Supabase project ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sbp-180****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D****</para>
         /// </summary>

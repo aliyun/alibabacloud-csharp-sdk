@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeIndexResponseBody : TeaModel {
         /// <summary>
+        /// <para>The name of the collection.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testcollection</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Collection { get; set; }
 
         /// <summary>
+        /// <para>The definition of the index.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CREATE INDEX testindex ON mynamespace. testcollection</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string IndexDef { get; set; }
 
         /// <summary>
+        /// <para>The name of the index.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testindex</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string IndexName { get; set; }
 
         /// <summary>
+        /// <para>The returned message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mynamespace</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
         /// </summary>
@@ -58,6 +70,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b>: The operation fails.</description></item>
+        /// <item><description><b>true</b>: The operation is successful.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>

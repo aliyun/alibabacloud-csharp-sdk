@@ -82,14 +82,29 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        /// <summary>
+        /// <para>Whether to enable knowledge graph enhancement. Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("GraphEnhance")]
         [Validation(Required=false)]
         public bool? GraphEnhance { get; set; }
 
+        /// <summary>
+        /// <para>The search parameters of the knowledge graph.</para>
+        /// </summary>
         [NameInMap("GraphSearchArgs")]
         [Validation(Required=false)]
         public QueryContentAdvanceRequestGraphSearchArgs GraphSearchArgs { get; set; }
         public class QueryContentAdvanceRequestGraphSearchArgs : TeaModel {
+            /// <summary>
+            /// <para>The number of top entities and relationship edges. Default value: 60.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>60</para>
+            /// </summary>
             [NameInMap("GraphTopK")]
             [Validation(Required=false)]
             public int? GraphTopK { get; set; }
@@ -223,6 +238,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string NamespacePassword { get; set; }
 
         /// <summary>
+        /// <para>Offset, used for paginated queries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -231,6 +248,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? Offset { get; set; }
 
         /// <summary>
+        /// <para>The fields by which to sort the results. This parameter is empty by default.</para>
+        /// <para>The field must be either a metadata field or a default field in the table (e.g., id). Supported formats include:</para>
+        /// <para>Single field, such as chunk_id. Multiple fields that are separated by commas (,), such as block_id,chunk_id. Descending order is supported, e.g., block_id DESC, chunk_id DESC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>created_at</para>
         /// </summary>
@@ -283,7 +304,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public double? RerankFactor { get; set; }
 
         /// <summary>
-        /// <para>Set the number of top results to return.</para>
+        /// <para>The number of the returned top results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -292,6 +313,23 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public int? TopK { get; set; }
 
+        /// <summary>
+        /// <para>The validity period of the returned image URL.</para>
+        /// <remarks>
+        /// <para> Value Description</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>Supported units are seconds (s) and days (d). For example, 300s specifies that the URL is valid for 300 seconds, and 60d specifies that the URL is valid for 60 days.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values: 60s to 365d.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 7200s, that is, 2 hours.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7200s</para>
+        /// </summary>
         [NameInMap("UrlExpiration")]
         [Validation(Required=false)]
         public string UrlExpiration { get; set; }

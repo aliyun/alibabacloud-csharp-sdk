@@ -90,6 +90,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The vector type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Dense (default)</description></item>
+        /// <item><description>Sparse</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Dense</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

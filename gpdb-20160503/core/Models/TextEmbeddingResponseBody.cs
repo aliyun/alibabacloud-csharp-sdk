@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class TextEmbeddingResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
         /// </summary>
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The embedding results.</para>
+        /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public TextEmbeddingResponseBodyResults Results { get; set; }
@@ -33,6 +40,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public List<TextEmbeddingResponseBodyResultsResults> Results { get; set; }
             public class TextEmbeddingResponseBodyResultsResults : TeaModel {
+                /// <summary>
+                /// <para>The embedding values.</para>
+                /// </summary>
                 [NameInMap("Embedding")]
                 [Validation(Required=false)]
                 public TextEmbeddingResponseBodyResultsResultsEmbedding Embedding { get; set; }
@@ -44,6 +54,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 }
 
                 /// <summary>
+                /// <para>The number of the embedding in the Input request parameter, which starts from 0.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -56,6 +68,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
+        /// <para>The status of the operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>success</b></description></item>
+        /// <item><description><b>fail</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -64,6 +82,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The total number of tokens consumed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>

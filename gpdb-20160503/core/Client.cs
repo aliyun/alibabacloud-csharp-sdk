@@ -39,92 +39,210 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             this._endpoint = GetEndpoint("gpdb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
 
-        public Dictionary<string, object> _postOSSObject(string bucketName, Dictionary<string, object> data)
+        public Dictionary<string, object> _postOSSObject(string bucketName, Dictionary<string, object> data, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            TeaRequest request_ = new TeaRequest();
-            Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
-            string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-            string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
-            request_.Protocol = "HTTPS";
-            request_.Method = "POST";
-            request_.Pathname = "/";
-            request_.Headers = new Dictionary<string, string>
+            Dictionary<string, object> runtime_ = new Dictionary<string, object>
             {
-                {"host", host},
-                {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
-                {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
-            };
-            request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
-            request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
-            TeaResponse response_ = TeaCore.DoAction(request_);
-
-            Dictionary<string, object> respMap = null;
-            string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
-            if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
-            {
-                respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-                Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
-                throw new TeaException(new Dictionary<string, object>
+                {"timeouted", "retry"},
+                {"key", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Key, _key)},
+                {"cert", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Cert, _cert)},
+                {"ca", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Ca, _ca)},
+                {"readTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ReadTimeout, _readTimeout)},
+                {"connectTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ConnectTimeout, _connectTimeout)},
+                {"httpProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpProxy, _httpProxy)},
+                {"httpsProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpsProxy, _httpsProxy)},
+                {"noProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.NoProxy, _noProxy)},
+                {"socks5Proxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5Proxy, _socks5Proxy)},
+                {"socks5NetWork", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5NetWork, _socks5NetWork)},
+                {"maxIdleConns", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxIdleConns, _maxIdleConns)},
+                {"retry", new Dictionary<string, object>
                 {
-                    {"code", err.Get("Code")},
-                    {"message", err.Get("Message")},
-                    {"data", new Dictionary<string, object>
+                    {"retryable", runtime.Autoretry},
+                    {"maxAttempts", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxAttempts, 3)},
+                }},
+                {"backoff", new Dictionary<string, object>
+                {
+                    {"policy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.BackoffPolicy, "no")},
+                    {"period", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.BackoffPeriod, 1)},
+                }},
+                {"ignoreSSL", AlibabaCloud.OpenApiClient.Client.DefaultAny(runtime.IgnoreSSL, false)},
+                {"tlsMinVersion", _tlsMinVersion},
+            };
+
+            TeaRequest _lastRequest = null;
+            Exception _lastException = null;
+            long _now = System.DateTime.Now.Millisecond;
+            int _retryTimes = 0;
+            while (TeaCore.AllowRetry((IDictionary) runtime_["retry"], _retryTimes, _now))
+            {
+                if (_retryTimes > 0)
+                {
+                    int backoffTime = TeaCore.GetBackoffTime((IDictionary)runtime_["backoff"], _retryTimes);
+                    if (backoffTime > 0)
                     {
-                        {"httpCode", response_.StatusCode},
-                        {"requestId", err.Get("RequestId")},
-                        {"hostId", err.Get("HostId")},
-                    }},
-                });
+                        TeaCore.Sleep(backoffTime);
+                    }
+                }
+                _retryTimes = _retryTimes + 1;
+                try
+                {
+                    TeaRequest request_ = new TeaRequest();
+                    Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
+                    string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
+                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    request_.Protocol = "HTTPS";
+                    request_.Method = "POST";
+                    request_.Pathname = "/";
+                    request_.Headers = new Dictionary<string, string>
+                    {
+                        {"host", host},
+                        {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
+                        {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
+                    };
+                    request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
+                    request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
+                    _lastRequest = request_;
+                    TeaResponse response_ = TeaCore.DoAction(request_, runtime_);
+
+                    Dictionary<string, object> respMap = null;
+                    string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
+                    if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
+                    {
+                        respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                        Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
+                        throw new TeaException(new Dictionary<string, object>
+                        {
+                            {"code", err.Get("Code")},
+                            {"message", err.Get("Message")},
+                            {"data", new Dictionary<string, object>
+                            {
+                                {"httpCode", response_.StatusCode},
+                                {"requestId", err.Get("RequestId")},
+                                {"hostId", err.Get("HostId")},
+                            }},
+                        });
+                    }
+                    respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                    return TeaConverter.merge<object>
+                    (
+                        respMap
+                    );
+                }
+                catch (Exception e)
+                {
+                    if (TeaCore.IsRetryable(e))
+                    {
+                        _lastException = e;
+                        continue;
+                    }
+                    throw e;
+                }
             }
-            respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-            return TeaConverter.merge<object>
-            (
-                respMap
-            );
+
+            throw new TeaUnretryableException(_lastRequest, _lastException);
         }
 
-        public async Task<Dictionary<string, object>> _postOSSObjectAsync(string bucketName, Dictionary<string, object> data)
+        public async Task<Dictionary<string, object>> _postOSSObjectAsync(string bucketName, Dictionary<string, object> data, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            TeaRequest request_ = new TeaRequest();
-            Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
-            string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-            string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
-            request_.Protocol = "HTTPS";
-            request_.Method = "POST";
-            request_.Pathname = "/";
-            request_.Headers = new Dictionary<string, string>
+            Dictionary<string, object> runtime_ = new Dictionary<string, object>
             {
-                {"host", host},
-                {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
-                {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
-            };
-            request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
-            request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
-            TeaResponse response_ = await TeaCore.DoActionAsync(request_);
-
-            Dictionary<string, object> respMap = null;
-            string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
-            if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
-            {
-                respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-                Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
-                throw new TeaException(new Dictionary<string, object>
+                {"timeouted", "retry"},
+                {"key", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Key, _key)},
+                {"cert", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Cert, _cert)},
+                {"ca", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Ca, _ca)},
+                {"readTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ReadTimeout, _readTimeout)},
+                {"connectTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ConnectTimeout, _connectTimeout)},
+                {"httpProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpProxy, _httpProxy)},
+                {"httpsProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpsProxy, _httpsProxy)},
+                {"noProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.NoProxy, _noProxy)},
+                {"socks5Proxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5Proxy, _socks5Proxy)},
+                {"socks5NetWork", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5NetWork, _socks5NetWork)},
+                {"maxIdleConns", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxIdleConns, _maxIdleConns)},
+                {"retry", new Dictionary<string, object>
                 {
-                    {"code", err.Get("Code")},
-                    {"message", err.Get("Message")},
-                    {"data", new Dictionary<string, object>
+                    {"retryable", runtime.Autoretry},
+                    {"maxAttempts", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxAttempts, 3)},
+                }},
+                {"backoff", new Dictionary<string, object>
+                {
+                    {"policy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.BackoffPolicy, "no")},
+                    {"period", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.BackoffPeriod, 1)},
+                }},
+                {"ignoreSSL", AlibabaCloud.OpenApiClient.Client.DefaultAny(runtime.IgnoreSSL, false)},
+                {"tlsMinVersion", _tlsMinVersion},
+            };
+
+            TeaRequest _lastRequest = null;
+            Exception _lastException = null;
+            long _now = System.DateTime.Now.Millisecond;
+            int _retryTimes = 0;
+            while (TeaCore.AllowRetry((IDictionary) runtime_["retry"], _retryTimes, _now))
+            {
+                if (_retryTimes > 0)
+                {
+                    int backoffTime = TeaCore.GetBackoffTime((IDictionary)runtime_["backoff"], _retryTimes);
+                    if (backoffTime > 0)
                     {
-                        {"httpCode", response_.StatusCode},
-                        {"requestId", err.Get("RequestId")},
-                        {"hostId", err.Get("HostId")},
-                    }},
-                });
+                        TeaCore.Sleep(backoffTime);
+                    }
+                }
+                _retryTimes = _retryTimes + 1;
+                try
+                {
+                    TeaRequest request_ = new TeaRequest();
+                    Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
+                    string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
+                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    request_.Protocol = "HTTPS";
+                    request_.Method = "POST";
+                    request_.Pathname = "/";
+                    request_.Headers = new Dictionary<string, string>
+                    {
+                        {"host", host},
+                        {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
+                        {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
+                    };
+                    request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
+                    request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
+                    _lastRequest = request_;
+                    TeaResponse response_ = await TeaCore.DoActionAsync(request_, runtime_);
+
+                    Dictionary<string, object> respMap = null;
+                    string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
+                    if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
+                    {
+                        respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                        Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
+                        throw new TeaException(new Dictionary<string, object>
+                        {
+                            {"code", err.Get("Code")},
+                            {"message", err.Get("Message")},
+                            {"data", new Dictionary<string, object>
+                            {
+                                {"httpCode", response_.StatusCode},
+                                {"requestId", err.Get("RequestId")},
+                                {"hostId", err.Get("HostId")},
+                            }},
+                        });
+                    }
+                    respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                    return TeaConverter.merge<object>
+                    (
+                        respMap
+                    );
+                }
+                catch (Exception e)
+                {
+                    if (TeaCore.IsRetryable(e))
+                    {
+                        _lastException = e;
+                        continue;
+                    }
+                    throw e;
+                }
             }
-            respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-            return TeaConverter.merge<object>
-            (
-                respMap
-            );
+
+            throw new TeaUnretryableException(_lastRequest, _lastException);
         }
 
         public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
@@ -142,8 +260,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加AI节点</para>
+        /// <para>Adds AI nodes to the cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This operation is used to add an AINode node.</para>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>You can call this operation up to 1,000 times per second per account. Exceeding the limit will trigger API rate limiting, which may impact your business. Please call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddAINodeRequest
@@ -192,8 +318,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加AI节点</para>
+        /// <para>Adds AI nodes to the cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This operation is used to add an AINode node.</para>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>You can call this operation up to 1,000 times per second per account. Exceeding the limit will trigger API rate limiting, which may impact your business. Please call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddAINodeRequest
@@ -242,8 +376,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加AI节点</para>
+        /// <para>Adds AI nodes to the cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This operation is used to add an AINode node.</para>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>You can call this operation up to 1,000 times per second per account. Exceeding the limit will trigger API rate limiting, which may impact your business. Please call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddAINodeRequest
@@ -260,8 +402,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加AI节点</para>
+        /// <para>Adds AI nodes to the cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This operation is used to add an AINode node.</para>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>You can call this operation up to 1,000 times per second per account. Exceeding the limit will trigger API rate limiting, which may impact your business. Please call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddAINodeRequest
@@ -630,7 +780,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消创建索引任务</para>
+        /// <para>Cancels an index creation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -700,7 +850,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消创建索引任务</para>
+        /// <para>Cancels an index creation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -770,7 +920,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消创建索引任务</para>
+        /// <para>Cancels an index creation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -788,7 +938,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消创建索引任务</para>
+        /// <para>Cancels an index creation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1222,12 +1372,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <list type="bullet">
+        /// <item><description><b>DBInstanceId</b>: Required. This parameter specifies the ID of the database instance.</description></item>
+        /// <item><description><b>KnowledgeParams</b>: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
+        /// <item><description><b>ModelParams</b>: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
+        /// <item><description><b>PromptTemplate</b>: optional. It is used to customize the system prompt template.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1303,12 +1459,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <list type="bullet">
+        /// <item><description><b>DBInstanceId</b>: Required. This parameter specifies the ID of the database instance.</description></item>
+        /// <item><description><b>KnowledgeParams</b>: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
+        /// <item><description><b>ModelParams</b>: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
+        /// <item><description><b>PromptTemplate</b>: optional. It is used to customize the system prompt template.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1384,12 +1546,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <list type="bullet">
+        /// <item><description><b>DBInstanceId</b>: Required. This parameter specifies the ID of the database instance.</description></item>
+        /// <item><description><b>KnowledgeParams</b>: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
+        /// <item><description><b>ModelParams</b>: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
+        /// <item><description><b>PromptTemplate</b>: optional. It is used to customize the system prompt template.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -1407,12 +1575,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <list type="bullet">
+        /// <item><description><b>DBInstanceId</b>: Required. This parameter specifies the ID of the database instance.</description></item>
+        /// <item><description><b>KnowledgeParams</b>: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
+        /// <item><description><b>ModelParams</b>: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
+        /// <item><description><b>PromptTemplate</b>: optional. It is used to customize the system prompt template.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -1430,12 +1604,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model. A streaming API, which is called by using the SSE or the Java asynchronous SDK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <list type="bullet">
+        /// <item><description>DBInstanceId: required. This parameter specifies the ID of the database instance.</description></item>
+        /// <item><description>KnowledgeParams: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
+        /// <item><description>ModelParams: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
+        /// <item><description>PromptTemplate: optional. It is used to customize a system prompt template.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1511,12 +1691,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model. A streaming API, which is called by using the SSE or the Java asynchronous SDK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <list type="bullet">
+        /// <item><description>DBInstanceId: required. This parameter specifies the ID of the database instance.</description></item>
+        /// <item><description>KnowledgeParams: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
+        /// <item><description>ModelParams: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
+        /// <item><description>PromptTemplate: optional. It is used to customize a system prompt template.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1592,12 +1778,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model. A streaming API, which is called by using the SSE or the Java asynchronous SDK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <list type="bullet">
+        /// <item><description>DBInstanceId: required. This parameter specifies the ID of the database instance.</description></item>
+        /// <item><description>KnowledgeParams: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
+        /// <item><description>ModelParams: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
+        /// <item><description>PromptTemplate: optional. It is used to customize a system prompt template.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -1615,12 +1807,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model. A streaming API, which is called by using the SSE or the Java asynchronous SDK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>通过结合知识库和大模型，提供智能问答服务。</para>
+        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <list type="bullet">
+        /// <item><description>DBInstanceId: required. This parameter specifies the ID of the database instance.</description></item>
+        /// <item><description>KnowledgeParams: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
+        /// <item><description>ModelParams: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
+        /// <item><description>PromptTemplate: optional. It is used to customize a system prompt template.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -2190,7 +2388,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复数据至指定实例</para>
+        /// <para>Restores data to a new AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2240,7 +2438,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复数据至指定实例</para>
+        /// <para>Restores data to a new AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2290,7 +2488,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复数据至指定实例</para>
+        /// <para>Restores data to a new AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2308,7 +2506,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复数据至指定实例</para>
+        /// <para>Restores data to a new AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2534,7 +2732,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建备份</para>
+        /// <para>Creates a backup set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2576,7 +2774,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建备份</para>
+        /// <para>Creates a backup set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2618,7 +2816,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建备份</para>
+        /// <para>Creates a backup set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2636,7 +2834,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建备份</para>
+        /// <para>Creates a backup set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3438,6 +3636,162 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Adds an IP whitelist group.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDBInstanceIPArrayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceIPArrayResponse
+        /// </returns>
+        public CreateDBInstanceIPArrayResponse CreateDBInstanceIPArrayWithOptions(CreateDBInstanceIPArrayRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDBInstanceIPArrayShrinkRequest request = new CreateDBInstanceIPArrayShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SecurityIPList))
+            {
+                request.SecurityIPListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SecurityIPList, "SecurityIPList", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPArrayAttribute))
+            {
+                query["IPArrayAttribute"] = request.IPArrayAttribute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPArrayName))
+            {
+                query["IPArrayName"] = request.IPArrayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPListShrink))
+            {
+                query["SecurityIPList"] = request.SecurityIPListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDBInstanceIPArray",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDBInstanceIPArrayResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an IP whitelist group.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDBInstanceIPArrayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceIPArrayResponse
+        /// </returns>
+        public async Task<CreateDBInstanceIPArrayResponse> CreateDBInstanceIPArrayWithOptionsAsync(CreateDBInstanceIPArrayRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDBInstanceIPArrayShrinkRequest request = new CreateDBInstanceIPArrayShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SecurityIPList))
+            {
+                request.SecurityIPListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SecurityIPList, "SecurityIPList", "simple");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPArrayAttribute))
+            {
+                query["IPArrayAttribute"] = request.IPArrayAttribute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPArrayName))
+            {
+                query["IPArrayName"] = request.IPArrayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPListShrink))
+            {
+                query["SecurityIPList"] = request.SecurityIPListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDBInstanceIPArray",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDBInstanceIPArrayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an IP whitelist group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDBInstanceIPArrayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceIPArrayResponse
+        /// </returns>
+        public CreateDBInstanceIPArrayResponse CreateDBInstanceIPArray(CreateDBInstanceIPArrayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDBInstanceIPArrayWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an IP whitelist group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDBInstanceIPArrayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDBInstanceIPArrayResponse
+        /// </returns>
+        public async Task<CreateDBInstanceIPArrayResponse> CreateDBInstanceIPArrayAsync(CreateDBInstanceIPArrayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDBInstanceIPArrayWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a plan for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
@@ -3798,6 +4152,174 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDBResourceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatabaseResponse
+        /// </returns>
+        public CreateDatabaseResponse CreateDatabaseWithOptions(CreateDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CharacterSetName))
+            {
+                query["CharacterSetName"] = request.CharacterSetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Collate))
+            {
+                query["Collate"] = request.Collate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ctype))
+            {
+                query["Ctype"] = request.Ctype;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                query["DatabaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDatabase",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDatabaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatabaseResponse
+        /// </returns>
+        public async Task<CreateDatabaseResponse> CreateDatabaseWithOptionsAsync(CreateDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CharacterSetName))
+            {
+                query["CharacterSetName"] = request.CharacterSetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Collate))
+            {
+                query["Collate"] = request.Collate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ctype))
+            {
+                query["Ctype"] = request.Ctype;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                query["DatabaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["Owner"] = request.Owner;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDatabase",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDatabaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatabaseResponse
+        /// </returns>
+        public CreateDatabaseResponse CreateDatabase(CreateDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDatabaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a database.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDatabaseResponse
+        /// </returns>
+        public async Task<CreateDatabaseResponse> CreateDatabaseAsync(CreateDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDatabaseWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4630,7 +5152,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建索引</para>
+        /// <para>Creates an index. Note: 1. Only scalar indexes are supported. 2. The table is write-locked during index creation. 3. When creating an index on a table with a large volume of data, the process consumes significant CPU and I/O resources of the instance. If this impacts instance availability, call CancelCreateIndexJob to cancel the index creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4708,7 +5230,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建索引</para>
+        /// <para>Creates an index. Note: 1. Only scalar indexes are supported. 2. The table is write-locked during index creation. 3. When creating an index on a table with a large volume of data, the process consumes significant CPU and I/O resources of the instance. If this impacts instance availability, call CancelCreateIndexJob to cancel the index creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4786,7 +5308,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建索引</para>
+        /// <para>Creates an index. Note: 1. Only scalar indexes are supported. 2. The table is write-locked during index creation. 3. When creating an index on a table with a large volume of data, the process consumes significant CPU and I/O resources of the instance. If this impacts instance availability, call CancelCreateIndexJob to cancel the index creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4804,7 +5326,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建索引</para>
+        /// <para>Creates an index. Note: 1. Only scalar indexes are supported. 2. The table is write-locked during index creation. 3. When creating an index on a table with a large volume of data, the process consumes significant CPU and I/O resources of the instance. If this impacts instance availability, call CancelCreateIndexJob to cancel the index creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4998,8 +5520,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Creates a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateModelServiceRequest
@@ -5092,8 +5619,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Creates a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateModelServiceRequest
@@ -5186,8 +5718,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Creates a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateModelServiceRequest
@@ -5204,8 +5741,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Creates a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateModelServiceRequest
@@ -6710,8 +7252,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建supabase project</para>
+        /// <para>Creates a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to create a Supabase project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSupabaseProjectRequest
@@ -6792,8 +7339,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建supabase project</para>
+        /// <para>Creates a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to create a Supabase project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSupabaseProjectRequest
@@ -6874,8 +7426,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建supabase project</para>
+        /// <para>Creates a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to create a Supabase project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSupabaseProjectRequest
@@ -6892,8 +7449,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建supabase project</para>
+        /// <para>Creates a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to create a Supabase project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSupabaseProjectRequest
@@ -7134,8 +7696,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除AI节点</para>
+        /// <para>Delete AI Node</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Subscription instances cannot be manually released. They are automatically released when they expire.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to release pay-as-you-go instances only when they are in the <b>Running</b> state.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAINodeRequest
@@ -7188,8 +7758,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除AI节点</para>
+        /// <para>Delete AI Node</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Subscription instances cannot be manually released. They are automatically released when they expire.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to release pay-as-you-go instances only when they are in the <b>Running</b> state.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAINodeRequest
@@ -7242,8 +7820,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除AI节点</para>
+        /// <para>Delete AI Node</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Subscription instances cannot be manually released. They are automatically released when they expire.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to release pay-as-you-go instances only when they are in the <b>Running</b> state.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAINodeRequest
@@ -7260,8 +7846,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除AI节点</para>
+        /// <para>Delete AI Node</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Subscription instances cannot be manually released. They are automatically released when they expire.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to release pay-as-you-go instances only when they are in the <b>Running</b> state.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAINodeRequest
@@ -7406,7 +8000,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除备份</para>
+        /// <para>Deletes a backup set. You can call this operation to delete only physical backup sets that are manually backed up.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7452,7 +8046,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除备份</para>
+        /// <para>Deletes a backup set. You can call this operation to delete only physical backup sets that are manually backed up.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7498,7 +8092,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除备份</para>
+        /// <para>Deletes a backup set. You can call this operation to delete only physical backup sets that are manually backed up.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7516,7 +8110,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除备份</para>
+        /// <para>Deletes a backup set. You can call this operation to delete only physical backup sets that are manually backed up.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8070,6 +8664,134 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除IP分组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDBInstanceIPArrayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceIPArrayResponse
+        /// </returns>
+        public DeleteDBInstanceIPArrayResponse DeleteDBInstanceIPArrayWithOptions(DeleteDBInstanceIPArrayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPArrayName))
+            {
+                query["IPArrayName"] = request.IPArrayName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDBInstanceIPArray",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDBInstanceIPArrayResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除IP分组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDBInstanceIPArrayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceIPArrayResponse
+        /// </returns>
+        public async Task<DeleteDBInstanceIPArrayResponse> DeleteDBInstanceIPArrayWithOptionsAsync(DeleteDBInstanceIPArrayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IPArrayName))
+            {
+                query["IPArrayName"] = request.IPArrayName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDBInstanceIPArray",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDBInstanceIPArrayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除IP分组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDBInstanceIPArrayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceIPArrayResponse
+        /// </returns>
+        public DeleteDBInstanceIPArrayResponse DeleteDBInstanceIPArray(DeleteDBInstanceIPArrayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDBInstanceIPArrayWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除IP分组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDBInstanceIPArrayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDBInstanceIPArrayResponse
+        /// </returns>
+        public async Task<DeleteDBInstanceIPArrayResponse> DeleteDBInstanceIPArrayAsync(DeleteDBInstanceIPArrayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDBInstanceIPArrayWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a plan from an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
@@ -8366,6 +9088,134 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDBResourceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatabaseResponse
+        /// </returns>
+        public DeleteDatabaseResponse DeleteDatabaseWithOptions(DeleteDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                query["DatabaseName"] = request.DatabaseName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDatabase",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDatabaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatabaseResponse
+        /// </returns>
+        public async Task<DeleteDatabaseResponse> DeleteDatabaseWithOptionsAsync(DeleteDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                query["DatabaseName"] = request.DatabaseName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDatabase",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDatabaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatabaseResponse
+        /// </returns>
+        public DeleteDatabaseResponse DeleteDatabase(DeleteDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDatabaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDatabaseResponse
+        /// </returns>
+        public async Task<DeleteDatabaseResponse> DeleteDatabaseAsync(DeleteDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDatabaseWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9114,7 +9964,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除索引</para>
+        /// <para>Deletes an index.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9184,7 +10034,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除索引</para>
+        /// <para>Deletes an index.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9254,7 +10104,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除索引</para>
+        /// <para>Deletes an index.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9272,7 +10122,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除索引</para>
+        /// <para>Deletes an index.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9426,8 +10276,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型服务</para>
+        /// <para>Delete Model Service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a model service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteModelServiceRequest
@@ -9472,8 +10327,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型服务</para>
+        /// <para>Delete Model Service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a model service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteModelServiceRequest
@@ -9518,8 +10378,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型服务</para>
+        /// <para>Delete Model Service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a model service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteModelServiceRequest
@@ -9536,8 +10401,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型服务</para>
+        /// <para>Delete Model Service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a model service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteModelServiceRequest
@@ -9718,6 +10588,126 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNamespaceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭私有RAG服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePrivateRAGServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePrivateRAGServiceResponse
+        /// </returns>
+        public DeletePrivateRAGServiceResponse DeletePrivateRAGServiceWithOptions(DeletePrivateRAGServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePrivateRAGService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePrivateRAGServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭私有RAG服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePrivateRAGServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePrivateRAGServiceResponse
+        /// </returns>
+        public async Task<DeletePrivateRAGServiceResponse> DeletePrivateRAGServiceWithOptionsAsync(DeletePrivateRAGServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePrivateRAGService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePrivateRAGServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭私有RAG服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePrivateRAGServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePrivateRAGServiceResponse
+        /// </returns>
+        public DeletePrivateRAGServiceResponse DeletePrivateRAGService(DeletePrivateRAGServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeletePrivateRAGServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭私有RAG服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePrivateRAGServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePrivateRAGServiceResponse
+        /// </returns>
+        public async Task<DeletePrivateRAGServiceResponse> DeletePrivateRAGServiceAsync(DeletePrivateRAGServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeletePrivateRAGServiceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10426,8 +11416,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Supabase实例</para>
+        /// <para>Deletes a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to delete a Supabase project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSupabaseProjectRequest
@@ -10472,8 +11467,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Supabase实例</para>
+        /// <para>Deletes a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to delete a Supabase project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSupabaseProjectRequest
@@ -10518,8 +11518,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Supabase实例</para>
+        /// <para>Deletes a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to delete a Supabase project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSupabaseProjectRequest
@@ -10536,8 +11541,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Supabase实例</para>
+        /// <para>Deletes a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to delete a Supabase project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSupabaseProjectRequest
@@ -10726,6 +11736,142 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteVectorIndexWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>部署私有RAG服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployPrivateRAGServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployPrivateRAGServiceResponse
+        /// </returns>
+        public DeployPrivateRAGServiceResponse DeployPrivateRAGServiceWithOptions(DeployPrivateRAGServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeployPrivateRAGService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeployPrivateRAGServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>部署私有RAG服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployPrivateRAGServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployPrivateRAGServiceResponse
+        /// </returns>
+        public async Task<DeployPrivateRAGServiceResponse> DeployPrivateRAGServiceWithOptionsAsync(DeployPrivateRAGServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeployPrivateRAGService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeployPrivateRAGServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>部署私有RAG服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployPrivateRAGServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployPrivateRAGServiceResponse
+        /// </returns>
+        public DeployPrivateRAGServiceResponse DeployPrivateRAGService(DeployPrivateRAGServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeployPrivateRAGServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>部署私有RAG服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployPrivateRAGServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployPrivateRAGServiceResponse
+        /// </returns>
+        public async Task<DeployPrivateRAGServiceResponse> DeployPrivateRAGServiceAsync(DeployPrivateRAGServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeployPrivateRAGServiceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11234,7 +12380,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取备份任务详情</para>
+        /// <para>Queries the information about a backup job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11280,7 +12426,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取备份任务详情</para>
+        /// <para>Queries the information about a backup job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11326,7 +12472,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取备份任务详情</para>
+        /// <para>Queries the information about a backup job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11344,7 +12490,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取备份任务详情</para>
+        /// <para>Queries the information about a backup job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11678,7 +12824,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取创建索引任务</para>
+        /// <para>Queries the information about an index creation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11748,7 +12894,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取创建索引任务</para>
+        /// <para>Queries the information about an index creation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11818,7 +12964,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取创建索引任务</para>
+        /// <para>Queries the information about an index creation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11836,7 +12982,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取创建索引任务</para>
+        /// <para>Queries the information about an index creation job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15598,6 +16744,134 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>描述数据库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDatabaseResponse
+        /// </returns>
+        public DescribeDatabaseResponse DescribeDatabaseWithOptions(DescribeDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                query["DatabaseName"] = request.DatabaseName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDatabase",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDatabaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述数据库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDatabaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDatabaseResponse
+        /// </returns>
+        public async Task<DescribeDatabaseResponse> DescribeDatabaseWithOptionsAsync(DescribeDatabaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                query["DatabaseName"] = request.DatabaseName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDatabase",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDatabaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述数据库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDatabaseResponse
+        /// </returns>
+        public DescribeDatabaseResponse DescribeDatabase(DescribeDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDatabaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述数据库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDatabaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDatabaseResponse
+        /// </returns>
+        public async Task<DescribeDatabaseResponse> DescribeDatabaseAsync(DescribeDatabaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDatabaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries all databases and database accounts for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
@@ -16314,7 +17588,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Document Details</para>
+        /// <para>Queries the information about a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16380,7 +17654,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Document Details</para>
+        /// <para>Queries the information about a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16446,7 +17720,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Document Details</para>
+        /// <para>Queries the information about a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16464,7 +17738,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Document Details</para>
+        /// <para>Queries the information about a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16750,6 +18024,142 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDownloadSQLLogsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取安装在某个数据库上的插件信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeExtensionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeExtensionResponse
+        /// </returns>
+        public DescribeExtensionResponse DescribeExtensionWithOptions(DescribeExtensionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                query["DatabaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtensionName))
+            {
+                query["ExtensionName"] = request.ExtensionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeExtension",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeExtensionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取安装在某个数据库上的插件信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeExtensionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeExtensionResponse
+        /// </returns>
+        public async Task<DescribeExtensionResponse> DescribeExtensionWithOptionsAsync(DescribeExtensionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                query["DatabaseName"] = request.DatabaseName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtensionName))
+            {
+                query["ExtensionName"] = request.ExtensionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeExtension",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeExtensionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取安装在某个数据库上的插件信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeExtensionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeExtensionResponse
+        /// </returns>
+        public DescribeExtensionResponse DescribeExtension(DescribeExtensionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeExtensionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取安装在某个数据库上的插件信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeExtensionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeExtensionResponse
+        /// </returns>
+        public async Task<DescribeExtensionResponse> DescribeExtensionAsync(DescribeExtensionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeExtensionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -17590,7 +19000,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取索引详情</para>
+        /// <para>Retrieves the information about an index.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17660,7 +19070,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取索引详情</para>
+        /// <para>Retrieves the information about an index.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17730,7 +19140,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取索引详情</para>
+        /// <para>Retrieves the information about an index.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17748,7 +19158,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取索引详情</para>
+        /// <para>Retrieves the information about an index.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18046,8 +19456,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型服务</para>
+        /// <para>Queries the information about a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This interface is used to view the details of a model service.</para>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions.We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeModelServiceRequest
@@ -18092,8 +19510,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型服务</para>
+        /// <para>Queries the information about a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This interface is used to view the details of a model service.</para>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions.We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeModelServiceRequest
@@ -18138,8 +19564,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型服务</para>
+        /// <para>Queries the information about a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This interface is used to view the details of a model service.</para>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions.We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeModelServiceRequest
@@ -18156,8 +19590,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型服务</para>
+        /// <para>Queries the information about a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This interface is used to view the details of a model service.</para>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions.We recommend that you take note of this limit when you call this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeModelServiceRequest
@@ -18626,6 +20068,126 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取私有RAG服务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePrivateRAGServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrivateRAGServiceResponse
+        /// </returns>
+        public DescribePrivateRAGServiceResponse DescribePrivateRAGServiceWithOptions(DescribePrivateRAGServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePrivateRAGService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePrivateRAGServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取私有RAG服务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePrivateRAGServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrivateRAGServiceResponse
+        /// </returns>
+        public async Task<DescribePrivateRAGServiceResponse> DescribePrivateRAGServiceWithOptionsAsync(DescribePrivateRAGServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePrivateRAGService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePrivateRAGServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取私有RAG服务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePrivateRAGServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrivateRAGServiceResponse
+        /// </returns>
+        public DescribePrivateRAGServiceResponse DescribePrivateRAGService(DescribePrivateRAGServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePrivateRAGServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取私有RAG服务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePrivateRAGServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrivateRAGServiceResponse
+        /// </returns>
+        public async Task<DescribePrivateRAGServiceResponse> DescribePrivateRAGServiceAsync(DescribePrivateRAGServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePrivateRAGServiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of vSwitches.</para>
         /// </summary>
         /// 
@@ -19038,6 +20600,126 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeRdsVpcsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述一个实例是否处于平衡状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRebalanceStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRebalanceStatusResponse
+        /// </returns>
+        public DescribeRebalanceStatusResponse DescribeRebalanceStatusWithOptions(DescribeRebalanceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRebalanceStatus",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRebalanceStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述一个实例是否处于平衡状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRebalanceStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRebalanceStatusResponse
+        /// </returns>
+        public async Task<DescribeRebalanceStatusResponse> DescribeRebalanceStatusWithOptionsAsync(DescribeRebalanceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeRebalanceStatus",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeRebalanceStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述一个实例是否处于平衡状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRebalanceStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRebalanceStatusResponse
+        /// </returns>
+        public DescribeRebalanceStatusResponse DescribeRebalanceStatus(DescribeRebalanceStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeRebalanceStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>描述一个实例是否处于平衡状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeRebalanceStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeRebalanceStatusResponse
+        /// </returns>
+        public async Task<DescribeRebalanceStatusResponse> DescribeRebalanceStatusAsync(DescribeRebalanceStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeRebalanceStatusWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -21638,6 +23320,134 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取私有RAG服务可部署可用区</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeZonesPrivateRAGServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeZonesPrivateRAGServiceResponse
+        /// </returns>
+        public DescribeZonesPrivateRAGServiceResponse DescribeZonesPrivateRAGServiceWithOptions(DescribeZonesPrivateRAGServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeZonesPrivateRAGService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeZonesPrivateRAGServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取私有RAG服务可部署可用区</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeZonesPrivateRAGServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeZonesPrivateRAGServiceResponse
+        /// </returns>
+        public async Task<DescribeZonesPrivateRAGServiceResponse> DescribeZonesPrivateRAGServiceWithOptionsAsync(DescribeZonesPrivateRAGServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeZonesPrivateRAGService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeZonesPrivateRAGServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取私有RAG服务可部署可用区</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeZonesPrivateRAGServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeZonesPrivateRAGServiceResponse
+        /// </returns>
+        public DescribeZonesPrivateRAGServiceResponse DescribeZonesPrivateRAGService(DescribeZonesPrivateRAGServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeZonesPrivateRAGServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取私有RAG服务可部署可用区</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeZonesPrivateRAGServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeZonesPrivateRAGServiceResponse
+        /// </returns>
+        public async Task<DescribeZonesPrivateRAGServiceResponse> DescribeZonesPrivateRAGServiceAsync(DescribeZonesPrivateRAGServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeZonesPrivateRAGServiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Disables resource group management for an AnalyticDB for PostgreSQL V6.0 instance in elastic storage mode. After you disable resource group management, the resource management method of the instance switches from resource group management to resource queue management.</para>
         /// </summary>
         /// 
@@ -22250,7 +24060,199 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>知识库开启构建知识图谱</para>
+        /// <para>Downloads slow SQL records.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DownloadSlowSQLRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadSlowSQLRecordsResponse
+        /// </returns>
+        public DownloadSlowSQLRecordsResponse DownloadSlowSQLRecordsWithOptions(DownloadSlowSQLRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
+            {
+                query["DBName"] = request.DBName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDuration))
+            {
+                query["MaxDuration"] = request.MaxDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDuration))
+            {
+                query["MinDuration"] = request.MinDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadSlowSQLRecords",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadSlowSQLRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Downloads slow SQL records.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DownloadSlowSQLRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadSlowSQLRecordsResponse
+        /// </returns>
+        public async Task<DownloadSlowSQLRecordsResponse> DownloadSlowSQLRecordsWithOptionsAsync(DownloadSlowSQLRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
+            {
+                query["DBName"] = request.DBName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDuration))
+            {
+                query["MaxDuration"] = request.MaxDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDuration))
+            {
+                query["MinDuration"] = request.MinDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadSlowSQLRecords",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadSlowSQLRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Downloads slow SQL records.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DownloadSlowSQLRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadSlowSQLRecordsResponse
+        /// </returns>
+        public DownloadSlowSQLRecordsResponse DownloadSlowSQLRecords(DownloadSlowSQLRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DownloadSlowSQLRecordsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Downloads slow SQL records.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DownloadSlowSQLRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadSlowSQLRecordsResponse
+        /// </returns>
+        public async Task<DownloadSlowSQLRecordsResponse> DownloadSlowSQLRecordsAsync(DownloadSlowSQLRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DownloadSlowSQLRecordsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables knowledge graph construction for the knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22346,7 +24348,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>知识库开启构建知识图谱</para>
+        /// <para>Enables knowledge graph construction for the knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22442,7 +24444,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>知识库开启构建知识图谱</para>
+        /// <para>Enables knowledge graph construction for the knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22460,7 +24462,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>知识库开启构建知识图谱</para>
+        /// <para>Enables knowledge graph construction for the knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23010,7 +25012,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取构建知识图谱任务</para>
+        /// <para>Retrieves a task to build a knowledge graph.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23076,7 +25078,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取构建知识图谱任务</para>
+        /// <para>Retrieves a task to build a knowledge graph.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23142,7 +25144,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取构建知识图谱任务</para>
+        /// <para>Retrieves a task to build a knowledge graph.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23160,7 +25162,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取构建知识图谱任务</para>
+        /// <para>Retrieves a task to build a knowledge graph.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23498,8 +25500,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase实例详情</para>
+        /// <para>Retrieves the detailed configuration and status information for a specific Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface is used to query the details of a Supabase instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSupabaseProjectRequest
@@ -23544,8 +25551,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase实例详情</para>
+        /// <para>Retrieves the detailed configuration and status information for a specific Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface is used to query the details of a Supabase instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSupabaseProjectRequest
@@ -23590,8 +25602,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase实例详情</para>
+        /// <para>Retrieves the detailed configuration and status information for a specific Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface is used to query the details of a Supabase instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSupabaseProjectRequest
@@ -23608,8 +25625,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase实例详情</para>
+        /// <para>Retrieves the detailed configuration and status information for a specific Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This interface is used to query the details of a Supabase instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSupabaseProjectRequest
@@ -23626,8 +25648,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase实例 API Keys</para>
+        /// <para>Queries a list of API keys for a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query a list of API keys for a Supabase project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSupabaseProjectApiKeysRequest
@@ -23672,8 +25699,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase实例 API Keys</para>
+        /// <para>Queries a list of API keys for a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query a list of API keys for a Supabase project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSupabaseProjectApiKeysRequest
@@ -23718,8 +25750,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase实例 API Keys</para>
+        /// <para>Queries a list of API keys for a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query a list of API keys for a Supabase project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSupabaseProjectApiKeysRequest
@@ -23736,8 +25773,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase实例 API Keys</para>
+        /// <para>Queries a list of API keys for a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can call this operation to query a list of API keys for a Supabase project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSupabaseProjectApiKeysRequest
@@ -23754,8 +25796,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase项目dashboard账号信息</para>
+        /// <para>Retrieves the username and password for the dashboard of a specific Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query Supabase Project Dashboard Account Information</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSupabaseProjectDashboardAccountRequest
@@ -23800,8 +25847,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase项目dashboard账号信息</para>
+        /// <para>Retrieves the username and password for the dashboard of a specific Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query Supabase Project Dashboard Account Information</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSupabaseProjectDashboardAccountRequest
@@ -23846,8 +25898,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase项目dashboard账号信息</para>
+        /// <para>Retrieves the username and password for the dashboard of a specific Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query Supabase Project Dashboard Account Information</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSupabaseProjectDashboardAccountRequest
@@ -23864,8 +25921,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase项目dashboard账号信息</para>
+        /// <para>Retrieves the username and password for the dashboard of a specific Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query Supabase Project Dashboard Account Information</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSupabaseProjectDashboardAccountRequest
@@ -23887,12 +25949,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and obtain the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</para>
+        /// <para>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and get the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</para>
         /// <remarks>
-        /// <para> Suggestions:</para>
+        /// <para>Suggestions</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Determine whether the document upload job times out based on the document complexity and the number of tokens after chunking. In most cases, a job that lasts more than 2 hours is considered timeout.</description></item>
+        /// <item><description>Based on document complexity and the number of resulting vector chunks, the timeout is estimated and typically does not exceed 2 hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23966,12 +26028,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and obtain the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</para>
+        /// <para>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and get the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</para>
         /// <remarks>
-        /// <para> Suggestions:</para>
+        /// <para>Suggestions</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Determine whether the document upload job times out based on the document complexity and the number of tokens after chunking. In most cases, a job that lasts more than 2 hours is considered timeout.</description></item>
+        /// <item><description>Based on document complexity and the number of resulting vector chunks, the timeout is estimated and typically does not exceed 2 hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24045,12 +26107,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and obtain the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</para>
+        /// <para>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and get the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</para>
         /// <remarks>
-        /// <para> Suggestions:</para>
+        /// <para>Suggestions</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Determine whether the document upload job times out based on the document complexity and the number of tokens after chunking. In most cases, a job that lasts more than 2 hours is considered timeout.</description></item>
+        /// <item><description>Based on document complexity and the number of resulting vector chunks, the timeout is estimated and typically does not exceed 2 hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24074,12 +26136,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and obtain the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</para>
+        /// <para>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and get the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</para>
         /// <remarks>
-        /// <para> Suggestions:</para>
+        /// <para>Suggestions</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Determine whether the document upload job times out based on the document complexity and the number of tokens after chunking. In most cases, a job that lasts more than 2 hours is considered timeout.</description></item>
+        /// <item><description>Based on document complexity and the number of resulting vector chunks, the timeout is estimated and typically does not exceed 2 hours.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24790,8 +26852,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举AI节点池</para>
+        /// <para>Queries a list of AI nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation queries a list of AI nodes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAINodePoolsRequest
@@ -24836,8 +26903,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举AI节点池</para>
+        /// <para>Queries a list of AI nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation queries a list of AI nodes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAINodePoolsRequest
@@ -24882,8 +26954,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举AI节点池</para>
+        /// <para>Queries a list of AI nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation queries a list of AI nodes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAINodePoolsRequest
@@ -24900,8 +26977,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举AI节点池</para>
+        /// <para>Queries a list of AI nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This operation queries a list of AI nodes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAINodePoolsRequest
@@ -24918,7 +27000,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取备份任务列表</para>
+        /// <para>Queries a list of backup jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24964,7 +27046,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取备份任务列表</para>
+        /// <para>Queries a list of backup jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25010,7 +27092,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取备份任务列表</para>
+        /// <para>Queries a list of backup jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25028,7 +27110,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取备份任务列表</para>
+        /// <para>Queries a list of backup jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25202,6 +27284,134 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCollectionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取安装在某个数据库上的所有插件信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseExtensionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseExtensionsResponse
+        /// </returns>
+        public ListDatabaseExtensionsResponse ListDatabaseExtensionsWithOptions(ListDatabaseExtensionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                query["DatabaseName"] = request.DatabaseName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDatabaseExtensions",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDatabaseExtensionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取安装在某个数据库上的所有插件信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseExtensionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseExtensionsResponse
+        /// </returns>
+        public async Task<ListDatabaseExtensionsResponse> ListDatabaseExtensionsWithOptionsAsync(ListDatabaseExtensionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
+            {
+                query["DatabaseName"] = request.DatabaseName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDatabaseExtensions",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDatabaseExtensionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取安装在某个数据库上的所有插件信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseExtensionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseExtensionsResponse
+        /// </returns>
+        public ListDatabaseExtensionsResponse ListDatabaseExtensions(ListDatabaseExtensionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDatabaseExtensionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取安装在某个数据库上的所有插件信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDatabaseExtensionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDatabaseExtensionsResponse
+        /// </returns>
+        public async Task<ListDatabaseExtensionsResponse> ListDatabaseExtensionsAsync(ListDatabaseExtensionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDatabaseExtensionsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -25990,7 +28200,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取索引列表</para>
+        /// <para>Queries a list of indexes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26056,7 +28266,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取索引列表</para>
+        /// <para>Queries a list of indexes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26122,7 +28332,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取索引列表</para>
+        /// <para>Queries a list of indexes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26140,7 +28350,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取索引列表</para>
+        /// <para>Queries a list of indexes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26154,6 +28364,142 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListIndicesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举数据库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceDatabasesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceDatabasesResponse
+        /// </returns>
+        public ListInstanceDatabasesResponse ListInstanceDatabasesWithOptions(ListInstanceDatabasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceDatabases",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceDatabasesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举数据库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceDatabasesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceDatabasesResponse
+        /// </returns>
+        public async Task<ListInstanceDatabasesResponse> ListInstanceDatabasesWithOptionsAsync(ListInstanceDatabasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceDatabases",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceDatabasesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举数据库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceDatabasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceDatabasesResponse
+        /// </returns>
+        public ListInstanceDatabasesResponse ListInstanceDatabases(ListInstanceDatabasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListInstanceDatabasesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举数据库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceDatabasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceDatabasesResponse
+        /// </returns>
+        public async Task<ListInstanceDatabasesResponse> ListInstanceDatabasesAsync(ListInstanceDatabasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListInstanceDatabasesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -26318,8 +28664,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型服务</para>
+        /// <para>Queries all model services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This interface is used to view all model service information.</para>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>You can call this operation up to 1,000 times per second per account. Exceeding the limit will trigger API rate limiting, which may impact your business. Please call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelServicesRequest
@@ -26372,8 +28726,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型服务</para>
+        /// <para>Queries all model services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This interface is used to view all model service information.</para>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>You can call this operation up to 1,000 times per second per account. Exceeding the limit will trigger API rate limiting, which may impact your business. Please call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelServicesRequest
@@ -26426,8 +28788,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型服务</para>
+        /// <para>Queries all model services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This interface is used to view all model service information.</para>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>You can call this operation up to 1,000 times per second per account. Exceeding the limit will trigger API rate limiting, which may impact your business. Please call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelServicesRequest
@@ -26444,8 +28814,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型服务</para>
+        /// <para>Queries all model services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <para>This interface is used to view all model service information.</para>
+        /// <h2><a href="#qps-"></a>QPS limit</h2>
+        /// <para>You can call this operation up to 1,000 times per second per account. Exceeding the limit will trigger API rate limiting, which may impact your business. Please call the API responsibly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelServicesRequest
@@ -27078,6 +29456,214 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries slow SQL queries.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSlowSQLRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSlowSQLRecordsResponse
+        /// </returns>
+        public ListSlowSQLRecordsResponse ListSlowSQLRecordsWithOptions(ListSlowSQLRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
+            {
+                query["DBName"] = request.DBName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDuration))
+            {
+                query["MaxDuration"] = request.MaxDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDuration))
+            {
+                query["MinDuration"] = request.MinDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSlowSQLRecords",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSlowSQLRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries slow SQL queries.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSlowSQLRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSlowSQLRecordsResponse
+        /// </returns>
+        public async Task<ListSlowSQLRecordsResponse> ListSlowSQLRecordsWithOptionsAsync(ListSlowSQLRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
+            {
+                query["DBName"] = request.DBName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDuration))
+            {
+                query["MaxDuration"] = request.MaxDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinDuration))
+            {
+                query["MinDuration"] = request.MinDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSlowSQLRecords",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSlowSQLRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries slow SQL queries.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSlowSQLRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSlowSQLRecordsResponse
+        /// </returns>
+        public ListSlowSQLRecordsResponse ListSlowSQLRecords(ListSlowSQLRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSlowSQLRecordsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries slow SQL queries.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSlowSQLRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSlowSQLRecordsResponse
+        /// </returns>
+        public async Task<ListSlowSQLRecordsResponse> ListSlowSQLRecordsAsync(ListSlowSQLRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSlowSQLRecordsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Create External Data Source Configuration</para>
         /// </summary>
         /// 
@@ -27510,8 +30096,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase实例列表</para>
+        /// <para>Retrieves a paginated list of Supabase instances in your account. You can filter the list by region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to query Supabase instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSupabaseProjectsRequest
@@ -27560,8 +30151,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase实例列表</para>
+        /// <para>Retrieves a paginated list of Supabase instances in your account. You can filter the list by region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to query Supabase instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSupabaseProjectsRequest
@@ -27610,8 +30206,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase实例列表</para>
+        /// <para>Retrieves a paginated list of Supabase instances in your account. You can filter the list by region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to query Supabase instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSupabaseProjectsRequest
@@ -27628,8 +30229,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Supabase实例列表</para>
+        /// <para>Retrieves a paginated list of Supabase instances in your account. You can filter the list by region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  You can call this operation to query Supabase instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSupabaseProjectsRequest
@@ -27646,8 +30252,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取支持的模型列表</para>
+        /// <para>Get the list of supported models</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API is used to query the list of supported models.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSupportModelsRequest
@@ -27688,8 +30299,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取支持的模型列表</para>
+        /// <para>Get the list of supported models</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API is used to query the list of supported models.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSupportModelsRequest
@@ -27730,8 +30346,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取支持的模型列表</para>
+        /// <para>Get the list of supported models</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API is used to query the list of supported models.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSupportModelsRequest
@@ -27748,8 +30369,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取支持的模型列表</para>
+        /// <para>Get the list of supported models</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  This API is used to query the list of supported models.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSupportModelsRequest
@@ -28438,7 +31064,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Collection</para>
+        /// <para>Updates a collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28508,7 +31134,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Collection</para>
+        /// <para>Updates a collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28578,7 +31204,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Collection</para>
+        /// <para>Updates a collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28596,7 +31222,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Collection</para>
+        /// <para>Updates a collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28918,7 +31544,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例部署模式</para>
+        /// <para>Changes the development mode of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28972,7 +31598,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例部署模式</para>
+        /// <para>Changes the development mode of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29026,7 +31652,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例部署模式</para>
+        /// <para>Changes the development mode of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29044,7 +31670,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例部署模式</para>
+        /// <para>Changes the development mode of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32202,8 +34828,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改supabase项目白名单</para>
+        /// <para>Sets or replaces the IP address whitelist for a specified Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you can connect to a Supabase project, you must add your client\&quot;s IP address or CIDR block to the project\&quot;s whitelist.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseProjectSecurityIpsRequest
@@ -32252,8 +34883,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改supabase项目白名单</para>
+        /// <para>Sets or replaces the IP address whitelist for a specified Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you can connect to a Supabase project, you must add your client\&quot;s IP address or CIDR block to the project\&quot;s whitelist.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseProjectSecurityIpsRequest
@@ -32302,8 +34938,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改supabase项目白名单</para>
+        /// <para>Sets or replaces the IP address whitelist for a specified Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you can connect to a Supabase project, you must add your client\&quot;s IP address or CIDR block to the project\&quot;s whitelist.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseProjectSecurityIpsRequest
@@ -32320,8 +34961,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改supabase项目白名单</para>
+        /// <para>Sets or replaces the IP address whitelist for a specified Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you can connect to a Supabase project, you must add your client\&quot;s IP address or CIDR block to the project\&quot;s whitelist.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseProjectSecurityIpsRequest
@@ -33525,7 +36171,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 queryContentReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             QueryContentResponse queryContentResp = QueryContentWithOptions(queryContentReq, runtime);
@@ -33621,7 +36267,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 queryContentReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             QueryContentResponse queryContentResp = await QueryContentWithOptionsAsync(queryContentReq, runtime);
@@ -33630,7 +36276,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多知识库查询</para>
+        /// <para>Retrieves vectors and metadata from multiple specified document collections using natural language queries, then merge and return the results from all retrieval paths.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33714,7 +36360,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多知识库查询</para>
+        /// <para>Retrieves vectors and metadata from multiple specified document collections using natural language queries, then merge and return the results from all retrieval paths.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33798,7 +36444,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多知识库查询</para>
+        /// <para>Retrieves vectors and metadata from multiple specified document collections using natural language queries, then merge and return the results from all retrieval paths.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33816,7 +36462,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多知识库查询</para>
+        /// <para>Retrieves vectors and metadata from multiple specified document collections using natural language queries, then merge and return the results from all retrieval paths.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34562,8 +37208,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置supabase数据库密码</para>
+        /// <para>Reset the password of a Supabase database</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this API to reset the password of the Supabase database.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetSupabaseProjectPasswordRequest
@@ -34612,8 +37263,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置supabase数据库密码</para>
+        /// <para>Reset the password of a Supabase database</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this API to reset the password of the Supabase database.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetSupabaseProjectPasswordRequest
@@ -34662,8 +37318,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置supabase数据库密码</para>
+        /// <para>Reset the password of a Supabase database</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this API to reset the password of the Supabase database.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetSupabaseProjectPasswordRequest
@@ -34680,8 +37341,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置supabase数据库密码</para>
+        /// <para>Reset the password of a Supabase database</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this API to reset the password of the Supabase database.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetSupabaseProjectPasswordRequest
@@ -35842,7 +38508,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过模型对文本文档进行向量化</para>
+        /// <para>Generates text embeddings using an embedding model.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35912,7 +38578,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过模型对文本文档进行向量化</para>
+        /// <para>Generates text embeddings using an embedding model.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35982,7 +38648,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过模型对文本文档进行向量化</para>
+        /// <para>Generates text embeddings using an embedding model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36000,7 +38666,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过模型对文本文档进行向量化</para>
+        /// <para>Generates text embeddings using an embedding model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37933,7 +40599,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 uploadDocumentAsyncReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             UploadDocumentAsyncResponse uploadDocumentAsyncResp = UploadDocumentAsyncWithOptions(uploadDocumentAsyncReq, runtime);
@@ -38029,7 +40695,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 uploadDocumentAsyncReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             UploadDocumentAsyncResponse uploadDocumentAsyncResp = await UploadDocumentAsyncWithOptionsAsync(uploadDocumentAsyncReq, runtime);
@@ -38038,12 +40704,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload split text</para>
+        /// <para>Splits a document into chunks and uploads the vectorized chunks to a document collection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The vectorization algorithm for the document is specified by the CreateDocumentCollection API.</para>
+        /// <para>The vector algorithm that is used for the document is specified when you call the CreateDocumentCollection operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -38129,12 +40795,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload split text</para>
+        /// <para>Splits a document into chunks and uploads the vectorized chunks to a document collection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The vectorization algorithm for the document is specified by the CreateDocumentCollection API.</para>
+        /// <para>The vector algorithm that is used for the document is specified when you call the CreateDocumentCollection operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -38220,12 +40886,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload split text</para>
+        /// <para>Splits a document into chunks and uploads the vectorized chunks to a document collection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The vectorization algorithm for the document is specified by the CreateDocumentCollection API.</para>
+        /// <para>The vector algorithm that is used for the document is specified when you call the CreateDocumentCollection operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38243,12 +40909,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload split text</para>
+        /// <para>Splits a document into chunks and uploads the vectorized chunks to a document collection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The vectorization algorithm for the document is specified by the CreateDocumentCollection API.</para>
+        /// <para>The vector algorithm that is used for the document is specified when you call the CreateDocumentCollection operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38785,7 +41451,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 upsertCollectionDataAsyncReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             UpsertCollectionDataAsyncResponse upsertCollectionDataAsyncResp = UpsertCollectionDataAsyncWithOptions(upsertCollectionDataAsyncReq, runtime);
@@ -38881,7 +41547,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 upsertCollectionDataAsyncReq.FileUrl = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             UpsertCollectionDataAsyncResponse upsertCollectionDataAsyncResp = await UpsertCollectionDataAsyncWithOptionsAsync(upsertCollectionDataAsyncReq, runtime);

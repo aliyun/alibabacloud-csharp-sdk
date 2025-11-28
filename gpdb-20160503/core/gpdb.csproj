@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyName>AlibabaCloud.SDK.Gpdb20160503</AssemblyName>
-    <Version>2.8.0</Version>
+    <Version>2.9.0</Version>
     <LangVersion>5</LangVersion>
     <Authors>Alibaba Cloud</Authors>
     <Description>Alibaba Cloud AnalyticDB for PostgreSQL (20160503) SDK Library for .NET</Description>

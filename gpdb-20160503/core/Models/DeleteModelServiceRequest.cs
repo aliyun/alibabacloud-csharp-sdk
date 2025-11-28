@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DeleteModelServiceRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the model service to be deleted.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

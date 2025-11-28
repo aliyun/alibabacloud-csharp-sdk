@@ -108,6 +108,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The method that is used to create sparse vector indexes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ip</para>
+        /// </summary>
         [NameInMap("SparseVectorMetrics")]
         [Validation(Required=false)]
         public string SparseVectorMetrics { get; set; }
@@ -126,6 +132,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether sparse vectors are supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("SupportSparse")]
         [Validation(Required=false)]
         public bool? SupportSparse { get; set; }

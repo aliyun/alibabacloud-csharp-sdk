@@ -52,9 +52,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>Namespace, default is public.</para>
+        /// <para>The name of the namespace. Default value: public.</para>
         /// <remarks>
-        /// <para>You can create a namespace using the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API and view the list of namespaces using the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

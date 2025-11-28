@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetGraphRAGJobRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the document collection.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Collection { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +38,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +49,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The name of the namespace. Default value: public.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>mynamespace</para>
         /// </summary>
@@ -48,6 +62,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The password of the namespace.</para>
+        /// <remarks>
+        /// <para>The value of this parameter is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +80,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

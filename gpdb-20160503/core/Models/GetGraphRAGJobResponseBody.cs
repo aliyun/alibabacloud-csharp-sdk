@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetGraphRAGJobResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the task for building a knowledge graph.</para>
+        /// </summary>
         [NameInMap("Job")]
         [Validation(Required=false)]
         public GetGraphRAGJobResponseBodyJob Job { get; set; }
         public class GetGraphRAGJobResponseBodyJob : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the operation is complete.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public bool? Completed { get; set; }
 
             /// <summary>
+            /// <para>The job creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-01-08 16:52:04.864664</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The error message that is returned when the current operation is abnormal or fails.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Failed to connect database.</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Error { get; set; }
 
             /// <summary>
+            /// <para>The job ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>231460f8-75dc-405e-a669-0c5204887e91</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The progress of the document upload job. Unit: %. A value of 100 indicates that the job is complete.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -54,6 +67,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public int? Progress { get; set; }
 
             /// <summary>
+            /// <para>The state of the job. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Success</b></description></item>
+            /// <item><description><b>Failed</b> (See the Error parameter for failure reasons.)</description></item>
+            /// <item><description><b>Running</b></description></item>
+            /// <item><description><b>Pending</b></description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Running</para>
             /// </summary>
@@ -62,6 +83,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The job last updated time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-01-08 16:53:04.864664</para>
             /// </summary>
@@ -72,6 +95,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
+        /// <para>The additional information that is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -80,6 +105,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
         /// </summary>
@@ -88,6 +115,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The status of the operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>success</b></description></item>
+        /// <item><description><b>fail</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -95,11 +128,19 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The number of tokens that are consumed by document understanding or embedding.</para>
+        /// </summary>
         [NameInMap("Usage")]
         [Validation(Required=false)]
         public GetGraphRAGJobResponseBodyUsage Usage { get; set; }
         public class GetGraphRAGJobResponseBodyUsage : TeaModel {
             /// <summary>
+            /// <para>The number of tokens that are consumed during vectorization.</para>
+            /// <remarks>
+            /// <para>A token is the minimum unit for splitting text. A token can be a word, phrase, punctuation, or character.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>475</para>
             /// </summary>
@@ -108,6 +149,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public int? EmbeddingTokens { get; set; }
 
             /// <summary>
+            /// <para>The number of tokens used by the large model input.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>600</para>
             /// </summary>
@@ -116,6 +159,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public int? LLMInputTokens { get; set; }
 
             /// <summary>
+            /// <para>The number of tokens used for large model output.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>125</para>
             /// </summary>

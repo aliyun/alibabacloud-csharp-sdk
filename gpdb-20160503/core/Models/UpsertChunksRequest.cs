@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpsertChunksRequest : TeaModel {
+        /// <summary>
+        /// <para>Based on the Filter input specified under TextChunks, this parameter controls whether data insertion is allowed when a Filter is provided.</para>
+        /// <para>If AllowInsertWithFilter = true, the insert operation is performed when the filter does not match any data.</para>
+        /// <para>If AllowInsertWithFilter = false, no action is performed if the filter does not match any data.</para>
+        /// <para>Default value: true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("AllowInsertWithFilter")]
         [Validation(Required=false)]
         public bool? AllowInsertWithFilter { get; set; }
 
         /// <summary>
-        /// <para>Document collection name.</para>
+        /// <para>The name of the document collection.</para>
         /// <remarks>
-        /// <para>Created by the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> API. You can use the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> API to view the already created document collections.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,9 +37,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Collection { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB PostgreSQL instances in the target region, including the instance ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,9 +51,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>File name.</para>
+        /// <para>The file name of the document.</para>
         /// <remarks>
-        /// <para>If a file name is specified and not empty, it will overwrite the data for this file name; if empty, the chunks data will be appended directly to the document collection.</para>
+        /// <para>When a non-empty filename is specified, the system will decide whether to overwrite the data associated with that filename based on the value of the ShouldReplaceFile parameter. If you leave this parameter empty, the data of chunks is appended to the document collection.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,9 +64,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>Namespace, default is public.</para>
+        /// <para>The name of the namespace. Default value: public.</para>
         /// <remarks>
-        /// <para>You can create it using the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API and view the list using the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -68,9 +77,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>Password corresponding to the namespace.</para>
+        /// <para>The password of the namespace.</para>
         /// <remarks>
-        /// <para>This value is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> API.</para>
+        /// <para>The value of this parameter is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -86,7 +95,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Region ID where the instance is located.</para>
+        /// <para>The region ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,19 +105,28 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to overwrite the data associated with the file name specified by the FileName parameter.</para>
+        /// <para>If you set ShouldReplaceFile to true, the system deletes all data associated with the file name and then inserts new data.</para>
+        /// <para>If you set ShouldReplaceFile to false, the system does not delete the data associated with the file name, but inserts or updates the data of chunks based on the TextChunks parameter.</para>
+        /// <para>Default value: true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ShouldReplaceFile")]
         [Validation(Required=false)]
         public bool? ShouldReplaceFile { get; set; }
 
         /// <summary>
-        /// <para>List of split documents.</para>
+        /// <para>List of document chunks after splitting.</para>
         /// </summary>
         [NameInMap("TextChunks")]
         [Validation(Required=false)]
         public List<UpsertChunksRequestTextChunks> TextChunks { get; set; }
         public class UpsertChunksRequestTextChunks : TeaModel {
             /// <summary>
-            /// <para>Document content.</para>
+            /// <para>The content of the document.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -118,16 +136,28 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public string Content { get; set; }
 
+            /// <summary>
+            /// <para>The condition that is used to filter the data to be updated. Specify this parameter in a format that is the same as the WHERE clause.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>title = \&quot;seagull\&quot;</para>
+            /// </summary>
             [NameInMap("Filter")]
             [Validation(Required=false)]
             public string Filter { get; set; }
 
+            /// <summary>
+            /// <para>The unique ID of the vector data.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>273e3fc7-8f56-4167-a1bb-d35d2f3b9043</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Metadata.</para>
+            /// <para>The metadata.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;title&quot;:&quot;test&quot;}</para>

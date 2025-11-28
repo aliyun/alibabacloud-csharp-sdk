@@ -62,6 +62,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string SecretName { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-ws-*****</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

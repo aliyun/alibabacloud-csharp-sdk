@@ -58,18 +58,19 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the document loader. You do not need to specify this parameter. A document loader is automatically specified based on the file extension. Valid values:</para>
+        /// <para>Specifies the document loader to use for processing the file. If this parameter is omitted, the system automatically selects a loader based on the file\&quot;s extension.Valid Values:[List of valid loader names would go here] Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>UnstructuredHTMLLoader: <c>.html</c></description></item>
-        /// <item><description>UnstructuredMarkdownLoader: <c>.md</c></description></item>
-        /// <item><description>PyMuPDFLoader: <c>.pdf</c></description></item>
-        /// <item><description>PyPDFLoader: <c>.pdf</c></description></item>
-        /// <item><description>RapidOCRPDFLoader: <c>.pdf</c></description></item>
-        /// <item><description>PDFWithImageRefLoader: <c>.pdf</c> (with the text-image association feature)</description></item>
-        /// <item><description>JSONLoader: <c>.json</c></description></item>
-        /// <item><description>CSVLoader: <c>.csv</c></description></item>
-        /// <item><description>RapidOCRLoader: <c>.png</c>, <c>.jpg</c>, <c>.jpeg</c>, and <c>.bmp</c></description></item>
-        /// <item><description>UnstructuredFileLoader: <c>.eml</c>, <c>.msg</c>, <c>.rst</c>, <c>.txt</c>, <c>.docx</c>, <c>.epub</c>, <c>.odt</c>, <c>.pptx</c>, and <c>.tsv</c></description></item>
+        /// <item><description>UnstructuredHTMLLoader: .html</description></item>
+        /// <item><description>UnstructuredMarkdownLoader: .md</description></item>
+        /// <item><description>PyMuPDFLoader: .pdf</description></item>
+        /// <item><description>PyPDFLoader: .pdf</description></item>
+        /// <item><description>RapidOCRPDFLoader: .pdf</description></item>
+        /// <item><description>PDFWithImageRefLoader: .pdf (with the text-image association feature)</description></item>
+        /// <item><description>JSONLoader: .json</description></item>
+        /// <item><description>CSVLoader: .csv</description></item>
+        /// <item><description>RapidOCRLoader: .png, .jpg, .jpeg, and .bmp</description></item>
+        /// <item><description>UnstructuredFileLoader: .eml, .msg, .rst, .txt, .docx, .epub, .odt, .pptx, and .tsv</description></item>
+        /// <item><description>ADBPGLoader (free of charge for the first 3,000 pages): .pdf, .doc, .docx, .ppt, .pptx, .xls, .xlsx, .xlsm, .csv, .txt, .jpg, .jpeg, .png, .bmp, .gif, .md, .html, .epub, .mobi, and .rtf</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,15 +94,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The file name of the document.</para>
+        /// <para>The name of the file being uploaded.</para>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>We recommend that you add an extension to the file name. Examples: <c>.json</c>, <c>.md</c>, and <c>.pdf</c>. If you do not add an extension, the default loader designed for unstructured data is used.</para>
+        /// <item><description><para>File name: .json, .md, and .pdf.</para>
         /// </description></item>
-        /// <item><description><para>If an image file is involved, the file name must contain an extension. The following extensions are supported: <c>.bmp</c>, <c>.jpg</c>, <c>.jpeg</c>, <c>.png</c>, and <c>.tiff</c>.</para>
+        /// <item><description><para>Images: .bmp,. jpg,. jpeg,. png, and. tiff.</para>
         /// </description></item>
-        /// <item><description><para>You can use a compressed package to upload images. The package file name must contain an extension. Supported package file extensions: <c>.tar</c>, <c>.gz</c>, and <c>.zip</c>.</para>
+        /// <item><description><para>Compressed packages. The package file name must contain an extension: .tar, .gz, and .zip.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -189,17 +190,27 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string SeparatorsShrink { get; set; }
 
+        /// <summary>
+        /// <para>When DocumentLoaderName is set to ADBPGLoader and TextSplitterName is set to LLMSplitter, you can specify the splitting model. Default Value: qwen3-8b.</para>
+        /// <remarks>
+        /// <para> Supported splitting models: qwq-plus, qwq-plus-latest, qwen-max, qwen-max-latest, qwen-plus, qwen-plus-latest, qwen-turbo, qwen-turbo-latest, qwen3-235b-a22b, qwen3-32b,qwen3-30b-a3b, qwen3-14b, qwen3-8b, qwen3-4b, qwen3-1.7b, qwen3-0.6b, qwq-32b qwen2.5-14b-instruct-1m, qwen2.5-7b-instruct-1m, qwen2.5-72b-Instruct, qwen2.5-32b-Instruct, qwen2.5-14b-Instruct, qwen2.5-7b-Instruct, qwen2.5-3b-instruct, qwen2.5-1.5b-instruct, qwen2.5-0.5b-instruct.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>qwen3-8b</para>
+        /// </summary>
         [NameInMap("SplitterModel")]
         [Validation(Required=false)]
         public string SplitterModel { get; set; }
 
         /// <summary>
-        /// <para>The name of the splitter. Valid values:</para>
+        /// <para>The name of the separator. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ChineseRecursiveTextSplitter</b>: inherits from RecursiveCharacterTextSplitter, uses <c>[&quot;\\n\\n&quot;,&quot;\\n&quot;, &quot;。|!|?&quot;, &quot;\\.\\s|\\!\\s|\\?\\s&quot;, &quot;;|;\\s&quot;, &quot;,|,\\s&quot;]</c> as separators by default, and uses regular expressions to match text.</description></item>
-        /// <item><description><b>RecursiveCharacterTextSplitter</b>: uses <c>[&quot;\\n\\n&quot;, &quot;\\n&quot;, &quot; &quot;, &quot;&quot;]</c> as separators by default. The splitter supports splitting code in languages such as <c>C++, Go, Java, JS, PHP, Proto, Python, RST, Ruby, Rust, Scala, Swift, Markdown, LaTeX, HTML, Sol, and C Sharp</c>.</description></item>
-        /// <item><description><b>SpacyTextSplitter</b>: uses <c>\\n\\n</c> as separators by default and uses the en_core_web_sm model of spaCy. The splitter can obtain better splitting effect.</description></item>
-        /// <item><description><b>MarkdownHeaderTextSplitter</b>: splits text in the <c>[(&quot;#&quot;, &quot;head1&quot;), (&quot;##&quot;, &quot;head2&quot;), (&quot;###&quot;, &quot;head3&quot;), (&quot;####&quot;, &quot;head4&quot;)]</c> format. The splitter is suitable for Markdown text.</description></item>
+        /// <item><description><b>ChineseRecursiveTextSplitter</b>: Inherits from RecursiveCharacterTextSplitter and, by default, uses the delimiters<c>[&quot;\\n\\n&quot;,&quot;\\n&quot;, &quot;。 |! |?&quot;, &quot;\\.\\s|\\! \\s|\\?\\s&quot;, &quot;;|;\\s&quot;, &quot;,|,\\s&quot;] </c>, employing regular expressions to match text.</description></item>
+        /// <item><description><b>RecursiveCharacterTextSplitter</b>: Uses the delimiters <c>[&quot;\\n\\n&quot;, &quot;\\n&quot;, &quot; &quot;, &quot;&quot;]</c> by default. The splitter supports splitting code in languages such as C++, Go, Java, JS, PHP, Proto, Python, RST, Ruby, Rust, Scala, Swift, Markdown, LaTeX, HTML, Sol, and C Sharp.</description></item>
+        /// <item><description><b>SpacyTextSplitter</b>: Uses the delimiters <c>\\n\\n</c> by default and leverages the spaCy en_core_web_sm model. The splitter can achieve better text splitting performance.</description></item>
+        /// <item><description><b>MarkdownHeaderTextSplitter</b>: Splits text in the [(&quot;#&quot;, &quot;head1&quot;), (&quot;##&quot;, &quot;head2&quot;), (&quot;###&quot;, &quot;head3&quot;), (&quot;####&quot;, &quot;head4&quot;) format. This splitter works well with Markdown text.</description></item>
+        /// <item><description><b>LLMSplitter</b>: Use LLM to split text. The default model is qwen3-8b. Currently, this splitter works only when ADBPGLoader is selected.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -209,6 +220,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string TextSplitterName { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable VL-enhanced content recognition for complex documents. Default value: false.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>For complex documents with confusing typesetting and formatting, we recommend that you enable VL-enhanced content recognition.</para>
+        /// </description></item>
+        /// <item><description><para>Document processing time is longer after VL-enhanced content recognition is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>After VL-enhanced content recognition is enabled, images in documents cannot be stored or recalled.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("VlEnhance")]
         [Validation(Required=false)]
         public bool? VlEnhance { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetSupabaseProjectDashboardAccountResponseBody : TeaModel {
         /// <summary>
+        /// <para>The username for accessing the project\&quot;s dashboard.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxpassword</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DashboardPassword { get; set; }
 
         /// <summary>
+        /// <para>The password associated with the dashboard username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxuser</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DashboardUsername { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Supabase project.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sbp-twmoe9bakow</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The name of the Supabase project.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>supabase_prod</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D****</para>
         /// </summary>

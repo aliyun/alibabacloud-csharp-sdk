@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpsertChunksResponseBody : TeaModel {
         /// <summary>
-        /// <para>Number of tokens used during vectorization.</para>
+        /// <para>The number of tokens that are consumed during vectorization.</para>
         /// <remarks>
-        /// <para>A token refers to the smallest unit into which the input text is divided. A token can be a word, a phrase, a punctuation mark, a character, etc.</para>
+        /// <para>A token is the minimum unit for splitting text. A token can be a word, phrase, punctuation, or character.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -22,12 +22,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string EmbeddingTokens { get; set; }
 
+        /// <summary>
+        /// <para>The job ID. You can use the <c>GetGraphRAGJob</c> to view the job status.</para>
+        /// <remarks>
+        /// <para>This parameter is returned only when the knowledge base is enabled.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>231460f8-75dc-405e-a669-0c5204887e91</para>
+        /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -37,7 +46,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -47,10 +56,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>API execution status, with the following values:</para>
+        /// <para>The status of the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b>: Execution succeeded.</description></item>
-        /// <item><description><b>fail</b>: Execution failed.</description></item>
+        /// <item><description><b>success</b></description></item>
+        /// <item><description><b>fail</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

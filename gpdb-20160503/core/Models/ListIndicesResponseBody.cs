@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListIndicesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The queried indexes.</para>
+        /// </summary>
         [NameInMap("Indices")]
         [Validation(Required=false)]
         public ListIndicesResponseBodyIndices Indices { get; set; }
@@ -18,6 +21,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<ListIndicesResponseBodyIndicesIndices> Indices { get; set; }
             public class ListIndicesResponseBodyIndicesIndices : TeaModel {
                 /// <summary>
+                /// <para>The name of the collection.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>testcollection</para>
                 /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Collection { get; set; }
 
                 /// <summary>
+                /// <para>The definition of the index.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>CREATE INDEX testindex ON mynamespace. testcollection</para>
                 /// </summary>
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string IndexDef { get; set; }
 
                 /// <summary>
+                /// <para>The name of the index.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>testindex</para>
                 /// </summary>
@@ -42,6 +51,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string IndexName { get; set; }
 
                 /// <summary>
+                /// <para>The namespace to which the pod belongs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>mynamespace</para>
                 /// </summary>
@@ -54,6 +65,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
+        /// <para>The returned message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -72,6 +85,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The status of the operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>success</b>.</description></item>
+        /// <item><description><b>fail</b>.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
