@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class BatchGetMediaInfosResponseBody : TeaModel {
+        [NameInMap("IgnoredList")]
+        [Validation(Required=false)]
+        public List<string> IgnoredList { get; set; }
+
         /// <summary>
         /// <para>The queried media assets.</para>
         /// </summary>
@@ -328,6 +332,22 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 [NameInMap("UserData")]
                 [Validation(Required=false)]
                 public string UserData { get; set; }
+
+            }
+
+            [NameInMap("MediaDynamicInfo")]
+            [Validation(Required=false)]
+            public BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfo MediaDynamicInfo { get; set; }
+            public class BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfo : TeaModel {
+                [NameInMap("DynamicMetaData")]
+                [Validation(Required=false)]
+                public BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfoDynamicMetaData DynamicMetaData { get; set; }
+                public class BatchGetMediaInfosResponseBodyMediaInfosMediaDynamicInfoDynamicMetaData : TeaModel {
+                    [NameInMap("Data")]
+                    [Validation(Required=false)]
+                    public string Data { get; set; }
+
+                }
 
             }
 

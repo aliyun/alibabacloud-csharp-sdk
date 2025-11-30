@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
-        [NameInMap("Url")]
-        [Validation(Required=false)]
-        public string Url { get; set; }
-
     }
 
 }

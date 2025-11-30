@@ -20,24 +20,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("Config")]
         [Validation(Required=false)]
         public MediaConvertJobConfig Config { get; set; }
-        public class MediaConvertJobConfig : TeaModel {
-            [NameInMap("Inputs")]
-            [Validation(Required=false)]
-            public List<MediaConvertInput> Inputs { get; set; }
-
-            [NameInMap("JobName")]
-            [Validation(Required=false)]
-            public string JobName { get; set; }
-
-            [NameInMap("OutputGroups")]
-            [Validation(Required=false)]
-            public List<MediaConvertOutputGroup> OutputGroups { get; set; }
-
-            [NameInMap("Outputs")]
-            [Validation(Required=false)]
-            public List<MediaConvertOutput> Outputs { get; set; }
-
-        }
 
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
