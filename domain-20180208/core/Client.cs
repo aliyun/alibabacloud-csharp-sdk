@@ -2801,6 +2801,258 @@ namespace AlibabaCloud.SDK.Domain20180208
             return await QueryBrokerDemandRecordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询买家交易记录列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryBuyerDomainTradeRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryBuyerDomainTradeRecordsResponse
+        /// </returns>
+        public QueryBuyerDomainTradeRecordsResponse QueryBuyerDomainTradeRecordsWithOptions(QueryBuyerDomainTradeRecordsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryBuyerDomainTradeRecordsShrinkRequest request = new QueryBuyerDomainTradeRecordsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizIdList))
+            {
+                request.BizIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizIdList, "BizIdList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DomainNameList))
+            {
+                request.DomainNameListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DomainNameList, "DomainNameList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StatusList))
+            {
+                request.StatusListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StatusList, "StatusList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SuffixList))
+            {
+                request.SuffixListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SuffixList, "SuffixList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TradeTypeList))
+            {
+                request.TradeTypeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TradeTypeList, "TradeTypeList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizIdListShrink))
+            {
+                query["BizIdList"] = request.BizIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainNameListShrink))
+            {
+                query["DomainNameList"] = request.DomainNameListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndPrice))
+            {
+                query["EndPrice"] = request.EndPrice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sorter))
+            {
+                query["Sorter"] = request.Sorter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartPrice))
+            {
+                query["StartPrice"] = request.StartPrice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusListShrink))
+            {
+                query["StatusList"] = request.StatusListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuffixListShrink))
+            {
+                query["SuffixList"] = request.SuffixListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TradeTypeListShrink))
+            {
+                query["TradeTypeList"] = request.TradeTypeListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryBuyerDomainTradeRecords",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryBuyerDomainTradeRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询买家交易记录列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryBuyerDomainTradeRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryBuyerDomainTradeRecordsResponse
+        /// </returns>
+        public async Task<QueryBuyerDomainTradeRecordsResponse> QueryBuyerDomainTradeRecordsWithOptionsAsync(QueryBuyerDomainTradeRecordsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryBuyerDomainTradeRecordsShrinkRequest request = new QueryBuyerDomainTradeRecordsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizIdList))
+            {
+                request.BizIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizIdList, "BizIdList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DomainNameList))
+            {
+                request.DomainNameListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DomainNameList, "DomainNameList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StatusList))
+            {
+                request.StatusListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StatusList, "StatusList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SuffixList))
+            {
+                request.SuffixListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SuffixList, "SuffixList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TradeTypeList))
+            {
+                request.TradeTypeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TradeTypeList, "TradeTypeList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizIdListShrink))
+            {
+                query["BizIdList"] = request.BizIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainNameListShrink))
+            {
+                query["DomainNameList"] = request.DomainNameListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndPrice))
+            {
+                query["EndPrice"] = request.EndPrice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sorter))
+            {
+                query["Sorter"] = request.Sorter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartPrice))
+            {
+                query["StartPrice"] = request.StartPrice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusListShrink))
+            {
+                query["StatusList"] = request.StatusListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SuffixListShrink))
+            {
+                query["SuffixList"] = request.SuffixListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TradeTypeListShrink))
+            {
+                query["TradeTypeList"] = request.TradeTypeListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryBuyerDomainTradeRecords",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryBuyerDomainTradeRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询买家交易记录列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryBuyerDomainTradeRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryBuyerDomainTradeRecordsResponse
+        /// </returns>
+        public QueryBuyerDomainTradeRecordsResponse QueryBuyerDomainTradeRecords(QueryBuyerDomainTradeRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryBuyerDomainTradeRecordsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询买家交易记录列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryBuyerDomainTradeRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryBuyerDomainTradeRecordsResponse
+        /// </returns>
+        public async Task<QueryBuyerDomainTradeRecordsResponse> QueryBuyerDomainTradeRecordsAsync(QueryBuyerDomainTradeRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryBuyerDomainTradeRecordsWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// QueryDomainTransferStatusRequest
         /// </param>

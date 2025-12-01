@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
         [Validation(Required=false)]
         public CreateFixedPriceSelectedOrderResponseBodyModule Module { get; set; }
         public class CreateFixedPriceSelectedOrderResponseBodyModule : TeaModel {
+            [NameInMap("BizIds")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> BizIds { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>example.com</para>
