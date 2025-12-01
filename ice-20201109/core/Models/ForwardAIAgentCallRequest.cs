@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string CalledNumber { get; set; }
 
+        [NameInMap("CallerNumber")]
+        [Validation(Required=false)]
+        public string CallerNumber { get; set; }
+
         [NameInMap("ErrorPrompt")]
         [Validation(Required=false)]
         public string ErrorPrompt { get; set; }

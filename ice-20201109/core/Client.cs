@@ -16771,6 +16771,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             {
                 query["CalledNumber"] = request.CalledNumber;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerNumber))
+            {
+                query["CallerNumber"] = request.CallerNumber;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorPrompt))
             {
                 query["ErrorPrompt"] = request.ErrorPrompt;
@@ -16824,6 +16828,10 @@ namespace AlibabaCloud.SDK.ICE20201109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalledNumber))
             {
                 query["CalledNumber"] = request.CalledNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerNumber))
+            {
+                query["CallerNumber"] = request.CallerNumber;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorPrompt))
             {

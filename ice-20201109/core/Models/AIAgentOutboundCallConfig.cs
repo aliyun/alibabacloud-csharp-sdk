@@ -53,6 +53,64 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        [NameInMap("AutoSpeechConfig")]
+        [Validation(Required=false)]
+        public AIAgentOutboundCallConfigAutoSpeechConfig AutoSpeechConfig { get; set; }
+        public class AIAgentOutboundCallConfigAutoSpeechConfig : TeaModel {
+            [NameInMap("LlmPending")]
+            [Validation(Required=false)]
+            public AIAgentOutboundCallConfigAutoSpeechConfigLlmPending LlmPending { get; set; }
+            public class AIAgentOutboundCallConfigAutoSpeechConfigLlmPending : TeaModel {
+                [NameInMap("Messages")]
+                [Validation(Required=false)]
+                public List<AIAgentOutboundCallConfigAutoSpeechConfigLlmPendingMessages> Messages { get; set; }
+                public class AIAgentOutboundCallConfigAutoSpeechConfigLlmPendingMessages : TeaModel {
+                    [NameInMap("Probability")]
+                    [Validation(Required=false)]
+                    public double? Probability { get; set; }
+
+                    [NameInMap("Text")]
+                    [Validation(Required=false)]
+                    public string Text { get; set; }
+
+                }
+
+                [NameInMap("WaitTime")]
+                [Validation(Required=false)]
+                public int? WaitTime { get; set; }
+
+            }
+
+            [NameInMap("UserIdle")]
+            [Validation(Required=false)]
+            public AIAgentOutboundCallConfigAutoSpeechConfigUserIdle UserIdle { get; set; }
+            public class AIAgentOutboundCallConfigAutoSpeechConfigUserIdle : TeaModel {
+                [NameInMap("MaxRepeats")]
+                [Validation(Required=false)]
+                public int? MaxRepeats { get; set; }
+
+                [NameInMap("Messages")]
+                [Validation(Required=false)]
+                public List<AIAgentOutboundCallConfigAutoSpeechConfigUserIdleMessages> Messages { get; set; }
+                public class AIAgentOutboundCallConfigAutoSpeechConfigUserIdleMessages : TeaModel {
+                    [NameInMap("Probability")]
+                    [Validation(Required=false)]
+                    public double? Probability { get; set; }
+
+                    [NameInMap("Text")]
+                    [Validation(Required=false)]
+                    public string Text { get; set; }
+
+                }
+
+                [NameInMap("WaitTime")]
+                [Validation(Required=false)]
+                public int? WaitTime { get; set; }
+
+            }
+
+        }
+
         [NameInMap("EnableIntelligentSegment")]
         [Validation(Required=false)]
         public bool? EnableIntelligentSegment { get; set; }
@@ -105,6 +163,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
             }
 
+            [NameInMap("HistorySyncWithTTS")]
+            [Validation(Required=false)]
+            public bool? HistorySyncWithTTS { get; set; }
+
             [NameInMap("LlmCompleteReply")]
             [Validation(Required=false)]
             public bool? LlmCompleteReply { get; set; }
@@ -144,6 +206,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             public int? OutputMinLength { get; set; }
 
         }
+
+        [NameInMap("MaxIdleTime")]
+        [Validation(Required=false)]
+        public int? MaxIdleTime { get; set; }
 
         [NameInMap("TtsConfig")]
         [Validation(Required=false)]

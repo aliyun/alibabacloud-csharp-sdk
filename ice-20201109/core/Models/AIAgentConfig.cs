@@ -53,6 +53,64 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        [NameInMap("AutoSpeechConfig")]
+        [Validation(Required=false)]
+        public AIAgentConfigAutoSpeechConfig AutoSpeechConfig { get; set; }
+        public class AIAgentConfigAutoSpeechConfig : TeaModel {
+            [NameInMap("LlmPending")]
+            [Validation(Required=false)]
+            public AIAgentConfigAutoSpeechConfigLlmPending LlmPending { get; set; }
+            public class AIAgentConfigAutoSpeechConfigLlmPending : TeaModel {
+                [NameInMap("Messages")]
+                [Validation(Required=false)]
+                public List<AIAgentConfigAutoSpeechConfigLlmPendingMessages> Messages { get; set; }
+                public class AIAgentConfigAutoSpeechConfigLlmPendingMessages : TeaModel {
+                    [NameInMap("Probability")]
+                    [Validation(Required=false)]
+                    public double? Probability { get; set; }
+
+                    [NameInMap("Text")]
+                    [Validation(Required=false)]
+                    public string Text { get; set; }
+
+                }
+
+                [NameInMap("WaitTime")]
+                [Validation(Required=false)]
+                public int? WaitTime { get; set; }
+
+            }
+
+            [NameInMap("UserIdle")]
+            [Validation(Required=false)]
+            public AIAgentConfigAutoSpeechConfigUserIdle UserIdle { get; set; }
+            public class AIAgentConfigAutoSpeechConfigUserIdle : TeaModel {
+                [NameInMap("MaxRepeats")]
+                [Validation(Required=false)]
+                public int? MaxRepeats { get; set; }
+
+                [NameInMap("Messages")]
+                [Validation(Required=false)]
+                public List<AIAgentConfigAutoSpeechConfigUserIdleMessages> Messages { get; set; }
+                public class AIAgentConfigAutoSpeechConfigUserIdleMessages : TeaModel {
+                    [NameInMap("Probability")]
+                    [Validation(Required=false)]
+                    public double? Probability { get; set; }
+
+                    [NameInMap("Text")]
+                    [Validation(Required=false)]
+                    public string Text { get; set; }
+
+                }
+
+                [NameInMap("WaitTime")]
+                [Validation(Required=false)]
+                public int? WaitTime { get; set; }
+
+            }
+
+        }
+
         [NameInMap("AvatarConfig")]
         [Validation(Required=false)]
         public AIAgentConfigAvatarConfig AvatarConfig { get; set; }
@@ -126,6 +184,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                 public string MatchFunction { get; set; }
 
             }
+
+            [NameInMap("HistorySyncWithTTS")]
+            [Validation(Required=false)]
+            public bool? HistorySyncWithTTS { get; set; }
 
             [NameInMap("LlmCompleteReply")]
             [Validation(Required=false)]
