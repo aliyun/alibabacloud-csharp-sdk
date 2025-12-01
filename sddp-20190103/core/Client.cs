@@ -8199,6 +8199,174 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>OSS图片脱敏</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MaskOssImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MaskOssImageResponse
+        /// </returns>
+        public MaskOssImageResponse MaskOssImageWithOptions(MaskOssImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["BucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAlwaysUpload))
+            {
+                query["IsAlwaysUpload"] = request.IsAlwaysUpload;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSupportRestore))
+            {
+                query["IsSupportRestore"] = request.IsSupportRestore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaskRuleIdList))
+            {
+                query["MaskRuleIdList"] = request.MaskRuleIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectKey))
+            {
+                query["ObjectKey"] = request.ObjectKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MaskOssImage",
+                Version = "2019-01-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MaskOssImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>OSS图片脱敏</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MaskOssImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MaskOssImageResponse
+        /// </returns>
+        public async Task<MaskOssImageResponse> MaskOssImageWithOptionsAsync(MaskOssImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["BucketName"] = request.BucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAlwaysUpload))
+            {
+                query["IsAlwaysUpload"] = request.IsAlwaysUpload;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSupportRestore))
+            {
+                query["IsSupportRestore"] = request.IsSupportRestore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaskRuleIdList))
+            {
+                query["MaskRuleIdList"] = request.MaskRuleIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectKey))
+            {
+                query["ObjectKey"] = request.ObjectKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MaskOssImage",
+                Version = "2019-01-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MaskOssImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>OSS图片脱敏</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MaskOssImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MaskOssImageResponse
+        /// </returns>
+        public MaskOssImageResponse MaskOssImage(MaskOssImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MaskOssImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>OSS图片脱敏</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MaskOssImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MaskOssImageResponse
+        /// </returns>
+        public async Task<MaskOssImageResponse> MaskOssImageAsync(MaskOssImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MaskOssImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies configuration items for a data asset that you authorize Data Security Center (DSC) to access.</para>
         /// </summary>
         /// 
@@ -9483,6 +9651,158 @@ namespace AlibabaCloud.SDK.Sddp20190103
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyRuleStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片复原</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestoreOssImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestoreOssImageResponse
+        /// </returns>
+        public RestoreOssImageResponse RestoreOssImageWithOptions(RestoreOssImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bucket))
+            {
+                query["Bucket"] = request.Bucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectKey))
+            {
+                query["ObjectKey"] = request.ObjectKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetObjectKey))
+            {
+                query["TargetObjectKey"] = request.TargetObjectKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RestoreOssImage",
+                Version = "2019-01-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RestoreOssImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片复原</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestoreOssImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestoreOssImageResponse
+        /// </returns>
+        public async Task<RestoreOssImageResponse> RestoreOssImageWithOptionsAsync(RestoreOssImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bucket))
+            {
+                query["Bucket"] = request.Bucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectKey))
+            {
+                query["ObjectKey"] = request.ObjectKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceRegionId))
+            {
+                query["ServiceRegionId"] = request.ServiceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetObjectKey))
+            {
+                query["TargetObjectKey"] = request.TargetObjectKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RestoreOssImage",
+                Version = "2019-01-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RestoreOssImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片复原</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestoreOssImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestoreOssImageResponse
+        /// </returns>
+        public RestoreOssImageResponse RestoreOssImage(RestoreOssImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RestoreOssImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片复原</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RestoreOssImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestoreOssImageResponse
+        /// </returns>
+        public async Task<RestoreOssImageResponse> RestoreOssImageAsync(RestoreOssImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RestoreOssImageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
