@@ -9,10 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeDLAServiceRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the backup schedule. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the ID of the backup schedule.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dbstooi01ex****</para>
+        /// </summary>
         [NameInMap("BackupPlanId")]
         [Validation(Required=false)]
         public string BackupPlanId { get; set; }
 
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DBS</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

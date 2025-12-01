@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class CreateIncrementBackupSetDownloadResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public CreateIncrementBackupSetDownloadResponseBody Body { get; set; }
 
     }
