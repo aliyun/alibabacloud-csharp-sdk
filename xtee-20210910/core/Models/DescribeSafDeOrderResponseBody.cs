@@ -50,18 +50,43 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             [Validation(Required=false)]
             public int? OpenUserType { get; set; }
 
+            /// <summary>
+            /// <para>Activated region permission addresses.</para>
+            /// </summary>
             [NameInMap("regions")]
             [Validation(Required=false)]
             public List<DescribeSafDeOrderResponseBodyResultObjectRegions> Regions { get; set; }
             public class DescribeSafDeOrderResponseBodyResultObjectRegions : TeaModel {
+                /// <summary>
+                /// <para>Expiration date (timestamp).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2117750400000</para>
+                /// </summary>
                 [NameInMap("expirationDate")]
                 [Validation(Required=false)]
                 public long? ExpirationDate { get; set; }
 
+                /// <summary>
+                /// <para>Region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-shanghai</para>
+                /// </summary>
                 [NameInMap("region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
+                /// <summary>
+                /// <para>Specification model:</para>
+                /// <para>1: Basic Edition 
+                /// 2: Advanced Edition 
+                /// 3: Premium Edition 
+                /// 4: Flagship Edition</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("specification")]
                 [Validation(Required=false)]
                 public int? Specification { get; set; }

@@ -1567,6 +1567,150 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Policy Comparison.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CompareRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompareRuleResponse
+        /// </returns>
+        public CompareRuleResponse CompareRuleWithOptions(CompareRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviousRuleVersionId))
+            {
+                query["previousRuleVersionId"] = request.PreviousRuleVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegId))
+            {
+                query["regId"] = request.RegId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleVersionId))
+            {
+                query["ruleVersionId"] = request.RuleVersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CompareRule",
+                Version = "2021-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CompareRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Policy Comparison.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CompareRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompareRuleResponse
+        /// </returns>
+        public async Task<CompareRuleResponse> CompareRuleWithOptionsAsync(CompareRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviousRuleVersionId))
+            {
+                query["previousRuleVersionId"] = request.PreviousRuleVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegId))
+            {
+                query["regId"] = request.RegId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleVersionId))
+            {
+                query["ruleVersionId"] = request.RuleVersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CompareRule",
+                Version = "2021-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CompareRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Policy Comparison.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CompareRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompareRuleResponse
+        /// </returns>
+        public CompareRuleResponse CompareRule(CompareRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CompareRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Policy Comparison.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CompareRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompareRuleResponse
+        /// </returns>
+        public async Task<CompareRuleResponse> CompareRuleAsync(CompareRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CompareRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Add Query Conditions</para>
         /// </summary>
         /// 
@@ -16203,6 +16347,166 @@ namespace AlibabaCloud.SDK.Xtee20210910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeExpressionVariablePageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Custom Variable Version Details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeExpressionVariableVersionDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeExpressionVariableVersionDetailResponse
+        /// </returns>
+        public DescribeExpressionVariableVersionDetailResponse DescribeExpressionVariableVersionDetailWithOptions(DescribeExpressionVariableVersionDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectCode))
+            {
+                query["objectCode"] = request.ObjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectId))
+            {
+                query["objectId"] = request.ObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegId))
+            {
+                query["regId"] = request.RegId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeExpressionVariableVersionDetail",
+                Version = "2021-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeExpressionVariableVersionDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Custom Variable Version Details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeExpressionVariableVersionDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeExpressionVariableVersionDetailResponse
+        /// </returns>
+        public async Task<DescribeExpressionVariableVersionDetailResponse> DescribeExpressionVariableVersionDetailWithOptionsAsync(DescribeExpressionVariableVersionDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectCode))
+            {
+                query["objectCode"] = request.ObjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectId))
+            {
+                query["objectId"] = request.ObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegId))
+            {
+                query["regId"] = request.RegId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeExpressionVariableVersionDetail",
+                Version = "2021-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeExpressionVariableVersionDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Custom Variable Version Details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeExpressionVariableVersionDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeExpressionVariableVersionDetailResponse
+        /// </returns>
+        public DescribeExpressionVariableVersionDetailResponse DescribeExpressionVariableVersionDetail(DescribeExpressionVariableVersionDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeExpressionVariableVersionDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Custom Variable Version Details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeExpressionVariableVersionDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeExpressionVariableVersionDetailResponse
+        /// </returns>
+        public async Task<DescribeExpressionVariableVersionDetailResponse> DescribeExpressionVariableVersionDetailAsync(DescribeExpressionVariableVersionDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeExpressionVariableVersionDetailWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -33775,6 +34079,166 @@ namespace AlibabaCloud.SDK.Xtee20210910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVariableSceneListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cumulative Variable Version Details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVariableVersionDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVariableVersionDetailResponse
+        /// </returns>
+        public DescribeVariableVersionDetailResponse DescribeVariableVersionDetailWithOptions(DescribeVariableVersionDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectCode))
+            {
+                query["objectCode"] = request.ObjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectId))
+            {
+                query["objectId"] = request.ObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegId))
+            {
+                query["regId"] = request.RegId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVariableVersionDetail",
+                Version = "2021-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVariableVersionDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cumulative Variable Version Details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVariableVersionDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVariableVersionDetailResponse
+        /// </returns>
+        public async Task<DescribeVariableVersionDetailResponse> DescribeVariableVersionDetailWithOptionsAsync(DescribeVariableVersionDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectCode))
+            {
+                query["objectCode"] = request.ObjectCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectId))
+            {
+                query["objectId"] = request.ObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegId))
+            {
+                query["regId"] = request.RegId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVariableVersionDetail",
+                Version = "2021-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVariableVersionDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cumulative Variable Version Details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVariableVersionDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVariableVersionDetailResponse
+        /// </returns>
+        public DescribeVariableVersionDetailResponse DescribeVariableVersionDetail(DescribeVariableVersionDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVariableVersionDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cumulative Variable Version Details.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVariableVersionDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVariableVersionDetailResponse
+        /// </returns>
+        public async Task<DescribeVariableVersionDetailResponse> DescribeVariableVersionDetailAsync(DescribeVariableVersionDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVariableVersionDetailWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
