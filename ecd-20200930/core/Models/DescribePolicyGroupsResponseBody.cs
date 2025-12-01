@@ -203,6 +203,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ClientControlMenu { get; set; }
 
+            [NameInMap("ClientCreateSnapshot")]
+            [Validation(Required=false)]
+            public string ClientCreateSnapshot { get; set; }
+
             /// <summary>
             /// <para>The logon method control rules to limit the type of the Alibaba Cloud Workspace client used by end users to connect to cloud computers.</para>
             /// </summary>
@@ -1726,6 +1730,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("WatermarkSecurity")]
             [Validation(Required=false)]
             public string WatermarkSecurity { get; set; }
+
+            [NameInMap("WatermarkShadow")]
+            [Validation(Required=false)]
+            public string WatermarkShadow { get; set; }
 
             /// <summary>
             /// <para>The watermark transparency.</para>

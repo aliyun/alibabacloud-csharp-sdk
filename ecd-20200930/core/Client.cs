@@ -2561,6 +2561,154 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await AttachEndUserWithOptionsAsync(request, runtime);
         }
 
+        /// <param name="request">
+        /// BatchModifyEntitlementRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchModifyEntitlementResponse
+        /// </returns>
+        public BatchModifyEntitlementResponse BatchModifyEntitlementWithOptions(BatchModifyEntitlementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            {
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDesktopPerUser))
+            {
+                query["MaxDesktopPerUser"] = request.MaxDesktopPerUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxUserPerDesktop))
+            {
+                query["MaxUserPerDesktop"] = request.MaxUserPerDesktop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Preview))
+            {
+                query["Preview"] = request.Preview;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                query["Strategy"] = request.Strategy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchModifyEntitlement",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchModifyEntitlementResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// BatchModifyEntitlementRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchModifyEntitlementResponse
+        /// </returns>
+        public async Task<BatchModifyEntitlementResponse> BatchModifyEntitlementWithOptionsAsync(BatchModifyEntitlementRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            {
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDesktopPerUser))
+            {
+                query["MaxDesktopPerUser"] = request.MaxDesktopPerUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxUserPerDesktop))
+            {
+                query["MaxUserPerDesktop"] = request.MaxUserPerDesktop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Preview))
+            {
+                query["Preview"] = request.Preview;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Strategy))
+            {
+                query["Strategy"] = request.Strategy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchModifyEntitlement",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchModifyEntitlementResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// BatchModifyEntitlementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchModifyEntitlementResponse
+        /// </returns>
+        public BatchModifyEntitlementResponse BatchModifyEntitlement(BatchModifyEntitlementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchModifyEntitlementWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// BatchModifyEntitlementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchModifyEntitlementResponse
+        /// </returns>
+        public async Task<BatchModifyEntitlementResponse> BatchModifyEntitlementAsync(BatchModifyEntitlementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchModifyEntitlementWithOptionsAsync(request, runtime);
+        }
+
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Binds a configuration group to resources.</para>
@@ -6100,6 +6248,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ClientControlMenu"] = request.ClientControlMenu;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCreateSnapshot))
+            {
+                query["ClientCreateSnapshot"] = request.ClientCreateSnapshot;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
             {
                 query["ClientType"] = request.ClientType;
@@ -6519,6 +6671,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkSecurity))
             {
                 query["WatermarkSecurity"] = request.WatermarkSecurity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkShadow))
+            {
+                query["WatermarkShadow"] = request.WatermarkShadow;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkTransparencyValue))
             {
@@ -6606,6 +6762,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ClientControlMenu"] = request.ClientControlMenu;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCreateSnapshot))
+            {
+                query["ClientCreateSnapshot"] = request.ClientCreateSnapshot;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
             {
                 query["ClientType"] = request.ClientType;
@@ -7025,6 +7185,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkSecurity))
             {
                 query["WatermarkSecurity"] = request.WatermarkSecurity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkShadow))
+            {
+                query["WatermarkShadow"] = request.WatermarkShadow;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkTransparencyValue))
             {
@@ -12482,6 +12646,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <para>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following item:</para>
+        /// <list type="bullet">
+        /// <item><description>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</description></item>
+        /// <item><description>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn’t match the region where the template is used to create a cloud computer, those parameters will not take effect.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateTemplateRequest
         /// </param>
@@ -12613,6 +12786,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>
         /// <para>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following item:</para>
+        /// <list type="bullet">
+        /// <item><description>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</description></item>
+        /// <item><description>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn’t match the region where the template is used to create a cloud computer, those parameters will not take effect.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTemplateRequest
@@ -12746,6 +12928,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <para>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following item:</para>
+        /// <list type="bullet">
+        /// <item><description>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</description></item>
+        /// <item><description>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn’t match the region where the template is used to create a cloud computer, those parameters will not take effect.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateTemplateRequest
         /// </param>
@@ -12763,6 +12954,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>
         /// <para>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, take note of the following item:</para>
+        /// <list type="bullet">
+        /// <item><description>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</description></item>
+        /// <item><description>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn’t match the region where the template is used to create a cloud computer, those parameters will not take effect.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTemplateRequest
@@ -32711,7 +32911,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询桌面内安装的应用</para>
+        /// <para>Queries applications installed on a cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32761,7 +32961,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询桌面内安装的应用</para>
+        /// <para>Queries applications installed on a cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32811,7 +33011,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询桌面内安装的应用</para>
+        /// <para>Queries applications installed on a cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32829,7 +33029,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询桌面内安装的应用</para>
+        /// <para>Queries applications installed on a cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35528,6 +35728,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ClientControlMenu"] = request.ClientControlMenu;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCreateSnapshot))
+            {
+                query["ClientCreateSnapshot"] = request.ClientCreateSnapshot;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
             {
                 query["ClientType"] = request.ClientType;
@@ -35959,6 +36163,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkSecurity))
             {
                 query["WatermarkSecurity"] = request.WatermarkSecurity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkShadow))
+            {
+                query["WatermarkShadow"] = request.WatermarkShadow;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkTransparencyValue))
             {
@@ -36046,6 +36254,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ClientControlMenu"] = request.ClientControlMenu;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCreateSnapshot))
+            {
+                query["ClientCreateSnapshot"] = request.ClientCreateSnapshot;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
             {
                 query["ClientType"] = request.ClientType;
@@ -36477,6 +36689,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkSecurity))
             {
                 query["WatermarkSecurity"] = request.WatermarkSecurity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkShadow))
+            {
+                query["WatermarkShadow"] = request.WatermarkShadow;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WatermarkTransparencyValue))
             {

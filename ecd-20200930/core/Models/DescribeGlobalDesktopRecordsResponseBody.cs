@@ -164,6 +164,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteName { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>Simple</para>
+            /// </summary>
+            [NameInMap("OfficeSiteType")]
+            [Validation(Required=false)]
+            public string OfficeSiteType { get; set; }
+
+            /// <summary>
             /// <para>The OS type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Windows</description></item>

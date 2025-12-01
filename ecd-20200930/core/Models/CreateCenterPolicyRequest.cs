@@ -221,6 +221,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ClientControlMenu { get; set; }
 
+        [NameInMap("ClientCreateSnapshot")]
+        [Validation(Required=false)]
+        public string ClientCreateSnapshot { get; set; }
+
         /// <summary>
         /// <para>The types of Alibaba Cloud Workspace clients that end users can use to connect to cloud computers.</para>
         /// </summary>
@@ -1718,6 +1722,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("WatermarkSecurity")]
         [Validation(Required=false)]
         public string WatermarkSecurity { get; set; }
+
+        [NameInMap("WatermarkShadow")]
+        [Validation(Required=false)]
+        public string WatermarkShadow { get; set; }
 
         /// <summary>
         /// <para>The watermark opacity. A higher value makes the watermark more opaque. Valid values: 10 to 100.</para>

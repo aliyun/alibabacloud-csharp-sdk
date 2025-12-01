@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListInstalledAppsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the application.</para>
+        /// </summary>
         [NameInMap("Apps")]
         [Validation(Required=false)]
         public List<ListInstalledAppsResponseBodyApps> Apps { get; set; }
         public class ListInstalledAppsResponseBodyApps : TeaModel {
             /// <summary>
+            /// <para>The name of the application.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test_app</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AppName { get; set; }
 
             /// <summary>
+            /// <para>The application version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2.0.1</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>94</para>
         /// </summary>
