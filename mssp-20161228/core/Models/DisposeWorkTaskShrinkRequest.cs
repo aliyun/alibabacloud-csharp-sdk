@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mssp20161228.Models
 {
-    public class DisposeWorkTaskRequest : TeaModel {
+    public class DisposeWorkTaskShrinkRequest : TeaModel {
         /// <summary>
         /// <para>Operator.</para>
         /// <para>This parameter is required.</para>
@@ -55,17 +55,7 @@ namespace AlibabaCloud.SDK.Mssp20161228.Models
 
         [NameInMap("WorkTaskAnalysisResults")]
         [Validation(Required=false)]
-        public List<DisposeWorkTaskRequestWorkTaskAnalysisResults> WorkTaskAnalysisResults { get; set; }
-        public class DisposeWorkTaskRequestWorkTaskAnalysisResults : TeaModel {
-            [NameInMap("AnalysisResult")]
-            [Validation(Required=false)]
-            public string AnalysisResult { get; set; }
-
-            [NameInMap("TaskId")]
-            [Validation(Required=false)]
-            public long? TaskId { get; set; }
-
-        }
+        public string WorkTaskAnalysisResultsShrink { get; set; }
 
     }
 

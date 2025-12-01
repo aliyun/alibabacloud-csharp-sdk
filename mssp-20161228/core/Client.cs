@@ -352,6 +352,10 @@ namespace AlibabaCloud.SDK.Mssp20161228
             {
                 body["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["StartTime"] = request.StartTime;
@@ -461,6 +465,10 @@ namespace AlibabaCloud.SDK.Mssp20161228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 body["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -1026,7 +1034,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
         /// <para>Handle Alert Work Order</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DisposeWorkTaskRequest
         /// </param>
         /// <param name="runtime">
@@ -1036,9 +1044,15 @@ namespace AlibabaCloud.SDK.Mssp20161228
         /// <returns>
         /// DisposeWorkTaskResponse
         /// </returns>
-        public DisposeWorkTaskResponse DisposeWorkTaskWithOptions(DisposeWorkTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DisposeWorkTaskResponse DisposeWorkTaskWithOptions(DisposeWorkTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DisposeWorkTaskShrinkRequest request = new DisposeWorkTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkTaskAnalysisResults))
+            {
+                request.WorkTaskAnalysisResultsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkTaskAnalysisResults, "WorkTaskAnalysisResults", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
             {
@@ -1055,6 +1069,10 @@ namespace AlibabaCloud.SDK.Mssp20161228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
             {
                 body["TaskIds"] = request.TaskIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkTaskAnalysisResultsShrink))
+            {
+                body["WorkTaskAnalysisResults"] = request.WorkTaskAnalysisResultsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1080,7 +1098,7 @@ namespace AlibabaCloud.SDK.Mssp20161228
         /// <para>Handle Alert Work Order</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DisposeWorkTaskRequest
         /// </param>
         /// <param name="runtime">
@@ -1090,9 +1108,15 @@ namespace AlibabaCloud.SDK.Mssp20161228
         /// <returns>
         /// DisposeWorkTaskResponse
         /// </returns>
-        public async Task<DisposeWorkTaskResponse> DisposeWorkTaskWithOptionsAsync(DisposeWorkTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DisposeWorkTaskResponse> DisposeWorkTaskWithOptionsAsync(DisposeWorkTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DisposeWorkTaskShrinkRequest request = new DisposeWorkTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkTaskAnalysisResults))
+            {
+                request.WorkTaskAnalysisResultsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkTaskAnalysisResults, "WorkTaskAnalysisResults", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
             {
@@ -1109,6 +1133,10 @@ namespace AlibabaCloud.SDK.Mssp20161228
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
             {
                 body["TaskIds"] = request.TaskIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkTaskAnalysisResultsShrink))
+            {
+                body["WorkTaskAnalysisResults"] = request.WorkTaskAnalysisResultsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
