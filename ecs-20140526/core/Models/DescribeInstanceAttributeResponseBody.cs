@@ -339,13 +339,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Details about network options.</para>
         /// <remarks>
-        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// <para>This parameter is in invitational preview and is not publicly available.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("NetworkOptions")]
         [Validation(Required=false)]
         public DescribeInstanceAttributeResponseBodyNetworkOptions NetworkOptions { get; set; }
         public class DescribeInstanceAttributeResponseBodyNetworkOptions : TeaModel {
+            /// <summary>
+            /// <para>The bandwidth weight.</para>
+            /// <para>The supported values vary with instance types. You can query the bandwidth weights supported by the current instance type by using the DescribeInstanceTypes.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Vpc-L1.</description></item>
+            /// <item><description>Vpc-L2.</description></item>
+            /// <item><description>Ebs-L1.</description></item>
+            /// <item><description>Ebs-L2.</description></item>
+            /// <item><description>Default.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Vpc-L1</para>
+            /// </summary>
             [NameInMap("BandwidthWeighting")]
             [Validation(Required=false)]
             public string BandwidthWeighting { get; set; }

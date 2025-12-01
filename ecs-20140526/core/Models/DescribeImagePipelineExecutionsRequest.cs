@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelineExecutionsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the image creation task.</para>
+        /// <para>null</para>
         /// 
         /// <b>Example:</b>
         /// <para>exec-5fb8facb8ed7427c****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ExecutionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image template.</para>
+        /// <para>The value of tag N of the image creation task. Valid values of N: 1 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip-2ze5tsl5bp6nf2b3****</para>
@@ -30,8 +30,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImagePipelineId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Valid values: 1 to 500.</para>
-        /// <para>Default value: 50.</para>
+        /// <para>The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: <c>BUILDING,DISTRIBUTING</c>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PREPARING: Resources, such as the intermediate instance, are being created.</description></item>
+        /// <item><description>REPAIRING: The source image is being repaired.</description></item>
+        /// <item><description>BUILDING: The user-defined commands are being run and an image is being created.</description></item>
+        /// <item><description>TESTING: The user-defined test commands are being run.</description></item>
+        /// <item><description>DISTRIBUTING: The created image is being copied and shared.</description></item>
+        /// <item><description>RELEASING: The temporary resources generated during the image creation process are being released.</description></item>
+        /// <item><description>SUCCESS: The image creation task is completed.</description></item>
+        /// <item><description>PARTITION_SUCCESS: The image creation task is partially completed. The image is created, but exceptions may occur when the image was copied or shared or when temporary resources were released.</description></item>
+        /// <item><description>FAILED: The image creation task fails.</description></item>
+        /// <item><description>TEST_FAILED: The image is created, but the test fails.</description></item>
+        /// <item><description>CANCELLING: The image creation task is being canceled.</description></item>
+        /// <item><description>CANCELLED: The image creation task is canceled.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you leave this parameter empty, all image creation tasks are queried regardless of task status.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -41,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
+        /// <para>The ID of the image creation task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -78,24 +94,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: <c>BUILDING,DISTRIBUTING</c>. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PREPARING: Resources, such as the intermediate instance, are being created.</description></item>
-        /// <item><description>REPAIRING: The source image is being repaired.</description></item>
-        /// <item><description>BUILDING: The user-defined commands are being run and an image is being created.</description></item>
-        /// <item><description>TESTING: The user-defined test commands are being run.</description></item>
-        /// <item><description>DISTRIBUTING: The created image is being copied and shared.</description></item>
-        /// <item><description>RELEASING: The temporary resources generated during the image creation process are being released.</description></item>
-        /// <item><description>SUCCESS: The image creation task is completed.</description></item>
-        /// <item><description>PARTITION_SUCCESS: The image creation task is partially completed. The image is created, but exceptions may occur when the image was copied or shared or when temporary resources were released.</description></item>
-        /// <item><description>FAILED: The image creation task fails.</description></item>
-        /// <item><description>TEST_FAILED: The image is created, but the test fails.</description></item>
-        /// <item><description>CANCELLING: The image creation task is being canceled.</description></item>
-        /// <item><description>CANCELLED: The image creation task is canceled.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> If you leave this parameter empty, all image creation tasks are queried regardless of task status.</para>
-        /// </remarks>
+        /// <para>The ID of the image template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUILDING</para>
@@ -115,17 +114,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The key of tag N of the image creation task. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>null</para>
+            /// <para>TestKey</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the image creation task. Valid values of N: 1 to 20.</para>
+            /// <para>null</para>
             /// 
             /// <b>Example:</b>
-            /// <para>null</para>
+            /// <para>TestValue</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

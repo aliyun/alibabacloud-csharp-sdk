@@ -69,8 +69,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the access channel for instance metadata. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>enabled</description></item>
+        /// <item><description>disabled</description></item>
+        /// </list>
+        /// <para>Default value: disabled.</para>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// <para> The tag key must be a combination of letters, digits, @, colons (:), underscores (_), hyphens (-), periods (.), equal signs (=), and commas (,). The tag key cannot be &quot;.&quot; or &quot;..&quot;. Otherwise, the tag key cannot be accessed in the metadata.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -87,13 +87,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestPrefixListId { get; set; }
 
         /// <summary>
-        /// <para>The transport layer protocol of the security group rule. The value of this parameter is case-insensitive. Valid values:</para>
+        /// <para>Network Layer /transport layer protocol. Two types of assignments are supported:</para>
+        /// <ol>
+        /// <item><description>The case-insensitive protocol name. Valid values:</description></item>
+        /// </ol>
         /// <list type="bullet">
         /// <item><description>ICMP</description></item>
         /// <item><description>GRE</description></item>
         /// <item><description>TCP</description></item>
         /// <item><description>UDP</description></item>
-        /// <item><description>ALL: All protocols are supported.</description></item>
+        /// <item><description>ALL: supports all protocols.</description></item>
+        /// </list>
+        /// <ol start="2">
+        /// <item><description>The value of the IANA-compliant protocol number, which is an integer from 0 to 255. List of regions currently available:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Philippines (Manila)</description></item>
+        /// <item><description>UK (London)</description></item>
+        /// <item><description>Malaysia (Kuala Lumpur)</description></item>
+        /// <item><description>China (Hohhot)</description></item>
+        /// <item><description>China (Qingdao)</description></item>
+        /// <item><description>US (Silicon Valley)</description></item>
+        /// <item><description>Singapore</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

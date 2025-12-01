@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroup> SnapshotGroup { get; set; }
             public class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroup : TeaModel {
                 /// <summary>
-                /// <para>The time when the snapshot-consistent group was created.</para>
+                /// <para>The creation time. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-03-23T10:58:48Z</para>

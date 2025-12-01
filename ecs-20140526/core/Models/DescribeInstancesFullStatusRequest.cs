@@ -93,8 +93,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The health status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OK</description></item>
         /// <item><description>Impaired</description></item>
+        /// <item><description>Warning: The instance performance may be degraded due to maintenance or technical issues.</description></item>
+        /// <item><description>Maintaining</description></item>
         /// <item><description>Initializing</description></item>
         /// <item><description>InsufficientData</description></item>
         /// <item><description>NotApplicable</description></item>

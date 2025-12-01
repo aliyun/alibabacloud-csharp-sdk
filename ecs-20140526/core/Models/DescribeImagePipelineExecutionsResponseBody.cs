@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelineExecutionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the image creation tasks.</para>
+        /// <para>The total number of returned image components.</para>
         /// </summary>
         [NameInMap("ImagePipelineExecution")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet> ImagePipelineExecutionSet { get; set; }
             public class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet : TeaModel {
                 /// <summary>
-                /// <para>The time when the image creation task was created.</para>
+                /// <para>Details of the image creation tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-11-24T06:00:00Z</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the image creation task.</para>
+                /// <para>The data returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>exec-5fb8facb8ed7427c****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ExecutionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the image.</para>
+                /// <para>The ID of the resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>m-bp67acfmxazb4p****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the image template.</para>
+                /// <para>Details of the image creation task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ip-2ze5tsl5bp6nf2b3****</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ImagePipelineId { get; set; }
 
                 /// <summary>
-                /// <para>The data returned.</para>
+                /// <para>The last modification time of the image creation task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Create transition vpc &quot;vpc-2ze70rc7093j9idu6****&quot; success!</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The last modification time of the image creation task.</para>
+                /// <para>The ID of the image template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-11-25T06:00:00Z</para>
@@ -79,16 +79,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
-
-                /// <summary>
-                /// <para>The ID of the resource group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rg-bp67acfmxazb4p****</para>
-                /// </summary>
-                [NameInMap("ResourceGroupId")]
-                [Validation(Required=false)]
-                public string ResourceGroupId { get; set; }
 
                 /// <summary>
                 /// <para>The status of the image creation task. Valid values:</para>
@@ -108,6 +98,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// </list>
                 /// 
                 /// <b>Example:</b>
+                /// <para>rg-bp67acfmxazb4p****</para>
+                /// </summary>
+                [NameInMap("ResourceGroupId")]
+                [Validation(Required=false)]
+                public string ResourceGroupId { get; set; }
+
+                /// <summary>
+                /// <para>The time when the image creation task was created.</para>
+                /// 
+                /// <b>Example:</b>
                 /// <para>BUILDING</para>
                 /// </summary>
                 [NameInMap("Status")]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the image creation task.</para>
+                /// <para>The ID of the image.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -126,20 +126,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public List<DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag> Tag { get; set; }
                     public class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag : TeaModel {
                         /// <summary>
-                        /// <para>The tag key of the image creation task.</para>
+                        /// <para>The tag of the image creation task.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>null</para>
+                        /// <para>TestValue</para>
                         /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
                         /// <summary>
-                        /// <para>The tag value of the image creation task.</para>
+                        /// <para>The tags of the image creation task.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>null</para>
+                        /// <para>TestKey</para>
                         /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. For information about how to use the returned value, see the &quot;Usage notes&quot; section in this topic.</para>
+        /// <para>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -174,7 +174,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The maximum number of entries per page. Valid values: 1 to 500</para>
+        /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -184,7 +185,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned image components.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. For information about how to use the returned value, see the &quot;Usage notes&quot; section in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

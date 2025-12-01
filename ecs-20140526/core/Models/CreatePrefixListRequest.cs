@@ -60,8 +60,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>You can set a single IP address. The system automatically converts the IP address to a CIDR block. For example, if you set 192.168.1.100, the system automatically converts it to 192.168.1.100/32.</description></item>
             /// <item><description>If you use an IPv6 CIDR block, the system automatically converts the CIDR block to zero and the letters to lowercase. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it to 2001:db8::/32.</description></item>
             /// </list>
-            /// <para>For more information about CIDR blocks, see <a href="https://help.aliyun.com/document_detail/185311.html#598efe6ef1v00">What is CIDR?</a></para>
-            /// <para>By default, this parameter is left empty.</para>
+            /// <para>For more information about CIDR blocks, see <a href="~~185311#598efe6ef1v00~~">What is CIDR?</a></para>
+            /// <para>This parameter is left empty by default.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

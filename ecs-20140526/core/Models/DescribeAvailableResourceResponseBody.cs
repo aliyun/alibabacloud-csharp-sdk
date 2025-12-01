@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAvailableResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the zones in which resources are available.</para>
+        /// <para>The information about the availability of resources in the zones.</para>
         /// </summary>
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
@@ -20,9 +20,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone> AvailableZone { get; set; }
             public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone : TeaModel {
-                /// <summary>
-                /// <para>The resources that are available in the zone.</para>
-                /// </summary>
                 [NameInMap("AvailableResources")]
                 [Validation(Required=false)]
                 public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources AvailableResources { get; set; }
@@ -31,9 +28,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource> AvailableResource { get; set; }
                     public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource : TeaModel {
-                        /// <summary>
-                        /// <para>The information about the resources.</para>
-                        /// </summary>
                         [NameInMap("SupportedResources")]
                         [Validation(Required=false)]
                         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources SupportedResources { get; set; }
@@ -43,34 +37,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                             public List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource> SupportedResource { get; set; }
                             public class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource : TeaModel {
                                 /// <summary>
-                                /// <para>The maximum disk capacity.</para>
-                                /// <para>This parameter takes effect only if DestinationResource is set to SystemDisk or DataDisk.</para>
-                                /// 
                                 /// <b>Example:</b>
-                                /// <para>2</para>
+                                /// <para>2048</para>
                                 /// </summary>
                                 [NameInMap("Max")]
                                 [Validation(Required=false)]
                                 public int? Max { get; set; }
 
                                 /// <summary>
-                                /// <para>The minimum disk capacity.</para>
-                                /// <para>This parameter takes effect only if DestinationResource is set to SystemDisk or DataDisk.</para>
-                                /// 
                                 /// <b>Example:</b>
-                                /// <para>1</para>
+                                /// <para>20</para>
                                 /// </summary>
                                 [NameInMap("Min")]
                                 [Validation(Required=false)]
                                 public int? Min { get; set; }
 
                                 /// <summary>
-                                /// <para>The status of the resource. Valid values:</para>
-                                /// <list type="bullet">
-                                /// <item><description>Available</description></item>
-                                /// <item><description>SoldOut</description></item>
-                                /// </list>
-                                /// 
                                 /// <b>Example:</b>
                                 /// <para>Available</para>
                                 /// </summary>
@@ -79,14 +61,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 public string Status { get; set; }
 
                                 /// <summary>
-                                /// <para>The resource category based on the stock level. Valid values:</para>
-                                /// <list type="bullet">
-                                /// <item><description>WithStock: Resources are in sufficient stock.</description></item>
-                                /// <item><description>ClosedWithStock: Resources are in insufficient stock. We recommend that you use other resources that are in sufficient stock.</description></item>
-                                /// <item><description>WithoutStock: Resources are out of stock and will be replenished. We recommend that you use other resources that are in sufficient stock.</description></item>
-                                /// <item><description>ClosedWithoutStock: Resources are out of stock and will not be replenished. We recommend that you use other resources that are in sufficient stock.</description></item>
-                                /// </list>
-                                /// 
                                 /// <b>Example:</b>
                                 /// <para>WithStock</para>
                                 /// </summary>
@@ -95,19 +69,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 public string StatusCategory { get; set; }
 
                                 /// <summary>
-                                /// <para>The unit of the disk capacity.</para>
-                                /// <para>This parameter takes effect only if DestinationResource is set to SystemDisk or DataDisk.</para>
-                                /// 
                                 /// <b>Example:</b>
-                                /// <para>null</para>
+                                /// <para>GiB</para>
                                 /// </summary>
                                 [NameInMap("Unit")]
                                 [Validation(Required=false)]
                                 public string Unit { get; set; }
 
                                 /// <summary>
-                                /// <para>The resource.</para>
-                                /// 
                                 /// <b>Example:</b>
                                 /// <para>ecs.d1ne.xlarge</para>
                                 /// </summary>
@@ -120,17 +89,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         }
 
                         /// <summary>
-                        /// <para>The resource type. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>Zone: zone</description></item>
-                        /// <item><description>IoOptimized: I/O optimized resource</description></item>
-                        /// <item><description>InstanceType: instance type</description></item>
-                        /// <item><description>SystemDisk: system disk</description></item>
-                        /// <item><description>DataDisk: data disk</description></item>
-                        /// <item><description>Network: network type</description></item>
-                        /// <item><description>ddh: dedicated host</description></item>
-                        /// </list>
-                        /// 
                         /// <b>Example:</b>
                         /// <para>InstanceType</para>
                         /// </summary>
@@ -143,8 +101,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 }
 
                 /// <summary>
-                /// <para>The region ID.</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
                 /// </summary>
@@ -153,12 +109,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The status of resources in the zone. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Available</description></item>
-                /// <item><description>SoldOut</description></item>
-                /// </list>
-                /// 
                 /// <b>Example:</b>
                 /// <para>Available</para>
                 /// </summary>
@@ -167,12 +117,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The resource category based on the stock level in the zone. Valid values:</para>
+                /// <para>The resource status based on the stock level in the zone. Valid value:</para>
                 /// <list type="bullet">
-                /// <item><description>WithStock: Resources are in sufficient stock.</description></item>
-                /// <item><description>ClosedWithStock: Resources are in insufficient stock. We recommend that you use other resources that are in sufficient stock.</description></item>
-                /// <item><description>WithoutStock: Resources are out of stock and will be replenished. We recommend that you use other resources that are in sufficient stock.</description></item>
-                /// <item><description>ClosedWithoutStock: Resources are out of stock and will not be replenished. We recommend that you use other resources that are in sufficient stock.</description></item>
+                /// <item><description>WithStock: The resources are available and can be continuously replenished.</description></item>
+                /// <item><description>ClosedWithStock: Inventory is available, but resources will not be replenished. The ability to guarantee the supply of inventory is low. We recommend selecting a product specification in the WithStock state.</description></item>
+                /// <item><description>WithoutStock: The resource is out of stock and will be replenished. We recommend using other resources that are in stock.</description></item>
+                /// <item><description>ClosedWithoutStock: The resource is out of stock and will no longer be replenished. We recommend using other resources that are in stock.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -183,8 +133,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string StatusCategory { get; set; }
 
                 /// <summary>
-                /// <para>The zone ID.</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-e</para>
                 /// </summary>
@@ -197,8 +145,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>0041D94C-FB92-4C49-B115-259DA1C*****</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelinesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the image templates.</para>
+        /// <para>Details of the image templates.</para>
         /// </summary>
         [NameInMap("ImagePipeline")]
         [Validation(Required=false)]
@@ -390,7 +390,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     }
 
                     /// <summary>
-                    /// <para>The feature attributes of the image.</para>
+                    /// <para>The attributes of the custom image.</para>
                     /// </summary>
                     [NameInMap("Features")]
                     [Validation(Required=false)]

@@ -915,10 +915,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
         /// <item><description>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
         /// </list>
-        /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if the SpotStrategy parameter is set to SpotWithPriceLimit or SpotAsPriceGo.</para>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>You can set this parameter only to 0 or 1.</para>
+        /// </description></item>
+        /// <item><description><para>The spot instance is billed by second. Specify an appropriate protection period.</para>
+        /// </description></item>
+        /// <item><description><para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

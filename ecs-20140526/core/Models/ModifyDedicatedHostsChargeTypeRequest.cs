@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDedicatedHostsChargeTypeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
+        /// <para>Specifies whether to automatically complete the payment. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>true: The payment is automatically completed. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled.</description></item>
+        /// <item><description>true: The payment is automatically completed. Ensure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled.</description></item>
         /// <item><description>false: An order is generated but no payment is made.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// <remarks>
-        /// <para>If you do not have sufficient balance in your account, you can set <c>AutoPay</c> to <c>false</c> to generate an unpaid order. Then, you can pay for the order.</para>
+        /// <para> If you do not have sufficient balance in your account, you can set <c>AutoPay</c> to <c>false</c> to generate an unpaid order. Then, you can pay for the order.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The new billing method for the dedicated host. Valid values:</para>
+        /// <para>The new billing method for the dedicated host. Valid value:</para>
         /// <list type="bullet">
         /// <item><description>PrePaid: changes the billing method from pay-as-you-go to subscription.</description></item>
         /// <item><description>PostPaid: changes the billing method from subscription to pay-as-you-go.</description></item>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>Specifies whether to return the billing details of the order when the billing method is changed from subscription to pay-as-you-go.</para>
-        /// <para>Default value: false.</para>
+        /// <para>Indicates whether the nfs volume is set to the read-only mode. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -75,12 +75,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DetailFee { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. Otherwise, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// <item><description>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
         /// </list>
-        /// <para>Default value: false.</para>
+        /// <para>Indicates whether the nfs volume is set to the read-only mode. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
