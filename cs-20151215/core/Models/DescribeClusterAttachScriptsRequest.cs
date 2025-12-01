@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string NodepoolId { get; set; }
 
+        [NameInMap("one_time_token")]
+        [Validation(Required=false)]
+        public bool? OneTimeToken { get; set; }
+
         /// <summary>
         /// <para>The node configurations for the node that you want to add.</para>
         /// <remarks>

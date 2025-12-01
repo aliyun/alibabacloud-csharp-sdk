@@ -6416,6 +6416,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["nodepool_id"] = request.NodepoolId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OneTimeToken))
+            {
+                body["one_time_token"] = request.OneTimeToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
             {
                 body["options"] = request.Options;
@@ -6485,6 +6489,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolId))
             {
                 body["nodepool_id"] = request.NodepoolId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OneTimeToken))
+            {
+                body["one_time_token"] = request.OneTimeToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
             {
