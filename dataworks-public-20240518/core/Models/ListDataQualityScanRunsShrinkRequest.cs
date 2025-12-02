@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class ListDataQualityScanRunsRequest : TeaModel {
+    public class ListDataQualityScanRunsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The earliest time when the data quality monitor starts to run.</para>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         [NameInMap("Filter")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Filter { get; set; }
+        public string FilterShrink { get; set; }
 
         /// <summary>
         /// <para>The page number of the results. Default value: 1.</para>

@@ -23281,7 +23281,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>This API operation is available for all DataWorks editions.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListDataQualityScanRunsRequest
         /// </param>
         /// <param name="runtime">
@@ -23291,9 +23291,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <returns>
         /// ListDataQualityScanRunsResponse
         /// </returns>
-        public ListDataQualityScanRunsResponse ListDataQualityScanRunsWithOptions(ListDataQualityScanRunsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListDataQualityScanRunsResponse ListDataQualityScanRunsWithOptions(ListDataQualityScanRunsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListDataQualityScanRunsShrinkRequest request = new ListDataQualityScanRunsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "Filter", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeFrom))
             {
@@ -23306,6 +23312,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityScanId))
             {
                 query["DataQualityScanId"] = request.DataQualityScanId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["Filter"] = request.FilterShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -23356,7 +23366,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>This API operation is available for all DataWorks editions.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListDataQualityScanRunsRequest
         /// </param>
         /// <param name="runtime">
@@ -23366,9 +23376,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <returns>
         /// ListDataQualityScanRunsResponse
         /// </returns>
-        public async Task<ListDataQualityScanRunsResponse> ListDataQualityScanRunsWithOptionsAsync(ListDataQualityScanRunsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListDataQualityScanRunsResponse> ListDataQualityScanRunsWithOptionsAsync(ListDataQualityScanRunsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListDataQualityScanRunsShrinkRequest request = new ListDataQualityScanRunsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "Filter", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeFrom))
             {
@@ -23381,6 +23397,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataQualityScanId))
             {
                 query["DataQualityScanId"] = request.DataQualityScanId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["Filter"] = request.FilterShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
