@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("Previous")]
+        [Validation(Required=false)]
+        public string Previous { get; set; }
+
     }
 
 }

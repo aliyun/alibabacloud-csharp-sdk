@@ -9,16 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateIngressRequest : TeaModel {
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("AddressType")]
         [Validation(Required=false)]
         public string AddressType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the certificate that is associated with the <b>CLB</b> instance.</para>
+        /// <para>The ID of the <b>CLB</b> certificate. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>If you set <b>LoadBalanceType</b> to <b>clb</b>, you can use CertId to configure a certificate for the HTTPS listener.</description></item>
         /// </list>
-        /// <para>For more information about how to manage the SSL certificate IDs that are used by CLB instances, see <a href="https://help.aliyun.com/document_detail/90792.html">Overview</a>.</para>
+        /// <para>For more information about how to use SSL certificate IDs for CLB, see <a href="https://help.aliyun.com/document_detail/90792.html">Manage certificates (CLB)</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>188077086902****_176993d****_181437****_108724****</para>
@@ -28,10 +38,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string CertId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the certificates that are associated with the <b>ALB</b> instance.</para>
+        /// <para>The ID of the multi-certificate <b>ALB</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>LoadBalanceType</b> to <b>alb</b>, you can use CertIds to configure multiple certificates for the HTTPS listener. Separate multiple certificate IDs with commas (,).</description></item>
-        /// <item><description>The ID of the SSL certificate that is used by an ALB instance can be obtained from Certificate Management Service. For example, if you specify <c>756***-cn-hangzhou</c>, <c>756***</c> is the certificate ID that is obtained from the service page, and <c>-cn-hangzhou</c> is the fixed suffix. For more information, see <a href="https://help.aliyun.com/document_detail/209076.html">Manage certificates</a>.</description></item>
+        /// <item><description>If the <b>LoadBalanceType</b> is <b>alb</b>, use this field to configure multiple certificates for HTTPS listeners. Separate multiple certificate IDs with commas (,).</description></item>
+        /// <item><description>The ID of the SSL certificate used by ALB must be obtained from the digital certificate product. For example, in the configuration <c>756***-cn-hangzhou</c>, the <c>756***</c> is the certificate ID obtained from the product page, and the <c>-cn-hangzhou</c> is a fixed suffix. For more information, see <a href="https://help.aliyun.com/document_detail/209076.html">Manage certificates</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,18 +51,29 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string CertIds { get; set; }
 
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("CorsConfig")]
         [Validation(Required=false)]
         public string CorsConfig { get; set; }
 
         /// <summary>
-        /// <para>Default forwarding rule. Traffic is forwarded to the specified application through a designated port based on the IP address. Parameter descriptions are as follows:</para>
+        /// <para>The default forwarding rule. Forwards traffic to a specified application through a specified port based on the IP address. The following table describes the parameters.</para>
         /// <list type="bullet">
-        /// <item><description><b>appId</b>: Application ID. - <b>containerPort</b>: Application instance port.<remarks>
-        /// <para>All requests that do not match or do not meet the <b>Rules</b> for forwarding will be directed to this specified application.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description><b>appId</b>: the ID of the application.</description></item>
+        /// <item><description><b>containerPort</b>: The port of the application instance.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para> All requests that do not match or satisfy <b>Rules</b> forwarding rules are forwarded to the specified application.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +84,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string DefaultRule { get; set; }
 
         /// <summary>
-        /// <para>Route rule name.</para>
+        /// <para>The name of the routing rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ingress-for-sae-test</para>
@@ -72,28 +93,92 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
+        [NameInMap("EnableGzip")]
+        [Validation(Required=false)]
+        public bool? EnableGzip { get; set; }
+
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("EnableXForwardedFor")]
         [Validation(Required=false)]
         public bool? EnableXForwardedFor { get; set; }
 
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("EnableXForwardedForClientSrcPort")]
         [Validation(Required=false)]
         public bool? EnableXForwardedForClientSrcPort { get; set; }
 
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("EnableXForwardedForProto")]
         [Validation(Required=false)]
         public bool? EnableXForwardedForProto { get; set; }
 
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("EnableXForwardedForSlbId")]
         [Validation(Required=false)]
         public bool? EnableXForwardedForSlbId { get; set; }
 
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("EnableXForwardedForSlbPort")]
         [Validation(Required=false)]
         public bool? EnableXForwardedForSlbPort { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of an idle connection. Unit: seconds Valid values: 1 to 60. If no requests are received within the specified timeout period, ALB closes the current connection. When a new request is received, ALB establishes a new connection.</para>
+        /// <para>Specifies the connection idle timeout period. Unit: seconds. Valid values: 1 to 60. If there is no access request within the timeout period, the SLB will temporarily interrupt the current connection until the next request comes to re-establish a new connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -103,8 +188,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? IdleTimeout { get; set; }
 
         /// <summary>
-        /// <para>SThe frontend port that is used by the ALB instance.
-        /// Valid values: 1 to 65535.</para>
+        /// <para>The SLB listening port. This port cannot be occupied.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,9 +199,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// <para>Request forwarding protocol. The value description is as follows:</para>
+        /// <para>The request forwarding protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HTTP</b>: Suitable for applications that need to identify data content. - <b>HTTPS</b>: Suitable for applications that require encrypted transmission.</description></item>
+        /// <item><description><b>HTTP</b>: suitable for applications that need to identify data content.</description></item>
+        /// <item><description><b>HTTPS</b>: suitable for applications that require encrypted transmission.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,10 +213,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ListenerProtocol { get; set; }
 
         /// <summary>
-        /// <para>The type of the SLB instance. The instance type can be specified only when you create a routing rule. You cannot change the instance type when you update the routing rule. Valid values:</para>
+        /// <para>SLB the type of the SLB instance. It depends on the type that you entered when you created the routing rule and cannot be changed when you update it. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>clb</b></description></item>
-        /// <item><description><b>alb</b></description></item>
+        /// <item><description><b>clb</b>: traditional SLB CLB (formerly SLB).</description></item>
+        /// <item><description><b>alb</b>: Applied SLB ALB.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -141,12 +226,22 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string LoadBalanceType { get; set; }
 
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("LoadBalancerEdition")]
         [Validation(Required=false)]
         public string LoadBalancerEdition { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace where the application is located. Currently, cross-namespace applications are not supported.</para>
+        /// <para>The ID of the namespace where the application resides. Currently, cross-namespace applications are not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -157,7 +252,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of a request. Unit: seconds. Valid values: 1 to 180. If no response is received from the backend server within the specified timeout period, ALB stops waiting for the response and returns an HTTP 504 error code to the client.</para>
+        /// <para>Specifies the request timeout period. Unit: seconds. Valid values: 1 to 180. If the backend server does not respond within the timeout period, the SLB abandons the wait and returns an HTTP 504 error code to the client.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -167,17 +262,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? RequestTimeout { get; set; }
 
         /// <summary>
-        /// <para>The forwarding rules. You can specify a port and an application in a forwarding rule to forward traffic based on the specified domain name and request path. The following list describes the involved parameters:</para>
+        /// <para>The forwarding rule. Forwards traffic to a specified application through a specified port based on the domain name and request path. The following table describes the parameters.</para>
         /// <list type="bullet">
         /// <item><description><b>appId</b>: the ID of the application.</description></item>
-        /// <item><description><b>containerPort</b>: the container port of the application.</description></item>
+        /// <item><description><b>containerPort</b>: The port of the application instance.</description></item>
         /// <item><description><b>domain</b>: the domain name.</description></item>
         /// <item><description><b>path</b>: the request path.</description></item>
-        /// <item><description><b>backendProtocol</b>: the backend service protocol. Valid values: http, https, and grpc. Default value: http.</description></item>
-        /// <item><description><b>rewritePath</b>: the rewrite path.</description></item>
+        /// <item><description><b>backendProtocol</b>: The backend service protocol. Valid values: http, https, and grpc. Default value: http.</description></item>
+        /// <item><description><b>rewritePath</b>: Rewrite the path.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> The path rewrite feature is supported only by ALB instances.</para>
+        /// <para> Only ALB allows you to set the RewritePath feature. CLB does not support this feature.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -189,7 +284,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Rules { get; set; }
 
         /// <summary>
-        /// <para>The ID of a security policy.</para>
+        /// <para>The ID of the security policy instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-bp1bpn0kn9****</para>
@@ -201,7 +296,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The Server Load Balancer (SLB) instance that is used by the routing rule.</para>
         /// <remarks>
-        /// <para> The SLB instance can be a Classic Load Balancer (CLB) instance or an Application Load Balancer (ALB) instance.</para>
+        /// <para> SLB SLB instances include CLB instances and ALB instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -211,6 +306,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string SlbId { get; set; }
 
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
         public string ZoneMappings { get; set; }

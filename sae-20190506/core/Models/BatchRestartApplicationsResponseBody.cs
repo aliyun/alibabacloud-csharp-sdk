@@ -8,15 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
-    public class CreateSecretResponseBody : TeaModel {
+    public class BatchRestartApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code or the error code. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The request was successful.</description></item>
-        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The request failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
-        /// </list>
+        /// <para>The API status or POP error code. Value description:</para>
+        /// <para>2xx: The request was successful. 3xx: The request was redirected. 4xx: The request was invalid. 5xx: A server error occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -26,40 +21,38 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public CreateSecretResponseBodyData Data { get; set; }
-        public class CreateSecretResponseBodyData : TeaModel {
+        public BatchRestartApplicationsResponseBodyData Data { get; set; }
+        public class BatchRestartApplicationsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the created Secret.</para>
+            /// <para>The ID of the change process.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>16</para>
+            /// <para>01db03d3-3ee9-48b3-b3d0-dfce2d88****</para>
             /// </summary>
-            [NameInMap("SecretId")]
+            [NameInMap("ChangeOrderId")]
             [Validation(Required=false)]
-            public long? SecretId { get; set; }
+            public string ChangeOrderId { get; set; }
 
         }
 
         /// <summary>
-        /// <para>The status code. Value values:</para>
-        /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>ErrorCode</b> is not returned.</description></item>
-        /// <item><description>If the request failed, <b>ErrorCode</b> is returned. For more information, see <b>Error codes</b> in this topic.</description></item>
-        /// </list>
+        /// <para>The error code. Value description:</para>
+        /// <para>If the request succeeds, this field is not returned. It is returned only if the request fails. For more information, see the &quot;Error codes&quot; section in this topic.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>400</para>
+        /// <para>System.Upgrading</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the operation.</para>
+        /// <para>The additional information. Value description:</para>
+        /// <para>If the request succeeds, a success message is returned. If the request fails, an error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -79,11 +72,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Secret was created. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: The ConfigMap was created.</description></item>
-        /// <item><description><b>false</b>: The ConfigMap failed to be created.</description></item>
-        /// </list>
+        /// <para>Indicates whether the applications were started. Valid values:</para>
+        /// <para>true and false</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -93,7 +83,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
+        /// <para>The ID of the trace, which is used to query the exact call information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

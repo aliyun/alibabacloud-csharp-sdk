@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListSwimmingLaneGroupTagsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the lane group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2074</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public long? GroupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of a namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:test</para>
         /// </summary>

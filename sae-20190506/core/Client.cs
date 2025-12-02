@@ -307,6 +307,144 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Restarts applications in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchRestartApplicationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchRestartApplicationsResponse
+        /// </returns>
+        public BatchRestartApplicationsResponse BatchRestartApplicationsWithOptions(BatchRestartApplicationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIds))
+            {
+                query["AppIds"] = request.AppIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchRestartApplications",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/app/batchRestartApplications",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchRestartApplicationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts applications in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchRestartApplicationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchRestartApplicationsResponse
+        /// </returns>
+        public async Task<BatchRestartApplicationsResponse> BatchRestartApplicationsWithOptionsAsync(BatchRestartApplicationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIds))
+            {
+                query["AppIds"] = request.AppIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchRestartApplications",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/app/batchRestartApplications",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchRestartApplicationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts applications in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchRestartApplicationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchRestartApplicationsResponse
+        /// </returns>
+        public BatchRestartApplicationsResponse BatchRestartApplications(BatchRestartApplicationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchRestartApplicationsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts applications in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchRestartApplicationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchRestartApplicationsResponse
+        /// </returns>
+        public async Task<BatchRestartApplicationsResponse> BatchRestartApplicationsAsync(BatchRestartApplicationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchRestartApplicationsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Starts multiple applications at a time.</para>
         /// </summary>
         /// 
@@ -1091,6 +1229,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["AcrAssumeRoleArn"] = request.AcrAssumeRoleArn;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                query["AgentVersion"] = request.AgentVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppDescription))
             {
                 query["AppDescription"] = request.AppDescription;
@@ -1150,6 +1292,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableEbpf))
             {
                 query["EnableEbpf"] = request.EnableEbpf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNamespaceAgentVersion))
+            {
+                query["EnableNamespaceAgentVersion"] = request.EnableNamespaceAgentVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNamespaceSlsConfig))
+            {
+                query["EnableNamespaceSlsConfig"] = request.EnableNamespaceSlsConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNewArms))
             {
@@ -1319,6 +1469,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["SlsConfigs"] = request.SlsConfigs;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsLogEnvTags))
+            {
+                query["SlsLogEnvTags"] = request.SlsLogEnvTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartupProbe))
             {
                 query["StartupProbe"] = request.StartupProbe;
@@ -1367,6 +1521,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMapMountDesc))
             {
                 body["ConfigMapMountDesc"] = request.ConfigMapMountDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmptyDirDesc))
+            {
+                body["EmptyDirDesc"] = request.EmptyDirDesc;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSidecarResourceIsolated))
             {
@@ -1465,6 +1623,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["AcrAssumeRoleArn"] = request.AcrAssumeRoleArn;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                query["AgentVersion"] = request.AgentVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppDescription))
             {
                 query["AppDescription"] = request.AppDescription;
@@ -1524,6 +1686,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableEbpf))
             {
                 query["EnableEbpf"] = request.EnableEbpf;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNamespaceAgentVersion))
+            {
+                query["EnableNamespaceAgentVersion"] = request.EnableNamespaceAgentVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNamespaceSlsConfig))
+            {
+                query["EnableNamespaceSlsConfig"] = request.EnableNamespaceSlsConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNewArms))
             {
@@ -1693,6 +1863,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["SlsConfigs"] = request.SlsConfigs;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsLogEnvTags))
+            {
+                query["SlsLogEnvTags"] = request.SlsLogEnvTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartupProbe))
             {
                 query["StartupProbe"] = request.StartupProbe;
@@ -1741,6 +1915,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMapMountDesc))
             {
                 body["ConfigMapMountDesc"] = request.ConfigMapMountDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmptyDirDesc))
+            {
+                body["EmptyDirDesc"] = request.EmptyDirDesc;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSidecarResourceIsolated))
             {
@@ -1843,17 +2021,18 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Null</para>
+        /// <para>Creates an auto scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The HTTP status code. Take note of the following rules:</para>
+        /// <h2><a href="#"></a>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description>You can create up to five auto scaling policies for one application.</description></item>
+        /// <item><description>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</description></item>
+        /// <item><description>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</description></item>
+        /// <item><description>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</description></item>
+        /// <item><description>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1932,17 +2111,18 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Null</para>
+        /// <para>Creates an auto scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The HTTP status code. Take note of the following rules:</para>
+        /// <h2><a href="#"></a>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description>You can create up to five auto scaling policies for one application.</description></item>
+        /// <item><description>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</description></item>
+        /// <item><description>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</description></item>
+        /// <item><description>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</description></item>
+        /// <item><description>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2021,17 +2201,18 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Null</para>
+        /// <para>Creates an auto scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The HTTP status code. Take note of the following rules:</para>
+        /// <h2><a href="#"></a>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description>You can create up to five auto scaling policies for one application.</description></item>
+        /// <item><description>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</description></item>
+        /// <item><description>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</description></item>
+        /// <item><description>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</description></item>
+        /// <item><description>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2051,17 +2232,18 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Null</para>
+        /// <para>Creates an auto scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The HTTP status code. Take note of the following rules:</para>
+        /// <h2><a href="#"></a>Precautions</h2>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description>You can create up to five auto scaling policies for one application.</description></item>
+        /// <item><description>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</description></item>
+        /// <item><description>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</description></item>
+        /// <item><description>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</description></item>
+        /// <item><description>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2481,6 +2663,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGzip))
+            {
+                query["EnableGzip"] = request.EnableGzip;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedFor))
             {
                 query["EnableXForwardedFor"] = request.EnableXForwardedFor;
@@ -2612,6 +2798,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGzip))
+            {
+                query["EnableGzip"] = request.EnableGzip;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedFor))
             {
@@ -2779,6 +2969,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["BackoffLimit"] = request.BackoffLimit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BestEffortType))
+            {
+                query["BestEffortType"] = request.BestEffortType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Command))
             {
                 query["Command"] = request.Command;
@@ -2842,6 +3036,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
             {
                 query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NasConfigs))
+            {
+                query["NasConfigs"] = request.NasConfigs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NasId))
             {
@@ -3039,6 +3237,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["BackoffLimit"] = request.BackoffLimit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BestEffortType))
+            {
+                query["BestEffortType"] = request.BestEffortType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Command))
             {
                 query["Command"] = request.Command;
@@ -3102,6 +3304,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
             {
                 query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NasConfigs))
+            {
+                query["NasConfigs"] = request.NasConfigs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NasId))
             {
@@ -3459,7 +3665,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或者更新泳道</para>
+        /// <para>Creates or updates a lane.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3547,7 +3753,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或者更新泳道</para>
+        /// <para>Creates or updates a lane.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3635,7 +3841,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或者更新泳道</para>
+        /// <para>Creates or updates a lane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3654,7 +3860,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或者更新泳道</para>
+        /// <para>Creates or updates a lane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3673,7 +3879,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或者更新泳道组</para>
+        /// <para>Creates or updates a lane group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3749,7 +3955,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或者更新泳道组</para>
+        /// <para>Creates or updates a lane group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3825,7 +4031,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或者更新泳道组</para>
+        /// <para>Creates or updates a lane group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3844,7 +4050,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或者更新泳道组</para>
+        /// <para>Creates or updates a lane group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5129,7 +5335,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes an application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5179,7 +5385,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes an application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5229,7 +5435,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes an application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5248,7 +5454,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes an application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5673,7 +5879,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除泳道组</para>
+        /// <para>Deletes a lane group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5723,7 +5929,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除泳道组</para>
+        /// <para>Deletes a lane group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5773,7 +5979,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除泳道组</para>
+        /// <para>Deletes a lane group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5792,7 +5998,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除泳道组</para>
+        /// <para>Deletes a lane group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6295,6 +6501,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["AcrAssumeRoleArn"] = request.AcrAssumeRoleArn;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                query["AgentVersion"] = request.AgentVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlbIngressReadinessGate))
+            {
+                query["AlbIngressReadinessGate"] = request.AlbIngressReadinessGate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -6355,6 +6569,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["EnableGreyTagRoute"] = request.EnableGreyTagRoute;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNamespaceAgentVersion))
+            {
+                query["EnableNamespaceAgentVersion"] = request.EnableNamespaceAgentVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNewArms))
             {
                 query["EnableNewArms"] = request.EnableNewArms;
@@ -6402,6 +6620,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
                 query["Liveness"] = request.Liveness;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSurgeInstanceRatio))
+            {
+                query["MaxSurgeInstanceRatio"] = request.MaxSurgeInstanceRatio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSurgeInstances))
+            {
+                query["MaxSurgeInstances"] = request.MaxSurgeInstances;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
             {
@@ -6507,6 +6733,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["SlsConfigs"] = request.SlsConfigs;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsLogEnvTags))
+            {
+                query["SlsLogEnvTags"] = request.SlsLogEnvTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartupProbe))
             {
                 query["StartupProbe"] = request.StartupProbe;
@@ -6551,6 +6781,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMapMountDesc))
             {
                 body["ConfigMapMountDesc"] = request.ConfigMapMountDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmptyDirDesc))
+            {
+                body["EmptyDirDesc"] = request.EmptyDirDesc;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSidecarResourceIsolated))
             {
@@ -6653,6 +6887,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["AcrAssumeRoleArn"] = request.AcrAssumeRoleArn;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                query["AgentVersion"] = request.AgentVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlbIngressReadinessGate))
+            {
+                query["AlbIngressReadinessGate"] = request.AlbIngressReadinessGate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
@@ -6713,6 +6955,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["EnableGreyTagRoute"] = request.EnableGreyTagRoute;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNamespaceAgentVersion))
+            {
+                query["EnableNamespaceAgentVersion"] = request.EnableNamespaceAgentVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableNewArms))
             {
                 query["EnableNewArms"] = request.EnableNewArms;
@@ -6760,6 +7006,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
                 query["Liveness"] = request.Liveness;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSurgeInstanceRatio))
+            {
+                query["MaxSurgeInstanceRatio"] = request.MaxSurgeInstanceRatio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSurgeInstances))
+            {
+                query["MaxSurgeInstances"] = request.MaxSurgeInstances;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
             {
@@ -6865,6 +7119,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["SlsConfigs"] = request.SlsConfigs;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsLogEnvTags))
+            {
+                query["SlsLogEnvTags"] = request.SlsLogEnvTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartupProbe))
             {
                 query["StartupProbe"] = request.StartupProbe;
@@ -6909,6 +7167,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMapMountDesc))
             {
                 body["ConfigMapMountDesc"] = request.ConfigMapMountDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmptyDirDesc))
+            {
+                body["EmptyDirDesc"] = request.EmptyDirDesc;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSidecarResourceIsolated))
             {
@@ -7789,6 +8051,144 @@ namespace AlibabaCloud.SDK.Sae20190506
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DescribeApplicationInstancesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of the associated MSE microservice governance application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationMseServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationMseServiceResponse
+        /// </returns>
+        public DescribeApplicationMseServiceResponse DescribeApplicationMseServiceWithOptions(DescribeApplicationMseServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAhas))
+            {
+                query["EnableAhas"] = request.EnableAhas;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApplicationMseService",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/app/applicationMseService",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApplicationMseServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of the associated MSE microservice governance application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationMseServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationMseServiceResponse
+        /// </returns>
+        public async Task<DescribeApplicationMseServiceResponse> DescribeApplicationMseServiceWithOptionsAsync(DescribeApplicationMseServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAhas))
+            {
+                query["EnableAhas"] = request.EnableAhas;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApplicationMseService",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/sam/app/applicationMseService",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApplicationMseServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of the associated MSE microservice governance application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationMseServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationMseServiceResponse
+        /// </returns>
+        public DescribeApplicationMseServiceResponse DescribeApplicationMseService(DescribeApplicationMseServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeApplicationMseServiceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of the associated MSE microservice governance application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationMseServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationMseServiceResponse
+        /// </returns>
+        public async Task<DescribeApplicationMseServiceResponse> DescribeApplicationMseServiceAsync(DescribeApplicationMseServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeApplicationMseServiceWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8869,6 +9269,10 @@ namespace AlibabaCloud.SDK.Sae20190506
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BestEffortType))
+            {
+                query["BestEffortType"] = request.BestEffortType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
             {
                 query["Cpu"] = request.Cpu;
@@ -8931,6 +9335,10 @@ namespace AlibabaCloud.SDK.Sae20190506
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BestEffortType))
+            {
+                query["BestEffortType"] = request.BestEffortType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
             {
                 query["Cpu"] = request.Cpu;
@@ -9401,6 +9809,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Previous))
+            {
+                query["Previous"] = request.Previous;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -9450,6 +9862,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Previous))
+            {
+                query["Previous"] = request.Previous;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10965,7 +11381,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询泳道详情</para>
+        /// <para>Queries details about swimlanes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11019,7 +11435,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询泳道详情</para>
+        /// <para>Queries details about swimlanes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11073,7 +11489,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询泳道详情</para>
+        /// <para>Queries details about swimlanes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11092,7 +11508,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询泳道详情</para>
+        /// <para>Queries details about swimlanes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12303,7 +12719,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the advanced monitoring feature of Application Real-Time Monitoring Service (ARMS).</para>
+        /// <para>Disable ARMS Advanced Edition monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12349,7 +12765,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the advanced monitoring feature of Application Real-Time Monitoring Service (ARMS).</para>
+        /// <para>Disable ARMS Advanced Edition monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12395,7 +12811,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the advanced monitoring feature of Application Real-Time Monitoring Service (ARMS).</para>
+        /// <para>Disable ARMS Advanced Edition monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12414,7 +12830,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the advanced monitoring feature of Application Real-Time Monitoring Service (ARMS).</para>
+        /// <para>Disable ARMS Advanced Edition monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13887,7 +14303,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有泳道组</para>
+        /// <para>Queries all lane groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13933,7 +14349,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有泳道组</para>
+        /// <para>Queries all lane groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13979,7 +14395,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有泳道组</para>
+        /// <para>Queries all lane groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13998,7 +14414,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有泳道组</para>
+        /// <para>Queries all lane groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14017,7 +14433,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有泳道</para>
+        /// <para>Queries all swimlanes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14067,7 +14483,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有泳道</para>
+        /// <para>Queries all swimlanes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14117,7 +14533,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有泳道</para>
+        /// <para>Queries all swimlanes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14136,7 +14552,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有泳道</para>
+        /// <para>Queries all swimlanes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14867,6 +15283,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["NamespaceId"] = request.NamespaceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewSaeVersion))
+            {
+                query["NewSaeVersion"] = request.NewSaeVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
             {
                 query["OrderBy"] = request.OrderBy;
@@ -14953,6 +15373,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["NamespaceId"] = request.NamespaceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewSaeVersion))
+            {
+                query["NewSaeVersion"] = request.NewSaeVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
             {
                 query["OrderBy"] = request.OrderBy;
@@ -15029,7 +15453,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用列表，供全链路灰度拉取应用列表</para>
+        /// <para>Obtains the application list for the end-to-end grayscale pull application list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15083,7 +15507,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用列表，供全链路灰度拉取应用列表</para>
+        /// <para>Obtains the application list for the end-to-end grayscale pull application list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15137,7 +15561,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用列表，供全链路灰度拉取应用列表</para>
+        /// <para>Obtains the application list for the end-to-end grayscale pull application list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15156,7 +15580,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用列表，供全链路灰度拉取应用列表</para>
+        /// <para>Obtains the application list for the end-to-end grayscale pull application list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16711,7 +17135,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询泳道可选的网关路由</para>
+        /// <para>Query the gateway routes that are available for a lane</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16761,7 +17185,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询泳道可选的网关路由</para>
+        /// <para>Query the gateway routes that are available for a lane</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16811,7 +17235,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询泳道可选的网关路由</para>
+        /// <para>Query the gateway routes that are available for a lane</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16830,7 +17254,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询泳道可选的网关路由</para>
+        /// <para>Query the gateway routes that are available for a lane</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16849,7 +17273,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有泳道标签列表</para>
+        /// <para>Queries all lane tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16899,7 +17323,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有泳道标签列表</para>
+        /// <para>Queries all lane tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16949,7 +17373,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有泳道标签列表</para>
+        /// <para>Queries all lane tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16968,7 +17392,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有泳道标签列表</para>
+        /// <para>Queries all lane tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18179,6 +18603,136 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries whether ARMS monitoring is enabled for a specified application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryArmsEnableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryArmsEnableResponse
+        /// </returns>
+        public QueryArmsEnableResponse QueryArmsEnableWithOptions(QueryArmsEnableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryArmsEnable",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/arms/queryArms",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryArmsEnableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether ARMS monitoring is enabled for a specified application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryArmsEnableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryArmsEnableResponse
+        /// </returns>
+        public async Task<QueryArmsEnableResponse> QueryArmsEnableWithOptionsAsync(QueryArmsEnableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryArmsEnable",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/arms/queryArms",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryArmsEnableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether ARMS monitoring is enabled for a specified application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryArmsEnableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryArmsEnableResponse
+        /// </returns>
+        public QueryArmsEnableResponse QueryArmsEnable(QueryArmsEnableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return QueryArmsEnableWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries whether ARMS monitoring is enabled for a specified application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryArmsEnableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryArmsEnableResponse
+        /// </returns>
+        public async Task<QueryArmsEnableResponse> QueryArmsEnableAsync(QueryArmsEnableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await QueryArmsEnableWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the resource usage of an application.</para>
         /// </summary>
         /// 
@@ -18637,6 +19191,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Cpu"] = request.Cpu;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Deploy))
+            {
+                query["Deploy"] = request.Deploy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
             {
                 query["DiskSize"] = request.DiskSize;
@@ -18644,6 +19202,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
             {
                 query["Memory"] = request.Memory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoEnableApplicationScalingRule))
             {
@@ -18707,6 +19273,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Cpu"] = request.Cpu;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Deploy))
+            {
+                query["Deploy"] = request.Deploy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskSize))
             {
                 query["DiskSize"] = request.DiskSize;
@@ -18714,6 +19284,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
             {
                 query["Memory"] = request.Memory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoEnableApplicationScalingRule))
             {
@@ -20571,7 +21149,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用闲置模式更新</para>
+        /// <para>Application Idle Mode Update</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20629,7 +21207,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用闲置模式更新</para>
+        /// <para>Application Idle Mode Update</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20687,7 +21265,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用闲置模式更新</para>
+        /// <para>Application Idle Mode Update</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20706,7 +21284,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用闲置模式更新</para>
+        /// <para>Application Idle Mode Update</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21227,6 +21805,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Deploy))
+            {
+                query["Deploy"] = request.Deploy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
@@ -21276,6 +21858,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Deploy))
+            {
+                query["Deploy"] = request.Deploy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
@@ -21693,6 +22279,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGzip))
+            {
+                query["EnableGzip"] = request.EnableGzip;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedFor))
             {
                 query["EnableXForwardedFor"] = request.EnableXForwardedFor;
@@ -21808,6 +22398,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGzip))
+            {
+                query["EnableGzip"] = request.EnableGzip;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableXForwardedFor))
             {
@@ -21955,6 +22549,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["BackoffLimit"] = request.BackoffLimit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BestEffortType))
+            {
+                query["BestEffortType"] = request.BestEffortType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Command))
             {
                 query["Command"] = request.Command;
@@ -22006,6 +22604,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MountHost))
             {
                 query["MountHost"] = request.MountHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NasConfigs))
+            {
+                query["NasConfigs"] = request.NasConfigs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NasId))
             {
@@ -22179,6 +22781,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["BackoffLimit"] = request.BackoffLimit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BestEffortType))
+            {
+                query["BestEffortType"] = request.BestEffortType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Command))
             {
                 query["Command"] = request.Command;
@@ -22230,6 +22836,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MountHost))
             {
                 query["MountHost"] = request.MountHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NasConfigs))
+            {
+                query["NasConfigs"] = request.NasConfigs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NasId))
             {
@@ -22571,6 +23181,152 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新命名空间级别sls配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNamespaceSlsConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNamespaceSlsConfigsResponse
+        /// </returns>
+        public UpdateNamespaceSlsConfigsResponse UpdateNamespaceSlsConfigsWithOptions(UpdateNamespaceSlsConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameSpaceShortId))
+            {
+                query["NameSpaceShortId"] = request.NameSpaceShortId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsConfigs))
+            {
+                query["SlsConfigs"] = request.SlsConfigs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNamespaceSlsConfigs",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/cas/namespace/updateNamespaceSlsConfigs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNamespaceSlsConfigsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新命名空间级别sls配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNamespaceSlsConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNamespaceSlsConfigsResponse
+        /// </returns>
+        public async Task<UpdateNamespaceSlsConfigsResponse> UpdateNamespaceSlsConfigsWithOptionsAsync(UpdateNamespaceSlsConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameSpaceShortId))
+            {
+                query["NameSpaceShortId"] = request.NameSpaceShortId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsConfigs))
+            {
+                query["SlsConfigs"] = request.SlsConfigs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNamespaceSlsConfigs",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/cas/namespace/updateNamespaceSlsConfigs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNamespaceSlsConfigsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新命名空间级别sls配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNamespaceSlsConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNamespaceSlsConfigsResponse
+        /// </returns>
+        public UpdateNamespaceSlsConfigsResponse UpdateNamespaceSlsConfigs(UpdateNamespaceSlsConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateNamespaceSlsConfigsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新命名空间级别sls配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateNamespaceSlsConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNamespaceSlsConfigsResponse
+        /// </returns>
+        public async Task<UpdateNamespaceSlsConfigsResponse> UpdateNamespaceSlsConfigsAsync(UpdateNamespaceSlsConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateNamespaceSlsConfigsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>cn-beijing:test</para>
         /// </summary>
         /// 
@@ -22899,7 +23655,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新泳道的启用属性</para>
+        /// <para>Update the enabled property of the swimlane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22957,7 +23713,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新泳道的启用属性</para>
+        /// <para>Update the enabled property of the swimlane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23015,7 +23771,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新泳道的启用属性</para>
+        /// <para>Update the enabled property of the swimlane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23034,7 +23790,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新泳道的启用属性</para>
+        /// <para>Update the enabled property of the swimlane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23666,7 +24422,7 @@ namespace AlibabaCloud.SDK.Sae20190506
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://icms.alibaba-inc.com/content/arms/arms?l=1%5C&m=16992%5C&n=3183148">Billing overview</a>.</para>
+        /// <para>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://www.alibabacloud.com/help/zh/arms/application-monitoring/product-overview/billing-overview-1">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23717,7 +24473,7 @@ namespace AlibabaCloud.SDK.Sae20190506
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://icms.alibaba-inc.com/content/arms/arms?l=1%5C&m=16992%5C&n=3183148">Billing overview</a>.</para>
+        /// <para>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://www.alibabacloud.com/help/zh/arms/application-monitoring/product-overview/billing-overview-1">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23768,7 +24524,7 @@ namespace AlibabaCloud.SDK.Sae20190506
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://icms.alibaba-inc.com/content/arms/arms?l=1%5C&m=16992%5C&n=3183148">Billing overview</a>.</para>
+        /// <para>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://www.alibabacloud.com/help/zh/arms/application-monitoring/product-overview/billing-overview-1">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23792,7 +24548,7 @@ namespace AlibabaCloud.SDK.Sae20190506
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://icms.alibaba-inc.com/content/arms/arms?l=1%5C&m=16992%5C&n=3183148">Billing overview</a>.</para>
+        /// <para>You are charged when you use the ARMS advanced monitoring feature. Enable this feature based on your business requirements. For more information, see <a href="https://www.alibabacloud.com/help/zh/arms/application-monitoring/product-overview/billing-overview-1">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">

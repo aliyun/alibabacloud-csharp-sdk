@@ -155,6 +155,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("EnableGzip")]
+            [Validation(Required=false)]
+            public bool? EnableGzip { get; set; }
+
             [NameInMap("EnableXForwardedFor")]
             [Validation(Required=false)]
             public bool? EnableXForwardedFor { get; set; }

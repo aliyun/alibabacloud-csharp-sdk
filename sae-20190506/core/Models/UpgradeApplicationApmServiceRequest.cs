@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpgradeApplicationApmServiceRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

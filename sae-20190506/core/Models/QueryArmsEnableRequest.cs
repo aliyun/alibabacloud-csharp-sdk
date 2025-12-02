@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
-    public class DeleteInstancesRequest : TeaModel {
+    public class QueryArmsEnableRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,17 +19,6 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
-
-        /// <summary>
-        /// <para>The ID of the instance to be deleted.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>demo-aaed579c-1f8a-431e-8705-97d18e91c7b4******</para>
-        /// </summary>
-        [NameInMap("InstanceIds")]
-        [Validation(Required=false)]
-        public string InstanceIds { get; set; }
 
     }
 

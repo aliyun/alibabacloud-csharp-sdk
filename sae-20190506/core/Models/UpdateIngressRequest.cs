@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateIngressRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the certificate that is associated with the Classic Load Balancer (<b>CLB</b>) instance.</para>
+        /// <para>The ID of the <b>CLB</b> certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>LoadBalanceType</b> to <b>clb</b>, you can use CertId to configure a certificate for the HTTPS listener.</description></item>
+        /// <item><description>If the <b>LoadBalanceType</b> is <b>clb</b>, use this field to configure the HTTPS listener certificate.</description></item>
         /// </list>
-        /// <para>For more information about how to manage the SSL certificate IDs that are used by CLB instances, see <a href="https://help.aliyun.com/document_detail/90792.html">Overview</a>.</para>
+        /// <para>For more information about how to use SSL certificate IDs for CLB, see <a href="https://help.aliyun.com/document_detail/90792.html">Manage certificates (CLB)</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>188077086902****_176993d****_181437****_108724****</para>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string CertId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the certificates that are associated with the Application Load Balancer (<b>ALB</b>) instance.</para>
+        /// <para>The ID of the multi-certificate <b>ALB</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>LoadBalanceType</b> to <b>alb</b>, you can use CertIds to configure multiple certificates for the HTTPS listener. Separate multiple certificate IDs with commas (,).</description></item>
-        /// <item><description>The ID of the SSL certificate that is used by an ALB instance can be obtained from Certificate Management Service. For example, if you specify <c>756***-cn-hangzhou</c>, <c>756***</c> is the certificate ID that is obtained from the service page, and <c>-cn-hangzhou</c> is the fixed suffix. For more information, see <a href="https://help.aliyun.com/document_detail/209076.html">Manage certificates</a>.</description></item>
+        /// <item><description>If the <b>LoadBalanceType</b> is <b>alb</b>, use this field to configure multiple certificates for HTTPS listeners. Separate multiple certificate IDs with commas (,).</description></item>
+        /// <item><description>The ID of the SSL certificate used by ALB must be obtained from the digital certificate product. For example, in the configuration <c>756***-cn-hangzhou</c>, the <c>756***</c> is the certificate ID obtained from the product page, and the <c>-cn-hangzhou</c> is a fixed suffix. For more information, see <a href="https://help.aliyun.com/document_detail/209076.html">Manage certificates</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string CorsConfig { get; set; }
 
         /// <summary>
-        /// <para>The default forwarding rule. You can specify a port and an application in the default forwarding rule to forward traffic based on the IP address. The following list describes the involved parameters:</para>
+        /// <para>The default forwarding rule. Forwards traffic to a specified application through a specified port based on the IP address. The following table describes the parameters.</para>
         /// <list type="bullet">
         /// <item><description><b>appId</b>: the ID of the application.</description></item>
         /// <item><description><b>containerPort</b>: the container port of the application.</description></item>
@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("EnableGzip")]
+        [Validation(Required=false)]
+        public bool? EnableGzip { get; set; }
 
         [NameInMap("EnableXForwardedFor")]
         [Validation(Required=false)]
@@ -113,7 +117,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public long? IngressId { get; set; }
 
         /// <summary>
-        /// <para>The port specified for the Server Load Balancer (SLB) listener. You must specify a vacant port.</para>
+        /// <para>The SLB listening port. This port cannot be occupied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>443</para>
@@ -125,7 +129,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The protocol that is used to forward requests. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HTTP</b>: HTTP is suitable for applications that need to identify the transmitted data.</description></item>
+        /// <item><description><b>HTTP</b>: HTTP is suitable for applications that need to identify transmitted data.</description></item>
         /// <item><description><b>HTTPS</b>: HTTPS is suitable for applications that require encrypted data transmission.</description></item>
         /// </list>
         /// 
@@ -137,7 +141,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ListenerProtocol { get; set; }
 
         /// <summary>
-        /// <para>This parameter is discontinued.</para>
+        /// <para>The parameter is deprecated and cannot be updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>clb</para>
@@ -157,10 +161,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? RequestTimeout { get; set; }
 
         /// <summary>
-        /// <para>The forwarding rules. You can specify a port and an application in a forwarding rule to forward traffic based on the specified domain name and request path. The following list describes the involved parameters:</para>
+        /// <para>The forwarding rule. Forwards traffic to a specified application through a specified port based on the domain name and request path. The following table describes the parameters.</para>
         /// <list type="bullet">
         /// <item><description><b>appId</b>: the ID of the application.</description></item>
-        /// <item><description><b>containerPort</b>: the container port of the application.</description></item>
+        /// <item><description><b>containerPort</b>: The port of the application instance.</description></item>
         /// <item><description><b>domain</b>: the domain name.</description></item>
         /// <item><description><b>path</b>: the request path.</description></item>
         /// </list>

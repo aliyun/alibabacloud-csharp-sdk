@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Cpu { get; set; }
 
+        [NameInMap("Deploy")]
+        [Validation(Required=false)]
+        public bool? Deploy { get; set; }
+
         /// <summary>
         /// <para>The disk size. Unit: GB.</para>
         /// 
@@ -51,6 +55,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public string Memory { get; set; }
+
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
 
         /// <summary>
         /// <para>Enable application scale rules automatically.</para>

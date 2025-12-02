@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DowngradeApplicationApmServiceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the interactive messaging application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

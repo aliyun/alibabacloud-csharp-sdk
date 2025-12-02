@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public long? BackoffLimit { get; set; }
 
+        [NameInMap("BestEffortType")]
+        [Validation(Required=false)]
+        public string BestEffortType { get; set; }
+
         /// <summary>
         /// <para>The command that is used to start the image. The command must be an existing executable object in the container. Example:</para>
         /// <pre><c>command:
@@ -246,6 +250,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("MountHost")]
         [Validation(Required=false)]
         public string MountHost { get; set; }
+
+        [NameInMap("NasConfigs")]
+        [Validation(Required=false)]
+        public string NasConfigs { get; set; }
 
         /// <summary>
         /// <para>The ID of the Apsara File Storage NAS file system. If you do not need to modify the NAS configurations when you deploy the application, configure <b>NasId</b> only in the first request. If you no longer need to use NAS, leave <b>NasId</b> empty in the request.</para>

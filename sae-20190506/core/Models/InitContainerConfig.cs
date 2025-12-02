@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string ConfigMapMountDesc { get; set; }
 
+        [NameInMap("EmptyDirDesc")]
+        [Validation(Required=false)]
+        public string EmptyDirDesc { get; set; }
+
         [NameInMap("Envs")]
         [Validation(Required=false)]
         public string Envs { get; set; }

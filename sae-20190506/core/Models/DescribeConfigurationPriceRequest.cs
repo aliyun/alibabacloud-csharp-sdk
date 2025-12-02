@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeConfigurationPriceRequest : TeaModel {
+        [NameInMap("BestEffortType")]
+        [Validation(Required=false)]
+        public string BestEffortType { get; set; }
+
         /// <summary>
         /// <para>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</para>
         /// <list type="bullet">

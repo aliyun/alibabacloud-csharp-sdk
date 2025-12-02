@@ -52,6 +52,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string AcrInstanceId { get; set; }
 
+            [NameInMap("AgentVersion")]
+            [Validation(Required=false)]
+            public string AgentVersion { get; set; }
+
+            [NameInMap("AlbIngressReadinessGate")]
+            [Validation(Required=false)]
+            public string AlbIngressReadinessGate { get; set; }
+
             /// <summary>
             /// <para>The description of the application.</para>
             /// 
@@ -273,6 +281,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string CustomImageNetworkType { get; set; }
 
+            [NameInMap("DeploymentName")]
+            [Validation(Required=false)]
+            public string DeploymentName { get; set; }
+
             /// <summary>
             /// <para>The disk size. Unit: GB.</para>
             /// 
@@ -309,6 +321,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("EdasContainerVersion")]
             [Validation(Required=false)]
             public string EdasContainerVersion { get; set; }
+
+            [NameInMap("EmptyDirDesc")]
+            [Validation(Required=false)]
+            public List<DescribeApplicationConfigResponseBodyDataEmptyDirDesc> EmptyDirDesc { get; set; }
+            public class DescribeApplicationConfigResponseBodyDataEmptyDirDesc : TeaModel {
+                [NameInMap("MountPath")]
+                [Validation(Required=false)]
+                public string MountPath { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
 
             /// <summary>
             /// <para>Indicates whether access to Application High Availability Service (AHAS) is enabled. Valid values:</para>
@@ -369,6 +395,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("EnableIdle")]
             [Validation(Required=false)]
             public bool? EnableIdle { get; set; }
+
+            [NameInMap("EnableNamespaceAgentVersion")]
+            [Validation(Required=false)]
+            public bool? EnableNamespaceAgentVersion { get; set; }
 
             /// <summary>
             /// <para>Enable new ARMS feature.</para>
@@ -525,6 +555,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
                 }
 
+                [NameInMap("EmptyDirDesc")]
+                [Validation(Required=false)]
+                public List<DescribeApplicationConfigResponseBodyDataInitContainersConfigEmptyDirDesc> EmptyDirDesc { get; set; }
+                public class DescribeApplicationConfigResponseBodyDataInitContainersConfigEmptyDirDesc : TeaModel {
+                    [NameInMap("MountPath")]
+                    [Validation(Required=false)]
+                    public string MountPath { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The environment variables. You can configure custom environment variables or reference a ConfigMap. If you want to reference a ConfigMap, you must first create a ConfigMap. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Take note of the following rules:</para>
                 /// <list type="bullet">
@@ -674,6 +718,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("Liveness")]
             [Validation(Required=false)]
             public string Liveness { get; set; }
+
+            [NameInMap("MaxSurgeInstanceRatio")]
+            [Validation(Required=false)]
+            public int? MaxSurgeInstanceRatio { get; set; }
+
+            [NameInMap("MaxSurgeInstances")]
+            [Validation(Required=false)]
+            public int? MaxSurgeInstances { get; set; }
 
             /// <summary>
             /// <para>The size of memory required by each instance. Unit: MB. You cannot set this parameter to 0. The values of this parameter correspond to the values of the Cpu parameter:</para>
@@ -1457,6 +1509,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("SlsConfigs")]
             [Validation(Required=false)]
             public string SlsConfigs { get; set; }
+
+            [NameInMap("SlsLogEnvTags")]
+            [Validation(Required=false)]
+            public string SlsLogEnvTags { get; set; }
 
             /// <summary>
             /// <para>Enable startup probe.</para>

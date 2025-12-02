@@ -250,6 +250,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public long? Timestamp { get; set; }
 
+                [NameInMap("TrafficStatus")]
+                [Validation(Required=false)]
+                public string TrafficStatus { get; set; }
+
                 /// <summary>
                 /// <para>If the health check of an application instance fails, the detailed failure cause or error message is returned. If the health check of an application instance passes, no response is returned.</para>
                 /// 

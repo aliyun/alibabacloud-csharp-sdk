@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListAllSwimmingLaneGroupsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of a namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:test</para>
         /// </summary>

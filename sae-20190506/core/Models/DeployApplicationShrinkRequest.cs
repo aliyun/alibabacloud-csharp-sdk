@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AcrInstanceId { get; set; }
 
+        [NameInMap("AgentVersion")]
+        [Validation(Required=false)]
+        public string AgentVersion { get; set; }
+
+        [NameInMap("AlbIngressReadinessGate")]
+        [Validation(Required=false)]
+        public string AlbIngressReadinessGate { get; set; }
+
         /// <summary>
         /// <para>The ID of the application.</para>
         /// <para>This parameter is required.</para>
@@ -228,6 +236,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string EdasContainerVersion { get; set; }
 
+        [NameInMap("EmptyDirDesc")]
+        [Validation(Required=false)]
+        public string EmptyDirDesc { get; set; }
+
         /// <summary>
         /// <para>Indicates whether access to Application High Availability Service (AHAS) is enabled. Take note of the following rules:</para>
         /// <list type="bullet">
@@ -267,6 +279,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("EnableGreyTagRoute")]
         [Validation(Required=false)]
         public bool? EnableGreyTagRoute { get; set; }
+
+        [NameInMap("EnableNamespaceAgentVersion")]
+        [Validation(Required=false)]
+        public bool? EnableNamespaceAgentVersion { get; set; }
 
         /// <summary>
         /// <para>Enable new ARMS features.</para>
@@ -452,6 +468,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("Liveness")]
         [Validation(Required=false)]
         public string Liveness { get; set; }
+
+        [NameInMap("MaxSurgeInstanceRatio")]
+        [Validation(Required=false)]
+        public int? MaxSurgeInstanceRatio { get; set; }
+
+        [NameInMap("MaxSurgeInstances")]
+        [Validation(Required=false)]
+        public int? MaxSurgeInstances { get; set; }
 
         /// <summary>
         /// <para>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</para>
@@ -936,6 +960,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("SlsConfigs")]
         [Validation(Required=false)]
         public string SlsConfigs { get; set; }
+
+        [NameInMap("SlsLogEnvTags")]
+        [Validation(Required=false)]
+        public string SlsLogEnvTags { get; set; }
 
         /// <summary>
         /// <para>Check Failure: Indicates that the application failed to start. The system will report the exception and automatically restart it.</para>

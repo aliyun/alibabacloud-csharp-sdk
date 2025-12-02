@@ -8,28 +8,28 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
-    public class DeleteInstancesRequest : TeaModel {
+    public class DescribeApplicationMseServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>017f39b8-dfa4-4e16-a84b-1dcee4b1****</para>
+        /// <para>f7730764-d88f-4b9a-8d8e-cd8efbfe****</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance to be deleted.</para>
+        /// <para>Specifies whether to enable traffic limiting and degradation. Set to true to check traffic limiting and degradation permissions when accessing related APIs; set to false otherwise.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>demo-aaed579c-1f8a-431e-8705-97d18e91c7b4******</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("InstanceIds")]
+        [NameInMap("EnableAhas")]
         [Validation(Required=false)]
-        public string InstanceIds { get; set; }
+        public bool? EnableAhas { get; set; }
 
     }
 

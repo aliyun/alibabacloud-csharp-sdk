@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateApplicationDescriptionRequest : TeaModel {
         /// <summary>
+        /// <para>The new description of the application. The description can be up to 1,024 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppDescription { get; set; }
 
         /// <summary>
+        /// <para>The ID of the application that you want to update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

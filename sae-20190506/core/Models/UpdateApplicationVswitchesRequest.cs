@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("Deploy")]
+        [Validation(Required=false)]
+        public bool? Deploy { get; set; }
+
         /// <summary>
         /// <para>The ID of the vSwitch.</para>
         /// <para>This parameter is required.</para>

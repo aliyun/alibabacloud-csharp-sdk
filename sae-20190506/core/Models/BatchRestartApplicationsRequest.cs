@@ -8,22 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sae20190506.Models
 {
-    public class ListAllSwimmingLanesRequest : TeaModel {
+    public class BatchRestartApplicationsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the lane group.</para>
+        /// <para>The application IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2074</para>
+        /// <para>00893b3a-0e24-45ed-be0c-1f20e07b****</para>
         /// </summary>
-        [NameInMap("GroupId")]
+        [NameInMap("AppIds")]
         [Validation(Required=false)]
-        public long? GroupId { get; set; }
+        public string AppIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of a namespace.</para>
+        /// <para>The namespace ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-beijing:test</para>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]

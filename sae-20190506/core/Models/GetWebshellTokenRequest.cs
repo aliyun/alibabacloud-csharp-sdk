@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class GetWebshellTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the interactive messaging application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,10 +21,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The name of the container.</para>
+        /// <para>The name of the init container.</para>
         /// <para>Note:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.</para>
+        /// <item><description><para>If you specify this parameter, Cloud Assistant runs the command in the specified container of the instances.</para>
         /// </description></item>
         /// <item><description><para>If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.</para>
         /// <list type="bullet">
@@ -45,6 +46,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ContainerName { get; set; }
 
         /// <summary>
+        /// <para>The name of the pod.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

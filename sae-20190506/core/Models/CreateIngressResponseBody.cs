@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateIngressResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The HTTP status code or the error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
+        /// <item><description><b>2xx</b>: The request was successful.</description></item>
+        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
+        /// <item><description><b>4xx</b>: The request failed.</description></item>
         /// <item><description><b>5xx</b>: A server error occurred.</description></item>
         /// </list>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response.</para>
+        /// <para>Responses.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code returned. Take note of the following rules:</para>
+        /// <para>Error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>The <b>ErrorCode</b> parameter is not returned if the request succeeds.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section of this topic.</description></item>
+        /// <item><description>If the request is successful, no <b>ErrorCode</b> fields are returned.</description></item>
+        /// <item><description>Request failed: <b>ErrorCode</b> fields are returned. For more information, see <b>Error codes</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,10 +59,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information that is returned. Valid values:</para>
+        /// <para>Additional information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
-        /// <item><description>An error code: If the call fails, an error code is returned.</description></item>
+        /// <item><description>The error message returned because the request is normal and <b>success</b> is returned.</description></item>
+        /// <item><description>If the request is abnormal, the specific exception error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Secret is successfully deleted. Valid values:</para>
+        /// <para>Indicates whether the routing rule was created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The instance was deleted.</description></item>
-        /// <item><description><b>false</b>: The instance failed to be deleted.</description></item>
+        /// <item><description><b>true</b>: The ConfigMap was created.</description></item>
+        /// <item><description><b>false</b>: The ConfigMap failed to be created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. It is used to query the details of a request.</para>
+        /// <para>The ID of the trace. This parameter is used to query the exact call information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

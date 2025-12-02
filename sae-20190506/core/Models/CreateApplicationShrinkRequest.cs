@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AcrInstanceId { get; set; }
 
+        [NameInMap("AgentVersion")]
+        [Validation(Required=false)]
+        public string AgentVersion { get; set; }
+
         /// <summary>
         /// <para>The description of the template. The description cannot exceed 1,024 characters in length.</para>
         /// 
@@ -251,6 +255,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string EdasContainerVersion { get; set; }
 
+        [NameInMap("EmptyDirDesc")]
+        [Validation(Required=false)]
+        public string EmptyDirDesc { get; set; }
+
         /// <summary>
         /// <para>Enable CPU Burst.</para>
         /// <list type="bullet">
@@ -278,6 +286,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("EnableEbpf")]
         [Validation(Required=false)]
         public string EnableEbpf { get; set; }
+
+        [NameInMap("EnableNamespaceAgentVersion")]
+        [Validation(Required=false)]
+        public bool? EnableNamespaceAgentVersion { get; set; }
+
+        [NameInMap("EnableNamespaceSlsConfig")]
+        [Validation(Required=false)]
+        public bool? EnableNamespaceSlsConfig { get; set; }
 
         /// <summary>
         /// <para>Indicates whether to enable the new ARMS feature:</para>
@@ -947,6 +963,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("SlsConfigs")]
         [Validation(Required=false)]
         public string SlsConfigs { get; set; }
+
+        [NameInMap("SlsLogEnvTags")]
+        [Validation(Required=false)]
+        public string SlsLogEnvTags { get; set; }
 
         /// <summary>
         /// <para>Enable application startup probe.</para>

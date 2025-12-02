@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public long? BackoffLimit { get; set; }
 
+        [NameInMap("BestEffortType")]
+        [Validation(Required=false)]
+        public string BestEffortType { get; set; }
+
         /// <summary>
         /// <para>The command that is used to start the image. The command must be an existing executable object in the container. Sample statements:</para>
         /// <pre><c>command:
@@ -325,6 +329,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
+
+        [NameInMap("NasConfigs")]
+        [Validation(Required=false)]
+        public string NasConfigs { get; set; }
 
         /// <summary>
         /// <para>The ID of the Apsara File Storage NAS file system. After the application is created, you may want to call other operations to manage the application. If you do not want to change the NAS configurations in these subsequent operations, you can omit the <b>NasId</b> parameter in the requests. If you want to unmount the NAS file system, you must set the <b>NasId</b> values in the subsequent requests to an empty string (&quot;&quot;).</para>

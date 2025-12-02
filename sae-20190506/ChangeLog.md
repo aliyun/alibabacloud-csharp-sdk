@@ -1,3 +1,49 @@
+2025-12-02 Version: 2.6.0
+- Support API BatchRestartApplications.
+- Support API DescribeApplicationMseService.
+- Support API QueryArmsEnable.
+- Support API UpdateNamespaceSlsConfigs.
+- Update API CreateApplication: add request parameters AgentVersion.
+- Update API CreateApplication: add request parameters EmptyDirDesc.
+- Update API CreateApplication: add request parameters EnableNamespaceAgentVersion.
+- Update API CreateApplication: add request parameters EnableNamespaceSlsConfig.
+- Update API CreateApplication: add request parameters SlsLogEnvTags.
+- Update API CreateIngress: add request parameters EnableGzip.
+- Update API CreateJob: add request parameters BestEffortType.
+- Update API CreateJob: add request parameters NasConfigs.
+- Update API DeployApplication: add request parameters AgentVersion.
+- Update API DeployApplication: add request parameters AlbIngressReadinessGate.
+- Update API DeployApplication: add request parameters EmptyDirDesc.
+- Update API DeployApplication: add request parameters EnableNamespaceAgentVersion.
+- Update API DeployApplication: add request parameters MaxSurgeInstanceRatio.
+- Update API DeployApplication: add request parameters MaxSurgeInstances.
+- Update API DeployApplication: add request parameters SlsLogEnvTags.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.AgentVersion.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.AlbIngressReadinessGate.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.DeploymentName.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.EmptyDirDesc.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.EnableNamespaceAgentVersion.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.MaxSurgeInstanceRatio.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.MaxSurgeInstances.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.SlsLogEnvTags.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.InitContainersConfig.$.EmptyDirDesc.
+- Update API DescribeApplicationInstances: add response parameters Body.Data.Instances.$.TrafficStatus.
+- Update API DescribeConfigurationPrice: add request parameters BestEffortType.
+- Update API DescribeIngress: add response parameters Body.Data.EnableGzip.
+- Update API DescribeInstanceLog: add request parameters Previous.
+- Update API DescribeJob: add response parameters Body.Data.BestEffortType.
+- Update API DescribeNamespaceResources: add response parameters Body.Data.ApmJavaAgentVersion.
+- Update API DescribeNamespaceResources: add response parameters Body.Data.SlsConfigs.
+- Update API ListApplications: add request parameters NewSaeVersion.
+- Update API RescaleApplicationVertically: add request parameters Deploy.
+- Update API RescaleApplicationVertically: add request parameters ResourceType.
+- Update API RescaleApplicationVertically: add request parameters VSwitchId.
+- Update API UpdateApplicationVswitches: add request parameters Deploy.
+- Update API UpdateIngress: add request parameters EnableGzip.
+- Update API UpdateJob: add request parameters BestEffortType.
+- Update API UpdateJob: add request parameters NasConfigs.
+
+
 2025-07-30 Version: 2.4.10
 - Update API CreateApplication: add request parameters HeadlessPvtzDiscoverySvc.
 - Update API DescribeApplicationConfig: add response parameters Body.Data.CmsServiceId.

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateAppModeRequest : TeaModel {
         /// <summary>
+        /// <para>The app ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69****</para>
         /// </summary>
@@ -22,6 +24,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppIds { get; set; }
 
         /// <summary>
+        /// <para>Enable Idle Mode?</para>
+        /// <para>Enumeration value:</para>
+        /// <list type="bullet">
+        /// <item><description>true: enables.</description></item>
+        /// <item><description>false: disables.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

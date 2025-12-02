@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateIngressResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The HTTP status code or the error code. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>2xx</b>: The request was successful.</description></item>
         /// <item><description><b>3xx</b>: The request was redirected.</description></item>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>Responses.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The status code. Value values:</para>
         /// <list type="bullet">
         /// <item><description>If the request was successful, <b>ErrorCode</b> is not returned.</description></item>
         /// <item><description>If the request failed, <b>ErrorCode</b> is returned. For more information, see the <b>Error codes</b> section of this topic.</description></item>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned information.</para>
+        /// <para>Additional information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>success</b> is returned.</description></item>
-        /// <item><description>If the request failed, an error code is returned.</description></item>
+        /// <item><description>The error message returned because the request is normal and <b>success</b> is returned.</description></item>
+        /// <item><description>If the request is abnormal, the specific exception error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the configurations of the routing rule were updated. Valid values:</para>
+        /// <para>Whether the configuration of the Ingress instance is updated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The update was successful.</description></item>
+        /// <item><description><b>false</b>: Update failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID.</para>
+        /// <para>The ID of the trace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

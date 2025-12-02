@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public DescribeNamespaceResourcesResponseBodyData Data { get; set; }
         public class DescribeNamespaceResourcesResponseBodyData : TeaModel {
+            [NameInMap("ApmJavaAgentVersion")]
+            [Validation(Required=false)]
+            public string ApmJavaAgentVersion { get; set; }
+
             /// <summary>
             /// <para>The number of applications.</para>
             /// 
@@ -179,6 +183,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
+
+            [NameInMap("SlsConfigs")]
+            [Validation(Required=false)]
+            public string SlsConfigs { get; set; }
 
             /// <summary>
             /// <para>The ID of the tenant in the SAE namespace.</para>

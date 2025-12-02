@@ -92,6 +92,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public long? BackoffLimit { get; set; }
 
+            [NameInMap("BestEffortType")]
+            [Validation(Required=false)]
+            public string BestEffortType { get; set; }
+
             /// <summary>
             /// <para>The command that is used to start the image. The command must be an existing executable object in the container. Example:</para>
             /// <pre><c>command:

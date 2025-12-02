@@ -44,6 +44,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
+        /// <para>The Secret name. The name can contain digits, letters, and underscores (_). The name must start with a letter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +55,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string SecretName { get; set; }
 
         /// <summary>
+        /// <para>The supported Secret type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>kubernetes.io/dockerconfigjson</b>: the Secret for the username and password of the image repository. The Secret is used for authentication when images are pulled during application deployment.</description></item>
+        /// </list>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Opaque</description></item>
+        /// <item><description>kubernetes.io/dockerconfigjson</description></item>
+        /// <item><description>kubernetes.io/tls</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

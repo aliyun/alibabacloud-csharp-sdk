@@ -84,6 +84,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
 
+        [NameInMap("NewSaeVersion")]
+        [Validation(Required=false)]
+        public string NewSaeVersion { get; set; }
+
         /// <summary>
         /// <para>Specifies how applications are sorted. Valid values:</para>
         /// <list type="bullet">
