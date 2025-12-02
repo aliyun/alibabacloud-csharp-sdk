@@ -815,6 +815,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public bool? EmptyMessage { get; set; }
 
+                [NameInMap("enable_packet_capture")]
+                [Validation(Required=false)]
+                public bool? EnablePacketCapture { get; set; }
+
                 /// <summary>
                 /// <para>The string that is expected to exist on the page.</para>
                 /// </summary>
