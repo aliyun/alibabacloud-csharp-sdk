@@ -3791,6 +3791,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["DesensitizationRule"] = request.DesensitizationRule;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            {
+                query["Dimensions"] = request.Dimensions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCodeInterpreter))
             {
                 query["EnableCodeInterpreter"] = request.EnableCodeInterpreter;
@@ -3806,6 +3810,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeUsage))
             {
                 query["IncludeUsage"] = request.IncludeUsage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                query["Input"] = request.Input;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -3958,6 +3966,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["DesensitizationRule"] = request.DesensitizationRule;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            {
+                query["Dimensions"] = request.Dimensions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCodeInterpreter))
             {
                 query["EnableCodeInterpreter"] = request.EnableCodeInterpreter;
@@ -3973,6 +3985,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeUsage))
             {
                 query["IncludeUsage"] = request.IncludeUsage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                query["Input"] = request.Input;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -7134,6 +7150,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["NatGatewayOption"] = request.NatGatewayOption;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnlyIntranet))
+            {
+                query["OnlyIntranet"] = request.OnlyIntranet;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssPath))
             {
                 query["OssPath"] = request.OssPath;
@@ -7417,6 +7437,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NatGatewayOption))
             {
                 query["NatGatewayOption"] = request.NatGatewayOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnlyIntranet))
+            {
+                query["OnlyIntranet"] = request.OnlyIntranet;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssPath))
             {

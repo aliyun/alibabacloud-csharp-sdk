@@ -140,6 +140,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string NatGatewayOption { get; set; }
 
+        [NameInMap("OnlyIntranet")]
+        [Validation(Required=false)]
+        public bool? OnlyIntranet { get; set; }
+
         [NameInMap("OssPath")]
         [Validation(Required=false)]
         public string OssPath { get; set; }

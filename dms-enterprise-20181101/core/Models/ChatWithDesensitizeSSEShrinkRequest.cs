@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>256</para>
+        /// </summary>
+        [NameInMap("Dimensions")]
+        [Validation(Required=false)]
+        public int? Dimensions { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
         [NameInMap("EnableCodeInterpreter")]
@@ -49,9 +57,21 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public bool? EnableThinking { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IncludeUsage")]
         [Validation(Required=false)]
         public bool? IncludeUsage { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
+        [NameInMap("Input")]
+        [Validation(Required=false)]
+        public string Input { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
