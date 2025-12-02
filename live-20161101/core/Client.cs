@@ -72670,6 +72670,10 @@ namespace AlibabaCloud.SDK.Live20161101
             {
                 query["NotifyAuthKey"] = request.NotifyAuthKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyFileUploadedFormat))
+            {
+                query["NotifyFileUploadedFormat"] = request.NotifyFileUploadedFormat;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyUrl))
             {
                 query["NotifyUrl"] = request.NotifyUrl;
@@ -72769,6 +72773,10 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyAuthKey))
             {
                 query["NotifyAuthKey"] = request.NotifyAuthKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyFileUploadedFormat))
+            {
+                query["NotifyFileUploadedFormat"] = request.NotifyFileUploadedFormat;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyUrl))
             {

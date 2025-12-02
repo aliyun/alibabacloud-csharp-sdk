@@ -241,6 +241,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string NotifyAuthKey { get; set; }
 
+        [NameInMap("NotifyFileUploadedFormat")]
+        [Validation(Required=false)]
+        public List<string> NotifyFileUploadedFormat { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para><a href="http://xxxx/test/mycallback">http://xxxx/test/mycallback</a></para>
