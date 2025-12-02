@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateBackupConfigRequest : TeaModel {
         /// <summary>
+        /// <para>Evidence backup configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string BackupConfig { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>video</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>Service code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>videoDetection</para>
         /// </summary>

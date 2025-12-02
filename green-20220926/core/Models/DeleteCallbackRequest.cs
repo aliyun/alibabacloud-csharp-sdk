@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class DeleteCallbackRequest : TeaModel {
         /// <summary>
+        /// <para>callback id.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>Region ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>

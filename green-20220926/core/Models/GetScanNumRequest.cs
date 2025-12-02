@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetScanNumRequest : TeaModel {
         /// <summary>
+        /// <para>Storage space.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tmpsample</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Buckets { get; set; }
 
         /// <summary>
+        /// <para>Media type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>image</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? MediaType { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>

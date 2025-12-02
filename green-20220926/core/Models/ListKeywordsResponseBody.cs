@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListKeywordsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>Returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListKeywordsResponseBodyData Data { get; set; }
         public class ListKeywordsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Current page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -29,11 +36,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
+            /// <summary>
+            /// <para>Data of the current page.</para>
+            /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<ListKeywordsResponseBodyDataItems> Items { get; set; }
             public class ListKeywordsResponseBodyDataItems : TeaModel {
                 /// <summary>
+                /// <para>Creation time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2023-06-03 14:43:03</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>Modification time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2023-06-03 14:43:03</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>Primary key ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>112</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>Keyword library ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>custom_xxxx</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string KeywordLibId { get; set; }
 
                 /// <summary>
+                /// <para>Keyword data ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4205334</para>
                 /// </summary>
@@ -73,6 +93,12 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [Validation(Required=false)]
                 public long? KeywordMd5Id { get; set; }
 
+                /// <summary>
+                /// <para>Keyword.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>测试词</para>
+                /// </summary>
                 [NameInMap("Word")]
                 [Validation(Required=false)]
                 public string Word { get; set; }
@@ -80,6 +106,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
+            /// <para>Page size.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -88,6 +116,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>Total count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>23</para>
             /// </summary>
@@ -98,6 +128,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
+        /// <para>Further description of the error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -106,6 +138,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
+        /// <para>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>
@@ -114,6 +148,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Success flag.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

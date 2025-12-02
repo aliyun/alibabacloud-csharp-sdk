@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class QueryCallbackRequest : TeaModel {
         /// <summary>
+        /// <para>Query data under the OSS detection task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? CheckForOss { get; set; }
 
         /// <summary>
+        /// <para>Primary key ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>

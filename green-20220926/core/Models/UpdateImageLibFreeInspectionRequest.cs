@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateImageLibFreeInspectionRequest : TeaModel {
+        /// <summary>
+        /// <para>Configuration.</para>
+        /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public Dictionary<string, int?> Config { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>

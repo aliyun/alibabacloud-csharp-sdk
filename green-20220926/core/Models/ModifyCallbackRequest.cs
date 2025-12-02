@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ModifyCallbackRequest : TeaModel {
         /// <summary>
+        /// <para>Encryption algorithm.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SHA256</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string CryptType { get; set; }
 
         /// <summary>
+        /// <para>Primary key ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,11 +30,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// <para>Name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>回调通知</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -40,6 +51,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Result scope.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>all</para>
         /// </summary>
@@ -48,6 +61,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Scope { get; set; }
 
         /// <summary>
+        /// <para>Callback URL.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.aliyuncs.com">https://www.aliyuncs.com</a></para>
         /// </summary>

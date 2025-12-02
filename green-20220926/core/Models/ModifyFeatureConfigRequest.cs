@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ModifyFeatureConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Configuration, in JSON format</para>
+        /// <para>query</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>Label meaning</para>
+        /// <para>query</para>
         /// 
         /// <b>Example:</b>
         /// <para>标签2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Label value, customer-defined</para>
+        /// <para>query</para>
         /// 
         /// <b>Example:</b>
         /// <para><b>config</b></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Field { get; set; }
 
         /// <summary>
-        /// <para>Region</para>
+        /// <para>query</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource type.</para>
+        /// <para>query</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Service code.</para>
+        /// <para>System-defined parameter. Value: <b>ModifyFeatureConfig</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>llm_query_moderation</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>Type</para>
+        /// <para>query</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_llm_template</para>

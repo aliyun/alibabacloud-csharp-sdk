@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListKeywordsRequest : TeaModel {
         /// <summary>
+        /// <para>Current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>Library ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>custom_xxxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string LibId { get; set; }
 
         /// <summary>
+        /// <para>Page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -41,10 +49,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Sort field.</para>
+        /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public Dictionary<string, string> Sort { get; set; }
 
+        /// <summary>
+        /// <para>Keyword.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试词</para>
+        /// </summary>
         [NameInMap("Word")]
         [Validation(Required=false)]
         public string Word { get; set; }

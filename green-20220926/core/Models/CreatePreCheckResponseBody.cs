@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class CreatePreCheckResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public Dictionary<string, bool?> Data { get; set; }
 
         /// <summary>
+        /// <para>ID assigned by the backend, used to uniquely identify a request. It can be used for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>

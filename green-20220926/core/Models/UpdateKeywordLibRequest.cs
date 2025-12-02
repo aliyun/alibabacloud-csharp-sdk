@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateKeywordLibRequest : TeaModel {
         /// <summary>
+        /// <para>Library ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>custom_xxxx</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string LibId { get; set; }
 
+        /// <summary>
+        /// <para>Keyword library name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试库</para>
+        /// </summary>
         [NameInMap("LibName")]
         [Validation(Required=false)]
         public string LibName { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>

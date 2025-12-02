@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ExportOssCheckStatRequest : TeaModel {
         /// <summary>
+        /// <para>Whether to support monthly indexing. Values: -true: supported. -false: not supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? ByMonth { get; set; }
 
         /// <summary>
+        /// <para>End time of the query, in the format yyyy-MM-dd HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-03-11 10:00:00</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>OSS detection task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>P_UX0K5X</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ParentTaskId { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Start time of the query, in the format yyyy-MM-dd HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-03-10 10:00:00</para>
         /// </summary>

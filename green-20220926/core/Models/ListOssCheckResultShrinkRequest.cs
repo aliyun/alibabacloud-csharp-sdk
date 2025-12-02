@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListOssCheckResultShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>End date.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-08-24 10:01:55</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>Number of completed tasks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? FinishNum { get; set; }
 
         /// <summary>
+        /// <para>Page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Search condition.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -57,11 +69,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Sort field.</para>
+        /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string SortShrink { get; set; }
 
         /// <summary>
+        /// <para>Start date.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-08-11 09:00:19</para>
         /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string StartDate { get; set; }
 
         /// <summary>
+        /// <para>Task status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>

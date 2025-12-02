@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class CreateCallbackResponseBody : TeaModel {
         /// <summary>
+        /// <para>Returned data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? Data { get; set; }
 
         /// <summary>
+        /// <para>Backend-assigned ID, used to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>

@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetFeatureConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>Query conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;Lang\&quot;:\&quot;zh\&quot;,\&quot;CategoryType\&quot;:1,\&quot;Default\&quot;:false,\&quot;ParentCategoryId\&quot;:1720}</para>
+        /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
         public string Query { get; set; }

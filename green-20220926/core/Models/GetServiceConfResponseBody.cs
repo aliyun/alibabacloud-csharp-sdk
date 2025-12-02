@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetServiceConfResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Classification.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>guard-scene</para>
+        /// </summary>
         [NameInMap("Classify")]
         [Validation(Required=false)]
         public string Classify { get; set; }
 
         /// <summary>
+        /// <para>Error code, consistent with HTTP status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -22,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>Service details</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public Dictionary<string, object> CustomServiceConf { get; set; }
 
         /// <summary>
+        /// <para>Modification time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-01-17 12:29:56</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// <para>Further description of the error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
+        /// <para>Options.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public Dictionary<string, object> Option { get; set; }
 
         /// <summary>
+        /// <para>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6CF2815C-<b><b>-</b></b>-B52E-FF6E2****492</para>
         /// </summary>
@@ -62,6 +80,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>image</para>
         /// </summary>
@@ -70,6 +90,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>Service code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>baselineCheck</para>
         /// </summary>
@@ -77,11 +99,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string ServiceCode { get; set; }
 
+        /// <summary>
+        /// <para>Service type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>plus</para>
+        /// </summary>
         [NameInMap("ServiceType")]
         [Validation(Required=false)]
         public string ServiceType { get; set; }
 
         /// <summary>
+        /// <para>Success indicator</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -90,7 +120,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>UID。</para>
+        /// <para>UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17726*****370735</para>

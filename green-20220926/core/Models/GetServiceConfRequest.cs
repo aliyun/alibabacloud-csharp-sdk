@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetServiceConfRequest : TeaModel {
         /// <summary>
+        /// <para>Query default configuration</para>
+        /// 
         /// <b>Example:</b>
         /// <para>False</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? ByDefault { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>image</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>Audit scenario.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pornographic</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Scene { get; set; }
 
         /// <summary>
+        /// <para>Service code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>baselineCheck</para>
         /// </summary>

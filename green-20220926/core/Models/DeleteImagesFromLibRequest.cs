@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class DeleteImagesFromLibRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the images.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[158794]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ImageIds { get; set; }
 
         /// <summary>
+        /// <para>Library ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>customxx_xxxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string LibId { get; set; }
 
         /// <summary>
+        /// <para>Region ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>

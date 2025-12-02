@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ExportTextScanResultShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>End time of the query, in the format yyyy-MM-dd HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-03-11 10:00:00</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
+        /// <summary>
+        /// <para>Query conditions.</para>
+        /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
         public string QueryShrink { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Start time of the query, in the format yyyy-MM-dd HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-03-10 10:00:00</para>
         /// </summary>

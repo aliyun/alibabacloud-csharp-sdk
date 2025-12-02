@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class CreateCallbackRequest : TeaModel {
         /// <summary>
+        /// <para>Encryption algorithm.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SHA256</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string CryptType { get; set; }
 
+        /// <summary>
+        /// <para>Plan name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>消息通知1</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Review result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>all</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Scope { get; set; }
 
         /// <summary>
+        /// <para>Callback URL.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://console.aliyun.com">https://console.aliyun.com</a></para>
         /// </summary>

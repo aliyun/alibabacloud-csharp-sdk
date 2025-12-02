@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetTextScanResultShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>End date and time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-08-24 10:01:55</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>Page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>Search criteria.</para>
+        /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
         public string QueryShrink { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -45,11 +56,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Sort fields.</para>
+        /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string SortShrink { get; set; }
 
         /// <summary>
+        /// <para>Start date and time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-08-11 09:00:19</para>
         /// </summary>

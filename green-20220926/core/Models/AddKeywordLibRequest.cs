@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class AddKeywordLibRequest : TeaModel {
+        /// <summary>
+        /// <para>Keywords, with multiple keywords separated by \n.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>keywords1\nkeywords2</para>
+        /// </summary>
         [NameInMap("Keywords")]
         [Validation(Required=false)]
         public string Keywords { get; set; }
 
         /// <summary>
+        /// <para>The name of the keywords file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>upload/1e5353c0-0d91-40ba-9d41-ae7abd3fe561.txt</para>
         /// </summary>
@@ -21,11 +29,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string KeywordsObject { get; set; }
 
+        /// <summary>
+        /// <para>The name of the keyword library.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_keyword_lib</para>
+        /// </summary>
         [NameInMap("LibName")]
         [Validation(Required=false)]
         public string LibName { get; set; }
 
         /// <summary>
+        /// <para>Region ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>

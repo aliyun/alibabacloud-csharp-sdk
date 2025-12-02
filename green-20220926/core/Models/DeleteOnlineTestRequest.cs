@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class DeleteOnlineTestRequest : TeaModel {
         /// <summary>
+        /// <para>Region ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>image</para>
         /// </summary>

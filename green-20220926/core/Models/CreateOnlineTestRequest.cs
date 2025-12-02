@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class CreateOnlineTestRequest : TeaModel {
         /// <summary>
+        /// <para>Data ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string DataId { get; set; }
 
         /// <summary>
+        /// <para>Resource Type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>video</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>Service Code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>VideoModeration</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
+        /// <para>Detection URL</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxxxxxxxx.com/data/data.png">https://xxxxxxxxxx.com/data/data.png</a></para>
         /// </summary>

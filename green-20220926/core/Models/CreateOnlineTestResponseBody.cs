@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class CreateOnlineTestResponseBody : TeaModel {
         /// <summary>
+        /// <para>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Service Code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>VideoModeration</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
+        /// <para>Detection Task ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxx-xxxxx</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>Detection Status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
+        /// <para>Detection URL</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxxxxxxxx.com/data/data.png">https://xxxxxxxxxx.com/data/data.png</a></para>
         /// </summary>

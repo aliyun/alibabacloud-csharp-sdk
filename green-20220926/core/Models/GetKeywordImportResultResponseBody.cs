@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetKeywordImportResultResponseBody : TeaModel {
         /// <summary>
+        /// <para>Error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>Returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetKeywordImportResultResponseBodyData Data { get; set; }
         public class GetKeywordImportResultResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Internationalization key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -29,11 +36,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public string I18nKey { get; set; }
 
+            /// <summary>
+            /// <para>List of keywords with illegal length (too long or too short).</para>
+            /// </summary>
             [NameInMap("IllegalLengthKeywords")]
             [Validation(Required=false)]
             public List<string> IllegalLengthKeywords { get; set; }
 
             /// <summary>
+            /// <para>Invalid count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -41,11 +53,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public int? InvalidCount { get; set; }
 
+            /// <summary>
+            /// <para>List of invalid keywords.</para>
+            /// </summary>
             [NameInMap("InvalidKeywords")]
             [Validation(Required=false)]
             public List<string> InvalidKeywords { get; set; }
 
             /// <summary>
+            /// <para>Keyword library ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>customxx_xxx</para>
             /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string LibId { get; set; }
 
             /// <summary>
+            /// <para>Task progress percentage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? Progress { get; set; }
 
             /// <summary>
+            /// <para>Repeat count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -69,11 +90,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public int? RepeatCount { get; set; }
 
+            /// <summary>
+            /// <para>List of repeated keywords.</para>
+            /// </summary>
             [NameInMap("RepeatKeywords")]
             [Validation(Required=false)]
             public List<string> RepeatKeywords { get; set; }
 
             /// <summary>
+            /// <para>Success count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8</para>
             /// </summary>
@@ -82,6 +108,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
+            /// <para>Tips message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -90,6 +118,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Tips { get; set; }
 
             /// <summary>
+            /// <para>Total count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -100,6 +130,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
+        /// <para>Further description of the error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -108,6 +140,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
+        /// <para>ID assigned by the backend to uniquely identify a request, which can be used for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>
@@ -116,6 +150,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Success indicator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

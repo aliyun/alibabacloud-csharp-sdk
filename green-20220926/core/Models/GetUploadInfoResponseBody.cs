@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetUploadInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>Upload authorization ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>LTAI5t9HM*****EXQmw3DVH</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string AccessId { get; set; }
 
         /// <summary>
+        /// <para>Error code, consistent with HTTP status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>In seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>900</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? Expire { get; set; }
 
         /// <summary>
+        /// <para>Folder name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>image/upload/xxx</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Folder { get; set; }
 
         /// <summary>
+        /// <para>Upload host.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com</a></para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Host { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Key used for uploading files.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>image/upload/xxx</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Key { get; set; }
 
         /// <summary>
+        /// <para>Further description of the error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -73,11 +89,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string Msg { get; set; }
 
+        /// <summary>
+        /// <para>Used for front-end image upload.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>OSS upload file Policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>
@@ -86,6 +110,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Policy { get; set; }
 
         /// <summary>
+        /// <para>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>
@@ -94,6 +120,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Upload signature information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>iyu7VHblYj+mEF9p46cdGOlNPAw=</para>
         /// </summary>
@@ -102,6 +130,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Signature { get; set; }
 
         /// <summary>
+        /// <para>Success indicator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

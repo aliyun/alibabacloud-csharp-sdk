@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class AddKeywordsRequest : TeaModel {
+        /// <summary>
+        /// <para>The keywords to be added.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>keywords</para>
+        /// </summary>
         [NameInMap("Keywords")]
         [Validation(Required=false)]
         public string Keywords { get; set; }
 
         /// <summary>
+        /// <para>The name of the keyword file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>upload/1e5353c0-0d91-40ba-9d41-ae7abd3fe561.txt</para>
         /// </summary>
@@ -22,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string KeywordsObject { get; set; }
 
         /// <summary>
+        /// <para>The id of keyword library.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>customxx_xxxx</para>
         /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string LibId { get; set; }
 
         /// <summary>
+        /// <para>Region ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
