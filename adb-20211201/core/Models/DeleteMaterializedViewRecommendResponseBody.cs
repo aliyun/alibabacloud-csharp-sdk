@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
-    public class ModifyMaterializedViewRecommendResponseBody : TeaModel {
+    public class DeleteMaterializedViewRecommendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>F0983B43-B2EC-536A-8791-142B5CF1E9B6</para>
+        /// <para>7B081A85-0568-5E54-82EF-6958C4A3D4B4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

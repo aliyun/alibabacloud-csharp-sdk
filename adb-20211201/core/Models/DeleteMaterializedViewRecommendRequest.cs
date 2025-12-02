@@ -8,50 +8,54 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
-    public class ModifySqlTemplatePositionRequest : TeaModel {
+    public class DeleteMaterializedViewRecommendRequest : TeaModel {
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>amv-uf6wjk5xxxxxxxxxx</para>
+        /// <para>amv-uf66*****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("OwnerAccount")]
+        [Validation(Required=false)]
+        public string OwnerAccount { get; set; }
+
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
         /// <summary>
         /// <para>The region ID.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// <para>The ID of the template group.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("TargetTemplateGroupId")]
+        [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
-        public long? TargetTemplateGroupId { get; set; }
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The template ID.</para>
+        /// <para>The name of the recommendation task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>210208</para>
+        /// <para>my_task_1</para>
         /// </summary>
-        [NameInMap("TemplateId")]
+        [NameInMap("TaskName")]
         [Validation(Required=false)]
-        public long? TemplateId { get; set; }
+        public string TaskName { get; set; }
 
     }
 

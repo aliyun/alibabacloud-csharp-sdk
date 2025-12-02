@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSparkAuditLogRecordsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>amv-bp1j7******78j8i</para>
         /// </summary>
@@ -33,11 +37,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The list of SQL audit logs.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeSparkAuditLogRecordsResponseBodyItems> Items { get; set; }
         public class DescribeSparkAuditLogRecordsResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The Spark application ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>s202411061011hzc5d6476000****</para>
             /// </summary>
@@ -46,6 +55,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AppId { get; set; }
 
             /// <summary>
+            /// <para>The source IP address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
             /// </summary>
@@ -54,6 +65,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ClientIp { get; set; }
 
             /// <summary>
+            /// <para>The SQL execution error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>notFoundIp</para>
             /// </summary>
@@ -62,6 +75,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
+            /// <para>The SQL execution error stack trace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>notFoundIpException</para>
             /// </summary>
@@ -70,6 +85,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ErrorTrace { get; set; }
 
             /// <summary>
+            /// <para>The start time of the SQL statement. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-01-23T16:05:08Z</para>
             /// </summary>
@@ -78,6 +95,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ExecuteTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the query executed within the Spark application.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -86,6 +105,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string InnerQueryId { get; set; }
 
             /// <summary>
+            /// <para>Whether it can be diagnosed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -94,6 +115,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? IsDiagnosable { get; set; }
 
             /// <summary>
+            /// <para>The query ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>999f2439-6b10-xxxx-a5d3-daf3b35c****</para>
             /// </summary>
@@ -102,6 +125,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ProcessId { get; set; }
 
             /// <summary>
+            /// <para>The resource group name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test_job</para>
             /// </summary>
@@ -110,6 +135,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ResourceGroupName { get; set; }
 
             /// <summary>
+            /// <para>The SQL statement.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SELECT * FROM adb_hdfs_import_source</para>
             /// </summary>
@@ -118,7 +145,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SQLText { get; set; }
 
             /// <summary>
-            /// <para>Statement ID。</para>
+            /// <para>The ID of the statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fbd22066-1c03-xxxx-aa16-6ae28288****</para>
@@ -128,6 +155,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string StatementId { get; set; }
 
             /// <summary>
+            /// <para>The source from which the query was initiated.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>SQL_EDITOR: SQL_EDITOR.</description></item>
+            /// <item><description>JDBC: JDBC.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>SQL_EDITOR</para>
             /// </summary>
@@ -136,6 +170,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string StatementSource { get; set; }
 
             /// <summary>
+            /// <para>The execution status of the SQL statement.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>cancel: The task is canceled .</description></item>
+            /// <item><description>finished: The execution succeeds .</description></item>
+            /// <item><description>error: The execution fails .</description></item>
+            /// <item><description>timeout: The execution of the command timed out.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>finish</para>
             /// </summary>
@@ -144,6 +187,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The duration of the SQL statement. Unit: milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>40000</para>
             /// </summary>
@@ -152,6 +197,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? TotalTime { get; set; }
 
             /// <summary>
+            /// <para>The username that is used to execute SQL statements.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test_user</para>
             /// </summary>
@@ -162,6 +209,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -170,6 +219,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -178,6 +229,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2D5867CF-423F-559F-BBB1-199A289E****</para>
         /// </summary>
@@ -186,6 +239,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

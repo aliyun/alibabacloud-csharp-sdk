@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class UpdateApsWebhookRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,11 +31,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The array of webhooks.</para>
+        /// </summary>
         [NameInMap("Webhook")]
         [Validation(Required=false)]
         public List<UpdateApsWebhookRequestWebhook> Webhook { get; set; }
         public class UpdateApsWebhookRequestWebhook : TeaModel {
             /// <summary>
+            /// <para>Signed key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ABC**</para>
             /// </summary>
@@ -42,6 +49,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The name of the webhook.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>exampleWebhookName</para>
             /// </summary>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The URL of the request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/webhook">https://example.com/webhook</a></para>
             /// </summary>
@@ -58,7 +69,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Url { get; set; }
 
             /// <summary>
-            /// <para>Webhook ID。</para>
+            /// <para>The ID of the webhook.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -69,6 +80,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? WebhookId { get; set; }
 
             /// <summary>
+            /// <para>The notification method. Valid values: dingtalk. lark.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dingtalk</para>
             /// </summary>

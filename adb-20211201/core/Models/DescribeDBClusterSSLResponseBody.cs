@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBClusterSSLResponseBody : TeaModel {
         /// <summary>
+        /// <para>The endpoint that is protected by SSL encryption.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>amv-*********.ads.aliyuncs.com</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
+        /// <para>The validity period of the SSL certificate. Format: yyyy-MM-ddTHH:mm:ssZ(UTC time).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-10-11T08:16:43Z</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>348303D8-6F42-5141-9B00-A6EECA1E37B6</para>
         /// </summary>
@@ -34,6 +40,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether SSL encryption is enabled. Default value: true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: enabled</description></item>
+        /// <item><description>false: disabled</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

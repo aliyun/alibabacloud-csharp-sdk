@@ -78,6 +78,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string EngineParamsShrink { get; set; }
 
+        [NameInMap("GpuElasticPlan")]
+        [Validation(Required=false)]
+        public string GpuElasticPlanShrink { get; set; }
+
         /// <summary>
         /// <para>The name of the resource group.</para>
         /// <list type="bullet">

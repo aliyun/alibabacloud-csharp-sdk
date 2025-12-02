@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyMaterializedViewRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The name of the database where the materialized view resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DbName { get; set; }
 
         /// <summary>
+        /// <para>Enable the refresh delay alert. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Enables alert.</description></item>
+        /// <item><description>false: Disables alert.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -38,6 +46,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? EnableDelayAlert { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to send alerts when the refresh task fails. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Send alerts.</description></item>
+        /// <item><description>false: Alerts disabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? EnableFailureAlert { get; set; }
 
         /// <summary>
+        /// <para>The name of the resource group to which the materialized view is bound.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>res_1</para>
         /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string GroupName { get; set; }
 
         /// <summary>
+        /// <para>Refresh delay tolerance (in minutes).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -70,6 +88,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable query rewrite. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Enables query rewrite.</description></item>
+        /// <item><description>false: Disables query rewrite.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -78,6 +102,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? QueryWrite { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -94,6 +120,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The name of the materialized view.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

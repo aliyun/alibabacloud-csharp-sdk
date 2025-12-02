@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateApsWebhookRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The type of the task. Valid value: Task type. SLS or OSS Export Task: ResultExport.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string JobType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region in which to create the dedicated block storage cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,11 +42,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The array of webhooks.</para>
+        /// </summary>
         [NameInMap("Webhook")]
         [Validation(Required=false)]
         public List<CreateApsWebhookRequestWebhook> Webhook { get; set; }
         public class CreateApsWebhookRequestWebhook : TeaModel {
             /// <summary>
+            /// <para>Signed key.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -52,6 +60,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The name of the webhook.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MyWebhookName</para>
             /// </summary>
@@ -60,6 +70,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The request path.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -70,6 +81,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Url { get; set; }
 
             /// <summary>
+            /// <para>The notification method. Valid values: dingtalk. lark.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

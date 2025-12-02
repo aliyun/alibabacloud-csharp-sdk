@@ -83,6 +83,30 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public Dictionary<string, object> EngineParams { get; set; }
 
+            [NameInMap("GpuElasticPlan")]
+            [Validation(Required=false)]
+            public DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan GpuElasticPlan { get; set; }
+            public class DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan : TeaModel {
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+                [NameInMap("Rules")]
+                [Validation(Required=false)]
+                public List<DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules> Rules { get; set; }
+                public class DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules : TeaModel {
+                    [NameInMap("EndCronExpression")]
+                    [Validation(Required=false)]
+                    public string EndCronExpression { get; set; }
+
+                    [NameInMap("StartCronExpression")]
+                    [Validation(Required=false)]
+                    public string StartCronExpression { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <para>The name of the resource group.</para>
             /// 

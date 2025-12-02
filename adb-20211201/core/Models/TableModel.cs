@@ -41,6 +41,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        [NameInMap("CreatedBySource")]
+        [Validation(Required=false)]
+        public string CreatedBySource { get; set; }
+
+        [NameInMap("CreatedByUser")]
+        [Validation(Required=false)]
+        public string CreatedByUser { get; set; }
+
         [NameInMap("CurrentVersion")]
         [Validation(Required=false)]
         public long? CurrentVersion { get; set; }

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ListApsWebhookRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para><b>JobType</b>\
+        /// Job type. SLS or OSS Export Task: ResultExport.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ResultExport</para>
         /// </summary>
@@ -28,6 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string JobType { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
