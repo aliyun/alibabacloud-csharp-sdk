@@ -741,6 +741,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             {
                 query["BackupSetId"] = request.BackupSetId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -868,6 +872,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetId))
             {
                 query["BackupSetId"] = request.BackupSetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {

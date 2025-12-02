@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string BackupSetId { get; set; }
 
+        [NameInMap("Category")]
+        [Validation(Required=false)]
+        public string Category { get; set; }
+
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token. Make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
