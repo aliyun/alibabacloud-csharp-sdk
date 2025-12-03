@@ -235,6 +235,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <b>Example:</b>
                 /// <para>示例值示例值</para>
                 /// </summary>
+                [NameInMap("Source")]
+                [Validation(Required=false)]
+                public string Source { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>示例值示例值</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

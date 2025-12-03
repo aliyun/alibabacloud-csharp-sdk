@@ -109,6 +109,46 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public class QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("BackgroundEnabled")]
+                    [Validation(Required=false)]
+                    public bool? BackgroundEnabled { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
+                    [NameInMap("BackgroundSound")]
+                    [Validation(Required=false)]
+                    public long? BackgroundSound { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
+                    [NameInMap("BackgroundVolume")]
+                    [Validation(Required=false)]
+                    public long? BackgroundVolume { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("MixingEnabled")]
+                    [Validation(Required=false)]
+                    public bool? MixingEnabled { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
+                    [NameInMap("MixingTemplate")]
+                    [Validation(Required=false)]
+                    public long? MixingTemplate { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
                     /// <para>34</para>
                     /// </summary>
                     [NameInMap("TtsSpeed")]
@@ -130,6 +170,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     [NameInMap("TtsVolume")]
                     [Validation(Required=false)]
                     public long? TtsVolume { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>示例值</para>
+                    /// </summary>
+                    [NameInMap("VoiceCode")]
+                    [Validation(Required=false)]
+                    public string VoiceCode { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>示例值</para>
+                    /// </summary>
+                    [NameInMap("VoiceType")]
+                    [Validation(Required=false)]
+                    public string VoiceType { get; set; }
 
                 }
 
@@ -525,6 +581,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
                     /// <summary>
                     /// <b>Example:</b>
+                    /// <para>示例值示例值示例值</para>
+                    /// </summary>
+                    [NameInMap("PhoneTagSource")]
+                    [Validation(Required=false)]
+                    public string PhoneTagSource { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
                     /// <para>ENUM</para>
                     /// </summary>
                     [NameInMap("PhoneTagType")]
@@ -540,6 +604,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 [NameInMap("Prologue")]
                 [Validation(Required=false)]
                 public string Prologue { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>示例值示例值</para>
+                /// </summary>
+                [NameInMap("RecordingFile")]
+                [Validation(Required=false)]
+                public string RecordingFile { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("StartWordType")]
+                [Validation(Required=false)]
+                public long? StartWordType { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
