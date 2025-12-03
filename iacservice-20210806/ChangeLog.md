@@ -6,6 +6,10 @@
 - Update API GetJob: add response parameters Body.job.statusDetail.errorMessage.
 
 
+2025-12-03 Version: 2.1.1
+- Update API GetJob: add response parameters Body.job.statusDetail.errorMessage.
+
+
 2025-12-03 Version: 2.1.0
 - Support API GenerateModule.
 - Update API GetJob: add response parameters Body.job.config.hasConfigProactive.
