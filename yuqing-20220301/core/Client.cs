@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.Yuqing20220301
         /// <returns>
         /// ConsoleProxyResponse
         /// </returns>
-        [Obsolete("OpenAPI ConsoleProxy is deprecated\n")]
+        [Obsolete("OpenAPI ConsoleProxy is deprecated")]
         // Deprecated
         public ConsoleProxyResponse ConsoleProxyWithOptions(ConsoleProxyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.Yuqing20220301
         /// <returns>
         /// ConsoleProxyResponse
         /// </returns>
-        [Obsolete("OpenAPI ConsoleProxy is deprecated\n")]
+        [Obsolete("OpenAPI ConsoleProxy is deprecated")]
         // Deprecated
         public async Task<ConsoleProxyResponse> ConsoleProxyWithOptionsAsync(ConsoleProxyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
@@ -455,7 +455,7 @@ namespace AlibabaCloud.SDK.Yuqing20220301
         /// <returns>
         /// ConsoleProxyResponse
         /// </returns>
-        [Obsolete("OpenAPI ConsoleProxy is deprecated\n")]
+        [Obsolete("OpenAPI ConsoleProxy is deprecated")]
         // Deprecated
         public ConsoleProxyResponse ConsoleProxy(ConsoleProxyRequest request)
         {
@@ -480,7 +480,7 @@ namespace AlibabaCloud.SDK.Yuqing20220301
         /// <returns>
         /// ConsoleProxyResponse
         /// </returns>
-        [Obsolete("OpenAPI ConsoleProxy is deprecated\n")]
+        [Obsolete("OpenAPI ConsoleProxy is deprecated")]
         // Deprecated
         public async Task<ConsoleProxyResponse> ConsoleProxyAsync(ConsoleProxyRequest request)
         {
