@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class CreateGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>group_wovwffm62xifdziem7an7xxxxx</para>
         /// </summary>

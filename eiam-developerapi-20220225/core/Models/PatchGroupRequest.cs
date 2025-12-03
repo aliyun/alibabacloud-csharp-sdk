@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class PatchGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The group name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>name001</para>
         /// </summary>

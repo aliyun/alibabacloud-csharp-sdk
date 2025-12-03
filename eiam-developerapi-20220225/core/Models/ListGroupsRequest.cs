@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class ListGroupsRequest : TeaModel {
         /// <summary>
+        /// <para>The prefix of the group name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>group_xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string GroupNameStartWith { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

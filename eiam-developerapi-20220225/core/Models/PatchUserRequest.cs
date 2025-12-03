@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class PatchUserRequest : TeaModel {
+        /// <summary>
+        /// <para>The extended fields of the account.</para>
+        /// </summary>
         [NameInMap("customFields")]
         [Validation(Required=false)]
         public List<PatchUserRequestCustomFields> CustomFields { get; set; }
         public class PatchUserRequestCustomFields : TeaModel {
             /// <summary>
+            /// <para>The name of the extended field. For more information about the type and valid values of the extended field, see the detailed description of the extended field in the IDaaS console.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>age</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string FieldName { get; set; }
 
             /// <summary>
+            /// <para>The value of the extended field.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test_value</para>
             /// </summary>
@@ -30,11 +37,11 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string FieldValue { get; set; }
 
             /// <summary>
-            /// <para>字段操作类型，取值可选范围：</para>
+            /// <para>The operation to be performed on the field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>add：添加。</description></item>
-            /// <item><description>replace：替换。若对应扩展字段无设置值，会转换为add操作。</description></item>
-            /// <item><description>remove：移除。</description></item>
+            /// <item><description>add</description></item>
+            /// <item><description>replace If you leave the value of the extended field empty, the replace operation is converted to an add operation.</description></item>
+            /// <item><description>remove</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -47,6 +54,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
+            /// <para>The type of the operation. This parameter is deprecated. Replace it with operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>replace</para>
@@ -69,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The email address of the user who owns the account.</para>
+        /// <para>The email address.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:example@example.com">example@example.com</a></para>
@@ -79,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the email address is verified. This field is required if an email address is specified. If you have no special requirement, set this parameter to true.</para>
+        /// <para>Specifies whether the email address is verified. This field is required if an email address is specified. If you have no special requirement, set this parameter to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -89,7 +97,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public bool? EmailVerified { get; set; }
 
         /// <summary>
-        /// <para>The mobile number of the user who owns the account.</para>
+        /// <para>The mobile number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>156xxxxxxx</para>
@@ -99,7 +107,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the mobile number is verified. This field is required if a mobile number is specified. If you have no special requirement, set this parameter to true.</para>
+        /// <para>Specifies whether the mobile number is verified. This field is required if a mobile number is specified. If you have no special requirement, set this parameter to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -119,7 +127,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string PhoneRegion { get; set; }
 
         /// <summary>
-        /// <para>The username of the account.</para>
+        /// <para>The name of the account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name001</para>

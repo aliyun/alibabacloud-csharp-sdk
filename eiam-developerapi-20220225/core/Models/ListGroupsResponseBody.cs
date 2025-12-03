@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class ListGroupsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListGroupsResponseBodyData> Data { get; set; }
         public class ListGroupsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The time when the group was created. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The group description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>description_demo</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The external ID of the group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>group_ufdsasn35ea5lmthk267xxxxx</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string GroupExternalId { get; set; }
 
             /// <summary>
+            /// <para>The group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>group_ufdsasn35ea5lmthk267xxxxx</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string GroupId { get; set; }
 
             /// <summary>
+            /// <para>The group name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>name_test</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string GroupName { get; set; }
 
             /// <summary>
+            /// <para>The source ID of the group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string GroupSourceId { get; set; }
 
             /// <summary>
+            /// <para>The source type of the group. Valid values: build_in, ding_talk, ad, and ldap.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>build_in</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string GroupSourceType { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The time when the group was last updated. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
             /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The start position of the query. If this parameter is left empty, the query starts from the beginning.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NTxxx</para>
         /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>

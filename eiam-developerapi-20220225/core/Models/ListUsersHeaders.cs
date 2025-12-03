@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// <para>The authentication information. Format: Bearer ${access_token}. Example: Bearer ATxxxx.</para>
+        /// <para>The authentication information. The value is in the Bearer ${access_token} format. Example: Bearer ATxxxx.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

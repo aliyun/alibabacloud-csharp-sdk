@@ -95,8 +95,6 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public long? LockExpireTime { get; set; }
 
             /// <summary>
-            /// <para>密码是否已设置</para>
-            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>

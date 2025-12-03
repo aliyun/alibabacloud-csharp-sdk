@@ -70,22 +70,13 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string ExclusiveTag { get; set; }
 
         /// <summary>
-        /// <para>The authorization type. Valid values:</para>
+        /// <para>The supported authorization types are as follows:</para>
         /// <list type="bullet">
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// </list>
-        /// <!---->
-        /// 
-        /// <list type="bullet">
-        /// <item><description>authorization_code</description></item>
-        /// <item><description>urn:ietf:params:oauth:grant-type:device_code</description></item>
-        /// <item><description>refresh_token</description></item>
-        /// <item><description>client_credentials: You must specify the client_id and client_secret parameters.</description></item>
-        /// <item><description>password: This option is not supported.</description></item>
+        /// <item><description>client_credentials:Client credentials flow, requires client_id and client_secret.</description></item>
+        /// <item><description>refresh_token:Refresh token flow.</description></item>
+        /// <item><description>authorization_code:Authorization code flow.</description></item>
+        /// <item><description>urn:ietf:params:oauth:grant-type:device_code:Device authorization flow.</description></item>
+        /// <item><description>password:Password (Resource Owner Password Credentials) flow.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

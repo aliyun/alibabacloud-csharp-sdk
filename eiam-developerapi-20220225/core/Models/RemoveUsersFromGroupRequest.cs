@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class RemoveUsersFromGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The account IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

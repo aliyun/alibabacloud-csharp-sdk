@@ -99,14 +99,14 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public bool? EmailVerified { get; set; }
 
         /// <summary>
-        /// <para>账户所属组列表。</para>
+        /// <para>The groups to which the account belongs.</para>
         /// </summary>
         [NameInMap("groups")]
         [Validation(Required=false)]
         public List<GetUserResponseBodyGroups> Groups { get; set; }
         public class GetUserResponseBodyGroups : TeaModel {
             /// <summary>
-            /// <para>组描述。</para>
+            /// <para>The group description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description_demo</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>组ID。</para>
+            /// <para>The group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>group_ufdsasn35ea5lmthk267xxxxx</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>组名称。</para>
+            /// <para>The group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name_test</para>
