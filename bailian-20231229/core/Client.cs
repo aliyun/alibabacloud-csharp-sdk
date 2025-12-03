@@ -1459,6 +1459,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 query["metaExtractColumns"] = request.MetaExtractColumnsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineCommercialCu))
+            {
+                query["pipelineCommercialCu"] = request.PipelineCommercialCu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineCommercialType))
+            {
+                query["pipelineCommercialType"] = request.PipelineCommercialType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineRetrieveRateLimitStrategy))
+            {
+                query["pipelineRetrieveRateLimitStrategy"] = request.PipelineRetrieveRateLimitStrategy;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -1634,6 +1646,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaExtractColumnsShrink))
             {
                 query["metaExtractColumns"] = request.MetaExtractColumnsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineCommercialCu))
+            {
+                query["pipelineCommercialCu"] = request.PipelineCommercialCu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineCommercialType))
+            {
+                query["pipelineCommercialType"] = request.PipelineCommercialType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineRetrieveRateLimitStrategy))
+            {
+                query["pipelineRetrieveRateLimitStrategy"] = request.PipelineRetrieveRateLimitStrategy;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -487,6 +487,30 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("pipelineCommercialCu")]
+        [Validation(Required=false)]
+        public int? PipelineCommercialCu { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>standard</para>
+        /// </summary>
+        [NameInMap("pipelineCommercialType")]
+        [Validation(Required=false)]
+        public string PipelineCommercialType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>downgrade</para>
+        /// </summary>
+        [NameInMap("pipelineRetrieveRateLimitStrategy")]
+        [Validation(Required=false)]
+        public string PipelineRetrieveRateLimitStrategy { get; set; }
+
     }
 
 }
