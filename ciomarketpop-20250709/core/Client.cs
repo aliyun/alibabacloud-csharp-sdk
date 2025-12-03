@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.CioMarketPop20250709
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "";
             CheckConfig(config);
             this._endpoint = GetEndpoint("ciomarketpop", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -73,7 +72,7 @@ namespace AlibabaCloud.SDK.CioMarketPop20250709
                 ReqBodyType = "formData",
                 BodyType = "array",
             };
-            return TeaModel.ToObject<GetEveryOneSellsFormListResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetEveryOneSellsFormListResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -111,7 +110,7 @@ namespace AlibabaCloud.SDK.CioMarketPop20250709
                 ReqBodyType = "formData",
                 BodyType = "array",
             };
-            return TeaModel.ToObject<GetEveryOneSellsFormListResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetEveryOneSellsFormListResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -203,7 +202,7 @@ namespace AlibabaCloud.SDK.CioMarketPop20250709
                 ReqBodyType = "formData",
                 BodyType = "string",
             };
-            return TeaModel.ToObject<PushEveryOneSellMsgResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<PushEveryOneSellMsgResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -259,7 +258,7 @@ namespace AlibabaCloud.SDK.CioMarketPop20250709
                 ReqBodyType = "formData",
                 BodyType = "string",
             };
-            return TeaModel.ToObject<PushEveryOneSellMsgResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<PushEveryOneSellMsgResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
