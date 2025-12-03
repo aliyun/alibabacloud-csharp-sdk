@@ -1,3 +1,6 @@
+2025-12-03 Version: 1.2.1
+- Generated csharp 2021-01-18 for mseap.
+
 2025-07-22 Version: 1.2.0
 - Support API GetOrderSummaryForPartner.
 
