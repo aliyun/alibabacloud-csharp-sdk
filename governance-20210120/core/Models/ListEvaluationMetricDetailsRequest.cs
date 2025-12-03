@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         [Validation(Required=false)]
         public long? AccountId { get; set; }
 
+        [NameInMap("Date")]
+        [Validation(Required=false)]
+        public string Date { get; set; }
+
         /// <summary>
         /// <para>The ID of the check item.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2841889.html">ListEvaluationMetadata</a> operation to query the ID of the check item.</para>

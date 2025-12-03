@@ -1560,6 +1560,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             {
                 query["AccountId"] = request.AccountId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Date))
+            {
+                query["Date"] = request.Date;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["Id"] = request.Id;
@@ -1625,6 +1629,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
             {
                 query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Date))
+            {
+                query["Date"] = request.Date;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {

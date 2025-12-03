@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class ListEvaluationMetricDetailsResponseBody : TeaModel {
+        [NameInMap("Date")]
+        [Validation(Required=false)]
+        public string Date { get; set; }
+
         /// <summary>
         /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// 
