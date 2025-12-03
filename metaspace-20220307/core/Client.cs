@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Metaspace20220307
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "";
             CheckConfig(config);
             this._endpoint = GetEndpoint("metaspace", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -93,7 +92,7 @@ namespace AlibabaCloud.SDK.Metaspace20220307
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ApplyCoordinationWithCodeResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ApplyCoordinationWithCodeResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -151,7 +150,7 @@ namespace AlibabaCloud.SDK.Metaspace20220307
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<ApplyCoordinationWithCodeResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ApplyCoordinationWithCodeResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -249,7 +248,7 @@ namespace AlibabaCloud.SDK.Metaspace20220307
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EndAllCoordinationByOwnerResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<EndAllCoordinationByOwnerResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -311,7 +310,7 @@ namespace AlibabaCloud.SDK.Metaspace20220307
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<EndAllCoordinationByOwnerResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<EndAllCoordinationByOwnerResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -413,7 +412,7 @@ namespace AlibabaCloud.SDK.Metaspace20220307
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GenerateCoordinationCodeResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GenerateCoordinationCodeResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -479,7 +478,7 @@ namespace AlibabaCloud.SDK.Metaspace20220307
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<GenerateCoordinationCodeResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GenerateCoordinationCodeResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
