@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <para>The description of the listener.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TCP listener</para>
+        /// <para>TCP_80</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>enable</para>
+        /// <para>disable</para>
         /// </summary>
         [NameInMap("SynProxy")]
         [Validation(Required=false)]

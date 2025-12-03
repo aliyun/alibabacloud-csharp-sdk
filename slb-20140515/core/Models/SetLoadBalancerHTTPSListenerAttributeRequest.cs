@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>B490B5EBF6F3CD4****</para>
+        /// <para>testCookie</para>
         /// </summary>
         [NameInMap("Cookie")]
         [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// The name must be 1 to 256 characters in length and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Listener1</para>
+        /// <para>https_80</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

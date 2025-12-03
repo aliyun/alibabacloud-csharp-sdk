@@ -339,11 +339,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <item><description><b>tch</b>: specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are distributed to the same backend server.</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
         /// <item><description>Only high-performance CLB instances support the <b>sch</b> and <b>tch</b> algorithms.</description></item>
         /// <item><description>CLB does not support converting the <b>wrr</b> and <b>rr</b> algorithms to sch or tch. You cannot switch the hash algorithm from one to another.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>wrr</para>

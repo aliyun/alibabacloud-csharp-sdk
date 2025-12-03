@@ -16,12 +16,15 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>nacl-a2do9e413e0spzasx****</para>
+        /// <para>acl-a2do9e413e0spzasx****</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the network access control list (ACL) that is associated with the listener.</para>
+        /// </summary>
         [NameInMap("AclIds")]
         [Validation(Required=false)]
         public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyAclIds AclIds { get; set; }
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <para>The maximum bandwidth of the listener. Unit: Mbit/s.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>-1</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <para>The cookie that is configured on the server.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B490B5EBF6F3CD402E515D22BCDA1598</para>
+        /// <para>testCookie</para>
         /// </summary>
         [NameInMap("Cookie")]
         [Validation(Required=false)]
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <para>The name of the listener.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>HTTPS_443</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -139,7 +142,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension> DomainExtension { get; set; }
             public class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension : TeaModel {
                 /// <summary>
-                /// <para>The endpoint.</para>
+                /// <para>The domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -149,7 +152,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the additional domain name.</para>
+                /// <para>The ID of the additional certificate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -159,7 +162,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 public string DomainExtensionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the server certificate that is associated with the domain name.</para>
+                /// <para>The ID of the certificate used by the domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>13344444****</para>
@@ -364,7 +367,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule> Rule { get; set; }
             public class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule : TeaModel {
                 /// <summary>
-                /// <para>The endpoint.</para>
+                /// <para>The domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -394,7 +397,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The request path.</para>
+                /// <para>The request URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/example</para>
@@ -404,10 +407,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 public string Url { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the server group that is associated with the forwarding rule.</para>
+                /// <para>The ID of the server group specified in the forwarding rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>12</para>
+                /// <para>rsp-cige6j5e********</para>
                 /// </summary>
                 [NameInMap("VServerGroupId")]
                 [Validation(Required=false)]
@@ -547,7 +550,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// <para>The key of tag N. Valid values of N: <b>1</b> to <b>20</b>. The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
+                /// <para>The key of tag N. Valid values of N: <b>1</b> to <b>20</b>. The tag value cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with <c>acs:</c> or <c>aliyun</c> or contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -557,7 +560,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The value of tag N. Valid values of N: <b>1</b> to <b>20</b>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with <c>acs:</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
+                /// <para>The value of tag N. Valid values of N: <b>1</b> to <b>20</b>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>

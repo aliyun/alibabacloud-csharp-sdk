@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// <para>The timeout period of a health check.</para>
-        /// <para>If a backend server, such as an Elastic Compute Service (ECS) instance, does not respond to a probe packet within the specified timeout period, the server fails the health check. Unit: seconds.</para>
+        /// <para>If a backend server, such as an Elastic Compute Service (ECS) instance, does not respond to a probe packet within the specified timeout period, the server fails the health check. Unit: seconds</para>
         /// <para>Valid values: <b>1</b> to <b>300</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from <b>fail</b> to <b>success</b>.</para>
-        /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
+        /// <para>Valid values: <b>2</b> to <b>10</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -214,9 +214,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The routing algorithm. Valid values:</para>
+        /// <para>The scheduling algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>wrr</b> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</description></item>
+        /// <item><description><b>wrr</b> (default): Backend servers with higher weights receive more requests than those with lower weights.</description></item>
         /// <item><description><b>rr</b>: Requests are distributed to backend servers in sequence.</description></item>
         /// <item><description><b>sch</b>: specifies consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</description></item>
         /// <item><description><b>tch</b>: specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are distributed to the same backend server.</description></item>
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// <para>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from <b>success</b> to <b>fail</b>.</para>
-        /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
+        /// <para>Valid values: <b>2</b> to <b>10</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

@@ -108,8 +108,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// <para>The network type of the internal-facing CLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>vpc:</b> VPC.</description></item>
-        /// <item><description><b>classic:</b> classic network.</description></item>
+        /// <item><description><b>vpc</b>: VPC</description></item>
+        /// <item><description><b>Classic</b>: classic network</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// <para>The ID of the region where the CLB instance is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401682.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

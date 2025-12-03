@@ -234,8 +234,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 /// <summary>
                 /// <para>The network type of the internal-facing CLB instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>vpc:</b> VPC.</description></item>
-                /// <item><description><b>classic:</b> classic network.</description></item>
+                /// <item><description><b>vpc</b>: VPC</description></item>
+                /// <item><description><b>Classic</b>: classic network</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 public string SlaveZoneId { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the CLB instance.</para>
+                /// <para>The tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]

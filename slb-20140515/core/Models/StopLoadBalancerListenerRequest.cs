@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// <para>The frontend protocol that is used by the CLB instance.</para>
         /// <remarks>
-        /// <para>This parameter is required if the same port is used by listeners of different protocols.</para>
+        /// <para> This parameter is required if the same port is used by listeners of different protocols.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the SLB instance belongs.</para>
-        /// <para>To query the region ID, refer to the list of  <a href="https://help.aliyun.com/document_detail/40654.html">regions and zones</a> or call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a>.</para>
+        /// <para>The region ID of the Classic Load Balancer (CLB) instance.</para>
+        /// <para>To query the region ID, refer to the list of <a href="https://help.aliyun.com/document_detail/40654.html">regions and zones</a> or call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

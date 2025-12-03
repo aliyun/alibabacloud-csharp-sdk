@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public List<string> Ciphers { get; set; }
 
         /// <summary>
-        /// <para>The name of the TLS policy. The name must be 1 to 200 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the TLS policy. The name must be 2 to 200 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

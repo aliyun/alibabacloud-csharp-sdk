@@ -149,10 +149,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public string EnableHttp2 { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable <c>Gzip</c> compression to compress specific types of files. Valid values:</para>
+        /// <para>Specifies whether to enable <c>GZIP</c> compression to compress specific types of files. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: yes</description></item>
-        /// <item><description><b>off</b>: no</description></item>
+        /// <item><description><b>on</b></description></item>
+        /// <item><description><b>off</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -389,8 +389,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// <para>Specifies whether to enable session persistence. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: yes</description></item>
-        /// <item><description><b>off</b>: no</description></item>
+        /// <item><description><b>on</b></description></item>
+        /// <item><description><b>off</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -511,8 +511,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// <para>Specifies whether to use the <c>X-Forwarded-For</c> header to retrieve client IP addresses. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: yes</description></item>
-        /// <item><description><b>off</b>: no</description></item>
+        /// <item><description><b>on</b></description></item>
+        /// <item><description><b>off</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -539,8 +539,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// <para>Specifies whether to use the <c>SLB-ID</c> header to retrieve the ID of the CLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: yes</description></item>
-        /// <item><description><b>off</b>: no</description></item>
+        /// <item><description><b>on</b></description></item>
+        /// <item><description><b>off</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -551,10 +551,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public string XForwardedFor_SLBID { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the <c>SLB-IP</c> header to retrieve the virtual IP address (VIP) of the client. Valid values:</para>
+        /// <para>Specifies whether to use the <c>SLB-IP</c> header to retrieve the virtual IP address of the client. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: yes</description></item>
-        /// <item><description><b>off</b>: no</description></item>
+        /// <item><description><b>on</b></description></item>
+        /// <item><description><b>off</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -581,8 +581,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// <para>Specifies whether to use the <c>X-Forwarded-Proto</c> header to retrieve the listener protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: yes</description></item>
-        /// <item><description><b>off</b>: no</description></item>
+        /// <item><description><b>on</b></description></item>
+        /// <item><description><b>off</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

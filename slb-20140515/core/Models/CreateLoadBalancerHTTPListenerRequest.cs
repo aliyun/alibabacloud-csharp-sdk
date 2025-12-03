@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>123</para>
+        /// <para>acl-uf60jw******</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>B490B5EBF6F3CD402E515D22BCDA1598</para>
+        /// <para>testCookie</para>
         /// </summary>
         [NameInMap("Cookie")]
         [Validation(Required=false)]
@@ -365,7 +365,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// <para>The scheduling algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>wrr</b> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</description></item>
+        /// <item><description><b>wrr</b> (default): Backend servers with higher weights receive more requests than those with lower weights.</description></item>
         /// <item><description><b>rr</b>: Requests are distributed to backend servers in sequence.</description></item>
         /// </list>
         /// 
@@ -379,8 +379,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// <para>Specifies whether to enable session persistence. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: yes</description></item>
-        /// <item><description><b>off</b> (default): no</description></item>
+        /// <item><description><b>on</b></description></item>
+        /// <item><description><b>off</b> (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -495,10 +495,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public string XForwardedFor_ClientSrcPort { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the <c>SLB-ID</c> header is used to retrieve the ID of the CLB instance. Valid values:</para>
+        /// <para>Specifies whether to use the <c>SLB-ID</c> header to retrieve the ID of the CLB instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>on</b></description></item>
-        /// <item><description><b>off</b> (default): no</description></item>
+        /// <item><description><b>off</b> (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -509,10 +509,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public string XForwardedFor_SLBID { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the <c>SLB-IP</c> header is used to retrieve the virtual IP address (VIP) requested by the client. Valid values:</para>
+        /// <para>Specifies whether to use the <c>SLB-IP</c> header to retrieve the virtual IP address of the client. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>on</b></description></item>
-        /// <item><description><b>off</b> (default): no</description></item>
+        /// <item><description><b>off</b> (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -540,7 +540,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <para>Specifies whether to use the <c>X-Forwarded-Proto</c> header to retrieve the listener protocol. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>on</b></description></item>
-        /// <item><description><b>off</b> (default): no</description></item>
+        /// <item><description><b>off</b> (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

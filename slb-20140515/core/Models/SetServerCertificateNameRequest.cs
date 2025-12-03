@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>abc</para>
+        /// <para>mycert01</para>
         /// </summary>
         [NameInMap("ServerCertificateName")]
         [Validation(Required=false)]

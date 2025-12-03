@@ -16,12 +16,15 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>on</para>
+        /// <para>acl-uf60jw******</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
         public string AclId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the access control list (ACL).</para>
+        /// </summary>
         [NameInMap("AclIds")]
         [Validation(Required=false)]
         public DescribeLoadBalancerHTTPListenerAttributeResponseBodyAclIds AclIds { get; set; }
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <para>The cookie that is configured on the server.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B490B5EBF6F3CD402E515D22BCDA1598</para>
+        /// <para>testCookie</para>
         /// </summary>
         [NameInMap("Cookie")]
         [Validation(Required=false)]
@@ -115,7 +118,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <para>The name of the listener.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>HTTP_80</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -372,7 +375,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 /// <para>The ID of the server group specified in the forwarding rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>123</para>
+                /// <para>rsp-uf6w******</para>
                 /// </summary>
                 [NameInMap("VServerGroupId")]
                 [Validation(Required=false)]
@@ -472,7 +475,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             public List<DescribeLoadBalancerHTTPListenerAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeLoadBalancerHTTPListenerAttributeResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// <para>The key of tag N. Valid values of N: <b>1</b> to <b>20</b>. The tag key cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with <c>acs:</c> or <c>aliyun</c> or contain <c>http://</c> or <c>https://</c>.</para>
+                /// <para>The key of tag N. Valid values of N: <b>1</b> to <b>20</b>. The tag value cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with <c>acs:</c> or <c>aliyun</c> or contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -482,7 +485,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The value of tag N. Valid values of N: <b>1</b> to <b>20</b>. The tag value can be an empty string. The tag value must be 0 to 128 characters in length, and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+                /// <para>The value of tag N. Valid values of N: <b>1</b> to <b>20</b>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>

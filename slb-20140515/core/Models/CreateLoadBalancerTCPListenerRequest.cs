@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>1323</para>
+        /// <para>acl-uf60jwfiv6******</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of a connection. Unit: seconds.</para>
+        /// <para>The timeout period of a connection. Unit: seconds</para>
         /// <para>Valid values: <b>10</b> to <b>900</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -148,9 +148,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public int? HealthCheckConnectPort { get; set; }
 
         /// <summary>
-        /// <para>The maximum timeout period of a health check response. Unit: seconds.</para>
-        /// <para>Valid values: <b>1</b> to <b>300</b>.</para>
-        /// <para>Default value: <b>5</b>.</para>
+        /// <para>The maximum timeout period of a health check response. Unit: seconds</para>
+        /// <para>Valid values: <b>1</b> to <b>300</b></para>
+        /// <para>Default value: <b>5</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from <b>fail</b> to <b>success</b>.</para>
-        /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
+        /// <para>Valid values: <b>2</b> to <b>10</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -284,8 +284,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of session persistence. Unit: seconds.</para>
-        /// <para>Valid values: <b>0 to 3600</b>.</para>
+        /// <para>The timeout period of session persistence. Unit: seconds</para>
+        /// <para>Valid values: <b>0 to 3600</b></para>
         /// <para>Default value: <b>0</b>. If the default value is used, the system disables session persistence.</para>
         /// 
         /// <b>Example:</b>
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// <para>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</para>
-        /// <para>You can query the region ID from the <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a> list or by calling the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation.</para>
+        /// <para>For the most recent region list, refer to <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a> or call the <a href="https://help.aliyun.com/document_detail/2401682.html">DescribeRegions</a> operation the retrieve the information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -329,9 +329,9 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The routing algorithm. Valid values:</para>
+        /// <para>The scheduling algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>wrr</b> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</description></item>
+        /// <item><description><b>wrr</b> (default): Backend servers with higher weights receive more requests than those with lower weights.</description></item>
         /// <item><description><b>rr</b>: Requests are distributed to backend servers in sequence.</description></item>
         /// <item><description><b>sch</b>: specifies consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</description></item>
         /// <item><description><b>tch</b>: specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are distributed to the same backend server.</description></item>
@@ -380,7 +380,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         /// <summary>
         /// <para>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from <b>success</b> to <b>fail</b>.</para>
-        /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
+        /// <para>Valid values: <b>2</b> to <b>10</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

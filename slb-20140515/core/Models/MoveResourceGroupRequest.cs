@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID.</para>
+        /// <para>The ID of the resource for which you want to modify the resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The AccessKey ID provided by Alibaba Cloud.</para>
+        /// <para>The AccessKey ID provided to you by Alibaba Cloud for accessing the service.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LTAI5tPmFGUpmyWwD8gp****</para>
+        /// <para>yourAccessKeyID</para>
         /// </summary>
         [NameInMap("access_key_id")]
         [Validation(Required=false)]

@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>123</para>
+        /// <para>acl-uf60jw******</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>B490B5EBF6F3CD402E515D22BCDA****</para>
+        /// <para>testCookie</para>
         /// </summary>
         [NameInMap("Cookie")]
         [Validation(Required=false)]

@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds IP entries to a network access control list (ACL).</para>
+        /// <para>Adds IP entries to an access control list (ACL).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds IP entries to a network access control list (ACL).</para>
+        /// <para>Adds IP entries to an access control list (ACL).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds IP entries to a network access control list (ACL).</para>
+        /// <para>Adds IP entries to an access control list (ACL).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds IP entries to a network access control list (ACL).</para>
+        /// <para>Adds IP entries to an access control list (ACL).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2783,7 +2783,7 @@ namespace AlibabaCloud.SDK.Slb20140515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> A newly created listener is in the <b>stopped</b> state. After a listener is created, you can call the <a href="https://help.aliyun.com/document_detail/27597.html">StartLoadBalancerListener</a> operation to enable the listener to forward traffic to backend servers.</para>
+        /// <para> Newly created listeners are in the <b>stopped</b> state. After a listener is created, call the <a href="https://help.aliyun.com/document_detail/2401757.html">StartLoadBalancerListener</a> operation to enable the listener to forward network traffic.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2956,7 +2956,7 @@ namespace AlibabaCloud.SDK.Slb20140515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> A newly created listener is in the <b>stopped</b> state. After a listener is created, you can call the <a href="https://help.aliyun.com/document_detail/27597.html">StartLoadBalancerListener</a> operation to enable the listener to forward traffic to backend servers.</para>
+        /// <para> Newly created listeners are in the <b>stopped</b> state. After a listener is created, call the <a href="https://help.aliyun.com/document_detail/2401757.html">StartLoadBalancerListener</a> operation to enable the listener to forward network traffic.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3129,7 +3129,7 @@ namespace AlibabaCloud.SDK.Slb20140515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> A newly created listener is in the <b>stopped</b> state. After a listener is created, you can call the <a href="https://help.aliyun.com/document_detail/27597.html">StartLoadBalancerListener</a> operation to enable the listener to forward traffic to backend servers.</para>
+        /// <para> Newly created listeners are in the <b>stopped</b> state. After a listener is created, call the <a href="https://help.aliyun.com/document_detail/2401757.html">StartLoadBalancerListener</a> operation to enable the listener to forward network traffic.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3154,7 +3154,7 @@ namespace AlibabaCloud.SDK.Slb20140515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> A newly created listener is in the <b>stopped</b> state. After a listener is created, you can call the <a href="https://help.aliyun.com/document_detail/27597.html">StartLoadBalancerListener</a> operation to enable the listener to forward traffic to backend servers.</para>
+        /// <para> Newly created listeners are in the <b>stopped</b> state. After a listener is created, call the <a href="https://help.aliyun.com/document_detail/2401757.html">StartLoadBalancerListener</a> operation to enable the listener to forward network traffic.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5506,8 +5506,7 @@ namespace AlibabaCloud.SDK.Slb20140515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Limits</h2>
-        /// <para>The RuleIds parameter is required. You can specify up to 10 forwarding rules in each request.</para>
+        /// <para>You must specify at least one forwarding rule that you want to delete. You can specify at most 10 forwarding rules in each call.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5574,8 +5573,7 @@ namespace AlibabaCloud.SDK.Slb20140515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Limits</h2>
-        /// <para>The RuleIds parameter is required. You can specify up to 10 forwarding rules in each request.</para>
+        /// <para>You must specify at least one forwarding rule that you want to delete. You can specify at most 10 forwarding rules in each call.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5642,8 +5640,7 @@ namespace AlibabaCloud.SDK.Slb20140515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Limits</h2>
-        /// <para>The RuleIds parameter is required. You can specify up to 10 forwarding rules in each request.</para>
+        /// <para>You must specify at least one forwarding rule that you want to delete. You can specify at most 10 forwarding rules in each call.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5666,8 +5663,7 @@ namespace AlibabaCloud.SDK.Slb20140515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Limits</h2>
-        /// <para>The RuleIds parameter is required. You can specify up to 10 forwarding rules in each request.</para>
+        /// <para>You must specify at least one forwarding rule that you want to delete. You can specify at most 10 forwarding rules in each call.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7353,7 +7349,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries additional certificates.</para>
+        /// <para>Queries additional domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7423,7 +7419,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries additional certificates.</para>
+        /// <para>Queries additional domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7493,7 +7489,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries additional certificates.</para>
+        /// <para>Queries additional domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7511,7 +7507,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries additional certificates.</para>
+        /// <para>Queries additional domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16569,7 +16565,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a Classic Load Balancer (CLB) instance.</para>
+        /// <para>Changes the name of a Classic Load Balancer (CLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16635,7 +16631,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a Classic Load Balancer (CLB) instance.</para>
+        /// <para>Changes the name of a Classic Load Balancer (CLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16701,7 +16697,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a Classic Load Balancer (CLB) instance.</para>
+        /// <para>Changes the name of a Classic Load Balancer (CLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16719,7 +16715,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a Classic Load Balancer (CLB) instance.</para>
+        /// <para>Changes the name of a Classic Load Balancer (CLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18749,7 +18745,7 @@ namespace AlibabaCloud.SDK.Slb20140515
         /// <para>Before you make this API call, note the following:</para>
         /// <list type="bullet">
         /// <item><description>After the API call is successfully made, the listener enters the stopped state.</description></item>
-        /// <item><description>If the Server Load Balancer (SLB) instance to which the listener to be stopped belongs is in the locked state, this API call cannot be made.<remarks>
+        /// <item><description>If the Classic Load Balancer (CLB) instance to which the listener to be stopped belongs is in the locked state, this API call cannot be made.<remarks>
         /// <para> If you stop the listener, your services will be disrupted. Exercise caution when you perform this action.</para>
         /// </remarks>
         /// </description></item>
@@ -18831,7 +18827,7 @@ namespace AlibabaCloud.SDK.Slb20140515
         /// <para>Before you make this API call, note the following:</para>
         /// <list type="bullet">
         /// <item><description>After the API call is successfully made, the listener enters the stopped state.</description></item>
-        /// <item><description>If the Server Load Balancer (SLB) instance to which the listener to be stopped belongs is in the locked state, this API call cannot be made.<remarks>
+        /// <item><description>If the Classic Load Balancer (CLB) instance to which the listener to be stopped belongs is in the locked state, this API call cannot be made.<remarks>
         /// <para> If you stop the listener, your services will be disrupted. Exercise caution when you perform this action.</para>
         /// </remarks>
         /// </description></item>
@@ -18913,7 +18909,7 @@ namespace AlibabaCloud.SDK.Slb20140515
         /// <para>Before you make this API call, note the following:</para>
         /// <list type="bullet">
         /// <item><description>After the API call is successfully made, the listener enters the stopped state.</description></item>
-        /// <item><description>If the Server Load Balancer (SLB) instance to which the listener to be stopped belongs is in the locked state, this API call cannot be made.<remarks>
+        /// <item><description>If the Classic Load Balancer (CLB) instance to which the listener to be stopped belongs is in the locked state, this API call cannot be made.<remarks>
         /// <para> If you stop the listener, your services will be disrupted. Exercise caution when you perform this action.</para>
         /// </remarks>
         /// </description></item>
@@ -18943,7 +18939,7 @@ namespace AlibabaCloud.SDK.Slb20140515
         /// <para>Before you make this API call, note the following:</para>
         /// <list type="bullet">
         /// <item><description>After the API call is successfully made, the listener enters the stopped state.</description></item>
-        /// <item><description>If the Server Load Balancer (SLB) instance to which the listener to be stopped belongs is in the locked state, this API call cannot be made.<remarks>
+        /// <item><description>If the Classic Load Balancer (CLB) instance to which the listener to be stopped belongs is in the locked state, this API call cannot be made.<remarks>
         /// <para> If you stop the listener, your services will be disrupted. Exercise caution when you perform this action.</para>
         /// </remarks>
         /// </description></item>

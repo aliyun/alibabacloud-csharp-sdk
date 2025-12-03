@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeDomainExtensionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of additional certificates.</para>
+        /// <para>A list of additional certificates.</para>
         /// </summary>
         [NameInMap("DomainExtensions")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 public string DomainExtensionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the server certificate that is used by the domain name.</para>
+                /// <para>The ID of the certificate used by the domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1231579085529123_166f8204689_1714763408_70998****</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>48C1B671-C6DB-4DDE-9B30-10557E36CDE0</para>

@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <summary>
         /// <para>The network type of the CLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>vpc</b></description></item>
-        /// <item><description><b>classic</b></description></item>
+        /// <item><description><b>vpc</b>: VPC</description></item>
+        /// <item><description><b>Classic</b>: classic network</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

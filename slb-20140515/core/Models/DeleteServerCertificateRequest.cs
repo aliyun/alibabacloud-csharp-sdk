@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the Server Load Balancer (SLB) instance is created.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query region IDs.</para>
+        /// <para>The region ID of the Classic Load Balancer (CLB) instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the server certificate.</para>
+        /// <para>The server certificate ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

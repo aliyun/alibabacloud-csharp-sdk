@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public string DomainExtensionId { get; set; }
 
         /// <summary>
-        /// <para>The frontend port of the HTTPS listener that is configured for the Classic Load Balancer (CLB) instance. Valid values: <b>1 to 65535</b>.</para>
+        /// <para>The frontend port of the HTTPS listener that is configured for the SLB instance. Valid values: <b>1 to 65535</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public int? ListenerPort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CLB instance.</para>
+        /// <para>The SLB instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the CLB instance is deployed.</para>
+        /// <para>The region ID of the Server Load Balancer (SLB) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

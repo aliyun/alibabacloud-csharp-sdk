@@ -52,7 +52,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public string ListenerProtocol { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CLB instance. You can specify at most 10 IDs.</para>
+        /// <para>The IDs of the CLB instances. You can specify up to 10 instance IDs.</para>
+        /// <remarks>
+        /// <para> If you do not use the SDK to call this operation, use the LoadBalancerId.N parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>lb-123wrwer</para>
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         public List<string> LoadBalancerId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return in each call.</para>
         /// <para>Valid values: <b>1</b> to <b>100</b>. If you do not specify this parameter, the default value <b>20</b> is used.</para>
         /// 
         /// <b>Example:</b>

@@ -253,11 +253,11 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
         /// <item><description>Only high-performance CLB instances support <b>sch</b>, <b>tch</b>, and <b>qch</b>.</description></item>
         /// <item><description>You cannot switch the algorithm used by a CLB instance from <b>wrr</b> or <b>rr</b> to consistent hashing or from consistent hashing to weighted round robin or round robin.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>wrr</para>

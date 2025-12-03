@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 /// <para>The ID of the backend server.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>vm-hrf******</para>
+                /// <para>eni-hhshhs****</para>
                 /// </summary>
                 [NameInMap("ServerId")]
                 [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ecs</para>
+                /// <para>eni</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</para>
+        /// <para>9DEC9C28-AB05-4DDF-9A78-6B0******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 /// <para>The tag key can be up to 64 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>TestKey</para>
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                 /// <para>The tag value can be up to 128 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>value</para>
+                /// <para>TestValue</para>
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]

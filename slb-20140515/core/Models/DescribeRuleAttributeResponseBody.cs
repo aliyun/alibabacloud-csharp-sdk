@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// <para>The domain name that is configured in the forwarding rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test.com</para>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>10.21.22.1</para>
+        /// <para>/rest</para>
         /// </summary>
         [NameInMap("HealthCheckURI")]
         [Validation(Required=false)]
