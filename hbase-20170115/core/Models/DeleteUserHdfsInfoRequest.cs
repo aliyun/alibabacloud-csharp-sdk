@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20170115.Models
 {
     public class DeleteUserHdfsInfoRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("NameService")]
         [Validation(Required=false)]
         public string NameService { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.HBase20170115.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

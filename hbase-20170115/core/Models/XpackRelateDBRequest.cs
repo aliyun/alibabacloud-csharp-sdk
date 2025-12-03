@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20170115.Models
 {
     public class XpackRelateDBRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DbClusterIds")]
         [Validation(Required=false)]
         public string DbClusterIds { get; set; }
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.HBase20170115.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RelateDbType")]
         [Validation(Required=false)]
         public string RelateDbType { get; set; }

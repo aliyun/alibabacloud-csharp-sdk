@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -12,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20170115.Models
 {
     public class AddUserHdfsInfoRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ExtInfo")]
         [Validation(Required=false)]
         public string ExtInfo { get; set; }
@@ -24,6 +27,9 @@ namespace AlibabaCloud.SDK.HBase20170115.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

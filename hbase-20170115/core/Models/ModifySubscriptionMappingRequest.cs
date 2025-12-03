@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20170115.Models
 {
     public class ModifySubscriptionMappingRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Mapping")]
         [Validation(Required=false)]
         public string Mapping { get; set; }
@@ -16,6 +19,10 @@ namespace AlibabaCloud.SDK.HBase20170115.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -25,6 +32,9 @@ namespace AlibabaCloud.SDK.HBase20170115.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("SubscriptionId")]
         [Validation(Required=false)]
         public string SubscriptionId { get; set; }

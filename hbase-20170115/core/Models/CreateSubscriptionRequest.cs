@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20170115.Models
 {
     public class CreateSubscriptionRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DestinationInstanceId")]
         [Validation(Required=false)]
         public string DestinationInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DestinationInstanceRegionId")]
         [Validation(Required=false)]
         public string DestinationInstanceRegionId { get; set; }
@@ -21,6 +27,9 @@ namespace AlibabaCloud.SDK.HBase20170115.Models
         [Validation(Required=false)]
         public string ExtraContext { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Mapping")]
         [Validation(Required=false)]
         public string Mapping { get; set; }
@@ -41,10 +50,16 @@ namespace AlibabaCloud.SDK.HBase20170115.Models
         [Validation(Required=false)]
         public string SlbServer { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("SourceInstanceId")]
         [Validation(Required=false)]
         public string SourceInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("SourceInstanceRegionId")]
         [Validation(Required=false)]
         public string SourceInstanceRegionId { get; set; }
@@ -53,6 +68,9 @@ namespace AlibabaCloud.SDK.HBase20170115.Models
         [Validation(Required=false)]
         public string SubscriptionDescription { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("SubscriptionType")]
         [Validation(Required=false)]
         public string SubscriptionType { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20170115.Models
 {
     public class AllocatePublicNetworkAddressRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
