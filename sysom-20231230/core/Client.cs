@@ -477,6 +477,168 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建宕机诊断任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVmcoreDiagnosisTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVmcoreDiagnosisTaskResponse
+        /// </returns>
+        public CreateVmcoreDiagnosisTaskResponse CreateVmcoreDiagnosisTaskWithOptions(CreateVmcoreDiagnosisTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DebuginfoCommonUrl))
+            {
+                body["debuginfoCommonUrl"] = request.DebuginfoCommonUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DebuginfoUrl))
+            {
+                body["debuginfoUrl"] = request.DebuginfoUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmesgUrl))
+            {
+                body["dmesgUrl"] = request.DmesgUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["taskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VmcoreUrl))
+            {
+                body["vmcoreUrl"] = request.VmcoreUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVmcoreDiagnosisTask",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/crashAgent/diagnosis/createDiagnosisTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVmcoreDiagnosisTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建宕机诊断任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVmcoreDiagnosisTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVmcoreDiagnosisTaskResponse
+        /// </returns>
+        public async Task<CreateVmcoreDiagnosisTaskResponse> CreateVmcoreDiagnosisTaskWithOptionsAsync(CreateVmcoreDiagnosisTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DebuginfoCommonUrl))
+            {
+                body["debuginfoCommonUrl"] = request.DebuginfoCommonUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DebuginfoUrl))
+            {
+                body["debuginfoUrl"] = request.DebuginfoUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmesgUrl))
+            {
+                body["dmesgUrl"] = request.DmesgUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["taskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VmcoreUrl))
+            {
+                body["vmcoreUrl"] = request.VmcoreUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVmcoreDiagnosisTask",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/crashAgent/diagnosis/createDiagnosisTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVmcoreDiagnosisTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建宕机诊断任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVmcoreDiagnosisTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVmcoreDiagnosisTaskResponse
+        /// </returns>
+        public CreateVmcoreDiagnosisTaskResponse CreateVmcoreDiagnosisTask(CreateVmcoreDiagnosisTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateVmcoreDiagnosisTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建宕机诊断任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVmcoreDiagnosisTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVmcoreDiagnosisTaskResponse
+        /// </returns>
+        public async Task<CreateVmcoreDiagnosisTaskResponse> CreateVmcoreDiagnosisTaskAsync(CreateVmcoreDiagnosisTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateVmcoreDiagnosisTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>用户删除推送告警的策略</para>
         /// </summary>
         /// 
@@ -4203,6 +4365,136 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询宕机诊断任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVmcoreDiagnosisTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVmcoreDiagnosisTaskResponse
+        /// </returns>
+        public GetVmcoreDiagnosisTaskResponse GetVmcoreDiagnosisTaskWithOptions(GetVmcoreDiagnosisTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVmcoreDiagnosisTask",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/crashAgent/diagnosis/queryTask",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVmcoreDiagnosisTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询宕机诊断任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVmcoreDiagnosisTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVmcoreDiagnosisTaskResponse
+        /// </returns>
+        public async Task<GetVmcoreDiagnosisTaskResponse> GetVmcoreDiagnosisTaskWithOptionsAsync(GetVmcoreDiagnosisTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVmcoreDiagnosisTask",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/crashAgent/diagnosis/queryTask",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVmcoreDiagnosisTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询宕机诊断任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVmcoreDiagnosisTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVmcoreDiagnosisTaskResponse
+        /// </returns>
+        public GetVmcoreDiagnosisTaskResponse GetVmcoreDiagnosisTask(GetVmcoreDiagnosisTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetVmcoreDiagnosisTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询宕机诊断任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVmcoreDiagnosisTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVmcoreDiagnosisTaskResponse
+        /// </returns>
+        public async Task<GetVmcoreDiagnosisTaskResponse> GetVmcoreDiagnosisTaskAsync(GetVmcoreDiagnosisTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetVmcoreDiagnosisTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>初始化SysOM，确保角色存在</para>
         /// </summary>
         /// 
@@ -7791,6 +8083,136 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListRegionsWithOptionsAsync(headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询历史宕机诊断任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVmcoreDiagnosisTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVmcoreDiagnosisTaskResponse
+        /// </returns>
+        public ListVmcoreDiagnosisTaskResponse ListVmcoreDiagnosisTaskWithOptions(ListVmcoreDiagnosisTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
+            {
+                query["days"] = request.Days;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVmcoreDiagnosisTask",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/crashAgent/diagnosis/queryTaskList",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVmcoreDiagnosisTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询历史宕机诊断任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVmcoreDiagnosisTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVmcoreDiagnosisTaskResponse
+        /// </returns>
+        public async Task<ListVmcoreDiagnosisTaskResponse> ListVmcoreDiagnosisTaskWithOptionsAsync(ListVmcoreDiagnosisTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
+            {
+                query["days"] = request.Days;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVmcoreDiagnosisTask",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/crashAgent/diagnosis/queryTaskList",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVmcoreDiagnosisTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询历史宕机诊断任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVmcoreDiagnosisTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVmcoreDiagnosisTaskResponse
+        /// </returns>
+        public ListVmcoreDiagnosisTaskResponse ListVmcoreDiagnosisTask(ListVmcoreDiagnosisTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListVmcoreDiagnosisTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询历史宕机诊断任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVmcoreDiagnosisTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVmcoreDiagnosisTaskResponse
+        /// </returns>
+        public async Task<ListVmcoreDiagnosisTaskResponse> ListVmcoreDiagnosisTaskAsync(ListVmcoreDiagnosisTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListVmcoreDiagnosisTaskWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
