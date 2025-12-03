@@ -103,6 +103,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string SemanticIndexUpdateTime { get; set; }
 
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }

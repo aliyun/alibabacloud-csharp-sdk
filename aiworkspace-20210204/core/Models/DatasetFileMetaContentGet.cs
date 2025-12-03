@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string SemanticIndexUpdateTime { get; set; }
 
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         /// <summary>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 

@@ -9984,6 +9984,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 query["StartTagUpdateTime"] = request.StartTagUpdateTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThumbnailMode))
             {
                 query["ThumbnailMode"] = request.ThumbnailMode;
@@ -10147,6 +10151,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTagUpdateTime))
             {
                 query["StartTagUpdateTime"] = request.StartTagUpdateTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThumbnailMode))
             {

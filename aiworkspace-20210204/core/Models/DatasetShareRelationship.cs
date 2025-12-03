@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string ExpiresAt { get; set; }
 
+        [NameInMap("Extra")]
+        [Validation(Required=false)]
+        public string Extra { get; set; }
+
         [NameInMap("IsSecureMode")]
         [Validation(Required=false)]
         public bool? IsSecureMode { get; set; }

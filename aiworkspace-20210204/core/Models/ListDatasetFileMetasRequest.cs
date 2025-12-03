@@ -203,6 +203,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string StartTagUpdateTime { get; set; }
 
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>w_100</para>
