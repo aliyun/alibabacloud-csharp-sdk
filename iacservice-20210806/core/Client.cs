@@ -3803,6 +3803,184 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>生成模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateModuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateModuleResponse
+        /// </returns>
+        public GenerateModuleResponse GenerateModuleWithOptions(GenerateModuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateSource))
+            {
+                body["generateSource"] = request.GenerateSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                body["parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Syntax))
+            {
+                body["syntax"] = request.Syntax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Template))
+            {
+                body["template"] = request.Template;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerraformProviderVersion))
+            {
+                body["terraformProviderVersion"] = request.TerraformProviderVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerraformResourceType))
+            {
+                body["terraformResourceType"] = request.TerraformResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateModule",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/explorer/generate/module",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateModuleResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateModuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateModuleResponse
+        /// </returns>
+        public async Task<GenerateModuleResponse> GenerateModuleWithOptionsAsync(GenerateModuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateSource))
+            {
+                body["generateSource"] = request.GenerateSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                body["parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Syntax))
+            {
+                body["syntax"] = request.Syntax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Template))
+            {
+                body["template"] = request.Template;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerraformProviderVersion))
+            {
+                body["terraformProviderVersion"] = request.TerraformProviderVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerraformResourceType))
+            {
+                body["terraformResourceType"] = request.TerraformResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateModule",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/explorer/generate/module",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateModuleResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateModuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateModuleResponse
+        /// </returns>
+        public GenerateModuleResponse GenerateModule(GenerateModuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GenerateModuleWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateModuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateModuleResponse
+        /// </returns>
+        public async Task<GenerateModuleResponse> GenerateModuleAsync(GenerateModuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GenerateModuleWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取Terraform运行结果</para>
         /// </summary>
         /// 

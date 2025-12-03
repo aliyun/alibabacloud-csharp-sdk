@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 [Validation(Required=false)]
                 public bool? AutoApply { get; set; }
 
+                [NameInMap("hasConfigProactive")]
+                [Validation(Required=false)]
+                public string HasConfigProactive { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>fales</para>
