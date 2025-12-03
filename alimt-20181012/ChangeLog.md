@@ -1,3 +1,6 @@
+2025-12-03 Version: 2.4.2
+- Update SDK.
+
 2025-07-16 Version: 2.4.1
 - Generated csharp 2018-10-12 for alimt.
 
