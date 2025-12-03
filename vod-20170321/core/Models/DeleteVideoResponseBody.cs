@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public List<string> ForbiddenVideoIds { get; set; }
 
+        [NameInMap("NonExistReferenceIds")]
+        [Validation(Required=false)]
+        public List<string> NonExistReferenceIds { get; set; }
+
         /// <summary>
         /// <para>The IDs of the videos that do not exist.</para>
         /// <remarks>

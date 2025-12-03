@@ -135,6 +135,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string ModificationTime { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>123-123</para>
+                /// </summary>
+                [NameInMap("ReferenceId")]
+                [Validation(Required=false)]
+                public string ReferenceId { get; set; }
+
+                /// <summary>
                 /// <para>The period of time in which the audio file remains in the restored state.</para>
                 /// 
                 /// <b>Example:</b>
@@ -1147,6 +1155,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("NonExistMediaIds")]
         [Validation(Required=false)]
         public List<string> NonExistMediaIds { get; set; }
+
+        [NameInMap("NonExistReferenceIds")]
+        [Validation(Required=false)]
+        public List<string> NonExistReferenceIds { get; set; }
 
         /// <summary>
         /// <para>The request ID.</para>

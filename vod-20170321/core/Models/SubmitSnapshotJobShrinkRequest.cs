@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? Interval { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>123-123</para>
+        /// </summary>
+        [NameInMap("ReferenceId")]
+        [Validation(Required=false)]
+        public string ReferenceId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the snapshot template.</para>
         /// <list type="bullet">
         /// <item><description>We recommend that you create a snapshot template before you specify the template ID. For more information about how to create a snapshot template, see <a href="https://help.aliyun.com/document_detail/99406.html">AddVodTemplate</a>.</description></item>

@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string MediaIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123-123,1234-1234</para>
+        /// </summary>
+        [NameInMap("ReferenceIds")]
+        [Validation(Required=false)]
+        public string ReferenceIds { get; set; }
+
     }
 
 }

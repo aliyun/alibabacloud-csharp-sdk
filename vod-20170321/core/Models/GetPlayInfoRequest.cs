@@ -156,6 +156,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ReAuthInfo { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>123-123</para>
+        /// </summary>
+        [NameInMap("ReferenceId")]
+        [Validation(Required=false)]
+        public string ReferenceId { get; set; }
+
+        /// <summary>
         /// <para>The type of the data to return. Default value: Single. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Single</b>: Only one latest transcoded stream is returned for each quality and format.</description></item>
@@ -205,7 +213,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <item><description>Obtain the value of the VideoId parameter in the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to upload the audio or video file.</description></item>
         /// <item><description>Obtain the value of VideoId by calling the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation. This method is applicable to files that have been uploaded.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>93ab850b4f654b6e91d24d81d44****</para>

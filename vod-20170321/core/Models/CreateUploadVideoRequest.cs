@@ -84,6 +84,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? FileSize { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>123-123</para>
+        /// </summary>
+        [NameInMap("ReferenceId")]
+        [Validation(Required=false)]
+        public string ReferenceId { get; set; }
+
+        /// <summary>
         /// <para>The storage address. Perform the following operations to obtain the storage address: Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <b>Configuration Management</b> &gt; <b>Media Management</b> &gt; <b>Storage</b>. On the Storage page, view the storage address.</para>
         /// <remarks>
         /// <para> If you leave this parameter empty, audio and video files are uploaded to the default storage address. If you specify a storage address, audio and video files are uploaded to the specified address.</para>

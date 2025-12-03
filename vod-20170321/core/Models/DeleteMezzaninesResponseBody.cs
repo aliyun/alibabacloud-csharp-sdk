@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DeleteMezzaninesResponseBody : TeaModel {
+        [NameInMap("NonExistReferenceIds")]
+        [Validation(Required=false)]
+        public List<string> NonExistReferenceIds { get; set; }
+
         /// <summary>
         /// <para>The IDs of the audio or video files that do not exist.</para>
         /// </summary>

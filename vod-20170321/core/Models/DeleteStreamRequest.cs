@@ -25,8 +25,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string JobIds { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>123-123</para>
+        /// </summary>
+        [NameInMap("ReferenceId")]
+        [Validation(Required=false)]
+        public string ReferenceId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the video.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>95948ddba24446b6aed5db985e78****</para>

@@ -73,8 +73,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string OutputType { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>123-123</para>
+        /// </summary>
+        [NameInMap("ReferenceId")]
+        [Validation(Required=false)]
+        public string ReferenceId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the video.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1f1a6fc03ca04814031b8a6559e****</para>

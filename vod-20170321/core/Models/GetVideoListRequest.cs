@@ -55,6 +55,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>123-123,1234-1234</para>
+        /// </summary>
+        [NameInMap("ReferenceIds")]
+        [Validation(Required=false)]
+        public string ReferenceIds { get; set; }
+
+        /// <summary>
         /// <para>The sorting method of the results. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>CreationTime:Desc</b> (default): The results are sorted in reverse chronological order based on the creation time.</description></item>

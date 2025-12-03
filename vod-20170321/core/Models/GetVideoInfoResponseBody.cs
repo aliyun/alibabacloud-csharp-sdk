@@ -145,6 +145,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ModificationTime { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>123-123</para>
+            /// </summary>
+            [NameInMap("ReferenceId")]
+            [Validation(Required=false)]
+            public string ReferenceId { get; set; }
+
+            /// <summary>
             /// <para>The region where the media file is stored.</para>
             /// 
             /// <b>Example:</b>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetVideoInfosResponseBody : TeaModel {
+        [NameInMap("NonExistReferenceIds")]
+        [Validation(Required=false)]
+        public List<string> NonExistReferenceIds { get; set; }
+
         /// <summary>
         /// <para>The IDs of the videos that do not exist.</para>
         /// </summary>
@@ -126,6 +130,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [NameInMap("ModificationTime")]
             [Validation(Required=false)]
             public string ModificationTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>123-123</para>
+            /// </summary>
+            [NameInMap("ReferenceId")]
+            [Validation(Required=false)]
+            public string ReferenceId { get; set; }
 
             /// <summary>
             /// <para>The period of time in which the audio file remains in the restored state.</para>

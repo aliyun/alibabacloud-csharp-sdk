@@ -513,6 +513,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 public string PreprocessStatus { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>123-123</para>
+                /// </summary>
+                [NameInMap("ReferenceId")]
+                [Validation(Required=false)]
+                public string ReferenceId { get; set; }
+
+                /// <summary>
                 /// <para>The period of time in which the audio file remains in the restored state.</para>
                 /// 
                 /// <b>Example:</b>
@@ -946,6 +954,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [NameInMap("PreprocessStatus")]
                 [Validation(Required=false)]
                 public string PreprocessStatus { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>123-123</para>
+                /// </summary>
+                [NameInMap("ReferenceId")]
+                [Validation(Required=false)]
+                public string ReferenceId { get; set; }
 
                 /// <summary>
                 /// <para>The period of time in which the video file remains in the restored state.</para>
