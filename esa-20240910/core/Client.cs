@@ -3367,6 +3367,18 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["IncludeHeader"] = request.IncludeHeader;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostBodyCacheKey))
+            {
+                query["PostBodyCacheKey"] = request.PostBodyCacheKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostBodySizeLimit))
+            {
+                query["PostBodySizeLimit"] = request.PostBodySizeLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostCache))
+            {
+                query["PostCache"] = request.PostCache;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryString))
             {
                 query["QueryString"] = request.QueryString;
@@ -3508,6 +3520,18 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeHeader))
             {
                 query["IncludeHeader"] = request.IncludeHeader;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostBodyCacheKey))
+            {
+                query["PostBodyCacheKey"] = request.PostBodyCacheKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostBodySizeLimit))
+            {
+                query["PostBodySizeLimit"] = request.PostBodySizeLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostCache))
+            {
+                query["PostCache"] = request.PostCache;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryString))
             {
@@ -42073,6 +42097,18 @@ namespace AlibabaCloud.SDK.ESA20240910
             {
                 query["IncludeHeader"] = request.IncludeHeader;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostBodyCacheKey))
+            {
+                query["PostBodyCacheKey"] = request.PostBodyCacheKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostBodySizeLimit))
+            {
+                query["PostBodySizeLimit"] = request.PostBodySizeLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostCache))
+            {
+                query["PostCache"] = request.PostCache;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryString))
             {
                 query["QueryString"] = request.QueryString;
@@ -42214,6 +42250,18 @@ namespace AlibabaCloud.SDK.ESA20240910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeHeader))
             {
                 query["IncludeHeader"] = request.IncludeHeader;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostBodyCacheKey))
+            {
+                query["PostBodyCacheKey"] = request.PostBodyCacheKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostBodySizeLimit))
+            {
+                query["PostBodySizeLimit"] = request.PostBodySizeLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostCache))
+            {
+                query["PostCache"] = request.PostCache;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryString))
             {

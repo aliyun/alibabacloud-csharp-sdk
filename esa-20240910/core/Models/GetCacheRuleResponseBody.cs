@@ -187,6 +187,26 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string IncludeHeader { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ignore</para>
+        /// </summary>
+        [NameInMap("PostBodyCacheKey")]
+        [Validation(Required=false)]
+        public string PostBodyCacheKey { get; set; }
+
+        [NameInMap("PostBodySizeLimit")]
+        [Validation(Required=false)]
+        public string PostBodySizeLimit { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>on</para>
+        /// </summary>
+        [NameInMap("PostCache")]
+        [Validation(Required=false)]
+        public string PostCache { get; set; }
+
+        /// <summary>
         /// <para>The query strings to be retained or deleted, supporting multiple values separated by spaces.</para>
         /// 
         /// <b>Example:</b>
