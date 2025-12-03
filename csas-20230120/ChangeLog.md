@@ -1,3 +1,18 @@
+2025-12-03 Version: 1.14.19
+- Update API CreatePrivateAccessPolicy: add request parameters ValidFrom.
+- Update API CreatePrivateAccessPolicy: add request parameters ValidTimeStatus.
+- Update API CreatePrivateAccessPolicy: add request parameters ValidUntil.
+- Update API GetPrivateAccessPolicy: add response parameters Body.Policy.ValidFrom.
+- Update API GetPrivateAccessPolicy: add response parameters Body.Policy.ValidTimeStatus.
+- Update API GetPrivateAccessPolicy: add response parameters Body.Policy.ValidUntil.
+- Update API ListPrivateAccessPolices: add response parameters Body.Polices.$.ValidFrom.
+- Update API ListPrivateAccessPolices: add response parameters Body.Polices.$.ValidTimeStatus.
+- Update API ListPrivateAccessPolices: add response parameters Body.Polices.$.ValidUntil.
+- Update API UpdatePrivateAccessPolicy: add request parameters ValidFrom.
+- Update API UpdatePrivateAccessPolicy: add request parameters ValidTimeStatus.
+- Update API UpdatePrivateAccessPolicy: add request parameters ValidUntil.
+
+
 2025-11-03 Version: 1.14.18
 - Update API CreateEnterpriseAcceleratePolicy: add response parameters Body.EapId.
 - Update API ListConnectors: add response parameters Body.Connectors.$.AccelerateStatus.

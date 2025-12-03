@@ -65,6 +65,32 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public long? UpdateTimeUnix { get; set; }
 
+        [NameInMap("UserTags")]
+        [Validation(Required=false)]
+        public List<OpenStructSaseUserUserTags> UserTags { get; set; }
+        public class OpenStructSaseUserUserTags : TeaModel {
+            [NameInMap("Aliuid")]
+            [Validation(Required=false)]
+            public string Aliuid { get; set; }
+
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("SaseUserId")]
+            [Validation(Required=false)]
+            public string SaseUserId { get; set; }
+
+            [NameInMap("TagId")]
+            [Validation(Required=false)]
+            public string TagId { get; set; }
+
+        }
+
         [NameInMap("Username")]
         [Validation(Required=false)]
         public string Username { get; set; }

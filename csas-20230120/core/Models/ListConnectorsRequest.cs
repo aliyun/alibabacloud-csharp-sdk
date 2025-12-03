@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListConnectorsRequest : TeaModel {
         /// <summary>
-        /// <para>Collection of Connector IDs. Up to 100 Connector IDs can be entered.</para>
+        /// <para>Collection of ConnectorIDs. Up to 100 ConnectorIDs can be entered.</para>
         /// </summary>
         [NameInMap("ConnectorIds")]
         [Validation(Required=false)]
         public List<string> ConnectorIds { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paginated query. Range: 1~10000.</para>
+        /// <para>The page number of the current page in a paginated query. Value: 1~10000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Connector name. Length: 1~128 characters, supporting Chinese and both uppercase and lowercase English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>Connector name. Length: 1~128 characters, supporting Chinese and uppercase/lowercase English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>connector_name</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of items per page in a paginated query. Range: 1~1000.</para>
+        /// <para>The number of items per page in a paginated query. Value: 1~1000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

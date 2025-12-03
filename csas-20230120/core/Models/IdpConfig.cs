@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public IdpLoginConfig LoginConfig { get; set; }
 
+        [NameInMap("LogoDirectory")]
+        [Validation(Required=false)]
+        public string LogoDirectory { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

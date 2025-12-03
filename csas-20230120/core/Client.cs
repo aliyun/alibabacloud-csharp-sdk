@@ -1642,6 +1642,18 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["UserGroupMode"] = request.UserGroupMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidFrom))
+            {
+                body["ValidFrom"] = request.ValidFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidTimeStatus))
+            {
+                body["ValidTimeStatus"] = request.ValidTimeStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidUntil))
+            {
+                body["ValidUntil"] = request.ValidUntil;
+            }
             body = TeaConverter.merge<object>
             (
                 body,
@@ -1758,6 +1770,18 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupMode))
             {
                 body["UserGroupMode"] = request.UserGroupMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidFrom))
+            {
+                body["ValidFrom"] = request.ValidFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidTimeStatus))
+            {
+                body["ValidTimeStatus"] = request.ValidTimeStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidUntil))
+            {
+                body["ValidUntil"] = request.ValidUntil;
             }
             body = TeaConverter.merge<object>
             (
@@ -14451,6 +14475,18 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["UserGroupMode"] = request.UserGroupMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidFrom))
+            {
+                body["ValidFrom"] = request.ValidFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidTimeStatus))
+            {
+                body["ValidTimeStatus"] = request.ValidTimeStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidUntil))
+            {
+                body["ValidUntil"] = request.ValidUntil;
+            }
             body = TeaConverter.merge<object>
             (
                 body,
@@ -14566,6 +14602,18 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupMode))
             {
                 body["UserGroupMode"] = request.UserGroupMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidFrom))
+            {
+                body["ValidFrom"] = request.ValidFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidTimeStatus))
+            {
+                body["ValidTimeStatus"] = request.ValidTimeStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidUntil))
+            {
+                body["ValidUntil"] = request.ValidUntil;
             }
             body = TeaConverter.merge<object>
             (

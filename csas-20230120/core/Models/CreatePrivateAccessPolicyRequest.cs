@@ -249,6 +249,36 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string UserGroupMode { get; set; }
 
+        /// <summary>
+        /// <para>The start time when the zero trust policy takes effect, represented as a timestamp in seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("ValidFrom")]
+        [Validation(Required=false)]
+        public long? ValidFrom { get; set; }
+
+        /// <summary>
+        /// <para>Switch status for effective time. Values: - <b>Enabled</b>: On. - <b>Disabled</b>: Off.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Disabled</para>
+        /// </summary>
+        [NameInMap("ValidTimeStatus")]
+        [Validation(Required=false)]
+        public string ValidTimeStatus { get; set; }
+
+        /// <summary>
+        /// <para>The expiration time of the zero trust policy, in seconds timestamp.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1764727544</para>
+        /// </summary>
+        [NameInMap("ValidUntil")]
+        [Validation(Required=false)]
+        public long? ValidUntil { get; set; }
+
     }
 
 }
