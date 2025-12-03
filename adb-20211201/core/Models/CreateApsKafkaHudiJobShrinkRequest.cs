@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("DataFormatType")]
+        [Validation(Required=false)]
+        public string DataFormatType { get; set; }
+
         /// <summary>
         /// <para>Enumeration value and description. Single: The source is a single-row JSON record. Multi: source is a JSON array. Output a single JSON record.</para>
         /// 

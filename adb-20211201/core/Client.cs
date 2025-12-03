@@ -2901,6 +2901,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 body["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFormatType))
+            {
+                body["DataFormatType"] = request.DataFormatType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataOutputFormat))
             {
                 body["DataOutputFormat"] = request.DataOutputFormat;
@@ -3060,6 +3064,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 body["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataFormatType))
+            {
+                body["DataFormatType"] = request.DataFormatType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataOutputFormat))
             {
