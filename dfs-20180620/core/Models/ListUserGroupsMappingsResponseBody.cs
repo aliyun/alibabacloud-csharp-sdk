@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.DFS20180620.Models
 {
     public class ListUserGroupsMappingsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("HasMore")]
         [Validation(Required=false)]
         public bool? HasMore { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>user1</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>55C5FFD6-BF99-41BD-9C66-FFF39189****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -29,6 +41,10 @@ namespace AlibabaCloud.SDK.DFS20180620.Models
             [Validation(Required=false)]
             public List<string> GroupNames { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>user1</para>
+            /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
             public string UserName { get; set; }

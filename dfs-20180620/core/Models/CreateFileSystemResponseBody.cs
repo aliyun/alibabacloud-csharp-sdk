@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.DFS20180620.Models
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>55C5FFD6-BF99-41BD-9C66-FFF39189****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

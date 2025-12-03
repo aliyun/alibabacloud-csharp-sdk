@@ -9,14 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.DFS20180620.Models
 {
     public class DeleteVscMountPointRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>037c****1d</para>
+        /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("InputRegionId")]
         [Validation(Required=false)]
         public string InputRegionId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>037cb49e1d-c***5</para>
+        /// </summary>
         [NameInMap("MountPointId")]
         [Validation(Required=false)]
         public string MountPointId { get; set; }

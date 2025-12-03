@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.DFS20180620.Models
 {
     public class DeleteFileSystemRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("InputRegionId")]
         [Validation(Required=false)]
         public string InputRegionId { get; set; }
