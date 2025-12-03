@@ -64,6 +64,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string AllocationStrategy { get; set; }
 
+        /// <summary>
+        /// <para>Whether to enable automatic rebalancing for the scaling group. This takes effect only when BalancedOnly is enabled for the scaling group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false: Auto rebalancing is disabled for the scaling group.</description></item>
+        /// <item><description>true: If Auto rebalancing is enabled, the scaling group automatically detects the capacity of the zone. If the capacity of the zone is unbalanced, the scaling group actively scales out the zone and re-balances the capacity of the zone.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("AutoRebalance")]
         [Validation(Required=false)]
         public bool? AutoRebalance { get; set; }
@@ -86,6 +97,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public bool? AzBalance { get; set; }
 
+        /// <summary>
+        /// <para>The zone balancing mode. This mode takes effect only when the zone balancing mode is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>BalancedBestEffort: If a resource fails to be created in a zone, it is downgraded to another zone to ensure best-effort delivery of the resource.</description></item>
+        /// <item><description>BalancedOnly: If a resource fails to be created in a zone, it is not downgraded to another zone. The scale-out activity is partially successful to avoid excessive imbalance of resources in different zones.</description></item>
+        /// </list>
+        /// <para>Default value: BalancedBestEffort.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BalancedBestEffort</para>
+        /// </summary>
         [NameInMap("BalanceMode")]
         [Validation(Required=false)]
         public string BalanceMode { get; set; }
@@ -883,14 +905,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? SyncAlarmRuleToCms { get; set; }
 
         /// <summary>
-        /// <para>The tags that you want to add to the scaling group.</para>
+        /// <para>The information about the tags of the scaling group.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateScalingGroupRequestTags> Tags { get; set; }
         public class CreateScalingGroupRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key that you want to add to the scaling group.</para>
+            /// <para>The tag key of the scaling group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Department</para>
@@ -900,7 +922,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to propagate the tag that you want to add to the scaling group. Valid values:</para>
+            /// <para>Identifies whether the tag is a propagatable tag. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: propagates the tag to only instances that are newly created.</description></item>
             /// <item><description>false: does not propagate the tag to any instances.</description></item>
@@ -915,7 +937,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? Propagate { get; set; }
 
             /// <summary>
-            /// <para>The tag value that you want to add to the scaling group.</para>
+            /// <para>The tag value of the scaling group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Finance</para>

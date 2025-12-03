@@ -15603,6 +15603,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             {
                 query["NtpServers"] = request.NtpServers;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Override))
+            {
+                query["Override"] = request.Override;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -15852,6 +15856,10 @@ namespace AlibabaCloud.SDK.Ess20220222
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NtpServers))
             {
                 query["NtpServers"] = request.NtpServers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Override))
+            {
+                query["Override"] = request.Override;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {

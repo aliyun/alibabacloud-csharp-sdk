@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks> InstanceRefreshTasks { get; set; }
         public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
             [NameInMap("CheckpointPauseTime")]
             [Validation(Required=false)]
             public int? CheckpointPauseTime { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints> Checkpoints { get; set; }
             public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>60</para>
+                /// </summary>
                 [NameInMap("Percentage")]
                 [Validation(Required=false)]
                 public int? Percentage { get; set; }
@@ -53,24 +61,44 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     [Validation(Required=false)]
                     public List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars> EnvironmentVars { get; set; }
                     public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>fieldPath</para>
+                        /// </summary>
                         [NameInMap("FieldRefFieldPath")]
                         [Validation(Required=false)]
                         public string FieldRefFieldPath { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>PATH</para>
+                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>/usr/local/bin</para>
+                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:latest</para>
+                    /// </summary>
                     [NameInMap("Image")]
                     [Validation(Required=false)]
                     public string Image { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>name</para>
+                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
@@ -87,6 +115,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>lt-2ze5x4mp*****</para>
+                /// </summary>
                 [NameInMap("LaunchTemplateId")]
                 [Validation(Required=false)]
                 public string LaunchTemplateId { get; set; }
@@ -95,12 +127,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides> LaunchTemplateOverrides { get; set; }
                 public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>ecs.sn1ne.large</para>
+                    /// </summary>
                     [NameInMap("InstanceType")]
                     [Validation(Required=false)]
                     public string InstanceType { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Latest</para>
+                /// </summary>
                 [NameInMap("LaunchTemplateVersion")]
                 [Validation(Required=false)]
                 public string LaunchTemplateVersion { get; set; }

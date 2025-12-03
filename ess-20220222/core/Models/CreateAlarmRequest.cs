@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> AlarmActions { get; set; }
 
         /// <summary>
-        /// <para>The operator that you want to use to compare the metric value and the threshold. Valid values:</para>
+        /// <para>The operator that you want to use to compare the metric value and the threshold. Valid Values:</para>
         /// <list type="bullet">
         /// <item><description>If the metric value is greater than or equal to the threshold, set the value to &gt;=.</description></item>
         /// <item><description>If the metric value is less than or equal to the metric threshold, set the value to &lt;=.</description></item>
@@ -60,9 +60,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <item><description><para>If you set MetricType to system, this parameter has the following valid values:</para>
             /// <list type="bullet">
             /// <item><description>user_id: the ID of your Alibaba Cloud account.</description></item>
-            /// <item><description>scaling_group: the scaling group that you want to monitor by using the event-triggered task.</description></item>
+            /// <item><description>scaling_group: the scaling group that is monitored by the event-triggered task.</description></item>
             /// <item><description>device: the NIC type.</description></item>
             /// <item><description>state: the status of the TCP connection.</description></item>
+            /// <item><description>rulePool: the specified server group for the ALB qps metric.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -85,17 +86,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// </description></item>
             /// <item><description><para>scaling_group: The system specifies the value.</para>
             /// </description></item>
-            /// <item><description><para>device: You can set this parameter to eth0 or eth1.</para>
+            /// <item><description><para>device:</para>
             /// <list type="bullet">
-            /// <item><description>For instances of the classic network type, eth0 specifies the internal NIC. Only one eth0 NIC exists on each instance that resides in VPCs.</description></item>
-            /// <item><description>For instances of the classic network type, eth1 specifies the public NIC.</description></item>
+            /// <item><description>eth0: For classic network instances, eth0 indicates the internal network network interface controller. Only one eth0 NIC exists on each instance that resides in VPCs.</description></item>
+            /// <item><description>eth1: For classic network instances, eth1 represents the Internet network interface controller.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>state: You can set this parameter to TCP_TOTAL or ESTABLISHED.</para>
+            /// <item><description><para>state:</para>
             /// <list type="bullet">
             /// <item><description>TCP_TOTAL specifies the total number of TCP connections.</description></item>
-            /// <item><description>ESTABLISHED specifies the number of TCP connections that are established.</description></item>
+            /// <item><description>ESTABLISHED indicates the number of TCP connections that are established.</description></item>
             /// </list>
+            /// </description></item>
+            /// <item><description><para>rulePool: the ID of the ALB server group. Example: sgp-xxxxx.</para>
             /// </description></item>
             /// </list>
             /// </description></item>
@@ -136,7 +139,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// <para>The number of consecutive times that the threshold must be reached before a scaling rule is executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before the scaling rule is executed.</para>
-        /// <para>Default value: 3.</para>
+        /// <para>Default value: 3</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -334,7 +337,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The metric type. Valid values:</para>
+        /// <para>The metric type. Valid Values:</para>
         /// <list type="bullet">
         /// <item><description>system: a system metric of CloudMonitor.</description></item>
         /// <item><description>custom: a custom metric that is reported to CloudMonitor.</description></item>
@@ -362,7 +365,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The statistical period of the metric data. Unit: seconds. Valid values:</para>
+        /// <para>The statistical period of the metric data. Unit: seconds. Valid Values:</para>
         /// <list type="bullet">
         /// <item><description>15</description></item>
         /// <item><description>60</description></item>
@@ -371,7 +374,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <item><description>900</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can set this parameter to 15 seconds only for scaling groups of the ECS type.</para>
+        /// <para>You can set this parameter to 15 seconds only for scaling groups of the ECS type.</para>
         /// </remarks>
         /// <para>Default value: 300.</para>
         /// 
@@ -409,7 +412,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The statistical method of the metric data. Valid values:</para>
+        /// <para>The statistical method of the metric data. Valid Values:</para>
         /// <list type="bullet">
         /// <item><description>Average: calculates the average value of the metric data.</description></item>
         /// <item><description>Minimum: calculates the minimum value of the metric data.</description></item>

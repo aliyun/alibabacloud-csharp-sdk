@@ -1332,6 +1332,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<string> NtpServers { get; set; }
 
+        [NameInMap("Override")]
+        [Validation(Required=false)]
+        public bool? Override { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }

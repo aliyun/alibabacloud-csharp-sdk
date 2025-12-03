@@ -119,6 +119,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string AllocationStrategy { get; set; }
 
+            /// <summary>
+            /// <para>Whether to enable automatic rebalancing for the scaling group. This takes effect only when BalancedOnly is enabled for the scaling group. Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description>false: Auto rebalancing is disabled for the scaling group.</description></item>
+            /// <item><description>true: If Auto rebalancing is enabled, the scaling group automatically detects the capacity of the zone. If the capacity of the zone is unbalanced, the scaling group actively scales out the zone and re-balances the capacity of the zone.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("AutoRebalance")]
             [Validation(Required=false)]
             public bool? AutoRebalance { get; set; }
@@ -137,6 +147,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public bool? AzBalance { get; set; }
 
+            /// <summary>
+            /// <para>The zone balancing mode. This mode takes effect only when the zone balancing mode is enabled. Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description>Default value: BalancedBestEffort. If a resource fails to be created in a zone, the resource is downgraded to another zone. This ensures best-effort delivery of the resource.</description></item>
+            /// <item><description>BalancedOnly: If a resource fails to be created in a zone, the resource is not downgraded to another zone. The scale-out activity is partially successful to avoid excessive imbalance of resources in different zones.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>BalancedBestEffort</para>
+            /// </summary>
             [NameInMap("BalanceMode")]
             [Validation(Required=false)]
             public string BalanceMode { get; set; }
