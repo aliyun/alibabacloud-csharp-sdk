@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string TimeStamps { get; set; }
 
+        [NameInMap("errorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
+
     }
 
 }
