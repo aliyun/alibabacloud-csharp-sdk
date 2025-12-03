@@ -37,6 +37,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateOrderRequest
         /// </param>
@@ -74,6 +79,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return TeaModel.ToObject<CreateOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateOrderRequest
         /// </param>
@@ -111,6 +121,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return TeaModel.ToObject<CreateOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateOrderRequest
         /// </param>
@@ -124,6 +139,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return CreateOrderWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateOrderRequest
         /// </param>
@@ -231,6 +251,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return await DescribeCashDetailWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询卡券列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCouponListRequest
         /// </param>
@@ -284,6 +309,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return TeaModel.ToObject<DescribeCouponListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询卡券列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCouponListRequest
         /// </param>
@@ -337,6 +367,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return TeaModel.ToObject<DescribeCouponListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询卡券列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCouponListRequest
         /// </param>
@@ -350,6 +385,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return DescribeCouponListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询卡券列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCouponListRequest
         /// </param>
@@ -365,7 +405,7 @@ namespace AlibabaCloud.SDK.Bss20140714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>OpenCallback</para>
+        /// <para>生产开通回调接口</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -407,7 +447,7 @@ namespace AlibabaCloud.SDK.Bss20140714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>OpenCallback</para>
+        /// <para>生产开通回调接口</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -449,7 +489,7 @@ namespace AlibabaCloud.SDK.Bss20140714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>OpenCallback</para>
+        /// <para>生产开通回调接口</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -467,7 +507,7 @@ namespace AlibabaCloud.SDK.Bss20140714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>OpenCallback</para>
+        /// <para>生产开通回调接口</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -483,6 +523,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return await OpenCallbackWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>订单询价</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryForCssOrderRequest
         /// </param>
@@ -520,6 +565,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return TeaModel.ToObject<QueryForCssOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>订单询价</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryForCssOrderRequest
         /// </param>
@@ -557,6 +607,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return TeaModel.ToObject<QueryForCssOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>订单询价</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryForCssOrderRequest
         /// </param>
@@ -570,6 +625,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return QueryForCssOrderWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>订单询价</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryForCssOrderRequest
         /// </param>
@@ -583,6 +643,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return await QueryForCssOrderWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>vnoBatchRefundOrder</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VnoBatchRefundOrderRequest
         /// </param>
@@ -620,6 +685,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return TeaModel.ToObject<VnoBatchRefundOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>vnoBatchRefundOrder</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VnoBatchRefundOrderRequest
         /// </param>
@@ -657,6 +727,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return TeaModel.ToObject<VnoBatchRefundOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>vnoBatchRefundOrder</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VnoBatchRefundOrderRequest
         /// </param>
@@ -670,6 +745,11 @@ namespace AlibabaCloud.SDK.Bss20140714
             return VnoBatchRefundOrderWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>vnoBatchRefundOrder</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VnoBatchRefundOrderRequest
         /// </param>
