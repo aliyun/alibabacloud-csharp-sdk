@@ -576,6 +576,62 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        [NameInMap("QoSConfig")]
+        [Validation(Required=false)]
+        public DescribeNetworkInterfaceAttributeResponseBodyQoSConfig QoSConfig { get; set; }
+        public class DescribeNetworkInterfaceAttributeResponseBodyQoSConfig : TeaModel {
+            [NameInMap("EnableQoS")]
+            [Validation(Required=false)]
+            public bool? EnableQoS { get; set; }
+
+            [NameInMap("QoS")]
+            [Validation(Required=false)]
+            public DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS QoS { get; set; }
+            public class DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>50000</para>
+                /// </summary>
+                [NameInMap("BandwidthRx")]
+                [Validation(Required=false)]
+                public long? BandwidthRx { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>50000</para>
+                /// </summary>
+                [NameInMap("BandwidthTx")]
+                [Validation(Required=false)]
+                public long? BandwidthTx { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>50000</para>
+                /// </summary>
+                [NameInMap("ConcurrentConnections")]
+                [Validation(Required=false)]
+                public long? ConcurrentConnections { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>50000</para>
+                /// </summary>
+                [NameInMap("PpsRx")]
+                [Validation(Required=false)]
+                public long? PpsRx { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>50000</para>
+                /// </summary>
+                [NameInMap("PpsTx")]
+                [Validation(Required=false)]
+                public long? PpsTx { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The number of queues supported by the ENI.</para>
         /// <list type="bullet">
