@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string CardType { get; set; }
 
+        [NameInMap("correlationTag")]
+        [Validation(Required=false)]
+        public int? CorrelationTag { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
