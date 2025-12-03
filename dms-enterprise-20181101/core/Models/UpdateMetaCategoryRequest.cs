@@ -20,12 +20,24 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public long? CategoryId { get; set; }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         /// <summary>
         /// <para>The updated name of the category.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("OwnerIds")]
+        [Validation(Required=false)]
+        public List<long?> OwnerIds { get; set; }
+
+        [NameInMap("Remark")]
+        [Validation(Required=false)]
+        public string Remark { get; set; }
 
         /// <summary>
         /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</para>

@@ -8202,7 +8202,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         /// <para>Create Asset Category</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateMetaCategoryRequest
         /// </param>
         /// <param name="runtime">
@@ -8212,17 +8212,35 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         /// <returns>
         /// CreateMetaCategoryResponse
         /// </returns>
-        public CreateMetaCategoryResponse CreateMetaCategoryWithOptions(CreateMetaCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateMetaCategoryResponse CreateMetaCategoryWithOptions(CreateMetaCategoryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMetaCategoryShrinkRequest request = new CreateMetaCategoryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OwnerIds))
+            {
+                request.OwnerIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OwnerIds, "OwnerIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerIdsShrink))
+            {
+                query["OwnerIds"] = request.OwnerIdsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentCategoryId))
             {
                 query["ParentCategoryId"] = request.ParentCategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
@@ -8252,7 +8270,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         /// <para>Create Asset Category</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateMetaCategoryRequest
         /// </param>
         /// <param name="runtime">
@@ -8262,17 +8280,35 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         /// <returns>
         /// CreateMetaCategoryResponse
         /// </returns>
-        public async Task<CreateMetaCategoryResponse> CreateMetaCategoryWithOptionsAsync(CreateMetaCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateMetaCategoryResponse> CreateMetaCategoryWithOptionsAsync(CreateMetaCategoryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMetaCategoryShrinkRequest request = new CreateMetaCategoryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OwnerIds))
+            {
+                request.OwnerIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OwnerIds, "OwnerIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerIdsShrink))
+            {
+                query["OwnerIds"] = request.OwnerIdsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentCategoryId))
             {
                 query["ParentCategoryId"] = request.ParentCategoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
@@ -46174,7 +46210,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         /// <para>Updates asset category information.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateMetaCategoryRequest
         /// </param>
         /// <param name="runtime">
@@ -46184,17 +46220,35 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         /// <returns>
         /// UpdateMetaCategoryResponse
         /// </returns>
-        public UpdateMetaCategoryResponse UpdateMetaCategoryWithOptions(UpdateMetaCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateMetaCategoryResponse UpdateMetaCategoryWithOptions(UpdateMetaCategoryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMetaCategoryShrinkRequest request = new UpdateMetaCategoryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OwnerIds))
+            {
+                request.OwnerIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OwnerIds, "OwnerIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
             {
                 query["CategoryId"] = request.CategoryId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerIdsShrink))
+            {
+                query["OwnerIds"] = request.OwnerIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {
@@ -46224,7 +46278,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         /// <para>Updates asset category information.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateMetaCategoryRequest
         /// </param>
         /// <param name="runtime">
@@ -46234,17 +46288,35 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         /// <returns>
         /// UpdateMetaCategoryResponse
         /// </returns>
-        public async Task<UpdateMetaCategoryResponse> UpdateMetaCategoryWithOptionsAsync(UpdateMetaCategoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateMetaCategoryResponse> UpdateMetaCategoryWithOptionsAsync(UpdateMetaCategoryRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMetaCategoryShrinkRequest request = new UpdateMetaCategoryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OwnerIds))
+            {
+                request.OwnerIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OwnerIds, "OwnerIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
             {
                 query["CategoryId"] = request.CategoryId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerIdsShrink))
+            {
+                query["OwnerIds"] = request.OwnerIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["Remark"] = request.Remark;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
             {

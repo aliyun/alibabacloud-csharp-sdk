@@ -21,13 +21,29 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public int? Depth { get; set; }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("OwnerIds")]
+        [Validation(Required=false)]
+        public List<long?> OwnerIds { get; set; }
+
+        [NameInMap("OwnerNickNames")]
+        [Validation(Required=false)]
+        public List<string> OwnerNickNames { get; set; }
+
         [NameInMap("ParentCategoryId")]
         [Validation(Required=false)]
         public long? ParentCategoryId { get; set; }
+
+        [NameInMap("Remark")]
+        [Validation(Required=false)]
+        public string Remark { get; set; }
 
     }
 

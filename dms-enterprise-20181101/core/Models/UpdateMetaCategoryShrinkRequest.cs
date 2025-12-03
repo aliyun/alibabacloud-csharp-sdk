@@ -8,17 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class CreateMetaCategoryRequest : TeaModel {
+    public class UpdateMetaCategoryShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The category ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30000181325</para>
+        /// </summary>
+        [NameInMap("CategoryId")]
+        [Validation(Required=false)]
+        public long? CategoryId { get; set; }
+
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the category.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>default</para>
+        /// <para>The updated name of the category.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -26,17 +33,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         [NameInMap("OwnerIds")]
         [Validation(Required=false)]
-        public List<long?> OwnerIds { get; set; }
-
-        /// <summary>
-        /// <para>The ID of the parent category. The new category is created under this parent category. If this value is left empty, the new category is of the first level.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>30000322682</para>
-        /// </summary>
-        [NameInMap("ParentCategoryId")]
-        [Validation(Required=false)]
-        public long? ParentCategoryId { get; set; }
+        public string OwnerIdsShrink { get; set; }
 
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -46,7 +43,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         /// <para>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3***</para>
+        /// <para>23****</para>
         /// </summary>
         [NameInMap("Tid")]
         [Validation(Required=false)]

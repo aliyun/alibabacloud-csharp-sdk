@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 {
-    public class CreateMetaCategoryRequest : TeaModel {
+    public class CreateMetaCategoryShrinkRequest : TeaModel {
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         [NameInMap("OwnerIds")]
         [Validation(Required=false)]
-        public List<long?> OwnerIds { get; set; }
+        public string OwnerIdsShrink { get; set; }
 
         /// <summary>
         /// <para>The ID of the parent category. The new category is created under this parent category. If this value is left empty, the new category is of the first level.</para>
