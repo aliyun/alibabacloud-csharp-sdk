@@ -40563,6 +40563,158 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>云端录制用量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLiveRtcRecordUsageDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLiveRtcRecordUsageDataResponse
+        /// </returns>
+        public DescribeLiveRtcRecordUsageDataResponse DescribeLiveRtcRecordUsageDataWithOptions(DescribeLiveRtcRecordUsageDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordMode))
+            {
+                query["RecordMode"] = request.RecordMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLiveRtcRecordUsageData",
+                Version = "2016-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLiveRtcRecordUsageDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>云端录制用量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLiveRtcRecordUsageDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLiveRtcRecordUsageDataResponse
+        /// </returns>
+        public async Task<DescribeLiveRtcRecordUsageDataResponse> DescribeLiveRtcRecordUsageDataWithOptionsAsync(DescribeLiveRtcRecordUsageDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordMode))
+            {
+                query["RecordMode"] = request.RecordMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLiveRtcRecordUsageData",
+                Version = "2016-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLiveRtcRecordUsageDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>云端录制用量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLiveRtcRecordUsageDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLiveRtcRecordUsageDataResponse
+        /// </returns>
+        public DescribeLiveRtcRecordUsageDataResponse DescribeLiveRtcRecordUsageData(DescribeLiveRtcRecordUsageDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLiveRtcRecordUsageDataWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>云端录制用量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLiveRtcRecordUsageDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLiveRtcRecordUsageDataResponse
+        /// </returns>
+        public async Task<DescribeLiveRtcRecordUsageDataResponse> DescribeLiveRtcRecordUsageDataAsync(DescribeLiveRtcRecordUsageDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLiveRtcRecordUsageDataWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the time shifting configurations under a domain name.</para>
         /// </summary>
         /// 
