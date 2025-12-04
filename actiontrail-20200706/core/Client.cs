@@ -1086,6 +1086,126 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除数据事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataEventSelectorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataEventSelectorResponse
+        /// </returns>
+        public DeleteDataEventSelectorResponse DeleteDataEventSelectorWithOptions(DeleteDataEventSelectorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrailName))
+            {
+                query["TrailName"] = request.TrailName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataEventSelector",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataEventSelectorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataEventSelectorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataEventSelectorResponse
+        /// </returns>
+        public async Task<DeleteDataEventSelectorResponse> DeleteDataEventSelectorWithOptionsAsync(DeleteDataEventSelectorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrailName))
+            {
+                query["TrailName"] = request.TrailName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataEventSelector",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataEventSelectorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataEventSelectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataEventSelectorResponse
+        /// </returns>
+        public DeleteDataEventSelectorResponse DeleteDataEventSelector(DeleteDataEventSelectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDataEventSelectorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除数据事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataEventSelectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataEventSelectorResponse
+        /// </returns>
+        public async Task<DeleteDataEventSelectorResponse> DeleteDataEventSelectorAsync(DeleteDataEventSelectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDataEventSelectorWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a data backfill task.</para>
         /// </summary>
         /// 
@@ -3544,6 +3664,126 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataEventSelectorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataEventSelectorResponse
+        /// </returns>
+        public GetDataEventSelectorResponse GetDataEventSelectorWithOptions(GetDataEventSelectorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrailName))
+            {
+                query["TrailName"] = request.TrailName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataEventSelector",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataEventSelectorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataEventSelectorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataEventSelectorResponse
+        /// </returns>
+        public async Task<GetDataEventSelectorResponse> GetDataEventSelectorWithOptionsAsync(GetDataEventSelectorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrailName))
+            {
+                query["TrailName"] = request.TrailName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataEventSelector",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataEventSelectorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataEventSelectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataEventSelectorResponse
+        /// </returns>
+        public GetDataEventSelectorResponse GetDataEventSelector(GetDataEventSelectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDataEventSelectorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataEventSelectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataEventSelectorResponse
+        /// </returns>
+        public async Task<GetDataEventSelectorResponse> GetDataEventSelectorAsync(GetDataEventSelectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDataEventSelectorWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a data backfill task.</para>
         /// </summary>
         /// 
@@ -4044,6 +4284,134 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量查询事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataEventSelectorsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataEventSelectorsResponse
+        /// </returns>
+        public ListDataEventSelectorsResponse ListDataEventSelectorsWithOptions(ListDataEventSelectorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataEventSelectors",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataEventSelectorsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataEventSelectorsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataEventSelectorsResponse
+        /// </returns>
+        public async Task<ListDataEventSelectorsResponse> ListDataEventSelectorsWithOptionsAsync(ListDataEventSelectorsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataEventSelectors",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataEventSelectorsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataEventSelectorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataEventSelectorsResponse
+        /// </returns>
+        public ListDataEventSelectorsResponse ListDataEventSelectors(ListDataEventSelectorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataEventSelectorsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataEventSelectorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataEventSelectorsResponse
+        /// </returns>
+        public async Task<ListDataEventSelectorsResponse> ListDataEventSelectorsAsync(ListDataEventSelectorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataEventSelectorsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询数据事件支持的服务与事件名称</para>
         /// </summary>
         /// 
@@ -4508,6 +4876,150 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await LookupEventsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PutDataEventSelectorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutDataEventSelectorResponse
+        /// </returns>
+        public PutDataEventSelectorResponse PutDataEventSelectorWithOptions(PutDataEventSelectorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventSelectors))
+            {
+                query["EventSelectors"] = request.EventSelectors;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsTrailAllRegion))
+            {
+                query["IsTrailAllRegion"] = request.IsTrailAllRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrailName))
+            {
+                query["TrailName"] = request.TrailName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrailRegionIds))
+            {
+                query["TrailRegionIds"] = request.TrailRegionIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutDataEventSelector",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutDataEventSelectorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PutDataEventSelectorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutDataEventSelectorResponse
+        /// </returns>
+        public async Task<PutDataEventSelectorResponse> PutDataEventSelectorWithOptionsAsync(PutDataEventSelectorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventSelectors))
+            {
+                query["EventSelectors"] = request.EventSelectors;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsTrailAllRegion))
+            {
+                query["IsTrailAllRegion"] = request.IsTrailAllRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrailName))
+            {
+                query["TrailName"] = request.TrailName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrailRegionIds))
+            {
+                query["TrailRegionIds"] = request.TrailRegionIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PutDataEventSelector",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PutDataEventSelectorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PutDataEventSelectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutDataEventSelectorResponse
+        /// </returns>
+        public PutDataEventSelectorResponse PutDataEventSelector(PutDataEventSelectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PutDataEventSelectorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建事件选择器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PutDataEventSelectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PutDataEventSelectorResponse
+        /// </returns>
+        public async Task<PutDataEventSelectorResponse> PutDataEventSelectorAsync(PutDataEventSelectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PutDataEventSelectorWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
