@@ -112,6 +112,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string MainEthPublicIp { get; set; }
 
+            [NameInMap("NetworkInterfaceId")]
+            [Validation(Required=false)]
+            public string NetworkInterfaceId { get; set; }
+
             [NameInMap("NetworkInterfaceIp")]
             [Validation(Required=false)]
             public string NetworkInterfaceIp { get; set; }

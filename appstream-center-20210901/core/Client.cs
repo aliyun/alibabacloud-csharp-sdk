@@ -8539,5 +8539,141 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             return await UpdateAppInstanceGroupImageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新研发主机镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWuyingServerImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWuyingServerImageResponse
+        /// </returns>
+        public UpdateWuyingServerImageResponse UpdateWuyingServerImageWithOptions(UpdateWuyingServerImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerId))
+            {
+                body["WuyingServerId"] = request.WuyingServerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWuyingServerImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWuyingServerImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新研发主机镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWuyingServerImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWuyingServerImageResponse
+        /// </returns>
+        public async Task<UpdateWuyingServerImageResponse> UpdateWuyingServerImageWithOptionsAsync(UpdateWuyingServerImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerId))
+            {
+                body["WuyingServerId"] = request.WuyingServerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWuyingServerImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWuyingServerImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新研发主机镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWuyingServerImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWuyingServerImageResponse
+        /// </returns>
+        public UpdateWuyingServerImageResponse UpdateWuyingServerImage(UpdateWuyingServerImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateWuyingServerImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新研发主机镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWuyingServerImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWuyingServerImageResponse
+        /// </returns>
+        public async Task<UpdateWuyingServerImageResponse> UpdateWuyingServerImageAsync(UpdateWuyingServerImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateWuyingServerImageWithOptionsAsync(request, runtime);
+        }
+
     }
 }

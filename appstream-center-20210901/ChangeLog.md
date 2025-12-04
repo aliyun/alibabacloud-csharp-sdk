@@ -1,3 +1,8 @@
+2025-12-04 Version: 4.7.0
+- Support API UpdateWuyingServerImage.
+- Update API ListAppInstances: add response parameters Body.AppInstanceModels.$.NetworkInterfaceId.
+
+
 2025-11-27 Version: 4.6.3
 - Update API CreateAppInstanceGroup: add request parameters UserGroupIds.
 - Update API GetAppInstanceGroup: add response parameters Body.AppInstanceGroupModels.SupportUserGroupMixedAuth.
