@@ -10,17 +10,26 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class RenewLindormInstanceRequest : TeaModel {
         /// <summary>
-        /// The subscription duration of the instance. The valid values of this parameter depend on the value of the PricingCycle parameter.
+        /// <para>The subscription duration of the instance. The valid values of this parameter depend on the value of the PricingCycle parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>If PricingCycle is set to <b>Month</b>, set this parameter to an integer that ranges from <b>1</b> to <b>9</b>.</description></item>
+        /// <item><description>If PricingCycle is set to <b>Year</b>, set this parameter to an integer that ranges from <b>1</b> to <b>3</b>.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   If PricingCycle is set to **Month**, set this parameter to an integer that ranges from **1** to **9**.
-        /// *   If PricingCycle is set to **Year**, set this parameter to an integer that ranges from **1** to **3**.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
         /// <summary>
-        /// The ID of the instance that you want to renew. You can call the [GetLindormInstanceList](~~426069~~) operation to obtain the instance ID.
+        /// <para>The ID of the instance that you want to renew. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the instance ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ld-bp1z3506imz2f****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -35,17 +44,26 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The period based on which you are charged for the instance. Valid values:
+        /// <para>The period based on which you are charged for the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Month</b>: You are charged for the instance based on months.</description></item>
+        /// <item><description><b>Year</b>: You are charged for the instance based on years.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **Month**: You are charged for the instance based on months.
-        /// *   **Year**: You are charged for the instance based on years.
+        /// <b>Example:</b>
+        /// <para>Month</para>
         /// </summary>
         [NameInMap("PricingCycle")]
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the instance that you want to renew is located. You can call the [DescribeRegions](~~426062~~) operation to query the region ID.
+        /// <para>The ID of the region in which the instance that you want to renew is located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

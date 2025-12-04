@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
-    public class CreateLdpsNamespaceResponse : TeaModel {
+    public class GetLindormV2StreamEngineInfoResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
-        public CreateLdpsNamespaceResponseBody Body { get; set; }
+        [Validation(Required=false)]
+        public GetLindormV2StreamEngineInfoResponseBody Body { get; set; }
 
     }
 

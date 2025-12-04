@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class UpdateInstanceIpWhiteListResponse : TeaModel {
         [NameInMap("headers")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         [NameInMap("statusCode")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
         [NameInMap("body")]
-        [Validation(Required=true)]
+        [Validation(Required=false)]
         public UpdateInstanceIpWhiteListResponseBody Body { get; set; }
 
     }

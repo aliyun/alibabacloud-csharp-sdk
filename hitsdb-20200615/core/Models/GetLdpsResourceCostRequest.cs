@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

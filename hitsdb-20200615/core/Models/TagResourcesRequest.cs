@@ -18,14 +18,19 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The ID of the region in which the instances you want to associate tags with are located. You can call the [DescribeRegions](~~426062~~) operation to query the region ID.
+        /// <para>The ID of the region in which the instances you want to associate tags with are located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The list of resource IDs.
+        /// <para>The list of resource IDs.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -40,7 +45,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The resource type. Set the value to **INSTANCE**.
+        /// <para>The resource type. Set the value to <b>INSTANCE</b>.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>INSTANCE</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -51,25 +60,35 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The tags that you want to associate with the resource.
+        /// <para>The tags that you want to associate with the resource.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag that you want to associate with the resource.
+            /// <para>The key of the tag that you want to associate with the resource.</para>
+            /// <remarks>
+            /// <para>You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</para>
+            /// </remarks>
+            /// <para>This parameter is required.</para>
             /// 
-            /// > You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag that you want to associate with the resource.
+            /// <para>The value of the tag that you want to associate with the resource.</para>
+            /// <remarks>
+            /// <para>You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</para>
+            /// </remarks>
             /// 
-            /// > You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.
+            /// <b>Example:</b>
+            /// <para>2.2.8</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

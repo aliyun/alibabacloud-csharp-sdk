@@ -10,10 +10,15 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class GetLindormInstanceRequest : TeaModel {
         /// <summary>
-        /// The disk type of the log nodes. This parameter is returned only for multi-zone instances. Valid values:
+        /// <para>The disk type of the log nodes. This parameter is returned only for multi-zone instances. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cloud_efficiency</b>: The nodes use the Standard type of storage.</description></item>
+        /// <item><description><b>cloud_ssd</b>: The nodes use the Performance type of storage.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   **cloud_efficiency**: The nodes use the Standard type of storage.
-        /// *   **cloud_ssd**: The nodes use the Performance type of storage.
+        /// <b>Example:</b>
+        /// <para>ld-bp1o3y0yme2i2****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

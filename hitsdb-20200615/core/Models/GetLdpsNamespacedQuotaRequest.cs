@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class GetLdpsNamespacedQuotaRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

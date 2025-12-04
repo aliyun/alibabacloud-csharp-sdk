@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -11,14 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
-    public class CreateLdpsNamespaceRequest : TeaModel {
+    public class GetLindormV2InstanceForTerraformRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
-
-        [NameInMap("Namespace")]
-        [Validation(Required=false)]
-        public string Namespace { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -27,10 +23,6 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
-
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to remove all tags from the instance. Valid values:
+        /// <para>Specifies whether to remove all tags from the instances. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Remove all tags from the instances.</description></item>
+        /// <item><description><b>false</b>: Do not remove all tags from the instances.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> The default value of this parameter is false.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you specify this parameter together with the TagKey parameter, this parameter does not take effect.</description></item>
+        /// </list>
         /// 
-        /// *   **true**: Remove all tags from the instances.
-        /// *   **false**: Do not remove all tags from the instances.
-        /// 
-        /// > 
-        /// 
-        /// *   The default value of this parameter is false.
-        /// 
-        /// *   If you specify the TagKey parameter together with this parameter, this parameter does not take effect.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -34,7 +38,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// The IDs of instances.
+        /// <para>The IDs of instances.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -49,7 +54,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// The resource type. Set the value to **INSTANCE**.
+        /// <para>The resource type. Set the value to <b>INSTANCE</b>.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>INSTANCE</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -60,7 +69,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// The list of keys of the tags that you want to remove.
+        /// <para>The list of keys of the tags that you want to remove.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

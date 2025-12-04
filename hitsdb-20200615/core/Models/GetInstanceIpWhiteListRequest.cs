@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class GetInstanceIpWhiteListRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance whose whitelist you want to query. You can call the [GetLindormInstanceList](~~426068~~) operation to query the instance ID.
+        /// <para>The ID of the instance whose whitelists you want to query. You can call the <a href="https://help.aliyun.com/document_detail/426068.html">GetLindormInstanceList</a> operation to obtain the instance ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ld-bp1z3506imz2f****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
