@@ -1,3 +1,7 @@
+2025-12-04 Version: 2.7.0
+- Support API DisableArms.
+
+
 2025-12-02 Version: 2.6.0
 - Support API BatchRestartApplications.
 - Support API DescribeApplicationMseService.

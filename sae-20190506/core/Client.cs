@@ -12717,6 +12717,116 @@ namespace AlibabaCloud.SDK.Sae20190506
             return await DisableApplicationScalingRuleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <param name="request">
+        /// DisableArmsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableArmsResponse
+        /// </returns>
+        public DisableArmsResponse DisableArmsWithOptions(DisableArmsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableArms",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/arms/disableArms",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableArmsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DisableArmsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableArmsResponse
+        /// </returns>
+        public async Task<DisableArmsResponse> DisableArmsWithOptionsAsync(DisableArmsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableArms",
+                Version = "2019-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/pop/v1/arms/disableArms",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableArmsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DisableArmsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableArmsResponse
+        /// </returns>
+        public DisableArmsResponse DisableArms(DisableArmsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DisableArmsWithOptions(request, headers, runtime);
+        }
+
+        /// <param name="request">
+        /// DisableArmsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableArmsResponse
+        /// </returns>
+        public async Task<DisableArmsResponse> DisableArmsAsync(DisableArmsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DisableArmsWithOptionsAsync(request, headers, runtime);
+        }
+
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Disable ARMS Advanced Edition monitoring.</para>
