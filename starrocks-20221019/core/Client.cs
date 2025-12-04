@@ -237,6 +237,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019
             {
                 body["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlfCatalogName))
+            {
+                body["DlfCatalogName"] = request.DlfCatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlfCatalogType))
+            {
+                body["DlfCatalogType"] = request.DlfCatalogType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
                 body["Duration"] = request.Duration;
@@ -261,6 +269,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019
             {
                 body["KmsKeyId"] = request.KmsKeyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinkedRamUserName))
+            {
+                body["LinkedRamUserName"] = request.LinkedRamUserName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObserverNodeGroups))
             {
                 body["ObserverNodeGroups"] = request.ObserverNodeGroups;
@@ -281,9 +293,17 @@ namespace AlibabaCloud.SDK.Starrocks20221019
             {
                 body["PricingCycle"] = request.PricingCycle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalType))
+            {
+                body["PrincipalType"] = request.PrincipalType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionOptionNo))
             {
                 body["PromotionOptionNo"] = request.PromotionOptionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamUserId))
+            {
+                body["RamUserId"] = request.RamUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -383,6 +403,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019
             {
                 body["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlfCatalogName))
+            {
+                body["DlfCatalogName"] = request.DlfCatalogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlfCatalogType))
+            {
+                body["DlfCatalogType"] = request.DlfCatalogType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
                 body["Duration"] = request.Duration;
@@ -407,6 +435,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019
             {
                 body["KmsKeyId"] = request.KmsKeyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinkedRamUserName))
+            {
+                body["LinkedRamUserName"] = request.LinkedRamUserName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObserverNodeGroups))
             {
                 body["ObserverNodeGroups"] = request.ObserverNodeGroups;
@@ -427,9 +459,17 @@ namespace AlibabaCloud.SDK.Starrocks20221019
             {
                 body["PricingCycle"] = request.PricingCycle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalType))
+            {
+                body["PrincipalType"] = request.PrincipalType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionOptionNo))
             {
                 body["PromotionOptionNo"] = request.PromotionOptionNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamUserId))
+            {
+                body["RamUserId"] = request.RamUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

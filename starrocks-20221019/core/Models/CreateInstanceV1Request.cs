@@ -124,6 +124,22 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>paimon_test</para>
+        /// </summary>
+        [NameInMap("DlfCatalogName")]
+        [Validation(Required=false)]
+        public string DlfCatalogName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>paimon</para>
+        /// </summary>
+        [NameInMap("DlfCatalogType")]
+        [Validation(Required=false)]
+        public string DlfCatalogType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
         [NameInMap("Duration")]
@@ -229,6 +245,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [NameInMap("KmsKeyId")]
         [Validation(Required=false)]
         public string KmsKeyId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>aliyun.test1</para>
+        /// </summary>
+        [NameInMap("LinkedRamUserName")]
+        [Validation(Required=false)]
+        public string LinkedRamUserName { get; set; }
 
         [NameInMap("ObserverNodeGroups")]
         [Validation(Required=false)]
@@ -338,11 +362,27 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>RR</para>
+        /// </summary>
+        [NameInMap("PrincipalType")]
+        [Validation(Required=false)]
+        public string PrincipalType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>165445235634</para>
         /// </summary>
         [NameInMap("PromotionOptionNo")]
         [Validation(Required=false)]
         public string PromotionOptionNo { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
+        [NameInMap("RamUserId")]
+        [Validation(Required=false)]
+        public string RamUserId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
