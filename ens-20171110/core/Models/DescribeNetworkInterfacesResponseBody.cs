@@ -184,6 +184,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                         [Validation(Required=false)]
                         public string PrivateIpAddress { get; set; }
 
+                        [NameInMap("PrivateIpStatus")]
+                        [Validation(Required=false)]
+                        public string PrivateIpStatus { get; set; }
+
                     }
 
                 }
