@@ -76,6 +76,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public string EngineVersion { get; set; }
 
+            [NameInMap("ExpireTime")]
+            [Validation(Required=false)]
+            public string ExpireTime { get; set; }
+
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">

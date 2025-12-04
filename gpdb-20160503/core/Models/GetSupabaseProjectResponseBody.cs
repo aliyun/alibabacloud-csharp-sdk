@@ -73,6 +73,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        [NameInMap("InstanceVersion")]
+        [Validation(Required=false)]
+        public string InstanceVersion { get; set; }
+
+        [NameInMap("PayType")]
+        [Validation(Required=false)]
+        public string PayType { get; set; }
+
         /// <summary>
         /// <para>The private (VPC) connection URL for the Supabase Dashboard.</para>
         /// 
@@ -175,6 +183,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("StorageSize")]
         [Validation(Required=false)]
         public long? StorageSize { get; set; }
+
+        [NameInMap("StorageType")]
+        [Validation(Required=false)]
+        public string StorageType { get; set; }
 
         /// <summary>
         /// <para>The vSwitch ID of the instance. This parameter must be specified when VPCId is specified.</para>
