@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public List<string> IgnoredLifecycleHookIds { get; set; }
 
+            [NameInMap("LifecycleHookResult")]
+            [Validation(Required=false)]
+            public string LifecycleHookResult { get; set; }
+
         }
 
         [NameInMap("OwnerAccount")]
