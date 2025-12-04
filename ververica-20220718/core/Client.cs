@@ -8133,6 +8133,10 @@ namespace AlibabaCloud.SDK.Ververica20220718
             {
                 query["sortName"] = request.SortName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["sortOrder"] = request.SortOrder;
+            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -8199,6 +8203,10 @@ namespace AlibabaCloud.SDK.Ververica20220718
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortName))
             {
                 query["sortName"] = request.SortName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["sortOrder"] = request.SortOrder;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))

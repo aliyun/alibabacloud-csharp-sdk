@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         [Validation(Required=false)]
         public string SortName { get; set; }
 
+        [NameInMap("sortOrder")]
+        [Validation(Required=false)]
+        public string SortOrder { get; set; }
+
     }
 
 }
