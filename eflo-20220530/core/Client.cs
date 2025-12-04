@@ -3541,6 +3541,10 @@ namespace AlibabaCloud.SDK.Eflo20220530
             {
                 body["ErId"] = request.ErId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErRouteMapId))
+            {
+                body["ErRouteMapId"] = request.ErRouteMapId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErRouteMapIds))
             {
                 body["ErRouteMapIds"] = request.ErRouteMapIds;
@@ -3603,6 +3607,10 @@ namespace AlibabaCloud.SDK.Eflo20220530
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErId))
             {
                 body["ErId"] = request.ErId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErRouteMapId))
+            {
+                body["ErRouteMapId"] = request.ErRouteMapId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErRouteMapIds))
             {
@@ -11503,6 +11511,166 @@ namespace AlibabaCloud.SDK.Eflo20220530
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RetryVccWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switch the VCC connection instance or type</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchVccConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchVccConnectionResponse
+        /// </returns>
+        public SwitchVccConnectionResponse SwitchVccConnectionWithOptions(SwitchVccConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
+            {
+                body["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionType))
+            {
+                body["ConnectionType"] = request.ConnectionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                body["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VccId))
+            {
+                body["VccId"] = request.VccId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SwitchVccConnection",
+                Version = "2022-05-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SwitchVccConnectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switch the VCC connection instance or type</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchVccConnectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchVccConnectionResponse
+        /// </returns>
+        public async Task<SwitchVccConnectionResponse> SwitchVccConnectionWithOptionsAsync(SwitchVccConnectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CenId))
+            {
+                body["CenId"] = request.CenId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionType))
+            {
+                body["ConnectionType"] = request.ConnectionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                body["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VccId))
+            {
+                body["VccId"] = request.VccId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SwitchVccConnection",
+                Version = "2022-05-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SwitchVccConnectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switch the VCC connection instance or type</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchVccConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchVccConnectionResponse
+        /// </returns>
+        public SwitchVccConnectionResponse SwitchVccConnection(SwitchVccConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SwitchVccConnectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switch the VCC connection instance or type</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SwitchVccConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchVccConnectionResponse
+        /// </returns>
+        public async Task<SwitchVccConnectionResponse> SwitchVccConnectionAsync(SwitchVccConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SwitchVccConnectionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
