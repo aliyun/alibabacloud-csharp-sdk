@@ -40,6 +40,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string AppSecret { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>dingtalk</para>
+            /// </summary>
+            [NameInMap("DingtalkLoginVersion")]
+            [Validation(Required=false)]
+            public string DingtalkLoginVersion { get; set; }
+
             [NameInMap("EncryptKey")]
             [Validation(Required=false)]
             public string EncryptKey { get; set; }

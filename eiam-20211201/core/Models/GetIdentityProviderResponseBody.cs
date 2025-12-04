@@ -126,6 +126,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CorpId { get; set; }
 
                 /// <summary>
+                /// <para>IDaaS EIAM 钉钉扫码登录版本</para>
+                /// </summary>
+                [NameInMap("DingtalkLoginVersion")]
+                [Validation(Required=false)]
+                public string DingtalkLoginVersion { get; set; }
+
+                /// <summary>
                 /// <para>DingTalk Version.</para>
                 /// 
                 /// <b>Example:</b>
