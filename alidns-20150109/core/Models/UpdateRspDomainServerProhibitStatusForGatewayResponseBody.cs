@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
-    public class UpdateRspDomainStatusOteResponseBody : TeaModel {
+    public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody : TeaModel {
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
-        public UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
-        public class UpdateRspDomainStatusOteResponseBodyAccessDeniedDetail : TeaModel {
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
+        public class UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>CreateUser</para>
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public UpdateRspDomainStatusOteResponseBodyData Data { get; set; }
-        public class UpdateRspDomainStatusOteResponseBodyData : TeaModel {
+        public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyData Data { get; set; }
+        public class UpdateRspDomainServerProhibitStatusForGatewayResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -85,8 +85,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
             [NameInMap("StatusList")]
             [Validation(Required=false)]
-            public List<UpdateRspDomainStatusOteResponseBodyDataStatusList> StatusList { get; set; }
-            public class UpdateRspDomainStatusOteResponseBodyDataStatusList : TeaModel {
+            public List<UpdateRspDomainServerProhibitStatusForGatewayResponseBodyDataStatusList> StatusList { get; set; }
+            public class UpdateRspDomainServerProhibitStatusForGatewayResponseBodyDataStatusList : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>uptp.test.abchina.com.cn</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>0629502C-XXXX-5DC9-A8ED-2ED73A2E3931</para>
+        /// <para>0629502C-6224-5DC9-A8ED-2ED73A2E3931</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

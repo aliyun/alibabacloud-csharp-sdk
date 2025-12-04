@@ -8,15 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
-    public class UpdateRspDomainStatusOteRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>[{&quot;Status&quot;:&quot;renewProhibited&quot;,&quot;StatusMsg&quot;:&quot;test&quot;}]</para>
-        /// </summary>
+    public class UpdateRspDomainServerProhibitStatusForGatewayRequest : TeaModel {
         [NameInMap("AddStatusList")]
         [Validation(Required=false)]
-        public List<UpdateRspDomainStatusOteRequestAddStatusList> AddStatusList { get; set; }
-        public class UpdateRspDomainStatusOteRequestAddStatusList : TeaModel {
+        public List<UpdateRspDomainServerProhibitStatusForGatewayRequestAddStatusList> AddStatusList { get; set; }
+        public class UpdateRspDomainServerProhibitStatusForGatewayRequestAddStatusList : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>serverDeleteProhibited</para>
@@ -32,21 +28,19 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>443F1A21-XXXX-55C4-93E1-FF020DF93D7B</para>
+        /// <para>asdf</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>[{&quot;Status&quot;:&quot;renewProhibited&quot;,&quot;StatusMsg&quot;:&quot;test&quot;}]</para>
-        /// </summary>
         [NameInMap("DeleteStatusList")]
         [Validation(Required=false)]
-        public List<UpdateRspDomainStatusOteRequestDeleteStatusList> DeleteStatusList { get; set; }
-        public class UpdateRspDomainStatusOteRequestDeleteStatusList : TeaModel {
+        public List<UpdateRspDomainServerProhibitStatusForGatewayRequestDeleteStatusList> DeleteStatusList { get; set; }
+        public class UpdateRspDomainServerProhibitStatusForGatewayRequestDeleteStatusList : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>serverDeleteProhibited</para>
@@ -70,26 +64,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>gatewayId001</para>
-        /// </summary>
-        [NameInMap("OperatorId")]
-        [Validation(Required=false)]
-        public string OperatorId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>registryGateway</para>
-        /// </summary>
-        [NameInMap("OperatorType")]
-        [Validation(Required=false)]
-        public string OperatorType { get; set; }
 
     }
 

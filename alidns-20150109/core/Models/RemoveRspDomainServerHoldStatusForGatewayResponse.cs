@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
-    public class UpdateRspDomainServerHoldStatusOteResponse : TeaModel {
+    public class RemoveRspDomainServerHoldStatusForGatewayResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public UpdateRspDomainServerHoldStatusOteResponseBody Body { get; set; }
+        public RemoveRspDomainServerHoldStatusForGatewayResponseBody Body { get; set; }
 
     }
 

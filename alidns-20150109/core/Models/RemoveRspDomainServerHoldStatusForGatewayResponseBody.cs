@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
-    public class UpdateRspDomainServerHoldStatusOteResponseBody : TeaModel {
+    public class RemoveRspDomainServerHoldStatusForGatewayResponseBody : TeaModel {
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
-        public UpdateRspDomainServerHoldStatusOteResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
-        public class UpdateRspDomainServerHoldStatusOteResponseBodyAccessDeniedDetail : TeaModel {
+        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
+        public class RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>CreateUser</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>1046973331XXXX</para>
+            /// <para>10469733312XXX</para>
             /// </summary>
             [NameInMap("AuthPrincipalOwnerId")]
             [Validation(Required=false)]
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public UpdateRspDomainServerHoldStatusOteResponseBodyData Data { get; set; }
-        public class UpdateRspDomainServerHoldStatusOteResponseBodyData : TeaModel {
+        public RemoveRspDomainServerHoldStatusForGatewayResponseBodyData Data { get; set; }
+        public class RemoveRspDomainServerHoldStatusForGatewayResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -82,14 +82,6 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>enable</para>
-            /// </summary>
-            [NameInMap("ServerHoldStatus")]
-            [Validation(Required=false)]
-            public string ServerHoldStatus { get; set; }
 
         }
 
@@ -103,7 +95,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>0629502C-XXXX-XXXX-XXXX-2ED73A2E3931</para>
+        /// <para>0629502C-6224-5DC9-A8ED-2ED73A2E3931</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
