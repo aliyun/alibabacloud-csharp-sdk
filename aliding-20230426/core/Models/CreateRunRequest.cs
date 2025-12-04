@@ -23,6 +23,36 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string AssistantId { get; set; }
 
+        [NameInMap("extLoginUser")]
+        [Validation(Required=false)]
+        public CreateRunRequestExtLoginUser ExtLoginUser { get; set; }
+        public class CreateRunRequestExtLoginUser : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>mozi</para>
+            /// </summary>
+            [NameInMap("extLoginUserDomain")]
+            [Validation(Required=false)]
+            public string ExtLoginUserDomain { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>outeruserId123</para>
+            /// </summary>
+            [NameInMap("extLoginUserId")]
+            [Validation(Required=false)]
+            public string ExtLoginUserId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>外部游客1</para>
+            /// </summary>
+            [NameInMap("extLoginUserName")]
+            [Validation(Required=false)]
+            public string ExtLoginUserName { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>assistantId</para>

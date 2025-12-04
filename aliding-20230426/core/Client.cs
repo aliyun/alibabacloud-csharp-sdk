@@ -7839,6 +7839,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["assistantId"] = request.AssistantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtLoginUser))
+            {
+                body["extLoginUser"] = request.ExtLoginUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
             {
                 body["messages"] = request.Messages;
@@ -7913,6 +7917,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
             {
                 body["assistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtLoginUser))
+            {
+                body["extLoginUser"] = request.ExtLoginUser;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
             {
@@ -9183,6 +9191,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["assistantId"] = request.AssistantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtLoginUser))
+            {
+                body["extLoginUser"] = request.ExtLoginUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalAssistantId))
             {
                 body["originalAssistantId"] = request.OriginalAssistantId;
@@ -9261,6 +9273,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
             {
                 body["assistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtLoginUser))
+            {
+                body["extLoginUser"] = request.ExtLoginUser;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalAssistantId))
             {
@@ -10731,6 +10747,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["assistantId"] = request.AssistantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtLoginUser))
+            {
+                body["extLoginUser"] = request.ExtLoginUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalAssistantId))
             {
                 body["originalAssistantId"] = request.OriginalAssistantId;
@@ -10797,6 +10817,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
             {
                 body["assistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtLoginUser))
+            {
+                body["extLoginUser"] = request.ExtLoginUser;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalAssistantId))
             {
@@ -18211,6 +18235,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["assistantId"] = request.AssistantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtLoginUser))
+            {
+                body["extLoginUser"] = request.ExtLoginUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
             {
                 body["messages"] = request.Messages;
@@ -18293,6 +18321,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
             {
                 body["assistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtLoginUser))
+            {
+                body["extLoginUser"] = request.ExtLoginUser;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
             {
@@ -31651,6 +31683,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["assistantId"] = request.AssistantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtLoginUser))
+            {
+                body["extLoginUser"] = request.ExtLoginUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
             {
                 body["messages"] = request.Messages;
@@ -31729,6 +31765,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
             {
                 body["assistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtLoginUser))
+            {
+                body["extLoginUser"] = request.ExtLoginUser;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
             {
@@ -33459,6 +33499,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["assistantId"] = request.AssistantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtLoginUser))
+            {
+                body["extLoginUser"] = request.ExtLoginUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 body["limit"] = request.Limit;
@@ -33541,6 +33585,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
             {
                 body["assistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtLoginUser))
+            {
+                body["extLoginUser"] = request.ExtLoginUser;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -42307,6 +42355,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             {
                 body["assistantId"] = request.AssistantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtLoginUser))
+            {
+                body["extLoginUser"] = request.ExtLoginUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalAssistantId))
             {
                 body["originalAssistantId"] = request.OriginalAssistantId;
@@ -42377,6 +42429,10 @@ namespace AlibabaCloud.SDK.Aliding20230426
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssistantId))
             {
                 body["assistantId"] = request.AssistantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtLoginUser))
+            {
+                body["extLoginUser"] = request.ExtLoginUser;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalAssistantId))
             {
