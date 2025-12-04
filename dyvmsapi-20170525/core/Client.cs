@@ -529,6 +529,130 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
             return await BatchRobotSmartCallWithOptionsAsync(request, runtime);
         }
 
+        /// <param name="request">
+        /// CancelCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCallResponse
+        /// </returns>
+        public CancelCallResponse CancelCallWithOptions(CancelCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallId))
+            {
+                query["CallId"] = request.CallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelCall",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelCallResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// CancelCallRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCallResponse
+        /// </returns>
+        public async Task<CancelCallResponse> CancelCallWithOptionsAsync(CancelCallRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallId))
+            {
+                query["CallId"] = request.CallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelCall",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelCallResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// CancelCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCallResponse
+        /// </returns>
+        public CancelCallResponse CancelCall(CancelCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelCallWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// CancelCallRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCallResponse
+        /// </returns>
+        public async Task<CancelCallResponse> CancelCallAsync(CancelCallRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelCallWithOptionsAsync(request, runtime);
+        }
+
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Cancels a robocall task that has not been started.</para>
@@ -6567,6 +6691,358 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryVirtualNumberRelationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询真实号接通率</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryVmsRealNumberCallConnectionRateInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryVmsRealNumberCallConnectionRateInfoResponse
+        /// </returns>
+        public QueryVmsRealNumberCallConnectionRateInfoResponse QueryVmsRealNumberCallConnectionRateInfoWithOptions(QueryVmsRealNumberCallConnectionRateInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealNumber))
+            {
+                query["RealNumber"] = request.RealNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimePeriod))
+            {
+                query["TimePeriod"] = request.TimePeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualNumber))
+            {
+                query["VirtualNumber"] = request.VirtualNumber;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryVmsRealNumberCallConnectionRateInfo",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryVmsRealNumberCallConnectionRateInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询真实号接通率</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryVmsRealNumberCallConnectionRateInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryVmsRealNumberCallConnectionRateInfoResponse
+        /// </returns>
+        public async Task<QueryVmsRealNumberCallConnectionRateInfoResponse> QueryVmsRealNumberCallConnectionRateInfoWithOptionsAsync(QueryVmsRealNumberCallConnectionRateInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealNumber))
+            {
+                query["RealNumber"] = request.RealNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimePeriod))
+            {
+                query["TimePeriod"] = request.TimePeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualNumber))
+            {
+                query["VirtualNumber"] = request.VirtualNumber;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryVmsRealNumberCallConnectionRateInfo",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryVmsRealNumberCallConnectionRateInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询真实号接通率</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryVmsRealNumberCallConnectionRateInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryVmsRealNumberCallConnectionRateInfoResponse
+        /// </returns>
+        public QueryVmsRealNumberCallConnectionRateInfoResponse QueryVmsRealNumberCallConnectionRateInfo(QueryVmsRealNumberCallConnectionRateInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryVmsRealNumberCallConnectionRateInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询真实号接通率</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryVmsRealNumberCallConnectionRateInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryVmsRealNumberCallConnectionRateInfoResponse
+        /// </returns>
+        public async Task<QueryVmsRealNumberCallConnectionRateInfoResponse> QueryVmsRealNumberCallConnectionRateInfoAsync(QueryVmsRealNumberCallConnectionRateInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryVmsRealNumberCallConnectionRateInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询虚拟号码与真实号码绑定关系列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryVmsVirtualNumberRelationByPageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryVmsVirtualNumberRelationByPageResponse
+        /// </returns>
+        public QueryVmsVirtualNumberRelationByPageResponse QueryVmsVirtualNumberRelationByPageWithOptions(QueryVmsVirtualNumberRelationByPageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberCity))
+            {
+                query["NumberCity"] = request.NumberCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberProvince))
+            {
+                query["NumberProvince"] = request.NumberProvince;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealNumber))
+            {
+                query["RealNumber"] = request.RealNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualNumber))
+            {
+                query["VirtualNumber"] = request.VirtualNumber;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryVmsVirtualNumberRelationByPage",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryVmsVirtualNumberRelationByPageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询虚拟号码与真实号码绑定关系列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryVmsVirtualNumberRelationByPageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryVmsVirtualNumberRelationByPageResponse
+        /// </returns>
+        public async Task<QueryVmsVirtualNumberRelationByPageResponse> QueryVmsVirtualNumberRelationByPageWithOptionsAsync(QueryVmsVirtualNumberRelationByPageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberCity))
+            {
+                query["NumberCity"] = request.NumberCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NumberProvince))
+            {
+                query["NumberProvince"] = request.NumberProvince;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealNumber))
+            {
+                query["RealNumber"] = request.RealNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["State"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualNumber))
+            {
+                query["VirtualNumber"] = request.VirtualNumber;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryVmsVirtualNumberRelationByPage",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryVmsVirtualNumberRelationByPageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询虚拟号码与真实号码绑定关系列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryVmsVirtualNumberRelationByPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryVmsVirtualNumberRelationByPageResponse
+        /// </returns>
+        public QueryVmsVirtualNumberRelationByPageResponse QueryVmsVirtualNumberRelationByPage(QueryVmsVirtualNumberRelationByPageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryVmsVirtualNumberRelationByPageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询虚拟号码与真实号码绑定关系列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryVmsVirtualNumberRelationByPageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryVmsVirtualNumberRelationByPageResponse
+        /// </returns>
+        public async Task<QueryVmsVirtualNumberRelationByPageResponse> QueryVmsVirtualNumberRelationByPageAsync(QueryVmsVirtualNumberRelationByPageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryVmsVirtualNumberRelationByPageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
