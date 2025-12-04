@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
     public class ListJobsRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>Default</para>
+        /// </summary>
+        [NameInMap("jobType")]
+        [Validation(Required=false)]
+        public string JobType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
         [NameInMap("pageNumber")]

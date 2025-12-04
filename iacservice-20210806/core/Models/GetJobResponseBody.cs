@@ -137,6 +137,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string JobId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Default</para>
+            /// </summary>
+            [NameInMap("jobType")]
+            [Validation(Required=false)]
+            public string JobType { get; set; }
+
             [NameInMap("logFile")]
             [Validation(Required=false)]
             public Dictionary<string, object> LogFile { get; set; }
