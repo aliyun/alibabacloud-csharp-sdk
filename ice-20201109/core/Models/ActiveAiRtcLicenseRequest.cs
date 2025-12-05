@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class ActiveAiRtcLicenseRequest : TeaModel {
         /// <summary>
+        /// <para>The authorization code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>iU1IeJech7***</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string AuthCode { get; set; }
 
         /// <summary>
+        /// <para>The device ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>device-***</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// <para>The batch ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>17712***</para>
         /// </summary>

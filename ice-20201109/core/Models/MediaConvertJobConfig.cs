@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                     [Validation(Required=false)]
                     public List<MediaConvertJobConfigOutputGroupsGroupConfigManifestExtendExcludes> Excludes { get; set; }
                     public class MediaConvertJobConfigOutputGroupsGroupConfigManifestExtendExcludes : TeaModel {
+                        [NameInMap("Language")]
+                        [Validation(Required=false)]
+                        public string Language { get; set; }
+
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
@@ -60,10 +64,6 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
-
-                        [NameInMap("language")]
-                        [Validation(Required=false)]
-                        public string Language { get; set; }
 
                     }
 

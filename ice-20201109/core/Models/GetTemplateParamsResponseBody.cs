@@ -30,6 +30,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string CoverUrl { get; set; }
 
+            [NameInMap("Height")]
+            [Validation(Required=false)]
+            public int? Height { get; set; }
+
             /// <summary>
             /// <para>The parameter name.</para>
             /// 
@@ -47,6 +51,14 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public string MediaUrl { get; set; }
 
+            [NameInMap("TimelineIn")]
+            [Validation(Required=false)]
+            public float? TimelineIn { get; set; }
+
+            [NameInMap("TimelineOut")]
+            [Validation(Required=false)]
+            public float? TimelineOut { get; set; }
+
             /// <summary>
             /// <para>The material type.</para>
             /// <para>Valid values:</para>
@@ -62,6 +74,18 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
+
+            [NameInMap("Width")]
+            [Validation(Required=false)]
+            public int? Width { get; set; }
+
+            [NameInMap("X")]
+            [Validation(Required=false)]
+            public int? X { get; set; }
+
+            [NameInMap("Y")]
+            [Validation(Required=false)]
+            public int? Y { get; set; }
 
         }
 
