@@ -1,3 +1,6 @@
+2025-12-05 Version: 2.7.2
+- Generated csharp 2019-05-06 for sae.
+
 2025-12-05 Version: 2.7.1
 - Update API ListApplications: add response parameters Body.Data.Applications.$.ResourceType.
 - Update API ListApplications: add response parameters Body.Data.Applications.$.Children.$.ResourceType.
