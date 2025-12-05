@@ -10,16 +10,6 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ChatMessagesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>app-iBuGU1VxEY42zrQRQfNA****</para>
-        /// </summary>
-        [NameInMap("ApiId")]
-        [Validation(Required=false)]
-        public string ApiId { get; set; }
-
-        /// <summary>
         /// <b>Example:</b>
         /// <para>fea7bdca-e848-44dd-b1ae-852472b8****</para>
         /// </summary>

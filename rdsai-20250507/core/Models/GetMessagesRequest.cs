@@ -11,14 +11,6 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
     public class GetMessagesRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>app-iBuGU1VxEY42zrQRQfNA****</para>
-        /// </summary>
-        [NameInMap("ApiId")]
-        [Validation(Required=false)]
-        public string ApiId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
         /// <para>941c6f59-acf5-4e11-9adc-31e52e1f****</para>
         /// </summary>
         [NameInMap("ConversationId")]
