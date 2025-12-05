@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string CreatedTime { get; set; }
 
+        [NameInMap("disableSessionIdReuse")]
+        [Validation(Required=false)]
+        public bool? DisableSessionIdReuse { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>functionName1</para>

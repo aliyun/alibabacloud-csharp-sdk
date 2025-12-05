@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class GetSessionRequest : TeaModel {
         /// <summary>
+        /// <para>The function alias or version associated with the queried session ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aliasName1</para>
         /// </summary>

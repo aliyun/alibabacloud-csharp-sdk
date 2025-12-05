@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public long? CurrentInstances { get; set; }
 
+        [NameInMap("enableOnDemandScaling")]
+        [Validation(Required=false)]
+        public bool? EnableOnDemandScaling { get; set; }
+
         [NameInMap("functionArn")]
         [Validation(Required=false)]
         public string FunctionArn { get; set; }

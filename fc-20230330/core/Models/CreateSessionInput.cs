@@ -9,9 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CreateSessionInput : TeaModel {
+        [NameInMap("disableSessionIdReuse")]
+        [Validation(Required=false)]
+        public bool? DisableSessionIdReuse { get; set; }
+
         [NameInMap("nasConfig")]
         [Validation(Required=false)]
         public NASConfig NasConfig { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>custom-test-session-id</para>
+        /// </summary>
+        [NameInMap("sessionId")]
+        [Validation(Required=false)]
+        public string SessionId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

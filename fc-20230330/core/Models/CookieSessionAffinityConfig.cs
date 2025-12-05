@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CookieSessionAffinityConfig : TeaModel {
+        [NameInMap("disableSessionIdReuse")]
+        [Validation(Required=false)]
+        public bool? DisableSessionIdReuse { get; set; }
+
         [NameInMap("sessionConcurrencyPerInstance")]
         [Validation(Required=false)]
         public long? SessionConcurrencyPerInstance { get; set; }

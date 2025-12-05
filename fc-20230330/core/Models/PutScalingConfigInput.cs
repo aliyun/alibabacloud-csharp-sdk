@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutScalingConfigInput : TeaModel {
+        [NameInMap("enableOnDemandScaling")]
+        [Validation(Required=false)]
+        public bool? EnableOnDemandScaling { get; set; }
+
         [NameInMap("horizontalScalingPolicies")]
         [Validation(Required=false)]
         public List<ScalingPolicy> HorizontalScalingPolicies { get; set; }

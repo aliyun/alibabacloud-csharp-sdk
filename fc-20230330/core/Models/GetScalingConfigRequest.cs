@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class GetScalingConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The alias of the function.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>LATEST</para>
         /// </summary>

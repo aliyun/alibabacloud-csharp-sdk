@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public int? InstanceCount { get; set; }
 
+        [NameInMap("instanceType")]
+        [Validation(Required=false)]
+        public string InstanceType { get; set; }
+
         /// <summary>
         /// <para>函数的别名</para>
         /// </summary>

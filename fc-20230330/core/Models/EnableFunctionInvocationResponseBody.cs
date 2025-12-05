@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class EnableFunctionInvocationResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
