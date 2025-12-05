@@ -14,25 +14,32 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string DryRun { get; set; }
 
         /// <summary>
-        /// A JSON string that consists of key-value pairs. If you specify this parameter, an equivalent value is required when you call the Decrypt operation. For more information, see [EncryptionContext](https://help.aliyun.com/document_detail/42975.html).
+        /// <para>A JSON string that consists of key-value pairs. If you specify this parameter, an equivalent value is required when you call the Decrypt operation. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Example&quot;:&quot;Example&quot;}</para>
         /// </summary>
         [NameInMap("EncryptionContext")]
         [Validation(Required=false)]
         public Dictionary<string, object> EncryptionContext { get; set; }
 
         /// <summary>
-        /// The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see [Use aliases](https://help.aliyun.com/document_detail/68522.html).
+        /// <para>The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Use aliases</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234abcd-12ab-34cd-56ef-12345678****</para>
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]
         public string KeyId { get; set; }
 
         /// <summary>
-        /// The plaintext to be encrypted. The plaintext must be Base64 encoded.
+        /// <para>The plaintext to be encrypted. The plaintext must be Base64 encoded.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>SGVsbG8gd29y****</para>
         /// </summary>
         [NameInMap("Plaintext")]
         [Validation(Required=false)]

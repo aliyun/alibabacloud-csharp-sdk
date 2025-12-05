@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class CancelKeyDeletionRequest : TeaModel {
         /// <summary>
-        /// The ID of the CMK. The ID must be globally unique.
+        /// <para>The ID of the CMK. The ID must be globally unique.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234abcd-12ab-34cd-56ef-12345678****</para>
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]

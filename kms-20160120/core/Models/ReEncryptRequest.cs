@@ -10,30 +10,37 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ReEncryptRequest : TeaModel {
         /// <summary>
-        /// The ciphertext that you want to re-encrypt.
+        /// <para>The ciphertext that you want to re-encrypt.</para>
+        /// <para>You can set this parameter to the ciphertext that is returned after a symmetric or asymmetric encryption operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Symmetric encryption: the ciphertext returned after you call the <a href="https://help.aliyun.com/document_detail/28949.html">Encrypt</a>, <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a>, <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a>, or <a href="https://help.aliyun.com/document_detail/176804.html">GenerateAndExportDataKey</a> operation</description></item>
+        /// <item><description>Asymmetric encryption: the public key-encrypted ciphertext returned after you call the <a href="https://help.aliyun.com/document_detail/176804.html">GenerateAndExportDataKey</a> operation, or the ciphertext encrypted by using the public key of an asymmetric key pair outside KMS</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can set this parameter to the ciphertext that is returned after a symmetric or asymmetric encryption operation.
-        /// 
-        /// *   Symmetric encryption: the ciphertext returned after you call the [Encrypt](https://help.aliyun.com/document_detail/28949.html), [GenerateDataKey](https://help.aliyun.com/document_detail/28948.html), [GenerateDataKeyWithoutPlaintext](https://help.aliyun.com/document_detail/134043.html), or [GenerateAndExportDataKey](https://help.aliyun.com/document_detail/176804.html) operation
-        /// *   Asymmetric encryption: the public key-encrypted ciphertext returned after you call the [GenerateAndExportDataKey](https://help.aliyun.com/document_detail/176804.html) operation, or the ciphertext encrypted by using the public key of an asymmetric key pair outside KMS
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ODZhOWVmZDktM2QxNi00ODk0LWJkNGYtMWZjNDNmM2YyYWJmS7FmDBBQ0BkKsQrtRnidtPwirmDcS0ZuJCU41xxAAWk4Z8qsADfbV0b+i6kQmlvj79dJdGOvtX69Uycs901q********</para>
         /// </summary>
         [NameInMap("CiphertextBlob")]
         [Validation(Required=false)]
         public string CiphertextBlob { get; set; }
 
         /// <summary>
-        /// A JSON string that consists of key-value pairs. This parameter specifies the EncryptionContext that is used to re-encrypt the decrypted data or data key.
+        /// <para>A JSON string that consists of key-value pairs. This parameter specifies the EncryptionContext that is used to re-encrypt the decrypted data or data key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Example&quot;:&quot;Example&quot;}</para>
         /// </summary>
         [NameInMap("DestinationEncryptionContext")]
         [Validation(Required=false)]
         public Dictionary<string, object> DestinationEncryptionContext { get; set; }
 
         /// <summary>
-        /// The ID of the symmetric CMK that is used to re-encrypt the ciphertext after the ciphertext is decrypted.
+        /// <para>The ID of the symmetric CMK that is used to re-encrypt the ciphertext after the ciphertext is decrypted.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234abcd-12ab-34cd-56ef-12345678****</para>
         /// </summary>
         [NameInMap("DestinationKeyId")]
         [Validation(Required=false)]
@@ -44,44 +51,59 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string DryRun { get; set; }
 
         /// <summary>
-        /// The encryption algorithm based on which the public key is used to encrypt the ciphertext specified by CiphertextBlob. For more information about encryption algorithms, see [AsymmetricDecrypt](https://help.aliyun.com/document_detail/148130.html).
+        /// <para>The encryption algorithm based on which the public key is used to encrypt the ciphertext specified by CiphertextBlob. For more information about encryption algorithms, see <a href="https://help.aliyun.com/document_detail/148130.html">AsymmetricDecrypt</a>.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RSAES_OAEP_SHA_256</description></item>
+        /// <item><description>RSAES_OAEP_SHA_1</description></item>
+        /// <item><description>SM2PKE</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> If you set CiphertextBlob to the public key-encrypted ciphertext that is returned after an asymmetric encryption operation, specify this parameter.</para>
+        /// </remarks>
         /// 
-        /// Valid values:
-        /// 
-        /// *   RSAES_OAEP_SHA_256
-        /// *   RSAES_OAEP_SHA_1
-        /// *   SM2PKE
-        /// 
-        /// >  If you set CiphertextBlob to the public key-encrypted ciphertext that is returned after an asymmetric encryption operation, specify this parameter.
+        /// <b>Example:</b>
+        /// <para>RSAES_OAEP_SHA_256</para>
         /// </summary>
         [NameInMap("SourceEncryptionAlgorithm")]
         [Validation(Required=false)]
         public string SourceEncryptionAlgorithm { get; set; }
 
         /// <summary>
-        /// A JSON string that consists of key-value pairs. If you specify EncryptionContext when you call the [Encrypt](https://help.aliyun.com/document_detail/28949.html), [GenerateDataKey](https://help.aliyun.com/document_detail/28948.html), [GenerateDataKeyWithoutPlaintext](https://help.aliyun.com/document_detail/134043.html), or [GenerateAndExportDataKey](https://help.aliyun.com/document_detail/176804.html) operation to encrypt the data or data key, an equivalent value is required here. For more information, see [EncryptionContext](https://help.aliyun.com/document_detail/42975.html).
+        /// <para>A JSON string that consists of key-value pairs. If you specify EncryptionContext when you call the <a href="https://help.aliyun.com/document_detail/28949.html">Encrypt</a>, <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a>, <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a>, or <a href="https://help.aliyun.com/document_detail/176804.html">GenerateAndExportDataKey</a> operation to encrypt the data or data key, an equivalent value is required here. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</para>
+        /// <remarks>
+        /// <para> If you set CiphertextBlob to the ciphertext that is returned after a symmetric encryption operation, specify this parameter.</para>
+        /// </remarks>
         /// 
-        /// >  If you set CiphertextBlob to the ciphertext that is returned after a symmetric encryption operation, specify this parameter.
+        /// <b>Example:</b>
+        /// <para>{&quot;Example&quot;:&quot;Example&quot;}</para>
         /// </summary>
         [NameInMap("SourceEncryptionContext")]
         [Validation(Required=false)]
         public Dictionary<string, object> SourceEncryptionContext { get; set; }
 
         /// <summary>
-        /// The ID of the CMK that is used to decrypt the ciphertext.
+        /// <para>The ID of the CMK that is used to decrypt the ciphertext.</para>
+        /// <para>This parameter is the globally unique ID of the CMK.</para>
+        /// <remarks>
+        /// <para> If you set CiphertextBlob to the public key-encrypted ciphertext that is returned after an asymmetric encryption operation, specify this parameter.</para>
+        /// </remarks>
         /// 
-        /// This parameter is the globally unique ID of the CMK.
-        /// 
-        /// >  If you set CiphertextBlob to the public key-encrypted ciphertext that is returned after an asymmetric encryption operation, specify this parameter.
+        /// <b>Example:</b>
+        /// <para>5c438b18-05be-40ad-b6c2-3be6752c****</para>
         /// </summary>
         [NameInMap("SourceKeyId")]
         [Validation(Required=false)]
         public string SourceKeyId { get; set; }
 
         /// <summary>
-        /// The ID of the CMK version that is used to decrypt the ciphertext.
+        /// <para>The ID of the CMK version that is used to decrypt the ciphertext.</para>
+        /// <remarks>
+        /// <para> If you set CiphertextBlob to the public key-encrypted ciphertext that is returned after an asymmetric encryption operation, specify this parameter.</para>
+        /// </remarks>
         /// 
-        /// >  If you set CiphertextBlob to the public key-encrypted ciphertext that is returned after an asymmetric encryption operation, specify this parameter.
+        /// <b>Example:</b>
+        /// <para>2ab1a983-7072-4bbc-a582-584b5bd8****</para>
         /// </summary>
         [NameInMap("SourceKeyVersionId")]
         [Validation(Required=false)]

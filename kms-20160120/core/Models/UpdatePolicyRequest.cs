@@ -10,47 +10,63 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class UpdatePolicyRequest : TeaModel {
         /// <summary>
-        /// The access control rule.
+        /// <para>The access control rule.</para>
+        /// <remarks>
+        /// <para>For more information about how to query created access control rules, see <a href="https://help.aliyun.com/document_detail/2539433.html">ListNetworkRules</a>.</para>
+        /// </remarks>
         /// 
-        /// > For more information about how to query created access control rules, see [ListNetworkRules](https://help.aliyun.com/document_detail/2539433.html).
+        /// <b>Example:</b>
+        /// <para>{&quot;NetworkRules&quot;:[&quot;kst-hzz62ee817bvyyr5x****.efkd&quot;,&quot;kst-hzz62ee817bvyyr5x****.eyyp&quot;]}</para>
         /// </summary>
         [NameInMap("AccessControlRules")]
         [Validation(Required=false)]
         public string AccessControlRules { get; set; }
 
         /// <summary>
-        /// The description.
+        /// <para>The description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>policy  description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the permission policy that you want to update.
+        /// <para>The name of the permission policy that you want to update.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>policy_test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The operations that are supported by the updated policy. Valid values:
+        /// <para>The operations that are supported by the updated policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RbacPermission/Template/CryptoServiceKeyUser: allows you to perform cryptographic operations.</description></item>
+        /// <item><description>RbacPermission/Template/CryptoServiceSecretUser: allows you to perform secret-related operations.</description></item>
+        /// </list>
+        /// <para>You can select both.</para>
         /// 
-        /// *   RbacPermission/Template/CryptoServiceKeyUser: allows you to perform cryptographic operations.
-        /// *   RbacPermission/Template/CryptoServiceSecretUser: allows you to perform secret-related operations.
-        /// 
-        /// You can select both.
+        /// <b>Example:</b>
+        /// <para>[&quot;RbacPermission/Template/CryptoServiceKeyUser&quot;, &quot;RbacPermission/Template/CryptoServiceSecretUser&quot;]</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
         public string Permissions { get; set; }
 
         /// <summary>
-        /// The key and secret that are allowed to access after the update.
+        /// <para>The key and secret that are allowed to access after the update.</para>
+        /// <list type="bullet">
+        /// <item><description>Key: Enter a key in the <c>key/${KeyId}</c> format. To allow access to all keys of a KMS instance, enter key/\*.</description></item>
+        /// <item><description>Secret: Enter a secret in the <c>secret/${SecretName}</c> format. To allow access to all secrets of a KMS instance, enter secret/\*.</description></item>
+        /// </list>
         /// 
-        /// *   Key: Enter a key in the `key/${KeyId}` format. To allow access to all keys of a KMS instance, enter key/\\*.
-        /// *   Secret: Enter a secret in the `secret/${SecretName}` format. To allow access to all secrets of a KMS instance, enter secret/\\*.
+        /// <b>Example:</b>
+        /// <para>[&quot;secret/acs/ram/user/ram-secret&quot;, &quot;secret/acs/ram/user/acr-master&quot;, &quot;key/key-hzz63d9c8d3dfv8cv****&quot;]</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]

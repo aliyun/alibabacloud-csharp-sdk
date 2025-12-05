@@ -10,26 +10,33 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class UpdateCertificateStatusRequest : TeaModel {
         /// <summary>
-        /// The ID of the certificate. The ID must be globally unique in Certificates Manager.
+        /// <para>The ID of the certificate. The ID must be globally unique in Certificates Manager.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>9a28de48-8d8b-484d-a766-dec4****</para>
         /// </summary>
         [NameInMap("CertificateId")]
         [Validation(Required=false)]
         public string CertificateId { get; set; }
 
         /// <summary>
-        /// The status of the certificate. Valid values:
+        /// <para>The status of the certificate. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>INACTIVE: The certificate is disabled.</para>
+        /// </description></item>
+        /// <item><description><para>ACTIVE: The certificate is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>REVOKED: The certificate is revoked.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If the certificate is in the REVOKED state, you can use the certificate only to verify a signature, but not to generate a signature.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   INACTIVE: The certificate is disabled.
-        /// 
-        /// *   ACTIVE: The certificate is enabled.
-        /// 
-        /// *   REVOKED: The certificate is revoked.
-        /// 
-        /// > If the certificate is in the REVOKED state, you can use the certificate only to verify a signature, but not to generate a signature.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>INACTIVE</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

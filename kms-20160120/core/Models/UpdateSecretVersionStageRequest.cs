@@ -10,38 +10,50 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class UpdateSecretVersionStageRequest : TeaModel {
         /// <summary>
-        /// The version from which you want to remove the specified stage label.
+        /// <para>The version from which you want to remove the specified stage label.</para>
+        /// <remarks>
+        /// <para> You must specify at least one of the RemoveFromVersion and MoveToVersion parameters.</para>
+        /// </remarks>
         /// 
-        /// >  You must specify at least one of the RemoveFromVersion and MoveToVersion parameters.
+        /// <b>Example:</b>
+        /// <para>002</para>
         /// </summary>
         [NameInMap("MoveToVersion")]
         [Validation(Required=false)]
         public string MoveToVersion { get; set; }
 
         /// <summary>
-        /// The specified stage label. Valid values:
+        /// <para>The specified stage label. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ACSCurrent</description></item>
+        /// <item><description>ACSPrevious</description></item>
+        /// <item><description>Custom stage label</description></item>
+        /// </list>
         /// 
-        /// *   ACSCurrent
-        /// *   ACSPrevious
-        /// *   Custom stage label
+        /// <b>Example:</b>
+        /// <para>001</para>
         /// </summary>
         [NameInMap("RemoveFromVersion")]
         [Validation(Required=false)]
         public string RemoveFromVersion { get; set; }
 
         /// <summary>
-        /// The operation that you want to perform. Set the value to **UpdateSecretVersionStage**.
+        /// <para>The operation that you want to perform. Set the value to <b>UpdateSecretVersionStage</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>secret001</para>
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]
         public string SecretName { get; set; }
 
         /// <summary>
-        /// The name of the secret.
+        /// <para>The name of the secret.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>ACSCurrent</para>
         /// </summary>
         [NameInMap("VersionStage")]
         [Validation(Required=false)]

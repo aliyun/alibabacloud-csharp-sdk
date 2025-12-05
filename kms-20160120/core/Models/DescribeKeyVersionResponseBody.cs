@@ -10,30 +10,40 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DescribeKeyVersionResponseBody : TeaModel {
         /// <summary>
-        /// The metadata of the CMK version.
+        /// <para>The metadata of the CMK version.</para>
         /// </summary>
         [NameInMap("KeyVersion")]
         [Validation(Required=false)]
         public DescribeKeyVersionResponseBodyKeyVersion KeyVersion { get; set; }
         public class DescribeKeyVersionResponseBodyKeyVersion : TeaModel {
             /// <summary>
-            /// The date and time when the CMK version was created. The time is displayed in UTC.
+            /// <para>The date and time when the CMK version was created. The time is displayed in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2016-03-25T10:42:40Z</para>
             /// </summary>
             [NameInMap("CreationDate")]
             [Validation(Required=false)]
             public string CreationDate { get; set; }
 
             /// <summary>
-            /// The globally unique ID of the CMK.
+            /// <para>The globally unique ID of the CMK.</para>
+            /// <remarks>
+            /// <para> If you set the KeyId parameter in the request to an alias of the CMK, the ID of the CMK to which the alias is bound is returned.</para>
+            /// </remarks>
             /// 
-            /// >  If you set the KeyId parameter in the request to an alias of the CMK, the ID of the CMK to which the alias is bound is returned.
+            /// <b>Example:</b>
+            /// <para>1234abcd-12ab-34cd-56ef-12345678****</para>
             /// </summary>
             [NameInMap("KeyId")]
             [Validation(Required=false)]
             public string KeyId { get; set; }
 
             /// <summary>
-            /// The globally unique ID of the CMK version.
+            /// <para>The globally unique ID of the CMK version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2ab1a983-7072-4bbc-a582-584b5bd8****</para>
             /// </summary>
             [NameInMap("KeyVersionId")]
             [Validation(Required=false)]
@@ -42,7 +52,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7021b6ec-4be7-4d3c-8a68-1e85d4d515a0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

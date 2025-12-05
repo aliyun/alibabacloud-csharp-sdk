@@ -10,31 +10,35 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ListAliasesByKeyIdRequest : TeaModel {
         /// <summary>
-        /// The globally unique ID of the CMK.
+        /// <para>The globally unique ID of the CMK.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>1234abcd-12ab-34cd-56ef-12345678****</para>
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]
         public string KeyId { get; set; }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>Valid values: an integer that is greater than 0.</para>
+        /// <para>Default value: 1.</para>
         /// 
-        /// Valid values: an integer that is greater than 0.
-        /// 
-        /// Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Valid values: 0 to 101.</para>
+        /// <para>Default value: 10</para>
         /// 
-        /// Valid values: 0 to 101.
-        /// 
-        /// Default value: 10
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

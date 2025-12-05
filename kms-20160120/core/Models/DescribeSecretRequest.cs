@@ -10,19 +10,25 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DescribeSecretRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return the resource tags of the secret. Valid values:
+        /// <para>Specifies whether to return the resource tags of the secret. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The resource tags are returned.</description></item>
+        /// <item><description>false: The resource tags are not returned. This is the default value.</description></item>
+        /// </list>
         /// 
-        /// *   true: The resource tags are returned.
-        /// *   false: The resource tags are not returned. This is the default value.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("FetchTags")]
         [Validation(Required=false)]
         public string FetchTags { get; set; }
 
         /// <summary>
-        /// The name of the secret.
+        /// <para>The name of the secret.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>secret001</para>
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]

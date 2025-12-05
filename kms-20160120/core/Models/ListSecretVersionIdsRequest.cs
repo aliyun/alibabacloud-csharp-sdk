@@ -10,37 +10,47 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ListSecretVersionIdsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to return deprecated secret versions.
+        /// <para>Specifies whether to return deprecated secret versions.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false: no</description></item>
+        /// <item><description>true: yes</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
-        /// Valid values:
-        /// 
-        /// *   false: no
-        /// *   true: yes
-        /// 
-        /// Default value: false.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("IncludeDeprecated")]
         [Validation(Required=false)]
         public string IncludeDeprecated { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: 1.
+        /// <para>The number of the page to return. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10.
+        /// <para>The number of entries to return on each page. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The name of the secret.
+        /// <para>The name of the secret.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>secret001</para>
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]

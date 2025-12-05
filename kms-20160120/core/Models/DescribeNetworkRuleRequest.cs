@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DescribeNetworkRuleRequest : TeaModel {
         /// <summary>
-        /// The name of the access control rule that you want to query.
+        /// <para>The name of the access control rule that you want to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>networkrule_test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

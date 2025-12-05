@@ -10,30 +10,43 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class AsymmetricEncryptResponseBody : TeaModel {
         /// <summary>
-        /// The Base64-encoded ciphertext that was generated after encryption.
+        /// <para>The Base64-encoded ciphertext that was generated after encryption.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BQKP+1zK6+ZEMxTP5qaVzcsgXtWplYBKm0NXdSnB5FzliFxE1bSiu4dnEIlca2JpeH7yz1/S6fed630H+hIH6DoM25fTLNcKj+mFB0Xnh9m2+HN59Mn4qyTfcUeadnfCXSWcGBouhXFwcdd2rJ3n337bzTf4jm659gZu3L0i6PLuxM9p7mqdwO0cKJPfGVfhnfMz+f4alMg79WB/NNyE2lyX7/qxvV49ObNrrJbKSFiz8Djocaf0IESNLMbfYI5bXjWkJlX92DQbKhibtQW8ZOJ//ZC6t0AWcUoKL6QDm/dg5koQalcleRinpB+QadFm894sLbVZ9+N4GVsv1Wbjwg==</para>
         /// </summary>
         [NameInMap("CiphertextBlob")]
         [Validation(Required=false)]
         public string CiphertextBlob { get; set; }
 
         /// <summary>
-        /// The ID of the CMK. The ID must be globally unique.
+        /// <para>The ID of the CMK. The ID must be globally unique.</para>
+        /// <remarks>
+        /// <para> If you set the KeyId parameter in the request to an alias, the ID of the CMK to which the alias is bound is returned.</para>
+        /// </remarks>
         /// 
-        /// >  If you set the KeyId parameter in the request to an alias, the ID of the CMK to which the alias is bound is returned.
+        /// <b>Example:</b>
+        /// <para>5c438b18-05be-40ad-b6c2-3be6752c****</para>
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]
         public string KeyId { get; set; }
 
         /// <summary>
-        /// The version ID of the CMK that is used to encrypt the plaintext.
+        /// <para>The version ID of the CMK that is used to encrypt the plaintext.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2ab1a983-7072-4bbc-a582-584b5bd8****</para>
         /// </summary>
         [NameInMap("KeyVersionId")]
         [Validation(Required=false)]
         public string KeyVersionId { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>475f1620-b9d3-4d35-b5c6-3fbdd941423d</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

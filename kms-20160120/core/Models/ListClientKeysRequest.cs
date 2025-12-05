@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ListClientKeysRequest : TeaModel {
         /// <summary>
-        /// The name of the application access point (AAP).
+        /// <para>The name of the application access point (AAP).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aap_test</para>
         /// </summary>
         [NameInMap("AapName")]
         [Validation(Required=false)]

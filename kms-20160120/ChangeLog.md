@@ -1,3 +1,20 @@
+2025-12-05 Version: 1.3.0
+- Support API GetDefaultKmsInstance.
+- Support API GetKmsInstanceQuotaInfos.
+- Support API ReleaseKmsInstance.
+- Update API CreateKey: add request parameters KeyStorageMechanism.
+- Update API DescribeSecret: add response parameters Body.OwingService.
+- Update API GetKmsInstance: add response parameters Body.KmsInstance.ChargeType.
+- Update API GetKmsInstance: add response parameters Body.KmsInstance.Log.
+- Update API GetKmsInstance: add response parameters Body.KmsInstance.LogStorage.
+- Update API GetKmsInstance: add response parameters Body.KmsInstance.ProductType.
+- Update API GetKmsInstance: add response parameters Body.KmsInstance.ProductVersion.
+- Update API GetKmsInstance: add response parameters Body.KmsInstance.SaleStatus.
+- Update API ListKmsInstances: add request parameters Filters.
+- Update API ListSecrets: add response parameters Body.SecretList.$.OwingService.
+- Update API SetDeletionProtection: add request parameters KeyId.
+
+
 2024-08-30 Version: 1.2.3
 - Generated csharp 2016-01-20 for Kms.
 

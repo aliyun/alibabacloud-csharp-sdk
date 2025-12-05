@@ -10,15 +10,17 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DecryptShrinkRequest : TeaModel {
         /// <summary>
-        /// The ciphertext that you want to decrypt.
+        /// <para>The ciphertext that you want to decrypt.</para>
+        /// <para>You can generate the ciphertext by calling the following operations:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/28949.html">Encrypt</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a></description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can generate the ciphertext by calling the following operations:
-        /// 
-        /// *   [GenerateDataKey](https://help.aliyun.com/document_detail/28948.html)
-        /// *   [Encrypt](https://help.aliyun.com/document_detail/28949.html)
-        /// *   [GenerateDataKeyWithoutPlaintext](https://help.aliyun.com/document_detail/134043.html)
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>DZhOWVmZDktM2QxNi00ODk0LWJkNGYtMWZjNDNmM2YyYWJmaaSl+TztSIMe43nbTH/Z1Wr4XfLftKhAciUmDQXuMRl4WTvKhxjMThjK****</para>
         /// </summary>
         [NameInMap("CiphertextBlob")]
         [Validation(Required=false)]
@@ -29,9 +31,13 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string DryRun { get; set; }
 
         /// <summary>
-        /// The JSON string that consists of key-value pairs.
+        /// <para>The JSON string that consists of key-value pairs.</para>
+        /// <remarks>
+        /// <para> If you specify the EncryptionContext parameter when you call the <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a>, <a href="https://help.aliyun.com/document_detail/28949.html">Encrypt</a>, or <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a> operation, you must specify the same context when you call the Decrypt operation. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</para>
+        /// </remarks>
         /// 
-        /// >  If you specify the EncryptionContext parameter when you call the [GenerateDataKey](https://help.aliyun.com/document_detail/28948.html), [Encrypt](https://help.aliyun.com/document_detail/28949.html), or [GenerateDataKeyWithoutPlaintext](https://help.aliyun.com/document_detail/134043.html) operation, you must specify the same context when you call the Decrypt operation. For more information, see [EncryptionContext](https://help.aliyun.com/document_detail/42975.html).
+        /// <b>Example:</b>
+        /// <para>{&quot;Example&quot;:&quot;Example&quot;}</para>
         /// </summary>
         [NameInMap("EncryptionContext")]
         [Validation(Required=false)]

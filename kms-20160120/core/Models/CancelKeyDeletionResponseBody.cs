@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class CancelKeyDeletionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3da5b8cc-8107-40ac-a170-793cd181d7b7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

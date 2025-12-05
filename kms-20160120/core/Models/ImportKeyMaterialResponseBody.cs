@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ImportKeyMaterialResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ec1017cf-ead4-f3ca-babc-c3b34f3dbecb</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

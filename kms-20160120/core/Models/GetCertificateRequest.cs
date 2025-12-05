@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GetCertificateRequest : TeaModel {
         /// <summary>
-        /// The ID of the certificate. It is the globally unique identifier (GUID) of the certificate in Certificates Manager.
+        /// <para>The ID of the certificate. It is the globally unique identifier (GUID) of the certificate in Certificates Manager.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>9a28de48-8d8b-484d-a766-dec4****</para>
         /// </summary>
         [NameInMap("CertificateId")]
         [Validation(Required=false)]

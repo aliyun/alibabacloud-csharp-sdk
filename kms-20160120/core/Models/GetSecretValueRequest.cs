@@ -14,41 +14,55 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string DryRun { get; set; }
 
         /// <summary>
-        /// Specifies whether to obtain the extended configuration of the secret. Valid values:
+        /// <para>Specifies whether to obtain the extended configuration of the secret. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false: This is the default value.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is ignored for a generic secret.</para>
+        /// </remarks>
         /// 
-        /// *   true
-        /// *   false: This is the default value.
-        /// 
-        /// >  This parameter is ignored for a generic secret.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("FetchExtendedConfig")]
         [Validation(Required=false)]
         public bool? FetchExtendedConfig { get; set; }
 
         /// <summary>
-        /// The name of the secret.
+        /// <para>The name of the secret.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>secret001</para>
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]
         public string SecretName { get; set; }
 
         /// <summary>
-        /// The version number of the secret value. If you specify this parameter, Secrets Manager returns the secret value of the specified version.
+        /// <para>The version number of the secret value. If you specify this parameter, Secrets Manager returns the secret value of the specified version.</para>
+        /// <remarks>
+        /// <para> This parameter is ignored for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.</para>
+        /// </remarks>
         /// 
-        /// >  This parameter is ignored for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.
+        /// <b>Example:</b>
+        /// <para>00000000000000000000000000000001</para>
         /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]
         public string VersionId { get; set; }
 
         /// <summary>
-        /// The stage label that marks the secret version. If you specify this parameter, Secrets Manager returns the secret value of the version that is marked with the specified stage label.
+        /// <para>The stage label that marks the secret version. If you specify this parameter, Secrets Manager returns the secret value of the version that is marked with the specified stage label.</para>
+        /// <para>Default value: ACSCurrent.</para>
+        /// <remarks>
+        /// <para> For a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret, Secrets Manager can return only the secret value of the version marked with ACSPrevious or ACSCurrent.</para>
+        /// </remarks>
         /// 
-        /// Default value: ACSCurrent.
-        /// 
-        /// >  For a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret, Secrets Manager can return only the secret value of the version marked with ACSPrevious or ACSCurrent.
+        /// <b>Example:</b>
+        /// <para>ACSCurrent</para>
         /// </summary>
         [NameInMap("VersionStage")]
         [Validation(Required=false)]

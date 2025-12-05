@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DeleteNetworkRuleRequest : TeaModel {
         /// <summary>
-        /// The name of the network access rule that you want to delete.
+        /// <para>The name of the network access rule that you want to delete.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>networkrule_test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

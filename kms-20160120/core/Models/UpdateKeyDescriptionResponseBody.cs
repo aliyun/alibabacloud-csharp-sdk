@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class UpdateKeyDescriptionResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3455b9b4-95c1-419d-b310-db6a53b09a39</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class ListResourceTagsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4162a6af-bc99-40b3-a552-89dcc8aaf7c8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The tags of the CMK.
+        /// <para>The tags of the CMK.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -28,21 +31,30 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
             public List<ListResourceTagsResponseBodyTagsTag> Tag { get; set; }
             public class ListResourceTagsResponseBodyTagsTag : TeaModel {
                 /// <summary>
-                /// The globally unique ID of the CMK.
+                /// <para>The globally unique ID of the CMK.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>33caea95-c3e5-4b3e-a9c6-cec76e4e****</para>
                 /// </summary>
                 [NameInMap("KeyId")]
                 [Validation(Required=false)]
                 public string KeyId { get; set; }
 
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Project</para>
                 /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// The tag value.
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]

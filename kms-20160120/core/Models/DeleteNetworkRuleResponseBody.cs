@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DeleteNetworkRuleResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3bf02f7a-015b-4f93-be0f-cc043fda2d4</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

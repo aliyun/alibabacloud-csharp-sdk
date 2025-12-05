@@ -10,84 +10,100 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class GetRandomPasswordRequest : TeaModel {
         /// <summary>
-        /// The characters that are not included in the password to be generated.
+        /// <para>The characters that are not included in the password to be generated.</para>
+        /// <para>Valid values:</para>
+        /// <para><c>Valid characters: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ! \\&quot;#$%&amp;\\&quot;()*+,-. /:;&lt;=&gt;? @[\\] your_project_id} ~ </c>.</para>
+        /// <para>This parameter is empty by default.</para>
         /// 
-        /// Valid values:
-        /// 
-        /// ` Valid characters: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ! \\"#$%&\\"()*+,-. /:;<=>? @[\\] your_project_id} ~  `.
-        /// 
-        /// This parameter is empty by default.
+        /// <b>Example:</b>
+        /// <para>ABCabc</para>
         /// </summary>
         [NameInMap("ExcludeCharacters")]
         [Validation(Required=false)]
         public string ExcludeCharacters { get; set; }
 
         /// <summary>
-        /// Specifies whether to exclude lowercase letters.
+        /// <para>Specifies whether to exclude lowercase letters.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ExcludeLowercase")]
         [Validation(Required=false)]
         public string ExcludeLowercase { get; set; }
 
         /// <summary>
-        /// Specifies whether to exclude digits.
+        /// <para>Specifies whether to exclude digits.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ExcludeNumbers")]
         [Validation(Required=false)]
         public string ExcludeNumbers { get; set; }
 
         /// <summary>
-        /// Specifies whether to exclude special characters.
+        /// <para>Specifies whether to exclude special characters.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ExcludePunctuation")]
         [Validation(Required=false)]
         public string ExcludePunctuation { get; set; }
 
         /// <summary>
-        /// Specifies whether to exclude uppercase letters.
+        /// <para>Specifies whether to exclude uppercase letters.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("ExcludeUppercase")]
         [Validation(Required=false)]
         public string ExcludeUppercase { get; set; }
 
         /// <summary>
-        /// The number of bytes that the password to be generated contains.
+        /// <para>The number of bytes that the password to be generated contains.</para>
+        /// <para>Valid values: 8 to 128.</para>
+        /// <para>Default value: 32</para>
         /// 
-        /// Valid values: 8 to 128.
-        /// 
-        /// Default value: 32
+        /// <b>Example:</b>
+        /// <para>32</para>
         /// </summary>
         [NameInMap("PasswordLength")]
         [Validation(Required=false)]
         public string PasswordLength { get; set; }
 
         /// <summary>
-        /// Specifies whether to include all the preceding character types.
+        /// <para>Specifies whether to include all the preceding character types.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   true
-        /// *   false
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("RequireEachIncludedType")]
         [Validation(Required=false)]

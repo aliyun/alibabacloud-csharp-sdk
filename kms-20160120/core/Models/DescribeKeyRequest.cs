@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DescribeKeyRequest : TeaModel {
         /// <summary>
-        /// The ID of the CMK. The ID must be globally unique.
+        /// <para>The ID of the CMK. The ID must be globally unique.</para>
+        /// <para>You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Overview of aliases</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// You can also set this parameter to an alias that is bound to the CMK. For more information, see [Overview of aliases](https://help.aliyun.com/document_detail/68522.html).
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>05754286-3ba2-4fa6-8d41-4323aca6****</para>
         /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]

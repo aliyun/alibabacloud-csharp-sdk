@@ -14,10 +14,16 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public UpdateSecretShrinkRequestExtendedConfig ExtendedConfig { get; set; }
         public class UpdateSecretShrinkRequestExtendedConfig : TeaModel {
             /// <summary>
-            /// The custom data in the extended configuration of the secret.
+            /// <para>The custom data in the extended configuration of the secret.</para>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>If this parameter is specified, the existing extended configuration of the secret is updated.</description></item>
+            /// <item><description>This parameter is unavailable for generic secrets.</description></item>
+            /// </list>
+            /// </remarks>
             /// 
-            /// > *   If this parameter is specified, the existing extended configuration of the secret is updated.
-            /// > *   This parameter is unavailable for generic secrets.
+            /// <b>Example:</b>
+            /// <para>{&quot;DBName&quot;:&quot;app1&quot;,&quot;Port&quot;:&quot;3306&quot;}</para>
             /// </summary>
             [NameInMap("CustomData")]
             [Validation(Required=false)]
@@ -26,16 +32,21 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         }
 
         /// <summary>
-        /// The description of the secret.
+        /// <para>The description of the secret.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>datainfo</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the secret.
+        /// <para>The name of the secret.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>secret001</para>
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]

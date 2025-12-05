@@ -10,23 +10,31 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class CertificatePrivateKeySignResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the certificate.
+        /// <para>The ID of the certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345678-1234-1234-1234-12345678****</para>
         /// </summary>
         [NameInMap("CertificateId")]
         [Validation(Required=false)]
         public string CertificateId { get; set; }
 
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5979d897-d69f-4fc9-87dd-f3bb73c40b80</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The signature value.
+        /// <para>The signature value.</para>
+        /// <para>The value is encoded in Base64.</para>
         /// 
-        /// The value is encoded in Base64.
+        /// <b>Example:</b>
+        /// <para>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</para>
         /// </summary>
         [NameInMap("SignatureValue")]
         [Validation(Required=false)]

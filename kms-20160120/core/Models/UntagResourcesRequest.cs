@@ -10,57 +10,66 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to remove all tags from resources. Valid values:
+        /// <para>Specifies whether to remove all tags from resources. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false (default)</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter takes effect only when you specify an empty tag key.</para>
+        /// </remarks>
         /// 
-        /// *   true
-        /// *   false (default)
-        /// 
-        /// >  This parameter takes effect only when you specify an empty tag key.
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
         /// <summary>
-        /// The region ID of the resource.
+        /// <para>The region ID of the resource.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/601478.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// </remarks>
+        /// <para>This parameter is required.</para>
         /// 
-        /// >  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/601478.html) operation to query the most recent region list.
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// The IDs of the resources from which you want to remove tags. You can enter up to 50 resource IDs.
-        /// 
-        /// Enter multiple resource IDs in the `["ResourceId.1","ResourceId.2",...]` format.
-        /// 
-        /// This parameter is required.
+        /// <para>The IDs of the resources from which you want to remove tags. You can enter up to 50 resource IDs.</para>
+        /// <para>Enter multiple resource IDs in the <c>[&quot;ResourceId.1&quot;,&quot;ResourceId.2&quot;,...]</c> format.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The type of the resource from which you want to remove tags. Valid values:
+        /// <para>The type of the resource from which you want to remove tags. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>key</description></item>
+        /// <item><description>secret</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   key
-        /// *   secret
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>key</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The keys of the tags that you want to remove. You can enter up to 20 tag keys.
-        /// 
-        /// Enter multiple tag keys in the `["key.1","key.2",...]` format.
-        /// 
-        /// >  The tag key cannot start with aliyun or acs:.
+        /// <para>The keys of the tags that you want to remove. You can enter up to 20 tag keys.</para>
+        /// <para>Enter multiple tag keys in the <c>[&quot;key.1&quot;,&quot;key.2&quot;,...]</c> format.</para>
+        /// <remarks>
+        /// <para> The tag key cannot start with aliyun or acs:.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

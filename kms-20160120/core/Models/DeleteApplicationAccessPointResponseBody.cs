@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DeleteApplicationAccessPointResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request, which is used to locate and troubleshoot issues.
+        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bcfefe15-46f0-44a3-bd96-3d422474b71a</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

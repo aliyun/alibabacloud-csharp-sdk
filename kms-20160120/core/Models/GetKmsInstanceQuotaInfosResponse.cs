@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Kms20160120.Models
 {
-    public class CreateCertificateResponse : TeaModel {
+    public class GetKmsInstanceQuotaInfosResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public CreateCertificateResponseBody Body { get; set; }
+        public GetKmsInstanceQuotaInfosResponseBody Body { get; set; }
 
     }
 

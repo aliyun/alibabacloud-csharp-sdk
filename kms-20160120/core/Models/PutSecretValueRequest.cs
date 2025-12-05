@@ -10,44 +10,57 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class PutSecretValueRequest : TeaModel {
         /// <summary>
-        /// The secret value. The value is encrypted and then stored in the new version.
+        /// <para>The secret value. The value is encrypted and then stored in the new version.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>importantdata</para>
         /// </summary>
         [NameInMap("SecretData")]
         [Validation(Required=false)]
         public string SecretData { get; set; }
 
         /// <summary>
-        /// The type of the secret value. Valid values:
+        /// <para>The type of the secret value. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>text: This is the default value.</description></item>
+        /// <item><description>binary</description></item>
+        /// </list>
         /// 
-        /// *   text: This is the default value.
-        /// *   binary
+        /// <b>Example:</b>
+        /// <para>text</para>
         /// </summary>
         [NameInMap("SecretDataType")]
         [Validation(Required=false)]
         public string SecretDataType { get; set; }
 
         /// <summary>
-        /// The name of the secret.
+        /// <para>The name of the secret.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>secret001</para>
         /// </summary>
         [NameInMap("SecretName")]
         [Validation(Required=false)]
         public string SecretName { get; set; }
 
         /// <summary>
-        /// The new version of the secret value. Version numbers must be unique in each secret.
+        /// <para>The new version of the secret value. Version numbers must be unique in each secret.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>00000000000000000000000000000000203</para>
         /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]
         public string VersionId { get; set; }
 
         /// <summary>
-        /// The stage labels that are used to mark the new version. If you do not specify this parameter, Secrets Manager marks the new version with ACSCurrent.
+        /// <para>The stage labels that are used to mark the new version. If you do not specify this parameter, Secrets Manager marks the new version with ACSCurrent.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;ACSCurrent&quot;,&quot;ACSNext&quot;]</para>
         /// </summary>
         [NameInMap("VersionStages")]
         [Validation(Required=false)]

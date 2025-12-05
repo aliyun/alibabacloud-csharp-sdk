@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class DescribeApplicationAccessPointRequest : TeaModel {
         /// <summary>
-        /// The name of the AAP that you want to query.
+        /// <para>The name of the AAP that you want to query.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>aap_test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
