@@ -86,6 +86,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("InstanceMemberId")]
+        [Validation(Required=false)]
+        public long? InstanceMemberId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the region to which the ECS instance or the host in an ApsaraDB MyBase dedicated cluster belongs.</para>
         /// <remarks>
         /// <para>This parameter is required if the <b>Source</b> parameter is set to <b>Ecs</b> or <b>Rds</b>.</para>
