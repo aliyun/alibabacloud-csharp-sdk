@@ -159,6 +159,56 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string ExposedUriPath { get; set; }
 
+        [NameInMap("grayMcpServerConfigs")]
+        [Validation(Required=false)]
+        public List<UpdateMcpServerRequestGrayMcpServerConfigs> GrayMcpServerConfigs { get; set; }
+        public class UpdateMcpServerRequestGrayMcpServerConfigs : TeaModel {
+            [NameInMap("backendConfig")]
+            [Validation(Required=false)]
+            public UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig BackendConfig { get; set; }
+            public class UpdateMcpServerRequestGrayMcpServerConfigsBackendConfig : TeaModel {
+                [NameInMap("scene")]
+                [Validation(Required=false)]
+                public string Scene { get; set; }
+
+                [NameInMap("services")]
+                [Validation(Required=false)]
+                public List<UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices> Services { get; set; }
+                public class UpdateMcpServerRequestGrayMcpServerConfigsBackendConfigServices : TeaModel {
+                    [NameInMap("port")]
+                    [Validation(Required=false)]
+                    public int? Port { get; set; }
+
+                    [NameInMap("protocol")]
+                    [Validation(Required=false)]
+                    public string Protocol { get; set; }
+
+                    [NameInMap("serviceId")]
+                    [Validation(Required=false)]
+                    public string ServiceId { get; set; }
+
+                    [NameInMap("version")]
+                    [Validation(Required=false)]
+                    public string Version { get; set; }
+
+                    [NameInMap("weight")]
+                    [Validation(Required=false)]
+                    public int? Weight { get; set; }
+
+                }
+
+            }
+
+            [NameInMap("match")]
+            [Validation(Required=false)]
+            public HttpRouteMatch Match { get; set; }
+
+            [NameInMap("routeId")]
+            [Validation(Required=false)]
+            public string RouteId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The route match rule.</para>
         /// </summary>

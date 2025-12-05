@@ -2401,6 +2401,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["gatewayId"] = request.GatewayId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrayMcpServerConfigs))
+            {
+                body["grayMcpServerConfigs"] = request.GrayMcpServerConfigs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
                 body["match"] = request.Match;
@@ -2490,6 +2494,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
             {
                 body["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrayMcpServerConfigs))
+            {
+                body["grayMcpServerConfigs"] = request.GrayMcpServerConfigs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
@@ -12974,6 +12982,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["exposedUriPath"] = request.ExposedUriPath;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrayMcpServerConfigs))
+            {
+                body["grayMcpServerConfigs"] = request.GrayMcpServerConfigs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
                 body["match"] = request.Match;
@@ -13060,6 +13072,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExposedUriPath))
             {
                 body["exposedUriPath"] = request.ExposedUriPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrayMcpServerConfigs))
+            {
+                body["grayMcpServerConfigs"] = request.GrayMcpServerConfigs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
