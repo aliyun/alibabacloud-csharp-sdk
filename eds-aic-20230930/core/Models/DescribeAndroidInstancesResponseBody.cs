@@ -128,6 +128,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string BindUserId { get; set; }
 
+            [NameInMap("BizImageType")]
+            [Validation(Required=false)]
+            public string BizImageType { get; set; }
+
             [NameInMap("BizTags")]
             [Validation(Required=false)]
             public List<DescribeAndroidInstancesResponseBodyInstanceModelBizTags> BizTags { get; set; }
