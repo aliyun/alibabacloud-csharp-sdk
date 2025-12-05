@@ -682,6 +682,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string PayType { get; set; }
 
+        [NameInMap("ProcessStatus")]
+        [Validation(Required=false)]
+        public string ProcessStatus { get; set; }
+
         /// <summary>
         /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
