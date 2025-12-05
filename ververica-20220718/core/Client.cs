@@ -5189,6 +5189,522 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>通过Ip获取已部署作业</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeploymentsByIpRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetDeploymentsByIpHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentsByIpResponse
+        /// </returns>
+        public GetDeploymentsByIpResponse GetDeploymentsByIpWithOptions(string namespace_, GetDeploymentsByIpRequest request, GetDeploymentsByIpHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstIp))
+            {
+                query["dstIp"] = request.DstIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstPort))
+            {
+                query["dstPort"] = request.DstPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreJobSummary))
+            {
+                query["ignoreJobSummary"] = request.IgnoreJobSummary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreResourceSetting))
+            {
+                query["ignoreResourceSetting"] = request.IgnoreResourceSetting;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcIp))
+            {
+                query["srcIp"] = request.SrcIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcPort))
+            {
+                query["srcPort"] = request.SrcPort;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDeploymentsByIp",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/getDeployments/byIp",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDeploymentsByIpResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过Ip获取已部署作业</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeploymentsByIpRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetDeploymentsByIpHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentsByIpResponse
+        /// </returns>
+        public async Task<GetDeploymentsByIpResponse> GetDeploymentsByIpWithOptionsAsync(string namespace_, GetDeploymentsByIpRequest request, GetDeploymentsByIpHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstIp))
+            {
+                query["dstIp"] = request.DstIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstPort))
+            {
+                query["dstPort"] = request.DstPort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreJobSummary))
+            {
+                query["ignoreJobSummary"] = request.IgnoreJobSummary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreResourceSetting))
+            {
+                query["ignoreResourceSetting"] = request.IgnoreResourceSetting;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcIp))
+            {
+                query["srcIp"] = request.SrcIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcPort))
+            {
+                query["srcPort"] = request.SrcPort;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDeploymentsByIp",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/getDeployments/byIp",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDeploymentsByIpResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过Ip获取已部署作业</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeploymentsByIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentsByIpResponse
+        /// </returns>
+        public GetDeploymentsByIpResponse GetDeploymentsByIp(string namespace_, GetDeploymentsByIpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDeploymentsByIpHeaders headers = new GetDeploymentsByIpHeaders();
+            return GetDeploymentsByIpWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过Ip获取已部署作业</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeploymentsByIpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentsByIpResponse
+        /// </returns>
+        public async Task<GetDeploymentsByIpResponse> GetDeploymentsByIpAsync(string namespace_, GetDeploymentsByIpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDeploymentsByIpHeaders headers = new GetDeploymentsByIpHeaders();
+            return await GetDeploymentsByIpWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过标签获取已部署作业</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeploymentsByLabelRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetDeploymentsByLabelHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentsByLabelResponse
+        /// </returns>
+        public GetDeploymentsByLabelResponse GetDeploymentsByLabelWithOptions(string namespace_, GetDeploymentsByLabelRequest request, GetDeploymentsByLabelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreJobSummary))
+            {
+                query["ignoreJobSummary"] = request.IgnoreJobSummary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreResourceSetting))
+            {
+                query["ignoreResourceSetting"] = request.IgnoreResourceSetting;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelKey))
+            {
+                query["labelKey"] = request.LabelKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelValue))
+            {
+                query["labelValue"] = request.LabelValue;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDeploymentsByLabel",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/getDeployments/byLabel",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDeploymentsByLabelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过标签获取已部署作业</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeploymentsByLabelRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetDeploymentsByLabelHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentsByLabelResponse
+        /// </returns>
+        public async Task<GetDeploymentsByLabelResponse> GetDeploymentsByLabelWithOptionsAsync(string namespace_, GetDeploymentsByLabelRequest request, GetDeploymentsByLabelHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreJobSummary))
+            {
+                query["ignoreJobSummary"] = request.IgnoreJobSummary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreResourceSetting))
+            {
+                query["ignoreResourceSetting"] = request.IgnoreResourceSetting;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelKey))
+            {
+                query["labelKey"] = request.LabelKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelValue))
+            {
+                query["labelValue"] = request.LabelValue;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDeploymentsByLabel",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/getDeployments/byLabel",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDeploymentsByLabelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过标签获取已部署作业</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeploymentsByLabelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentsByLabelResponse
+        /// </returns>
+        public GetDeploymentsByLabelResponse GetDeploymentsByLabel(string namespace_, GetDeploymentsByLabelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDeploymentsByLabelHeaders headers = new GetDeploymentsByLabelHeaders();
+            return GetDeploymentsByLabelWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过标签获取已部署作业</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeploymentsByLabelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentsByLabelResponse
+        /// </returns>
+        public async Task<GetDeploymentsByLabelResponse> GetDeploymentsByLabelAsync(string namespace_, GetDeploymentsByLabelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDeploymentsByLabelHeaders headers = new GetDeploymentsByLabelHeaders();
+            return await GetDeploymentsByLabelWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过名称获取已部署作业</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeploymentsByNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetDeploymentsByNameHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentsByNameResponse
+        /// </returns>
+        public GetDeploymentsByNameResponse GetDeploymentsByNameWithOptions(string namespace_, string deploymentName, GetDeploymentsByNameRequest request, GetDeploymentsByNameHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreJobSummary))
+            {
+                query["ignoreJobSummary"] = request.IgnoreJobSummary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreResourceSetting))
+            {
+                query["ignoreResourceSetting"] = request.IgnoreResourceSetting;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDeploymentsByName",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/name/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(deploymentName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDeploymentsByNameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过名称获取已部署作业</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeploymentsByNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetDeploymentsByNameHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentsByNameResponse
+        /// </returns>
+        public async Task<GetDeploymentsByNameResponse> GetDeploymentsByNameWithOptionsAsync(string namespace_, string deploymentName, GetDeploymentsByNameRequest request, GetDeploymentsByNameHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreJobSummary))
+            {
+                query["ignoreJobSummary"] = request.IgnoreJobSummary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreResourceSetting))
+            {
+                query["ignoreResourceSetting"] = request.IgnoreResourceSetting;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDeploymentsByName",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/name/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(deploymentName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDeploymentsByNameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过名称获取已部署作业</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeploymentsByNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentsByNameResponse
+        /// </returns>
+        public GetDeploymentsByNameResponse GetDeploymentsByName(string namespace_, string deploymentName, GetDeploymentsByNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDeploymentsByNameHeaders headers = new GetDeploymentsByNameHeaders();
+            return GetDeploymentsByNameWithOptions(namespace_, deploymentName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过名称获取已部署作业</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDeploymentsByNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDeploymentsByNameResponse
+        /// </returns>
+        public async Task<GetDeploymentsByNameResponse> GetDeploymentsByNameAsync(string namespace_, string deploymentName, GetDeploymentsByNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetDeploymentsByNameHeaders headers = new GetDeploymentsByNameHeaders();
+            return await GetDeploymentsByNameWithOptionsAsync(namespace_, deploymentName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取运行事件</para>
         /// </summary>
         /// 
@@ -7039,6 +7555,126 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetUdfArtifactsHeaders headers = new GetUdfArtifactsHeaders();
             return await GetUdfArtifactsWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get validate DeploymentDraft result</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// GetValidateDeploymentDraftResultHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetValidateDeploymentDraftResultResponse
+        /// </returns>
+        public GetValidateDeploymentDraftResultResponse GetValidateDeploymentDraftResultWithOptions(string namespace_, string ticketId, GetValidateDeploymentDraftResultHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetValidateDeploymentDraftResult",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployment-drafts/tickets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ticketId) + "/async-validate",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetValidateDeploymentDraftResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get validate DeploymentDraft result</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// GetValidateDeploymentDraftResultHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetValidateDeploymentDraftResultResponse
+        /// </returns>
+        public async Task<GetValidateDeploymentDraftResultResponse> GetValidateDeploymentDraftResultWithOptionsAsync(string namespace_, string ticketId, GetValidateDeploymentDraftResultHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetValidateDeploymentDraftResult",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployment-drafts/tickets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ticketId) + "/async-validate",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetValidateDeploymentDraftResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get validate DeploymentDraft result</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetValidateDeploymentDraftResultResponse
+        /// </returns>
+        public GetValidateDeploymentDraftResultResponse GetValidateDeploymentDraftResult(string namespace_, string ticketId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetValidateDeploymentDraftResultHeaders headers = new GetValidateDeploymentDraftResultHeaders();
+            return GetValidateDeploymentDraftResultWithOptions(namespace_, ticketId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get validate DeploymentDraft result</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetValidateDeploymentDraftResultResponse
+        /// </returns>
+        public async Task<GetValidateDeploymentDraftResultResponse> GetValidateDeploymentDraftResultAsync(string namespace_, string ticketId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetValidateDeploymentDraftResultHeaders headers = new GetValidateDeploymentDraftResultHeaders();
+            return await GetValidateDeploymentDraftResultWithOptionsAsync(namespace_, ticketId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11837,6 +12473,144 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             UpdateVariableHeaders headers = new UpdateVariableHeaders();
             return await UpdateVariableWithOptionsAsync(namespace_, name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>validate DeploymentDraft async</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateDeploymentDraftAsyncRequest
+        /// </param>
+        /// <param name="headers">
+        /// ValidateDeploymentDraftAsyncHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateDeploymentDraftAsyncResponse
+        /// </returns>
+        public ValidateDeploymentDraftAsyncResponse ValidateDeploymentDraftAsyncWithOptions(string namespace_, ValidateDeploymentDraftAsyncRequest request, ValidateDeploymentDraftAsyncHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateDeploymentDraftAsync",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployment-drafts/async-validate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateDeploymentDraftAsyncResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>validate DeploymentDraft async</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateDeploymentDraftAsyncRequest
+        /// </param>
+        /// <param name="headers">
+        /// ValidateDeploymentDraftAsyncHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateDeploymentDraftAsyncResponse
+        /// </returns>
+        public async Task<ValidateDeploymentDraftAsyncResponse> ValidateDeploymentDraftAsyncWithOptionsAsync(string namespace_, ValidateDeploymentDraftAsyncRequest request, ValidateDeploymentDraftAsyncHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateDeploymentDraftAsync",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployment-drafts/async-validate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateDeploymentDraftAsyncResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>validate DeploymentDraft async</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateDeploymentDraftAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateDeploymentDraftAsyncResponse
+        /// </returns>
+        public ValidateDeploymentDraftAsyncResponse ValidateDeploymentDraftAsync(string namespace_, ValidateDeploymentDraftAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ValidateDeploymentDraftAsyncHeaders headers = new ValidateDeploymentDraftAsyncHeaders();
+            return ValidateDeploymentDraftAsyncWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>validate DeploymentDraft async</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateDeploymentDraftAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateDeploymentDraftAsyncResponse
+        /// </returns>
+        public async Task<ValidateDeploymentDraftAsyncResponse> ValidateDeploymentDraftAsyncAsync(string namespace_, ValidateDeploymentDraftAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ValidateDeploymentDraftAsyncHeaders headers = new ValidateDeploymentDraftAsyncHeaders();
+            return await ValidateDeploymentDraftAsyncWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
