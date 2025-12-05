@@ -1,3 +1,6 @@
+2025-12-05 Version: 4.8.1
+- Generated csharp 2024-05-18 for dataworks-public.
+
 2025-12-04 Version: 4.8.0
 - Support API CreateDataset.
 - Support API CreateDatasetVersion.
