@@ -37,11 +37,16 @@ namespace AlibabaCloud.SDK.Dybaseapi20170525
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        /**
-         * @param request QueryTokenForMnsQueueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryTokenForMnsQueueResponse
-         */
+        /// <param name="request">
+        /// QueryTokenForMnsQueueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTokenForMnsQueueResponse
+        /// </returns>
         public QueryTokenForMnsQueueResponse QueryTokenForMnsQueueWithOptions(QueryTokenForMnsQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -85,11 +90,16 @@ namespace AlibabaCloud.SDK.Dybaseapi20170525
             return TeaModel.ToObject<QueryTokenForMnsQueueResponse>(CallApi(params_, req, runtime));
         }
 
-        /**
-         * @param request QueryTokenForMnsQueueRequest
-         * @param runtime runtime options for this request RuntimeOptions
-         * @return QueryTokenForMnsQueueResponse
-         */
+        /// <param name="request">
+        /// QueryTokenForMnsQueueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTokenForMnsQueueResponse
+        /// </returns>
         public async Task<QueryTokenForMnsQueueResponse> QueryTokenForMnsQueueWithOptionsAsync(QueryTokenForMnsQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -133,20 +143,26 @@ namespace AlibabaCloud.SDK.Dybaseapi20170525
             return TeaModel.ToObject<QueryTokenForMnsQueueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /**
-         * @param request QueryTokenForMnsQueueRequest
-         * @return QueryTokenForMnsQueueResponse
-         */
+        /// <param name="request">
+        /// QueryTokenForMnsQueueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTokenForMnsQueueResponse
+        /// </returns>
         public QueryTokenForMnsQueueResponse QueryTokenForMnsQueue(QueryTokenForMnsQueueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return QueryTokenForMnsQueueWithOptions(request, runtime);
         }
 
-        /**
-         * @param request QueryTokenForMnsQueueRequest
-         * @return QueryTokenForMnsQueueResponse
-         */
+        /// <param name="request">
+        /// QueryTokenForMnsQueueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTokenForMnsQueueResponse
+        /// </returns>
         public async Task<QueryTokenForMnsQueueResponse> QueryTokenForMnsQueueAsync(QueryTokenForMnsQueueRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

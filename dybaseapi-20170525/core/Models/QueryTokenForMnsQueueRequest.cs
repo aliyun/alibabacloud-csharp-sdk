@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -13,7 +10,7 @@ namespace AlibabaCloud.SDK.Dybaseapi20170525.Models
 {
     public class QueryTokenForMnsQueueRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MessageType")]
         [Validation(Required=false)]
