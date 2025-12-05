@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PTS20201020.Models
 {
     public class CreatePtsSceneRequest : TeaModel {
+        /// <summary>
+        /// <para>The scenario details.</para>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Scene")]
         [Validation(Required=false)]
         public string Scene { get; set; }

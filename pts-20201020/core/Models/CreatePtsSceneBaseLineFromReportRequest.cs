@@ -9,10 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.PTS20201020.Models
 {
     public class CreatePtsSceneBaseLineFromReportRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the report. For more information, see the <a href="https://help.aliyun.com/document_detail/201321.html">table</a> provided in this topic.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>HNB78HB</para>
+        /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]
         public string ReportId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the scene. For more information, see the <a href="https://help.aliyun.com/document_detail/201321.html">table</a> provided in this topic.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>VCB78HB</para>
+        /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }

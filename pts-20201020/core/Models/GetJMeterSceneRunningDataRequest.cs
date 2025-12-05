@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.PTS20201020.Models
 {
     public class GetJMeterSceneRunningDataRequest : TeaModel {
+        /// <summary>
+        /// <para>The scenario ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DYYPZIH</para>
+        /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }

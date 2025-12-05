@@ -9,30 +9,74 @@ using Tea;
 namespace AlibabaCloud.SDK.PTS20201020.Models
 {
     public class ListJMeterReportsRequest : TeaModel {
+        /// <summary>
+        /// <para>The beginning of the time range to query. Unit: ms.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1637115303000</para>
+        /// </summary>
         [NameInMap("BeginTime")]
         [Validation(Required=false)]
         public long? BeginTime { get; set; }
 
+        /// <summary>
+        /// <para>The end of the time range to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1637115306000</para>
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// <para>The report keyword.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
+        /// <summary>
+        /// <para>The number of the report page to return.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// <para>The number of reports to return.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The report ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7R4RE352</para>
+        /// </summary>
         [NameInMap("ReportId")]
         [Validation(Required=false)]
         public string ReportId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the scenario whose report you want to view.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10YPA8H</para>
+        /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }

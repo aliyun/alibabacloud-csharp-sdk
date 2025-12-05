@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.PTS20201020.Models
 {
     public class DeletePtsSceneBaseLineRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NHGV4CDG</para>
+        /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }

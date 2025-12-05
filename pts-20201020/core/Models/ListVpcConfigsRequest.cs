@@ -8,9 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PTS20201020.Models
 {
-    public class ListOpenJMeterScenesRequest : TeaModel {
+    public class ListVpcConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <b>Example:</b>
+        /// <para>05AHW</para>
+        /// </summary>
+        [NameInMap("ConfigId")]
+        [Validation(Required=false)]
+        public string ConfigId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>my-vpc-config-info</para>
+        /// </summary>
+        [NameInMap("ConfigName")]
+        [Validation(Required=false)]
+        public string ConfigName { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +36,6 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of scenarios to return.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,24 +46,20 @@ namespace AlibabaCloud.SDK.PTS20201020.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The scenario ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>DYYPZIH</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
-        [NameInMap("SceneId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string SceneId { get; set; }
+        public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The scenario name.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>vpc-bp11w3qellkjwnhqxzmt2</para>
         /// </summary>
-        [NameInMap("SceneName")]
+        [NameInMap("VpcId")]
         [Validation(Required=false)]
-        public string SceneName { get; set; }
+        public string VpcId { get; set; }
 
     }
 

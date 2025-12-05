@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.PTS20201020.Models
 {
     public class RemoveOpenJMeterSceneRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the scenario that you want to remove.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DYYPZIH</para>
+        /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }

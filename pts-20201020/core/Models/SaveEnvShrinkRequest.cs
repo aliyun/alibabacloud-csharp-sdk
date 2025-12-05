@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PTS20201020.Models
 {
     public class SaveEnvShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The JMeter environment.</para>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Env")]
         [Validation(Required=false)]
         public string EnvShrink { get; set; }

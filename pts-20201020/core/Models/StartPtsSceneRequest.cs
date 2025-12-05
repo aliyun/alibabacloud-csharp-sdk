@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.PTS20201020.Models
 {
     public class StartPtsSceneRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the scenario that you want to start, which is the ID that is returned after the scenario is created. You can view scenario IDs on the scenario list page.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FGSRA3</para>
+        /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }
