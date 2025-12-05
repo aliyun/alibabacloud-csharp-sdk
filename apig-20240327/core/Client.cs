@@ -3239,6 +3239,144 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建服务版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceVersionResponse
+        /// </returns>
+        public CreateServiceVersionResponse CreateServiceVersionWithOptions(string serviceId, CreateServiceVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceVersion",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/versions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建服务版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceVersionResponse
+        /// </returns>
+        public async Task<CreateServiceVersionResponse> CreateServiceVersionWithOptionsAsync(string serviceId, CreateServiceVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceVersion",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/versions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建服务版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceVersionResponse
+        /// </returns>
+        public CreateServiceVersionResponse CreateServiceVersion(string serviceId, CreateServiceVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateServiceVersionWithOptions(serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建服务版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceVersionResponse
+        /// </returns>
+        public async Task<CreateServiceVersionResponse> CreateServiceVersionAsync(string serviceId, CreateServiceVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateServiceVersionWithOptionsAsync(serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a consumer.</para>
         /// </summary>
         /// 
@@ -4715,6 +4853,108 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteServiceWithOptionsAsync(serviceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务版本</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceVersionResponse
+        /// </returns>
+        public DeleteServiceVersionResponse DeleteServiceVersionWithOptions(string serviceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteServiceVersion",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务版本</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceVersionResponse
+        /// </returns>
+        public async Task<DeleteServiceVersionResponse> DeleteServiceVersionWithOptionsAsync(string serviceId, string name, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteServiceVersion",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务版本</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteServiceVersionResponse
+        /// </returns>
+        public DeleteServiceVersionResponse DeleteServiceVersion(string serviceId, string name)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteServiceVersionWithOptions(serviceId, name, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务版本</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteServiceVersionResponse
+        /// </returns>
+        public async Task<DeleteServiceVersionResponse> DeleteServiceVersionAsync(string serviceId, string name)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteServiceVersionWithOptionsAsync(serviceId, name, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13195,6 +13435,136 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdatePolicyWithOptionsAsync(policyId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新服务版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceVersionResponse
+        /// </returns>
+        public UpdateServiceVersionResponse UpdateServiceVersionWithOptions(string serviceId, string name, UpdateServiceVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["labels"] = request.Labels;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceVersion",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新服务版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceVersionResponse
+        /// </returns>
+        public async Task<UpdateServiceVersionResponse> UpdateServiceVersionWithOptionsAsync(string serviceId, string name, UpdateServiceVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["labels"] = request.Labels;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceVersion",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新服务版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceVersionResponse
+        /// </returns>
+        public UpdateServiceVersionResponse UpdateServiceVersion(string serviceId, string name, UpdateServiceVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateServiceVersionWithOptions(serviceId, name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新服务版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceVersionResponse
+        /// </returns>
+        public async Task<UpdateServiceVersionResponse> UpdateServiceVersionAsync(string serviceId, string name, UpdateServiceVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateServiceVersionWithOptionsAsync(serviceId, name, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
