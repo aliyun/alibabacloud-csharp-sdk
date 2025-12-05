@@ -279,6 +279,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
+                    [NameInMap("ResourceType")]
+                    [Validation(Required=false)]
+                    public string ResourceType { get; set; }
+
                     /// <summary>
                     /// <para>The number of instances in running state.</para>
                     /// 
@@ -511,6 +515,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
 
                 /// <summary>
                 /// <para>The number of running instances.</para>
