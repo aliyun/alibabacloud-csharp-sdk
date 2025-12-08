@@ -80,6 +80,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
+        [NameInMap("TrafficControlMode")]
+        [Validation(Required=false)]
+        public string TrafficControlMode { get; set; }
+
     }
 
 }

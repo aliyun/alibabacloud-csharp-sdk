@@ -3240,6 +3240,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             {
                 query["ServiceId"] = request.ServiceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficControlMode))
+            {
+                query["TrafficControlMode"] = request.TrafficControlMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3315,6 +3319,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
             {
                 query["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficControlMode))
+            {
+                query["TrafficControlMode"] = request.TrafficControlMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6727,6 +6735,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             {
                 query["ServiceId"] = request.ServiceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficControlMode))
+            {
+                query["TrafficControlMode"] = request.TrafficControlMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6797,6 +6809,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
             {
                 query["ServiceId"] = request.ServiceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficControlMode))
+            {
+                query["TrafficControlMode"] = request.TrafficControlMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
