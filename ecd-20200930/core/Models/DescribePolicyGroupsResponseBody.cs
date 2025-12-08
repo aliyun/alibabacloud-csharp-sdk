@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribePolicyGroupsResponseBodyDescribePolicyGroups> DescribePolicyGroups { get; set; }
         public class DescribePolicyGroupsResponseBodyDescribePolicyGroups : TeaModel {
+            [NameInMap("AcademicProxy")]
+            [Validation(Required=false)]
+            public string AcademicProxy { get; set; }
+
             /// <summary>
             /// <para>Indicates whether end users are granted the administrator permissions.</para>
             /// <remarks>
@@ -295,6 +299,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? CpuDownGradeDuration { get; set; }
 
+            [NameInMap("CpuOverload")]
+            [Validation(Required=false)]
+            public string CpuOverload { get; set; }
+
             /// <summary>
             /// <para>The process whitelist that is not restricted by the CPU usage limit.</para>
             /// </summary>
@@ -503,6 +511,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string RedirectType { get; set; }
 
             }
+
+            [NameInMap("DiskOverload")]
+            [Validation(Required=false)]
+            public string DiskOverload { get; set; }
 
             /// <summary>
             /// <para>The display mode.</para>
@@ -767,6 +779,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? MemoryDownGradeDuration { get; set; }
 
+            [NameInMap("MemoryOverload")]
+            [Validation(Required=false)]
+            public string MemoryOverload { get; set; }
+
             /// <summary>
             /// <para>The whitelist of processes that are not restricted by the memory usage limit.</para>
             /// </summary>
@@ -884,6 +900,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("MobileWyAssistant")]
             [Validation(Required=false)]
             public string MobileWyAssistant { get; set; }
+
+            [NameInMap("ModelLibrary")]
+            [Validation(Required=false)]
+            public string ModelLibrary { get; set; }
 
             /// <summary>
             /// <para>The name of the cloud computer policy.</para>
@@ -1004,6 +1024,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("PolicyStatus")]
             [Validation(Required=false)]
             public string PolicyStatus { get; set; }
+
+            [NameInMap("PortProxy")]
+            [Validation(Required=false)]
+            public string PortProxy { get; set; }
 
             /// <summary>
             /// <para>The cloud computer preemption feature.</para>

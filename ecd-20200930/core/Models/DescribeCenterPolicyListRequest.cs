@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCenterPolicyListRequest : TeaModel {
+        [NameInMap("AcademicProxy")]
+        [Validation(Required=false)]
+        public string AcademicProxy { get; set; }
+
         /// <summary>
         /// <para>The business type.</para>
         /// <para>Valid values:</para>
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("BusinessType")]
         [Validation(Required=false)]
         public int? BusinessType { get; set; }
+
+        [NameInMap("ModelLibrary")]
+        [Validation(Required=false)]
+        public string ModelLibrary { get; set; }
 
         /// <summary>
         /// <para>The page number.\
@@ -52,6 +60,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
         public List<string> PolicyGroupId { get; set; }
+
+        [NameInMap("PortProxy")]
+        [Validation(Required=false)]
+        public string PortProxy { get; set; }
 
         /// <summary>
         /// <para>The resource type.</para>

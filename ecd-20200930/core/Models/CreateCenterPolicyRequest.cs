@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateCenterPolicyRequest : TeaModel {
+        [NameInMap("AcademicProxy")]
+        [Validation(Required=false)]
+        public string AcademicProxy { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to grant the admin permissions to end users.</para>
         /// <remarks>
@@ -186,6 +190,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string AutoReconnect { get; set; }
 
+        [NameInMap("BusinessChannel")]
+        [Validation(Required=false)]
+        public string BusinessChannel { get; set; }
+
         /// <summary>
         /// <para>The business type.</para>
         /// <para>Valid values:</para>
@@ -341,6 +349,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("CpuDownGradeDuration")]
         [Validation(Required=false)]
         public int? CpuDownGradeDuration { get; set; }
+
+        [NameInMap("CpuOverload")]
+        [Validation(Required=false)]
+        public string CpuOverload { get; set; }
 
         /// <summary>
         /// <para>The CPU processors.</para>
@@ -568,6 +580,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("DisconnectKeepSessionTime")]
         [Validation(Required=false)]
         public int? DisconnectKeepSessionTime { get; set; }
+
+        [NameInMap("DiskOverload")]
+        [Validation(Required=false)]
+        public string DiskOverload { get; set; }
 
         /// <summary>
         /// <para>The display mode.</para>
@@ -802,6 +818,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? MemoryDownGradeDuration { get; set; }
 
+        [NameInMap("MemoryOverload")]
+        [Validation(Required=false)]
+        public string MemoryOverload { get; set; }
+
         /// <summary>
         /// <para>The memory processors.</para>
         /// </summary>
@@ -914,6 +934,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string MobileWyAssistant { get; set; }
 
+        [NameInMap("ModelLibrary")]
+        [Validation(Required=false)]
+        public string ModelLibrary { get; set; }
+
         /// <summary>
         /// <para>The policy name.</para>
         /// <para>This parameter is required.</para>
@@ -1021,6 +1045,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("NoOperationDisconnectTime")]
         [Validation(Required=false)]
         public int? NoOperationDisconnectTime { get; set; }
+
+        [NameInMap("PortProxy")]
+        [Validation(Required=false)]
+        public string PortProxy { get; set; }
 
         /// <summary>
         /// <para>The printer redirection policy. This parameter only applies if DeviceRedirects does not include a printer redirection policy.</para>
