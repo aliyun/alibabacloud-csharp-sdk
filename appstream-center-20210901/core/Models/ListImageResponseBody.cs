@@ -432,6 +432,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string ResourceInstanceCategory { get; set; }
 
+            [NameInMap("Scene")]
+            [Validation(Required=false)]
+            public string Scene { get; set; }
+
             /// <summary>
             /// <para>The type of the session.</para>
             /// <para>Valid values:</para>
