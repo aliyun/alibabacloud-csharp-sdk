@@ -1,3 +1,9 @@
+2025-12-08 Version: 4.15.1
+- Update API AllocateIpAddress: add request parameters Bandwidth.
+- Update API AllocateIpAddress: add request parameters InternetChargeType.
+- Update API AllocateIpAddress: add request parameters Name.
+
+
 2025-12-01 Version: 4.15.0
 - Support API BatchModifyEntitlement.
 - Update API CreateCenterPolicy: add request parameters ClientCreateSnapshot.

@@ -9,6 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class AllocateIpAddressRequest : TeaModel {
+        [NameInMap("Bandwidth")]
+        [Validation(Required=false)]
+        public int? Bandwidth { get; set; }
+
+        [NameInMap("InternetChargeType")]
+        [Validation(Required=false)]
+        public string InternetChargeType { get; set; }
+
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
         public string NetworkInterfaceId { get; set; }

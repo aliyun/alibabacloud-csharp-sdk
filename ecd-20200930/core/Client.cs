@@ -1024,6 +1024,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bandwidth))
+            {
+                query["Bandwidth"] = request.Bandwidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetChargeType))
+            {
+                query["InternetChargeType"] = request.InternetChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceId))
             {
                 query["NetworkInterfaceId"] = request.NetworkInterfaceId;
@@ -1074,6 +1086,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bandwidth))
+            {
+                query["Bandwidth"] = request.Bandwidth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetChargeType))
+            {
+                query["InternetChargeType"] = request.InternetChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceId))
             {
                 query["NetworkInterfaceId"] = request.NetworkInterfaceId;
