@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
 
                 [NameInMap("ClassForest")]
                 [Validation(Required=false)]
-                public List<string> ClassForest { get; set; }
+                public string ClassForest { get; set; }
 
                 [NameInMap("EnhanceMapping")]
                 [Validation(Required=false)]
