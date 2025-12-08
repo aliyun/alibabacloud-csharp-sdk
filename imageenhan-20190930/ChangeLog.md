@@ -1,3 +1,9 @@
+2025-12-08 Version: 2.0.0
+- Delete API GenerateDynamicImage.
+- Delete API GenerateImageWithText.
+- Delete API GenerateImageWithTextAndImage.
+
+
 2025-08-25 Version: 1.0.11
 - Generated csharp 2019-09-30 for imageenhan.
 
