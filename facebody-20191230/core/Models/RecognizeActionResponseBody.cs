@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
                 [Validation(Required=false)]
                 public List<float?> Scores { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("Timestamp")]
                 [Validation(Required=false)]
                 public int? Timestamp { get; set; }
@@ -43,6 +47,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>E9C40AF5-A7F8-49D5-8A0C-B21F15A07F17</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Facebody20191230.Models
 {
     public class DetectLivingFaceAdvanceRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<DetectLivingFaceAdvanceRequestTasks> Tasks { get; set; }
@@ -17,6 +20,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public string ImageData { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/DetectLivingFace/DetectLivingFace4.jpg">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/facebody/DetectLivingFace/DetectLivingFace4.jpg</a></para>
+            /// </summary>
             [NameInMap("ImageURL")]
             [Validation(Required=false)]
             public Stream ImageURLObject { get; set; }

@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<long?> LandmarksBList { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>imageB quality score less threshold</para>
+            /// </summary>
             [NameInMap("MessageTips")]
             [Validation(Required=false)]
             public string MessageTips { get; set; }
@@ -59,6 +63,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>C6499918-E932-41B3-96F5-A18F50D262DD</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

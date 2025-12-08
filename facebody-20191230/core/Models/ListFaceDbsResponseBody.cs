@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<ListFaceDbsResponseBodyDataDbList> DbList { get; set; }
             public class ListFaceDbsResponseBodyDataDbList : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>default</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -25,6 +29,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2B93C43A-F824-40C8-AF79-844342B0F43A</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

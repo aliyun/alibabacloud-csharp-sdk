@@ -33,34 +33,46 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<long?> LandmarksBList { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>imageB quality score less threshold</para>
+            /// </summary>
             [NameInMap("MessageTips")]
             [Validation(Required=false)]
             public string MessageTips { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>75.16</para>
+            /// </summary>
             [NameInMap("QualityScoreA")]
             [Validation(Required=false)]
             public float? QualityScoreA { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>75.20</para>
+            /// </summary>
             [NameInMap("QualityScoreB")]
             [Validation(Required=false)]
             public float? QualityScoreB { get; set; }
 
             /// <summary>
-            /// 1
+            /// <para>1</para>
             /// </summary>
             [NameInMap("RectAList")]
             [Validation(Required=false)]
             public List<int?> RectAList { get; set; }
 
             /// <summary>
-            /// 1
+            /// <para>1</para>
             /// </summary>
             [NameInMap("RectBList")]
             [Validation(Required=false)]
             public List<int?> RectBList { get; set; }
 
             /// <summary>
-            /// 1
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Thresholds")]
             [Validation(Required=false)]

@@ -13,10 +13,18 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
         [Validation(Required=false)]
         public GetFaceEntityResponseBodyData Data { get; set; }
         public class GetFaceEntityResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>default</para>
+            /// </summary>
             [NameInMap("DbName")]
             [Validation(Required=false)]
             public string DbName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>66</para>
+            /// </summary>
             [NameInMap("EntityId")]
             [Validation(Required=false)]
             public string EntityId { get; set; }
@@ -25,6 +33,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<GetFaceEntityResponseBodyDataFaces> Faces { get; set; }
             public class GetFaceEntityResponseBodyDataFaces : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
                 [NameInMap("FaceId")]
                 [Validation(Required=false)]
                 public string FaceId { get; set; }
@@ -37,6 +49,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DA7CAFEB-0A37-4496-9CDF-E3DBB6309CB2</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

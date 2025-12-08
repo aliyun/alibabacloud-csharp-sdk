@@ -17,10 +17,18 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
             [Validation(Required=false)]
             public List<DetectVideoLivingFaceResponseBodyDataElements> Elements { get; set; }
             public class DetectVideoLivingFaceResponseBodyDataElements : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.84644949436187744</para>
+                /// </summary>
                 [NameInMap("FaceConfidence")]
                 [Validation(Required=false)]
                 public float? FaceConfidence { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.72464925050735474</para>
+                /// </summary>
                 [NameInMap("LiveConfidence")]
                 [Validation(Required=false)]
                 public float? LiveConfidence { get; set; }
@@ -33,6 +41,10 @@ namespace AlibabaCloud.SDK.Facebody20191230.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>8E92F28B-F889-48CB-9FCC-3207CFA2215E</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
