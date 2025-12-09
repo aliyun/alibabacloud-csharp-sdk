@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("Score")]
+        [Validation(Required=false)]
+        public string Score { get; set; }
+
         [NameInMap("Suggestions")]
         [Validation(Required=false)]
         public List<DescribeSecureSuggestionResponseBodySuggestions> Suggestions { get; set; }

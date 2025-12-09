@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCloudAssetInstancesRequest : TeaModel {
+        [NameInMap("CloudAssetQueryData")]
+        [Validation(Required=false)]
+        public List<ListCloudAssetInstancesRequestCloudAssetQueryData> CloudAssetQueryData { get; set; }
+        public class ListCloudAssetInstancesRequestCloudAssetQueryData : TeaModel {
+            [NameInMap("Data")]
+            [Validation(Required=false)]
+            public string Data { get; set; }
+
+            [NameInMap("Operator")]
+            [Validation(Required=false)]
+            public string Operator { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The details of the cloud asset.</para>
         /// </summary>
