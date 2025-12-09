@@ -19249,6 +19249,138 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>云应用服务实例主机重启</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RebootRenderingServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebootRenderingServerResponse
+        /// </returns>
+        public RebootRenderingServerResponse RebootRenderingServerWithOptions(RebootRenderingServerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RebootRenderingServerShrinkRequest request = new RebootRenderingServerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RenderingInstanceIds))
+            {
+                request.RenderingInstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RenderingInstanceIds, "RenderingInstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceIdsShrink))
+            {
+                query["RenderingInstanceIds"] = request.RenderingInstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RebootRenderingServer",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RebootRenderingServerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>云应用服务实例主机重启</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RebootRenderingServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebootRenderingServerResponse
+        /// </returns>
+        public async Task<RebootRenderingServerResponse> RebootRenderingServerWithOptionsAsync(RebootRenderingServerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RebootRenderingServerShrinkRequest request = new RebootRenderingServerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RenderingInstanceIds))
+            {
+                request.RenderingInstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RenderingInstanceIds, "RenderingInstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceIdsShrink))
+            {
+                query["RenderingInstanceIds"] = request.RenderingInstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RebootRenderingServer",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RebootRenderingServerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>云应用服务实例主机重启</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RebootRenderingServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebootRenderingServerResponse
+        /// </returns>
+        public RebootRenderingServerResponse RebootRenderingServer(RebootRenderingServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RebootRenderingServerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>云应用服务实例主机重启</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RebootRenderingServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebootRenderingServerResponse
+        /// </returns>
+        public async Task<RebootRenderingServerResponse> RebootRenderingServerAsync(RebootRenderingServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RebootRenderingServerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>恢复数据到云渲染实例</para>
         /// </summary>
         /// 
