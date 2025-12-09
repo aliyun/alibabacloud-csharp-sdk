@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public string AddressIpVersion { get; set; }
 
+            [NameInMap("AutoAcceptEnabled")]
+            [Validation(Required=false)]
+            public bool? AutoAcceptEnabled { get; set; }
+
             /// <summary>
             /// <para>The payer. Valid values:</para>
             /// <list type="bullet">
@@ -186,6 +190,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
                 public string Value { get; set; }
 
             }
+
+            [NameInMap("VpcEndpointPolicySupported")]
+            [Validation(Required=false)]
+            public bool? VpcEndpointPolicySupported { get; set; }
 
             [NameInMap("ZoneAffinityEnabled")]
             [Validation(Required=false)]

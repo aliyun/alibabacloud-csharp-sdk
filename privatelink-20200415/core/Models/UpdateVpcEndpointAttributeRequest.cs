@@ -123,6 +123,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResetPolicy")]
+        [Validation(Required=false)]
+        public bool? ResetPolicy { get; set; }
+
         [NameInMap("ZoneAffinityEnabled")]
         [Validation(Required=false)]
         public bool? ZoneAffinityEnabled { get; set; }

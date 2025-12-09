@@ -6531,6 +6531,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResetPolicy))
+            {
+                query["ResetPolicy"] = request.ResetPolicy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneAffinityEnabled))
             {
                 query["ZoneAffinityEnabled"] = request.ZoneAffinityEnabled;
@@ -6613,6 +6617,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResetPolicy))
+            {
+                query["ResetPolicy"] = request.ResetPolicy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneAffinityEnabled))
             {
