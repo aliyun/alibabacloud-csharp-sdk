@@ -25,13 +25,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string LastUpdatedAt { get; set; }
 
-        [NameInMap("modeServiceId")]
-        [Validation(Required=false)]
-        public string ModeServiceId { get; set; }
-
         [NameInMap("modelInfoConfigs")]
         [Validation(Required=false)]
         public List<ModelInfoConfig> ModelInfoConfigs { get; set; }
+
+        [NameInMap("modelServiceId")]
+        [Validation(Required=false)]
+        public string ModelServiceId { get; set; }
 
         [NameInMap("modelServiceName")]
         [Validation(Required=false)]
