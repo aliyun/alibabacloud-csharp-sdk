@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
-    public class CreateClusterRequest : TeaModel {
+    public class CreateClusterShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,65 +39,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         [NameInMap("ControlPlaneConfig")]
         [Validation(Required=false)]
-        public CreateClusterRequestControlPlaneConfig ControlPlaneConfig { get; set; }
-        public class CreateClusterRequestControlPlaneConfig : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>m-5ul335umat4e2y9ynwi84p3f9</para>
-            /// </summary>
-            [NameInMap("ImageId")]
-            [Validation(Required=false)]
-            public string ImageId { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>ens.esk.sn1.medium</para>
-            /// </summary>
-            [NameInMap("InstanceSpec")]
-            [Validation(Required=false)]
-            public string InstanceSpec { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>30000-32767</para>
-            /// </summary>
-            [NameInMap("NodePortRange")]
-            [Validation(Required=false)]
-            public string NodePortRange { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>containerd</para>
-            /// </summary>
-            [NameInMap("Runtime")]
-            [Validation(Required=false)]
-            public string Runtime { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>3</para>
-            /// </summary>
-            [NameInMap("Size")]
-            [Validation(Required=false)]
-            public int? Size { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>cloud_efficiency</para>
-            /// </summary>
-            [NameInMap("SystemDiskCategory")]
-            [Validation(Required=false)]
-            public string SystemDiskCategory { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>120</para>
-            /// </summary>
-            [NameInMap("SystemDiskSize")]
-            [Validation(Required=false)]
-            public long? SystemDiskSize { get; set; }
-
-        }
+        public string ControlPlaneConfigShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -135,7 +77,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         [NameInMap("PodVswitchIds")]
         [Validation(Required=false)]
-        public List<string> PodVswitchIds { get; set; }
+        public string PodVswitchIdsShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -177,7 +119,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// </summary>
         [NameInMap("VswitchIds")]
         [Validation(Required=false)]
-        public List<string> VswitchIds { get; set; }
+        public string VswitchIdsShrink { get; set; }
 
     }
 

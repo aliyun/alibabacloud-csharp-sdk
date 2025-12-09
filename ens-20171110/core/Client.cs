@@ -3574,7 +3574,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// </list>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateClusterRequest
         /// </param>
         /// <param name="runtime">
@@ -3584,17 +3584,79 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <returns>
         /// CreateClusterResponse
         /// </returns>
-        public CreateClusterResponse CreateClusterWithOptions(CreateClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateClusterResponse CreateClusterWithOptions(CreateClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateClusterShrinkRequest request = new CreateClusterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ControlPlaneConfig))
+            {
+                request.ControlPlaneConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ControlPlaneConfig, "ControlPlaneConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PodVswitchIds))
+            {
+                request.PodVswitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PodVswitchIds, "PodVswitchIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VswitchIds))
+            {
+                request.VswitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VswitchIds, "VswitchIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
+            {
+                query["ClusterType"] = request.ClusterType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterVersion))
             {
                 query["ClusterVersion"] = request.ClusterVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerCidr))
+            {
+                query["ContainerCidr"] = request.ContainerCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneConfigShrink))
+            {
+                query["ControlPlaneConfig"] = request.ControlPlaneConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
+            {
+                query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesVersion))
+            {
+                query["KubernetesVersion"] = request.KubernetesVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
+            {
+                query["LoadBalancerId"] = request.LoadBalancerId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodVswitchIdsShrink))
+            {
+                query["PodVswitchIds"] = request.PodVswitchIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Profile))
+            {
+                query["Profile"] = request.Profile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicAccess))
+            {
+                query["PublicAccess"] = request.PublicAccess;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCidr))
+            {
+                query["ServiceCidr"] = request.ServiceCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchIdsShrink))
+            {
+                query["VswitchIds"] = request.VswitchIdsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3628,7 +3690,7 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// </list>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateClusterRequest
         /// </param>
         /// <param name="runtime">
@@ -3638,17 +3700,79 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <returns>
         /// CreateClusterResponse
         /// </returns>
-        public async Task<CreateClusterResponse> CreateClusterWithOptionsAsync(CreateClusterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateClusterResponse> CreateClusterWithOptionsAsync(CreateClusterRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateClusterShrinkRequest request = new CreateClusterShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ControlPlaneConfig))
+            {
+                request.ControlPlaneConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ControlPlaneConfig, "ControlPlaneConfig", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PodVswitchIds))
+            {
+                request.PodVswitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PodVswitchIds, "PodVswitchIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VswitchIds))
+            {
+                request.VswitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VswitchIds, "VswitchIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
+            {
+                query["ClusterType"] = request.ClusterType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterVersion))
             {
                 query["ClusterVersion"] = request.ClusterVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerCidr))
+            {
+                query["ContainerCidr"] = request.ContainerCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneConfigShrink))
+            {
+                query["ControlPlaneConfig"] = request.ControlPlaneConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
+            {
+                query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesVersion))
+            {
+                query["KubernetesVersion"] = request.KubernetesVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
+            {
+                query["LoadBalancerId"] = request.LoadBalancerId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PodVswitchIdsShrink))
+            {
+                query["PodVswitchIds"] = request.PodVswitchIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Profile))
+            {
+                query["Profile"] = request.Profile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicAccess))
+            {
+                query["PublicAccess"] = request.PublicAccess;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCidr))
+            {
+                query["ServiceCidr"] = request.ServiceCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchIdsShrink))
+            {
+                query["VswitchIds"] = request.VswitchIdsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
