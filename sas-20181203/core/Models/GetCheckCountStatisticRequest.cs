@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string StatisticType { get; set; }
 
+        /// <summary>
+        /// <para>Task source.</para>
+        /// </summary>
         [NameInMap("TaskSources")]
         [Validation(Required=false)]
         public List<string> TaskSources { get; set; }

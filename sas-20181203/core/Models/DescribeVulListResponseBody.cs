@@ -109,6 +109,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? Bind { get; set; }
 
             /// <summary>
+            /// <para>The container ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>04d20e98c8e2c93b7b864372084320a15a58c8671e53c972ce3a71d9c163****</para>
+            /// </summary>
+            [NameInMap("ContainerId")]
+            [Validation(Required=false)]
+            public string ContainerId { get; set; }
+
+            /// <summary>
             /// <para>The extended information about the vulnerability.</para>
             /// </summary>
             [NameInMap("ExtendContentJson")]
@@ -492,7 +502,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
-            public int? GroupId { get; set; }
+            public long? GroupId { get; set; }
 
             /// <summary>
             /// <para>The name of the image.</para>

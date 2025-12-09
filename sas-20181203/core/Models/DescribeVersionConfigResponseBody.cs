@@ -97,6 +97,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? AssetLevel { get; set; }
 
+        /// <summary>
+        /// <para>Whether it supports the activation of a postpaid trial package. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: Not supported </description></item>
+        /// <item><description><b>1</b>: Supported</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("CanTryPostPaidPackage")]
         [Validation(Required=false)]
         public int? CanTryPostPaidPackage { get; set; }

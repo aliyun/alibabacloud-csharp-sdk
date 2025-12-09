@@ -206,6 +206,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<GetAttackPathEventDetailResponseBodyAttackPathEventPathEventNodeList> PathEventNodeList { get; set; }
             public class GetAttackPathEventDetailResponseBodyAttackPathEventPathEventNodeList : TeaModel {
                 /// <summary>
+                /// <para>AI资产标识。取值：</para>
+                /// <list type="bullet">
+                /// <item><description><b>0</b>：非AI资产。</description></item>
+                /// <item><description><b>1</b>：AI资产。</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>

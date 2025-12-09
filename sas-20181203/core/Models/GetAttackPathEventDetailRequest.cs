@@ -23,6 +23,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EventId { get; set; }
 
         /// <summary>
+        /// <para>数据来源。默认值为<b>default</b>。取值：</para>
+        /// <list type="bullet">
+        /// <item><description><b>caasm</b>：攻击面</description></item>
+        /// <item><description><b>default</b>：攻击路径</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>

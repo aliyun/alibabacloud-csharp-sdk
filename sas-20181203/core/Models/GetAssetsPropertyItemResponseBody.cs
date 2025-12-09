@@ -88,10 +88,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            /// <summary>
+            /// <para>AI tool name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vllm</para>
+            /// </summary>
             [NameInMap("MiddlewareName")]
             [Validation(Required=false)]
             public string MiddlewareName { get; set; }
 
+            /// <summary>
+            /// <para>Name of the LLM service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Deepseek</para>
+            /// </summary>
             [NameInMap("ModelName")]
             [Validation(Required=false)]
             public string ModelName { get; set; }

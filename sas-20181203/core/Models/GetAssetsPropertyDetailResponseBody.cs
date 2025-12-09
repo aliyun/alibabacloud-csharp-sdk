@@ -98,10 +98,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            /// <summary>
+            /// <para>LLM service endpoint</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>dashscope.aliyuncs.com</para>
+            /// </summary>
             [NameInMap("EndPoint")]
             [Validation(Required=false)]
             public string EndPoint { get; set; }
 
+            /// <summary>
+            /// <para>File path for requesting the LLM service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/root/llm.py</para>
+            /// </summary>
             [NameInMap("File")]
             [Validation(Required=false)]
             public string File { get; set; }
@@ -129,6 +141,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string ImageName { get; set; }
 
+            /// <summary>
+            /// <para>AI tool installation path</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/etc/pip3/env/vllm</para>
+            /// </summary>
             [NameInMap("InstallationPath")]
             [Validation(Required=false)]
             public string InstallationPath { get; set; }
@@ -196,14 +214,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string ListenProtocol { get; set; }
 
+            /// <summary>
+            /// <para>AI tool name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vllm</para>
+            /// </summary>
             [NameInMap("MiddlewareName")]
             [Validation(Required=false)]
             public string MiddlewareName { get; set; }
 
+            /// <summary>
+            /// <para>AI tool version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.0.1</para>
+            /// </summary>
             [NameInMap("MiddlewareVersion")]
             [Validation(Required=false)]
             public string MiddlewareVersion { get; set; }
 
+            /// <summary>
+            /// <para>Name of the LLM vendor.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>OpenAI</para>
+            /// </summary>
             [NameInMap("ModelName")]
             [Validation(Required=false)]
             public string ModelName { get; set; }

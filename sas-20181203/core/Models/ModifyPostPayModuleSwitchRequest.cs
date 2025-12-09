@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>CSPM</b>: cloud service configuration check module</description></item>
         /// <item><description><b>AGENTLESS</b>: agentless detection module</description></item>
         /// <item><description><b>SERVERLESS</b>: serverless asset module</description></item>
+        /// <item><description><b>CTDR</b>: Threat Analysis and Response Module</description></item>
+        /// <item><description><b>POST_HOST</b>: Host and Container Security Module</description></item>
+        /// <item><description><b>SDK</b>: Malicious File Detection SDK Module</description></item>
+        /// <item><description><b>RASP</b>: Application Protection Module</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Value: A value of 0 specifies disabled. A value of 1 specifies enabled.</para>

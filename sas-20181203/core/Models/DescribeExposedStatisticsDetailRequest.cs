@@ -30,6 +30,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The public IP address of the server or the cloud asset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>116.12.XX.XX</para>
+        /// </summary>
+        [NameInMap("ExposureIp")]
+        [Validation(Required=false)]
+        public string ExposureIp { get; set; }
+
+        /// <summary>
+        /// <para>The instance ID of the asset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>s-bp1g6wxdwps7s9dz****</para>
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        /// <summary>
         /// <para>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
         /// <remarks>
         /// <para> We recommend that you do not leave this parameter empty.</para>

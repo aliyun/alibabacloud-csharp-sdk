@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetClusterScannerYamlRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the cluster that you want to query.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

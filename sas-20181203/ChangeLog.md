@@ -1,3 +1,54 @@
+2025-12-09 Version: 7.1.0
+- Support API CreateCheckPolicy.
+- Support API DescribeCloudVendorProductTemplateConfig.
+- Support API GetInstanceAuthRange.
+- Support API ListCloudAssetMatchOperators.
+- Support API ListCloudAssetSchemas.
+- Support API ListMultiUserInstances.
+- Support API UpdateCheckPolicy.
+- Support API UpdateMultiUserInstances.
+- Update API AddCheckResultWhiteList: add request parameters InstanceIds.
+- Update API ChangeCheckConfig: add request parameters ResourceDirectoryAccountId.
+- Update API DescribeEmgVulItem: add request parameters ResourceDirectoryAccountId.
+- Update API DescribeExportInfo: add request parameters ResourceDirectoryAccountId.
+- Update API DescribeExposedStatisticsDetail: add request parameters ExposureIp.
+- Update API DescribeExposedStatisticsDetail: add request parameters InstanceId.
+- Update API DescribeNoticeConfig: add request parameters BizType.
+- Update API DescribeNoticeConfig: add response parameters Body.NoticeConfigList.$.Category.
+- Update API DescribeSecureSuggestion: add request parameters ResourceDirectoryAccountId.
+- Update API DescribeVulList: add response parameters Body.VulRecords.$.ContainerId.
+- Update API ExportRecord: add request parameters ResourceDirectoryAccountId.
+- Update API ListAgentlessRegion: add response parameters Body.VendorRegionList.
+- Update API ModifyEmgVulSubmit: add request parameters ResourceDirectoryAccountId.
+- Update API ModifyNoticeConfig: add request parameters BizType.
+- Update API RemoveCheckResultWhiteList: add request parameters InstanceIds.
+- Update API UpdateFileProtectEventStatus: add request parameters AlertLevels.
+- Update API UpdateFileProtectEventStatus: add request parameters EndTime.
+- Update API UpdateFileProtectEventStatus: add request parameters InstanceId.
+- Update API UpdateFileProtectEventStatus: add request parameters InstanceName.
+- Update API UpdateFileProtectEventStatus: add request parameters InternetIp.
+- Update API UpdateFileProtectEventStatus: add request parameters IntranetIp.
+- Update API UpdateFileProtectEventStatus: add request parameters Operation.
+- Update API UpdateFileProtectEventStatus: add request parameters RuleName.
+- Update API UpdateFileProtectEventStatus: add request parameters SelectAllAcrossPages.
+- Update API UpdateFileProtectEventStatus: add request parameters StartTime.
+- Update API UpdateFileProtectEventStatus: add request parameters Uuid.
+- Update API UpdateFileProtectRemark: add request parameters AlertLevels.
+- Update API UpdateFileProtectRemark: add request parameters EndTime.
+- Update API UpdateFileProtectRemark: add request parameters IdList.
+- Update API UpdateFileProtectRemark: add request parameters InstanceId.
+- Update API UpdateFileProtectRemark: add request parameters InstanceName.
+- Update API UpdateFileProtectRemark: add request parameters InternetIp.
+- Update API UpdateFileProtectRemark: add request parameters IntranetIp.
+- Update API UpdateFileProtectRemark: add request parameters Operation.
+- Update API UpdateFileProtectRemark: add request parameters RuleName.
+- Update API UpdateFileProtectRemark: add request parameters SelectAllAcrossPages.
+- Update API UpdateFileProtectRemark: add request parameters StartTime.
+- Update API UpdateFileProtectRemark: add request parameters Uuid.
+- Update API VerifyCheckInstanceResult: add request parameters CheckIds.
+- Update API VerifyCheckResult: add request parameters InstanceIds.
+
+
 2025-11-13 Version: 6.1.0
 - Support API CreateCheckItem.
 - Support API DeleteCheckItem.

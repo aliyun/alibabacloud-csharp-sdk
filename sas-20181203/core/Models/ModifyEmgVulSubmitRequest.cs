@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to scan for urgent vulnerabilities. Valid values:</para>
         /// <list type="bullet">

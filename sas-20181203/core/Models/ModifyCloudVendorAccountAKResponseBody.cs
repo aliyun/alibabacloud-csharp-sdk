@@ -121,6 +121,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// <para>Account ID. </para>
+            /// <remarks>
+            /// <para>The account ID of the cloud provider being connected.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>azure_demo_1</para>
+            /// </summary>
             [NameInMap("CtdrCloudUserId")]
             [Validation(Required=false)]
             public string CtdrCloudUserId { get; set; }
@@ -185,6 +194,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud.</description></item>
             /// <item><description><b>Azure</b>: Microsoft Azure.</description></item>
             /// <item><description><b>AWS</b>: Amazon Web Services (AWS).</description></item>
+            /// <item><description><b>VOLCENGINE</b>: Volcengine </description></item>
+            /// <item><description><b>google</b>: Google Cloud </description></item>
+            /// <item><description><b>CHAITIN</b>: Chaitin Tech </description></item>
+            /// <item><description><b>FORTINET</b>: Fortinet </description></item>
+            /// <item><description><b>THREATBOOK</b>: ThreatBook</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCustomizedDictRequest : TeaModel {
         /// <summary>
+        /// <para>The IP address of the access source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>58.240.XX.XX</para>
         /// </summary>

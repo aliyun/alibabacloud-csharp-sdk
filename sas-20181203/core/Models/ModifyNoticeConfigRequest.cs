@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyNoticeConfigRequest : TeaModel {
+        [NameInMap("BizType")]
+        [Validation(Required=false)]
+        public string BizType { get; set; }
+
         /// <summary>
         /// <para>The identifier of the notification item. Valid values:</para>
         /// <list type="bullet">

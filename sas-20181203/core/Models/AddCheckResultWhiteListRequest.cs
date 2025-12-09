@@ -20,6 +20,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<long?> CheckIds { get; set; }
 
         /// <summary>
+        /// <para>IDs of the cloud product instances that need to be whitelisted. Separate multiple IDs with a comma (,).</para>
+        /// </summary>
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public List<string> InstanceIds { get; set; }
+
+        /// <summary>
         /// <para>The description. The value of this parameter can be up to 65,535 bytes in length.</para>
         /// 
         /// <b>Example:</b>

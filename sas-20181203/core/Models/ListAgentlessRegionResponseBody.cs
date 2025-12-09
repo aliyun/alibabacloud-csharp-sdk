@@ -26,6 +26,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("VendorRegionList")]
+        [Validation(Required=false)]
+        public List<ListAgentlessRegionResponseBodyVendorRegionList> VendorRegionList { get; set; }
+        public class ListAgentlessRegionResponseBodyVendorRegionList : TeaModel {
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
+            [NameInMap("Vendor")]
+            [Validation(Required=false)]
+            public int? Vendor { get; set; }
+
+        }
+
     }
 
 }

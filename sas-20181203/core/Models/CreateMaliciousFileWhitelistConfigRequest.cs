@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateMaliciousFileWhitelistConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the alert.</para>
+        /// <para>Alert name:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to ALL, which indicates all alert types.</description></item>
+        /// <item><description>ALL: All alerts</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The field that you want to use in the whitelist rule.</para>
+        /// <para>Field used for whitelist in sensitive file alerts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fileMd5</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Field { get; set; }
 
         /// <summary>
-        /// <para>The value of the field that you want to use in the whitelist rule.</para>
+        /// <para>Expected value of the field to be whitelisted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b2cf9747ee49d8d9b105cf16e078cc16</para>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FieldValue { get; set; }
 
         /// <summary>
-        /// <para>The logical operator that you want to use in the whitelist rule.</para>
+        /// <para>Rule judgment operator:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to strEqual, which indicates the equality operator (=).</description></item>
+        /// <item><description>strEqual: String equals</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,14 +55,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Operator { get; set; }
 
+        /// <summary>
+        /// <para>Remarks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>whitelist</para>
+        /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The feature to which this operation belongs.</para>
+        /// <para>Business source:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to agentless, which indicates the agentless detection feature.</description></item>
+        /// <item><description>agentless: Agentless detection</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,10 +79,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The type of the assets on which you want the whitelist rule to take effect. Valid values:</para>
+        /// <para>Effective target type:</para>
         /// <list type="bullet">
-        /// <item><description>ALL: all assets</description></item>
-        /// <item><description>SELECTION_KEY: selected assets</description></item>
+        /// <item><description>ALL: All assets</description></item>
+        /// <item><description>SELECTION_KEY: Assets selected via the asset selection component</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,10 +93,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>The assets on which you want the whitelist rule to take effect. Valid values:</para>
+        /// <para>Target effective scope:</para>
         /// <list type="bullet">
-        /// <item><description>ALL: all assets</description></item>
-        /// <item><description>Others: selected assets</description></item>
+        /// <item><description>ALL: All assets</description></item>
+        /// <item><description>Other: Key of the asset range selected by the asset selection component</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -23,6 +23,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
+        /// <para>List of item IDs to be checked.</para>
+        /// </summary>
+        [NameInMap("CheckIds")]
+        [Validation(Required=false)]
+        public List<long?> CheckIds { get; set; }
+
+        /// <summary>
         /// <para>The instance IDs of the assets on which risks are detected based on the check item.</para>
         /// </summary>
         [NameInMap("InstanceIds")]

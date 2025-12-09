@@ -66,6 +66,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<DescribeWarningMachinesResponseBodyWarningMachines> WarningMachines { get; set; }
         public class DescribeWarningMachinesResponseBodyWarningMachines : TeaModel {
+            /// <summary>
+            /// <para>The type of cloud product assets.</para>
+            /// <remarks>
+            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the types of cloud product assets.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("AssetType")]
             [Validation(Required=false)]
             public string AssetType { get; set; }

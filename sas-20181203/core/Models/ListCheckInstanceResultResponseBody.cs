@@ -151,6 +151,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string StatusMessage { get; set; }
 
+            /// <summary>
+            /// <para>The multi-cloud provider account name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("VendorUserName")]
             [Validation(Required=false)]
             public string VendorUserName { get; set; }

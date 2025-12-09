@@ -211,10 +211,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? Status { get; set; }
 
+            /// <summary>
+            /// <para>User ID of the user who started the current process.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1001</para>
+            /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
 
+            /// <summary>
+            /// <para>The username that started the current process.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
             public string UserName { get; set; }

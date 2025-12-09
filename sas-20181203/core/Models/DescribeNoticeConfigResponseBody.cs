@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? AliUid { get; set; }
 
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
             /// <summary>
             /// <para>The page number of the returned page.</para>
             /// 

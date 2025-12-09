@@ -209,6 +209,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1232428423234****</para>
+        /// </summary>
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
+        /// <summary>
         /// <para>An array that consists of the information about the check item.</para>
         /// </summary>
         [NameInMap("StandardIds")]

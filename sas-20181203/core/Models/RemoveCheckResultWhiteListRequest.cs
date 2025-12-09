@@ -27,6 +27,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<long?> CheckIds { get; set; }
 
         /// <summary>
+        /// <para>A set of cloud product instance IDs that require validation.</para>
+        /// </summary>
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public List<string> InstanceIds { get; set; }
+
+        /// <summary>
         /// <para>The ID of the whitelist rule.</para>
         /// <remarks>
         /// <para> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of whitelist rules.</para>

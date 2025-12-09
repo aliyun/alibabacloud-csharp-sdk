@@ -9,6 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ExecStrategyRequest : TeaModel {
+        /// <summary>
+        /// <para>Set the action for this execution, default is <b>exec</b>. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>exec</b>: Execute. - <b>terminate</b>: Terminate.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>terminate</para>
+        /// </summary>
         [NameInMap("ExecAction")]
         [Validation(Required=false)]
         public string ExecAction { get; set; }

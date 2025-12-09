@@ -39,19 +39,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> AuthModules { get; set; }
 
+        /// <summary>
+        /// <para>Account ID.</para>
+        /// <remarks>
+        /// <para>The account ID of the connected cloud vendor, required when the permission description includes threat analysis and response.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>azure_demo_1</para>
+        /// </summary>
         [NameInMap("CtdrCloudUserId")]
         [Validation(Required=false)]
         public string CtdrCloudUserId { get; set; }
 
         /// <summary>
-        /// <para>The Active Directory (AD) domain. Valid values:</para>
+        /// <para>Access account domain. Values: </para>
         /// <list type="bullet">
-        /// <item><description><b>china</b></description></item>
-        /// <item><description><b>global</b></description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> This parameter takes effect only when Vendor is set to Azure.</para>
+        /// <item><description><b>china</b>: China</description></item>
+        /// <item><description><b>global</b>: Global </description></item>
+        /// <item><description><b>europe</b>: Huawei Europe<remarks>
+        /// <para>This parameter is only valid and required for <b>Vendor</b> being <b>HUAWEICLOUD</b>, <b>Azure</b>, <b>AWS</b>, or <b>VOLCENGINE</b>.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>global</para>
@@ -60,6 +70,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Domain { get; set; }
 
+        /// <summary>
+        /// <para>Extended information.</para>
+        /// <remarks>
+        /// <para>Used to record extended information from different vendors.
+        /// For Google Cloud, which is accessed through a service account, ExtendInfo stores a JSON-formatted service key file, excluding the private_key_id and zprivate_key fields. The file includes the following fields: type, project_id, client_email, client_id, auth_uri, token_uri, auth_provider_x509_cert_url, client_x509_cert_url, universe_domain.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;product\&quot;:\&quot;webFirewall\&quot;,\&quot;remark\&quot;:\&quot;remark\&quot;}</para>
+        /// </summary>
         [NameInMap("ExtendInfo")]
         [Validation(Required=false)]
         public string ExtendInfo { get; set; }
@@ -80,18 +100,36 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The regions that are examined during AccessKey pair authentication.</para>
-        /// <remarks>
-        /// <para> This parameter takes effect only when Vendor is set to AWS. You can call the <a href="~~ListCloudVendorRegions~~">ListCloudVendorRegions</a> operation to query regions.</para>
-        /// </remarks>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<string> Regions { get; set; }
 
         /// <summary>
-        /// <para>The AccessKey ID.</para>
+        /// <para>ID of the AK parameter. Values:</para>
+        /// <ol>
+        /// <item><description>When AkType is primary:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description><b>Tencent</b>: AccessKeyId of the main account</description></item>
+        /// <item><description><b>HUAWEICLOUD</b>: AccessKeyId of the main account</description></item>
+        /// <item><description><b>Azure</b>: ClientId</description></item>
+        /// <item><description><b>AWS</b>: AccessKeyId of the main account</description></item>
+        /// <item><description><b>VOLCENGINE</b>: AccessKeyId of the main account</description></item>
+        /// </list>
+        /// <ol start="2">
+        /// <item><description>When AkType is sub:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description><b>Tencent</b>: AccessKeyId of the sub-account</description></item>
+        /// <item><description><b>HUAWEICLOUD</b>: AccessKeyId of the sub-account</description></item>
+        /// <item><description><b>Azure</b>: ClientId</description></item>
+        /// <item><description><b>AWS</b>: AccessKeyId of the sub-account</description></item>
+        /// <item><description><b>VOLCENGINE</b>: AccessKeyId of the sub-account</description></item>
+        /// <item><description><b>google</b>: private_key_id</description></item>
+        /// </list>
         /// <remarks>
-        /// <para> If AkType is set to <b>primary</b>, you must set SecretId to the AccessKey ID of the third-party master account. If AkType is set to <b>sub</b>, you must set SecretId to the AccessKey ID of the third-party sub-account. This parameter value does not change for a <b>Microsoft Azure account</b>. For an Azure account, set this parameter to the <b>app ID</b> that is used for authentication.</para>
+        /// <para>If AkType is <b>primary</b>, this value is the SecretID of the main account from another cloud. If AkType is <b>sub</b>, this value is the Access Key ID of the sub-account from another cloud. For <b>Azure</b>, there is no distinction, and this value is the <b>appId</b> of the authentication information. Google Cloud is accessed through a service account, with AkType defaulting to sub, and this value is taken from the private_key_id attribute in the JSON format service key file.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

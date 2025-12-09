@@ -27,15 +27,42 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AccountId { get; set; }
 
             /// <term><b>Obsolete</b></term>
+            /// 
+            /// <summary>
+            /// <para>This parameter is deprecated and should be ignored.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("BuySas")]
             [Validation(Required=false)]
             [Obsolete]
             public int? BuySas { get; set; }
 
+            /// <summary>
+            /// <para>Whether a yearly or monthly subscription of Cloud Security Center is purchased. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: Yes</description></item>
+            /// <item><description><b>false</b>: No</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("BuySasNew")]
             [Validation(Required=false)]
             public bool? BuySasNew { get; set; }
 
+            /// <summary>
+            /// <para>Subscription type. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Prepaid</description></item>
+            /// <item><description><b>1</b>: Pay-As-You-Go</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public int? ChargeType { get; set; }
@@ -60,6 +87,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string FolderId { get; set; }
 
+            /// <summary>
+            /// <para>Instance purchase type. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Self-purchased</description></item>
+            /// <item><description><b>1</b>: Multi-account allocation</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("InstanceBuyType")]
             [Validation(Required=false)]
             public int? InstanceBuyType { get; set; }
@@ -130,14 +167,51 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IsSiemDaAccount { get; set; }
 
+            /// <summary>
+            /// <para>Post-paid module switch. Values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Off</description></item>
+            /// <item><description><b>1</b>: On</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("PostBasicService")]
             [Validation(Required=false)]
             public int? PostBasicService { get; set; }
 
+            /// <summary>
+            /// <para>The switch status of the pay-as-you-go module. The value is a JSON string. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Key:</para>
+            /// <list type="bullet">
+            /// <item><description><b>VUL</b>: vulnerability fixing module</description></item>
+            /// <item><description><b>CSPM</b>: cloud service configuration check module</description></item>
+            /// <item><description><b>AGENTLESS</b>: agentless detection module</description></item>
+            /// <item><description><b>SERVERLESS</b>: serverless asset module</description></item>
+            /// </list>
+            /// </description></item>
+            /// <item><description><para>Value: A value of 0 specifies disabled. A value of 1 specifies enabled.</para>
+            /// </description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> If you do not specify a value for a module, the original value of the module is retained.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;VUL\&quot;:0}</para>
+            /// </summary>
             [NameInMap("PostPayModuleSwitch")]
             [Validation(Required=false)]
             public string PostPayModuleSwitch { get; set; }
 
+            /// <summary>
+            /// <para>Cloud Security Center Instance ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>postpay-sas-x5x3hy1ly***</para>
+            /// </summary>
             [NameInMap("SaleInstance")]
             [Validation(Required=false)]
             public string SaleInstance { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeNoticeConfigRequest : TeaModel {
+        [NameInMap("BizType")]
+        [Validation(Required=false)]
+        public string BizType { get; set; }
+
         /// <summary>
         /// <para>The source IP address of the request.</para>
         /// 

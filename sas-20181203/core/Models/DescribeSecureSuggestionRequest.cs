@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSecureSuggestionRequest : TeaModel {
         /// <summary>
-        /// <para>The old or new version of the security score rule. If you set this parameter to <b>home_security_score</b>, the new version of the security score rule is returned. Otherwise, the old version of the security score rule is returned.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>home_security_score</para>
         /// </summary>
@@ -20,12 +18,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CalType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -34,14 +26,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Source of security score, default is Cloud Security Center if left empty. Enum values: </para>
-        /// <list type="bullet">
-        /// <item><description><para>0:Cloud Security Center. </para>
-        /// </description></item>
-        /// <item><description><para>1:Yaochi Console.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// </remarks>
         /// 
+        /// <b>Example:</b>
+        /// <para>1232428423234****</para>
+        /// </summary>
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -50,8 +47,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Source { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
         /// </summary>
