@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterStoragePerformanceRequest : TeaModel {
+        [NameInMap("AutoUseCoupon")]
+        [Validation(Required=false)]
+        public bool? AutoUseCoupon { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable the I/O Burst feature for the ESSD AutoPL disk. Valid value:</para>
         /// <list type="bullet">
@@ -51,6 +55,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ModifyType")]
         [Validation(Required=false)]
         public string ModifyType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>727xxxxxx934</para>
+        /// </summary>
+        [NameInMap("PromotionCode")]
+        [Validation(Required=false)]
+        public string PromotionCode { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

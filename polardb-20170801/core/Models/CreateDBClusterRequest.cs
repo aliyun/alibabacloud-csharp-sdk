@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        [NameInMap("AutoUseCoupon")]
+        [Validation(Required=false)]
+        public bool? AutoUseCoupon { get; set; }
+
         /// <summary>
         /// <para>Backup retention policy upon cluster deletion, with valid values as follows:</para>
         /// <list type="bullet">
@@ -497,6 +501,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>727xxxxxx934</para>
+        /// </summary>
+        [NameInMap("PromotionCode")]
+        [Validation(Required=false)]
+        public string PromotionCode { get; set; }
 
         /// <summary>
         /// <p id="p_wyg_t4a_glm">The provisioned read and write IOPS for ESSD AutoPL cloud disks. Possible values: 0 to min{50,000, 1000*capacity-Baseline Performance}.</para>

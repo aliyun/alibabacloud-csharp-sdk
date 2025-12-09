@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterArchRequest : TeaModel {
+        [NameInMap("AutoUseCoupon")]
+        [Validation(Required=false)]
+        public bool? AutoUseCoupon { get; set; }
+
         /// <summary>
         /// <para>The ID of the cluster.</para>
         /// 
@@ -32,6 +36,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("HotStandbyCluster")]
         [Validation(Required=false)]
         public string HotStandbyCluster { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>727xxxxxx934</para>
+        /// </summary>
+        [NameInMap("PromotionCode")]
+        [Validation(Required=false)]
+        public string PromotionCode { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>

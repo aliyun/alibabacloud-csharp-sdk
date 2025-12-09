@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateStoragePlanRequest : TeaModel {
+        [NameInMap("AutoUseCoupon")]
+        [Validation(Required=false)]
+        public bool? AutoUseCoupon { get; set; }
+
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
@@ -41,6 +45,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("Period")]
         [Validation(Required=false)]
         public string Period { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>727xxxxxx934</para>
+        /// </summary>
+        [NameInMap("PromotionCode")]
+        [Validation(Required=false)]
+        public string PromotionCode { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

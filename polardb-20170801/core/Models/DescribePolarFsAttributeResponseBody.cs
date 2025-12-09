@@ -67,6 +67,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>xxxxxx-%d.oss-cn-beijing-internal.aliyuncs.com</para>
+        /// </summary>
+        [NameInMap("CustomBucketPath")]
+        [Validation(Required=false)]
+        public string CustomBucketPath { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>MySQL</para>
         /// </summary>
         [NameInMap("DBType")]

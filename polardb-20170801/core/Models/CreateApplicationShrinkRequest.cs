@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        [NameInMap("AutoUseCoupon")]
+        [Validation(Required=false)]
+        public bool? AutoUseCoupon { get; set; }
+
         [NameInMap("Components")]
         [Validation(Required=false)]
         public string ComponentsShrink { get; set; }
@@ -92,6 +96,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("PolarFSInstanceId")]
         [Validation(Required=false)]
         public string PolarFSInstanceId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>727xxxxxx934</para>
+        /// </summary>
+        [NameInMap("PromotionCode")]
+        [Validation(Required=false)]
+        public string PromotionCode { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

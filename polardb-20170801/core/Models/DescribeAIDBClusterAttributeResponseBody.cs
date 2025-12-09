@@ -221,6 +221,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBVersion { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>sg-xxxxxx</para>
+        /// </summary>
+        [NameInMap("EcsSecurityGroupId")]
+        [Validation(Required=false)]
+        public string EcsSecurityGroupId { get; set; }
+
         [NameInMap("EndpointList")]
         [Validation(Required=false)]
         public List<DescribeAIDBClusterAttributeResponseBodyEndpointList> EndpointList { get; set; }
