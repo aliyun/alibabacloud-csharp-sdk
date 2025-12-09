@@ -16,8 +16,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
         [Validation(Required=false)]
         public string Api { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("apiParams")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ApiParamsShrink { get; set; }
 
         /// <summary>
@@ -26,6 +28,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
         [NameInMap("apiVersion")]
         [Validation(Required=false)]
         public string ApiVersion { get; set; }
+
+        [NameInMap("jsonApiParams")]
+        [Validation(Required=false)]
+        public string JsonApiParams { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

@@ -18,7 +18,12 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "central";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"ap-southeast-1", "openapi-mcp.ap-southeast-1.aliyuncs.com"},
+                {"cn-hangzhou", "openapi-mcp.cn-hangzhou.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("openapiexplorer", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -217,6 +222,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             {
                 body["enableAssumeRole"] = request.EnableAssumeRole;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCustomVpcWhitelist))
+            {
+                body["enableCustomVpcWhitelist"] = request.EnableCustomVpcWhitelist;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
             {
                 body["instructions"] = request.Instructions;
@@ -237,6 +246,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             {
                 body["prompts"] = request.Prompts;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicAccess))
+            {
+                body["publicAccess"] = request.PublicAccess;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemTools))
             {
                 body["systemTools"] = request.SystemTools;
@@ -244,6 +257,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerraformTools))
             {
                 body["terraformTools"] = request.TerraformTools;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcWhitelists))
+            {
+                body["vpcWhitelists"] = request.VpcWhitelists;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -315,6 +332,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             {
                 body["enableAssumeRole"] = request.EnableAssumeRole;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCustomVpcWhitelist))
+            {
+                body["enableCustomVpcWhitelist"] = request.EnableCustomVpcWhitelist;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
             {
                 body["instructions"] = request.Instructions;
@@ -335,6 +356,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             {
                 body["prompts"] = request.Prompts;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicAccess))
+            {
+                body["publicAccess"] = request.PublicAccess;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemTools))
             {
                 body["systemTools"] = request.SystemTools;
@@ -342,6 +367,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerraformTools))
             {
                 body["terraformTools"] = request.TerraformTools;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcWhitelists))
+            {
+                body["vpcWhitelists"] = request.VpcWhitelists;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -579,6 +608,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             {
                 body["apiVersion"] = request.ApiVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonApiParams))
+            {
+                body["jsonApiParams"] = request.JsonApiParams;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
             {
                 body["product"] = request.Product;
@@ -646,6 +679,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiVersion))
             {
                 body["apiVersion"] = request.ApiVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonApiParams))
+            {
+                body["jsonApiParams"] = request.JsonApiParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
             {
@@ -987,6 +1024,108 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetApiMcpServerWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户全局API MCP Server配置</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiMcpServerUserConfigResponse
+        /// </returns>
+        public GetApiMcpServerUserConfigResponse GetApiMcpServerUserConfigWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApiMcpServerUserConfig",
+                Version = "2024-11-30",
+                Protocol = "HTTPS",
+                Pathname = "/userconfig/get",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApiMcpServerUserConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户全局API MCP Server配置</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiMcpServerUserConfigResponse
+        /// </returns>
+        public async Task<GetApiMcpServerUserConfigResponse> GetApiMcpServerUserConfigWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApiMcpServerUserConfig",
+                Version = "2024-11-30",
+                Protocol = "HTTPS",
+                Pathname = "/userconfig/get",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApiMcpServerUserConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户全局API MCP Server配置</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetApiMcpServerUserConfigResponse
+        /// </returns>
+        public GetApiMcpServerUserConfigResponse GetApiMcpServerUserConfig()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetApiMcpServerUserConfigWithOptions(headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户全局API MCP Server配置</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetApiMcpServerUserConfigResponse
+        /// </returns>
+        public async Task<GetApiMcpServerUserConfigResponse> GetApiMcpServerUserConfigAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetApiMcpServerUserConfigWithOptionsAsync(headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2134,6 +2273,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             {
                 body["enableAssumeRole"] = request.EnableAssumeRole;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCustomVpcWhitelist))
+            {
+                body["enableCustomVpcWhitelist"] = request.EnableCustomVpcWhitelist;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
             {
                 body["instructions"] = request.Instructions;
@@ -2150,6 +2293,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             {
                 body["prompts"] = request.Prompts;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicAccess))
+            {
+                body["publicAccess"] = request.PublicAccess;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemTools))
             {
                 body["systemTools"] = request.SystemTools;
@@ -2157,6 +2304,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerraformTools))
             {
                 body["terraformTools"] = request.TerraformTools;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcWhitelists))
+            {
+                body["vpcWhitelists"] = request.VpcWhitelists;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2234,6 +2385,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             {
                 body["enableAssumeRole"] = request.EnableAssumeRole;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCustomVpcWhitelist))
+            {
+                body["enableCustomVpcWhitelist"] = request.EnableCustomVpcWhitelist;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instructions))
             {
                 body["instructions"] = request.Instructions;
@@ -2250,6 +2405,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             {
                 body["prompts"] = request.Prompts;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicAccess))
+            {
+                body["publicAccess"] = request.PublicAccess;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemTools))
             {
                 body["systemTools"] = request.SystemTools;
@@ -2257,6 +2416,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TerraformTools))
             {
                 body["terraformTools"] = request.TerraformTools;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcWhitelists))
+            {
+                body["vpcWhitelists"] = request.VpcWhitelists;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2315,6 +2478,144 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateApiMcpServerWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户全局API MCP Server配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApiMcpServerUserConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiMcpServerUserConfigResponse
+        /// </returns>
+        public UpdateApiMcpServerUserConfigResponse UpdateApiMcpServerUserConfigWithOptions(UpdateApiMcpServerUserConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnablePublicAccess))
+            {
+                body["enablePublicAccess"] = request.EnablePublicAccess;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcWhitelists))
+            {
+                body["vpcWhitelists"] = request.VpcWhitelists;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateApiMcpServerUserConfig",
+                Version = "2024-11-30",
+                Protocol = "HTTPS",
+                Pathname = "/userconfig/update",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateApiMcpServerUserConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户全局API MCP Server配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApiMcpServerUserConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiMcpServerUserConfigResponse
+        /// </returns>
+        public async Task<UpdateApiMcpServerUserConfigResponse> UpdateApiMcpServerUserConfigWithOptionsAsync(UpdateApiMcpServerUserConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnablePublicAccess))
+            {
+                body["enablePublicAccess"] = request.EnablePublicAccess;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcWhitelists))
+            {
+                body["vpcWhitelists"] = request.VpcWhitelists;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateApiMcpServerUserConfig",
+                Version = "2024-11-30",
+                Protocol = "HTTPS",
+                Pathname = "/userconfig/update",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateApiMcpServerUserConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户全局API MCP Server配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApiMcpServerUserConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiMcpServerUserConfigResponse
+        /// </returns>
+        public UpdateApiMcpServerUserConfigResponse UpdateApiMcpServerUserConfig(UpdateApiMcpServerUserConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateApiMcpServerUserConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户全局API MCP Server配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApiMcpServerUserConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiMcpServerUserConfigResponse
+        /// </returns>
+        public async Task<UpdateApiMcpServerUserConfigResponse> UpdateApiMcpServerUserConfigAsync(UpdateApiMcpServerUserConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateApiMcpServerUserConfigWithOptionsAsync(request, headers, runtime);
         }
 
     }

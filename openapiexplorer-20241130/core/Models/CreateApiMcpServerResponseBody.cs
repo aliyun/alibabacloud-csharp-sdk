@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
             [Validation(Required=false)]
             public string Sse { get; set; }
 
+            [NameInMap("vpcMcp")]
+            [Validation(Required=false)]
+            public string VpcMcp { get; set; }
+
+            [NameInMap("vpcSse")]
+            [Validation(Required=false)]
+            public string VpcSse { get; set; }
+
         }
 
     }

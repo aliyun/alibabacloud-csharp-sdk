@@ -160,6 +160,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
             [Validation(Required=false)]
             public bool? EnableAssumeRole { get; set; }
 
+            [NameInMap("enableCustomVpcWhitelist")]
+            [Validation(Required=false)]
+            public bool? EnableCustomVpcWhitelist { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>v6ZZ7ftCzEILW***</para>
@@ -255,6 +259,10 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 public string Name { get; set; }
 
             }
+
+            [NameInMap("publicAccess")]
+            [Validation(Required=false)]
+            public string PublicAccess { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -376,7 +384,19 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
                 [Validation(Required=false)]
                 public string Sse { get; set; }
 
+                [NameInMap("vpcMcp")]
+                [Validation(Required=false)]
+                public string VpcMcp { get; set; }
+
+                [NameInMap("vpcSse")]
+                [Validation(Required=false)]
+                public string VpcSse { get; set; }
+
             }
+
+            [NameInMap("vpcWhitelists")]
+            [Validation(Required=false)]
+            public List<string> VpcWhitelists { get; set; }
 
         }
 
