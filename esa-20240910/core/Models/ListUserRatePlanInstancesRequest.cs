@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("PlanNameEn")]
+        [Validation(Required=false)]
+        public string PlanNameEn { get; set; }
+
         [NameInMap("PlanType")]
         [Validation(Required=false)]
         public string PlanType { get; set; }
