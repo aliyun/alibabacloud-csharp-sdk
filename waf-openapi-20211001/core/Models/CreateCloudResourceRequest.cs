@@ -174,6 +174,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string ResourceProduct { get; set; }
 
+            [NameInMap("ResourceRegionId")]
+            [Validation(Required=false)]
+            public string ResourceRegionId { get; set; }
+
             /// <summary>
             /// <para>The Transport Layer Security (TLS) version that you want to add. This parameter is available only if you specify <b>HttpsPorts</b>. Valid values:</para>
             /// <list type="bullet">
