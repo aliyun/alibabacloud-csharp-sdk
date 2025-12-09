@@ -25641,6 +25641,142 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新模板应用的SSO参数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationSsoFormParamsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationSsoFormParamsResponse
+        /// </returns>
+        public UpdateApplicationSsoFormParamsResponse UpdateApplicationSsoFormParamsWithOptions(UpdateApplicationSsoFormParamsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationTemplateParams))
+            {
+                query["ApplicationTemplateParams"] = request.ApplicationTemplateParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateApplicationSsoFormParams",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateApplicationSsoFormParamsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新模板应用的SSO参数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationSsoFormParamsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationSsoFormParamsResponse
+        /// </returns>
+        public async Task<UpdateApplicationSsoFormParamsResponse> UpdateApplicationSsoFormParamsWithOptionsAsync(UpdateApplicationSsoFormParamsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationTemplateParams))
+            {
+                query["ApplicationTemplateParams"] = request.ApplicationTemplateParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateApplicationSsoFormParams",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateApplicationSsoFormParamsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新模板应用的SSO参数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationSsoFormParamsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationSsoFormParamsResponse
+        /// </returns>
+        public UpdateApplicationSsoFormParamsResponse UpdateApplicationSsoFormParams(UpdateApplicationSsoFormParamsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateApplicationSsoFormParamsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新模板应用的SSO参数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApplicationSsoFormParamsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApplicationSsoFormParamsResponse
+        /// </returns>
+        public async Task<UpdateApplicationSsoFormParamsResponse> UpdateApplicationSsoFormParamsAsync(UpdateApplicationSsoFormParamsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateApplicationSsoFormParamsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>更新ApplicationToken过期时间</para>
         /// </summary>
         /// 
