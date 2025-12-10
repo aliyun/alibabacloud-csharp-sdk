@@ -301,6 +301,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? ClipboardSize { get; set; }
 
+            [NameInMap("ClipboardSizeUnit")]
+            [Validation(Required=false)]
+            public string ClipboardSizeUnit { get; set; }
+
             [NameInMap("ClipboardType")]
             [Validation(Required=false)]
             public string ClipboardType { get; set; }
