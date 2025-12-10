@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteSecurityGroupPermissionsRequest : TeaModel {
         /// <summary>
+        /// <para>The security group rules.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Permissions")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public List<DeleteSecurityGroupPermissionsRequestPermissions> Permissions { get; set; }
         public class DeleteSecurityGroupPermissionsRequestPermissions : TeaModel {
             /// <summary>
+            /// <para>The destination IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10.XX.XX.91</para>
             /// </summary>
@@ -25,6 +28,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string DestCidrIp { get; set; }
 
             /// <summary>
+            /// <para>The direction in which the security group rule is applied.</para>
+            /// <list type="bullet">
+            /// <item><description>egress</description></item>
+            /// <item><description>ingress</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -35,6 +43,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Direction { get; set; }
 
             /// <summary>
+            /// <para>Protocol type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>TCP</description></item>
+            /// <item><description>UDP</description></item>
+            /// <item><description>ICMP: the ICMP protocol</description></item>
+            /// <item><description>ICMPv6: the IPv6 ICMP protocol.</description></item>
+            /// <item><description>ALL: All protocols are supported.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -45,6 +61,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string IpProtocol { get; set; }
 
             /// <summary>
+            /// <para>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</para>
+            /// <remarks>
+            /// <para> This parameter and the <c>DestCidrIp</c> parameter cannot be set at the same time.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>::/0</para>
             /// </summary>
@@ -53,6 +74,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Ipv6DestCidrIp { get; set; }
 
             /// <summary>
+            /// <para>The source IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</para>
+            /// <remarks>
+            /// <para> This parameter and the <c>DestCidrIp</c> parameter cannot be set at the same time.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>::/0</para>
             /// </summary>
@@ -61,6 +87,11 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Ipv6SourceCidrIp { get; set; }
 
             /// <summary>
+            /// <para>The action specified in the security group rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Accept</description></item>
+            /// <item><description>Drop</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -71,6 +102,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string Policy { get; set; }
 
             /// <summary>
+            /// <para>The destination port range of the security group rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
+            /// <item><description>If you set IpProtocol to ICMP, the port range is -1/-1.</description></item>
+            /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -81,6 +118,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string PortRange { get; set; }
 
             /// <summary>
+            /// <para>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -91,6 +129,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public int? Priority { get; set; }
 
             /// <summary>
+            /// <para>The source IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.XX.XX.0/0</para>
             /// </summary>
@@ -99,6 +139,13 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             public string SourceCidrIp { get; set; }
 
             /// <summary>
+            /// <para>The range of source port numbers for the protocols specified in the security group rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>If you set IpProtocol to TCP or UDP, the valid values of this parameter are 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
+            /// <item><description>If you set IpProtocol to ICMP, the port range is -1/-1.</description></item>
+            /// <item><description>If you set IpProtocol to ALL, the port range is -1/-1.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>22/22</para>
             /// </summary>
@@ -109,6 +156,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         }
 
         /// <summary>
+        /// <para>The ID of the security group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

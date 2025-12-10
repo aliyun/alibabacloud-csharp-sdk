@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class UploadAICPublicKeyRequest : TeaModel {
         /// <summary>
+        /// <para>Public Key</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The description of the document.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>测试</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Public Key Grouping</para>
+        /// 
         /// <b>Example:</b>
         /// <para>g-test</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyGroup { get; set; }
 
         /// <summary>
+        /// <para>Public Key Name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyName { get; set; }
 
         /// <summary>
+        /// <para>Public key type</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

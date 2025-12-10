@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeForwardEntryAttributeRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the DNAT entry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

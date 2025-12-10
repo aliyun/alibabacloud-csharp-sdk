@@ -4084,9 +4084,17 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["InstanceChargeType"] = request.InstanceChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetChargeType))
             {
                 query["InternetChargeType"] = request.InternetChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpAddress))
+            {
+                query["IpAddress"] = request.IpAddress;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Isp))
             {
@@ -4166,9 +4174,17 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["InstanceChargeType"] = request.InstanceChargeType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetChargeType))
             {
                 query["InternetChargeType"] = request.InternetChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpAddress))
+            {
+                query["IpAddress"] = request.IpAddress;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Isp))
             {
@@ -8767,7 +8783,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用CreateSecurityGroupPermissions创建安全组规则。</para>
+        /// <para>Create an ENS security group rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8819,7 +8835,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用CreateSecurityGroupPermissions创建安全组规则。</para>
+        /// <para>Create an ENS security group rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8871,7 +8887,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用CreateSecurityGroupPermissions创建安全组规则。</para>
+        /// <para>Create an ENS security group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8889,7 +8905,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用CreateSecurityGroupPermissions创建安全组规则。</para>
+        /// <para>Create an ENS security group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9735,7 +9751,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除托管公钥</para>
+        /// <para>Deletes a specified AIC public key. You can delete a public key only if it is not associated with the public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9777,7 +9793,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除托管公钥</para>
+        /// <para>Deletes a specified AIC public key. You can delete a public key only if it is not associated with the public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9819,7 +9835,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除托管公钥</para>
+        /// <para>Deletes a specified AIC public key. You can delete a public key only if it is not associated with the public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9837,7 +9853,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除托管公钥</para>
+        /// <para>Deletes a specified AIC public key. You can delete a public key only if it is not associated with the public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13103,7 +13119,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DeleteSecurityGroupPermissions删除安全组规则。</para>
+        /// <para>Deletes an ENS security group rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13155,7 +13171,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DeleteSecurityGroupPermissions删除安全组规则。</para>
+        /// <para>Deletes an ENS security group rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13207,7 +13223,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DeleteSecurityGroupPermissions删除安全组规则。</para>
+        /// <para>Deletes an ENS security group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13225,7 +13241,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DeleteSecurityGroupPermissions删除安全组规则。</para>
+        /// <para>Deletes an ENS security group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20155,7 +20171,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeForwardEntryAttribute查询DNAT条目明细</para>
+        /// <para>You can call the DescribeForwardEntryAttribute operation to query the details of a DNAT rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20197,7 +20213,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeForwardEntryAttribute查询DNAT条目明细</para>
+        /// <para>You can call the DescribeForwardEntryAttribute operation to query the details of a DNAT rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20239,7 +20255,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeForwardEntryAttribute查询DNAT条目明细</para>
+        /// <para>You can call the DescribeForwardEntryAttribute operation to query the details of a DNAT rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20257,7 +20273,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调用DescribeForwardEntryAttribute查询DNAT条目明细</para>
+        /// <para>You can call the DescribeForwardEntryAttribute operation to query the details of a DNAT rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26515,7 +26531,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询SDG下的共享盘</para>
+        /// <para>You can query the information of shared disks in a specified SDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26573,7 +26589,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询SDG下的共享盘</para>
+        /// <para>You can query the information of shared disks in a specified SDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26631,7 +26647,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询SDG下的共享盘</para>
+        /// <para>You can query the information of shared disks in a specified SDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26649,7 +26665,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询SDG下的共享盘</para>
+        /// <para>You can query the information of shared disks in a specified SDG.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32087,7 +32103,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询公钥下发信息</para>
+        /// <para>Queries the related information of AIC public keys. Paged query is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32149,7 +32165,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询公钥下发信息</para>
+        /// <para>Queries the related information of AIC public keys. Paged query is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32211,7 +32227,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询公钥下发信息</para>
+        /// <para>Queries the related information of AIC public keys. Paged query is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32229,7 +32245,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询公钥下发信息</para>
+        /// <para>Queries the related information of AIC public keys. Paged query is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32247,7 +32263,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有托管的公钥</para>
+        /// <para>Query the list of AIC public keys that meet the conditions. Paged query is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32305,7 +32321,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有托管的公钥</para>
+        /// <para>Query the list of AIC public keys that meet the conditions. Paged query is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32363,7 +32379,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有托管的公钥</para>
+        /// <para>Query the list of AIC public keys that meet the conditions. Paged query is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32381,7 +32397,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有托管的公钥</para>
+        /// <para>Query the list of AIC public keys that meet the conditions. Paged query is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33117,7 +33133,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AIC公钥登入管理</para>
+        /// <para>Log on to the AIC instance. You can associate or disassociate an AIC instance based on the uploaded AIC public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33171,7 +33187,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AIC公钥登入管理</para>
+        /// <para>Log on to the AIC instance. You can associate or disassociate an AIC instance based on the uploaded AIC public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33225,7 +33241,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AIC公钥登入管理</para>
+        /// <para>Log on to the AIC instance. You can associate or disassociate an AIC instance based on the uploaded AIC public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33243,7 +33259,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AIC公钥登入管理</para>
+        /// <para>Log on to the AIC instance. You can associate or disassociate an AIC instance based on the uploaded AIC public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35097,8 +35113,27 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例网络</para>
+        /// <para>Modifies the private IP address or vSwitch of a VPC-type ECS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The instance that you want to manage must be in the Stopped state. When you modify the parameters of a scaling group, the following limits apply:</para>
+        /// <list type="bullet">
+        /// <item><description>Instance:<list type="bullet">
+        /// <item><description>Instances that are associated with SLB are not supported.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Network:<list type="bullet">
+        /// <item><description>Instances that are associated with EIPs are not supported.</description></item>
+        /// <item><description>Instances that are associated with high-availability virtual IP addresses are not supported.</description></item>
+        /// <item><description>Instances that have been used as next hops in the routing table are not supported.</description></item>
+        /// <item><description>Secondary ENIs cannot be attached to the ECS instance.</description></item>
+        /// <item><description>Instances configured with secondary IP addresses are not supported.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceNetworkAttributeRequest
@@ -35147,8 +35182,27 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例网络</para>
+        /// <para>Modifies the private IP address or vSwitch of a VPC-type ECS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The instance that you want to manage must be in the Stopped state. When you modify the parameters of a scaling group, the following limits apply:</para>
+        /// <list type="bullet">
+        /// <item><description>Instance:<list type="bullet">
+        /// <item><description>Instances that are associated with SLB are not supported.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Network:<list type="bullet">
+        /// <item><description>Instances that are associated with EIPs are not supported.</description></item>
+        /// <item><description>Instances that are associated with high-availability virtual IP addresses are not supported.</description></item>
+        /// <item><description>Instances that have been used as next hops in the routing table are not supported.</description></item>
+        /// <item><description>Secondary ENIs cannot be attached to the ECS instance.</description></item>
+        /// <item><description>Instances configured with secondary IP addresses are not supported.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceNetworkAttributeRequest
@@ -35197,8 +35251,27 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例网络</para>
+        /// <para>Modifies the private IP address or vSwitch of a VPC-type ECS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The instance that you want to manage must be in the Stopped state. When you modify the parameters of a scaling group, the following limits apply:</para>
+        /// <list type="bullet">
+        /// <item><description>Instance:<list type="bullet">
+        /// <item><description>Instances that are associated with SLB are not supported.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Network:<list type="bullet">
+        /// <item><description>Instances that are associated with EIPs are not supported.</description></item>
+        /// <item><description>Instances that are associated with high-availability virtual IP addresses are not supported.</description></item>
+        /// <item><description>Instances that have been used as next hops in the routing table are not supported.</description></item>
+        /// <item><description>Secondary ENIs cannot be attached to the ECS instance.</description></item>
+        /// <item><description>Instances configured with secondary IP addresses are not supported.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceNetworkAttributeRequest
@@ -35215,8 +35288,27 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例网络</para>
+        /// <para>Modifies the private IP address or vSwitch of a VPC-type ECS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The instance that you want to manage must be in the Stopped state. When you modify the parameters of a scaling group, the following limits apply:</para>
+        /// <list type="bullet">
+        /// <item><description>Instance:<list type="bullet">
+        /// <item><description>Instances that are associated with SLB are not supported.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Network:<list type="bullet">
+        /// <item><description>Instances that are associated with EIPs are not supported.</description></item>
+        /// <item><description>Instances that are associated with high-availability virtual IP addresses are not supported.</description></item>
+        /// <item><description>Instances that have been used as next hops in the routing table are not supported.</description></item>
+        /// <item><description>Secondary ENIs cannot be attached to the ECS instance.</description></item>
+        /// <item><description>Instances configured with secondary IP addresses are not supported.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceNetworkAttributeRequest
@@ -43781,7 +43873,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>共享AIC镜像</para>
+        /// <para>Share the specified AIC image to other users.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43833,7 +43925,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>共享AIC镜像</para>
+        /// <para>Share the specified AIC image to other users.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43885,7 +43977,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>共享AIC镜像</para>
+        /// <para>Share the specified AIC image to other users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43903,7 +43995,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>共享AIC镜像</para>
+        /// <para>Share the specified AIC image to other users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46861,7 +46953,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传公钥</para>
+        /// <para>Upload a new AIC public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46919,7 +47011,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传公钥</para>
+        /// <para>Upload a new AIC public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46977,7 +47069,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传公钥</para>
+        /// <para>Upload a new AIC public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46995,7 +47087,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传公钥</para>
+        /// <para>Upload a new AIC public key.</para>
         /// </summary>
         /// 
         /// <param name="request">

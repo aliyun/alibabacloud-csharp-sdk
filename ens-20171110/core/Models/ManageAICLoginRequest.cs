@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ManageAICLoginRequest : TeaModel {
         /// <summary>
+        /// <para>Manage actions</para>
+        /// <para>Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>open</description></item>
+        /// <item><description>close</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +26,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ActionName { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Public Key Grouping</para>
+        /// 
         /// <b>Example:</b>
         /// <para>g-test</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyGroup { get; set; }
 
         /// <summary>
+        /// <para>Public Key Name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mykey</para>
         /// </summary>

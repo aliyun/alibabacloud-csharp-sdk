@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DeleteSecurityGroupPermissionsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAE90880-4970-4D81-A534-A6C0F3631F74</para>
         /// </summary>

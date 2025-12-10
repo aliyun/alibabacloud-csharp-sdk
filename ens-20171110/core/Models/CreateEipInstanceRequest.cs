@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
 
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         /// <summary>
         /// <para>The metering method of the EIP. Set the value to <b>95BandwidthByMonth</b>.</para>
         /// <para>This parameter is required.</para>
@@ -77,6 +81,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
         public string InternetChargeType { get; set; }
+
+        [NameInMap("IpAddress")]
+        [Validation(Required=false)]
+        public string IpAddress { get; set; }
 
         /// <summary>
         /// <para>The Internet service provider. Valid values:</para>

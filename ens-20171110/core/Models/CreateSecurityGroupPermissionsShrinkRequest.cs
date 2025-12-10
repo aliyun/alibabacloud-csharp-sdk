@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class CreateSecurityGroupPermissionsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The security group rules.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Permissions")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string PermissionsShrink { get; set; }
 
         /// <summary>
+        /// <para>The IDs of the security groups.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

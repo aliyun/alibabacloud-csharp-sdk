@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ShareAICImageShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The image name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string ImageId { get; set; }
 
         /// <summary>
+        /// <para>The user groups.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Users")]

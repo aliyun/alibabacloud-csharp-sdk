@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ListAICPublicKeyDeliveriesRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aic-xxxx-0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Public Key Grouping</para>
+        /// 
         /// <b>Example:</b>
         /// <para>g-test</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyGroup { get; set; }
 
         /// <summary>
+        /// <para>Public Key Name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mykey</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyName { get; set; }
 
         /// <summary>
+        /// <para>Public key type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>adb</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string KeyType { get; set; }
 
         /// <summary>
+        /// <para>The page number of the page to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

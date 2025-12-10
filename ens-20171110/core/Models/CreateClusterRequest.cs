@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public string InstanceSpec { get; set; }
 
+            [NameInMap("LoginPassword")]
+            [Validation(Required=false)]
+            public string LoginPassword { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>30000-32767</para>

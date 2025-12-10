@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeSDGSharedDisksRequest : TeaModel {
         /// <summary>
+        /// <para>The namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The page number, which is used for paged query</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-xx</para>
         /// </summary>
@@ -42,6 +50,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>sdg ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
