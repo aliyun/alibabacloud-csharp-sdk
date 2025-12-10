@@ -389,10 +389,34 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 request.ColorWordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ColorWords, "ColorWords", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Stickers))
+            {
+                request.StickersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Stickers, "Stickers", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloseMusic))
+            {
+                body["CloseMusic"] = request.CloseMusic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloseSubtitle))
+            {
+                body["CloseSubtitle"] = request.CloseSubtitle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloseVoice))
+            {
+                body["CloseVoice"] = request.CloseVoice;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColorWordsShrink))
             {
                 body["ColorWords"] = request.ColorWordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomVoiceUrl))
+            {
+                body["CustomVoiceUrl"] = request.CustomVoiceUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomVoiceVolume))
+            {
+                body["CustomVoiceVolume"] = request.CustomVoiceVolume;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Height))
             {
@@ -405,6 +429,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MusicVolume))
             {
                 body["MusicVolume"] = request.MusicVolume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StickersShrink))
+            {
+                body["Stickers"] = request.StickersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubtitleFontSize))
             {
@@ -473,10 +501,34 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 request.ColorWordsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ColorWords, "ColorWords", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Stickers))
+            {
+                request.StickersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Stickers, "Stickers", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloseMusic))
+            {
+                body["CloseMusic"] = request.CloseMusic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloseSubtitle))
+            {
+                body["CloseSubtitle"] = request.CloseSubtitle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloseVoice))
+            {
+                body["CloseVoice"] = request.CloseVoice;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColorWordsShrink))
             {
                 body["ColorWords"] = request.ColorWordsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomVoiceUrl))
+            {
+                body["CustomVoiceUrl"] = request.CustomVoiceUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomVoiceVolume))
+            {
+                body["CustomVoiceVolume"] = request.CustomVoiceVolume;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Height))
             {
@@ -489,6 +541,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MusicVolume))
             {
                 body["MusicVolume"] = request.MusicVolume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StickersShrink))
+            {
+                body["Stickers"] = request.StickersShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubtitleFontSize))
             {
@@ -1049,14 +1105,26 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 request.SourceVideosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceVideos, "SourceVideos", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VideoRoles))
+            {
+                request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "VideoRoles", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnlysisPrompt))
             {
                 body["AnlysisPrompt"] = request.AnlysisPrompt;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceIdentitySimilarityMinScore))
+            {
+                body["FaceIdentitySimilarityMinScore"] = request.FaceIdentitySimilarityMinScore;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceVideoShrink))
             {
                 body["ReferenceVideo"] = request.ReferenceVideoShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveSubtitle))
+            {
+                body["RemoveSubtitle"] = request.RemoveSubtitle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceVideosShrink))
             {
@@ -1065,6 +1133,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitInterval))
             {
                 body["SplitInterval"] = request.SplitInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoRolesShrink))
+            {
+                body["VideoRoles"] = request.VideoRolesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoShotFaceIdentityCount))
+            {
+                body["VideoShotFaceIdentityCount"] = request.VideoShotFaceIdentityCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -1117,14 +1193,26 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 request.SourceVideosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceVideos, "SourceVideos", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VideoRoles))
+            {
+                request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "VideoRoles", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnlysisPrompt))
             {
                 body["AnlysisPrompt"] = request.AnlysisPrompt;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceIdentitySimilarityMinScore))
+            {
+                body["FaceIdentitySimilarityMinScore"] = request.FaceIdentitySimilarityMinScore;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceVideoShrink))
             {
                 body["ReferenceVideo"] = request.ReferenceVideoShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveSubtitle))
+            {
+                body["RemoveSubtitle"] = request.RemoveSubtitle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceVideosShrink))
             {
@@ -1133,6 +1221,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SplitInterval))
             {
                 body["SplitInterval"] = request.SplitInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoRolesShrink))
+            {
+                body["VideoRoles"] = request.VideoRolesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoShotFaceIdentityCount))
+            {
+                body["VideoShotFaceIdentityCount"] = request.VideoShotFaceIdentityCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {

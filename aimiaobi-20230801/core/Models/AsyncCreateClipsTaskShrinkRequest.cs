@@ -9,9 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class AsyncCreateClipsTaskShrinkRequest : TeaModel {
+        [NameInMap("CloseMusic")]
+        [Validation(Required=false)]
+        public bool? CloseMusic { get; set; }
+
+        [NameInMap("CloseSubtitle")]
+        [Validation(Required=false)]
+        public bool? CloseSubtitle { get; set; }
+
+        [NameInMap("CloseVoice")]
+        [Validation(Required=false)]
+        public bool? CloseVoice { get; set; }
+
         [NameInMap("ColorWords")]
         [Validation(Required=false)]
         public string ColorWordsShrink { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></para>
+        /// </summary>
+        [NameInMap("CustomVoiceUrl")]
+        [Validation(Required=false)]
+        public string CustomVoiceUrl { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("CustomVoiceVolume")]
+        [Validation(Required=false)]
+        public int? CustomVoiceVolume { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -32,6 +60,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [NameInMap("MusicVolume")]
         [Validation(Required=false)]
         public int? MusicVolume { get; set; }
+
+        [NameInMap("Stickers")]
+        [Validation(Required=false)]
+        public string StickersShrink { get; set; }
 
         [NameInMap("SubtitleFontSize")]
         [Validation(Required=false)]
