@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UpdateRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The document of the policy that specifies the trusted entity to assume the RAM role.</para>
+        /// <para>The trust policy of the RAM role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;Statement&quot;: [ { &quot;Action&quot;: &quot;sts:AssumeRole&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: { &quot;RAM&quot;: &quot;acs:ram::12345678901234****:root&quot; } } ], &quot;Version&quot;: &quot;1&quot; }</para>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string NewDescription { get; set; }
 
         /// <summary>
-        /// <para>The maximum session duration of the RAM role.</para>
-        /// <para>Unit: seconds. Valid values: 3600 to 43200. Default value: 3600.</para>
+        /// <para>The maximum session time of the RAM role.</para>
+        /// <para>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</para>
         /// <para>If you do not specify this parameter, the default value is used.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 
         /// <summary>
         /// <para>The name of the RAM role.</para>
-        /// <para>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.),and hyphens (-).</para>
+        /// <para>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

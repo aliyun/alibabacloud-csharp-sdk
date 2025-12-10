@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class UpdateRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the RAM role.</para>
+        /// <para>The information about the RAM role.</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Arn { get; set; }
 
             /// <summary>
-            /// <para>The document of the policy that specifies the trusted entity to assume the RAM role.</para>
+            /// <para>The trust policy of the RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ \&quot;Statement\&quot;: [ { \&quot;Action\&quot;: \&quot;sts:AssumeRole\&quot;, \&quot;Effect\&quot;: \&quot;Allow\&quot;, \&quot;Principal\&quot;: { \&quot;RAM\&quot;: \&quot;acs:ram::12345678901234****:root\&quot; } } ], \&quot;Version\&quot;: \&quot;1\&quot; }</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The maximum session duration of the RAM role.</para>
+            /// <para>The maximum session time of the RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>

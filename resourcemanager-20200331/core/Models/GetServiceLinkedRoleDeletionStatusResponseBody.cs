@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetServiceLinkedRoleDeletionStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The reason why the deletion task failed.</para>
+        /// <para>The cause for the failure of the deletion task.</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
         public GetServiceLinkedRoleDeletionStatusResponseBodyReason Reason { get; set; }
         public class GetServiceLinkedRoleDeletionStatusResponseBodyReason : TeaModel {
             /// <summary>
-            /// <para>Failure information.</para>
+            /// <para>The failure information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Service-Linked Role acs:ram::196813227629****:role/aliyunserviceroleforhdr cannot be deleted as it is in use by hdr.aliyuncs.com.</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Use resource information of the service linked role.</para>
+            /// <para>The information about the resources that the service-linked role can use.</para>
             /// </summary>
             [NameInMap("RoleUsages")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public List<GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsagesRoleUsage> RoleUsage { get; set; }
                 public class GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsagesRoleUsage : TeaModel {
                     /// <summary>
-                    /// <para>The IDs of the regions in which the resources are to be queried.</para>
+                    /// <para>The region.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>global</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                     public string Region { get; set; }
 
                     /// <summary>
-                    /// <para>The returned resources.</para>
+                    /// <para>The information about resources.</para>
                     /// </summary>
                     [NameInMap("Resources")]
                     [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>07194EB1-DB50-4513-A51D-99B30D635AEF</para>

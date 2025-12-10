@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of the resource group.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2D69A58F-345C-4FDE-88E4-BF5189484043</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The display name of the resource group.</para>
+        /// <para>The information of the resource group.</para>
         /// </summary>
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]
         public GetResourceGroupResponseBodyResourceGroup ResourceGroup { get; set; }
         public class GetResourceGroupResponseBodyResourceGroup : TeaModel {
             /// <summary>
-            /// <para>The identifier of the resource group.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the resource group belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The time when the resource group was created. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -47,12 +47,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The status of the resource group. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Creating: The resource group is being created.</description></item>
-            /// <item><description>OK: The resource group is created.</description></item>
-            /// <item><description>PendingDelete: The resource group is waiting to be deleted.</description></item>
-            /// </list>
+            /// <para>The display name of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-project</para>
@@ -62,7 +57,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The tags that are added to the resource group.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-9gLOoK****</para>
@@ -72,7 +67,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource group was created. The time is displayed in UTC.</para>
+            /// <para>The identifier of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-project</para>
@@ -82,13 +77,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The status of the resource group. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Creating: The resource group is being created.</description></item>
-            /// <item><description>OK: The resource group is created.</description></item>
-            /// <item><description>PendingDelete: The resource group is waiting to be deleted.</description></item>
-            /// <item><description>Deleting: The resource group is being deleted.</description></item>
-            /// </list>
+            /// <para>The status of the resource group in all regions.</para>
             /// </summary>
             [NameInMap("RegionStatuses")]
             [Validation(Required=false)]
@@ -99,7 +88,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public List<GetResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus> RegionStatus { get; set; }
                 public class GetResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the Alibaba Cloud account to which the resource group belongs.</para>
+                    /// <para>The region ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-qingdao</para>
@@ -109,7 +98,13 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                     public string RegionId { get; set; }
 
                     /// <summary>
-                    /// <para>The region ID.</para>
+                    /// <para>The status of the resource group. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Creating: The resource group is being created.</description></item>
+                    /// <item><description>OK: The resource group is created.</description></item>
+                    /// <item><description>PendingDelete: The resource group is waiting to be deleted.</description></item>
+                    /// <item><description>Deleting: The resource group is being deleted.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>OK</para>
@@ -123,7 +118,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             }
 
             /// <summary>
-            /// <para>The status of the resource group in all regions.</para>
+            /// <para>The status of the resource group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Creating: The resource group is being created.</description></item>
+            /// <item><description>OK: The resource group is created.</description></item>
+            /// <item><description>PendingDelete: The resource group is waiting to be deleted.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>OK</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The tags that are added to the resource group.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public List<GetResourceGroupResponseBodyResourceGroupTagsTag> Tag { get; set; }
                 public class GetResourceGroupResponseBodyResourceGroupTagsTag : TeaModel {
                     /// <summary>
-                    /// <para>The tag value.</para>
+                    /// <para>The tag key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>k1</para>
@@ -154,6 +154,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                     public string TagKey { get; set; }
 
                     /// <summary>
+                    /// <para>The tag value.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>v1</para>
                     /// </summary>

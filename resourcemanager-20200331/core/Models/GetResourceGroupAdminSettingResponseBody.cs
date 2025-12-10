@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
-    public class DeleteServiceLinkedRoleResponseBody : TeaModel {
+    public class GetResourceGroupAdminSettingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the deletion task.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>task/acs-service-role/polardb.aliyuncs.com/AliyunServiceRoleForPolarDB/64c4f9cc-fac2-4692-ae1b-804ae4b9****</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("DeletionTaskId")]
+        [NameInMap("CreatorAsAdmin")]
         [Validation(Required=false)]
-        public string DeletionTaskId { get; set; }
+        public bool? CreatorAsAdmin { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>B595E5BF-FF5F-4E7F-B95A-B90FE242FEB6</para>
+        /// <para>776B05B3-A0B0-464B-A191-F4E1119A94B2</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the service.</para>
+        /// <para>The service name.</para>
         /// <para>For more information about the service name, see <a href="https://help.aliyun.com/document_detail/461722.html">Alibaba Cloud services that support service-linked roles</a>.</para>
         /// <para>This parameter is required.</para>
         /// 

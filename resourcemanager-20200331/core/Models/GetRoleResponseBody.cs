@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class GetRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information of the RAM role.</para>
+        /// <para>The information about the role.</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public GetRoleResponseBodyRole Role { get; set; }
         public class GetRoleResponseBodyRole : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role.</para>
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::123456789012****:role/ECSAdmin</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Arn { get; set; }
 
             /// <summary>
-            /// <para>The document of the policy that specifies the trusted entity to assume the RAM role.</para>
+            /// <para>The document of the policy in which the identity that can assume the role is specified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ \&quot;Statement\&quot;: [ { \&quot;Action\&quot;: \&quot;sts:AssumeRole\&quot;, \&quot;Effect\&quot;: \&quot;Allow\&quot;, \&quot;Principal\&quot;: { \&quot;RAM\&quot;: \&quot;acs:ram::12345678901234****:root\&quot; } } ], \&quot;Version\&quot;: \&quot;1\&quot; }</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string AssumeRolePolicyDocument { get; set; }
 
             /// <summary>
-            /// <para>The time when the RAM role was created.</para>
+            /// <para>The time when the role was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The description of the RAM role.</para>
+            /// <para>The description of the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECS administrator</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the RAM role is a service linked role.</para>
+            /// <para>Indicates whether the role is a service-linked role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             }
 
             /// <summary>
-            /// <para>The maximum session duration of the RAM role.</para>
+            /// <para>The maximum session duration of the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public long? MaxSessionDuration { get; set; }
 
             /// <summary>
-            /// <para>The ID of the RAM role.</para>
+            /// <para>The ID of the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90123456789****</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RoleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the RAM role.</para>
+            /// <para>The name of the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECSAdmin</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>The name of the RAM role after authorization.</para>
+            /// <para>The name of the role after authorization.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:ECSAdmin@role.123456.onaliyunservice.com">ECSAdmin@role.123456.onaliyunservice.com</a></para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public string RolePrincipalName { get; set; }
 
             /// <summary>
-            /// <para>The time when the RAM role was updated.</para>
+            /// <para>The time when the role was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2016-01-23T12:33:18Z</para>

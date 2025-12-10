@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class CreateServiceLinkedRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE58D7CF-03BC-432A-B42D-BC3390C8C2E1</para>
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             /// <summary>
             /// <para>Indicates whether the role is a service-linked role. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The role is a service-linked role.</description></item>
-            /// <item><description>false: The role is not a service-linked role.</description></item>
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

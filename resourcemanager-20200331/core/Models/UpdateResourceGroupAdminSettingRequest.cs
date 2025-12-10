@@ -8,18 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
-    public class DeleteRoleRequest : TeaModel {
+    public class UpdateResourceGroupAdminSettingRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the role.</para>
-        /// <para>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ECSAdmin</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("RoleName")]
+        [NameInMap("CreatorAsAdmin")]
         [Validation(Required=false)]
-        public string RoleName { get; set; }
+        public bool? CreatorAsAdmin { get; set; }
 
     }
 

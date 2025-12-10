@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class DeletePolicyVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the policy.</para>
-        /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</para>
+        /// <para>The name of the permission policy.</para>
+        /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphen (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

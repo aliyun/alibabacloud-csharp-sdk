@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListPolicyAttachmentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The policy attachment records.</para>
+        /// <para>The information about the permission policies.</para>
         /// </summary>
         [NameInMap("PolicyAttachments")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
             public List<ListPolicyAttachmentsResponseBodyPolicyAttachmentsPolicyAttachment> PolicyAttachment { get; set; }
             public class ListPolicyAttachmentsResponseBodyPolicyAttachmentsPolicyAttachment : TeaModel {
                 /// <summary>
-                /// <para>The time when the policy was attached.</para>
+                /// <para>The time when the permission policy is attached.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2015-01-23T12:33:18Z</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string AttachDate { get; set; }
 
                 /// <summary>
-                /// <para>The description of the policy.</para>
+                /// <para>The description of the permission policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The description of the policy.</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The name of the policy.</para>
+                /// <para>The name of the permission policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AdministratorAccess</para>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string PolicyName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the policy. Valid values:</para>
+                /// <para>The type of the permission policy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Custom: custom policy</description></item>
-                /// <item><description>System: system policy</description></item>
+                /// <item><description>Custom</description></item>
+                /// <item><description>System</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string PolicyType { get; set; }
 
                 /// <summary>
-                /// <para>The name of the object to which the policy is attached.</para>
+                /// <para>The name of the object to which the permission policy is attached.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:alice@demo.onaliyun.com">alice@demo.onaliyun.com</a></para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
                 public string PrincipalName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the object to which the policy is attached. Valid values:</para>
+                /// <para>The type of the object to which the permission policy is attached. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>IMSUser: RAM user</description></item>
                 /// <item><description>IMSGroup: RAM user group</description></item>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

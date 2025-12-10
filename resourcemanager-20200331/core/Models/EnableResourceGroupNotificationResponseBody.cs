@@ -8,12 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
-    public class AttachPolicyResponseBody : TeaModel {
+    public class EnableResourceGroupNotificationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>697852FB-50D7-44D9-9774-530C31EAC572</para>
+        /// <para>F7701451-340B-5CB3-AEA7-7D831F7F38C0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
