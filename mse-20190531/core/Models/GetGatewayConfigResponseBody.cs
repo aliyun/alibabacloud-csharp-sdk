@@ -197,6 +197,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public int? KeepaliveHeaderTimeout { get; set; }
 
+            [NameInMap("LiteMetrics")]
+            [Validation(Required=false)]
+            public bool? LiteMetrics { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -220,6 +224,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("PathWithEscapedSlashes")]
             [Validation(Required=false)]
             public string PathWithEscapedSlashes { get; set; }
+
+            [NameInMap("PreserveExternalRequestID")]
+            [Validation(Required=false)]
+            public bool? PreserveExternalRequestID { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
