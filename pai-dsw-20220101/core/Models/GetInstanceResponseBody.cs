@@ -840,6 +840,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
+        [NameInMap("PodIps")]
+        [Validation(Required=false)]
+        public List<PodIp> PodIps { get; set; }
+
         /// <summary>
         /// <para>The priority based on which resources are allocated to instances.</para>
         /// 
