@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string BackupRetentionPolicyOnClusterDeletion { get; set; }
 
+        [NameInMap("CloudProvider")]
+        [Validation(Required=false)]
+        public string CloudProvider { get; set; }
+
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>

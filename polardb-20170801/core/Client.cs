@@ -10310,6 +10310,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["BackupRetentionPolicyOnClusterDeletion"] = request.BackupRetentionPolicyOnClusterDeletion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudProvider))
+            {
+                query["CloudProvider"] = request.CloudProvider;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -10371,6 +10375,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupRetentionPolicyOnClusterDeletion))
             {
                 query["BackupRetentionPolicyOnClusterDeletion"] = request.BackupRetentionPolicyOnClusterDeletion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudProvider))
+            {
+                query["CloudProvider"] = request.CloudProvider;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
@@ -47355,6 +47363,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["SecurityToken"] = request.SecurityToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDBClusterId))
+            {
+                query["TargetDBClusterId"] = request.TargetDBClusterId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -47431,6 +47443,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDBClusterId))
+            {
+                query["TargetDBClusterId"] = request.TargetDBClusterId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string LockMode { get; set; }
 
+                [NameInMap("ModelType")]
+                [Validation(Required=false)]
+                public string ModelType { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>Postpaid</para>

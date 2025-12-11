@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        [NameInMap("TargetDBClusterId")]
+        [Validation(Required=false)]
+        public string TargetDBClusterId { get; set; }
+
     }
 
 }
