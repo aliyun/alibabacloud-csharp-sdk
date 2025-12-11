@@ -380,6 +380,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
                 public List<GetInstanceResponseBodyDataNetworkInfoEndpoints> Endpoints { get; set; }
                 public class GetInstanceResponseBodyDataNetworkInfoEndpoints : TeaModel {
                     /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>ep-bpxxx</para>
+                    /// </summary>
+                    [NameInMap("endpointId")]
+                    [Validation(Required=false)]
+                    public string EndpointId { get; set; }
+
+                    /// <summary>
                     /// <para>The type of the endpoint that is used to access the instance.</para>
                     /// <para>Valid values:</para>
                     /// <list type="bullet">
