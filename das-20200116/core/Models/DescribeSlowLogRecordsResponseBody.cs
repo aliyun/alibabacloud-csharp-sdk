@@ -220,6 +220,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
+                [NameInMap("OpType")]
+                [Validation(Required=false)]
+                public string OpType { get; set; }
+
                 [NameInMap("OriginTime")]
                 [Validation(Required=false)]
                 public string OriginTime { get; set; }

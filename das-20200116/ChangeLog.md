@@ -1,3 +1,13 @@
+2025-12-11 Version: 2.7.0
+- Support API CreateSecurityIPGroup.
+- Support API DeleteSecurityIPGroup.
+- Support API DescribeSecurityIPGroup.
+- Support API DescribeSecurityIPGroupRelation.
+- Support API ModifySecurityIPGroup.
+- Support API ModifySecurityIPGroupRelation.
+- Update API DescribeSlowLogRecords: add response parameters Body.Data.Logs.$.OpType.
+
+
 2025-11-06 Version: 2.6.2
 - Generated csharp 2020-01-16 for DAS.
 

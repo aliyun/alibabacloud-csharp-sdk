@@ -1983,6 +1983,142 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecurityIPGroupResponse
+        /// </returns>
+        public CreateSecurityIPGroupResponse CreateSecurityIPGroupWithOptions(CreateSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GIpList))
+            {
+                query["GIpList"] = request.GIpList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalIgName))
+            {
+                query["GlobalIgName"] = request.GlobalIgName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionName))
+            {
+                query["RegionName"] = request.RegionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSecurityIPGroup",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSecurityIPGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecurityIPGroupResponse
+        /// </returns>
+        public async Task<CreateSecurityIPGroupResponse> CreateSecurityIPGroupWithOptionsAsync(CreateSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GIpList))
+            {
+                query["GIpList"] = request.GIpList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalIgName))
+            {
+                query["GlobalIgName"] = request.GlobalIgName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionName))
+            {
+                query["RegionName"] = request.RegionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSecurityIPGroup",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecurityIPGroupResponse
+        /// </returns>
+        public CreateSecurityIPGroupResponse CreateSecurityIPGroup(CreateSecurityIPGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSecurityIPGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSecurityIPGroupResponse
+        /// </returns>
+        public async Task<CreateSecurityIPGroupResponse> CreateSecurityIPGroupAsync(CreateSecurityIPGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSecurityIPGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an offline task for Database Autonomy Service (DAS) Enterprise Edition.</para>
         /// </summary>
         /// 
@@ -2523,6 +2659,134 @@ namespace AlibabaCloud.SDK.DAS20200116
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCloudBenchTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityIPGroupResponse
+        /// </returns>
+        public DeleteSecurityIPGroupResponse DeleteSecurityIPGroupWithOptions(DeleteSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalSecurityGroupId))
+            {
+                query["GlobalSecurityGroupId"] = request.GlobalSecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionName))
+            {
+                query["RegionName"] = request.RegionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSecurityIPGroup",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSecurityIPGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityIPGroupResponse
+        /// </returns>
+        public async Task<DeleteSecurityIPGroupResponse> DeleteSecurityIPGroupWithOptionsAsync(DeleteSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalSecurityGroupId))
+            {
+                query["GlobalSecurityGroupId"] = request.GlobalSecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionName))
+            {
+                query["RegionName"] = request.RegionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSecurityIPGroup",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityIPGroupResponse
+        /// </returns>
+        public DeleteSecurityIPGroupResponse DeleteSecurityIPGroup(DeleteSecurityIPGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSecurityIPGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityIPGroupResponse
+        /// </returns>
+        public async Task<DeleteSecurityIPGroupResponse> DeleteSecurityIPGroupAsync(DeleteSecurityIPGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSecurityIPGroupWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4915,6 +5179,254 @@ namespace AlibabaCloud.SDK.DAS20200116
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeQueryExplainWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示用户跨产品白名单模板具体信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIPGroupResponse
+        /// </returns>
+        public DescribeSecurityIPGroupResponse DescribeSecurityIPGroupWithOptions(DescribeSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionName))
+            {
+                query["RegionName"] = request.RegionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSecurityIPGroup",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSecurityIPGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示用户跨产品白名单模板具体信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIPGroupResponse
+        /// </returns>
+        public async Task<DescribeSecurityIPGroupResponse> DescribeSecurityIPGroupWithOptionsAsync(DescribeSecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionName))
+            {
+                query["RegionName"] = request.RegionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSecurityIPGroup",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示用户跨产品白名单模板具体信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIPGroupResponse
+        /// </returns>
+        public DescribeSecurityIPGroupResponse DescribeSecurityIPGroup(DescribeSecurityIPGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSecurityIPGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示用户跨产品白名单模板具体信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIPGroupResponse
+        /// </returns>
+        public async Task<DescribeSecurityIPGroupResponse> DescribeSecurityIPGroupAsync(DescribeSecurityIPGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSecurityIPGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示用户跨产品白名单模板与实例绑定信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityIPGroupRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIPGroupRelationResponse
+        /// </returns>
+        public DescribeSecurityIPGroupRelationResponse DescribeSecurityIPGroupRelationWithOptions(DescribeSecurityIPGroupRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionName))
+            {
+                query["RegionName"] = request.RegionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSecurityIPGroupRelation",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSecurityIPGroupRelationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示用户跨产品白名单模板与实例绑定信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityIPGroupRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIPGroupRelationResponse
+        /// </returns>
+        public async Task<DescribeSecurityIPGroupRelationResponse> DescribeSecurityIPGroupRelationWithOptionsAsync(DescribeSecurityIPGroupRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionName))
+            {
+                query["RegionName"] = request.RegionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSecurityIPGroupRelation",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSecurityIPGroupRelationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示用户跨产品白名单模板与实例绑定信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityIPGroupRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIPGroupRelationResponse
+        /// </returns>
+        public DescribeSecurityIPGroupRelationResponse DescribeSecurityIPGroupRelation(DescribeSecurityIPGroupRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSecurityIPGroupRelationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>展示用户跨产品白名单模板与实例绑定信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSecurityIPGroupRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSecurityIPGroupRelationResponse
+        /// </returns>
+        public async Task<DescribeSecurityIPGroupRelationResponse> DescribeSecurityIPGroupRelationAsync(DescribeSecurityIPGroupRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSecurityIPGroupRelationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18791,6 +19303,286 @@ namespace AlibabaCloud.SDK.DAS20200116
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAutoScalingConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIPGroupResponse
+        /// </returns>
+        public ModifySecurityIPGroupResponse ModifySecurityIPGroupWithOptions(ModifySecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GIpList))
+            {
+                query["GIpList"] = request.GIpList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalIgName))
+            {
+                query["GlobalIgName"] = request.GlobalIgName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalSecurityGroupId))
+            {
+                query["GlobalSecurityGroupId"] = request.GlobalSecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionName))
+            {
+                query["RegionName"] = request.RegionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySecurityIPGroup",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySecurityIPGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityIPGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIPGroupResponse
+        /// </returns>
+        public async Task<ModifySecurityIPGroupResponse> ModifySecurityIPGroupWithOptionsAsync(ModifySecurityIPGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GIpList))
+            {
+                query["GIpList"] = request.GIpList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalIgName))
+            {
+                query["GlobalIgName"] = request.GlobalIgName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalSecurityGroupId))
+            {
+                query["GlobalSecurityGroupId"] = request.GlobalSecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionName))
+            {
+                query["RegionName"] = request.RegionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySecurityIPGroup",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySecurityIPGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIPGroupResponse
+        /// </returns>
+        public ModifySecurityIPGroupResponse ModifySecurityIPGroup(ModifySecurityIPGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifySecurityIPGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityIPGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIPGroupResponse
+        /// </returns>
+        public async Task<ModifySecurityIPGroupResponse> ModifySecurityIPGroupAsync(ModifySecurityIPGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifySecurityIPGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定/解绑用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityIPGroupRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIPGroupRelationResponse
+        /// </returns>
+        public ModifySecurityIPGroupRelationResponse ModifySecurityIPGroupRelationWithOptions(ModifySecurityIPGroupRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalSecurityGroupId))
+            {
+                query["GlobalSecurityGroupId"] = request.GlobalSecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionName))
+            {
+                query["RegionName"] = request.RegionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySecurityIPGroupRelation",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySecurityIPGroupRelationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定/解绑用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityIPGroupRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIPGroupRelationResponse
+        /// </returns>
+        public async Task<ModifySecurityIPGroupRelationResponse> ModifySecurityIPGroupRelationWithOptionsAsync(ModifySecurityIPGroupRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalSecurityGroupId))
+            {
+                query["GlobalSecurityGroupId"] = request.GlobalSecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionName))
+            {
+                query["RegionName"] = request.RegionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySecurityIPGroupRelation",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySecurityIPGroupRelationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定/解绑用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityIPGroupRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIPGroupRelationResponse
+        /// </returns>
+        public ModifySecurityIPGroupRelationResponse ModifySecurityIPGroupRelation(ModifySecurityIPGroupRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifySecurityIPGroupRelationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定/解绑用户跨产品白名单模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySecurityIPGroupRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySecurityIPGroupRelationResponse
+        /// </returns>
+        public async Task<ModifySecurityIPGroupRelationResponse> ModifySecurityIPGroupRelationAsync(ModifySecurityIPGroupRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifySecurityIPGroupRelationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
