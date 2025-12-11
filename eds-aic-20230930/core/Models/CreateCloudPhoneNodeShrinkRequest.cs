@@ -111,6 +111,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        [NameInMap("IsSingleImgDisk")]
+        [Validation(Required=false)]
+        public bool? IsSingleImgDisk { get; set; }
+
         /// <summary>
         /// <para>The office network ID.</para>
         /// 

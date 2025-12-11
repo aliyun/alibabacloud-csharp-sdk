@@ -1806,6 +1806,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["InstanceType"] = request.InstanceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSingleImgDisk))
+            {
+                query["IsSingleImgDisk"] = request.IsSingleImgDisk;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
             {
                 query["NetworkId"] = request.NetworkId;
@@ -1975,6 +1979,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSingleImgDisk))
+            {
+                query["IsSingleImgDisk"] = request.IsSingleImgDisk;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkId))
             {
