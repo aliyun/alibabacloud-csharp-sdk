@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
-    public class UpdateServiceVersionResponseBody : TeaModel {
+    public class CreateSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
         /// </summary>
@@ -19,9 +17,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("data")]
+        [Validation(Required=false)]
+        public CreateSourceResponseBodyData Data { get; set; }
+        public class CreateSourceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>src-crdddallhtgt***</para>
+            /// </summary>
+            [NameInMap("sourceId")]
+            [Validation(Required=false)]
+            public string SourceId { get; set; }
+
+        }
+
         /// <summary>
-        /// <para>The response message returned.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -30,10 +40,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>A60EE5CA-1294-532A-9775-8D2FD1C6EFBF</para>
+        /// <para>393E2630-DBE7-5221-AB35-9E740675491A</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

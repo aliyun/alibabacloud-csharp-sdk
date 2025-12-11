@@ -3247,7 +3247,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务版本</para>
+        /// <para>Creates a service version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3297,7 +3297,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务版本</para>
+        /// <para>Creates a service version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3347,7 +3347,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务版本</para>
+        /// <para>Creates a service version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3366,7 +3366,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务版本</para>
+        /// <para>Creates a service version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3381,6 +3381,168 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateServiceVersionWithOptionsAsync(serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建服务来源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSourceResponse
+        /// </returns>
+        public CreateSourceResponse CreateSourceWithOptions(CreateSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.K8sSourceConfig))
+            {
+                body["k8sSourceConfig"] = request.K8sSourceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NacosSourceConfig))
+            {
+                body["nacosSourceConfig"] = request.NacosSourceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSource",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/sources",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建服务来源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSourceResponse
+        /// </returns>
+        public async Task<CreateSourceResponse> CreateSourceWithOptionsAsync(CreateSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.K8sSourceConfig))
+            {
+                body["k8sSourceConfig"] = request.K8sSourceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NacosSourceConfig))
+            {
+                body["nacosSourceConfig"] = request.NacosSourceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSource",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/sources",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建服务来源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSourceResponse
+        /// </returns>
+        public CreateSourceResponse CreateSource(CreateSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateSourceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建服务来源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSourceResponse
+        /// </returns>
+        public async Task<CreateSourceResponse> CreateSourceAsync(CreateSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateSourceWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4865,7 +5027,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务版本</para>
+        /// <para>Deletes a service version.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4901,7 +5063,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务版本</para>
+        /// <para>Deletes a service version.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4937,7 +5099,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务版本</para>
+        /// <para>Deletes a service version.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4952,7 +5114,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务版本</para>
+        /// <para>Deletes a service version.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4963,6 +5125,108 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteServiceVersionWithOptionsAsync(serviceId, name, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务来源</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSourceResponse
+        /// </returns>
+        public DeleteSourceResponse DeleteSourceWithOptions(string sourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSource",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/sources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务来源</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSourceResponse
+        /// </returns>
+        public async Task<DeleteSourceResponse> DeleteSourceWithOptionsAsync(string sourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSource",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/sources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务来源</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteSourceResponse
+        /// </returns>
+        public DeleteSourceResponse DeleteSource(string sourceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteSourceWithOptions(sourceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务来源</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteSourceResponse
+        /// </returns>
+        public async Task<DeleteSourceResponse> DeleteSourceAsync(string sourceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteSourceWithOptionsAsync(sourceId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7083,6 +7347,108 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetServiceWithOptionsAsync(serviceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务来源</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSourceResponse
+        /// </returns>
+        public GetSourceResponse GetSourceWithOptions(string sourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSource",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/sources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务来源</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSourceResponse
+        /// </returns>
+        public async Task<GetSourceResponse> GetSourceWithOptionsAsync(string sourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSource",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/sources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务来源</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetSourceResponse
+        /// </returns>
+        public GetSourceResponse GetSource(string sourceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSourceWithOptions(sourceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取服务来源</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetSourceResponse
+        /// </returns>
+        public async Task<GetSourceResponse> GetSourceAsync(string sourceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSourceWithOptionsAsync(sourceId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13455,7 +13821,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务版本</para>
+        /// <para>Updates a service version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13501,7 +13867,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务版本</para>
+        /// <para>Updates a service version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13547,7 +13913,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务版本</para>
+        /// <para>Updates a service version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13566,7 +13932,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务版本</para>
+        /// <para>Updates a service version.</para>
         /// </summary>
         /// 
         /// <param name="request">
