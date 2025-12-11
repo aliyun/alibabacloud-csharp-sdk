@@ -346,6 +346,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public bool? FocusHttpBackend { get; set; }
 
+            [NameInMap("Http2Origin")]
+            [Validation(Required=false)]
+            public bool? Http2Origin { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>128</para>
+            /// </summary>
+            [NameInMap("Http2OriginMaxConcurrency")]
+            [Validation(Required=false)]
+            public int? Http2OriginMaxConcurrency { get; set; }
+
             /// <summary>
             /// <para>Specifies whether to enable the persistent connection feature. Valid values:</para>
             /// <list type="bullet">
