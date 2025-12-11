@@ -99,6 +99,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>国防和交流合作事务</para>
+        /// </summary>
+        [NameInMap("SubjectClassify")]
+        [Validation(Required=false)]
+        public string SubjectClassify { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>宁民规〔2020〕5号</para>
         /// </summary>
         [NameInMap("WordSize")]
