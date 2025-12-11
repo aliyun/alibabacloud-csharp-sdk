@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 
             }
 
+            [NameInMap("prefix")]
+            [Validation(Required=false)]
+            public string Prefix { get; set; }
+
             [NameInMap("sensitives")]
             [Validation(Required=false)]
             public List<string> Sensitives { get; set; }
