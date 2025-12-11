@@ -170,6 +170,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("sceneCode")]
+        [Validation(Required=false)]
+        public string SceneCode { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
