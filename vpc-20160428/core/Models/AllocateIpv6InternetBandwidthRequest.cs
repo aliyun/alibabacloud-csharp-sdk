@@ -79,7 +79,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the IPv6 gateway.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv6gw-uf6hcyzu65v98v3du****</para>

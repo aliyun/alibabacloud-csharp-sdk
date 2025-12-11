@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Express Connect instance is deployed. Call the <a href="36063">DescribeRegions</a> operation to query the region list.</para>
+        /// <para>The ID of the region where the Express Connect instance is deployed. Call the <a href="https://www.alibabacloud.com/help/vpc/developer-reference/api-vpc-2016-04-28-describeregions?spm=a2c63.p38356.0.i2">DescribeRegion</a> operation to query the region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
