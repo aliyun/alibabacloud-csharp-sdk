@@ -1969,6 +1969,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
                 request.MoreDataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MoreData, "MoreData", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIcpRecordId))
+            {
+                query["AppIcpRecordId"] = request.AppIcpRecordId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplySceneContent))
             {
                 query["ApplySceneContent"] = request.ApplySceneContent;
@@ -2016,6 +2020,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdParty))
             {
                 query["ThirdParty"] = request.ThirdParty;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkId))
+            {
+                query["TrademarkId"] = request.TrademarkId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2071,6 +2079,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
                 request.MoreDataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MoreData, "MoreData", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIcpRecordId))
+            {
+                query["AppIcpRecordId"] = request.AppIcpRecordId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplySceneContent))
             {
                 query["ApplySceneContent"] = request.ApplySceneContent;
@@ -2118,6 +2130,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdParty))
             {
                 query["ThirdParty"] = request.ThirdParty;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkId))
+            {
+                query["TrademarkId"] = request.TrademarkId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10914,6 +10930,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
                 request.MoreDataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MoreData, "MoreData", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIcpRecordId))
+            {
+                query["AppIcpRecordId"] = request.AppIcpRecordId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplySceneContent))
             {
                 query["ApplySceneContent"] = request.ApplySceneContent;
@@ -10961,6 +10981,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdParty))
             {
                 query["ThirdParty"] = request.ThirdParty;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkId))
+            {
+                query["TrademarkId"] = request.TrademarkId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11015,6 +11039,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
                 request.MoreDataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MoreData, "MoreData", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIcpRecordId))
+            {
+                query["AppIcpRecordId"] = request.AppIcpRecordId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplySceneContent))
             {
                 query["ApplySceneContent"] = request.ApplySceneContent;
@@ -11062,6 +11090,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThirdParty))
             {
                 query["ThirdParty"] = request.ThirdParty;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkId))
+            {
+                query["TrademarkId"] = request.TrademarkId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

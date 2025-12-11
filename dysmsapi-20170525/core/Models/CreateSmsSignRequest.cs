@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
 {
     public class CreateSmsSignRequest : TeaModel {
+        [NameInMap("AppIcpRecordId")]
+        [Validation(Required=false)]
+        public long? AppIcpRecordId { get; set; }
+
         /// <summary>
         /// <para>Application scenarios, instructions as follows:</para>
         /// <list type="bullet">
@@ -160,6 +164,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [NameInMap("ThirdParty")]
         [Validation(Required=false)]
         public bool? ThirdParty { get; set; }
+
+        [NameInMap("TrademarkId")]
+        [Validation(Required=false)]
+        public long? TrademarkId { get; set; }
 
     }
 

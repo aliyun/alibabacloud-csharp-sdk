@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public List<QuerySmsSignListResponseBodySmsSignList> SmsSignList { get; set; }
         public class QuerySmsSignListResponseBodySmsSignList : TeaModel {
+            [NameInMap("AppIcpRecordId")]
+            [Validation(Required=false)]
+            public long? AppIcpRecordId { get; set; }
+
             /// <summary>
             /// <para>The approval status of the signature. Valid values:</para>
             /// <list type="bullet">
@@ -176,6 +180,10 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
             [NameInMap("SignName")]
             [Validation(Required=false)]
             public string SignName { get; set; }
+
+            [NameInMap("TrademarkId")]
+            [Validation(Required=false)]
+            public long? TrademarkId { get; set; }
 
             [NameInMap("authorizationLetterAuditPass")]
             [Validation(Required=false)]
