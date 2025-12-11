@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string AgentKey { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>a***<a href="mailto:bcx@gmail.com">bcx@gmail.com</a></para>
-        /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
@@ -33,6 +29,27 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public int? ExpireTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;xx&quot;: 123,
+        ///     &quot;yy&quot;: 22332,
+        ///     &quot;customerNameCard&quot;: [
+        ///         {
+        ///             &quot;key&quot;: &quot;姓名&quot;,
+        ///             &quot;value&quot;: &quot;张三&quot;
+        ///         },
+        ///         {
+        ///             &quot;key&quot;: &quot;等级&quot;,
+        ///             &quot;value&quot;: &quot;v2&quot;
+        ///         },
+        ///         {
+        ///             &quot;key&quot;: &quot;联系方式&quot;,
+        ///             &quot;value&quot;: &quot;123&quot;
+        ///         }
+        ///     ]
+        /// }</para>
+        /// </summary>
         [NameInMap("ExtraInfo")]
         [Validation(Required=false)]
         public string ExtraInfo { get; set; }
@@ -49,15 +66,14 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>张三</para>
         /// </summary>
         [NameInMap("Nick")]
         [Validation(Required=false)]
         public string Nick { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1381111****</para>
-        /// </summary>
         [NameInMap("Telephone")]
         [Validation(Required=false)]
         public string Telephone { get; set; }
