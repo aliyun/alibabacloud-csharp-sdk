@@ -130,6 +130,25 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>sase</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>false</c>
+            /// </summary>
+            [NameInMap("ManagedServiceCode")]
+            [Validation(Required=false)]
+            public string ManagedServiceCode { get; set; }
+
+            /// <summary>
+            /// <b>if can be null:</b>
+            /// <c>false</c>
+            /// </summary>
+            [NameInMap("ServiceManaged")]
+            [Validation(Required=false)]
+            public bool? ServiceManaged { get; set; }
+
+            /// <summary>
             /// <para>The status of the instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>creating</description></item>
