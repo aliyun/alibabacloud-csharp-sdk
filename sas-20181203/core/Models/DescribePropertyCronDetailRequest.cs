@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Extend { get; set; }
 
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
         /// 
@@ -58,6 +62,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
+
+        [NameInMap("UseNextToken")]
+        [Validation(Required=false)]
+        public bool? UseNextToken { get; set; }
 
         /// <summary>
         /// <para>The username of the account that runs the scheduled task.</para>

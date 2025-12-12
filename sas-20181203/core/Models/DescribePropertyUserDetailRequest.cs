@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? LastLoginTimeStart { get; set; }
 
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
         /// 
@@ -82,6 +86,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
+
+        [NameInMap("UseNextToken")]
+        [Validation(Required=false)]
+        public bool? UseNextToken { get; set; }
 
         /// <summary>
         /// <para>The name of the account to which the server belongs.</para>

@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>The number of entries per page. Default value: <b>10</b>.</para>
         /// 
@@ -98,6 +102,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("SoftwareVersion")]
         [Validation(Required=false)]
         public string SoftwareVersion { get; set; }
+
+        [NameInMap("UseNextToken")]
+        [Validation(Required=false)]
+        public bool? UseNextToken { get; set; }
 
         /// <summary>
         /// <para>The UUID of the server.</para>

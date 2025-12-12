@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
         /// <remarks>
@@ -123,6 +127,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("UseNextToken")]
+        [Validation(Required=false)]
+        public bool? UseNextToken { get; set; }
 
         /// <summary>
         /// <para>The UUID of the server.</para>

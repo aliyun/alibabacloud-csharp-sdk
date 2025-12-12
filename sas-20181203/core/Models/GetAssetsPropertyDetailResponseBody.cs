@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? CurrentPage { get; set; }
 
+            [NameInMap("NextToken")]
+            [Validation(Required=false)]
+            public string NextToken { get; set; }
+
             /// <summary>
             /// <para>The number of entries returned per page.</para>
             /// 
