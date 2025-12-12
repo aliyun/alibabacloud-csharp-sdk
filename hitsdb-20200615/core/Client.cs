@@ -313,6 +313,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return await CheckLdpsColumnarIndexStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建弹性伸缩配置</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateAutoScalingConfigRequest
         /// </param>
@@ -397,6 +402,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             {
                 query["SpecId"] = request.SpecId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageCapacityMax))
+            {
+                query["StorageCapacityMax"] = request.StorageCapacityMax;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -416,6 +425,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<CreateAutoScalingConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建弹性伸缩配置</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// CreateAutoScalingConfigRequest
         /// </param>
@@ -500,6 +514,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             {
                 query["SpecId"] = request.SpecId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageCapacityMax))
+            {
+                query["StorageCapacityMax"] = request.StorageCapacityMax;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -519,6 +537,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<CreateAutoScalingConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建弹性伸缩配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAutoScalingConfigRequest
         /// </param>
@@ -532,6 +555,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return CreateAutoScalingConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建弹性伸缩配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAutoScalingConfigRequest
         /// </param>
@@ -545,6 +573,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return await CreateAutoScalingConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建弹性伸缩规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAutoScalingRuleRequest
         /// </param>
@@ -666,6 +699,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<CreateAutoScalingRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建弹性伸缩规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAutoScalingRuleRequest
         /// </param>
@@ -787,6 +825,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<CreateAutoScalingRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建弹性伸缩规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAutoScalingRuleRequest
         /// </param>
@@ -800,6 +843,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return CreateAutoScalingRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建弹性伸缩规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAutoScalingRuleRequest
         /// </param>
@@ -6141,7 +6189,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return await GetLindormV2StreamEngineInfoWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询弹性伸缩配置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
         /// ListAutoScalingConfigsRequest
         /// </param>
         /// <param name="runtime">
@@ -6151,9 +6204,15 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         /// <returns>
         /// ListAutoScalingConfigsResponse
         /// </returns>
-        public ListAutoScalingConfigsResponse ListAutoScalingConfigsWithOptions(ListAutoScalingConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListAutoScalingConfigsResponse ListAutoScalingConfigsWithOptions(ListAutoScalingConfigsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAutoScalingConfigsShrinkRequest request = new ListAutoScalingConfigsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScaleTypes))
+            {
+                request.ScaleTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScaleTypes, "ScaleTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -6174,6 +6233,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleTypesShrink))
+            {
+                query["ScaleTypes"] = request.ScaleTypesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
@@ -6198,7 +6261,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<ListAutoScalingConfigsResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <param name="request">
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询弹性伸缩配置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
         /// ListAutoScalingConfigsRequest
         /// </param>
         /// <param name="runtime">
@@ -6208,9 +6276,15 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         /// <returns>
         /// ListAutoScalingConfigsResponse
         /// </returns>
-        public async Task<ListAutoScalingConfigsResponse> ListAutoScalingConfigsWithOptionsAsync(ListAutoScalingConfigsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListAutoScalingConfigsResponse> ListAutoScalingConfigsWithOptionsAsync(ListAutoScalingConfigsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAutoScalingConfigsShrinkRequest request = new ListAutoScalingConfigsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScaleTypes))
+            {
+                request.ScaleTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScaleTypes, "ScaleTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -6231,6 +6305,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleTypesShrink))
+            {
+                query["ScaleTypes"] = request.ScaleTypesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
@@ -6255,6 +6333,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<ListAutoScalingConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询弹性伸缩配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAutoScalingConfigsRequest
         /// </param>
@@ -6268,6 +6351,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return ListAutoScalingConfigsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询弹性伸缩配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAutoScalingConfigsRequest
         /// </param>
@@ -6281,7 +6369,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return await ListAutoScalingConfigsWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询伸缩记录</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
         /// ListAutoScalingRecordsRequest
         /// </param>
         /// <param name="runtime">
@@ -6291,9 +6384,15 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         /// <returns>
         /// ListAutoScalingRecordsResponse
         /// </returns>
-        public ListAutoScalingRecordsResponse ListAutoScalingRecordsWithOptions(ListAutoScalingRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListAutoScalingRecordsResponse ListAutoScalingRecordsWithOptions(ListAutoScalingRecordsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAutoScalingRecordsShrinkRequest request = new ListAutoScalingRecordsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScaleTypes))
+            {
+                request.ScaleTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScaleTypes, "ScaleTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -6322,6 +6421,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleTypesShrink))
+            {
+                query["ScaleTypes"] = request.ScaleTypesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
@@ -6346,7 +6449,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<ListAutoScalingRecordsResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <param name="request">
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询伸缩记录</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
         /// ListAutoScalingRecordsRequest
         /// </param>
         /// <param name="runtime">
@@ -6356,9 +6464,15 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         /// <returns>
         /// ListAutoScalingRecordsResponse
         /// </returns>
-        public async Task<ListAutoScalingRecordsResponse> ListAutoScalingRecordsWithOptionsAsync(ListAutoScalingRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListAutoScalingRecordsResponse> ListAutoScalingRecordsWithOptionsAsync(ListAutoScalingRecordsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAutoScalingRecordsShrinkRequest request = new ListAutoScalingRecordsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScaleTypes))
+            {
+                request.ScaleTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScaleTypes, "ScaleTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -6388,6 +6502,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleTypesShrink))
+            {
+                query["ScaleTypes"] = request.ScaleTypesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
@@ -6411,6 +6529,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<ListAutoScalingRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询伸缩记录</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAutoScalingRecordsRequest
         /// </param>
@@ -6424,6 +6547,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return ListAutoScalingRecordsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询伸缩记录</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAutoScalingRecordsRequest
         /// </param>
@@ -7125,7 +7253,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return await MigrateSingleZoneToMultiZoneWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改弹性伸缩配置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
         /// ModifyAutoScalingConfigRequest
         /// </param>
         /// <param name="runtime">
@@ -7135,9 +7268,15 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         /// <returns>
         /// ModifyAutoScalingConfigResponse
         /// </returns>
-        public ModifyAutoScalingConfigResponse ModifyAutoScalingConfigWithOptions(ModifyAutoScalingConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyAutoScalingConfigResponse ModifyAutoScalingConfigWithOptions(ModifyAutoScalingConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyAutoScalingConfigShrinkRequest request = new ModifyAutoScalingConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScaleRuleList))
+            {
+                request.ScaleRuleListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScaleRuleList, "ScaleRuleList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
             {
@@ -7191,6 +7330,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleRuleListShrink))
+            {
+                query["ScaleRuleList"] = request.ScaleRuleListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleType))
             {
                 query["ScaleType"] = request.ScaleType;
@@ -7202,6 +7345,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecId))
             {
                 query["SpecId"] = request.SpecId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageCapacityMax))
+            {
+                query["StorageCapacityMax"] = request.StorageCapacityMax;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7222,7 +7369,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<ModifyAutoScalingConfigResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <param name="request">
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改弹性伸缩配置</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
         /// ModifyAutoScalingConfigRequest
         /// </param>
         /// <param name="runtime">
@@ -7232,9 +7384,15 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         /// <returns>
         /// ModifyAutoScalingConfigResponse
         /// </returns>
-        public async Task<ModifyAutoScalingConfigResponse> ModifyAutoScalingConfigWithOptionsAsync(ModifyAutoScalingConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyAutoScalingConfigResponse> ModifyAutoScalingConfigWithOptionsAsync(ModifyAutoScalingConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyAutoScalingConfigShrinkRequest request = new ModifyAutoScalingConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScaleRuleList))
+            {
+                request.ScaleRuleListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScaleRuleList, "ScaleRuleList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
             {
@@ -7288,6 +7446,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleRuleListShrink))
+            {
+                query["ScaleRuleList"] = request.ScaleRuleListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaleType))
             {
                 query["ScaleType"] = request.ScaleType;
@@ -7299,6 +7461,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecId))
             {
                 query["SpecId"] = request.SpecId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageCapacityMax))
+            {
+                query["StorageCapacityMax"] = request.StorageCapacityMax;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7319,6 +7485,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<ModifyAutoScalingConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改弹性伸缩配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAutoScalingConfigRequest
         /// </param>
@@ -7332,6 +7503,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return ModifyAutoScalingConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改弹性伸缩配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAutoScalingConfigRequest
         /// </param>
@@ -7345,6 +7521,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return await ModifyAutoScalingConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改弹性伸缩规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAutoScalingRuleRequest
         /// </param>
@@ -7470,6 +7651,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<ModifyAutoScalingRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改弹性伸缩规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAutoScalingRuleRequest
         /// </param>
@@ -7595,6 +7781,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<ModifyAutoScalingRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改弹性伸缩规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAutoScalingRuleRequest
         /// </param>
@@ -7608,6 +7799,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return ModifyAutoScalingRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改弹性伸缩规则</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAutoScalingRuleRequest
         /// </param>
@@ -11411,6 +11607,182 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateLindormV2InstanceParameterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Lindorm新版实例白名单分组列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLindormV2WhiteIpListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLindormV2WhiteIpListResponse
+        /// </returns>
+        public UpdateLindormV2WhiteIpListResponse UpdateLindormV2WhiteIpListWithOptions(UpdateLindormV2WhiteIpListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteIpGroupList))
+            {
+                query["WhiteIpGroupList"] = request.WhiteIpGroupList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLindormV2WhiteIpList",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateLindormV2WhiteIpListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Lindorm新版实例白名单分组列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLindormV2WhiteIpListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLindormV2WhiteIpListResponse
+        /// </returns>
+        public async Task<UpdateLindormV2WhiteIpListResponse> UpdateLindormV2WhiteIpListWithOptionsAsync(UpdateLindormV2WhiteIpListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteIpGroupList))
+            {
+                query["WhiteIpGroupList"] = request.WhiteIpGroupList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLindormV2WhiteIpList",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateLindormV2WhiteIpListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Lindorm新版实例白名单分组列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLindormV2WhiteIpListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLindormV2WhiteIpListResponse
+        /// </returns>
+        public UpdateLindormV2WhiteIpListResponse UpdateLindormV2WhiteIpList(UpdateLindormV2WhiteIpListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateLindormV2WhiteIpListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Lindorm新版实例白名单分组列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLindormV2WhiteIpListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLindormV2WhiteIpListResponse
+        /// </returns>
+        public async Task<UpdateLindormV2WhiteIpListResponse> UpdateLindormV2WhiteIpListAsync(UpdateLindormV2WhiteIpListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateLindormV2WhiteIpListWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

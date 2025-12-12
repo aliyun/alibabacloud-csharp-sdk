@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
-    public class CreateAutoScalingConfigShrinkRequest : TeaModel {
+    public class ModifyAutoScalingConfigShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
+        [NameInMap("ConfigId")]
+        [Validation(Required=false)]
+        public string ConfigId { get; set; }
+
         [NameInMap("ConfigName")]
         [Validation(Required=false)]
         public string ConfigName { get; set; }
@@ -28,9 +32,6 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
@@ -70,9 +71,6 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string ScaleRuleListShrink { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("ScaleType")]
         [Validation(Required=false)]
         public string ScaleType { get; set; }
@@ -81,9 +79,6 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("SpecId")]
         [Validation(Required=false)]
         public string SpecId { get; set; }

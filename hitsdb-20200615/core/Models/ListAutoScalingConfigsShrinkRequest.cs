@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
-    public class ListAutoScalingRecordsRequest : TeaModel {
+    public class ListAutoScalingConfigsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -24,20 +24,6 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("PageNum")]
-        [Validation(Required=false)]
-        public int? PageNum { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("PageSize")]
-        [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -48,7 +34,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 
         [NameInMap("ScaleTypes")]
         [Validation(Required=false)]
-        public List<string> ScaleTypes { get; set; }
+        public string ScaleTypesShrink { get; set; }
 
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]

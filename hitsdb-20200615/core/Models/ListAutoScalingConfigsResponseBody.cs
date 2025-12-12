@@ -147,6 +147,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 [Validation(Required=false)]
                 public string SpecId { get; set; }
 
+                [NameInMap("StorageCapacityMax")]
+                [Validation(Required=false)]
+                public long? StorageCapacityMax { get; set; }
+
             }
 
         }

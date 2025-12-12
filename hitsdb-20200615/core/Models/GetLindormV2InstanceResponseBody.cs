@@ -115,6 +115,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 [Validation(Required=false)]
                 public bool? EnableAttachLocalDisk { get; set; }
 
+                [NameInMap("IsScaleSpecGroup")]
+                [Validation(Required=false)]
+                public bool? IsScaleSpecGroup { get; set; }
+
                 [NameInMap("LocalDiskCapacity")]
                 [Validation(Required=false)]
                 public long? LocalDiskCapacity { get; set; }
