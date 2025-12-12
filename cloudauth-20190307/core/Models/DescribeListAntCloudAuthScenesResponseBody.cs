@@ -115,6 +115,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [Validation(Required=false)]
             public string Platform { get; set; }
 
+            [NameInMap("ReturnPicCount")]
+            [Validation(Required=false)]
+            public long? ReturnPicCount { get; set; }
+
+            [NameInMap("ReturnVideoLength")]
+            [Validation(Required=false)]
+            public long? ReturnVideoLength { get; set; }
+
             /// <summary>
             /// <para>Scenario ID.</para>
             /// 

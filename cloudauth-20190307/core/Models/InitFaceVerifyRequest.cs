@@ -248,6 +248,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string FaceGuardOutput { get; set; }
 
+        /// <summary>
+        /// <para>H5 Downgrade Confirmation Button Switch:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Y</b>: Enabled (On)</description></item>
+        /// <item><description><b>N (default)</b>: Disabled (Off)</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
         [NameInMap("H5DegradeConfirmBtn")]
         [Validation(Required=false)]
         public string H5DegradeConfirmBtn { get; set; }

@@ -1749,6 +1749,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["Platform"] = request.Platform;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnPicCount))
+            {
+                query["ReturnPicCount"] = request.ReturnPicCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnVideoLength))
+            {
+                query["ReturnVideoLength"] = request.ReturnVideoLength;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneName))
             {
                 query["SceneName"] = request.SceneName;
@@ -1822,6 +1830,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
             {
                 query["Platform"] = request.Platform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnPicCount))
+            {
+                query["ReturnPicCount"] = request.ReturnPicCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnVideoLength))
+            {
+                query["ReturnVideoLength"] = request.ReturnVideoLength;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneName))
             {
@@ -17586,6 +17602,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["Platform"] = request.Platform;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnPicCount))
+            {
+                query["ReturnPicCount"] = request.ReturnPicCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnVideoLength))
+            {
+                query["ReturnVideoLength"] = request.ReturnVideoLength;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
             {
                 query["SceneId"] = request.SceneId;
@@ -17668,6 +17692,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
             {
                 query["Platform"] = request.Platform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnPicCount))
+            {
+                query["ReturnPicCount"] = request.ReturnPicCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnVideoLength))
+            {
+                query["ReturnVideoLength"] = request.ReturnVideoLength;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
             {
