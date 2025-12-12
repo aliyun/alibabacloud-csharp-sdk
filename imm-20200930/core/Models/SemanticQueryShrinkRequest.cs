@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string Query { get; set; }
 
+        [NameInMap("SourceURI")]
+        [Validation(Required=false)]
+        public string SourceURI { get; set; }
+
         /// <summary>
         /// <para>The fields that you want to include in the response. Including only necessary metadata fields can help reduce the size of the response.</para>
         /// <para>If you do not specify this parameter or set the value to null, all existing metadata fields are returned.</para>

@@ -19182,6 +19182,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 query["Query"] = request.Query;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceURI))
+            {
+                query["SourceURI"] = request.SourceURI;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithFieldsShrink))
             {
                 query["WithFields"] = request.WithFieldsShrink;
@@ -19281,6 +19285,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
                 query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceURI))
+            {
+                query["SourceURI"] = request.SourceURI;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithFieldsShrink))
             {
