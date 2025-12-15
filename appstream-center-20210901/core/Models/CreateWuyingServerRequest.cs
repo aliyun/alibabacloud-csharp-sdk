@@ -116,6 +116,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         }
 
+        [NameInMap("HostName")]
+        [Validation(Required=false)]
+        public string HostName { get; set; }
+
         /// <summary>
         /// <para>Idempotence token to ensure operation uniqueness</para>
         /// 

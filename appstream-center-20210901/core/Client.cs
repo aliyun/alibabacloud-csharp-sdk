@@ -1155,11 +1155,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         public CreateWuyingServerResponse CreateWuyingServerWithOptions(CreateWuyingServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SavingPlanId))
-            {
-                query["SavingPlanId"] = request.SavingPlanId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
             {
@@ -1189,6 +1184,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDisk))
             {
                 bodyFlat["DataDisk"] = request.DataDisk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostName))
+            {
+                body["HostName"] = request.HostName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdempotenceToken))
             {
@@ -1221,6 +1220,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
             {
                 body["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SavingPlanId))
+            {
+                body["SavingPlanId"] = request.SavingPlanId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerInstanceType))
             {
@@ -1261,7 +1264,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1309,11 +1311,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         public async Task<CreateWuyingServerResponse> CreateWuyingServerWithOptionsAsync(CreateWuyingServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SavingPlanId))
-            {
-                query["SavingPlanId"] = request.SavingPlanId;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
             {
@@ -1343,6 +1340,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDisk))
             {
                 bodyFlat["DataDisk"] = request.DataDisk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostName))
+            {
+                body["HostName"] = request.HostName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdempotenceToken))
             {
@@ -1375,6 +1376,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
             {
                 body["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SavingPlanId))
+            {
+                body["SavingPlanId"] = request.SavingPlanId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerInstanceType))
             {
@@ -1415,7 +1420,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             );
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
