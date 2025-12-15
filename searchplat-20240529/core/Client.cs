@@ -1399,6 +1399,144 @@ namespace AlibabaCloud.SDK.Searchplat20240529
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>图片主体检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageObjectDetectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageObjectDetectionResponse
+        /// </returns>
+        public GetImageObjectDetectionResponse GetImageObjectDetectionWithOptions(string workspaceName, string serviceId, GetImageObjectDetectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Image))
+            {
+                body["image"] = request.Image;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                body["options"] = request.Options;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageObjectDetection",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/image-object-detection/" + serviceId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetImageObjectDetectionResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片主体检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageObjectDetectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageObjectDetectionResponse
+        /// </returns>
+        public async Task<GetImageObjectDetectionResponse> GetImageObjectDetectionWithOptionsAsync(string workspaceName, string serviceId, GetImageObjectDetectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Image))
+            {
+                body["image"] = request.Image;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                body["options"] = request.Options;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageObjectDetection",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/image-object-detection/" + serviceId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetImageObjectDetectionResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片主体检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageObjectDetectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageObjectDetectionResponse
+        /// </returns>
+        public GetImageObjectDetectionResponse GetImageObjectDetection(string workspaceName, string serviceId, GetImageObjectDetectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetImageObjectDetectionWithOptions(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>图片主体检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageObjectDetectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageObjectDetectionResponse
+        /// </returns>
+        public async Task<GetImageObjectDetectionResponse> GetImageObjectDetectionAsync(string workspaceName, string serviceId, GetImageObjectDetectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetImageObjectDetectionWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>多模态向量化</para>
         /// </summary>
         /// 
@@ -1422,6 +1560,10 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
             {
                 body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                body["options"] = request.Options;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1468,6 +1610,10 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
             {
                 body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                body["options"] = request.Options;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1525,6 +1671,152 @@ namespace AlibabaCloud.SDK.Searchplat20240529
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetMultiModalEmbeddingWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态 Reranker</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiModalRerankerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiModalRerankerResponse
+        /// </returns>
+        public GetMultiModalRerankerResponse GetMultiModalRerankerWithOptions(string workspaceName, string serviceId, GetMultiModalRerankerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Docs))
+            {
+                body["docs"] = request.Docs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                body["options"] = request.Options;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMultiModalReranker",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/multi-modal-reranker/" + serviceId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMultiModalRerankerResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态 Reranker</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiModalRerankerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiModalRerankerResponse
+        /// </returns>
+        public async Task<GetMultiModalRerankerResponse> GetMultiModalRerankerWithOptionsAsync(string workspaceName, string serviceId, GetMultiModalRerankerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Docs))
+            {
+                body["docs"] = request.Docs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                body["options"] = request.Options;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMultiModalReranker",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/multi-modal-reranker/" + serviceId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMultiModalRerankerResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态 Reranker</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiModalRerankerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiModalRerankerResponse
+        /// </returns>
+        public GetMultiModalRerankerResponse GetMultiModalReranker(string workspaceName, string serviceId, GetMultiModalRerankerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMultiModalRerankerWithOptions(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态 Reranker</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMultiModalRerankerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMultiModalRerankerResponse
+        /// </returns>
+        public async Task<GetMultiModalRerankerResponse> GetMultiModalRerankerAsync(string workspaceName, string serviceId, GetMultiModalRerankerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMultiModalRerankerWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

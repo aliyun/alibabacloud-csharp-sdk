@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Searchplat20240529.Models
 {
-    public class GetMultiModalEmbeddingRequest : TeaModel {
-        [NameInMap("input")]
+    public class GetImageObjectDetectionRequest : TeaModel {
+        [NameInMap("image")]
         [Validation(Required=false)]
-        public List<GetMultiModalEmbeddingRequestInput> Input { get; set; }
-        public class GetMultiModalEmbeddingRequestInput : TeaModel {
-            [NameInMap("image")]
+        public GetImageObjectDetectionRequestImage Image { get; set; }
+        public class GetImageObjectDetectionRequestImage : TeaModel {
+            [NameInMap("content")]
             [Validation(Required=false)]
-            public string Image { get; set; }
+            public string Content { get; set; }
 
-            [NameInMap("text")]
+            [NameInMap("url")]
             [Validation(Required=false)]
-            public string Text { get; set; }
+            public string Url { get; set; }
 
         }
 

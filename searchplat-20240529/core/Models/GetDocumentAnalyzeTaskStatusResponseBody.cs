@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
             [Validation(Required=false)]
             public long? ImageCount { get; set; }
 
+            [NameInMap("semantic_token_count")]
+            [Validation(Required=false)]
+            public long? SemanticTokenCount { get; set; }
+
             [NameInMap("table_count")]
             [Validation(Required=false)]
             public long? TableCount { get; set; }

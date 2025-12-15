@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.Searchplat20240529.Models
             [Validation(Required=false)]
             public long? Image { get; set; }
 
+            [NameInMap("image_token")]
+            [Validation(Required=false)]
+            public long? ImageToken { get; set; }
+
+            [NameInMap("text_token")]
+            [Validation(Required=false)]
+            public long? TextToken { get; set; }
+
             [NameInMap("token_count")]
             [Validation(Required=false)]
             public long? TokenCount { get; set; }
