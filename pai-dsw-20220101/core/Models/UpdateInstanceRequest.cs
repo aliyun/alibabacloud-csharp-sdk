@@ -295,6 +295,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public bool? DisassociateForwardInfos { get; set; }
 
+        [NameInMap("DisassociateMigrationOptions")]
+        [Validation(Required=false)]
+        public bool? DisassociateMigrationOptions { get; set; }
+
         [NameInMap("DisassociateSpot")]
         [Validation(Required=false)]
         public bool? DisassociateSpot { get; set; }
@@ -387,6 +391,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
+
+        [NameInMap("MigrationOptions")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> MigrationOptions { get; set; }
 
         [NameInMap("OversoldType")]
         [Validation(Required=false)]

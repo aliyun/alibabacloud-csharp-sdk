@@ -787,6 +787,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        [NameInMap("MigrationOptions")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> MigrationOptions { get; set; }
+
         /// <summary>
         /// <para>The error recovery configuration of the node.</para>
         /// </summary>

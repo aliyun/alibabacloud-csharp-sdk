@@ -415,6 +415,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
         }
 
+        [NameInMap("MigrationOptions")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> MigrationOptions { get; set; }
+
         [NameInMap("OversoldType")]
         [Validation(Required=false)]
         public string OversoldType { get; set; }
