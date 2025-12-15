@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class ListAutoGroupingRemediationsRequest : TeaModel {
         /// <summary>
+        /// <para>The earliest remediation time. This parameter is empty by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-01-01 00:00:00</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string EarliestRemediationTime { get; set; }
 
         /// <summary>
+        /// <para>The latest remediation time. This parameter is empty by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-02-01 00:00:00</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string LatestRemediationTime { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of data entries to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cm****</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The resource ID,</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i-23v38****</para>
         /// </summary>
@@ -50,6 +60,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource type,</para>
+        /// <para>You can obtain the resource type from the <b>Resource type</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>instance</para>
         /// </summary>
@@ -58,6 +71,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>The rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,6 +82,9 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string RuleId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Alibaba Cloud service.</para>
+        /// <para>You can obtain the ID from the <b>Service code</b> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
         /// </summary>
@@ -76,6 +93,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         public string Service { get; set; }
 
         /// <summary>
+        /// <para>The ID of the new resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-aekz26emqhc****</para>
         /// </summary>

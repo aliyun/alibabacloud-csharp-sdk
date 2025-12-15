@@ -73,6 +73,12 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The response parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4141780B-4E3D-5D2A-A8F4-44D6D34F****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

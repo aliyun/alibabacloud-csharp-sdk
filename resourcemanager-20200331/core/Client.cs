@@ -5307,7 +5307,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭资源组通知</para>
+        /// <para>Disables group event notification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5340,7 +5340,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭资源组通知</para>
+        /// <para>Disables group event notification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5373,7 +5373,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭资源组通知</para>
+        /// <para>Disables group event notification.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5387,7 +5387,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭资源组通知</para>
+        /// <para>Disables group event notification.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5871,7 +5871,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通资源组通知</para>
+        /// <para>Enables group event notification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5904,7 +5904,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通资源组通知</para>
+        /// <para>Enables group event notification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5937,7 +5937,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通资源组通知</para>
+        /// <para>Enables group event notification.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5951,7 +5951,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通资源组通知</para>
+        /// <para>Enables group event notification.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7687,7 +7687,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源组管理员配置</para>
+        /// <para>Queries the configurations of a resource group administrator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7720,7 +7720,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源组管理员配置</para>
+        /// <para>Queries the configurations of a resource group administrator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7753,7 +7753,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源组管理员配置</para>
+        /// <para>Queries the configurations of a resource group administrator.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7767,7 +7767,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源组管理员配置</para>
+        /// <para>Queries the configurations of a resource group administrator.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7781,7 +7781,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源组通知设置</para>
+        /// <para>Queries the notification settings of a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7814,7 +7814,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源组通知设置</para>
+        /// <para>Queries the notification settings of a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7847,7 +7847,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源组通知设置</para>
+        /// <para>Queries the notification settings of a resource group.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7861,7 +7861,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源组通知设置</para>
+        /// <para>Queries the notification settings of a resource group.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9083,7 +9083,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出自动分组修正记录</para>
+        /// <para>Queries a list of automatic grouping remediation records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9157,7 +9157,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出自动分组修正记录</para>
+        /// <para>Queries a list of automatic grouping remediation records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9231,7 +9231,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出自动分组修正记录</para>
+        /// <para>Queries a list of automatic grouping remediation records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9249,7 +9249,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出自动分组修正记录</para>
+        /// <para>Queries a list of automatic grouping remediation records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10921,6 +10921,142 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
             return await ListPolicyVersionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出资源组能力项</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourceGroupCapabilityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceGroupCapabilityResponse
+        /// </returns>
+        public ListResourceGroupCapabilityResponse ListResourceGroupCapabilityWithOptions(ListResourceGroupCapabilityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                query["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupportResourceGroupEvent))
+            {
+                query["SupportResourceGroupEvent"] = request.SupportResourceGroupEvent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceGroupCapability",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceGroupCapabilityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出资源组能力项</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourceGroupCapabilityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceGroupCapabilityResponse
+        /// </returns>
+        public async Task<ListResourceGroupCapabilityResponse> ListResourceGroupCapabilityWithOptionsAsync(ListResourceGroupCapabilityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                query["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupportResourceGroupEvent))
+            {
+                query["SupportResourceGroupEvent"] = request.SupportResourceGroupEvent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceGroupCapability",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceGroupCapabilityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出资源组能力项</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourceGroupCapabilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceGroupCapabilityResponse
+        /// </returns>
+        public ListResourceGroupCapabilityResponse ListResourceGroupCapability(ListResourceGroupCapabilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListResourceGroupCapabilityWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出资源组能力项</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourceGroupCapabilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceGroupCapabilityResponse
+        /// </returns>
+        public async Task<ListResourceGroupCapabilityResponse> ListResourceGroupCapabilityAsync(ListResourceGroupCapabilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListResourceGroupCapabilityWithOptionsAsync(request, runtime);
+        }
+
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
@@ -12455,6 +12591,182 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTrustedServiceStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源组事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LookupResourceGroupEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LookupResourceGroupEventsResponse
+        /// </returns>
+        public LookupResourceGroupEventsResponse LookupResourceGroupEventsWithOptions(LookupResourceGroupEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCategory))
+            {
+                query["EventCategory"] = request.EventCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LookupAttributes))
+            {
+                query["LookupAttributes"] = request.LookupAttributes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupDisplayName))
+            {
+                query["ResourceGroupDisplayName"] = request.ResourceGroupDisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LookupResourceGroupEvents",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LookupResourceGroupEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源组事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LookupResourceGroupEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LookupResourceGroupEventsResponse
+        /// </returns>
+        public async Task<LookupResourceGroupEventsResponse> LookupResourceGroupEventsWithOptionsAsync(LookupResourceGroupEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCategory))
+            {
+                query["EventCategory"] = request.EventCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LookupAttributes))
+            {
+                query["LookupAttributes"] = request.LookupAttributes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupDisplayName))
+            {
+                query["ResourceGroupDisplayName"] = request.ResourceGroupDisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LookupResourceGroupEvents",
+                Version = "2020-03-31",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LookupResourceGroupEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源组事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LookupResourceGroupEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LookupResourceGroupEventsResponse
+        /// </returns>
+        public LookupResourceGroupEventsResponse LookupResourceGroupEvents(LookupResourceGroupEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return LookupResourceGroupEventsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源组事件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LookupResourceGroupEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LookupResourceGroupEventsResponse
+        /// </returns>
+        public async Task<LookupResourceGroupEventsResponse> LookupResourceGroupEventsAsync(LookupResourceGroupEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await LookupResourceGroupEventsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15395,7 +15707,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新资源组管理员配置</para>
+        /// <para>Updates the configurations of a resource group administrator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15437,7 +15749,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新资源组管理员配置</para>
+        /// <para>Updates the configurations of a resource group administrator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15479,7 +15791,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新资源组管理员配置</para>
+        /// <para>Updates the configurations of a resource group administrator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15497,7 +15809,7 @@ namespace AlibabaCloud.SDK.ResourceManager20200331
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新资源组管理员配置</para>
+        /// <para>Updates the configurations of a resource group administrator.</para>
         /// </summary>
         /// 
         /// <param name="request">

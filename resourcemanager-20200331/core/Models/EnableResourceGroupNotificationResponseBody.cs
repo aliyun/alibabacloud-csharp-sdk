@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ResourceManager20200331.Models
 {
     public class EnableResourceGroupNotificationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F7701451-340B-5CB3-AEA7-7D831F7F38C0</para>
         /// </summary>
