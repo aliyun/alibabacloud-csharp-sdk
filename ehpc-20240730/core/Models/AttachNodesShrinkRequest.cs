@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class AttachNodesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The compute node information.</para>
+        /// <para>The list of compute nodes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ComputeNode")]

@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         }
 
         /// <summary>
-        /// <para>The page number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>

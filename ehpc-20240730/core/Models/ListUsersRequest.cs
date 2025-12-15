@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>Pages start from page 1.</para>
         /// <para>Default value: 1.</para>
         /// 

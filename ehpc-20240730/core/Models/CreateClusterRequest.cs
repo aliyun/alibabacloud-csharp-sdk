@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public class CreateClusterRequestManagerDNS : TeaModel {
                 /// <summary>
                 /// <para>The domain name resolution type.</para>
-                /// <para>Valid value:</para>
+                /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>NIS</description></item>
                 /// </list>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public class CreateClusterRequestManagerDirectoryService : TeaModel {
                 /// <summary>
                 /// <para>The type of the domain account.</para>
-                /// <para>Valid value:</para>
+                /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>NIS</description></item>
                 /// </list>

@@ -340,6 +340,30 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             [Validation(Required=false)]
             public GetClusterResponseBodyManagerManagerNode ManagerNode { get; set; }
             public class GetClusterResponseBodyManagerManagerNode : TeaModel {
+                [NameInMap("AutoRenew")]
+                [Validation(Required=false)]
+                public bool? AutoRenew { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Month</para>
+                /// </summary>
+                [NameInMap("AutoRenewPeriod")]
+                [Validation(Required=false)]
+                public long? AutoRenewPeriod { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("Duration")]
+                [Validation(Required=false)]
+                public long? Duration { get; set; }
+
+                [NameInMap("EnableHt")]
+                [Validation(Required=false)]
+                public bool? EnableHt { get; set; }
+
                 /// <summary>
                 /// <para>The expiration time of the management node.</para>
                 /// 
@@ -349,6 +373,14 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 [NameInMap("ExpiredTime")]
                 [Validation(Required=false)]
                 public string ExpiredTime { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>aliyun_2_1903_x64_20G_alibase_20200324.vhd</para>
+                /// </summary>
+                [NameInMap("ImageId")]
+                [Validation(Required=false)]
+                public string ImageId { get; set; }
 
                 /// <summary>
                 /// <para>The instance billing method of the management node. Valid values:</para>
@@ -383,6 +415,68 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("Period")]
+                [Validation(Required=false)]
+                public long? Period { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Month</para>
+                /// </summary>
+                [NameInMap("PeriodUnit")]
+                [Validation(Required=false)]
+                public string PeriodUnit { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("SpotPriceLimit")]
+                [Validation(Required=false)]
+                public float? SpotPriceLimit { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>NoSpot</para>
+                /// </summary>
+                [NameInMap("SpotStrategy")]
+                [Validation(Required=false)]
+                public string SpotStrategy { get; set; }
+
+                [NameInMap("SystemDisk")]
+                [Validation(Required=false)]
+                public GetClusterResponseBodyManagerManagerNodeSystemDisk SystemDisk { get; set; }
+                public class GetClusterResponseBodyManagerManagerNodeSystemDisk : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>cloud_ssd</para>
+                    /// </summary>
+                    [NameInMap("Category")]
+                    [Validation(Required=false)]
+                    public string Category { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>PL0</para>
+                    /// </summary>
+                    [NameInMap("Level")]
+                    [Validation(Required=false)]
+                    public string Level { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>40</para>
+                    /// </summary>
+                    [NameInMap("Size")]
+                    [Validation(Required=false)]
+                    public long? Size { get; set; }
+
+                }
 
             }
 

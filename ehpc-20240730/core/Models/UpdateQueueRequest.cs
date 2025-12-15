@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             /// <summary>
             /// <para>Specifies whether to enable auto scale-out for the queue. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: deletion protection is enabled.</description></item>
-            /// <item><description>false: disables ASM.</description></item>
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string InterConnect { get; set; }
 
             /// <summary>
-            /// <para>The nodes for which deletion protection is enabled in the queue.</para>
+            /// <para>List of excluded compute nodes in the queue.</para>
             /// </summary>
             [NameInMap("KeepAliveNodes")]
             [Validation(Required=false)]
