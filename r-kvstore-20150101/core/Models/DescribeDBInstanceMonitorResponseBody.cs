@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class TransformToEcsResponseBody : TeaModel {
+    public class DescribeDBInstanceMonitorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The collection frequency of the monitoring data. Unit: second.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20905403119****</para>
+        /// <para>5</para>
         /// </summary>
-        [NameInMap("OrderId")]
+        [NameInMap("Interval")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string Interval { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DAABAD9B-890F-56C0-806C-6144946594AB</para>
+        /// <para>276F582D-C6B2-519C-A5ED-2A92BB15EC07</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

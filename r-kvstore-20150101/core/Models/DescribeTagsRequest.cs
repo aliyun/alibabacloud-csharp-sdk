@@ -8,20 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class DescribeGlobalSecurityIPGroupRequest : TeaModel {
-        [NameInMap("Engine")]
-        [Validation(Required=false)]
-        public string Engine { get; set; }
-
+    public class DescribeTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the IP whitelist template.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <remarks>
+        /// <para>This parameter is not required for the first request. If not all results are returned in one query, you can specify the token that is obtained from the previous query as the value of <b>NextToken</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>g-zsldxfiwjmti0kcm****</para>
+        /// <para>212db86sca4384811e0b5e8707ec2****</para>
         /// </summary>
-        [NameInMap("GlobalSecurityGroupId")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public string GlobalSecurityGroupId { get; set; }
+        public string NextToken { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -42,16 +41,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// <para>The resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmyiu4ekp****</para>
-        /// </summary>
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
@@ -60,9 +49,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        [NameInMap("SecurityToken")]
+        /// <summary>
+        /// <para>The resource type. Valid values: <b>INSTANCE</b> or <b>instance</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>INSTANCE</para>
+        /// </summary>
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
-        public string SecurityToken { get; set; }
+        public string ResourceType { get; set; }
 
     }
 

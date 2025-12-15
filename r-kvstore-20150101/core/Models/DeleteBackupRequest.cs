@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BackupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

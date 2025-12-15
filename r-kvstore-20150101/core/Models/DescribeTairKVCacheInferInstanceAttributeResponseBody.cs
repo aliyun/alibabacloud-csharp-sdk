@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                [NameInMap("ReplicaNum")]
+                [Validation(Required=false)]
+                public string ReplicaNum { get; set; }
+
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }

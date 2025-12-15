@@ -8,21 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class DescribeDBInstanceNetInfoRequest : TeaModel {
+    public class DescribeDbInstanceConnectivityRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>r-bp1zxszhcgatnx****</para>
+        /// <para>r-bp1r36hdqlrgt1****</para>
         /// </summary>
-        [NameInMap("InstanceId")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("NetType")]
-        [Validation(Required=false)]
-        public string NetType { get; set; }
+        public string DBInstanceId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -43,6 +39,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
+
+        /// <summary>
+        /// <para>The IP address of the client.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>124.207.240.***</para>
+        /// </summary>
+        [NameInMap("SrcIp")]
+        [Validation(Required=false)]
+        public string SrcIp { get; set; }
 
     }
 

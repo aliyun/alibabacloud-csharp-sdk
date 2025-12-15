@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateAccountResponseBody : TeaModel {
+        [NameInMap("AccountName")]
+        [Validation(Required=false)]
+        public string AccountName { get; set; }
+
         /// <summary>
         /// <para>The name of the account.</para>
         /// 

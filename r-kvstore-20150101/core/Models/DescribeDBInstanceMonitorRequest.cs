@@ -8,21 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class DescribeDBInstanceNetInfoRequest : TeaModel {
+    public class DescribeDBInstanceMonitorRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>r-bp1zxszhcgatnx****</para>
+        /// <para>r-bp1xp9esa45nll****</para>
         /// </summary>
-        [NameInMap("InstanceId")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
-        [NameInMap("NetType")]
-        [Validation(Required=false)]
-        public string NetType { get; set; }
+        public string DBInstanceId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

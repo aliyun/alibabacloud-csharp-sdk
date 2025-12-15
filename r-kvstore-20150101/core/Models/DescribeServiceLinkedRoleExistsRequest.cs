@@ -8,20 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class DescribeGlobalSecurityIPGroupRequest : TeaModel {
+    public class DescribeServiceLinkedRoleExistsRequest : TeaModel {
+        /// <summary>
+        /// <para>The database engine of the instance. Only Redis is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Redis</para>
+        /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
-
-        /// <summary>
-        /// <para>The ID of the IP whitelist template.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>g-zsldxfiwjmti0kcm****</para>
-        /// </summary>
-        [NameInMap("GlobalSecurityGroupId")]
-        [Validation(Required=false)]
-        public string GlobalSecurityGroupId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -32,7 +28,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The ID of the region where the instance resides.</para>
+        /// <remarks>
+        /// <para>This parameter does not affect the query results. You can specify any region ID.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,16 +40,6 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        /// <summary>
-        /// <para>The resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmyiu4ekp****</para>
-        /// </summary>
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

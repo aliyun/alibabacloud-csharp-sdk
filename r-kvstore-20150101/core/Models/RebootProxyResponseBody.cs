@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class ModifyBackupExpireTimeResponseBody : TeaModel {
+    public class RebootProxyResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B560AAD5-5027-51AD-A0D4-FA4DB1A76F40</para>
+        /// <para>561AFBF1-BE20-44DB-9BD1-6988B53E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

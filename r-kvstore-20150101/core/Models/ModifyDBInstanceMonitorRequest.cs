@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class DescribeDBInstanceNetInfoRequest : TeaModel {
+    public class ModifyDBInstanceMonitorRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
@@ -16,13 +16,20 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
-        [NameInMap("InstanceId")]
+        [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public string DBInstanceId { get; set; }
 
-        [NameInMap("NetType")]
+        /// <summary>
+        /// <para>The interval at which monitoring data is collected. Valid values: 5 and 60. Unit: seconds.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
+        [NameInMap("Interval")]
         [Validation(Required=false)]
-        public string NetType { get; set; }
+        public string Interval { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

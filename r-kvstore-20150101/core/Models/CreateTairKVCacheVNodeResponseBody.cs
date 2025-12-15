@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateTairKVCacheVNodeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the Tair VNode instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tv-2zeb1ce76fee****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the VNode.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vn-03a49876edb****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string NodeId { get; set; }
 
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20905403119****</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OrderId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the instance resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2BE6E619-A657-42E3-AD2D-18F8428A****</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the VCluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vc-16965a9267*****-*****</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string VClusterId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the VCluster instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tk-2ze4bba3c8fe****</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string VkName { get; set; }
 
         /// <summary>
+        /// <para>The zone ID of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-f</para>
         /// </summary>

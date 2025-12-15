@@ -8,21 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class DescribeGlobalSecurityIPGroupRequest : TeaModel {
-        [NameInMap("Engine")]
-        [Validation(Required=false)]
-        public string Engine { get; set; }
-
-        /// <summary>
-        /// <para>The ID of the IP whitelist template.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>g-zsldxfiwjmti0kcm****</para>
-        /// </summary>
-        [NameInMap("GlobalSecurityGroupId")]
-        [Validation(Required=false)]
-        public string GlobalSecurityGroupId { get; set; }
-
+    public class DescribeActiveOperationTaskCountRequest : TeaModel {
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -33,24 +19,13 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// <para>The region ID.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        /// <summary>
-        /// <para>The resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmyiu4ekp****</para>
-        /// </summary>
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

@@ -131,6 +131,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string CloudType { get; set; }
 
+                [NameInMap("ComputingType")]
+                [Validation(Required=false)]
+                public string ComputingType { get; set; }
+
                 /// <summary>
                 /// <para>The parameter configurations of the instance in the JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/43885.html">Parameter descriptions</a>. You can use the <a href="https://help.aliyun.com/document_detail/473830.html">DescribeAuditLogConfig</a> operation to query audit log configurations.</para>
                 /// 
