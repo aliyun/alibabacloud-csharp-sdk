@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        [NameInMap("Eni")]
+        [Validation(Required=false)]
+        public string Eni { get; set; }
+
         [NameInMap("InstanceVersion")]
         [Validation(Required=false)]
         public string InstanceVersion { get; set; }
