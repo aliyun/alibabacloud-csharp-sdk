@@ -5509,6 +5509,302 @@ namespace AlibabaCloud.SDK.ResourceDirectoryMaster20220419
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries a list of members who have the permission to query member information in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The permission to query member information refers to the permission to call the <a href="~~GetAccount~~">GetAccount</a> API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAuthorizedAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuthorizedAccountsResponse
+        /// </returns>
+        public ListAuthorizedAccountsResponse ListAuthorizedAccountsWithOptions(ListAuthorizedAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAuthorizedAccounts",
+                Version = "2022-04-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAuthorizedAccountsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of members who have the permission to query member information in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The permission to query member information refers to the permission to call the <a href="~~GetAccount~~">GetAccount</a> API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAuthorizedAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuthorizedAccountsResponse
+        /// </returns>
+        public async Task<ListAuthorizedAccountsResponse> ListAuthorizedAccountsWithOptionsAsync(ListAuthorizedAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAuthorizedAccounts",
+                Version = "2022-04-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAuthorizedAccountsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of members who have the permission to query member information in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The permission to query member information refers to the permission to call the <a href="~~GetAccount~~">GetAccount</a> API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAuthorizedAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuthorizedAccountsResponse
+        /// </returns>
+        public ListAuthorizedAccountsResponse ListAuthorizedAccounts(ListAuthorizedAccountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAuthorizedAccountsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of members who have the permission to query member information in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The permission to query member information refers to the permission to call the <a href="~~GetAccount~~">GetAccount</a> API operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAuthorizedAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuthorizedAccountsResponse
+        /// </returns>
+        public async Task<ListAuthorizedAccountsResponse> ListAuthorizedAccountsAsync(ListAuthorizedAccountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAuthorizedAccountsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of folders that have permissions to query subfolder information in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The permissions to query subfolder information refer to the permissions to call the <a href="~~ListAccountsForParent~~">ListAccountsForParent</a> and <a href="~~ListFoldersForParent~~">ListFoldersForParent</a> API operations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAuthorizedFoldersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuthorizedFoldersResponse
+        /// </returns>
+        public ListAuthorizedFoldersResponse ListAuthorizedFoldersWithOptions(ListAuthorizedFoldersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAuthorizedFolders",
+                Version = "2022-04-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAuthorizedFoldersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of folders that have permissions to query subfolder information in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The permissions to query subfolder information refer to the permissions to call the <a href="~~ListAccountsForParent~~">ListAccountsForParent</a> and <a href="~~ListFoldersForParent~~">ListFoldersForParent</a> API operations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAuthorizedFoldersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuthorizedFoldersResponse
+        /// </returns>
+        public async Task<ListAuthorizedFoldersResponse> ListAuthorizedFoldersWithOptionsAsync(ListAuthorizedFoldersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAuthorizedFolders",
+                Version = "2022-04-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAuthorizedFoldersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of folders that have permissions to query subfolder information in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The permissions to query subfolder information refer to the permissions to call the <a href="~~ListAccountsForParent~~">ListAccountsForParent</a> and <a href="~~ListFoldersForParent~~">ListFoldersForParent</a> API operations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAuthorizedFoldersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuthorizedFoldersResponse
+        /// </returns>
+        public ListAuthorizedFoldersResponse ListAuthorizedFolders(ListAuthorizedFoldersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAuthorizedFoldersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of folders that have permissions to query subfolder information in a resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The permissions to query subfolder information refer to the permissions to call the <a href="~~ListAccountsForParent~~">ListAccountsForParent</a> and <a href="~~ListFoldersForParent~~">ListFoldersForParent</a> API operations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAuthorizedFoldersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAuthorizedFoldersResponse
+        /// </returns>
+        public async Task<ListAuthorizedFoldersResponse> ListAuthorizedFoldersAsync(ListAuthorizedFoldersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAuthorizedFoldersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries access control policies.</para>
         /// </summary>
         /// 
