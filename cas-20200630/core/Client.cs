@@ -3147,6 +3147,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["Identifier"] = request.Identifier;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3211,6 +3215,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifier))
             {
                 query["Identifier"] = request.Identifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3489,6 +3497,150 @@ namespace AlibabaCloud.SDK.Cas20200630
             return await DescribeClientCertificateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeClientCertificateForSerialNumber is deprecated, please use cas::2020-06-30::DescribeClientCertificate instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取客户端证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClientCertificateForSerialNumberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClientCertificateForSerialNumberResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeClientCertificateForSerialNumber is deprecated, please use cas::2020-06-30::DescribeClientCertificate instead.")]
+        // Deprecated
+        public DescribeClientCertificateForSerialNumberResponse DescribeClientCertificateForSerialNumberWithOptions(DescribeClientCertificateForSerialNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNumber))
+            {
+                query["SerialNumber"] = request.SerialNumber;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeClientCertificateForSerialNumber",
+                Version = "2020-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeClientCertificateForSerialNumberResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeClientCertificateForSerialNumber is deprecated, please use cas::2020-06-30::DescribeClientCertificate instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取客户端证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClientCertificateForSerialNumberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClientCertificateForSerialNumberResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeClientCertificateForSerialNumber is deprecated, please use cas::2020-06-30::DescribeClientCertificate instead.")]
+        // Deprecated
+        public async Task<DescribeClientCertificateForSerialNumberResponse> DescribeClientCertificateForSerialNumberWithOptionsAsync(DescribeClientCertificateForSerialNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNumber))
+            {
+                query["SerialNumber"] = request.SerialNumber;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeClientCertificateForSerialNumber",
+                Version = "2020-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeClientCertificateForSerialNumberResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeClientCertificateForSerialNumber is deprecated, please use cas::2020-06-30::DescribeClientCertificate instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取客户端证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClientCertificateForSerialNumberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClientCertificateForSerialNumberResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeClientCertificateForSerialNumber is deprecated, please use cas::2020-06-30::DescribeClientCertificate instead.")]
+        // Deprecated
+        public DescribeClientCertificateForSerialNumberResponse DescribeClientCertificateForSerialNumber(DescribeClientCertificateForSerialNumberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeClientCertificateForSerialNumberWithOptions(request, runtime);
+        }
+
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribeClientCertificateForSerialNumber is deprecated, please use cas::2020-06-30::DescribeClientCertificate instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取客户端证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClientCertificateForSerialNumberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClientCertificateForSerialNumberResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribeClientCertificateForSerialNumber is deprecated, please use cas::2020-06-30::DescribeClientCertificate instead.")]
+        // Deprecated
+        public async Task<DescribeClientCertificateForSerialNumberResponse> DescribeClientCertificateForSerialNumberAsync(DescribeClientCertificateForSerialNumberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeClientCertificateForSerialNumberWithOptionsAsync(request, runtime);
+        }
+
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the status information about client certificates and server certificates by using the unique identifiers of the certificates.</para>
@@ -3635,6 +3787,278 @@ namespace AlibabaCloud.SDK.Cas20200630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeClientCertificateStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取客户端证书状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClientCertificateStatusForSerialNumberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClientCertificateStatusForSerialNumberResponse
+        /// </returns>
+        public DescribeClientCertificateStatusForSerialNumberResponse DescribeClientCertificateStatusForSerialNumberWithOptions(DescribeClientCertificateStatusForSerialNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNumber))
+            {
+                query["SerialNumber"] = request.SerialNumber;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeClientCertificateStatusForSerialNumber",
+                Version = "2020-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeClientCertificateStatusForSerialNumberResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取客户端证书状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClientCertificateStatusForSerialNumberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClientCertificateStatusForSerialNumberResponse
+        /// </returns>
+        public async Task<DescribeClientCertificateStatusForSerialNumberResponse> DescribeClientCertificateStatusForSerialNumberWithOptionsAsync(DescribeClientCertificateStatusForSerialNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SerialNumber))
+            {
+                query["SerialNumber"] = request.SerialNumber;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeClientCertificateStatusForSerialNumber",
+                Version = "2020-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeClientCertificateStatusForSerialNumberResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取客户端证书状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClientCertificateStatusForSerialNumberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClientCertificateStatusForSerialNumberResponse
+        /// </returns>
+        public DescribeClientCertificateStatusForSerialNumberResponse DescribeClientCertificateStatusForSerialNumber(DescribeClientCertificateStatusForSerialNumberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeClientCertificateStatusForSerialNumberWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取客户端证书状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClientCertificateStatusForSerialNumberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClientCertificateStatusForSerialNumberResponse
+        /// </returns>
+        public async Task<DescribeClientCertificateStatusForSerialNumberResponse> DescribeClientCertificateStatusForSerialNumberAsync(DescribeClientCertificateStatusForSerialNumberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeClientCertificateStatusForSerialNumberWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>返回用户所有CaCertificate，包括PCA内部产生的与导入的外部证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePcaAndExternalCACertificateListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePcaAndExternalCACertificateListResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.")]
+        // Deprecated
+        public DescribePcaAndExternalCACertificateListResponse DescribePcaAndExternalCACertificateListWithOptions(DescribePcaAndExternalCACertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowSize))
+            {
+                query["ShowSize"] = request.ShowSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePcaAndExternalCACertificateList",
+                Version = "2020-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePcaAndExternalCACertificateListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>返回用户所有CaCertificate，包括PCA内部产生的与导入的外部证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePcaAndExternalCACertificateListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePcaAndExternalCACertificateListResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.")]
+        // Deprecated
+        public async Task<DescribePcaAndExternalCACertificateListResponse> DescribePcaAndExternalCACertificateListWithOptionsAsync(DescribePcaAndExternalCACertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowSize))
+            {
+                query["ShowSize"] = request.ShowSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePcaAndExternalCACertificateList",
+                Version = "2020-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePcaAndExternalCACertificateListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>返回用户所有CaCertificate，包括PCA内部产生的与导入的外部证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePcaAndExternalCACertificateListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePcaAndExternalCACertificateListResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.")]
+        // Deprecated
+        public DescribePcaAndExternalCACertificateListResponse DescribePcaAndExternalCACertificateList(DescribePcaAndExternalCACertificateListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePcaAndExternalCACertificateListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>返回用户所有CaCertificate，包括PCA内部产生的与导入的外部证书</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePcaAndExternalCACertificateListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePcaAndExternalCACertificateListResponse
+        /// </returns>
+        [Obsolete("OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.")]
+        // Deprecated
+        public async Task<DescribePcaAndExternalCACertificateListResponse> DescribePcaAndExternalCACertificateListAsync(DescribePcaAndExternalCACertificateListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePcaAndExternalCACertificateListWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3951,6 +4375,126 @@ namespace AlibabaCloud.SDK.Cas20200630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAllEndEntityInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取证书日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCACertificateLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCACertificateLogResponse
+        /// </returns>
+        public ListCACertificateLogResponse ListCACertificateLogWithOptions(ListCACertificateLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifier))
+            {
+                query["Identifier"] = request.Identifier;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCACertificateLog",
+                Version = "2020-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCACertificateLogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取证书日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCACertificateLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCACertificateLogResponse
+        /// </returns>
+        public async Task<ListCACertificateLogResponse> ListCACertificateLogWithOptionsAsync(ListCACertificateLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifier))
+            {
+                query["Identifier"] = request.Identifier;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCACertificateLog",
+                Version = "2020-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCACertificateLogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取证书日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCACertificateLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCACertificateLogResponse
+        /// </returns>
+        public ListCACertificateLogResponse ListCACertificateLog(ListCACertificateLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCACertificateLogWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取证书日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCACertificateLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCACertificateLogResponse
+        /// </returns>
+        public async Task<ListCACertificateLogResponse> ListCACertificateLogAsync(ListCACertificateLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCACertificateLogWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
