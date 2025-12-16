@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public UpdateCloudAppInfoRequestPatch Patch { get; set; }
         public class UpdateCloudAppInfoRequestPatch : TeaModel {
+            [NameInMap("AsStablePatch")]
+            [Validation(Required=false)]
+            public bool? AsStablePatch { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para><a href="https://test_host/app/test-tar-pkg.tar">https://test_host/app/test-tar-pkg.tar</a></para>
@@ -51,7 +55,23 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string PatchName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>tar</para>
+            /// </summary>
+            [NameInMap("PkgFormat")]
+            [Validation(Required=false)]
+            public string PkgFormat { get; set; }
+
+            [NameInMap("RenderingInstanceId")]
+            [Validation(Required=false)]
+            public string RenderingInstanceId { get; set; }
+
         }
+
+        [NameInMap("PkgLabels")]
+        [Validation(Required=false)]
+        public List<string> PkgLabels { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

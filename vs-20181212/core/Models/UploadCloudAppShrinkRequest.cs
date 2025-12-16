@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
-    public class UploadCloudAppRequest : TeaModel {
+    public class UploadCloudAppShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
         [NameInMap("PkgLabels")]
         [Validation(Required=false)]
-        public List<string> PkgLabels { get; set; }
+        public string PkgLabelsShrink { get; set; }
 
         [NameInMap("PkgType")]
         [Validation(Required=false)]

@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("LatestVersionOnly")]
+        [Validation(Required=false)]
+        public bool? LatestVersionOnly { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
@@ -53,6 +57,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        [NameInMap("PkgLabel")]
+        [Validation(Required=false)]
+        public string PkgLabel { get; set; }
+
         [NameInMap("PkgType")]
         [Validation(Required=false)]
         public string PkgType { get; set; }
@@ -60,6 +68,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

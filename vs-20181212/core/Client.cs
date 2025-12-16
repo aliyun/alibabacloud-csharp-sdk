@@ -23643,6 +23643,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 request.PatchShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Patch, "Patch", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PkgLabels))
+            {
+                request.PkgLabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PkgLabels, "PkgLabels", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
@@ -23652,17 +23656,23 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 query["Description"] = request.Description;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PkgLabelsShrink))
             {
-                query["Patch"] = request.PatchShrink;
+                query["PkgLabels"] = request.PkgLabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StablePatchId))
             {
                 query["StablePatchId"] = request.StablePatchId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchShrink))
+            {
+                body["Patch"] = request.PatchShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -23703,6 +23713,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 request.PatchShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Patch, "Patch", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PkgLabels))
+            {
+                request.PkgLabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PkgLabels, "PkgLabels", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
@@ -23712,17 +23726,23 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 query["Description"] = request.Description;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PkgLabelsShrink))
             {
-                query["Patch"] = request.PatchShrink;
+                query["PkgLabels"] = request.PkgLabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StablePatchId))
             {
                 query["StablePatchId"] = request.StablePatchId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchShrink))
+            {
+                body["Patch"] = request.PatchShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -24504,7 +24524,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <para>应用上架</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UploadCloudAppRequest
         /// </param>
         /// <param name="runtime">
@@ -24514,9 +24534,15 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <returns>
         /// UploadCloudAppResponse
         /// </returns>
-        public UploadCloudAppResponse UploadCloudAppWithOptions(UploadCloudAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UploadCloudAppResponse UploadCloudAppWithOptions(UploadCloudAppRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UploadCloudAppShrinkRequest request = new UploadCloudAppShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PkgLabels))
+            {
+                request.PkgLabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PkgLabels, "PkgLabels", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
@@ -24541,6 +24567,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PkgFormat))
             {
                 query["PkgFormat"] = request.PkgFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PkgLabelsShrink))
+            {
+                query["PkgLabels"] = request.PkgLabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PkgType))
             {
@@ -24570,7 +24600,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <para>应用上架</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UploadCloudAppRequest
         /// </param>
         /// <param name="runtime">
@@ -24580,9 +24610,15 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <returns>
         /// UploadCloudAppResponse
         /// </returns>
-        public async Task<UploadCloudAppResponse> UploadCloudAppWithOptionsAsync(UploadCloudAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UploadCloudAppResponse> UploadCloudAppWithOptionsAsync(UploadCloudAppRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UploadCloudAppShrinkRequest request = new UploadCloudAppShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PkgLabels))
+            {
+                request.PkgLabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PkgLabels, "PkgLabels", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
@@ -24607,6 +24643,10 @@ namespace AlibabaCloud.SDK.Vs20181212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PkgFormat))
             {
                 query["PkgFormat"] = request.PkgFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PkgLabelsShrink))
+            {
+                query["PkgLabels"] = request.PkgLabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PkgType))
             {
