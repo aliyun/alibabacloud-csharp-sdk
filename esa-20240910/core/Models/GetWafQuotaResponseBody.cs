@@ -16,6 +16,20 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public GetWafQuotaResponseBodyQuota Quota { get; set; }
         public class GetWafQuotaResponseBodyQuota : TeaModel {
+            [NameInMap("Captcha")]
+            [Validation(Required=false)]
+            public GetWafQuotaResponseBodyQuotaCaptcha Captcha { get; set; }
+            public class GetWafQuotaResponseBodyQuotaCaptcha : TeaModel {
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+                [NameInMap("NumberTotal")]
+                [Validation(Required=false)]
+                public WafQuotaInteger NumberTotal { get; set; }
+
+            }
+
             /// <summary>
             /// <para>Quota information related to custom lists.</para>
             /// </summary>

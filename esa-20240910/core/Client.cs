@@ -4358,6 +4358,150 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建边缘容器应用的镜像秘钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEdgeContainerAppImageSecretRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEdgeContainerAppImageSecretResponse
+        /// </returns>
+        public CreateEdgeContainerAppImageSecretResponse CreateEdgeContainerAppImageSecretWithOptions(CreateEdgeContainerAppImageSecretRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Registry))
+            {
+                query["Registry"] = request.Registry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEdgeContainerAppImageSecret",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEdgeContainerAppImageSecretResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建边缘容器应用的镜像秘钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEdgeContainerAppImageSecretRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEdgeContainerAppImageSecretResponse
+        /// </returns>
+        public async Task<CreateEdgeContainerAppImageSecretResponse> CreateEdgeContainerAppImageSecretWithOptionsAsync(CreateEdgeContainerAppImageSecretRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Registry))
+            {
+                query["Registry"] = request.Registry;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEdgeContainerAppImageSecret",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEdgeContainerAppImageSecretResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建边缘容器应用的镜像秘钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEdgeContainerAppImageSecretRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEdgeContainerAppImageSecretResponse
+        /// </returns>
+        public CreateEdgeContainerAppImageSecretResponse CreateEdgeContainerAppImageSecret(CreateEdgeContainerAppImageSecretRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateEdgeContainerAppImageSecretWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建边缘容器应用的镜像秘钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEdgeContainerAppImageSecretRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEdgeContainerAppImageSecretResponse
+        /// </returns>
+        public async Task<CreateEdgeContainerAppImageSecretResponse> CreateEdgeContainerAppImageSecretAsync(CreateEdgeContainerAppImageSecretRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateEdgeContainerAppImageSecretWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Associates a domain name with a containerized application. This way, requests destined for the associated domain name are forwarded to the application.</para>
         /// </summary>
         /// 
@@ -12820,6 +12964,134 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteEdgeContainerAppWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除边缘容器应用的镜像秘钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEdgeContainerAppImageSecretRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEdgeContainerAppImageSecretResponse
+        /// </returns>
+        public DeleteEdgeContainerAppImageSecretResponse DeleteEdgeContainerAppImageSecretWithOptions(DeleteEdgeContainerAppImageSecretRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEdgeContainerAppImageSecret",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEdgeContainerAppImageSecretResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除边缘容器应用的镜像秘钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEdgeContainerAppImageSecretRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEdgeContainerAppImageSecretResponse
+        /// </returns>
+        public async Task<DeleteEdgeContainerAppImageSecretResponse> DeleteEdgeContainerAppImageSecretWithOptionsAsync(DeleteEdgeContainerAppImageSecretRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEdgeContainerAppImageSecret",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEdgeContainerAppImageSecretResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除边缘容器应用的镜像秘钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEdgeContainerAppImageSecretRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEdgeContainerAppImageSecretResponse
+        /// </returns>
+        public DeleteEdgeContainerAppImageSecretResponse DeleteEdgeContainerAppImageSecret(DeleteEdgeContainerAppImageSecretRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteEdgeContainerAppImageSecretWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除边缘容器应用的镜像秘钥</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEdgeContainerAppImageSecretRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEdgeContainerAppImageSecretResponse
+        /// </returns>
+        public async Task<DeleteEdgeContainerAppImageSecretResponse> DeleteEdgeContainerAppImageSecretAsync(DeleteEdgeContainerAppImageSecretRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteEdgeContainerAppImageSecretWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -22416,6 +22688,126 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取边缘容器应用的资源容量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEdgeContainerAppResourceCapacityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEdgeContainerAppResourceCapacityResponse
+        /// </returns>
+        public GetEdgeContainerAppResourceCapacityResponse GetEdgeContainerAppResourceCapacityWithOptions(GetEdgeContainerAppResourceCapacityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEdgeContainerAppResourceCapacity",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEdgeContainerAppResourceCapacityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取边缘容器应用的资源容量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEdgeContainerAppResourceCapacityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEdgeContainerAppResourceCapacityResponse
+        /// </returns>
+        public async Task<GetEdgeContainerAppResourceCapacityResponse> GetEdgeContainerAppResourceCapacityWithOptionsAsync(GetEdgeContainerAppResourceCapacityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEdgeContainerAppResourceCapacity",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEdgeContainerAppResourceCapacityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取边缘容器应用的资源容量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEdgeContainerAppResourceCapacityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEdgeContainerAppResourceCapacityResponse
+        /// </returns>
+        public GetEdgeContainerAppResourceCapacityResponse GetEdgeContainerAppResourceCapacity(GetEdgeContainerAppResourceCapacityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetEdgeContainerAppResourceCapacityWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取边缘容器应用的资源容量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEdgeContainerAppResourceCapacityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEdgeContainerAppResourceCapacityResponse
+        /// </returns>
+        public async Task<GetEdgeContainerAppResourceCapacityResponse> GetEdgeContainerAppResourceCapacityAsync(GetEdgeContainerAppResourceCapacityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetEdgeContainerAppResourceCapacityWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Obtain the resource reservation configuration of the edge container.</para>
         /// </summary>
         /// 
@@ -30964,6 +31356,126 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListESAIPInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取边缘容器应用的镜像秘钥列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEdgeContainerAppImageSecretsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEdgeContainerAppImageSecretsResponse
+        /// </returns>
+        public ListEdgeContainerAppImageSecretsResponse ListEdgeContainerAppImageSecretsWithOptions(ListEdgeContainerAppImageSecretsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEdgeContainerAppImageSecrets",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEdgeContainerAppImageSecretsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取边缘容器应用的镜像秘钥列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEdgeContainerAppImageSecretsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEdgeContainerAppImageSecretsResponse
+        /// </returns>
+        public async Task<ListEdgeContainerAppImageSecretsResponse> ListEdgeContainerAppImageSecretsWithOptionsAsync(ListEdgeContainerAppImageSecretsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEdgeContainerAppImageSecrets",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEdgeContainerAppImageSecretsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取边缘容器应用的镜像秘钥列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEdgeContainerAppImageSecretsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEdgeContainerAppImageSecretsResponse
+        /// </returns>
+        public ListEdgeContainerAppImageSecretsResponse ListEdgeContainerAppImageSecrets(ListEdgeContainerAppImageSecretsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEdgeContainerAppImageSecretsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取边缘容器应用的镜像秘钥列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEdgeContainerAppImageSecretsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEdgeContainerAppImageSecretsResponse
+        /// </returns>
+        public async Task<ListEdgeContainerAppImageSecretsResponse> ListEdgeContainerAppImageSecretsAsync(ListEdgeContainerAppImageSecretsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEdgeContainerAppImageSecretsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
