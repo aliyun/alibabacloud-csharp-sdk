@@ -96,6 +96,11 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务单授权</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindProduceAuthorizationRequest
         /// </param>
@@ -141,6 +146,11 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             return TeaModel.ToObject<BindProduceAuthorizationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务单授权</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindProduceAuthorizationRequest
         /// </param>
@@ -186,6 +196,11 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             return TeaModel.ToObject<BindProduceAuthorizationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务单授权</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindProduceAuthorizationRequest
         /// </param>
@@ -199,6 +214,11 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             return BindProduceAuthorizationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>服务单授权</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindProduceAuthorizationRequest
         /// </param>
@@ -4689,6 +4709,10 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             {
                 query["BizType"] = request.BizType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmployeeCode))
+            {
+                query["EmployeeCode"] = request.EmployeeCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PersonId))
             {
                 query["PersonId"] = request.PersonId;
@@ -4742,6 +4766,10 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
             {
                 query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmployeeCode))
+            {
+                query["EmployeeCode"] = request.EmployeeCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PersonId))
             {
@@ -4833,6 +4861,10 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             {
                 query["BizType"] = request.BizType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmployeeCode))
+            {
+                query["EmployeeCode"] = request.EmployeeCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PersonId))
             {
                 query["PersonId"] = request.PersonId;
@@ -4886,6 +4918,10 @@ namespace AlibabaCloud.SDK.Companyreg20200306
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
             {
                 query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmployeeCode))
+            {
+                query["EmployeeCode"] = request.EmployeeCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PersonId))
             {

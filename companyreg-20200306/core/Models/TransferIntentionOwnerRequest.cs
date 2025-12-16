@@ -29,9 +29,11 @@ namespace AlibabaCloud.SDK.Companyreg20200306.Models
         [Validation(Required=false)]
         public string BizType { get; set; }
 
+        [NameInMap("EmployeeCode")]
+        [Validation(Required=false)]
+        public string EmployeeCode { get; set; }
+
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>67842</para>
         /// </summary>
