@@ -453,6 +453,144 @@ namespace AlibabaCloud.SDK.BailianModelOnChip20240816
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>云端获取透传鉴权信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPassThroughAuthInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPassThroughAuthInfoResponse
+        /// </returns>
+        public GetPassThroughAuthInfoResponse GetPassThroughAuthInfoWithOptions(GetPassThroughAuthInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["deviceName"] = request.DeviceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPassThroughAuthInfo",
+                Version = "2024-08-16",
+                Protocol = "HTTPS",
+                Pathname = "/open/api/auth/v1/token/getPassThroughAuthInfo",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPassThroughAuthInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>云端获取透传鉴权信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPassThroughAuthInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPassThroughAuthInfoResponse
+        /// </returns>
+        public async Task<GetPassThroughAuthInfoResponse> GetPassThroughAuthInfoWithOptionsAsync(GetPassThroughAuthInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["appId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceName))
+            {
+                body["deviceName"] = request.DeviceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPassThroughAuthInfo",
+                Version = "2024-08-16",
+                Protocol = "HTTPS",
+                Pathname = "/open/api/auth/v1/token/getPassThroughAuthInfo",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPassThroughAuthInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>云端获取透传鉴权信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPassThroughAuthInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPassThroughAuthInfoResponse
+        /// </returns>
+        public GetPassThroughAuthInfoResponse GetPassThroughAuthInfo(GetPassThroughAuthInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetPassThroughAuthInfoWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>云端获取透传鉴权信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPassThroughAuthInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPassThroughAuthInfoResponse
+        /// </returns>
+        public async Task<GetPassThroughAuthInfoResponse> GetPassThroughAuthInfoAsync(GetPassThroughAuthInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetPassThroughAuthInfoWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取网关校验Token</para>
         /// </summary>
         /// 
