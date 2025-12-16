@@ -4570,6 +4570,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             RunVideoAnalysisShrinkRequest request = new RunVideoAnalysisShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AddDocumentParam))
+            {
+                request.AddDocumentParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AddDocumentParam, "addDocumentParam", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeGenerateOptions))
             {
                 request.ExcludeGenerateOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeGenerateOptions, "excludeGenerateOptions", "json");
@@ -4595,6 +4599,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddDocumentParamShrink))
+            {
+                body["addDocumentParam"] = request.AddDocumentParamShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRoleRecognitionVideoUrl))
             {
                 body["autoRoleRecognitionVideoUrl"] = request.AutoRoleRecognitionVideoUrl;
@@ -4726,6 +4734,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             RunVideoAnalysisShrinkRequest request = new RunVideoAnalysisShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AddDocumentParam))
+            {
+                request.AddDocumentParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AddDocumentParam, "addDocumentParam", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeGenerateOptions))
             {
                 request.ExcludeGenerateOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeGenerateOptions, "excludeGenerateOptions", "json");
@@ -4751,6 +4763,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddDocumentParamShrink))
+            {
+                body["addDocumentParam"] = request.AddDocumentParamShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRoleRecognitionVideoUrl))
             {
                 body["autoRoleRecognitionVideoUrl"] = request.AutoRoleRecognitionVideoUrl;
@@ -5816,6 +5832,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SubmitVideoAnalysisTaskShrinkRequest request = new SubmitVideoAnalysisTaskShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AddDocumentParam))
+            {
+                request.AddDocumentParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AddDocumentParam, "addDocumentParam", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeGenerateOptions))
             {
                 request.ExcludeGenerateOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeGenerateOptions, "excludeGenerateOptions", "json");
@@ -5841,6 +5861,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddDocumentParamShrink))
+            {
+                body["addDocumentParam"] = request.AddDocumentParamShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRoleRecognitionVideoUrl))
             {
                 body["autoRoleRecognitionVideoUrl"] = request.AutoRoleRecognitionVideoUrl;
@@ -5968,6 +5992,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SubmitVideoAnalysisTaskShrinkRequest request = new SubmitVideoAnalysisTaskShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AddDocumentParam))
+            {
+                request.AddDocumentParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AddDocumentParam, "addDocumentParam", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeGenerateOptions))
             {
                 request.ExcludeGenerateOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeGenerateOptions, "excludeGenerateOptions", "json");
@@ -5993,6 +6021,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
                 request.VideoRolesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VideoRoles, "videoRoles", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddDocumentParamShrink))
+            {
+                body["addDocumentParam"] = request.AddDocumentParamShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRoleRecognitionVideoUrl))
             {
                 body["autoRoleRecognitionVideoUrl"] = request.AutoRoleRecognitionVideoUrl;

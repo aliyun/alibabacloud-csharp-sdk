@@ -9,6 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
     public class RunVideoAnalysisRequest : TeaModel {
+        [NameInMap("addDocumentParam")]
+        [Validation(Required=false)]
+        public RunVideoAnalysisRequestAddDocumentParam AddDocumentParam { get; set; }
+        public class RunVideoAnalysisRequestAddDocumentParam : TeaModel {
+            [NameInMap("datasetId")]
+            [Validation(Required=false)]
+            public long? DatasetId { get; set; }
+
+            [NameInMap("datasetName")]
+            [Validation(Required=false)]
+            public string DatasetName { get; set; }
+
+            [NameInMap("document")]
+            [Validation(Required=false)]
+            public RunVideoAnalysisRequestAddDocumentParamDocument Document { get; set; }
+            public class RunVideoAnalysisRequestAddDocumentParamDocument : TeaModel {
+                [NameInMap("docId")]
+                [Validation(Required=false)]
+                public string DocId { get; set; }
+
+                [NameInMap("title")]
+                [Validation(Required=false)]
+                public string Title { get; set; }
+
+            }
+
+        }
+
         [NameInMap("autoRoleRecognitionVideoUrl")]
         [Validation(Required=false)]
         public string AutoRoleRecognitionVideoUrl { get; set; }

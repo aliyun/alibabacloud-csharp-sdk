@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
     public class SubmitVideoAnalysisTaskShrinkRequest : TeaModel {
+        [NameInMap("addDocumentParam")]
+        [Validation(Required=false)]
+        public string AddDocumentParamShrink { get; set; }
+
         [NameInMap("autoRoleRecognitionVideoUrl")]
         [Validation(Required=false)]
         public string AutoRoleRecognitionVideoUrl { get; set; }

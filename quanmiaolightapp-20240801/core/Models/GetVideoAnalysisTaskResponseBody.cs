@@ -99,6 +99,32 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
                 [Validation(Required=false)]
                 public GetVideoAnalysisTaskResponseBodyDataPayloadOutput Output { get; set; }
                 public class GetVideoAnalysisTaskResponseBodyDataPayloadOutput : TeaModel {
+                    [NameInMap("addDatasetDocumentsResult")]
+                    [Validation(Required=false)]
+                    public GetVideoAnalysisTaskResponseBodyDataPayloadOutputAddDatasetDocumentsResult AddDatasetDocumentsResult { get; set; }
+                    public class GetVideoAnalysisTaskResponseBodyDataPayloadOutputAddDatasetDocumentsResult : TeaModel {
+                        [NameInMap("docId")]
+                        [Validation(Required=false)]
+                        public string DocId { get; set; }
+
+                        [NameInMap("docUuid")]
+                        [Validation(Required=false)]
+                        public string DocUuid { get; set; }
+
+                        [NameInMap("errorMessage")]
+                        [Validation(Required=false)]
+                        public string ErrorMessage { get; set; }
+
+                        [NameInMap("status")]
+                        [Validation(Required=false)]
+                        public long? Status { get; set; }
+
+                        [NameInMap("title")]
+                        [Validation(Required=false)]
+                        public string Title { get; set; }
+
+                    }
+
                     [NameInMap("resultJsonFileUrl")]
                     [Validation(Required=false)]
                     public string ResultJsonFileUrl { get; set; }
@@ -127,6 +153,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
                         [Validation(Required=false)]
                         public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoAnalysisResultUsage Usage { get; set; }
                         public class GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoAnalysisResultUsage : TeaModel {
+                            [NameInMap("imageTokens")]
+                            [Validation(Required=false)]
+                            public long? ImageTokens { get; set; }
+
                             /// <summary>
                             /// <b>Example:</b>
                             /// <para>0</para>
@@ -176,6 +206,62 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
                             [NameInMap("text")]
                             [Validation(Required=false)]
                             public string Text { get; set; }
+
+                        }
+
+                    }
+
+                    [NameInMap("videoCalculatorResult")]
+                    [Validation(Required=false)]
+                    public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoCalculatorResult VideoCalculatorResult { get; set; }
+                    public class GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoCalculatorResult : TeaModel {
+                        [NameInMap("items")]
+                        [Validation(Required=false)]
+                        public List<GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoCalculatorResultItems> Items { get; set; }
+                        public class GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoCalculatorResultItems : TeaModel {
+                            [NameInMap("inputExpense")]
+                            [Validation(Required=false)]
+                            public double? InputExpense { get; set; }
+
+                            [NameInMap("inputToken")]
+                            [Validation(Required=false)]
+                            public long? InputToken { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>xxx</para>
+                            /// </summary>
+                            [NameInMap("name")]
+                            [Validation(Required=false)]
+                            public string Name { get; set; }
+
+                            [NameInMap("outputExpense")]
+                            [Validation(Required=false)]
+                            public double? OutputExpense { get; set; }
+
+                            [NameInMap("outputToken")]
+                            [Validation(Required=false)]
+                            public long? OutputToken { get; set; }
+
+                            [NameInMap("time")]
+                            [Validation(Required=false)]
+                            public long? Time { get; set; }
+
+                            [NameInMap("timeExpense")]
+                            [Validation(Required=false)]
+                            public double? TimeExpense { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>0.098</para>
+                            /// </summary>
+                            [NameInMap("totalExpense")]
+                            [Validation(Required=false)]
+                            public double? TotalExpense { get; set; }
+
+                            [NameInMap("type")]
+                            [Validation(Required=false)]
+                            public string Type { get; set; }
 
                         }
 
