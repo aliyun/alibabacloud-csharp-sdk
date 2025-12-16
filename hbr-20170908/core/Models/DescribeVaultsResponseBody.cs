@@ -487,6 +487,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 
                 }
 
+                [NameInMap("ReplicationSourceOwnerId")]
+                [Validation(Required=false)]
+                public long? ReplicationSourceOwnerId { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the region in which the source vault resides. This parameter is valid only for remote backup vaults.</para>
                 /// 
@@ -521,6 +525,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public string ReplicationSourceVaultId { get; set; }
 
+                [NameInMap("ReplicationStatus")]
+                [Validation(Required=false)]
+                public string ReplicationStatus { get; set; }
+
+                [NameInMap("ReplicationTargetOwnerId")]
+                [Validation(Required=false)]
+                public long? ReplicationTargetOwnerId { get; set; }
+
                 /// <summary>
                 /// <para>Target region for remote backup repository.</para>
                 /// 
@@ -530,6 +542,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [NameInMap("ReplicationTargetRegionId")]
                 [Validation(Required=false)]
                 public string ReplicationTargetRegionId { get; set; }
+
+                [NameInMap("ReplicationTargetVaultId")]
+                [Validation(Required=false)]
+                public string ReplicationTargetVaultId { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the resource group.</para>
@@ -550,6 +566,16 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [NameInMap("Retention")]
                 [Validation(Required=false)]
                 public long? Retention { get; set; }
+
+                [NameInMap("RsTargetAccountIds")]
+                [Validation(Required=false)]
+                public DescribeVaultsResponseBodyVaultsVaultRsTargetAccountIds RsTargetAccountIds { get; set; }
+                public class DescribeVaultsResponseBodyVaultsVaultRsTargetAccountIds : TeaModel {
+                    [NameInMap("RsTargetAccountId")]
+                    [Validation(Required=false)]
+                    public List<long?> RsTargetAccountId { get; set; }
+
+                }
 
                 /// <summary>
                 /// <para>Indicates whether the backup search feature is enabled.</para>
@@ -733,6 +759,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [NameInMap("VaultName")]
                 [Validation(Required=false)]
                 public string VaultName { get; set; }
+
+                [NameInMap("VaultOwnerId")]
+                [Validation(Required=false)]
+                public long? VaultOwnerId { get; set; }
 
                 /// <summary>
                 /// <para>The ID of the region in which the backup vault resides.</para>

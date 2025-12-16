@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string KmsKeyId { get; set; }
 
+        [NameInMap("Replication")]
+        [Validation(Required=false)]
+        public bool? Replication { get; set; }
+
         /// <summary>
         /// <para>The name of the backup vault. The name must be 1 to 64 characters in length.</para>
         /// <para>This parameter is required.</para>

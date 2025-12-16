@@ -3624,6 +3624,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["KmsKeyId"] = request.KmsKeyId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replication))
+            {
+                query["Replication"] = request.Replication;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultName))
             {
                 query["VaultName"] = request.VaultName;
@@ -3703,6 +3707,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
             {
                 query["KmsKeyId"] = request.KmsKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replication))
+            {
+                query["Replication"] = request.Replication;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultName))
             {
@@ -3797,6 +3805,142 @@ namespace AlibabaCloud.SDK.Hbr20170908
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateVaultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建备份库复制</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVaultReplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVaultReplicationResponse
+        /// </returns>
+        public CreateVaultReplicationResponse CreateVaultReplicationWithOptions(CreateVaultReplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationSourceRegionId))
+            {
+                query["ReplicationSourceRegionId"] = request.ReplicationSourceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationSourceVaultId))
+            {
+                query["ReplicationSourceVaultId"] = request.ReplicationSourceVaultId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationTargetVaultId))
+            {
+                query["ReplicationTargetVaultId"] = request.ReplicationTargetVaultId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVaultReplication",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVaultReplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建备份库复制</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVaultReplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVaultReplicationResponse
+        /// </returns>
+        public async Task<CreateVaultReplicationResponse> CreateVaultReplicationWithOptionsAsync(CreateVaultReplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationSourceRegionId))
+            {
+                query["ReplicationSourceRegionId"] = request.ReplicationSourceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationSourceVaultId))
+            {
+                query["ReplicationSourceVaultId"] = request.ReplicationSourceVaultId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationTargetVaultId))
+            {
+                query["ReplicationTargetVaultId"] = request.ReplicationTargetVaultId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVaultReplication",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVaultReplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建备份库复制</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVaultReplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVaultReplicationResponse
+        /// </returns>
+        public CreateVaultReplicationResponse CreateVaultReplication(CreateVaultReplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateVaultReplicationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建备份库复制</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVaultReplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVaultReplicationResponse
+        /// </returns>
+        public async Task<CreateVaultReplicationResponse> CreateVaultReplicationAsync(CreateVaultReplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateVaultReplicationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5737,6 +5881,142 @@ namespace AlibabaCloud.SDK.Hbr20170908
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteVaultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭备份库复制</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVaultReplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVaultReplicationResponse
+        /// </returns>
+        public DeleteVaultReplicationResponse DeleteVaultReplicationWithOptions(DeleteVaultReplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationSourceRegionId))
+            {
+                query["ReplicationSourceRegionId"] = request.ReplicationSourceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationSourceVaultId))
+            {
+                query["ReplicationSourceVaultId"] = request.ReplicationSourceVaultId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationTargetVaultId))
+            {
+                query["ReplicationTargetVaultId"] = request.ReplicationTargetVaultId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVaultReplication",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVaultReplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭备份库复制</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVaultReplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVaultReplicationResponse
+        /// </returns>
+        public async Task<DeleteVaultReplicationResponse> DeleteVaultReplicationWithOptionsAsync(DeleteVaultReplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationSourceRegionId))
+            {
+                query["ReplicationSourceRegionId"] = request.ReplicationSourceRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationSourceVaultId))
+            {
+                query["ReplicationSourceVaultId"] = request.ReplicationSourceVaultId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplicationTargetVaultId))
+            {
+                query["ReplicationTargetVaultId"] = request.ReplicationTargetVaultId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVaultReplication",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVaultReplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭备份库复制</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVaultReplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVaultReplicationResponse
+        /// </returns>
+        public DeleteVaultReplicationResponse DeleteVaultReplication(DeleteVaultReplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteVaultReplicationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭备份库复制</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVaultReplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVaultReplicationResponse
+        /// </returns>
+        public async Task<DeleteVaultReplicationResponse> DeleteVaultReplicationAsync(DeleteVaultReplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteVaultReplicationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9412,6 +9692,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replication))
+            {
+                query["Replication"] = request.Replication;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -9427,6 +9711,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultName))
             {
                 query["VaultName"] = request.VaultName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultOwnerId))
+            {
+                query["VaultOwnerId"] = request.VaultOwnerId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultRegionId))
             {
@@ -9488,6 +9776,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replication))
+            {
+                query["Replication"] = request.Replication;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
@@ -9503,6 +9795,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultName))
             {
                 query["VaultName"] = request.VaultName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultOwnerId))
+            {
+                query["VaultOwnerId"] = request.VaultOwnerId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultRegionId))
             {

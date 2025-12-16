@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("Replication")]
+        [Validation(Required=false)]
+        public bool? Replication { get; set; }
+
         /// <summary>
         /// <para>Resource group ID.</para>
         /// 
@@ -106,6 +110,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [NameInMap("VaultName")]
         [Validation(Required=false)]
         public string VaultName { get; set; }
+
+        [NameInMap("VaultOwnerId")]
+        [Validation(Required=false)]
+        public long? VaultOwnerId { get; set; }
 
         /// <summary>
         /// <para>The region ID to which the backup vault belongs.</para>
