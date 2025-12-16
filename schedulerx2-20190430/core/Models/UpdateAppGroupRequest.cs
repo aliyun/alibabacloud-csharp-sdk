@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("EnableLog")]
+        [Validation(Required=false)]
+        public bool? EnableLog { get; set; }
+
         /// <summary>
         /// <para>The ID of the application. You can obtain the application ID on the <b>Application Management</b> page in the SchedulerX console.</para>
         /// <para>This parameter is required.</para>

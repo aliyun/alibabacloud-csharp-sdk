@@ -8,17 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
-    public class DeleteNamespaceRequest : TeaModel {
+    public class DeleteSchedulerxNotificationPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The namespace ID. You can obtain the namespace ID on the Namespaces page in the SchedulerX console.</para>
+        /// <para>The name of the notification policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</para>
+        /// <para>test-weekdays</para>
         /// </summary>
-        [NameInMap("Namespace")]
+        [NameInMap("PolicyName")]
         [Validation(Required=false)]
-        public string Namespace { get; set; }
+        public string PolicyName { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>

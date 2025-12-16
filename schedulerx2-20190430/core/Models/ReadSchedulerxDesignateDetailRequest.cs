@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ReadSchedulerxDesignateDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The information type of the specified workers that you want to query. Valid values: 1 and 2.</para>
+        /// <para>1: the IP address of the specified workers.
+        /// 2: the tags of the specified workers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +22,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? DesignateType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the application. You can obtain the application ID on the Applications page in the SchedulerX console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +33,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The job ID. You can obtain the ID on the Tasks page in the SchedulerX console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +44,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public long? JobId { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier (UID) of the namespace. You can obtain the namespace UID on the Namespaces page in the SchedulerX console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +55,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The source of the namespace. This parameter is required only for a special third party.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>schedulerx</para>
         /// </summary>
@@ -56,6 +65,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

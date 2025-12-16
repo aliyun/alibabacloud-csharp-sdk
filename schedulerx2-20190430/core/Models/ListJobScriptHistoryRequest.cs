@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ListJobScriptHistoryRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can obtain the application ID on the Applications page in the SchedulerX console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The job ID. You can obtain the job ID on the Tasks page in the SchedulerX console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public long? JobId { get; set; }
 
         /// <summary>
+        /// <para>The namespace ID. You can obtain the namespace ID on the Namespaces page in the SchedulerX console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The source of the namespace. This parameter is required only for a special third party.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>schedulerx</para>
         /// </summary>
@@ -48,6 +53,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ManageSchedulerxJobSyncRequest : TeaModel {
         /// <summary>
+        /// <para>The list of task IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("JobIdList")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public List<long?> JobIdList { get; set; }
 
         /// <summary>
+        /// <para>The source of the namespace. Required only for specific third-party cases.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>schedulerx</para>
         /// </summary>
@@ -25,6 +28,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
+        /// <para>The source application group to which the task belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,6 +39,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string OriginalGroupId { get; set; }
 
         /// <summary>
+        /// <para>The source namespace where the task resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string OriginalNamespace { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,6 +61,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the destination application group to which the task will be synchronized.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,6 +72,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string TargetGroupId { get; set; }
 
         /// <summary>
+        /// <para>The destination namespace to which the task will be synchronized.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

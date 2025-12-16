@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ListJobScriptHistoryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,24 +20,22 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>The information about the jobs.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListJobScriptHistoryResponseBodyData Data { get; set; }
         public class ListJobScriptHistoryResponseBodyData : TeaModel {
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>The information about the job\&quot;s historical scripts.</para>
             /// </summary>
             [NameInMap("JobScriptHistoryInfos")]
             [Validation(Required=false)]
             public List<ListJobScriptHistoryResponseBodyDataJobScriptHistoryInfos> JobScriptHistoryInfos { get; set; }
             public class ListJobScriptHistoryResponseBodyDataJobScriptHistoryInfos : TeaModel {
                 /// <summary>
+                /// <para>The creation time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-03-12 14:52:42</para>
                 /// </summary>
@@ -44,6 +44,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
+                /// <para>The creator.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1272118248844842</para>
                 /// </summary>
@@ -51,11 +53,32 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 [Validation(Required=false)]
                 public string Creator { get; set; }
 
+                /// <summary>
+                /// <para>The script content.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>#!/bin/bash</para>
+                /// <h1>The following are predefined variables provided by the system. You can use them to obtain information about the job run.</h1>
+                /// <para>echo &quot;Job parameters: #{schedulerx.jobParameters}&quot;
+                /// echo &quot;Shard index: #{schedulerx.shardingId}&quot;
+                /// echo &quot;Shard parameters: #{schedulerx.shardingParameters}&quot;
+                /// echo &quot;Total number of shards: #{schedulerx.shardingNum}&quot;
+                /// echo &quot;Current retry count: #{schedulerx.attempt}&quot;
+                /// echo &quot;Trigger type: #{schedulerx.triggerType}&quot;
+                /// echo &quot;Scheduled timestamp: #{schedulerx.scheduleTime}&quot;
+                /// echo &quot;Data timestamp: #{schedulerx.dataTime}&quot;</para>
+                /// <h1>The output of the last line will be returned as the result</h1>
+                /// <para>echo &quot;hello world&quot;</para>
+                /// <h1>exit 1 indicates failure</h1>
+                /// <para>exit 0</para>
+                /// </summary>
                 [NameInMap("ScriptContent")]
                 [Validation(Required=false)]
                 public string ScriptContent { get; set; }
 
                 /// <summary>
+                /// <para>The description of the script version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>init version</para>
                 /// </summary>
@@ -68,6 +91,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
+        /// <para>The additional information returned only if an error occurs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>job is not existed, jobId=302</para>
         /// </summary>
@@ -76,6 +101,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4F68ABED-AC31-4412-9297-D9A8F0401108</para>
         /// </summary>
@@ -84,6 +111,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>true</para>
+        /// <para>false</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

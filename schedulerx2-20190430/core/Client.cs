@@ -1638,6 +1638,294 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSchedulerxCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSchedulerxCalendarResponse
+        /// </returns>
+        public CreateSchedulerxCalendarResponse CreateSchedulerxCalendarWithOptions(CreateSchedulerxCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                body["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonthDaysContent))
+            {
+                body["MonthDaysContent"] = request.MonthDaysContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                body["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSchedulerxCalendar",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSchedulerxCalendarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSchedulerxCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSchedulerxCalendarResponse
+        /// </returns>
+        public async Task<CreateSchedulerxCalendarResponse> CreateSchedulerxCalendarWithOptionsAsync(CreateSchedulerxCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                body["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonthDaysContent))
+            {
+                body["MonthDaysContent"] = request.MonthDaysContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                body["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSchedulerxCalendar",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSchedulerxCalendarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSchedulerxCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSchedulerxCalendarResponse
+        /// </returns>
+        public CreateSchedulerxCalendarResponse CreateSchedulerxCalendar(CreateSchedulerxCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSchedulerxCalendarWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSchedulerxCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSchedulerxCalendarResponse
+        /// </returns>
+        public async Task<CreateSchedulerxCalendarResponse> CreateSchedulerxCalendarAsync(CreateSchedulerxCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSchedulerxCalendarWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public CreateSchedulerxNotificationPolicyResponse CreateSchedulerxNotificationPolicyWithOptions(CreateSchedulerxNotificationPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelTimeRange))
+            {
+                body["ChannelTimeRange"] = request.ChannelTimeRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                body["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSchedulerxNotificationPolicy",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSchedulerxNotificationPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public async Task<CreateSchedulerxNotificationPolicyResponse> CreateSchedulerxNotificationPolicyWithOptionsAsync(CreateSchedulerxNotificationPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelTimeRange))
+            {
+                body["ChannelTimeRange"] = request.ChannelTimeRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                body["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSchedulerxNotificationPolicy",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSchedulerxNotificationPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public CreateSchedulerxNotificationPolicyResponse CreateSchedulerxNotificationPolicy(CreateSchedulerxNotificationPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSchedulerxNotificationPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public async Task<CreateSchedulerxNotificationPolicyResponse> CreateSchedulerxNotificationPolicyAsync(CreateSchedulerxNotificationPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSchedulerxNotificationPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a workflow. By default, the created workflow is disabled. After you update the directed acyclic graph (DAG) of the workflow, you must manually or call the corresponding operation to enable the workflow. You can call this operation only in the professional edition.</para>
         /// </summary>
         /// 
@@ -2086,7 +2374,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除命名空间</para>
+        /// <para>Deletes a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2132,7 +2420,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除命名空间</para>
+        /// <para>Deletes a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2178,7 +2466,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除命名空间</para>
+        /// <para>Deletes a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2196,7 +2484,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除命名空间</para>
+        /// <para>Deletes a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2354,6 +2642,270 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteRouteStrategyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSchedulerxCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSchedulerxCalendarResponse
+        /// </returns>
+        public DeleteSchedulerxCalendarResponse DeleteSchedulerxCalendarWithOptions(DeleteSchedulerxCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                body["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                body["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSchedulerxCalendar",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSchedulerxCalendarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSchedulerxCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSchedulerxCalendarResponse
+        /// </returns>
+        public async Task<DeleteSchedulerxCalendarResponse> DeleteSchedulerxCalendarWithOptionsAsync(DeleteSchedulerxCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                body["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                body["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSchedulerxCalendar",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSchedulerxCalendarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSchedulerxCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSchedulerxCalendarResponse
+        /// </returns>
+        public DeleteSchedulerxCalendarResponse DeleteSchedulerxCalendar(DeleteSchedulerxCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSchedulerxCalendarWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSchedulerxCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSchedulerxCalendarResponse
+        /// </returns>
+        public async Task<DeleteSchedulerxCalendarResponse> DeleteSchedulerxCalendarAsync(DeleteSchedulerxCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSchedulerxCalendarWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public DeleteSchedulerxNotificationPolicyResponse DeleteSchedulerxNotificationPolicyWithOptions(DeleteSchedulerxNotificationPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                body["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSchedulerxNotificationPolicy",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSchedulerxNotificationPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public async Task<DeleteSchedulerxNotificationPolicyResponse> DeleteSchedulerxNotificationPolicyWithOptionsAsync(DeleteSchedulerxNotificationPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                body["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSchedulerxNotificationPolicy",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSchedulerxNotificationPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public DeleteSchedulerxNotificationPolicyResponse DeleteSchedulerxNotificationPolicy(DeleteSchedulerxNotificationPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSchedulerxNotificationPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public async Task<DeleteSchedulerxNotificationPolicyResponse> DeleteSchedulerxNotificationPolicyAsync(DeleteSchedulerxNotificationPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSchedulerxNotificationPolicyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3986,7 +4538,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询概览数据信息</para>
+        /// <para>Retrieves job scheduling data for Professional Edition applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4056,7 +4608,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询概览数据信息</para>
+        /// <para>Retrieves job scheduling data for Professional Edition applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4126,7 +4678,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询概览数据信息</para>
+        /// <para>Retrieves job scheduling data for Professional Edition applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4144,7 +4696,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询概览数据信息</para>
+        /// <para>Retrieves job scheduling data for Professional Edition applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4854,7 +5406,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务脚本历史列表</para>
+        /// <para>Queries historical scripts of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4912,7 +5464,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务脚本历史列表</para>
+        /// <para>Queries historical scripts of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4970,7 +5522,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务脚本历史列表</para>
+        /// <para>Queries historical scripts of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4988,7 +5540,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务脚本历史列表</para>
+        /// <para>Queries historical scripts of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5334,6 +5886,182 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the information of a workflow.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkFlowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkFlowsResponse
+        /// </returns>
+        public ListWorkFlowsResponse ListWorkFlowsWithOptions(ListWorkFlowsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                query["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowName))
+            {
+                query["WorkflowName"] = request.WorkflowName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkFlows",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkFlowsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a workflow.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkFlowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkFlowsResponse
+        /// </returns>
+        public async Task<ListWorkFlowsResponse> ListWorkFlowsWithOptionsAsync(ListWorkFlowsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceSource))
+            {
+                query["NamespaceSource"] = request.NamespaceSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowName))
+            {
+                query["WorkflowName"] = request.WorkflowName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkFlows",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkFlowsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a workflow.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkFlowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkFlowsResponse
+        /// </returns>
+        public ListWorkFlowsResponse ListWorkFlows(ListWorkFlowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListWorkFlowsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of a workflow.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkFlowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkFlowsResponse
+        /// </returns>
+        public async Task<ListWorkFlowsResponse> ListWorkFlowsAsync(ListWorkFlowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListWorkFlowsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the execution history of a workflow. You can call this operation only in the professional edition.</para>
         /// </summary>
         /// 
@@ -5446,7 +6174,159 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步任务</para>
+        /// <para>Updates a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManageSchedulerxCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageSchedulerxCalendarResponse
+        /// </returns>
+        public ManageSchedulerxCalendarResponse ManageSchedulerxCalendarWithOptions(ManageSchedulerxCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                body["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Incremental))
+            {
+                body["Incremental"] = request.Incremental;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonthDaysContent))
+            {
+                body["MonthDaysContent"] = request.MonthDaysContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                body["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ManageSchedulerxCalendar",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ManageSchedulerxCalendarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManageSchedulerxCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageSchedulerxCalendarResponse
+        /// </returns>
+        public async Task<ManageSchedulerxCalendarResponse> ManageSchedulerxCalendarWithOptionsAsync(ManageSchedulerxCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                body["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Incremental))
+            {
+                body["Incremental"] = request.Incremental;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonthDaysContent))
+            {
+                body["MonthDaysContent"] = request.MonthDaysContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                body["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ManageSchedulerxCalendar",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ManageSchedulerxCalendarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManageSchedulerxCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageSchedulerxCalendarResponse
+        /// </returns>
+        public ManageSchedulerxCalendarResponse ManageSchedulerxCalendar(ManageSchedulerxCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ManageSchedulerxCalendarWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManageSchedulerxCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageSchedulerxCalendarResponse
+        /// </returns>
+        public async Task<ManageSchedulerxCalendarResponse> ManageSchedulerxCalendarAsync(ManageSchedulerxCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ManageSchedulerxCalendarWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes tasks across namespaces.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5518,7 +6398,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步任务</para>
+        /// <para>Synchronizes tasks across namespaces.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5590,7 +6470,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步任务</para>
+        /// <para>Synchronizes tasks across namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5608,7 +6488,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步任务</para>
+        /// <para>Synchronizes tasks across namespaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5626,7 +6506,319 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取机器详细信息</para>
+        /// <para>Updates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManageSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public ManageSchedulerxNotificationPolicyResponse ManageSchedulerxNotificationPolicyWithOptions(ManageSchedulerxNotificationPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelTimeRange))
+            {
+                body["ChannelTimeRange"] = request.ChannelTimeRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                body["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ManageSchedulerxNotificationPolicy",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ManageSchedulerxNotificationPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManageSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public async Task<ManageSchedulerxNotificationPolicyResponse> ManageSchedulerxNotificationPolicyWithOptionsAsync(ManageSchedulerxNotificationPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelTimeRange))
+            {
+                body["ChannelTimeRange"] = request.ChannelTimeRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                body["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ManageSchedulerxNotificationPolicy",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ManageSchedulerxNotificationPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManageSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public ManageSchedulerxNotificationPolicyResponse ManageSchedulerxNotificationPolicy(ManageSchedulerxNotificationPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ManageSchedulerxNotificationPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ManageSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ManageSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public async Task<ManageSchedulerxNotificationPolicyResponse> ManageSchedulerxNotificationPolicyAsync(ManageSchedulerxNotificationPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ManageSchedulerxNotificationPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the information of a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxCalendarResponse
+        /// </returns>
+        public ReadSchedulerxCalendarResponse ReadSchedulerxCalendarWithOptions(ReadSchedulerxCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                query["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FetchCalendarDetail))
+            {
+                query["FetchCalendarDetail"] = request.FetchCalendarDetail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FetchSystemCalendar))
+            {
+                query["FetchSystemCalendar"] = request.FetchSystemCalendar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                query["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadSchedulerxCalendar",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadSchedulerxCalendarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the information of a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxCalendarResponse
+        /// </returns>
+        public async Task<ReadSchedulerxCalendarResponse> ReadSchedulerxCalendarWithOptionsAsync(ReadSchedulerxCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                query["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FetchCalendarDetail))
+            {
+                query["FetchCalendarDetail"] = request.FetchCalendarDetail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FetchSystemCalendar))
+            {
+                query["FetchSystemCalendar"] = request.FetchSystemCalendar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                query["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadSchedulerxCalendar",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadSchedulerxCalendarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the information of a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxCalendarResponse
+        /// </returns>
+        public ReadSchedulerxCalendarResponse ReadSchedulerxCalendar(ReadSchedulerxCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReadSchedulerxCalendarWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the information of a calendar.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxCalendarResponse
+        /// </returns>
+        public async Task<ReadSchedulerxCalendarResponse> ReadSchedulerxCalendarAsync(ReadSchedulerxCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReadSchedulerxCalendarWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries detailed information of the workers specified by a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5688,7 +6880,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取机器详细信息</para>
+        /// <para>Queries detailed information of the workers specified by a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5750,7 +6942,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取机器详细信息</para>
+        /// <para>Queries detailed information of the workers specified by a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5768,7 +6960,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取机器详细信息</para>
+        /// <para>Queries detailed information of the workers specified by a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5786,7 +6978,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定机器基本信息</para>
+        /// <para>Queries the basic information of specified workers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5844,7 +7036,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定机器基本信息</para>
+        /// <para>Queries the basic information of specified workers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5902,7 +7094,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定机器基本信息</para>
+        /// <para>Queries the basic information of specified workers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5920,7 +7112,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定机器基本信息</para>
+        /// <para>Queries the basic information of specified workers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5934,6 +7126,150 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ReadSchedulerxDesignateInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries notification policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public ReadSchedulerxNotificationPolicyResponse ReadSchedulerxNotificationPolicyWithOptions(ReadSchedulerxNotificationPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                query["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadSchedulerxNotificationPolicy",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadSchedulerxNotificationPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries notification policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public async Task<ReadSchedulerxNotificationPolicyResponse> ReadSchedulerxNotificationPolicyWithOptionsAsync(ReadSchedulerxNotificationPolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyName))
+            {
+                query["PolicyName"] = request.PolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadSchedulerxNotificationPolicy",
+                Version = "2019-04-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadSchedulerxNotificationPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries notification policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public ReadSchedulerxNotificationPolicyResponse ReadSchedulerxNotificationPolicy(ReadSchedulerxNotificationPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReadSchedulerxNotificationPolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries notification policies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadSchedulerxNotificationPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadSchedulerxNotificationPolicyResponse
+        /// </returns>
+        public async Task<ReadSchedulerxNotificationPolicyResponse> ReadSchedulerxNotificationPolicyAsync(ReadSchedulerxNotificationPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReadSchedulerxNotificationPolicyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6883,6 +8219,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableLog))
+            {
+                query["EnableLog"] = request.EnableLog;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
@@ -6956,6 +8296,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableLog))
+            {
+                query["EnableLog"] = request.EnableLog;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
@@ -7462,7 +8806,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务执行脚本</para>
+        /// <para>Updates the execution script of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7528,7 +8872,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务执行脚本</para>
+        /// <para>Updates the execution script of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7594,7 +8938,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务执行脚本</para>
+        /// <para>Updates the execution script of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7612,7 +8956,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务执行脚本</para>
+        /// <para>Updates the execution script of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7630,7 +8974,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新命名空间</para>
+        /// <para>Updates a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7684,7 +9028,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新命名空间</para>
+        /// <para>Updates a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7738,7 +9082,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新命名空间</para>
+        /// <para>Updates a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7756,7 +9100,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新命名空间</para>
+        /// <para>Updates a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">

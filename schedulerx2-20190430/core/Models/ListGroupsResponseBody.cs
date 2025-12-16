@@ -83,6 +83,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                [NameInMap("EnableLog")]
+                [Validation(Required=false)]
+                public bool? EnableLog { get; set; }
+
                 /// <summary>
                 /// <para>The application ID.</para>
                 /// 

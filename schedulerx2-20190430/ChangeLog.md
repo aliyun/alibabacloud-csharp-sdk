@@ -1,3 +1,18 @@
+2025-12-16 Version: 1.6.0
+- Support API CreateSchedulerxCalendar.
+- Support API CreateSchedulerxNotificationPolicy.
+- Support API DeleteSchedulerxCalendar.
+- Support API DeleteSchedulerxNotificationPolicy.
+- Support API ListWorkFlows.
+- Support API ManageSchedulerxCalendar.
+- Support API ManageSchedulerxNotificationPolicy.
+- Support API ReadSchedulerxCalendar.
+- Support API ReadSchedulerxNotificationPolicy.
+- Update API GetAppGroup: add response parameters Body.Data.EnableLog.
+- Update API ListGroups: add response parameters Body.Data.AppGroups.$.EnableLog.
+- Update API UpdateAppGroup: add request parameters EnableLog.
+
+
 2025-10-27 Version: 1.5.1
 - Update API CreateAppGroup: add request parameters NotificationPolicyName.
 - Update API GetAppGroup: add response parameters Body.Data.NotificationPolicyName.

@@ -8,37 +8,36 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
-    public class UpdateNamespaceRequest : TeaModel {
+    public class ReadSchedulerxNotificationPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the namespace.</para>
+        /// <para>The maximum number of entries returned. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("Description")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string Description { get; set; }
+        public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The namespace ID. You can obtain the namespace ID on the Namespaces page in the SchedulerX console.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The cursor for pagination. Leave this parameter empty for the first request. When the returned value is empty, all data has been retrieved.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</para>
+        /// <para>O39nXKu5XafATl3/cJjSJw==</para>
         /// </summary>
-        [NameInMap("Namespace")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public string Namespace { get; set; }
+        public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace.</para>
+        /// <para>The name of the notification policy. Supports fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>test-weekdays</para>
         /// </summary>
-        [NameInMap("NamespaceName")]
+        [NameInMap("PolicyName")]
         [Validation(Required=false)]
-        public string NamespaceName { get; set; }
+        public string PolicyName { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>

@@ -8,17 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
-    public class DeleteNamespaceRequest : TeaModel {
+    public class DeleteSchedulerxCalendarRequest : TeaModel {
         /// <summary>
-        /// <para>The namespace ID. You can obtain the namespace ID on the Namespaces page in the SchedulerX console.</para>
+        /// <para>The calendar name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</para>
+        /// <para>2025workday</para>
         /// </summary>
-        [NameInMap("Namespace")]
+        [NameInMap("CalendarName")]
         [Validation(Required=false)]
-        public string Namespace { get; set; }
+        public string CalendarName { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>
@@ -30,6 +30,17 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// <para>The year.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2025</para>
+        /// </summary>
+        [NameInMap("Year")]
+        [Validation(Required=false)]
+        public int? Year { get; set; }
 
     }
 

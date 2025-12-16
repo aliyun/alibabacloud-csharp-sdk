@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ReadSchedulerxDesignateInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The access denial details.</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public ReadSchedulerxDesignateInfoResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class ReadSchedulerxDesignateInfoResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
+            /// <para>The authentication operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>edas:ReadSchedulerxDesignateInfo</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public string AuthAction { get; set; }
 
             /// <summary>
+            /// <para>The principal name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>209312833131416xxx</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
+            /// <para>The principal account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1827811800526xxx</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
+            /// <para>The principal type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SubUser</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
+            /// <para>The encoded diagnostic message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AQFn/cLPZ/3Cz0YxQkZBMjVGLTY0REUtNTlGNS05NzUwLTgyMUE4M0MwMTFDRQ==</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
+            /// <para>The permission denial type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
+            /// <para>The policy type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AccountLevelIdentityBasedPolicy</para>
             /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -98,6 +117,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public List<ReadSchedulerxDesignateInfoResponseBodyDataDesignateDetailVos> DesignateDetailVos { get; set; }
             public class ReadSchedulerxDesignateInfoResponseBodyDataDesignateDetailVos : TeaModel {
                 /// <summary>
+                /// <para>The status of the workers. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>FREE: idle.</description></item>
+                /// <item><description>LOAD5_BUSY: The average of the latest five values of CPU workload is too high.</description></item>
+                /// <item><description>HEAP5_BUSY: The average of the latest five values of heap memory usage is too high.</description></item>
+                /// <item><description>DISK_BUSY: The disk usage is too high.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>FREE</para>
                 /// </summary>
@@ -106,6 +133,12 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string Busy { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the workers are specified.</para>
+                /// <list type="bullet">
+                /// <item><description>true: The workers are specified.</description></item>
+                /// <item><description>false: The workers are not specified.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -114,6 +147,12 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public bool? Checked { get; set; }
 
                 /// <summary>
+                /// <para>The information returned based on the value of the DesignateType parameter.</para>
+                /// <list type="bullet">
+                /// <item><description>If you set the DesignateType parameter to 2, the tags of the workers are returned.</description></item>
+                /// <item><description>If you set the DesignateType parameter to 1, the IP addresses of the workers are returned.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10.52.169.25</para>
                 /// </summary>
@@ -121,11 +160,16 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The metric values.</para>
+                /// </summary>
                 [NameInMap("Metrics")]
                 [Validation(Required=false)]
                 public ReadSchedulerxDesignateInfoResponseBodyDataDesignateDetailVosMetrics Metrics { get; set; }
                 public class ReadSchedulerxDesignateInfoResponseBodyDataDesignateDetailVosMetrics : TeaModel {
                     /// <summary>
+                    /// <para>The most recent value of CPU workload.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -134,6 +178,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public double? CpuLoad1 { get; set; }
 
                     /// <summary>
+                    /// <para>The average of the latest five values of CPU workload.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -142,6 +188,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public double? CpuLoad5 { get; set; }
 
                     /// <summary>
+                    /// <para>The number of available CPU processors.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -150,6 +198,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public int? CpuProcessors { get; set; }
 
                     /// <summary>
+                    /// <para>The total disk capacity in MB.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1024</para>
                     /// </summary>
@@ -158,6 +208,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public int? DiskMax { get; set; }
 
                     /// <summary>
+                    /// <para>The disk usage.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0.19142496008515167</para>
                     /// </summary>
@@ -166,6 +218,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public double? DiskUsage { get; set; }
 
                     /// <summary>
+                    /// <para>The used disk space in MB.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>148</para>
                     /// </summary>
@@ -174,6 +228,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public int? DiskUsed { get; set; }
 
                     /// <summary>
+                    /// <para>The number of job executions.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>56</para>
                     /// </summary>
@@ -182,6 +238,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public long? ExecCount { get; set; }
 
                     /// <summary>
+                    /// <para>The most recent value of heap memory usage.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0.06072874493927125</para>
                     /// </summary>
@@ -190,6 +248,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public double? Heap1Usage { get; set; }
 
                     /// <summary>
+                    /// <para>The most recent value of used heap memory in MB.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>14</para>
                     /// </summary>
@@ -198,6 +258,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public double? Heap1Used { get; set; }
 
                     /// <summary>
+                    /// <para>The average of the latest five values of heap memory usage.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0.06477732793522267</para>
                     /// </summary>
@@ -206,6 +268,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public double? Heap5Usage { get; set; }
 
                     /// <summary>
+                    /// <para>The maximum heap memory in MB.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>500</para>
                     /// </summary>
@@ -214,6 +278,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public int? HeapMax { get; set; }
 
                     /// <summary>
+                    /// <para>The number of available resources in the shared pool.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>72</para>
                     /// </summary>
@@ -222,6 +288,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public int? SharePoolAvailableSize { get; set; }
 
                     /// <summary>
+                    /// <para>The queue size in the shared pool.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -232,6 +300,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 }
 
                 /// <summary>
+                /// <para>Indicates whether the workers are offline.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>fasle</para>
                 /// </summary>
@@ -240,6 +310,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public bool? Offline { get; set; }
 
                 /// <summary>
+                /// <para>The number of workers.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -248,6 +320,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public int? Size { get; set; }
 
                 /// <summary>
+                /// <para>The startup method of the workers.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>pod</para>
                 /// </summary>
@@ -256,6 +330,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string Starter { get; set; }
 
                 /// <summary>
+                /// <para>The version of the workers.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1.12.5</para>
                 /// </summary>
@@ -266,6 +342,15 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             }
 
             /// <summary>
+            /// <para>The information type of the specified workers.</para>
+            /// <list type="bullet">
+            /// <item><description>1: the IP address of the specified workers.</description></item>
+            /// <item><description>2: the tags of the specified workers.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> The default value of the DesignateType parameter is 1.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -274,6 +359,15 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public int? DesignateType { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether to enable failover for the workers. If you set this parameter to true, the job is scheduled to other workers when the specified workers go offline.</para>
+            /// <list type="bullet">
+            /// <item><description>true: enables failover for the workers.</description></item>
+            /// <item><description>false: disables failover for the workers.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> The default value of the Transferable parameter is false.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -284,6 +378,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
+        /// <para>The error message returned only if an error occurs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>jobId=xxx is not existed</para>
         /// </summary>
@@ -292,6 +388,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4F68ABED-AC31-4412-9297-D9A8F0401108</para>
         /// </summary>
@@ -300,6 +398,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
