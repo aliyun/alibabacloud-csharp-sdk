@@ -9354,7 +9354,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <para>获取数据集文档</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetDatasetDocumentRequest
         /// </param>
         /// <param name="runtime">
@@ -9364,9 +9364,15 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <returns>
         /// GetDatasetDocumentResponse
         /// </returns>
-        public GetDatasetDocumentResponse GetDatasetDocumentWithOptions(GetDatasetDocumentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetDatasetDocumentResponse GetDatasetDocumentWithOptions(GetDatasetDocumentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDatasetDocumentShrinkRequest request = new GetDatasetDocumentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IncludeFields))
+            {
+                request.IncludeFieldsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IncludeFields, "IncludeFields", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
             {
@@ -9383,6 +9389,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocUuid))
             {
                 body["DocUuid"] = request.DocUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeFieldsShrink))
+            {
+                body["IncludeFields"] = request.IncludeFieldsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -9412,7 +9422,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <para>获取数据集文档</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetDatasetDocumentRequest
         /// </param>
         /// <param name="runtime">
@@ -9422,9 +9432,15 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         /// <returns>
         /// GetDatasetDocumentResponse
         /// </returns>
-        public async Task<GetDatasetDocumentResponse> GetDatasetDocumentWithOptionsAsync(GetDatasetDocumentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetDatasetDocumentResponse> GetDatasetDocumentWithOptionsAsync(GetDatasetDocumentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDatasetDocumentShrinkRequest request = new GetDatasetDocumentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IncludeFields))
+            {
+                request.IncludeFieldsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IncludeFields, "IncludeFields", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
             {
@@ -9441,6 +9457,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocUuid))
             {
                 body["DocUuid"] = request.DocUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeFieldsShrink))
+            {
+                body["IncludeFields"] = request.IncludeFieldsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {

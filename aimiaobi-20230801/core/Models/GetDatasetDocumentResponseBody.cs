@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string DocId { get; set; }
 
+            [NameInMap("DocType")]
+            [Validation(Required=false)]
+            public string DocType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>内部文档唯一ID</para>
@@ -48,6 +52,52 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("DocUuid")]
             [Validation(Required=false)]
             public string DocUuid { get; set; }
+
+            [NameInMap("Metadata")]
+            [Validation(Required=false)]
+            public GetDatasetDocumentResponseBodyDataMetadata Metadata { get; set; }
+            public class GetDatasetDocumentResponseBodyDataMetadata : TeaModel {
+                [NameInMap("AsrSentences")]
+                [Validation(Required=false)]
+                public List<GetDatasetDocumentResponseBodyDataMetadataAsrSentences> AsrSentences { get; set; }
+                public class GetDatasetDocumentResponseBodyDataMetadataAsrSentences : TeaModel {
+                    [NameInMap("EndTime")]
+                    [Validation(Required=false)]
+                    public long? EndTime { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public long? StartTime { get; set; }
+
+                    [NameInMap("Text")]
+                    [Validation(Required=false)]
+                    public string Text { get; set; }
+
+                }
+
+                [NameInMap("Text")]
+                [Validation(Required=false)]
+                public string Text { get; set; }
+
+                [NameInMap("VideoShots")]
+                [Validation(Required=false)]
+                public List<GetDatasetDocumentResponseBodyDataMetadataVideoShots> VideoShots { get; set; }
+                public class GetDatasetDocumentResponseBodyDataMetadataVideoShots : TeaModel {
+                    [NameInMap("EndTime")]
+                    [Validation(Required=false)]
+                    public long? EndTime { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public long? StartTime { get; set; }
+
+                    [NameInMap("Text")]
+                    [Validation(Required=false)]
+                    public string Text { get; set; }
+
+                }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>
@@ -64,6 +114,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("SourceFrom")]
             [Validation(Required=false)]
             public string SourceFrom { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public int? Status { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

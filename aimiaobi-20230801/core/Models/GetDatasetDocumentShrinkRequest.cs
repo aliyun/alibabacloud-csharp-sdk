@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
-    public class GetDatasetDocumentRequest : TeaModel {
+    public class GetDatasetDocumentShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         [NameInMap("IncludeFields")]
         [Validation(Required=false)]
-        public List<string> IncludeFields { get; set; }
+        public string IncludeFieldsShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

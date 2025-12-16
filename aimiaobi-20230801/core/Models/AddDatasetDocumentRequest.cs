@@ -96,6 +96,52 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Extend3 { get; set; }
 
+            [NameInMap("Metadata")]
+            [Validation(Required=false)]
+            public AddDatasetDocumentRequestDocumentMetadata Metadata { get; set; }
+            public class AddDatasetDocumentRequestDocumentMetadata : TeaModel {
+                [NameInMap("AsrSentences")]
+                [Validation(Required=false)]
+                public List<AddDatasetDocumentRequestDocumentMetadataAsrSentences> AsrSentences { get; set; }
+                public class AddDatasetDocumentRequestDocumentMetadataAsrSentences : TeaModel {
+                    [NameInMap("EndTime")]
+                    [Validation(Required=false)]
+                    public long? EndTime { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public long? StartTime { get; set; }
+
+                    [NameInMap("Text")]
+                    [Validation(Required=false)]
+                    public string Text { get; set; }
+
+                }
+
+                [NameInMap("Text")]
+                [Validation(Required=false)]
+                public string Text { get; set; }
+
+                [NameInMap("VideoShots")]
+                [Validation(Required=false)]
+                public List<AddDatasetDocumentRequestDocumentMetadataVideoShots> VideoShots { get; set; }
+                public class AddDatasetDocumentRequestDocumentMetadataVideoShots : TeaModel {
+                    [NameInMap("EndTime")]
+                    [Validation(Required=false)]
+                    public long? EndTime { get; set; }
+
+                    [NameInMap("StartTime")]
+                    [Validation(Required=false)]
+                    public long? StartTime { get; set; }
+
+                    [NameInMap("Text")]
+                    [Validation(Required=false)]
+                    public string Text { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>模型名称 todo 商业化 仅个别账号可传入</para>
