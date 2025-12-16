@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public string Language { get; set; }
 
+                [NameInMap("McpServerIds")]
+                [Validation(Required=false)]
+                public List<string> McpServerIds { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>ANALYSIS</para>
