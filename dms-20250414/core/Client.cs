@@ -5871,6 +5871,182 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>ListFileUpload</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFileUploadRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFileUploadResponse
+        /// </returns>
+        public ListFileUploadResponse ListFileUploadWithOptions(ListFileUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallFrom))
+            {
+                query["CallFrom"] = request.CallFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileCategory))
+            {
+                query["FileCategory"] = request.FileCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFrom))
+            {
+                query["FileFrom"] = request.FileFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortColumn))
+            {
+                query["SortColumn"] = request.SortColumn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortDirection))
+            {
+                query["SortDirection"] = request.SortDirection;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFileUpload",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFileUploadResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListFileUpload</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFileUploadRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFileUploadResponse
+        /// </returns>
+        public async Task<ListFileUploadResponse> ListFileUploadWithOptionsAsync(ListFileUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallFrom))
+            {
+                query["CallFrom"] = request.CallFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileCategory))
+            {
+                query["FileCategory"] = request.FileCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFrom))
+            {
+                query["FileFrom"] = request.FileFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortColumn))
+            {
+                query["SortColumn"] = request.SortColumn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortDirection))
+            {
+                query["SortDirection"] = request.SortDirection;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFileUpload",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFileUploadResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListFileUpload</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFileUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFileUploadResponse
+        /// </returns>
+        public ListFileUploadResponse ListFileUpload(ListFileUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListFileUploadWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListFileUpload</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFileUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFileUploadResponse
+        /// </returns>
+        public async Task<ListFileUploadResponse> ListFileUploadAsync(ListFileUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListFileUploadWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>SendChatMessage</para>
         /// </summary>
         /// 
