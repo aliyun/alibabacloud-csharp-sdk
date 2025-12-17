@@ -13821,6 +13821,200 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceResponse
+        /// </returns>
+        public UpdateServiceResponse UpdateServiceWithOptions(string serviceId, UpdateServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Addresses))
+            {
+                body["addresses"] = request.Addresses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentServiceConfig))
+            {
+                body["agentServiceConfig"] = request.AgentServiceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiServiceConfig))
+            {
+                body["aiServiceConfig"] = request.AiServiceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsServers))
+            {
+                body["dnsServers"] = request.DnsServers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConfig))
+            {
+                body["healthCheckConfig"] = request.HealthCheckConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthyPanicThreshold))
+            {
+                body["healthyPanicThreshold"] = request.HealthyPanicThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutlierDetectionConfig))
+            {
+                body["outlierDetectionConfig"] = request.OutlierDetectionConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ports))
+            {
+                body["ports"] = request.Ports;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                body["protocol"] = request.Protocol;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateService",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceResponse
+        /// </returns>
+        public async Task<UpdateServiceResponse> UpdateServiceWithOptionsAsync(string serviceId, UpdateServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Addresses))
+            {
+                body["addresses"] = request.Addresses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentServiceConfig))
+            {
+                body["agentServiceConfig"] = request.AgentServiceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiServiceConfig))
+            {
+                body["aiServiceConfig"] = request.AiServiceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnsServers))
+            {
+                body["dnsServers"] = request.DnsServers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConfig))
+            {
+                body["healthCheckConfig"] = request.HealthCheckConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthyPanicThreshold))
+            {
+                body["healthyPanicThreshold"] = request.HealthyPanicThreshold;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutlierDetectionConfig))
+            {
+                body["outlierDetectionConfig"] = request.OutlierDetectionConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ports))
+            {
+                body["ports"] = request.Ports;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                body["protocol"] = request.Protocol;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateService",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceResponse
+        /// </returns>
+        public UpdateServiceResponse UpdateService(string serviceId, UpdateServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateServiceWithOptions(serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceResponse
+        /// </returns>
+        public async Task<UpdateServiceResponse> UpdateServiceAsync(string serviceId, UpdateServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateServiceWithOptionsAsync(serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates a service version.</para>
         /// </summary>
         /// 
