@@ -34,6 +34,14 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public List<NodeTemplate> ComputeNodes { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>2025-01-01T12:05:00Z</para>
+            /// </summary>
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            /// <summary>
             /// <para>Indicates whether auto scale-in is enabled for the queue. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
@@ -172,6 +180,14 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             [NameInMap("ReservedNodePoolId")]
             [Validation(Required=false)]
             public string ReservedNodePoolId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2025-01-01T12:05:00Z</para>
+            /// </summary>
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public string UpdateTime { get; set; }
 
             /// <summary>
             /// <para>The available vSwitches for compute nodes in the queue. Valid values of N: 1 to 5.</para>
