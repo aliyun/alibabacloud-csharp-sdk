@@ -977,6 +977,136 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建一个健康检查任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSanityCheckTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSanityCheckTaskResponse
+        /// </returns>
+        public CreateSanityCheckTaskResponse CreateSanityCheckTaskWithOptions(string CheckType, CreateSanityCheckTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSanityCheckTask",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/sanitychecks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(CheckType),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSanityCheckTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个健康检查任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSanityCheckTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSanityCheckTaskResponse
+        /// </returns>
+        public async Task<CreateSanityCheckTaskResponse> CreateSanityCheckTaskWithOptionsAsync(string CheckType, CreateSanityCheckTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSanityCheckTask",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/sanitychecks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(CheckType),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSanityCheckTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个健康检查任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSanityCheckTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSanityCheckTaskResponse
+        /// </returns>
+        public CreateSanityCheckTaskResponse CreateSanityCheckTask(string CheckType, CreateSanityCheckTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateSanityCheckTaskWithOptions(CheckType, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个健康检查任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSanityCheckTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSanityCheckTaskResponse
+        /// </returns>
+        public async Task<CreateSanityCheckTaskResponse> CreateSanityCheckTaskAsync(string CheckType, CreateSanityCheckTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateSanityCheckTaskWithOptionsAsync(CheckType, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes the automatic stop policy of an instance.</para>
         /// </summary>
         /// 
@@ -2911,6 +3041,136 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetResourceGroupStatisticsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询健康检查任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSanityCheckTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSanityCheckTaskResponse
+        /// </returns>
+        public GetSanityCheckTaskResponse GetSanityCheckTaskWithOptions(string CheckType, string TaskId, GetSanityCheckTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Verbose))
+            {
+                query["Verbose"] = request.Verbose;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSanityCheckTask",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/sanitychecks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(CheckType) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TaskId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSanityCheckTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询健康检查任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSanityCheckTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSanityCheckTaskResponse
+        /// </returns>
+        public async Task<GetSanityCheckTaskResponse> GetSanityCheckTaskWithOptionsAsync(string CheckType, string TaskId, GetSanityCheckTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Verbose))
+            {
+                query["Verbose"] = request.Verbose;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSanityCheckTask",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/sanitychecks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(CheckType) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TaskId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSanityCheckTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询健康检查任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSanityCheckTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSanityCheckTaskResponse
+        /// </returns>
+        public GetSanityCheckTaskResponse GetSanityCheckTask(string CheckType, string TaskId, GetSanityCheckTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSanityCheckTaskWithOptions(CheckType, TaskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询健康检查任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSanityCheckTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSanityCheckTaskResponse
+        /// </returns>
+        public async Task<GetSanityCheckTaskResponse> GetSanityCheckTaskAsync(string CheckType, string TaskId, GetSanityCheckTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSanityCheckTaskWithOptionsAsync(CheckType, TaskId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
