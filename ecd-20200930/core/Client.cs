@@ -2585,6 +2585,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await AttachEndUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The cloud computers for which you want to change their policies must be in the Running state.</para>
+        /// <list type="bullet">
+        /// <item><description>After you call this operation, the assignment result is immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> operation to query the assignment of the cloud computer. The value of the <c>ManagementFlags</c> response parameter indicates the assignment of the cloud computer. A value of <c>ASSIGNING</c> indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.</description></item>
+        /// <item><description>We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BatchModifyEntitlementRequest
         /// </param>
@@ -2646,6 +2655,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<BatchModifyEntitlementResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The cloud computers for which you want to change their policies must be in the Running state.</para>
+        /// <list type="bullet">
+        /// <item><description>After you call this operation, the assignment result is immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> operation to query the assignment of the cloud computer. The value of the <c>ManagementFlags</c> response parameter indicates the assignment of the cloud computer. A value of <c>ASSIGNING</c> indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.</description></item>
+        /// <item><description>We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BatchModifyEntitlementRequest
         /// </param>
@@ -2707,6 +2725,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<BatchModifyEntitlementResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The cloud computers for which you want to change their policies must be in the Running state.</para>
+        /// <list type="bullet">
+        /// <item><description>After you call this operation, the assignment result is immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> operation to query the assignment of the cloud computer. The value of the <c>ManagementFlags</c> response parameter indicates the assignment of the cloud computer. A value of <c>ASSIGNING</c> indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.</description></item>
+        /// <item><description>We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BatchModifyEntitlementRequest
         /// </param>
@@ -2720,6 +2747,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return BatchModifyEntitlementWithOptions(request, runtime);
         }
 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  The cloud computers for which you want to change their policies must be in the Running state.</para>
+        /// <list type="bullet">
+        /// <item><description>After you call this operation, the assignment result is immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> operation to query the assignment of the cloud computer. The value of the <c>ManagementFlags</c> response parameter indicates the assignment of the cloud computer. A value of <c>ASSIGNING</c> indicates that the cloud computer is being assigned, and other values indicate that the cloud computer is assigned.</description></item>
+        /// <item><description>We recommend that you check the assignment every 2 to 5 seconds and perform the checks within 50 seconds. Typically, 1 to 5 seconds are required to complete the assignment.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BatchModifyEntitlementRequest
         /// </param>
@@ -23359,6 +23395,358 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询全局定时任务Batch记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalTimerBatchesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalTimerBatchesResponse
+        /// </returns>
+        public DescribeGlobalTimerBatchesResponse DescribeGlobalTimerBatchesWithOptions(DescribeGlobalTimerBatchesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
+            {
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimerType))
+            {
+                query["TimerType"] = request.TimerType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGlobalTimerBatches",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGlobalTimerBatchesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全局定时任务Batch记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalTimerBatchesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalTimerBatchesResponse
+        /// </returns>
+        public async Task<DescribeGlobalTimerBatchesResponse> DescribeGlobalTimerBatchesWithOptionsAsync(DescribeGlobalTimerBatchesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
+            {
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimerType))
+            {
+                query["TimerType"] = request.TimerType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGlobalTimerBatches",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGlobalTimerBatchesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全局定时任务Batch记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalTimerBatchesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalTimerBatchesResponse
+        /// </returns>
+        public DescribeGlobalTimerBatchesResponse DescribeGlobalTimerBatches(DescribeGlobalTimerBatchesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeGlobalTimerBatchesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询全局定时任务Batch记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalTimerBatchesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalTimerBatchesResponse
+        /// </returns>
+        public async Task<DescribeGlobalTimerBatchesResponse> DescribeGlobalTimerBatchesAsync(DescribeGlobalTimerBatchesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeGlobalTimerBatchesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the execution records of scheduled tasks on cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalTimerRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalTimerRecordsResponse
+        /// </returns>
+        public DescribeGlobalTimerRecordsResponse DescribeGlobalTimerRecordsWithOptions(DescribeGlobalTimerRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchId))
+            {
+                query["BatchId"] = request.BatchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIds))
+            {
+                query["DesktopIds"] = request.DesktopIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultCategory))
+            {
+                query["ResultCategory"] = request.ResultCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
+            {
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimerResult))
+            {
+                query["TimerResult"] = request.TimerResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimerTypes))
+            {
+                query["TimerTypes"] = request.TimerTypes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGlobalTimerRecords",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGlobalTimerRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the execution records of scheduled tasks on cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalTimerRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalTimerRecordsResponse
+        /// </returns>
+        public async Task<DescribeGlobalTimerRecordsResponse> DescribeGlobalTimerRecordsWithOptionsAsync(DescribeGlobalTimerRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchId))
+            {
+                query["BatchId"] = request.BatchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIds))
+            {
+                query["DesktopIds"] = request.DesktopIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultCategory))
+            {
+                query["ResultCategory"] = request.ResultCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
+            {
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimerResult))
+            {
+                query["TimerResult"] = request.TimerResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimerTypes))
+            {
+                query["TimerTypes"] = request.TimerTypes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGlobalTimerRecords",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGlobalTimerRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the execution records of scheduled tasks on cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalTimerRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalTimerRecordsResponse
+        /// </returns>
+        public DescribeGlobalTimerRecordsResponse DescribeGlobalTimerRecords(DescribeGlobalTimerRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeGlobalTimerRecordsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the execution records of scheduled tasks on cloud computers.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGlobalTimerRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGlobalTimerRecordsResponse
+        /// </returns>
+        public async Task<DescribeGlobalTimerRecordsResponse> DescribeGlobalTimerRecordsAsync(DescribeGlobalTimerRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeGlobalTimerRecordsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the applications and their processes of an end user.</para>
         /// </summary>
         /// 
@@ -42354,6 +42742,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <para>Modifies a custom cloud computer template.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>Warning</b> This operation employs the full parameter update logic to maintain compatibility between the no-configuration logic and the default update logic. In other words, any unspecified parameters are treated as empty.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyTemplateRequest
         /// </param>
@@ -42481,6 +42876,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>
         /// <para>Modifies a custom cloud computer template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>Warning</b> This operation employs the full parameter update logic to maintain compatibility between the no-configuration logic and the default update logic. In other words, any unspecified parameters are treated as empty.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyTemplateRequest
@@ -42610,6 +43012,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <para>Modifies a custom cloud computer template.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>Warning</b> This operation employs the full parameter update logic to maintain compatibility between the no-configuration logic and the default update logic. In other words, any unspecified parameters are treated as empty.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyTemplateRequest
         /// </param>
@@ -42627,6 +43036,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>
         /// <para>Modifies a custom cloud computer template.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>Warning</b> This operation employs the full parameter update logic to maintain compatibility between the no-configuration logic and the default update logic. In other words, any unspecified parameters are treated as empty.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyTemplateRequest

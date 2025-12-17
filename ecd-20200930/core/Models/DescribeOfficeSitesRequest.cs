@@ -170,6 +170,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-uf6bpyqivwl5f3pvoxxu0</para>
+        /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
