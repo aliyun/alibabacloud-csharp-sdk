@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("executionRoleArn")]
+        [Validation(Required=false)]
+        public string ExecutionRoleArn { get; set; }
+
         [NameInMap("logConfiguration")]
         [Validation(Required=false)]
         public LogConfiguration LogConfiguration { get; set; }

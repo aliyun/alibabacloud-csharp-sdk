@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string Endpoint { get; set; }
 
+        [NameInMap("executionRoleArn")]
+        [Validation(Required=false)]
+        public string ExecutionRoleArn { get; set; }
+
         [NameInMap("functionName")]
         [Validation(Required=false)]
         public string FunctionName { get; set; }

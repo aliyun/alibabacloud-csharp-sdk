@@ -35,6 +35,48 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public ProxyConfigPolicies Policies { get; set; }
         public class ProxyConfigPolicies : TeaModel {
+            [NameInMap("aiGuardrailConfig")]
+            [Validation(Required=false)]
+            public ProxyConfigPoliciesAiGuardrailConfig AiGuardrailConfig { get; set; }
+            public class ProxyConfigPoliciesAiGuardrailConfig : TeaModel {
+                [NameInMap("blockOnContentModeration")]
+                [Validation(Required=false)]
+                public bool? BlockOnContentModeration { get; set; }
+
+                [NameInMap("blockOnMaliciousUrl")]
+                [Validation(Required=false)]
+                public bool? BlockOnMaliciousUrl { get; set; }
+
+                [NameInMap("blockOnModelHallucination")]
+                [Validation(Required=false)]
+                public bool? BlockOnModelHallucination { get; set; }
+
+                [NameInMap("blockOnPromptAttack")]
+                [Validation(Required=false)]
+                public bool? BlockOnPromptAttack { get; set; }
+
+                [NameInMap("blockOnSensitiveData")]
+                [Validation(Required=false)]
+                public bool? BlockOnSensitiveData { get; set; }
+
+                [NameInMap("checkRequest")]
+                [Validation(Required=false)]
+                public bool? CheckRequest { get; set; }
+
+                [NameInMap("checkResponse")]
+                [Validation(Required=false)]
+                public bool? CheckResponse { get; set; }
+
+                [NameInMap("level")]
+                [Validation(Required=false)]
+                public string Level { get; set; }
+
+                [NameInMap("maxTextLength")]
+                [Validation(Required=false)]
+                public int? MaxTextLength { get; set; }
+
+            }
+
             [NameInMap("cache")]
             [Validation(Required=false)]
             public bool? Cache { get; set; }
@@ -64,6 +106,28 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
             [NameInMap("requestTimeout")]
             [Validation(Required=false)]
             public int? RequestTimeout { get; set; }
+
+            [NameInMap("tokenRateLimiter")]
+            [Validation(Required=false)]
+            public ProxyConfigPoliciesTokenRateLimiter TokenRateLimiter { get; set; }
+            public class ProxyConfigPoliciesTokenRateLimiter : TeaModel {
+                [NameInMap("tpd")]
+                [Validation(Required=false)]
+                public int? Tpd { get; set; }
+
+                [NameInMap("tph")]
+                [Validation(Required=false)]
+                public int? Tph { get; set; }
+
+                [NameInMap("tpm")]
+                [Validation(Required=false)]
+                public int? Tpm { get; set; }
+
+                [NameInMap("tps")]
+                [Validation(Required=false)]
+                public int? Tps { get; set; }
+
+            }
 
         }
 
