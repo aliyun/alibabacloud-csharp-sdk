@@ -402,6 +402,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>Creates a delivery group.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.
+        /// A delivery group is a logical group that is used to deliver cloud applications to end users, including the images, resource management policies, and user groups on which the cloud applications rely. For more information, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish delivery groups</a>.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// CreateAppInstanceGroupRequest
         /// </param>
@@ -587,6 +593,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <summary>
         /// <para>Creates a delivery group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.
+        /// A delivery group is a logical group that is used to deliver cloud applications to end users, including the images, resource management policies, and user groups on which the cloud applications rely. For more information, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish delivery groups</a>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAppInstanceGroupRequest
@@ -774,6 +786,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>Creates a delivery group.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.
+        /// A delivery group is a logical group that is used to deliver cloud applications to end users, including the images, resource management policies, and user groups on which the cloud applications rely. For more information, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish delivery groups</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAppInstanceGroupRequest
         /// </param>
@@ -791,6 +809,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <summary>
         /// <para>Creates a delivery group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.
+        /// A delivery group is a logical group that is used to deliver cloud applications to end users, including the images, resource management policies, and user groups on which the cloud applications rely. For more information, see <a href="https://help.aliyun.com/document_detail/426046.html">Publish delivery groups</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAppInstanceGroupRequest
@@ -8545,7 +8569,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新研发主机镜像</para>
+        /// <para>Updates the workstation image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8595,7 +8619,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新研发主机镜像</para>
+        /// <para>Updates the workstation image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8645,7 +8669,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新研发主机镜像</para>
+        /// <para>Updates the workstation image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8663,7 +8687,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新研发主机镜像</para>
+        /// <para>Updates the workstation image.</para>
         /// </summary>
         /// 
         /// <param name="request">

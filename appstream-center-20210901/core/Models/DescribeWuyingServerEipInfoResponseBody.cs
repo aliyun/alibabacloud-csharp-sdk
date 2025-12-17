@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public DescribeWuyingServerEipInfoResponseBodyEipInfoModel EipInfoModel { get; set; }
         public class DescribeWuyingServerEipInfoResponseBodyEipInfoModel : TeaModel {
+            [NameInMap("EipId")]
+            [Validation(Required=false)]
+            public string EipId { get; set; }
+
             /// <summary>
             /// <para>The public IP address.</para>
             /// 

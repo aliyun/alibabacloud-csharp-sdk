@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class UpdateWuyingServerImageRequest : TeaModel {
         /// <summary>
+        /// <para>The image ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>imgc-0aae4rgk9****6e8p</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageId { get; set; }
 
         /// <summary>
+        /// <para>The product type. Set this parameter to WuyingServer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WuyingServer</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workstation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ws-0bw2f11****dial</para>
         /// </summary>
