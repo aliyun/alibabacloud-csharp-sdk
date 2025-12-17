@@ -406,6 +406,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return await AddressCompareIntlWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Address Verification</para>
@@ -426,6 +430,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <returns>
         /// AddressVerifyIntlResponse
         /// </returns>
+        [Obsolete("OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.")]
+        // Deprecated
         public AddressVerifyIntlResponse AddressVerifyIntlWithOptions(AddressVerifyIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -493,6 +499,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return TeaModel.ToObject<AddressVerifyIntlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Address Verification</para>
@@ -513,6 +523,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <returns>
         /// AddressVerifyIntlResponse
         /// </returns>
+        [Obsolete("OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.")]
+        // Deprecated
         public async Task<AddressVerifyIntlResponse> AddressVerifyIntlWithOptionsAsync(AddressVerifyIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -580,6 +592,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return TeaModel.ToObject<AddressVerifyIntlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Address Verification</para>
@@ -597,12 +613,18 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <returns>
         /// AddressVerifyIntlResponse
         /// </returns>
+        [Obsolete("OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.")]
+        // Deprecated
         public AddressVerifyIntlResponse AddressVerifyIntl(AddressVerifyIntlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return AddressVerifyIntlWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Address Verification</para>
@@ -620,6 +642,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <returns>
         /// AddressVerifyIntlResponse
         /// </returns>
+        [Obsolete("OpenAPI AddressVerifyIntl is deprecated, please use Cloudauth-intl::2022-08-09::AddressVerifyV2Intl instead.")]
+        // Deprecated
         public async Task<AddressVerifyIntlResponse> AddressVerifyIntlAsync(AddressVerifyIntlRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3756,6 +3780,158 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Console Export Records</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DownloadVerifyRecordIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadVerifyRecordIntlResponse
+        /// </returns>
+        public DownloadVerifyRecordIntlResponse DownloadVerifyRecordIntlWithOptions(DownloadVerifyRecordIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                query["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadMode))
+            {
+                query["DownloadMode"] = request.DownloadMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Param))
+            {
+                query["Param"] = request.Param;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadVerifyRecordIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadVerifyRecordIntlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Console Export Records</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DownloadVerifyRecordIntlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadVerifyRecordIntlResponse
+        /// </returns>
+        public async Task<DownloadVerifyRecordIntlResponse> DownloadVerifyRecordIntlWithOptionsAsync(DownloadVerifyRecordIntlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                query["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadMode))
+            {
+                query["DownloadMode"] = request.DownloadMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Param))
+            {
+                query["Param"] = request.Param;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadVerifyRecordIntl",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadVerifyRecordIntlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Console Export Records</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DownloadVerifyRecordIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadVerifyRecordIntlResponse
+        /// </returns>
+        public DownloadVerifyRecordIntlResponse DownloadVerifyRecordIntl(DownloadVerifyRecordIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DownloadVerifyRecordIntlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Console Export Records</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DownloadVerifyRecordIntlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadVerifyRecordIntlResponse
+        /// </returns>
+        public async Task<DownloadVerifyRecordIntlResponse> DownloadVerifyRecordIntlAsync(DownloadVerifyRecordIntlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DownloadVerifyRecordIntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>This topic describes how to integrate with ID Verification using only the server-side API.</para>
         /// </summary>
         /// 
@@ -4177,33 +4353,35 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["SceneCode"] = request.SceneCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAFacePicture))
-            {
-                query["SourceAFacePicture"] = request.SourceAFacePicture;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAFacePictureUrl))
             {
                 query["SourceAFacePictureUrl"] = request.SourceAFacePictureUrl;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceBFacePicture))
-            {
-                query["SourceBFacePicture"] = request.SourceBFacePicture;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceBFacePictureUrl))
             {
                 query["SourceBFacePictureUrl"] = request.SourceBFacePictureUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCFacePicture))
-            {
-                query["SourceCFacePicture"] = request.SourceCFacePicture;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCFacePictureUrl))
             {
                 query["SourceCFacePictureUrl"] = request.SourceCFacePictureUrl;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAFacePicture))
+            {
+                body["SourceAFacePicture"] = request.SourceAFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceBFacePicture))
+            {
+                body["SourceBFacePicture"] = request.SourceBFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCFacePicture))
+            {
+                body["SourceCFacePicture"] = request.SourceCFacePicture;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4259,33 +4437,35 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["SceneCode"] = request.SceneCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAFacePicture))
-            {
-                query["SourceAFacePicture"] = request.SourceAFacePicture;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAFacePictureUrl))
             {
                 query["SourceAFacePictureUrl"] = request.SourceAFacePictureUrl;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceBFacePicture))
-            {
-                query["SourceBFacePicture"] = request.SourceBFacePicture;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceBFacePictureUrl))
             {
                 query["SourceBFacePictureUrl"] = request.SourceBFacePictureUrl;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCFacePicture))
-            {
-                query["SourceCFacePicture"] = request.SourceCFacePicture;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCFacePictureUrl))
             {
                 query["SourceCFacePictureUrl"] = request.SourceCFacePictureUrl;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAFacePicture))
+            {
+                body["SourceAFacePicture"] = request.SourceAFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceBFacePicture))
+            {
+                body["SourceBFacePicture"] = request.SourceBFacePicture;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCFacePicture))
+            {
+                body["SourceCFacePicture"] = request.SourceCFacePicture;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4906,6 +5086,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return await FaceLivenessWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI FraudResultCallBack is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Anti-Fraud Callback Interface</para>
@@ -4921,6 +5105,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <returns>
         /// FraudResultCallBackResponse
         /// </returns>
+        [Obsolete("OpenAPI FraudResultCallBack is deprecated")]
+        // Deprecated
         public FraudResultCallBackResponse FraudResultCallBackWithOptions(FraudResultCallBackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4960,6 +5146,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return TeaModel.ToObject<FraudResultCallBackResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI FraudResultCallBack is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Anti-Fraud Callback Interface</para>
@@ -4975,6 +5165,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <returns>
         /// FraudResultCallBackResponse
         /// </returns>
+        [Obsolete("OpenAPI FraudResultCallBack is deprecated")]
+        // Deprecated
         public async Task<FraudResultCallBackResponse> FraudResultCallBackWithOptionsAsync(FraudResultCallBackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -5014,6 +5206,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             return TeaModel.ToObject<FraudResultCallBackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI FraudResultCallBack is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Anti-Fraud Callback Interface</para>
@@ -5026,12 +5222,18 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <returns>
         /// FraudResultCallBackResponse
         /// </returns>
+        [Obsolete("OpenAPI FraudResultCallBack is deprecated")]
+        // Deprecated
         public FraudResultCallBackResponse FraudResultCallBack(FraudResultCallBackRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return FraudResultCallBackWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI FraudResultCallBack is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Anti-Fraud Callback Interface</para>
@@ -5044,6 +5246,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <returns>
         /// FraudResultCallBackResponse
         /// </returns>
+        [Obsolete("OpenAPI FraudResultCallBack is deprecated")]
+        // Deprecated
         public async Task<FraudResultCallBackResponse> FraudResultCallBackAsync(FraudResultCallBackRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

@@ -66,12 +66,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string SceneCode { get; set; }
 
-        /// <summary>
-        /// <para>Base64 encoded portrait photo.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>base64</para>
-        /// </summary>
         [NameInMap("SourceAFacePicture")]
         [Validation(Required=false)]
         public string SourceAFacePicture { get; set; }
@@ -86,12 +80,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string SourceAFacePictureUrl { get; set; }
 
-        /// <summary>
-        /// <para>Base64 encoded portrait photo.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>base64</para>
-        /// </summary>
         [NameInMap("SourceBFacePicture")]
         [Validation(Required=false)]
         public string SourceBFacePicture { get; set; }
@@ -106,12 +94,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string SourceBFacePictureUrl { get; set; }
 
-        /// <summary>
-        /// <para>Base64 encoded portrait photo.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>base64</para>
-        /// </summary>
         [NameInMap("SourceCFacePicture")]
         [Validation(Required=false)]
         public string SourceCFacePicture { get; set; }

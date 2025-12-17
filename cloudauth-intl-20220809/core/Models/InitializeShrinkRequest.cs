@@ -376,10 +376,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// </description></item>
         /// <item><description><para><b>PHOTINUS_LIVENESS</b>: Blinking action liveness + photinus liveness dual detection.</para>
         /// </description></item>
-        /// <item><description><para><b>PHOTINUS_FAR_NEAR_LIVENESS</b>:
-        /// Blinking action + far/near + photinus liveness detection.
-        /// (Only supported by APP SDK or Flutter integration based on APP SDK)</para>
-        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">

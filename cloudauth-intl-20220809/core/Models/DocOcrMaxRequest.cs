@@ -9,6 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DocOcrMaxRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to enable verification with an authoritative data source to enhance document anti-spoofing capabilities.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>T</b>: Enable</para>
+        /// </description></item>
+        /// <item><description><para><b>F</b>: Disable (default)</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><b>Applicable document types</b>: Chinese resident ID cards (CHN01001) and Chinese mainland driver\&quot;s licenses (CHN02001).</description></item>
+        /// <item><description><b>Data transfer declaration</b>: If you enable this parameter, you agree to transfer the user\&quot;s name and certificate number to an authoritative data source in the Chinese mainland for consistency verification.</description></item>
+        /// <item><description><b>Performance impact:</b> After you enable this feature, the response time of the API operation increases by 1 to 2 seconds. Adjust the timeout setting.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>T</para>
+        /// </summary>
         [NameInMap("Authorize")]
         [Validation(Required=false)]
         public string Authorize { get; set; }
@@ -126,6 +145,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrModel { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return additional OCR fields in a standardized format:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>0</b>: No (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Yes</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
