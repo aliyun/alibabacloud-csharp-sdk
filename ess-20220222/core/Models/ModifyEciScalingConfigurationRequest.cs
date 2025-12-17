@@ -1332,6 +1332,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public List<string> NtpServers { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to override existing data. Valid Values:</para>
+        /// <para>true false</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Override")]
         [Validation(Required=false)]
         public bool? Override { get; set; }

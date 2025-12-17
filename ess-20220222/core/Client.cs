@@ -6630,6 +6630,118 @@ namespace AlibabaCloud.SDK.Ess20220222
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>DeleteDiagnoseReport</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDiagnoseReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDiagnoseReportResponse
+        /// </returns>
+        public DeleteDiagnoseReportResponse DeleteDiagnoseReportWithOptions(DeleteDiagnoseReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDiagnoseReport",
+                Version = "2022-02-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDiagnoseReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteDiagnoseReport</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDiagnoseReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDiagnoseReportResponse
+        /// </returns>
+        public async Task<DeleteDiagnoseReportResponse> DeleteDiagnoseReportWithOptionsAsync(DeleteDiagnoseReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDiagnoseReport",
+                Version = "2022-02-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDiagnoseReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteDiagnoseReport</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDiagnoseReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDiagnoseReportResponse
+        /// </returns>
+        public DeleteDiagnoseReportResponse DeleteDiagnoseReport(DeleteDiagnoseReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDiagnoseReportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteDiagnoseReport</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDiagnoseReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDiagnoseReportResponse
+        /// </returns>
+        public async Task<DeleteDiagnoseReportResponse> DeleteDiagnoseReportAsync(DeleteDiagnoseReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDiagnoseReportWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a scaling configuration of the Elastic Container Instance type. If the scaling configuration of a scaling group is in the Inactive state and the scaling group contains no elastic container instances created from the scaling configuration, you can call the DeleteEciScalingConfiguration operation to delete the scaling configuration to free up the scaling configuration quota.</para>
         /// </summary>
         /// 

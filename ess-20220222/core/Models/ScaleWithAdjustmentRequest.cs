@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public ScaleWithAdjustmentRequestLifecycleHookContext LifecycleHookContext { get; set; }
         public class ScaleWithAdjustmentRequestLifecycleHookContext : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to disable the Lifecycle Hook feature. Valid values:</para>
+            /// <para>Specifies whether to disable the lifecycle hook. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
             /// <item><description>false</description></item>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MinAdjustmentMagnitude { get; set; }
 
         /// <summary>
-        /// <para>The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out event.</para>
+        /// <para>The overrides that allow you to adjust the scaling group of the Elastic Container Instance (ECI) type during a scale-out event.</para>
         /// </summary>
         [NameInMap("Overrides")]
         [Validation(Required=false)]
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public float? Memory { get; set; }
 
                 /// <summary>
-                /// <para>The name of container N. If you specify ContainerOverrides, you must also specify Name. ContainerOverrides takes effect only when the container name specified by Name matches that specified in the scaling configuration.</para>
+                /// <para>The name of the container. If you specify ContainerOverrides, you must also specify Name. ContainerOverrides takes effect only when the container name specified by Name matches that specified in the scaling configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>container-1</para>
@@ -230,6 +230,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? Memory { get; set; }
 
             /// <summary>
+            /// <para>The user data of the Elastic Compute Service (ECS) instance. The user data must be encoded in Base64 format. The size of raw data before Base64 encoding cannot exceed 32 KB.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ZWNobyBoZWxsbyBlY3Mh</para>
             /// </summary>

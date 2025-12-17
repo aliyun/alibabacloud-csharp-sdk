@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public RemoveInstancesRequestLifecycleHookContext LifecycleHookContext { get; set; }
         public class RemoveInstancesRequestLifecycleHookContext : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to disable the lifecycle hook. Valid Values:</para>
+            /// <para>Specifies whether to disable the lifecycle hook. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
             /// <item><description>false</description></item>
