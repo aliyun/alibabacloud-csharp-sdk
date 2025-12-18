@@ -35216,6 +35216,134 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新用户版本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCfwInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCfwInstanceResponse
+        /// </returns>
+        public ModifyCfwInstanceResponse ModifyCfwInstanceWithOptions(ModifyCfwInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateList))
+            {
+                query["UpdateList"] = request.UpdateList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyCfwInstance",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyCfwInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新用户版本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCfwInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCfwInstanceResponse
+        /// </returns>
+        public async Task<ModifyCfwInstanceResponse> ModifyCfwInstanceWithOptionsAsync(ModifyCfwInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateList))
+            {
+                query["UpdateList"] = request.UpdateList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyCfwInstance",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyCfwInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新用户版本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCfwInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCfwInstanceResponse
+        /// </returns>
+        public ModifyCfwInstanceResponse ModifyCfwInstance(ModifyCfwInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyCfwInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新用户版本信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCfwInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCfwInstanceResponse
+        /// </returns>
+        public async Task<ModifyCfwInstanceResponse> ModifyCfwInstanceAsync(ModifyCfwInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyCfwInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the configurations of an access control policy.</para>
         /// </summary>
         /// 
