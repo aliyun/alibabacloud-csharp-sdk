@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutScalingConfigInput : TeaModel {
+        [NameInMap("enableMixMode")]
+        [Validation(Required=false)]
+        public bool? EnableMixMode { get; set; }
+
         [NameInMap("enableOnDemandScaling")]
         [Validation(Required=false)]
         public bool? EnableOnDemandScaling { get; set; }
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [NameInMap("minInstances")]
         [Validation(Required=false)]
         public long? MinInstances { get; set; }
+
+        [NameInMap("requestDispatchPolicy")]
+        [Validation(Required=false)]
+        public string RequestDispatchPolicy { get; set; }
 
         [NameInMap("residentPoolId")]
         [Validation(Required=false)]
