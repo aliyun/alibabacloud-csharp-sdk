@@ -84,6 +84,70 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             }
 
+            [NameInMap("riskOverview")]
+            [Validation(Required=false)]
+            public List<GetResourceOverviewResponseBodyDataRiskOverview> RiskOverview { get; set; }
+            public class GetResourceOverviewResponseBodyDataRiskOverview : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("count")]
+                [Validation(Required=false)]
+                public string Count { get; set; }
+
+                [NameInMap("riskDetails")]
+                [Validation(Required=false)]
+                public List<GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails> RiskDetails { get; set; }
+                public class GetResourceOverviewResponseBodyDataRiskOverviewRiskDetails : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>gw-xxxxxx</para>
+                    /// </summary>
+                    [NameInMap("gatewayId")]
+                    [Validation(Required=false)]
+                    public string GatewayId { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>test-gateway</para>
+                    /// </summary>
+                    [NameInMap("gatewayName")]
+                    [Validation(Required=false)]
+                    public string GatewayName { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>LOW</para>
+                    /// </summary>
+                    [NameInMap("riskLevel")]
+                    [Validation(Required=false)]
+                    public string RiskLevel { get; set; }
+
+                    [NameInMap("riskNames")]
+                    [Validation(Required=false)]
+                    public List<string> RiskNames { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>100</para>
+                    /// </summary>
+                    [NameInMap("score")]
+                    [Validation(Required=false)]
+                    public string Score { get; set; }
+
+                }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>LOW</para>
+                /// </summary>
+                [NameInMap("riskLevel")]
+                [Validation(Required=false)]
+                public string RiskLevel { get; set; }
+
+            }
+
         }
 
         /// <summary>
