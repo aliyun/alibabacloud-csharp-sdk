@@ -15941,6 +15941,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpticalModuleModel))
+            {
+                query["OpticalModuleModel"] = request.OpticalModuleModel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -16068,6 +16072,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpticalModuleModel))
+            {
+                query["OpticalModuleModel"] = request.OpticalModuleModel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {

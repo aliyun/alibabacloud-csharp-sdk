@@ -69,6 +69,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public double? Longitude { get; set; }
 
+            [NameInMap("OpticalModuleModels")]
+            [Validation(Required=false)]
+            public List<ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels> OpticalModuleModels { get; set; }
+            public class ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels : TeaModel {
+                [NameInMap("OpticalModuleModel")]
+                [Validation(Required=false)]
+                public string OpticalModuleModel { get; set; }
+
+                [NameInMap("PortType")]
+                [Validation(Required=false)]
+                public string PortType { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The connectivity provider of the Express Connect circuit. Valid values:</para>
             /// <list type="bullet">

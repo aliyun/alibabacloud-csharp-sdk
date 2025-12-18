@@ -92,6 +92,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("OpticalModuleModel")]
+        [Validation(Required=false)]
+        public string OpticalModuleModel { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

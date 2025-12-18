@@ -239,6 +239,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("OpticalModuleModel")]
+                [Validation(Required=false)]
+                public string OpticalModuleModel { get; set; }
+
                 /// <summary>
                 /// <para>The payer for the hosted connection. Valid values:</para>
                 /// <list type="bullet">
