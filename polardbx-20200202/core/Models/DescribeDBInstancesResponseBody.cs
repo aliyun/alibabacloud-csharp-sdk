@@ -125,6 +125,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string Engine { get; set; }
 
+            [NameInMap("EngineVersion")]
+            [Validation(Required=false)]
+            public string EngineVersion { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2021-12-01T16:00:00.000+0000</para>

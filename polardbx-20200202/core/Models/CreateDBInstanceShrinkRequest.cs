@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public int? DNNodeCount { get; set; }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("DnClass")]
         [Validation(Required=false)]
         public string DnClass { get; set; }

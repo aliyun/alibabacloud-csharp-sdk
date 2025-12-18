@@ -2042,6 +2042,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["DNNodeCount"] = request.DNNodeCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnClass))
             {
                 query["DnClass"] = request.DnClass;
@@ -2197,6 +2201,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNNodeCount))
             {
                 query["DNNodeCount"] = request.DNNodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnClass))
             {
@@ -4049,6 +4057,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DeleteDBWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDBInstanceRequest
         /// </param>
@@ -4090,6 +4103,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DeleteDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDBInstanceRequest
         /// </param>
@@ -4131,6 +4149,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DeleteDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDBInstanceRequest
         /// </param>
@@ -4144,6 +4167,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DeleteDBInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>释放实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDBInstanceRequest
         /// </param>
