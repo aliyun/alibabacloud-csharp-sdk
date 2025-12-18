@@ -155,6 +155,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                         [Validation(Required=false)]
                         public string ResourceName { get; set; }
 
+                        [NameInMap("ResourceOwnerId")]
+                        [Validation(Required=false)]
+                        public int? ResourceOwnerId { get; set; }
+
                         /// <summary>
                         /// <para>The type of the resource.</para>
                         /// 

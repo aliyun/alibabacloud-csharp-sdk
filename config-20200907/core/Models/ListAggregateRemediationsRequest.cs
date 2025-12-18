@@ -24,7 +24,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The rule IDs. Separate multiple rule IDs with commas (,).</para>
         /// <para>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cr-6b7c626622af00b4****</para>

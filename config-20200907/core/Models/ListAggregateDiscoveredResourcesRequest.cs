@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
+        [NameInMap("ResourceName")]
+        [Validation(Required=false)]
+        public string ResourceName { get; set; }
+
         /// <term><b>Obsolete</b></term>
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]

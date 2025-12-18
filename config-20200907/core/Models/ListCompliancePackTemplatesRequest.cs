@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string CompliancePackTemplateId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>LAW</para>
+        /// </summary>
+        [NameInMap("FilterType")]
+        [Validation(Required=false)]
+        public string FilterType { get; set; }
+
+        /// <summary>
         /// <para>The page number.</para>
         /// <para>Pages start from page 1. Default value: 1</para>
         /// 
@@ -50,6 +58,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
         public string ResourceTypes { get; set; }
+
+        [NameInMap("RuleRiskLevel")]
+        [Validation(Required=false)]
+        public int? RuleRiskLevel { get; set; }
 
     }
 

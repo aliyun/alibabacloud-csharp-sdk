@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string CompliancePackId { get; set; }
 
+            [NameInMap("CompliantCount")]
+            [Validation(Required=false)]
+            public int? CompliantCount { get; set; }
+
             /// <summary>
             /// <para>The information about rules in the compliance package.</para>
             /// </summary>
@@ -71,6 +75,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             }
 
+            [NameInMap("IgnoredCount")]
+            [Validation(Required=false)]
+            public int? IgnoredCount { get; set; }
+
+            [NameInMap("InsufficientDataCount")]
+            [Validation(Required=false)]
+            public int? InsufficientDataCount { get; set; }
+
             /// <summary>
             /// <para>The number of rules against which specific resources are evaluated as non-compliant.</para>
             /// 
@@ -80,6 +92,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [NameInMap("NonCompliantCount")]
             [Validation(Required=false)]
             public int? NonCompliantCount { get; set; }
+
+            [NameInMap("NotApplicableCount")]
+            [Validation(Required=false)]
+            public int? NotApplicableCount { get; set; }
 
             /// <summary>
             /// <para>The total number of rules in the compliance package.</para>

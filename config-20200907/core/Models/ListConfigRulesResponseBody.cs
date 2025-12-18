@@ -153,6 +153,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
                 }
 
+                [NameInMap("CreateDate")]
+                [Validation(Required=false)]
+                public string CreateDate { get; set; }
+
                 /// <summary>
                 /// <para>The description of the rule.</para>
                 /// 

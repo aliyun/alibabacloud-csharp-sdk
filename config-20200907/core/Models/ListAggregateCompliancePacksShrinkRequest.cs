@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("RiskLevel")]
+        [Validation(Required=false)]
+        public int? RiskLevel { get; set; }
+
         /// <summary>
         /// <para>The status of the one or more compliance packages to be queried. Valid values:</para>
         /// <list type="bullet">

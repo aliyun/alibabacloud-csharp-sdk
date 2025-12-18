@@ -20,12 +20,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string AggregatorId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The tags of the resource.</para>
         /// <para>You can add up to 20 tags to a resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<GetAggregatorRequestTag> Tag { get; set; }
         public class GetAggregatorRequestTag : TeaModel {
             /// <summary>

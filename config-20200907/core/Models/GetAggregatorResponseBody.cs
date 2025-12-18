@@ -174,6 +174,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string FolderId { get; set; }
 
+            [NameInMap("FolderName")]
+            [Validation(Required=false)]
+            public string FolderName { get; set; }
+
             /// <summary>
             /// <para>tags</para>
             /// </summary>

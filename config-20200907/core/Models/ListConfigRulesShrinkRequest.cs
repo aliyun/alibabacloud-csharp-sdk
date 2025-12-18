@@ -123,6 +123,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
 
+        [NameInMap("SortBy")]
+        [Validation(Required=false)]
+        public string SortBy { get; set; }
+
         /// <summary>
         /// <para>The tags of the resource.</para>
         /// <para>You can add up to 20 tags to a resource.</para>

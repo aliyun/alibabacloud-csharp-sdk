@@ -92,6 +92,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
+        [NameInMap("ResourceName")]
+        [Validation(Required=false)]
+        public string ResourceName { get; set; }
+
         /// <summary>
         /// <para>The type of the resource. Separate multiple resource types with commas (,).</para>
         /// 

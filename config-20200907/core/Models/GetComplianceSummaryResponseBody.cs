@@ -92,6 +92,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public int? CompliantCount { get; set; }
 
+                [NameInMap("HighRiskRuleNonCompliantResourceCount")]
+                [Validation(Required=false)]
+                public int? HighRiskRuleNonCompliantResourceCount { get; set; }
+
+                [NameInMap("LowRiskRuleNonCompliantResourceCount")]
+                [Validation(Required=false)]
+                public int? LowRiskRuleNonCompliantResourceCount { get; set; }
+
+                [NameInMap("MediumRiskRuleNonCompliantResourceCount")]
+                [Validation(Required=false)]
+                public int? MediumRiskRuleNonCompliantResourceCount { get; set; }
+
                 /// <summary>
                 /// <para>The number of resources evaluated as non-compliant.</para>
                 /// 

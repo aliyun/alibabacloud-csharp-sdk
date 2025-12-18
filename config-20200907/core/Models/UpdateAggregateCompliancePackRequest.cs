@@ -266,12 +266,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The tags of the resource.</para>
         /// <para>You can add up to 20 tags to a resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<UpdateAggregateCompliancePackRequestTag> Tag { get; set; }
         public class UpdateAggregateCompliancePackRequestTag : TeaModel {
             /// <summary>

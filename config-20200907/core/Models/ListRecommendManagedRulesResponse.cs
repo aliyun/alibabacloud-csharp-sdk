@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Config20200907.Models
 {
-    public class UpdateDeliveryChannelResponse : TeaModel {
+    public class ListRecommendManagedRulesResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public UpdateDeliveryChannelResponseBody Body { get; set; }
+        public ListRecommendManagedRulesResponseBody Body { get; set; }
 
     }
 
