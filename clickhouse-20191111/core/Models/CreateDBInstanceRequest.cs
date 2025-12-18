@@ -282,6 +282,28 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string SourceDBClusterId { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateDBInstanceRequestTags> Tags { get; set; }
+        public class CreateDBInstanceRequestTags : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>user123</para>
+            /// </summary>
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例字符串</para>
+            /// </summary>
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The subscription duration of the subscription cluster.</para>
         /// <remarks>

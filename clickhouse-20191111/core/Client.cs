@@ -2668,6 +2668,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             {
                 query["SourceDBClusterId"] = request.SourceDBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
                 query["UsedTime"] = request.UsedTime;
@@ -2830,6 +2834,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDBClusterId))
             {
                 query["SourceDBClusterId"] = request.SourceDBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
