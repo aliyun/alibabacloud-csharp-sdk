@@ -24007,6 +24007,294 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>同步部门信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SyncDepartmentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncDepartmentResponse
+        /// </returns>
+        public SyncDepartmentResponse SyncDepartmentWithOptions(SyncDepartmentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SyncDepartmentShrinkRequest request = new SyncDepartmentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SyncDepartmentCommand))
+            {
+                request.SyncDepartmentCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncDepartmentCommand, "SyncDepartmentCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncDepartmentCommandShrink))
+            {
+                body["SyncDepartmentCommand"] = request.SyncDepartmentCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SyncDepartment",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SyncDepartmentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步部门信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SyncDepartmentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncDepartmentResponse
+        /// </returns>
+        public async Task<SyncDepartmentResponse> SyncDepartmentWithOptionsAsync(SyncDepartmentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SyncDepartmentShrinkRequest request = new SyncDepartmentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SyncDepartmentCommand))
+            {
+                request.SyncDepartmentCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncDepartmentCommand, "SyncDepartmentCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncDepartmentCommandShrink))
+            {
+                body["SyncDepartmentCommand"] = request.SyncDepartmentCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SyncDepartment",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SyncDepartmentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步部门信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SyncDepartmentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncDepartmentResponse
+        /// </returns>
+        public SyncDepartmentResponse SyncDepartment(SyncDepartmentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SyncDepartmentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步部门信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SyncDepartmentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncDepartmentResponse
+        /// </returns>
+        public async Task<SyncDepartmentResponse> SyncDepartmentAsync(SyncDepartmentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SyncDepartmentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步部门成员信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SyncDepartmentUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncDepartmentUserResponse
+        /// </returns>
+        public SyncDepartmentUserResponse SyncDepartmentUserWithOptions(SyncDepartmentUserRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SyncDepartmentUserShrinkRequest request = new SyncDepartmentUserShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SyncDepartmentUserCommand))
+            {
+                request.SyncDepartmentUserCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncDepartmentUserCommand, "SyncDepartmentUserCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncDepartmentUserCommandShrink))
+            {
+                body["SyncDepartmentUserCommand"] = request.SyncDepartmentUserCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SyncDepartmentUser",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SyncDepartmentUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步部门成员信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SyncDepartmentUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncDepartmentUserResponse
+        /// </returns>
+        public async Task<SyncDepartmentUserResponse> SyncDepartmentUserWithOptionsAsync(SyncDepartmentUserRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SyncDepartmentUserShrinkRequest request = new SyncDepartmentUserShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SyncDepartmentUserCommand))
+            {
+                request.SyncDepartmentUserCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncDepartmentUserCommand, "SyncDepartmentUserCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncDepartmentUserCommandShrink))
+            {
+                body["SyncDepartmentUserCommand"] = request.SyncDepartmentUserCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SyncDepartmentUser",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SyncDepartmentUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步部门成员信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SyncDepartmentUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncDepartmentUserResponse
+        /// </returns>
+        public SyncDepartmentUserResponse SyncDepartmentUser(SyncDepartmentUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SyncDepartmentUserWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步部门成员信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SyncDepartmentUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncDepartmentUserResponse
+        /// </returns>
+        public async Task<SyncDepartmentUserResponse> SyncDepartmentUserAsync(SyncDepartmentUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SyncDepartmentUserWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>一键转交负责人</para>
         /// </summary>
         /// 
