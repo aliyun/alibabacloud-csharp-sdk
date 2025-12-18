@@ -100,6 +100,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
+        /// <para>用于访问智能体的凭证名称，访问智能体运行时将使用此凭证进行身份验证</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-credential</para>
+        /// </summary>
+        [NameInMap("credentialName")]
+        [Validation(Required=false)]
+        public string CredentialName { get; set; }
+
+        /// <summary>
         /// <para>智能体运行时的描述信息，说明该运行时的用途和功能</para>
         /// 
         /// <b>Example:</b>

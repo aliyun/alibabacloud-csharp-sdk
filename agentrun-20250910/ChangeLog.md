@@ -1,3 +1,6 @@
+2025-12-18 Version: 4.0.4
+- Generated csharp 2025-09-10 for AgentRun.
+
 2025-12-17 Version: 4.0.3
 - Generated csharp 2025-09-10 for AgentRun.
 
