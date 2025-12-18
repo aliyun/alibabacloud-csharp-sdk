@@ -1,3 +1,8 @@
+2025-12-18 Version: 2.8.0
+- Support API GetInstanceGroupInspectReportDetail.
+- Support API GetInstanceGroupInspectReportList.
+
+
 2025-12-11 Version: 2.7.0
 - Support API CreateSecurityIPGroup.
 - Support API DeleteSecurityIPGroup.
