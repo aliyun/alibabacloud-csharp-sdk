@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListListsResponseBody : TeaModel {
+        [NameInMap("ItemsUsage")]
+        [Validation(Required=false)]
+        public long? ItemsUsage { get; set; }
+
         /// <summary>
         /// <para>The array that contains list information, including list data after paging.</para>
         /// </summary>

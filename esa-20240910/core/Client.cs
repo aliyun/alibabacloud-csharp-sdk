@@ -26106,7 +26106,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a Single Origin Rule Configuration</para>
+        /// <para>Queries the configurations of a single origin rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26144,7 +26144,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a Single Origin Rule Configuration</para>
+        /// <para>Queries the configurations of a single origin rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26182,7 +26182,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a Single Origin Rule Configuration</para>
+        /// <para>Queries the configurations of a single origin rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26200,7 +26200,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a Single Origin Rule Configuration</para>
+        /// <para>Queries the configurations of a single origin rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
