@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string Location { get; set; }
 
+        [NameInMap("locationInfo")]
+        [Validation(Required=false)]
+        public LocationInfo LocationInfo { get; set; }
+
         [NameInMap("query")]
         [Validation(Required=false)]
         public string Query { get; set; }
