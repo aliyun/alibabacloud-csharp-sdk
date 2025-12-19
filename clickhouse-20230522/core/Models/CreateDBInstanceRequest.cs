@@ -192,6 +192,28 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string StorageType { get; set; }
 
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateDBInstanceRequestTags> Tags { get; set; }
+        public class CreateDBInstanceRequestTags : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>user_123</para>
+            /// </summary>
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例字符串</para>
+            /// </summary>
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The virtual private cloud (VPC) ID.</para>
         /// 

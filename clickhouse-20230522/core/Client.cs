@@ -949,6 +949,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             {
                 query["StorageType"] = request.StorageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
                 query["VpcId"] = request.VpcId;
@@ -1080,6 +1084,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
             {
                 query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
@@ -3251,6 +3259,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3316,6 +3328,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
