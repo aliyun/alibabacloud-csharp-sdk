@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string DoNotMailNum { get; set; }
 
+        [NameInMap("FileId")]
+        [Validation(Required=false)]
+        public string FileId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>file.txt</para>
