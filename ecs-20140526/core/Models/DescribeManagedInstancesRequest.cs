@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ActivationId { get; set; }
 
+        [NameInMap("Connected")]
+        [Validation(Required=false)]
+        public string Connected { get; set; }
+
         /// <summary>
         /// <para>The ID of managed instance N. Valid values of N: 1 to 50.</para>
         /// 
