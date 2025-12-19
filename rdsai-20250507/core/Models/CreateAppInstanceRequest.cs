@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string DatabasePassword { get; set; }
 
+        [NameInMap("InitializeWithExistingData")]
+        [Validation(Required=false)]
+        public bool? InitializeWithExistingData { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>rdsai.supabase.basic</para>

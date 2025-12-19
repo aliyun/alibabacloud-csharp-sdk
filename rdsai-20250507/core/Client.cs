@@ -370,6 +370,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["DatabasePassword"] = request.DatabasePassword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitializeWithExistingData))
+            {
+                query["InitializeWithExistingData"] = request.InitializeWithExistingData;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
             {
                 query["InstanceClass"] = request.InstanceClass;
@@ -469,6 +473,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabasePassword))
             {
                 query["DatabasePassword"] = request.DatabasePassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitializeWithExistingData))
+            {
+                query["InitializeWithExistingData"] = request.InitializeWithExistingData;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
             {
