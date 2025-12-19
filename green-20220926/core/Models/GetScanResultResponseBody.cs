@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public List<GetScanResultResponseBodyDataItems> Items { get; set; }
             public class GetScanResultResponseBodyDataItems : TeaModel {
+                [NameInMap("AccountId")]
+                [Validation(Required=false)]
+                public string AccountId { get; set; }
+
                 /// <summary>
                 /// <para>Automated review labels.</para>
                 /// 
@@ -233,6 +237,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
                 public string Labels { get; set; }
+
+                [NameInMap("LiveId")]
+                [Validation(Required=false)]
+                public string LiveId { get; set; }
 
                 /// <summary>
                 /// <para>Malicious file risk level.</para>
