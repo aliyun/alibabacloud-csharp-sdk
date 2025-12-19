@@ -4568,7 +4568,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// <para>获取资源节点列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListNodesRequest
         /// </param>
         /// <param name="headers">
@@ -4581,9 +4581,19 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// <returns>
         /// ListNodesResponse
         /// </returns>
-        public ListNodesResponse ListNodesWithOptions(ListNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListNodesResponse ListNodesWithOptions(ListNodesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListNodesShrinkRequest request = new ListNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HealthCount))
+            {
+                request.HealthCountShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HealthCount, "HealthCount", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HealthRate))
+            {
+                request.HealthRateShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HealthRate, "HealthRate", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceleratorType))
             {
@@ -4609,6 +4619,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             {
                 query["GPUType"] = request.GPUType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCountShrink))
+            {
+                query["HealthCount"] = request.HealthCountShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthRateShrink))
+            {
+                query["HealthRate"] = request.HealthRateShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HyperNode))
             {
                 query["HyperNode"] = request.HyperNode;
@@ -4616,6 +4634,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HyperZone))
             {
                 query["HyperZone"] = request.HyperZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LayoutMode))
+            {
+                query["LayoutMode"] = request.LayoutMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineGroupIds))
             {
@@ -4706,7 +4728,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// <para>获取资源节点列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListNodesRequest
         /// </param>
         /// <param name="headers">
@@ -4719,9 +4741,19 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// <returns>
         /// ListNodesResponse
         /// </returns>
-        public async Task<ListNodesResponse> ListNodesWithOptionsAsync(ListNodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListNodesResponse> ListNodesWithOptionsAsync(ListNodesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListNodesShrinkRequest request = new ListNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HealthCount))
+            {
+                request.HealthCountShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HealthCount, "HealthCount", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HealthRate))
+            {
+                request.HealthRateShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HealthRate, "HealthRate", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceleratorType))
             {
@@ -4747,6 +4779,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             {
                 query["GPUType"] = request.GPUType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCountShrink))
+            {
+                query["HealthCount"] = request.HealthCountShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthRateShrink))
+            {
+                query["HealthRate"] = request.HealthRateShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HyperNode))
             {
                 query["HyperNode"] = request.HyperNode;
@@ -4754,6 +4794,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HyperZone))
             {
                 query["HyperZone"] = request.HyperZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LayoutMode))
+            {
+                query["LayoutMode"] = request.LayoutMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineGroupIds))
             {

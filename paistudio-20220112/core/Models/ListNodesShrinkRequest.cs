@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
-    public class ListNodesRequest : TeaModel {
+    public class ListNodesShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>CPU</para>
@@ -51,31 +51,11 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         [NameInMap("HealthCount")]
         [Validation(Required=false)]
-        public ListNodesRequestHealthCount HealthCount { get; set; }
-        public class ListNodesRequestHealthCount : TeaModel {
-            [NameInMap("operation")]
-            [Validation(Required=false)]
-            public string Operation { get; set; }
-
-            [NameInMap("value")]
-            [Validation(Required=false)]
-            public int? Value { get; set; }
-
-        }
+        public string HealthCountShrink { get; set; }
 
         [NameInMap("HealthRate")]
         [Validation(Required=false)]
-        public ListNodesRequestHealthRate HealthRate { get; set; }
-        public class ListNodesRequestHealthRate : TeaModel {
-            [NameInMap("operation")]
-            [Validation(Required=false)]
-            public string Operation { get; set; }
-
-            [NameInMap("value")]
-            [Validation(Required=false)]
-            public int? Value { get; set; }
-
-        }
+        public string HealthRateShrink { get; set; }
 
         [NameInMap("HyperNode")]
         [Validation(Required=false)]

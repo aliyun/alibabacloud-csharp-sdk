@@ -157,6 +157,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public long? SelfQuotaWorkloadNum { get; set; }
 
+        [NameInMap("SubNodes")]
+        [Validation(Required=false)]
+        public List<string> SubNodes { get; set; }
+
         [NameInMap("SystemReservedCPU")]
         [Validation(Required=false)]
         public string SystemReservedCPU { get; set; }
