@@ -136,15 +136,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
                 /// <summary>
                 /// <para>The file system type.</para>
-                /// <para>Valid values:</para>
+                /// <para>The following information is displayed:</para>
                 /// <list type="bullet">
                 /// <item><description>standard: General-purpose NAS file system.</description></item>
                 /// <item><description>extreme: Extreme NAS file system.</description></item>
                 /// <item><description>cpfs: CPFS file system.</description></item>
                 /// </list>
-                /// <remarks>
-                /// <para> CPFS file systems are available only on the China site (aliyun.com).</para>
-                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>standard</para>
@@ -512,15 +509,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
                 /// <summary>
                 /// <para>The protocol type of the file system.</para>
-                /// <para>Valid values:</para>
+                /// <para>The following information is displayed:</para>
                 /// <list type="bullet">
                 /// <item><description>NFS: Network File System.</description></item>
                 /// <item><description>SMB: Server Message Block.</description></item>
                 /// <item><description>cpfs: The protocol type supported by the CPFS file system.</description></item>
                 /// </list>
-                /// <remarks>
-                /// <para> CPFS file systems are available only on the China site (aliyun.com).</para>
-                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NFS</para>
@@ -538,6 +532,24 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [NameInMap("QuorumVswId")]
                 [Validation(Required=false)]
                 public string QuorumVswId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>LRS</para>
+                /// </summary>
+                [NameInMap("RedundancyType")]
+                [Validation(Required=false)]
+                public string RedundancyType { get; set; }
+
+                [NameInMap("RedundancyVSwitchIds")]
+                [Validation(Required=false)]
+                public DescribeFileSystemsResponseBodyFileSystemsFileSystemRedundancyVSwitchIds RedundancyVSwitchIds { get; set; }
+                public class DescribeFileSystemsResponseBodyFileSystemsFileSystemRedundancyVSwitchIds : TeaModel {
+                    [NameInMap("RedundancyVSwitchId")]
+                    [Validation(Required=false)]
+                    public List<string> RedundancyVSwitchId { get; set; }
+
+                }
 
                 /// <summary>
                 /// <para>The region ID.</para>
@@ -578,15 +590,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The storage type.</para>
-                /// <para>Valid values:</para>
+                /// <para>The type of the storage.</para>
+                /// <para>The following information is displayed:</para>
                 /// <list type="bullet">
-                /// <item><description>Valid values for General-purpose NAS file systems: Capacity,Premium and Performance.</description></item>
-                /// <item><description>Valid values for Extreme NAS file systems: standard and advance.</description></item>
-                /// <item><description>Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).<remarks>
-                /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
-                /// </remarks>
-                /// </description></item>
+                /// <item><description>Valid values for General-purpose NAS file systems: Capacity, Performance, and Premium</description></item>
+                /// <item><description>Valid values for Extreme NAS file systems: standard and advance</description></item>
+                /// <item><description>Valid values for Cloud Parallel File Storage (CPFS) file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline)</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

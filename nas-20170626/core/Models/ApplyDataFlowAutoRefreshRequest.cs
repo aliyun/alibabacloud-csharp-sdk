@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ApplyDataFlowAutoRefreshRequest : TeaModel {
         /// <summary>
-        /// <para>The automatic update interval. CPFS checks whether data is updated in the directory at the interval specified by this parameter. If data is updated, CPFS starts an automatic update task. Unit: minutes.</para>
-        /// <para>Valid values: 5 to 526600. Default value: 10.</para>
+        /// <para>The automatic update interval. CPFS checks whether data is updated in the directory at the interval specified by this parameter. If data is updated, CPFS starts an automatic update task. Unit: minute.</para>
+        /// <para>Valid values: 10 to 525600. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The dataflow ID.</para>
+        /// <para>The ID of the dataflow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

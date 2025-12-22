@@ -104,6 +104,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ptc-123xxx</para>
+        /// </summary>
+        [NameInMap("ProtocolServiceIds")]
+        [Validation(Required=false)]
+        public string ProtocolServiceIds { get; set; }
+
     }
 
 }

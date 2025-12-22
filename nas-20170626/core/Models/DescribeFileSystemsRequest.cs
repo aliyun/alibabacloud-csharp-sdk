@@ -12,12 +12,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The ID of the file system.</para>
         /// <list type="bullet">
-        /// <item><description>Sample ID of a General-purpose NAS file system: 31a8e4****.</description></item>
-        /// <item><description>The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015****.</description></item>
-        /// <item><description>The IDs of Cloud Parallel File Storage (CPFS) file systems must start with cpfs-, for example, cpfs-125487****.<remarks>
-        /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>The IDs of CPFS file systems must start with cpfs-. Example: cpfs-125487\<em>\</em>\<em>\</em>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,13 +31,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>all (default): All types.</description></item>
         /// <item><description>standard: General-purpose NAS file system.</description></item>
         /// <item><description>extreme: Extreme NAS file system.</description></item>
-        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS) file system.</description></item>
+        /// <item><description>cpfs: CPFS file system.</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>CPFS file systems are available only on the China site (aliyun.com).</description></item>
-        /// <item><description>Separate multiple file types with commas (,).</description></item>
-        /// </list>
+        /// <para> Separate multiple data types with commas (,).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

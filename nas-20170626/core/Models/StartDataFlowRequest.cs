@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The dataflow ID.</para>
+        /// <para>The ID of the dataflow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

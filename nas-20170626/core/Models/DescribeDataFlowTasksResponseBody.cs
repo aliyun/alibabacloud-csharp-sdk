@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeDataFlowTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about data flow tasks.</para>
+        /// <para>The information about dataflow tasks.</para>
         /// </summary>
         [NameInMap("TaskInfo")]
         [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the data flow.</para>
+                /// <para>The ID of the dataflow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dfid-194433a5be3****</para>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string DataFlowId { get; set; }
 
                 /// <summary>
-                /// <para>The type of data on which operations are performed by the data flow task. Valid values:</para>
+                /// <para>The type of data on which operations are performed by the dataflow task. The following information is displayed:</para>
                 /// <list type="bullet">
                 /// <item><description>Metadata: the metadata of a file, including the timestamp, ownership, and permission information of the file. If you select Metadata, only the metadata of the file is imported. You can only query the file. When you access the file data, the file is loaded from the source storage as required.</description></item>
                 /// <item><description>Data: the data blocks of the file.</description></item>
                 /// <item><description>MetaAndData: the metadata and data blocks of the file.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> CPFS for LINGJUN supports only the MetaAndData type.</para>
+                /// <para> CPFS for Lingjun supports only the MetaAndData type.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string DataType { get; set; }
 
                 /// <summary>
-                /// <para>The directory in which the data flow task is executed.</para>
+                /// <para>The directory in which the dataflow task is executed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/path_in_cpfs/</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Directory { get; set; }
 
                 /// <summary>
-                /// <para>The directory mapped to the data flow task.</para>
+                /// <para>The directory mapped to the dataflow task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/path_in_cpfs/</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string DstDirectory { get; set; }
 
                 /// <summary>
-                /// <para>The time when the task ended.</para>
+                /// <para>The end time of the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-08-04 18:27:35</para>
@@ -174,7 +174,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string FsPath { get; set; }
 
                 /// <summary>
-                /// <para>Filter the directories under directory and transfer the folder contents contained in the filtered directory.</para>
+                /// <para>Filters subdirectories and transfers their contents.</para>
+                /// <remarks>
+                /// <para> Only CPFS for Lingjun supports this operation.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;/test/&quot;,&quot;/test1/&quot;]</para>
@@ -184,7 +187,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Includes { get; set; }
 
                 /// <summary>
-                /// <para>The initiator of the data flow task. Valid values:</para>
+                /// <para>The initiator of the dataflow task. The following information is displayed:</para>
                 /// <list type="bullet">
                 /// <item><description>User: The task is initiated by a user.</description></item>
                 /// <item><description>System: The task is automatically initiated by CPFS based on the automatic update interval.</description></item>
@@ -201,7 +204,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Originator { get; set; }
 
                 /// <summary>
-                /// <para>The progress of the data flow task. The number of operations that have been performed by the data flow task.</para>
+                /// <para>The progress of the dataflow task. The number of operations that have been performed by the dataflow task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>240</para>
@@ -211,14 +214,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public long? Progress { get; set; }
 
                 /// <summary>
-                /// <para>The progress of the data flow task.</para>
+                /// <para>The progress of the dataflow task.</para>
                 /// </summary>
                 [NameInMap("ProgressStats")]
                 [Validation(Required=false)]
                 public DescribeDataFlowTasksResponseBodyTaskInfoTaskProgressStats ProgressStats { get; set; }
                 public class DescribeDataFlowTasksResponseBodyTaskInfoTaskProgressStats : TeaModel {
                     /// <summary>
-                    /// <para>The actual amount of data for which the data flow task is complete. Unit: bytes.</para>
+                    /// <para>The actual amount of data for which the dataflow task is complete. Unit: bytes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>131092971520</para>
@@ -228,7 +231,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                     public long? ActualBytes { get; set; }
 
                     /// <summary>
-                    /// <para>The actual number of files for which the data flow task is complete.</para>
+                    /// <para>The actual number of files for which the dataflow task is complete.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -248,7 +251,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                     public long? AverageSpeed { get; set; }
 
                     /// <summary>
-                    /// <para>The amount of data (including skipped data) for which the data flow task is complete. Unit: bytes.</para>
+                    /// <para>The amount of data (including skipped data) for which the dataflow task is complete. Unit: bytes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>131092971520</para>
@@ -268,7 +271,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                     public long? BytesTotal { get; set; }
 
                     /// <summary>
-                    /// <para>The number of files (including skipped files) for which the data flow task is complete.</para>
+                    /// <para>The number of files (including skipped files) for which the dataflow task is complete.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -302,10 +305,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>The save path of data flow task reports in the CPFS file system.</para>
+                /// <para>The save path of dataflow task reports in the CPFS file system.</para>
                 /// <list type="bullet">
                 /// <item><description>The task reports for a CPFS file system are generated in the <c>.dataflow_report</c> directory of the CPFS file system.</description></item>
-                /// <item><description>CPFS for LINGJUN returns an OSS download link for you to download the task reports.</description></item>
+                /// <item><description>CPFS for Lingjun returns an OSS download link for you to download the task reports.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -319,8 +322,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <summary>
                 /// <para>The reports.</para>
                 /// <remarks>
-                /// <para> Streaming tasks do not support reports.</para>
                 /// </remarks>
+                /// <list type="bullet">
+                /// <item><description><para>Streaming tasks do not support reports.</para>
+                /// </description></item>
+                /// <item><description><para>If the WithReport parameter is set to True, the CPFS for Lingjun report data is returned.</para>
+                /// </description></item>
+                /// <item><description><para>Only CPFS for Lingjun supports the WithReport parameter.</para>
+                /// </description></item>
+                /// </list>
                 /// </summary>
                 [NameInMap("Reports")]
                 [Validation(Required=false)]
@@ -336,7 +346,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                         /// <item><description><para>CPFS:</para>
                         /// <para>TotalFilesReport: task reports.</para>
                         /// </description></item>
-                        /// <item><description><para>CPFS for LINGJUN:</para>
+                        /// <item><description><para>CPFS for Lingjun:</para>
                         /// <list type="bullet">
                         /// <item><description>FailedFilesReport: failed file reports.</description></item>
                         /// <item><description>SkippedFilesReport: skipped file reports.</description></item>
@@ -365,7 +375,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
                 /// <summary>
                 /// <para>The access path of the source storage. Format: <c>&lt;storage type&gt;://[&lt;account id&gt;:]&lt;path&gt;</c>.</para>
-                /// <para>Parameters:</para>
+                /// <para>Among them:</para>
                 /// <list type="bullet">
                 /// <item><description><para>storage type: Only Object Storage Service (OSS) is supported.</para>
                 /// </description></item>
@@ -384,7 +394,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <list type="bullet">
                 /// <item><description><para>The OSS bucket must be an existing bucket in the region.</para>
                 /// </description></item>
-                /// <item><description><para>Only CPFS for LINGJUN V2.6.0 and later support the account id parameter.</para>
+                /// <item><description><para>Only CPFS for Lingjun V2.6.0 and later support the account id parameter.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -396,7 +406,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string SourceStorage { get; set; }
 
                 /// <summary>
-                /// <para>The time when the task started.</para>
+                /// <para>The start time of the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-08-04 18:27:35</para>
@@ -406,14 +416,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The status of the data flow task. Valid values:</para>
+                /// <para>The status of the dataflow task. The following information is displayed:</para>
                 /// <list type="bullet">
-                /// <item><description>Pending: The data flow task has been created and has not started.</description></item>
-                /// <item><description>Executing: The data flow task is being executed.</description></item>
-                /// <item><description>Failed: The data flow task failed to be executed. You can view the cause of the failure in the data flow task report.</description></item>
-                /// <item><description>Completed: The data flow task is completed. You can check that all the files have been correctly transferred in the data flow task report.</description></item>
-                /// <item><description>Canceled: The data flow task is canceled and is not completed.</description></item>
-                /// <item><description>Canceling: The data flow task is being canceled.</description></item>
+                /// <item><description>Pending: The dataflow task has been created and has not started.</description></item>
+                /// <item><description>Executing: The dataflow task is being executed.</description></item>
+                /// <item><description>Failed: The dataflow task failed to be executed. You can view the cause of the failure in the dataflow task report.</description></item>
+                /// <item><description>Completed: The dataflow task is completed. You can check that all the files have been correctly transferred in the dataflow task report.</description></item>
+                /// <item><description>Canceled: The dataflow task is canceled and is not completed.</description></item>
+                /// <item><description>Canceling: The dataflow task is being canceled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -424,17 +434,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The type of the data flow task. Valid values:</para>
+                /// <para>The type of the dataflow task. The following information is displayed:</para>
                 /// <list type="bullet">
                 /// <item><description>Import: imports data stored in the source storage to a CPFS file system.</description></item>
                 /// <item><description>Export: exports specified data from a CPFS file system to the source storage.</description></item>
                 /// <item><description>StreamImport: imports the specified data from the source storage to a CPFS file system in streaming mode.</description></item>
                 /// <item><description>StreamExport: exports specified data from a CPFS file system to the source storage in streaming mode.</description></item>
                 /// <item><description>Evict: releases the data blocks of a file in a CPFS file system. After the eviction, only the metadata of the file is retained in the CPFS file system. You can still query the file. However, the data blocks of the file are cleared and do not occupy the storage space in the CPFS file system. When you access the file data, the file is loaded from the source storage as required.</description></item>
-                /// <item><description>Inventory: obtains the inventory list managed by a data flow from the CPFS file system, providing the cache status of inventories in the data flow.</description></item>
+                /// <item><description>Inventory: obtains the inventory list managed by a dataflow from the CPFS file system, providing the cache status of inventories in the dataflow.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> Only CPFS for LINGJUN V2.6.0 and later support StreamImport and StreamExport.</para>
+                /// <para> Only CPFS for Lingjun V2.6.0 and later support StreamImport and StreamExport.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -445,7 +455,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string TaskAction { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the data flow task.</para>
+                /// <para>The ID of the dataflow task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>taskId-12345678</para>
@@ -454,6 +464,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string TaskId { get; set; }
 
+                /// <summary>
+                /// <para>Specify the OSS directory and synchronize data based on the content of the CSV file in the OSS directory.</para>
+                /// <remarks>
+                /// <para> Only CPFS for Lingjun supports this operation.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/path_in_cpfs/</para>
+                /// </summary>
                 [NameInMap("TransferFileListPath")]
                 [Validation(Required=false)]
                 public string TransferFileListPath { get; set; }

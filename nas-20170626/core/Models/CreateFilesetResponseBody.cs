@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FsetId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>98696EF0-1607-4E9D-B01D-F20930B6****</para>

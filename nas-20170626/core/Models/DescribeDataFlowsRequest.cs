@@ -13,11 +13,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The ID of the file system.</para>
         /// <list type="bullet">
         /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</description></item>
-        /// <item><description>The IDs of CPFS for LINGJUN file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>The IDs of CPFS for Lingjun file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para> CPFS file systems are available only on the China site (aliyun.com).</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +25,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The filter that is used to query data flows.</para>
+        /// <para>The filter that is used to query dataflows.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -38,15 +35,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<DescribeDataFlowsRequestFilters> Filters { get; set; }
         public class DescribeDataFlowsRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The filter name. Valid values:</para>
+            /// <para>The filter name. Valid value:</para>
             /// <list type="bullet">
-            /// <item><description>DataFlowIds: filters data flows by data flow ID.</description></item>
-            /// <item><description>FsetIds: filters data flows by fileset ID.</description></item>
-            /// <item><description>FileSystemPath: filters data flows based on the path of a fileset in a CPFS file system.</description></item>
-            /// <item><description>SourceStorage: filters data flows based on the access path of the source storage.</description></item>
-            /// <item><description>ThroughputList: filters data flows based on data flow throughput.</description></item>
-            /// <item><description>Description: filters data flows based on the fileset description.</description></item>
-            /// <item><description>Status: filters data flows based on data flow status.</description></item>
+            /// <item><description>DataFlowIds: filters dataflow tasks by dataflow ID.</description></item>
+            /// <item><description>FsetIds: filters dataflows by fileset ID.</description></item>
+            /// <item><description>FileSystemPath: filters dataflows based on the path of a fileset in a CPFS file system.</description></item>
+            /// <item><description>SourceStorage: filters dataflows based on the access path of the source storage.</description></item>
+            /// <item><description>ThroughputList: filters dataflows based on dataflow throughput.</description></item>
+            /// <item><description>Description: filters dataflows based on the fileset description.</description></item>
+            /// <item><description>Status: filters dataflows based on dataflow status.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,15 +54,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value. This parameter does not support wildcards.</para>
+            /// <para>The value of the filter. This parameter does not support wildcards.</para>
             /// <list type="bullet">
-            /// <item><description>If Key is set to DataFlowIds, set Value to a data flow ID or a part of the data flow ID. You can specify a data flow ID or a group of data flow IDs. You can specify a maximum of 10 data flow IDs. Example: <c>df-194433a5be31****</c> or <c>df-194433a5be31****,df-184433a5be31****</c>.</description></item>
-            /// <item><description>If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. Example: <c>fset-1902718ea0ae****</c> or <c>fset-1902718ea0ae****,fset-1242718ea0ae****</c>.</description></item>
+            /// <item><description>If Key is set to DataFlowIds, set Value to a dataflow ID or a part of the dataflow ID. You can specify a dataflow ID or a group of dataflow IDs. You can specify a maximum of 10 dataflow IDs. Example: <c>df-194433a5be31****</c> or <c>df-194433a512a2****,df-234533a5be31****</c>.</description></item>
+            /// <item><description>If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. For example, <c>fset-1902718ea0ae****</c> or <c>fset-235718ea0ae****,fset-5122718ea0ae****</c>.</description></item>
             /// <item><description>If Key is set to FileSystemPath, set Value to the path or a part of the path of a fileset in a CPFS file system. The value of the parameter must be 1 to 1,024 characters in length.</description></item>
             /// <item><description>If Key is set to SourceStorage, set Value to the access path or a part of the access path of the source storage. The path can be up to 1,024 characters in length.</description></item>
-            /// <item><description>If Key is set to ThroughputList, set Value to the data flow throughput. Combined query is supported.</description></item>
-            /// <item><description>If Key is set to Description, set Value to a data flow description or a part of the data flow description.</description></item>
-            /// <item><description>If Key is set to Status, set Value to the data flow status.</description></item>
+            /// <item><description>If Key is set to ThroughputList, set Value to the dataflow throughput. Combined query is supported.</description></item>
+            /// <item><description>If Key is set to Description, set Value to a dataflow description or a part of the dataflow description.</description></item>
+            /// <item><description>If Key is set to Status, set Value to the dataflow status.</description></item>
             /// <item><description>If Key is set to SourceStoragePath, set Value to the access path or a part of the access path of the source storage. The path can be up to 1,024 characters in length.</description></item>
             /// </list>
             /// 

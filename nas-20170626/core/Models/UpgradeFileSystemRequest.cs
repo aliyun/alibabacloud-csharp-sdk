@@ -55,11 +55,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The ID of the file system.</para>
         /// <list type="bullet">
         /// <item><description>The IDs of Extreme NAS file systems must start with <c>extreme-</c>, for example, extreme-0015\<em>\</em>\<em>\</em>.</description></item>
-        /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

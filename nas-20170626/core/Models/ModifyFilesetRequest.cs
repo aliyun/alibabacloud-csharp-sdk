@@ -24,13 +24,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2838077.html">DeleteFileset</a> operation.</para>
+        /// <para>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: enables release protection.</description></item>
         /// <item><description>false: disables release protection.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter can protect filesets only against manual releases, but not against automatic releases.</para>
+        /// <para>This parameter can protect filesets only against manual releases, but not against automatic releases.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,9 +75,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</description></item>
         /// <item><description>The IDs of CPFS for LINGJUN file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para> CPFS is not supported on the international site.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

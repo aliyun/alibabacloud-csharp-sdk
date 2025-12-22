@@ -180,6 +180,22 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>vsw-123xxx</para>
+            /// </summary>
+            [NameInMap("VSwitchId")]
+            [Validation(Required=false)]
+            public string VSwitchId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>vpc-123xxx</para>
+            /// </summary>
+            [NameInMap("VpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
+
         }
 
         /// <summary>

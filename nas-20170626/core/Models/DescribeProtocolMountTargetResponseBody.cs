@@ -136,6 +136,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
+            [NameInMap("VSwitchIds")]
+            [Validation(Required=false)]
+            public List<string> VSwitchIds { get; set; }
+
             /// <summary>
             /// <para>The VPC ID of the export directory for the protocol service.</para>
             /// 

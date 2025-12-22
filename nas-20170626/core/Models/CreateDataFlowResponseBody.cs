@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateDataFlowResponseBody : TeaModel {
         /// <summary>
-        /// <para>The dataflow ID.</para>
+        /// <para>The ID of the dataflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>df-194433a5be31****</para>

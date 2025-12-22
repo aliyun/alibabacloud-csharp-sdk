@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeDataFlowsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about data flows.</para>
+        /// <para>The dataflow details.</para>
         /// </summary>
         [NameInMap("DataFlowInfo")]
         [Validation(Required=false)]
@@ -72,13 +72,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public long? AutoRefreshInterval { get; set; }
 
                 /// <summary>
-                /// <para>The automatic update policy. The updated data in the source storage is imported into the CPFS file system based on the policy. Valid values:</para>
+                /// <para>The automatic update policy. The updated data in the source storage is imported into the CPFS file system based on the policy. The following information is displayed:</para>
                 /// <list type="bullet">
-                /// <item><description>None: Updated data in the source storage is not automatically imported into the CPFS file system. You can run a data flow task to import the updated data from the source storage.</description></item>
+                /// <item><description>None: Updated data in the source storage is not automatically imported into the CPFS file system. You can run a dataflow task to import the updated data from the source storage.</description></item>
                 /// <item><description>ImportChanged: Updated data in the source storage is automatically imported into the CPFS file system.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> Only CPFS supports this parameter.</para>
+                /// <para> Only CPFS is supported.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -91,6 +91,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <summary>
                 /// <para>The time when the fileset was created.</para>
                 /// <para>The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
+                /// <remarks>
+                /// <para> Only CPFS supports this parameter.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-09-30T10:08:08Z</para>
@@ -100,7 +103,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The dataflow ID.</para>
+                /// <para>The ID of the dataflow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>df-194433a5be31****</para>
@@ -113,9 +116,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The description of the dataflow.</para>
                 /// <para>Limits:</para>
                 /// <list type="bullet">
-                /// <item><description>The description must be 2 to 128 characters in length.</description></item>
-                /// <item><description>The description must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-                /// <item><description>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</description></item>
+                /// <item><description>The name must be 2 to 128 characters in length and</description></item>
+                /// <item><description>start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+                /// <item><description>The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -126,7 +129,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The error message returned. Valid values:</para>
+                /// <para>The error message. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>None (default): The dataflow status is normal.</description></item>
                 /// <item><description>SourceStorageUnreachable: The access path of the source storage is not found.</description></item>
@@ -154,13 +157,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The directory of the fileset in the CPFS file system.</para>
                 /// <para>Limits:</para>
                 /// <list type="bullet">
-                /// <item><description>The directory must be 2 to 1,024 characters in length.</description></item>
+                /// <item><description>The directory must be 2 to 1024 characters in length.</description></item>
                 /// <item><description>The directory must be encoded in UTF-8.</description></item>
                 /// <item><description>The directory must start and end with a forward slash (/).</description></item>
                 /// <item><description>The directory must be a fileset directory in the CPFS file system.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> Only CPFS supports this parameter.</para>
+                /// <para> Only CPFS is supported.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -185,6 +188,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
                 /// <summary>
                 /// <para>The fileset ID.</para>
+                /// <remarks>
+                /// <para> Only CPFS supports this parameter.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fset-1902718ea0ae****</para>
@@ -194,9 +200,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string FsetId { get; set; }
 
                 /// <summary>
-                /// <para>The type of security mechanism for the source storage. This parameter must be specified if the source storage is accessed with a security mechanism. Valid values:</para>
+                /// <para>The type of security mechanism for the source storage. This parameter must be specified if the source storage is accessed with a security mechanism. Valid value:</para>
                 /// <list type="bullet">
-                /// <item><description>None (default): The source storage can be accessed without a security mechanism.</description></item>
+                /// <item><description>Null (default): The OSS bucket can be accessed without a security mechanism.</description></item>
                 /// <item><description>SSL: The source storage must be accessed with an SSL certificate.</description></item>
                 /// </list>
                 /// 
@@ -208,23 +214,30 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string SourceSecurityType { get; set; }
 
                 /// <summary>
-                /// <para>The access path of the source storage. Format: <c>&lt;storage type&gt;://&lt;path&gt;</c>.</para>
-                /// <para>Parameters:</para>
+                /// <para>The access path of the source storage. Format: <c>&lt;storage type&gt;://[&lt;account id&gt;:]&lt;path&gt;</c>.</para>
+                /// <para>Among them:</para>
                 /// <list type="bullet">
-                /// <item><description><para>storage type: Only Object Storage Service (OSS) is supported.</para>
+                /// <item><description><para>storage type: Only OSS is supported.</para>
                 /// </description></item>
-                /// <item><description><para>path: the name of the OSS bucket.</para>
+                /// <item><description><para>account id: The UID of the account of the source storage.</para>
+                /// </description></item>
+                /// <item><description><para>path: The name of the OSS bucket.</para>
                 /// <list type="bullet">
                 /// <item><description>The name can contain only lowercase letters, digits, and hyphens (-). The name must start and end with a lowercase letter or digit.</description></item>
                 /// <item><description>The name must be 8 to 128 characters in length.</description></item>
-                /// <item><description>The name must be encoded in UTF-8.</description></item>
+                /// <item><description>Must be encoded in UTF-8.</description></item>
                 /// <item><description>The name cannot start with http:// or https://.</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> The OSS bucket must be an existing bucket in the region.</para>
                 /// </remarks>
+                /// <list type="bullet">
+                /// <item><description><para>The OSS bucket must be an existing bucket in the region.</para>
+                /// </description></item>
+                /// <item><description><para>Only CPFS for Lingjun V2.6.0 and later support the account id parameter.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss://bucket1</para>
@@ -236,7 +249,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <summary>
                 /// <para>The access path in the bucket of the source storage.</para>
                 /// <remarks>
-                /// <para> Only CPFS for LINGJUN supports this parameter.</para>
+                /// <para> Only CPFS for Lingjun supports this parameter.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -247,7 +260,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string SourceStoragePath { get; set; }
 
                 /// <summary>
-                /// <para>The dataflow status. Valid values:</para>
+                /// <para>The dataflow status. The following information is displayed:</para>
                 /// <list type="bullet">
                 /// <item><description>Starting: The dataflow is being created or enabled.</description></item>
                 /// <item><description>Running: The dataflow has been created and is running properly.</description></item>
@@ -266,15 +279,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The maximum dataflow throughput. Unit: MB/s. Valid values:</para>
+                /// <para>The maximum dataflow throughput. Unit: MB/s. Valid value:</para>
                 /// <list type="bullet">
                 /// <item><description>600</description></item>
-                /// <item><description>1,200</description></item>
-                /// <item><description>1,500</description></item>
+                /// <item><description>1200</description></item>
+                /// <item><description>1500</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> The dataflow throughput must be less than the I/O throughput of the file system.</para>
                 /// </remarks>
+                /// <list type="bullet">
+                /// <item><description><para>The dataflow throughput must be less than the I/O throughput of the file system.</para>
+                /// </description></item>
+                /// <item><description><para>Only CPFS supports this parameter.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>600</para>
@@ -286,6 +304,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <summary>
                 /// <para>The time when the fileset was last updated.</para>
                 /// <para>The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
+                /// <remarks>
+                /// <para> Only CPFS supports this parameter.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-09-30T10:08:08Z</para>

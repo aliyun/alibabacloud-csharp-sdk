@@ -13,6 +13,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The maximum throughput of the file system.</para>
         /// <para>Unit: MB/s.</para>
         /// <para>Specify a value based on the specifications on the buy page.</para>
+        /// <para><a href="https://common-buy-intl.alibabacloud.com/?spm=5176.nas_overview.0.0.7ea01dbft0dTui%5C&commodityCode=nas_cpfspost_public_intl#/buy">CPFS file system (Pay-as-you-go)</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>150</para>
@@ -22,10 +23,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The capacity of the file system. Unit: GiB.</para>
-        /// <para>This parameter is valid and required if the FileSystemType parameter is set to extreme.</para>
+        /// <para>Specify the capacity of the file system. Unit: GiB. Specify the Capacity parameter when the FileSystemType parameter is set to extreme or cpfs.</para>
         /// <para>Specify a value based on the specifications on the following buy page:</para>
-        /// <para><a href="https://common-buy-intl.alibabacloud.com/?commodityCode=nas_extpost_public_intl#/buy">Extreme NAS file system (Pay-as-you-go)</a></para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://common-buy-intl.alibabacloud.com/?commodityCode=nas_extpost_public_intl#/buy">Extreme NAS file system (Pay-as-you-go)</a></description></item>
+        /// <item><description><a href="https://common-buy-intl.alibabacloud.com/?spm=5176.nas_overview.0.0.7ea01dbft0dTui%5C&commodityCode=nas_cpfspost_public_intl#/buy">CPFS file system (Pay-as-you-go)</a></description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PayAsYouGo (default): pay-as-you-go</description></item>
-        /// <item><description>Subscription: subscription</description></item>
+        /// <item><description>Subscription</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -133,13 +136,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The type of the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard (default): General-purpose NAS file system</description></item>
-        /// <item><description>extreme: Extreme NAS file system</description></item>
-        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS) file system</description></item>
+        /// <item><description>standard: General-purpose Apsara File Storage NAS (NAS) file system</description></item>
+        /// <item><description>extreme: Extreme NAS file system.</description></item>
+        /// <item><description>cpfs: CPFS file system</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>standard</para>
@@ -160,10 +160,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string KmsKeyId { get; set; }
 
         /// <summary>
-        /// <para>The protocol type.</para>
+        /// <para>Specify the protocol type.</para>
         /// <list type="bullet">
-        /// <item><description>If the FileSystemType parameter is set to standard, you can set the ProtocolType parameter to NFS or SMB.</description></item>
-        /// <item><description>If the FileSystemType parameter is set to extreme, you can set the ProtocolType parameter to NFS.</description></item>
+        /// <item><description>If the FileSystemType parameter is set to standard, set the ProtocolType parameter to NFS or SMB.</description></item>
+        /// <item><description>If the FileSystemType parameter is set to extreme, set the ProtocolType parameter to NFS.</description></item>
+        /// <item><description>If the FileSystemType parameter is set to cpfs, set the ProtocolType parameter to cpfs.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -173,6 +174,25 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ZRS</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("RedundancyType")]
+        [Validation(Required=false)]
+        public string RedundancyType { get; set; }
+
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("RedundancyVSwitchIds")]
+        [Validation(Required=false)]
+        public List<string> RedundancyVSwitchIds { get; set; }
 
         /// <summary>
         /// <para>The resource group ID.</para>
@@ -200,10 +220,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The storage class.</para>
+        /// <para>The storage type.</para>
         /// <list type="bullet">
-        /// <item><description>If the FileSystemType parameter is set to standard, you can set the StorageType parameter to Performance, Capacity, or Premium.</description></item>
-        /// <item><description>If the FileSystemType parameter is set to extreme, you can set the StorageType parameter to standard or advance.</description></item>
+        /// <item><description>If the FileSystemType parameter is set to standard, set the StorageType parameter to Performance, Capacity, or Premium.</description></item>
+        /// <item><description>If the FileSystemType parameter is set to extreme, set the StorageType parameter to standard or advance.</description></item>
+        /// <item><description>If the FileSystemType parameter is set to cpfs, set the StorageType parameter to advance_100 (100 MB/s/TiB baseline) or advance_200 (200 MB/s/TiB baseline).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -264,8 +285,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The vSwitch ID.</para>
-        /// <para>This parameter is reserved and does not take effect. You do not need to configure this parameter.</para>
+        /// <para>The vSwitch ID of the cluster.</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter is required only if you set the FileSystemType parameter to cpfs.</description></item>
+        /// <item><description>This parameter is reserved and not required if you set the FileSystemType parameter to standard or extreme.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-2ze37k6jh8ums2fw2****</para>
@@ -276,7 +300,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The ID of the virtual private cloud (VPC).</para>
-        /// <para>This parameter is reserved and does not take effect. You do not need to configure this parameter.</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter is required only if you set the FileSystemType parameter to cpfs.</description></item>
+        /// <item><description>This parameter is reserved and not required if you set the FileSystemType parameter to standard or extreme.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1cbv1ljve4j5hlw****</para>
@@ -286,16 +313,18 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID.</para>
-        /// <para>Each region has multiple isolated locations known as zones. Each zone has its own independent power supply and networks.</para>
+        /// <para>The ID of the zone.</para>
+        /// <para>Each region has multiple isolated locations known as zones. Each zone has its own independent power supply and network.</para>
         /// <para>This parameter is not required if the FileSystemType parameter is set to standard. By default, a random zone is selected based on the protocol type and storage type.</para>
-        /// <para>This parameter is required if the FileSystemType parameter is set to extreme.</para>
+        /// <para>This parameter is required if the FileSystemType parameter is set to extreme or cpfs.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>An Elastic Compute Service (ECS) instance and a NAS file system that reside in different zones of the same region can access each other.</description></item>
-        /// <item><description>We recommend that you select the zone where the ECS instance resides. This prevents cross-zone latency between the file system and the ECS instance.</description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>An Elastic Compute Service (ECS) instance and a NAS file system that reside in different zones of the same region can access each other.</para>
+        /// </description></item>
+        /// <item><description><para>We recommend that you select the zone where the ECS instance resides. This prevents cross-zone latency between the file system and the ECS instance.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-b</para>

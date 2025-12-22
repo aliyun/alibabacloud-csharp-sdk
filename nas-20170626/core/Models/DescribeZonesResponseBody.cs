@@ -61,9 +61,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                         /// <item><description>If the FileSystemType parameter is set to extreme, the protocol type is nfs.</description></item>
                         /// <item><description>If the FileSystemType parameter is set to cpfs, the protocol type is cpfs.</description></item>
                         /// </list>
-                        /// <remarks>
-                        /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
-                        /// </remarks>
                         /// 
                         /// <b>Example:</b>
                         /// <para>nfs</para>
@@ -79,9 +76,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                         /// <item><description>If the FileSystemType parameter is set to extreme, the storage type is standard or advance.</description></item>
                         /// <item><description>If the FileSystemType parameter is set to cpfs, the storage type is advance_100 (100 MB/s/TiB baseline) or advance_200 (200 MB/s/TiB baseline).</description></item>
                         /// </list>
-                        /// <remarks>
-                        /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
-                        /// </remarks>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Capacity</para>
