@@ -57,6 +57,20 @@ namespace AlibabaCloud.SDK.Ocr20191230.Models
                     [Validation(Required=false)]
                     public int? Left { get; set; }
 
+                    [NameInMap("Pos")]
+                    [Validation(Required=false)]
+                    public List<RecognizeCharacterResponseBodyDataResultsTextRectanglesPos> Pos { get; set; }
+                    public class RecognizeCharacterResponseBodyDataResultsTextRectanglesPos : TeaModel {
+                        [NameInMap("x")]
+                        [Validation(Required=false)]
+                        public int? X { get; set; }
+
+                        [NameInMap("y")]
+                        [Validation(Required=false)]
+                        public int? Y { get; set; }
+
+                    }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>150</para>

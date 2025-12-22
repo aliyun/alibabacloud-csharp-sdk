@@ -23,92 +23,210 @@ namespace AlibabaCloud.SDK.Ocr20191230
             this._endpoint = GetEndpoint("ocr", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
 
-        public Dictionary<string, object> _postOSSObject(string bucketName, Dictionary<string, object> data)
+        public Dictionary<string, object> _postOSSObject(string bucketName, Dictionary<string, object> data, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            TeaRequest request_ = new TeaRequest();
-            Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
-            string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-            string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
-            request_.Protocol = "HTTPS";
-            request_.Method = "POST";
-            request_.Pathname = "/";
-            request_.Headers = new Dictionary<string, string>
+            Dictionary<string, object> runtime_ = new Dictionary<string, object>
             {
-                {"host", host},
-                {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
-                {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
-            };
-            request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
-            request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
-            TeaResponse response_ = TeaCore.DoAction(request_);
-
-            Dictionary<string, object> respMap = null;
-            string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
-            if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
-            {
-                respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-                Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
-                throw new TeaException(new Dictionary<string, object>
+                {"timeouted", "retry"},
+                {"key", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Key, _key)},
+                {"cert", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Cert, _cert)},
+                {"ca", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Ca, _ca)},
+                {"readTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ReadTimeout, _readTimeout)},
+                {"connectTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ConnectTimeout, _connectTimeout)},
+                {"httpProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpProxy, _httpProxy)},
+                {"httpsProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpsProxy, _httpsProxy)},
+                {"noProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.NoProxy, _noProxy)},
+                {"socks5Proxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5Proxy, _socks5Proxy)},
+                {"socks5NetWork", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5NetWork, _socks5NetWork)},
+                {"maxIdleConns", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxIdleConns, _maxIdleConns)},
+                {"retry", new Dictionary<string, object>
                 {
-                    {"code", err.Get("Code")},
-                    {"message", err.Get("Message")},
-                    {"data", new Dictionary<string, object>
+                    {"retryable", runtime.Autoretry},
+                    {"maxAttempts", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxAttempts, 3)},
+                }},
+                {"backoff", new Dictionary<string, object>
+                {
+                    {"policy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.BackoffPolicy, "no")},
+                    {"period", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.BackoffPeriod, 1)},
+                }},
+                {"ignoreSSL", AlibabaCloud.OpenApiClient.Client.DefaultAny(runtime.IgnoreSSL, false)},
+                {"tlsMinVersion", _tlsMinVersion},
+            };
+
+            TeaRequest _lastRequest = null;
+            Exception _lastException = null;
+            long _now = System.DateTime.Now.Millisecond;
+            int _retryTimes = 0;
+            while (TeaCore.AllowRetry((IDictionary) runtime_["retry"], _retryTimes, _now))
+            {
+                if (_retryTimes > 0)
+                {
+                    int backoffTime = TeaCore.GetBackoffTime((IDictionary)runtime_["backoff"], _retryTimes);
+                    if (backoffTime > 0)
                     {
-                        {"httpCode", response_.StatusCode},
-                        {"requestId", err.Get("RequestId")},
-                        {"hostId", err.Get("HostId")},
-                    }},
-                });
+                        TeaCore.Sleep(backoffTime);
+                    }
+                }
+                _retryTimes = _retryTimes + 1;
+                try
+                {
+                    TeaRequest request_ = new TeaRequest();
+                    Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
+                    string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
+                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    request_.Protocol = "HTTPS";
+                    request_.Method = "POST";
+                    request_.Pathname = "/";
+                    request_.Headers = new Dictionary<string, string>
+                    {
+                        {"host", host},
+                        {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
+                        {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
+                    };
+                    request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
+                    request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
+                    _lastRequest = request_;
+                    TeaResponse response_ = TeaCore.DoAction(request_, runtime_);
+
+                    Dictionary<string, object> respMap = null;
+                    string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
+                    if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
+                    {
+                        respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                        Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
+                        throw new TeaException(new Dictionary<string, object>
+                        {
+                            {"code", err.Get("Code")},
+                            {"message", err.Get("Message")},
+                            {"data", new Dictionary<string, object>
+                            {
+                                {"httpCode", response_.StatusCode},
+                                {"requestId", err.Get("RequestId")},
+                                {"hostId", err.Get("HostId")},
+                            }},
+                        });
+                    }
+                    respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                    return TeaConverter.merge<object>
+                    (
+                        respMap
+                    );
+                }
+                catch (Exception e)
+                {
+                    if (TeaCore.IsRetryable(e))
+                    {
+                        _lastException = e;
+                        continue;
+                    }
+                    throw e;
+                }
             }
-            respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-            return TeaConverter.merge<object>
-            (
-                respMap
-            );
+
+            throw new TeaUnretryableException(_lastRequest, _lastException);
         }
 
-        public async Task<Dictionary<string, object>> _postOSSObjectAsync(string bucketName, Dictionary<string, object> data)
+        public async Task<Dictionary<string, object>> _postOSSObjectAsync(string bucketName, Dictionary<string, object> data, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            TeaRequest request_ = new TeaRequest();
-            Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
-            string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-            string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
-            request_.Protocol = "HTTPS";
-            request_.Method = "POST";
-            request_.Pathname = "/";
-            request_.Headers = new Dictionary<string, string>
+            Dictionary<string, object> runtime_ = new Dictionary<string, object>
             {
-                {"host", host},
-                {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
-                {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
-            };
-            request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
-            request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
-            TeaResponse response_ = await TeaCore.DoActionAsync(request_);
-
-            Dictionary<string, object> respMap = null;
-            string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
-            if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
-            {
-                respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-                Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
-                throw new TeaException(new Dictionary<string, object>
+                {"timeouted", "retry"},
+                {"key", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Key, _key)},
+                {"cert", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Cert, _cert)},
+                {"ca", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Ca, _ca)},
+                {"readTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ReadTimeout, _readTimeout)},
+                {"connectTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ConnectTimeout, _connectTimeout)},
+                {"httpProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpProxy, _httpProxy)},
+                {"httpsProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpsProxy, _httpsProxy)},
+                {"noProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.NoProxy, _noProxy)},
+                {"socks5Proxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5Proxy, _socks5Proxy)},
+                {"socks5NetWork", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5NetWork, _socks5NetWork)},
+                {"maxIdleConns", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxIdleConns, _maxIdleConns)},
+                {"retry", new Dictionary<string, object>
                 {
-                    {"code", err.Get("Code")},
-                    {"message", err.Get("Message")},
-                    {"data", new Dictionary<string, object>
+                    {"retryable", runtime.Autoretry},
+                    {"maxAttempts", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxAttempts, 3)},
+                }},
+                {"backoff", new Dictionary<string, object>
+                {
+                    {"policy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.BackoffPolicy, "no")},
+                    {"period", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.BackoffPeriod, 1)},
+                }},
+                {"ignoreSSL", AlibabaCloud.OpenApiClient.Client.DefaultAny(runtime.IgnoreSSL, false)},
+                {"tlsMinVersion", _tlsMinVersion},
+            };
+
+            TeaRequest _lastRequest = null;
+            Exception _lastException = null;
+            long _now = System.DateTime.Now.Millisecond;
+            int _retryTimes = 0;
+            while (TeaCore.AllowRetry((IDictionary) runtime_["retry"], _retryTimes, _now))
+            {
+                if (_retryTimes > 0)
+                {
+                    int backoffTime = TeaCore.GetBackoffTime((IDictionary)runtime_["backoff"], _retryTimes);
+                    if (backoffTime > 0)
                     {
-                        {"httpCode", response_.StatusCode},
-                        {"requestId", err.Get("RequestId")},
-                        {"hostId", err.Get("HostId")},
-                    }},
-                });
+                        TeaCore.Sleep(backoffTime);
+                    }
+                }
+                _retryTimes = _retryTimes + 1;
+                try
+                {
+                    TeaRequest request_ = new TeaRequest();
+                    Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
+                    string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
+                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    request_.Protocol = "HTTPS";
+                    request_.Method = "POST";
+                    request_.Pathname = "/";
+                    request_.Headers = new Dictionary<string, string>
+                    {
+                        {"host", host},
+                        {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
+                        {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
+                    };
+                    request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
+                    request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
+                    _lastRequest = request_;
+                    TeaResponse response_ = await TeaCore.DoActionAsync(request_, runtime_);
+
+                    Dictionary<string, object> respMap = null;
+                    string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
+                    if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
+                    {
+                        respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                        Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
+                        throw new TeaException(new Dictionary<string, object>
+                        {
+                            {"code", err.Get("Code")},
+                            {"message", err.Get("Message")},
+                            {"data", new Dictionary<string, object>
+                            {
+                                {"httpCode", response_.StatusCode},
+                                {"requestId", err.Get("RequestId")},
+                                {"hostId", err.Get("HostId")},
+                            }},
+                        });
+                    }
+                    respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                    return TeaConverter.merge<object>
+                    (
+                        respMap
+                    );
+                }
+                catch (Exception e)
+                {
+                    if (TeaCore.IsRetryable(e))
+                    {
+                        _lastException = e;
+                        continue;
+                    }
+                    throw e;
+                }
             }
-            respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-            return TeaConverter.merge<object>
-            (
-                respMap
-            );
+
+            throw new TeaUnretryableException(_lastRequest, _lastException);
         }
 
         public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
@@ -413,7 +531,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeBankCardReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeBankCardResponse recognizeBankCardResp = RecognizeBankCardWithOptions(recognizeBankCardReq, runtime);
@@ -509,7 +627,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeBankCardReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeBankCardResponse recognizeBankCardResp = await RecognizeBankCardWithOptionsAsync(recognizeBankCardReq, runtime);
@@ -705,7 +823,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeBusinessLicenseReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeBusinessLicenseResponse recognizeBusinessLicenseResp = RecognizeBusinessLicenseWithOptions(recognizeBusinessLicenseReq, runtime);
@@ -801,13 +919,18 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeBusinessLicenseReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeBusinessLicenseResponse recognizeBusinessLicenseResp = await RecognizeBusinessLicenseWithOptionsAsync(recognizeBusinessLicenseReq, runtime);
             return recognizeBusinessLicenseResp;
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用文字识别</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RecognizeCharacterRequest
         /// </param>
@@ -853,6 +976,11 @@ namespace AlibabaCloud.SDK.Ocr20191230
             return TeaModel.ToObject<RecognizeCharacterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用文字识别</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RecognizeCharacterRequest
         /// </param>
@@ -898,6 +1026,11 @@ namespace AlibabaCloud.SDK.Ocr20191230
             return TeaModel.ToObject<RecognizeCharacterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用文字识别</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RecognizeCharacterRequest
         /// </param>
@@ -911,6 +1044,11 @@ namespace AlibabaCloud.SDK.Ocr20191230
             return RecognizeCharacterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用文字识别</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RecognizeCharacterRequest
         /// </param>
@@ -1013,7 +1151,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeCharacterReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeCharacterResponse recognizeCharacterResp = RecognizeCharacterWithOptions(recognizeCharacterReq, runtime);
@@ -1109,7 +1247,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeCharacterReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeCharacterResponse recognizeCharacterResp = await RecognizeCharacterWithOptionsAsync(recognizeCharacterReq, runtime);
@@ -1313,7 +1451,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeDriverLicenseReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeDriverLicenseResponse recognizeDriverLicenseResp = RecognizeDriverLicenseWithOptions(recognizeDriverLicenseReq, runtime);
@@ -1409,7 +1547,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeDriverLicenseReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeDriverLicenseResponse recognizeDriverLicenseResp = await RecognizeDriverLicenseWithOptionsAsync(recognizeDriverLicenseReq, runtime);
@@ -1613,7 +1751,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeDrivingLicenseReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeDrivingLicenseResponse recognizeDrivingLicenseResp = RecognizeDrivingLicenseWithOptions(recognizeDrivingLicenseReq, runtime);
@@ -1709,7 +1847,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeDrivingLicenseReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeDrivingLicenseResponse recognizeDrivingLicenseResp = await RecognizeDrivingLicenseWithOptionsAsync(recognizeDrivingLicenseReq, runtime);
@@ -1913,7 +2051,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeIdentityCardReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeIdentityCardResponse recognizeIdentityCardResp = RecognizeIdentityCardWithOptions(recognizeIdentityCardReq, runtime);
@@ -2009,7 +2147,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeIdentityCardReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeIdentityCardResponse recognizeIdentityCardResp = await RecognizeIdentityCardWithOptionsAsync(recognizeIdentityCardReq, runtime);
@@ -2205,7 +2343,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeLicensePlateReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeLicensePlateResponse recognizeLicensePlateResp = RecognizeLicensePlateWithOptions(recognizeLicensePlateReq, runtime);
@@ -2301,7 +2439,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeLicensePlateReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeLicensePlateResponse recognizeLicensePlateResp = await RecognizeLicensePlateWithOptionsAsync(recognizeLicensePlateReq, runtime);
@@ -2517,7 +2655,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizePdfReq.FileURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizePdfResponse recognizePdfResp = RecognizePdfWithOptions(recognizePdfReq, runtime);
@@ -2613,7 +2751,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizePdfReq.FileURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizePdfResponse recognizePdfResp = await RecognizePdfWithOptionsAsync(recognizePdfReq, runtime);
@@ -2814,7 +2952,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                             {"file", fileObj},
                             {"success_action_status", "201"},
                         };
-                        _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                        _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                         RecognizeQrCodeRequest.RecognizeQrCodeRequestTasks tmp = recognizeQrCodeReq.Tasks[i0.Value];
                         tmp.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
                         i0 = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i0), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
@@ -2919,7 +3057,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                             {"file", fileObj},
                             {"success_action_status", "201"},
                         };
-                        await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                        await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                         RecognizeQrCodeRequest.RecognizeQrCodeRequestTasks tmp = recognizeQrCodeReq.Tasks[i0.Value];
                         tmp.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
                         i0 = AlibabaCloud.DarabonbaNumber.NumberUtil.Ltoi(AlibabaCloud.DarabonbaNumber.NumberUtil.Add(AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(i0), AlibabaCloud.DarabonbaNumber.NumberUtil.Itol(1)));
@@ -3139,7 +3277,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeQuotaInvoiceReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeQuotaInvoiceResponse recognizeQuotaInvoiceResp = RecognizeQuotaInvoiceWithOptions(recognizeQuotaInvoiceReq, runtime);
@@ -3235,7 +3373,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeQuotaInvoiceReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeQuotaInvoiceResponse recognizeQuotaInvoiceResp = await RecognizeQuotaInvoiceWithOptionsAsync(recognizeQuotaInvoiceReq, runtime);
@@ -3471,7 +3609,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeTableReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeTableResponse recognizeTableResp = RecognizeTableWithOptions(recognizeTableReq, runtime);
@@ -3567,7 +3705,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeTableReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeTableResponse recognizeTableResp = await RecognizeTableWithOptionsAsync(recognizeTableReq, runtime);
@@ -3763,7 +3901,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeTaxiInvoiceReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeTaxiInvoiceResponse recognizeTaxiInvoiceResp = RecognizeTaxiInvoiceWithOptions(recognizeTaxiInvoiceReq, runtime);
@@ -3859,7 +3997,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeTaxiInvoiceReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeTaxiInvoiceResponse recognizeTaxiInvoiceResp = await RecognizeTaxiInvoiceWithOptionsAsync(recognizeTaxiInvoiceReq, runtime);
@@ -4075,7 +4213,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeTicketInvoiceReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeTicketInvoiceResponse recognizeTicketInvoiceResp = RecognizeTicketInvoiceWithOptions(recognizeTicketInvoiceReq, runtime);
@@ -4171,7 +4309,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeTicketInvoiceReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeTicketInvoiceResponse recognizeTicketInvoiceResp = await RecognizeTicketInvoiceWithOptionsAsync(recognizeTicketInvoiceReq, runtime);
@@ -4367,7 +4505,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeTrainTicketReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeTrainTicketResponse recognizeTrainTicketResp = RecognizeTrainTicketWithOptions(recognizeTrainTicketReq, runtime);
@@ -4463,7 +4601,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeTrainTicketReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeTrainTicketResponse recognizeTrainTicketResp = await RecognizeTrainTicketWithOptionsAsync(recognizeTrainTicketReq, runtime);
@@ -4667,7 +4805,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeVATInvoiceReq.FileURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeVATInvoiceResponse recognizeVATInvoiceResp = RecognizeVATInvoiceWithOptions(recognizeVATInvoiceReq, runtime);
@@ -4763,7 +4901,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeVATInvoiceReq.FileURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeVATInvoiceResponse recognizeVATInvoiceResp = await RecognizeVATInvoiceWithOptionsAsync(recognizeVATInvoiceReq, runtime);
@@ -4959,7 +5097,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeVINCodeReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeVINCodeResponse recognizeVINCodeResp = RecognizeVINCodeWithOptions(recognizeVINCodeReq, runtime);
@@ -5055,7 +5193,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeVINCodeReq.ImageURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeVINCodeResponse recognizeVINCodeResp = await RecognizeVINCodeWithOptionsAsync(recognizeVINCodeReq, runtime);
@@ -5271,7 +5409,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeVideoCharacterReq.VideoURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeVideoCharacterResponse recognizeVideoCharacterResp = RecognizeVideoCharacterWithOptions(recognizeVideoCharacterReq, runtime);
@@ -5367,7 +5505,7 @@ namespace AlibabaCloud.SDK.Ocr20191230
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 recognizeVideoCharacterReq.VideoURL = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             RecognizeVideoCharacterResponse recognizeVideoCharacterResp = await RecognizeVideoCharacterWithOptionsAsync(recognizeVideoCharacterReq, runtime);
