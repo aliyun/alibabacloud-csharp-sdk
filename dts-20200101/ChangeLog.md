@@ -1,3 +1,7 @@
+2025-12-22 Version: 1.9.0
+- Support API PromoteToMaster.
+
+
 2025-11-06 Version: 1.8.1
 - Update API CreateDocParserJob: add request parameters RagInstanceId.
 - Update API DescribeDocParserJobResult: add request parameters RagInstanceId.
