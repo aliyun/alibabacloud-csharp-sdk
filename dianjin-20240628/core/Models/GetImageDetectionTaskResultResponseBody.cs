@@ -33,13 +33,21 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public GetImageDetectionTaskResultResponseBodyDataDetectionResult DetectionResult { get; set; }
             public class GetImageDetectionTaskResultResponseBodyDataDetectionResult : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>图像为一只猫</para>
+                /// </summary>
+                [NameInMap("description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
                 [NameInMap("detectionDetails")]
                 [Validation(Required=false)]
                 public List<GetImageDetectionTaskResultResponseBodyDataDetectionResultDetectionDetails> DetectionDetails { get; set; }
                 public class GetImageDetectionTaskResultResponseBodyDataDetectionResultDetectionDetails : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para>x</para>
+                    /// <para>no_face_detected</para>
                     /// </summary>
                     [NameInMap("code")]
                     [Validation(Required=false)]
@@ -47,7 +55,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para>xxx</para>
+                    /// <para>0.8</para>
                     /// </summary>
                     [NameInMap("confidence")]
                     [Validation(Required=false)]
@@ -59,13 +67,21 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para>xxx</para>
+                    /// <para>未检测到人脸</para>
                     /// </summary>
                     [NameInMap("reason")]
                     [Validation(Required=false)]
                     public string Reason { get; set; }
 
                 }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>full_body</para>
+                /// </summary>
+                [NameInMap("portraitType")]
+                [Validation(Required=false)]
+                public string PortraitType { get; set; }
 
                 [NameInMap("suggestions")]
                 [Validation(Required=false)]
