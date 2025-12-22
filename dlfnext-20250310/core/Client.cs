@@ -5601,6 +5601,152 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查看函数列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFunctionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFunctionsResponse
+        /// </returns>
+        public ListFunctionsResponse ListFunctionsWithOptions(string catalogId, string database, ListFunctionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionNamePattern))
+            {
+                query["functionNamePattern"] = request.FunctionNamePattern;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageToken))
+            {
+                query["pageToken"] = request.PageToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFunctions",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalogId) + "/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/functions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFunctionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看函数列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFunctionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFunctionsResponse
+        /// </returns>
+        public async Task<ListFunctionsResponse> ListFunctionsWithOptionsAsync(string catalogId, string database, ListFunctionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FunctionNamePattern))
+            {
+                query["functionNamePattern"] = request.FunctionNamePattern;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageToken))
+            {
+                query["pageToken"] = request.PageToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFunctions",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalogId) + "/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/functions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFunctionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看函数列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFunctionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFunctionsResponse
+        /// </returns>
+        public ListFunctionsResponse ListFunctions(string catalogId, string database, ListFunctionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListFunctionsWithOptions(catalogId, database, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看函数列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFunctionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFunctionsResponse
+        /// </returns>
+        public async Task<ListFunctionsResponse> ListFunctionsAsync(string catalogId, string database, ListFunctionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListFunctionsWithOptionsAsync(catalogId, database, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查看iceberg数据库列表</para>
         /// </summary>
         /// 
@@ -8233,6 +8379,298 @@ namespace AlibabaCloud.SDK.DlfNext20250310
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListUsersWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看视图详情列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListViewDetailsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListViewDetailsResponse
+        /// </returns>
+        public ListViewDetailsResponse ListViewDetailsWithOptions(string catalogId, string database, ListViewDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageToken))
+            {
+                query["pageToken"] = request.PageToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ViewNamePattern))
+            {
+                query["viewNamePattern"] = request.ViewNamePattern;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListViewDetails",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalogId) + "/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/view-details",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListViewDetailsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看视图详情列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListViewDetailsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListViewDetailsResponse
+        /// </returns>
+        public async Task<ListViewDetailsResponse> ListViewDetailsWithOptionsAsync(string catalogId, string database, ListViewDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageToken))
+            {
+                query["pageToken"] = request.PageToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ViewNamePattern))
+            {
+                query["viewNamePattern"] = request.ViewNamePattern;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListViewDetails",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalogId) + "/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/view-details",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListViewDetailsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看视图详情列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListViewDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListViewDetailsResponse
+        /// </returns>
+        public ListViewDetailsResponse ListViewDetails(string catalogId, string database, ListViewDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListViewDetailsWithOptions(catalogId, database, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看视图详情列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListViewDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListViewDetailsResponse
+        /// </returns>
+        public async Task<ListViewDetailsResponse> ListViewDetailsAsync(string catalogId, string database, ListViewDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListViewDetailsWithOptionsAsync(catalogId, database, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看视图详情列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListViewsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListViewsResponse
+        /// </returns>
+        public ListViewsResponse ListViewsWithOptions(string catalogId, string database, ListViewsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageToken))
+            {
+                query["pageToken"] = request.PageToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ViewNamePattern))
+            {
+                query["viewNamePattern"] = request.ViewNamePattern;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListViews",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalogId) + "/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/views",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListViewsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看视图详情列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListViewsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListViewsResponse
+        /// </returns>
+        public async Task<ListViewsResponse> ListViewsWithOptionsAsync(string catalogId, string database, ListViewsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageToken))
+            {
+                query["pageToken"] = request.PageToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ViewNamePattern))
+            {
+                query["viewNamePattern"] = request.ViewNamePattern;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListViews",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalogId) + "/databases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(database) + "/views",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListViewsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看视图详情列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListViewsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListViewsResponse
+        /// </returns>
+        public ListViewsResponse ListViews(string catalogId, string database, ListViewsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListViewsWithOptions(catalogId, database, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看视图详情列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListViewsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListViewsResponse
+        /// </returns>
+        public async Task<ListViewsResponse> ListViewsAsync(string catalogId, string database, ListViewsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListViewsWithOptionsAsync(catalogId, database, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -1,3 +1,9 @@
+2025-12-22 Version: 1.7.0
+- Support API ListFunctions.
+- Support API ListViewDetails.
+- Support API ListViews.
+
+
 2025-11-26 Version: 1.6.1
 - Update API ListCatalogs: add response parameters Body.prepayResource.
 
