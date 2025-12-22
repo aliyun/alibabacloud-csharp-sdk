@@ -13360,6 +13360,142 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除深度学习和防护下发的规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpDDoSIntelligentRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpDDoSIntelligentRuleResponse
+        /// </returns>
+        public DeleteHttpDDoSIntelligentRuleResponse DeleteHttpDDoSIntelligentRuleWithOptions(DeleteHttpDDoSIntelligentRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordName))
+            {
+                query["RecordName"] = request.RecordName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["RuleId"] = request.RuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteHttpDDoSIntelligentRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteHttpDDoSIntelligentRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除深度学习和防护下发的规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpDDoSIntelligentRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpDDoSIntelligentRuleResponse
+        /// </returns>
+        public async Task<DeleteHttpDDoSIntelligentRuleResponse> DeleteHttpDDoSIntelligentRuleWithOptionsAsync(DeleteHttpDDoSIntelligentRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordName))
+            {
+                query["RecordName"] = request.RecordName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
+            {
+                query["RuleId"] = request.RuleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteHttpDDoSIntelligentRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteHttpDDoSIntelligentRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除深度学习和防护下发的规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpDDoSIntelligentRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpDDoSIntelligentRuleResponse
+        /// </returns>
+        public DeleteHttpDDoSIntelligentRuleResponse DeleteHttpDDoSIntelligentRule(DeleteHttpDDoSIntelligentRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteHttpDDoSIntelligentRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除深度学习和防护下发的规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpDDoSIntelligentRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpDDoSIntelligentRuleResponse
+        /// </returns>
+        public async Task<DeleteHttpDDoSIntelligentRuleResponse> DeleteHttpDDoSIntelligentRuleAsync(DeleteHttpDDoSIntelligentRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteHttpDDoSIntelligentRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes the configuration of modifying incoming HTTP request headers for a website.</para>
         /// </summary>
         /// 
@@ -41672,6 +41808,278 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetHttpDDoSAttackProtectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置HTTP DDoS攻击防护指定规则防护动作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetHttpDDoSAttackRuleActionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetHttpDDoSAttackRuleActionResponse
+        /// </returns>
+        public SetHttpDDoSAttackRuleActionResponse SetHttpDDoSAttackRuleActionWithOptions(SetHttpDDoSAttackRuleActionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleAction))
+            {
+                query["RuleAction"] = request.RuleAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleIds))
+            {
+                query["RuleIds"] = request.RuleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetHttpDDoSAttackRuleAction",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetHttpDDoSAttackRuleActionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置HTTP DDoS攻击防护指定规则防护动作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetHttpDDoSAttackRuleActionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetHttpDDoSAttackRuleActionResponse
+        /// </returns>
+        public async Task<SetHttpDDoSAttackRuleActionResponse> SetHttpDDoSAttackRuleActionWithOptionsAsync(SetHttpDDoSAttackRuleActionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleAction))
+            {
+                query["RuleAction"] = request.RuleAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleIds))
+            {
+                query["RuleIds"] = request.RuleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetHttpDDoSAttackRuleAction",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetHttpDDoSAttackRuleActionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置HTTP DDoS攻击防护指定规则防护动作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetHttpDDoSAttackRuleActionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetHttpDDoSAttackRuleActionResponse
+        /// </returns>
+        public SetHttpDDoSAttackRuleActionResponse SetHttpDDoSAttackRuleAction(SetHttpDDoSAttackRuleActionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetHttpDDoSAttackRuleActionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置HTTP DDoS攻击防护指定规则防护动作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetHttpDDoSAttackRuleActionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetHttpDDoSAttackRuleActionResponse
+        /// </returns>
+        public async Task<SetHttpDDoSAttackRuleActionResponse> SetHttpDDoSAttackRuleActionAsync(SetHttpDDoSAttackRuleActionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetHttpDDoSAttackRuleActionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置HTTP DDoS攻击防护指定规则防护状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetHttpDDoSAttackRuleStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetHttpDDoSAttackRuleStatusResponse
+        /// </returns>
+        public SetHttpDDoSAttackRuleStatusResponse SetHttpDDoSAttackRuleStatusWithOptions(SetHttpDDoSAttackRuleStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleIds))
+            {
+                query["RuleIds"] = request.RuleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetHttpDDoSAttackRuleStatus",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetHttpDDoSAttackRuleStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置HTTP DDoS攻击防护指定规则防护状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetHttpDDoSAttackRuleStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetHttpDDoSAttackRuleStatusResponse
+        /// </returns>
+        public async Task<SetHttpDDoSAttackRuleStatusResponse> SetHttpDDoSAttackRuleStatusWithOptionsAsync(SetHttpDDoSAttackRuleStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleIds))
+            {
+                query["RuleIds"] = request.RuleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetHttpDDoSAttackRuleStatus",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetHttpDDoSAttackRuleStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置HTTP DDoS攻击防护指定规则防护状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetHttpDDoSAttackRuleStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetHttpDDoSAttackRuleStatusResponse
+        /// </returns>
+        public SetHttpDDoSAttackRuleStatusResponse SetHttpDDoSAttackRuleStatus(SetHttpDDoSAttackRuleStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetHttpDDoSAttackRuleStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置HTTP DDoS攻击防护指定规则防护状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetHttpDDoSAttackRuleStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetHttpDDoSAttackRuleStatusResponse
+        /// </returns>
+        public async Task<SetHttpDDoSAttackRuleStatusResponse> SetHttpDDoSAttackRuleStatusAsync(SetHttpDDoSAttackRuleStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetHttpDDoSAttackRuleStatusWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
