@@ -37,6 +37,17 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="mailto:1@example.com">1@example.com</a>,<a href="mailto:2@example.com">2@example.com</a></para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("BccAddress")]
+        [Validation(Required=false)]
+        public string BccAddress { get; set; }
+
         [NameInMap("ClickTrace")]
         [Validation(Required=false)]
         public string ClickTrace { get; set; }

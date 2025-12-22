@@ -11042,6 +11042,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             {
                 body["Attachments"] = request.Attachments;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BccAddress))
+            {
+                body["BccAddress"] = request.BccAddress;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClickTrace))
             {
                 body["ClickTrace"] = request.ClickTrace;
@@ -11171,6 +11175,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attachments))
             {
                 body["Attachments"] = request.Attachments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BccAddress))
+            {
+                body["BccAddress"] = request.BccAddress;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClickTrace))
             {
