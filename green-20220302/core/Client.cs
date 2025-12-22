@@ -2034,6 +2034,146 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>多模态同步检测接口，支持图片base64字符串</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultiModalGuardForBase64Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultiModalGuardForBase64Response
+        /// </returns>
+        public MultiModalGuardForBase64Response MultiModalGuardForBase64WithOptions(MultiModalGuardForBase64Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                query["Service"] = request.Service;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageBase64Str))
+            {
+                body["ImageBase64Str"] = request.ImageBase64Str;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                body["ServiceParameters"] = request.ServiceParameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MultiModalGuardForBase64",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MultiModalGuardForBase64Response>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态同步检测接口，支持图片base64字符串</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultiModalGuardForBase64Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultiModalGuardForBase64Response
+        /// </returns>
+        public async Task<MultiModalGuardForBase64Response> MultiModalGuardForBase64WithOptionsAsync(MultiModalGuardForBase64Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                query["Service"] = request.Service;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageBase64Str))
+            {
+                body["ImageBase64Str"] = request.ImageBase64Str;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                body["ServiceParameters"] = request.ServiceParameters;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MultiModalGuardForBase64",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MultiModalGuardForBase64Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态同步检测接口，支持图片base64字符串</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultiModalGuardForBase64Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultiModalGuardForBase64Response
+        /// </returns>
+        public MultiModalGuardForBase64Response MultiModalGuardForBase64(MultiModalGuardForBase64Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MultiModalGuardForBase64WithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>多模态同步检测接口，支持图片base64字符串</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MultiModalGuardForBase64Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultiModalGuardForBase64Response
+        /// </returns>
+        public async Task<MultiModalGuardForBase64Response> MultiModalGuardForBase64Async(MultiModalGuardForBase64Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MultiModalGuardForBase64WithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>多模态-异步检测</para>
         /// </summary>
         /// 

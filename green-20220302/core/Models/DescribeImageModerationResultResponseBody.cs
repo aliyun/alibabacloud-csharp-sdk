@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         [Validation(Required=false)]
         public DescribeImageModerationResultResponseBodyData Data { get; set; }
         public class DescribeImageModerationResultResponseBodyData : TeaModel {
+            [NameInMap("AccountId")]
+            [Validation(Required=false)]
+            public string AccountId { get; set; }
+
             /// <summary>
             /// <para>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</para>
             /// 

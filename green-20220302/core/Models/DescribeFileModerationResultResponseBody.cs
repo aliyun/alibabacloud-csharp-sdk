@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         [Validation(Required=false)]
         public DescribeFileModerationResultResponseBodyData Data { get; set; }
         public class DescribeFileModerationResultResponseBodyData : TeaModel {
+            [NameInMap("AccountId")]
+            [Validation(Required=false)]
+            public string AccountId { get; set; }
+
             /// <summary>
             /// <para>The ID of the moderated object.</para>
             /// 

@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         [Validation(Required=false)]
         public TextModerationPlusResponseBodyData Data { get; set; }
         public class TextModerationPlusResponseBodyData : TeaModel {
+            [NameInMap("AccountId")]
+            [Validation(Required=false)]
+            public string AccountId { get; set; }
+
             /// <summary>
             /// <para>The suggestion.</para>
             /// </summary>
