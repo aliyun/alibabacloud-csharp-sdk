@@ -1357,6 +1357,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Liveness"] = request.Liveness;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LokiConfigs))
+            {
+                query["LokiConfigs"] = request.LokiConfigs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
             {
                 query["Memory"] = request.Memory;
@@ -1750,6 +1754,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
                 query["Liveness"] = request.Liveness;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LokiConfigs))
+            {
+                query["LokiConfigs"] = request.LokiConfigs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
             {
@@ -6621,6 +6629,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Liveness"] = request.Liveness;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LokiConfigs))
+            {
+                query["LokiConfigs"] = request.LokiConfigs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSurgeInstanceRatio))
             {
                 query["MaxSurgeInstanceRatio"] = request.MaxSurgeInstanceRatio;
@@ -7006,6 +7018,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Liveness))
             {
                 query["Liveness"] = request.Liveness;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LokiConfigs))
+            {
+                query["LokiConfigs"] = request.LokiConfigs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSurgeInstanceRatio))
             {
@@ -23599,6 +23615,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["SlsConfigs"] = request.SlsConfigs;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsLogEnvTags))
+            {
+                query["SlsLogEnvTags"] = request.SlsLogEnvTags;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -23652,6 +23672,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsConfigs))
             {
                 query["SlsConfigs"] = request.SlsConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsLogEnvTags))
+            {
+                query["SlsLogEnvTags"] = request.SlsLogEnvTags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

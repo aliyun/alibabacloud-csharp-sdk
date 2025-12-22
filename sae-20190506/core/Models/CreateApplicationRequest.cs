@@ -480,6 +480,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Liveness { get; set; }
 
+        [NameInMap("LokiConfigs")]
+        [Validation(Required=false)]
+        public string LokiConfigs { get; set; }
+
         /// <summary>
         /// <para>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</para>
         /// <list type="bullet">

@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string SlsConfigs { get; set; }
 
+        [NameInMap("SlsLogEnvTags")]
+        [Validation(Required=false)]
+        public string SlsLogEnvTags { get; set; }
+
     }
 
 }

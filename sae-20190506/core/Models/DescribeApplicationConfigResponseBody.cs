@@ -719,6 +719,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string Liveness { get; set; }
 
+            [NameInMap("LokiConfigs")]
+            [Validation(Required=false)]
+            public string LokiConfigs { get; set; }
+
             [NameInMap("MaxSurgeInstanceRatio")]
             [Validation(Required=false)]
             public int? MaxSurgeInstanceRatio { get; set; }
