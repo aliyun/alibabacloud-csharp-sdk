@@ -12830,6 +12830,108 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取集群组件实例的资源列表</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterAddonInstanceResourcesResponse
+        /// </returns>
+        public ListClusterAddonInstanceResourcesResponse ListClusterAddonInstanceResourcesWithOptions(string clusterId, string instanceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListClusterAddonInstanceResources",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/addon_instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceName) + "/resources",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListClusterAddonInstanceResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群组件实例的资源列表</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterAddonInstanceResourcesResponse
+        /// </returns>
+        public async Task<ListClusterAddonInstanceResourcesResponse> ListClusterAddonInstanceResourcesWithOptionsAsync(string clusterId, string instanceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListClusterAddonInstanceResources",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/addon_instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceName) + "/resources",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListClusterAddonInstanceResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群组件实例的资源列表</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListClusterAddonInstanceResourcesResponse
+        /// </returns>
+        public ListClusterAddonInstanceResourcesResponse ListClusterAddonInstanceResources(string clusterId, string instanceName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListClusterAddonInstanceResourcesWithOptions(clusterId, instanceName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群组件实例的资源列表</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListClusterAddonInstanceResourcesResponse
+        /// </returns>
+        public async Task<ListClusterAddonInstanceResourcesResponse> ListClusterAddonInstanceResourcesAsync(string clusterId, string instanceName)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListClusterAddonInstanceResourcesWithOptionsAsync(clusterId, instanceName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the component instances that are running in the specified cluster and the information about the component instances. The information includes the component version and status.</para>
         /// </summary>
         /// 
