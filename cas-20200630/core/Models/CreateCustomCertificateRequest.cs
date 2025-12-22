@@ -399,6 +399,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string Validity { get; set; }
 
+        [NameInMap("customIdentifier")]
+        [Validation(Required=false)]
+        public string CustomIdentifier { get; set; }
+
     }
 
 }

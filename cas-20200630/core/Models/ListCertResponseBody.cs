@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [Validation(Required=false)]
             public string CommonName { get; set; }
 
+            [NameInMap("CustomIdentifier")]
+            [Validation(Required=false)]
+            public string CustomIdentifier { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>{\&quot;appId\&quot;:\&quot;APP_PFHMIGUHKDUW6S3N7ZL2\&quot;}</para>

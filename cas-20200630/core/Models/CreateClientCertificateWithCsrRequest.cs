@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string Csr { get; set; }
 
+        [NameInMap("CustomIdentifier")]
+        [Validation(Required=false)]
+        public string CustomIdentifier { get; set; }
+
         /// <summary>
         /// <para>The validity period of the client certificate. Unit: days. You must specify at least one of the <b>Days</b>, <b>BeforeTime</b>, and <b>AfterTime</b> parameters. The <b>BeforeTime</b> and <b>AfterTime</b> parameters must be both empty or both specified. The following list describes how to specify these parameters:</para>
         /// <list type="bullet">

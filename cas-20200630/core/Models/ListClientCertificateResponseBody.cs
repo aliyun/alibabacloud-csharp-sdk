@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [Validation(Required=false)]
             public string CountryCode { get; set; }
 
+            [NameInMap("CustomIdentifier")]
+            [Validation(Required=false)]
+            public string CustomIdentifier { get; set; }
+
             /// <summary>
             /// <para>The validity period of the certificate. Unit: days.</para>
             /// 

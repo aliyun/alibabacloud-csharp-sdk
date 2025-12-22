@@ -265,6 +265,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["Country"] = request.Country;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomIdentifier))
+            {
+                query["CustomIdentifier"] = request.CustomIdentifier;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
             {
                 query["Days"] = request.Days;
@@ -385,6 +389,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Country))
             {
                 query["Country"] = request.Country;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomIdentifier))
+            {
+                query["CustomIdentifier"] = request.CustomIdentifier;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
             {
@@ -561,6 +569,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["Csr"] = request.Csr;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomIdentifier))
+            {
+                query["CustomIdentifier"] = request.CustomIdentifier;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
             {
                 query["Days"] = request.Days;
@@ -685,6 +697,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Csr))
             {
                 query["Csr"] = request.Csr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomIdentifier))
+            {
+                query["CustomIdentifier"] = request.CustomIdentifier;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
             {
@@ -883,6 +899,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["Validity"] = request.Validity;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomIdentifier))
+            {
+                query["customIdentifier"] = request.CustomIdentifier;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -973,6 +993,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Validity))
             {
                 query["Validity"] = request.Validity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomIdentifier))
+            {
+                query["customIdentifier"] = request.CustomIdentifier;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1673,6 +1697,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["Country"] = request.Country;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomIdentifier))
+            {
+                query["CustomIdentifier"] = request.CustomIdentifier;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
             {
                 query["Days"] = request.Days;
@@ -1789,6 +1817,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Country))
             {
                 query["Country"] = request.Country;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomIdentifier))
+            {
+                query["CustomIdentifier"] = request.CustomIdentifier;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
             {
@@ -1960,6 +1992,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["Csr"] = request.Csr;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomIdentifier))
+            {
+                query["CustomIdentifier"] = request.CustomIdentifier;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
             {
                 query["Days"] = request.Days;
@@ -2079,6 +2115,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Csr))
             {
                 query["Csr"] = request.Csr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomIdentifier))
+            {
+                query["CustomIdentifier"] = request.CustomIdentifier;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
             {
