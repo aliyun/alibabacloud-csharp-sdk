@@ -1086,6 +1086,178 @@ namespace AlibabaCloud.SDK.DianJin20240628
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建图片检测任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageDetectionTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateImageDetectionTaskHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageDetectionTaskResponse
+        /// </returns>
+        public CreateImageDetectionTaskResponse CreateImageDetectionTaskWithOptions(string workspaceId, CreateImageDetectionTaskRequest request, CreateImageDetectionTaskHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInfo))
+            {
+                body["fileInfo"] = request.FileInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["fileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateImageDetectionTask",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/imageDetect/task/submit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateImageDetectionTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建图片检测任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageDetectionTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateImageDetectionTaskHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageDetectionTaskResponse
+        /// </returns>
+        public async Task<CreateImageDetectionTaskResponse> CreateImageDetectionTaskWithOptionsAsync(string workspaceId, CreateImageDetectionTaskRequest request, CreateImageDetectionTaskHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInfo))
+            {
+                body["fileInfo"] = request.FileInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["fileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateImageDetectionTask",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/imageDetect/task/submit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateImageDetectionTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建图片检测任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageDetectionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageDetectionTaskResponse
+        /// </returns>
+        public CreateImageDetectionTaskResponse CreateImageDetectionTask(string workspaceId, CreateImageDetectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateImageDetectionTaskHeaders headers = new CreateImageDetectionTaskHeaders();
+            return CreateImageDetectionTaskWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建图片检测任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateImageDetectionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateImageDetectionTaskResponse
+        /// </returns>
+        public async Task<CreateImageDetectionTaskResponse> CreateImageDetectionTaskAsync(string workspaceId, CreateImageDetectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateImageDetectionTaskHeaders headers = new CreateImageDetectionTaskHeaders();
+            return await CreateImageDetectionTaskWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建文档库</para>
         /// </summary>
         /// 
@@ -1722,6 +1894,186 @@ namespace AlibabaCloud.SDK.DianJin20240628
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateQualityCheckTaskWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoCreationTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateVideoCreationTaskHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoCreationTaskResponse
+        /// </returns>
+        public CreateVideoCreationTaskResponse CreateVideoCreationTaskWithOptions(string workspaceId, CreateVideoCreationTaskRequest request, CreateVideoCreationTaskHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreationInstruction))
+            {
+                body["creationInstruction"] = request.CreationInstruction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInfo))
+            {
+                body["fileInfo"] = request.FileInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageDetectionTaskId))
+            {
+                body["imageDetectionTaskId"] = request.ImageDetectionTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVideoCreationTask",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/videoCreation/task/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVideoCreationTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoCreationTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateVideoCreationTaskHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoCreationTaskResponse
+        /// </returns>
+        public async Task<CreateVideoCreationTaskResponse> CreateVideoCreationTaskWithOptionsAsync(string workspaceId, CreateVideoCreationTaskRequest request, CreateVideoCreationTaskHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreationInstruction))
+            {
+                body["creationInstruction"] = request.CreationInstruction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInfo))
+            {
+                body["fileInfo"] = request.FileInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageDetectionTaskId))
+            {
+                body["imageDetectionTaskId"] = request.ImageDetectionTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVideoCreationTask",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/videoCreation/task/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVideoCreationTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoCreationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoCreationTaskResponse
+        /// </returns>
+        public CreateVideoCreationTaskResponse CreateVideoCreationTask(string workspaceId, CreateVideoCreationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateVideoCreationTaskHeaders headers = new CreateVideoCreationTaskHeaders();
+            return CreateVideoCreationTaskWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVideoCreationTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVideoCreationTaskResponse
+        /// </returns>
+        public async Task<CreateVideoCreationTaskResponse> CreateVideoCreationTaskAsync(string workspaceId, CreateVideoCreationTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateVideoCreationTaskHeaders headers = new CreateVideoCreationTaskHeaders();
+            return await CreateVideoCreationTaskWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3936,6 +4288,162 @@ namespace AlibabaCloud.SDK.DianJin20240628
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageDetectionTaskResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetImageDetectionTaskResultHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageDetectionTaskResultResponse
+        /// </returns>
+        public GetImageDetectionTaskResultResponse GetImageDetectionTaskResultWithOptions(string workspaceId, GetImageDetectionTaskResultRequest request, GetImageDetectionTaskResultHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageDetectionTaskResult",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/imageDetect/task/query",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetImageDetectionTaskResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageDetectionTaskResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetImageDetectionTaskResultHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageDetectionTaskResultResponse
+        /// </returns>
+        public async Task<GetImageDetectionTaskResultResponse> GetImageDetectionTaskResultWithOptionsAsync(string workspaceId, GetImageDetectionTaskResultRequest request, GetImageDetectionTaskResultHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetImageDetectionTaskResult",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/imageDetect/task/query",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetImageDetectionTaskResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageDetectionTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageDetectionTaskResultResponse
+        /// </returns>
+        public GetImageDetectionTaskResultResponse GetImageDetectionTaskResult(string workspaceId, GetImageDetectionTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetImageDetectionTaskResultHeaders headers = new GetImageDetectionTaskResultHeaders();
+            return GetImageDetectionTaskResultWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetImageDetectionTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetImageDetectionTaskResultResponse
+        /// </returns>
+        public async Task<GetImageDetectionTaskResultResponse> GetImageDetectionTaskResultAsync(string workspaceId, GetImageDetectionTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetImageDetectionTaskResultHeaders headers = new GetImageDetectionTaskResultHeaders();
+            return await GetImageDetectionTaskResultWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取文档库配置详情</para>
         /// </summary>
         /// 
@@ -4874,6 +5382,162 @@ namespace AlibabaCloud.SDK.DianJin20240628
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetTaskStatusWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频生成任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoCreationTaskResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetVideoCreationTaskResultHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoCreationTaskResultResponse
+        /// </returns>
+        public GetVideoCreationTaskResultResponse GetVideoCreationTaskResultWithOptions(string workspaceId, GetVideoCreationTaskResultRequest request, GetVideoCreationTaskResultHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoCreationTaskResult",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/videoCreation/task/query",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoCreationTaskResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频生成任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoCreationTaskResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetVideoCreationTaskResultHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoCreationTaskResultResponse
+        /// </returns>
+        public async Task<GetVideoCreationTaskResultResponse> GetVideoCreationTaskResultWithOptionsAsync(string workspaceId, GetVideoCreationTaskResultRequest request, GetVideoCreationTaskResultHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["userId"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoCreationTaskResult",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/videoCreation/task/query",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoCreationTaskResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频生成任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoCreationTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoCreationTaskResultResponse
+        /// </returns>
+        public GetVideoCreationTaskResultResponse GetVideoCreationTaskResult(string workspaceId, GetVideoCreationTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetVideoCreationTaskResultHeaders headers = new GetVideoCreationTaskResultHeaders();
+            return GetVideoCreationTaskResultWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取视频生成任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoCreationTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoCreationTaskResultResponse
+        /// </returns>
+        public async Task<GetVideoCreationTaskResultResponse> GetVideoCreationTaskResultAsync(string workspaceId, GetVideoCreationTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetVideoCreationTaskResultHeaders headers = new GetVideoCreationTaskResultHeaders();
+            return await GetVideoCreationTaskResultWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
