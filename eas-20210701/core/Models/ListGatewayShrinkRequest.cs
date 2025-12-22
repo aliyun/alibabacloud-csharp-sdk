@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
-    public class ListGatewayRequest : TeaModel {
+    public class ListGatewayShrinkRequest : TeaModel {
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         [NameInMap("Label")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Label { get; set; }
+        public string LabelShrink { get; set; }
 
         [NameInMap("Order")]
         [Validation(Required=false)]

@@ -132,6 +132,28 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? IsDefault { get; set; }
 
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public List<DescribeGatewayResponseBodyLabels> Labels { get; set; }
+        public class DescribeGatewayResponseBodyLabels : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>key1</para>
+            /// </summary>
+            [NameInMap("LabelKey")]
+            [Validation(Required=false)]
+            public string LabelKey { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>value1</para>
+            /// </summary>
+            [NameInMap("LabelValue")]
+            [Validation(Required=false)]
+            public string LabelValue { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The number of nodes in the private gateway.</para>
         /// 

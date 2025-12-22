@@ -8206,7 +8206,7 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries a list of private gateways.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListGatewayRequest
         /// </param>
         /// <param name="headers">
@@ -8219,9 +8219,15 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListGatewayResponse
         /// </returns>
-        public ListGatewayResponse ListGatewayWithOptions(ListGatewayRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListGatewayResponse ListGatewayWithOptions(ListGatewayRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListGatewayShrinkRequest request = new ListGatewayShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Label))
+            {
+                request.LabelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Label, "Label", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
@@ -8242,6 +8248,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetEnabled))
             {
                 query["InternetEnabled"] = request.InternetEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelShrink))
+            {
+                query["Label"] = request.LabelShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {
@@ -8292,7 +8302,7 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries a list of private gateways.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListGatewayRequest
         /// </param>
         /// <param name="headers">
@@ -8305,9 +8315,15 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListGatewayResponse
         /// </returns>
-        public async Task<ListGatewayResponse> ListGatewayWithOptionsAsync(ListGatewayRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListGatewayResponse> ListGatewayWithOptionsAsync(ListGatewayRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListGatewayShrinkRequest request = new ListGatewayShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Label))
+            {
+                request.LabelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Label, "Label", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
@@ -8328,6 +8344,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetEnabled))
             {
                 query["InternetEnabled"] = request.InternetEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelShrink))
+            {
+                query["Label"] = request.LabelShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {
