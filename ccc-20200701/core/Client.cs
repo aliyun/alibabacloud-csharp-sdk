@@ -17982,6 +17982,134 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListDocumentsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询反馈记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFeedbacksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFeedbacksResponse
+        /// </returns>
+        public ListFeedbacksResponse ListFeedbacksWithOptions(ListFeedbacksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdList))
+            {
+                query["TaskIdList"] = request.TaskIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFeedbacks",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFeedbacksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询反馈记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFeedbacksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFeedbacksResponse
+        /// </returns>
+        public async Task<ListFeedbacksResponse> ListFeedbacksWithOptionsAsync(ListFeedbacksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdList))
+            {
+                query["TaskIdList"] = request.TaskIdList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFeedbacks",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFeedbacksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询反馈记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFeedbacksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFeedbacksResponse
+        /// </returns>
+        public ListFeedbacksResponse ListFeedbacks(ListFeedbacksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListFeedbacksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询反馈记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListFeedbacksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFeedbacksResponse
+        /// </returns>
+        public async Task<ListFeedbacksResponse> ListFeedbacksAsync(ListFeedbacksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListFeedbacksWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// ListFlashSmsApplicationsRequest
         /// </param>
@@ -30284,6 +30412,158 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SendDtmfSignalingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>推送消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendNotificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendNotificationResponse
+        /// </returns>
+        public SendNotificationResponse SendNotificationWithOptions(SendNotificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageBody))
+            {
+                query["MessageBody"] = request.MessageBody;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationTarget))
+            {
+                query["NotificationTarget"] = request.NotificationTarget;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationType))
+            {
+                query["NotificationType"] = request.NotificationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardingKey))
+            {
+                query["ShardingKey"] = request.ShardingKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendNotification",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendNotificationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>推送消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendNotificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendNotificationResponse
+        /// </returns>
+        public async Task<SendNotificationResponse> SendNotificationWithOptionsAsync(SendNotificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageBody))
+            {
+                query["MessageBody"] = request.MessageBody;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationTarget))
+            {
+                query["NotificationTarget"] = request.NotificationTarget;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotificationType))
+            {
+                query["NotificationType"] = request.NotificationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardingKey))
+            {
+                query["ShardingKey"] = request.ShardingKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendNotification",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendNotificationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>推送消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendNotificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendNotificationResponse
+        /// </returns>
+        public SendNotificationResponse SendNotification(SendNotificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SendNotificationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>推送消息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendNotificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendNotificationResponse
+        /// </returns>
+        public async Task<SendNotificationResponse> SendNotificationAsync(SendNotificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SendNotificationWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
