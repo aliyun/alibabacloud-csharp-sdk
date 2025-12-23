@@ -55,6 +55,34 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        [NameInMap("cardInstances")]
+        [Validation(Required=false)]
+        public List<PatchEventResponseBodyCardInstances> CardInstances { get; set; }
+        public class PatchEventResponseBodyCardInstances : TeaModel {
+            [NameInMap("outTrackId")]
+            [Validation(Required=false)]
+            public string OutTrackId { get; set; }
+
+            [NameInMap("scenario")]
+            [Validation(Required=false)]
+            public string Scenario { get; set; }
+
+        }
+
+        [NameInMap("categories")]
+        [Validation(Required=false)]
+        public List<PatchEventResponseBodyCategories> Categories { get; set; }
+        public class PatchEventResponseBodyCategories : TeaModel {
+            [NameInMap("categoryId")]
+            [Validation(Required=false)]
+            public string CategoryId { get; set; }
+
+            [NameInMap("displayName")]
+            [Validation(Required=false)]
+            public string DisplayName { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2022-10-25T02:26:14Z</para>
@@ -97,6 +125,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
         }
 
+        [NameInMap("freeBusyStatus")]
+        [Validation(Required=false)]
+        public string FreeBusyStatus { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -128,6 +160,24 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [NameInMap("MeetingRooms")]
             [Validation(Required=false)]
             public List<string> MeetingRooms { get; set; }
+
+        }
+
+        [NameInMap("onlineMeetingInfo")]
+        [Validation(Required=false)]
+        public PatchEventResponseBodyOnlineMeetingInfo OnlineMeetingInfo { get; set; }
+        public class PatchEventResponseBodyOnlineMeetingInfo : TeaModel {
+            [NameInMap("conferenceId")]
+            [Validation(Required=false)]
+            public string ConferenceId { get; set; }
+
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+            [NameInMap("url")]
+            [Validation(Required=false)]
+            public string Url { get; set; }
 
         }
 
@@ -283,6 +333,16 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("richTextDescription")]
+        [Validation(Required=false)]
+        public PatchEventResponseBodyRichTextDescription RichTextDescription { get; set; }
+        public class PatchEventResponseBodyRichTextDescription : TeaModel {
+            [NameInMap("text")]
+            [Validation(Required=false)]
+            public string Text { get; set; }
+
+        }
+
         [NameInMap("start")]
         [Validation(Required=false)]
         public PatchEventResponseBodyStart Start { get; set; }
@@ -316,6 +376,20 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [NameInMap("summary")]
         [Validation(Required=false)]
         public string Summary { get; set; }
+
+        [NameInMap("uiConfigs")]
+        [Validation(Required=false)]
+        public List<PatchEventResponseBodyUiConfigs> UiConfigs { get; set; }
+        public class PatchEventResponseBodyUiConfigs : TeaModel {
+            [NameInMap("uiName")]
+            [Validation(Required=false)]
+            public string UiName { get; set; }
+
+            [NameInMap("uiStatus")]
+            [Validation(Required=false)]
+            public string UiStatus { get; set; }
+
+        }
 
         /// <summary>
         /// <b>Example:</b>

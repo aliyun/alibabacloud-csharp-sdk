@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string AssistantId { get; set; }
 
+        [NameInMap("clientEnum")]
+        [Validation(Required=false)]
+        public string ClientEnum { get; set; }
+
         [NameInMap("extLoginUser")]
         [Validation(Required=false)]
         public CreateThreadRequestExtLoginUser ExtLoginUser { get; set; }

@@ -263,6 +263,58 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string Summary { get; set; }
 
+        [NameInMap("categories")]
+        [Validation(Required=false)]
+        public List<PatchEventRequestCategories> Categories { get; set; }
+        public class PatchEventRequestCategories : TeaModel {
+            [NameInMap("categoryId")]
+            [Validation(Required=false)]
+            public string CategoryId { get; set; }
+
+            [NameInMap("displayName")]
+            [Validation(Required=false)]
+            public string DisplayName { get; set; }
+
+        }
+
+        [NameInMap("freeBusyStatus")]
+        [Validation(Required=false)]
+        public string FreeBusyStatus { get; set; }
+
+        [NameInMap("onlineMeetingInfo")]
+        [Validation(Required=false)]
+        public PatchEventRequestOnlineMeetingInfo OnlineMeetingInfo { get; set; }
+        public class PatchEventRequestOnlineMeetingInfo : TeaModel {
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
+        [NameInMap("richTextDescription")]
+        [Validation(Required=false)]
+        public PatchEventRequestRichTextDescription RichTextDescription { get; set; }
+        public class PatchEventRequestRichTextDescription : TeaModel {
+            [NameInMap("text")]
+            [Validation(Required=false)]
+            public string Text { get; set; }
+
+        }
+
+        [NameInMap("uiConfigs")]
+        [Validation(Required=false)]
+        public List<PatchEventRequestUiConfigs> UiConfigs { get; set; }
+        public class PatchEventRequestUiConfigs : TeaModel {
+            [NameInMap("uiName")]
+            [Validation(Required=false)]
+            public string UiName { get; set; }
+
+            [NameInMap("uiStatus")]
+            [Validation(Required=false)]
+            public string UiStatus { get; set; }
+
+        }
+
     }
 
 }

@@ -77,6 +77,26 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public string Summary { get; set; }
 
+        [NameInMap("categories")]
+        [Validation(Required=false)]
+        public string CategoriesShrink { get; set; }
+
+        [NameInMap("freeBusyStatus")]
+        [Validation(Required=false)]
+        public string FreeBusyStatus { get; set; }
+
+        [NameInMap("onlineMeetingInfo")]
+        [Validation(Required=false)]
+        public string OnlineMeetingInfoShrink { get; set; }
+
+        [NameInMap("richTextDescription")]
+        [Validation(Required=false)]
+        public string RichTextDescriptionShrink { get; set; }
+
+        [NameInMap("uiConfigs")]
+        [Validation(Required=false)]
+        public string UiConfigsShrink { get; set; }
+
     }
 
 }
