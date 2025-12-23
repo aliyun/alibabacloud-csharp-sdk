@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 
         }
 
+        [NameInMap("IncludeDeletedResources")]
+        [Validation(Required=false)]
+        public bool? IncludeDeletedResources { get; set; }
+
         /// <summary>
         /// <para>The maximum number of entries per page.</para>
         /// <para>Valid values: 1 to 100.</para>
@@ -78,6 +82,10 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("SearchExpression")]
+        [Validation(Required=false)]
+        public string SearchExpression { get; set; }
 
         /// <summary>
         /// <para>The method that is used to sort the entries returned.</para>

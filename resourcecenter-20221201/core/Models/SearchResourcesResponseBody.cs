@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("Deleted")]
+            [Validation(Required=false)]
+            public bool? Deleted { get; set; }
+
             /// <summary>
             /// <para>The time when the resource expires.</para>
             /// 

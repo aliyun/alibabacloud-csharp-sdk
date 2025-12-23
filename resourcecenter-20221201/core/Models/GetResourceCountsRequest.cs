@@ -63,6 +63,14 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         [Validation(Required=false)]
         public string GroupByKey { get; set; }
 
+        [NameInMap("IncludeDeletedResources")]
+        [Validation(Required=false)]
+        public bool? IncludeDeletedResources { get; set; }
+
+        [NameInMap("SearchExpression")]
+        [Validation(Required=false)]
+        public string SearchExpression { get; set; }
+
     }
 
 }
