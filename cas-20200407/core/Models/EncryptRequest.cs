@@ -31,7 +31,6 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <item><description>If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</description></item>
         /// <item><description>If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678-1234-1234-1234-12345678****</para>
@@ -39,6 +38,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [NameInMap("CertIdentifier")]
         [Validation(Required=false)]
         public string CertIdentifier { get; set; }
+
+        [NameInMap("CustomIdentifier")]
+        [Validation(Required=false)]
+        public string CustomIdentifier { get; set; }
 
         /// <summary>
         /// <para>The value type of the Message parameter. Valid values:</para>
