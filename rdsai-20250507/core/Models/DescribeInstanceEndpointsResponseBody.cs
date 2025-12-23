@@ -9,6 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceEndpointsResponseBody : TeaModel {
+        [NameInMap("DBInstanceEndpoints")]
+        [Validation(Required=false)]
+        public List<DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints> DBInstanceEndpoints { get; set; }
+        public class DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints : TeaModel {
+            [NameInMap("ConnectionString")]
+            [Validation(Required=false)]
+            public string ConnectionString { get; set; }
+
+            [NameInMap("IpType")]
+            [Validation(Required=false)]
+            public string IpType { get; set; }
+
+            [NameInMap("Port")]
+            [Validation(Required=false)]
+            public string Port { get; set; }
+
+        }
+
         [NameInMap("InstanceEndpoints")]
         [Validation(Required=false)]
         public List<DescribeInstanceEndpointsResponseBodyInstanceEndpoints> InstanceEndpoints { get; set; }
