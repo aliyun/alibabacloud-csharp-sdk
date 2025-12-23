@@ -9,15 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ChangeResourceGroupInput : TeaModel {
-        [NameInMap("newResourceGroupId")]
+        [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
         public string NewResourceGroupId { get; set; }
 
-        [NameInMap("resourceId")]
+        [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
-        [NameInMap("resourceType")]
+        [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
