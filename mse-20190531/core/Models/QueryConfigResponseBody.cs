@@ -269,6 +269,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public bool? EmptyProtect { get; set; }
 
+                [NameInMap("fenceEnabled")]
+                [Validation(Required=false)]
+                public bool? FenceEnabled { get; set; }
+
+                [NameInMap("fencePolicy")]
+                [Validation(Required=false)]
+                public QueryConfigResponseBodyDataNacosRunningEnvFencePolicy FencePolicy { get; set; }
+                public class QueryConfigResponseBodyDataNacosRunningEnvFencePolicy : TeaModel {
+                    [NameInMap("enabledModules")]
+                    [Validation(Required=false)]
+                    public List<string> EnabledModules { get; set; }
+
+                    [NameInMap("interceptPolicy")]
+                    [Validation(Required=false)]
+                    public Dictionary<string, string> InterceptPolicy { get; set; }
+
+                }
+
                 [NameInMap("grayAuth")]
                 [Validation(Required=false)]
                 public string GrayAuth { get; set; }
@@ -340,6 +358,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("PassWord")]
             [Validation(Required=false)]
             public string PassWord { get; set; }
+
+            [NameInMap("PrometheusSdProtocolEnabled")]
+            [Validation(Required=false)]
+            public string PrometheusSdProtocolEnabled { get; set; }
 
             /// <summary>
             /// <para>Indicates whether the instance was restarted and new configurations have taken effect. Valid values:</para>

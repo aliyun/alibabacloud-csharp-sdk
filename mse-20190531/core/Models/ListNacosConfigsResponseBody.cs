@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            [NameInMap("ConfigTags")]
+            [Validation(Required=false)]
+            public string ConfigTags { get; set; }
+
             /// <summary>
             /// <para>The ID of the configuration.</para>
             /// 
@@ -45,6 +49,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [NameInMap("DataId")]
             [Validation(Required=false)]
             public string DataId { get; set; }
+
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
 
             /// <summary>
             /// <para>The ID of the group.</para>
