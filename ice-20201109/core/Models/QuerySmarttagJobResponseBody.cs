@@ -94,6 +94,26 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        [NameInMap("Usages")]
+        [Validation(Required=false)]
+        public QuerySmarttagJobResponseBodyUsages Usages { get; set; }
+        public class QuerySmarttagJobResponseBodyUsages : TeaModel {
+            [NameInMap("Usage")]
+            [Validation(Required=false)]
+            public List<QuerySmarttagJobResponseBodyUsagesUsage> Usage { get; set; }
+            public class QuerySmarttagJobResponseBodyUsagesUsage : TeaModel {
+                [NameInMap("Quota")]
+                [Validation(Required=false)]
+                public long? Quota { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The content of callback messages that are sent to Simple Message Queue (SMQ) when the information of the smart tagging job changes. For more information about the parameters contained in the callback message, see the &quot;Callback parameters&quot; section of this topic.</para>
         /// 
