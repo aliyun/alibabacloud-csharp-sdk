@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            [NameInMap("ExternalData")]
+            [Validation(Required=false)]
+            public string ExternalData { get; set; }
+
             /// <summary>
             /// <para>来源Idp Id</para>
             /// 
