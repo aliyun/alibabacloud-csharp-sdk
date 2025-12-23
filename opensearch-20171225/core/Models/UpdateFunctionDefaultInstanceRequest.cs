@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UpdateFunctionDefaultInstanceRequest : TeaModel {
         /// <summary>
-        /// The name of the instance.
+        /// <para>The name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;pop_test&quot;</para>
         /// </summary>
         [NameInMap("instanceName")]
         [Validation(Required=false)]

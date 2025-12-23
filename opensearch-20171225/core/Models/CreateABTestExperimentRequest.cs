@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class CreateABTestExperimentRequest : TeaModel {
         /// <summary>
-        /// The request body.
+        /// <para>The request body.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public ABTestExperiment Body { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.
+        /// <para>Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

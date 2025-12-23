@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UpdateFetchFieldsRequest : TeaModel {
         /// <summary>
-        /// The request body.
+        /// <para>The request body.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<string> Body { get; set; }
 
         /// <summary>
-        /// true
+        /// <para>Specifies whether the request is a dry run.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

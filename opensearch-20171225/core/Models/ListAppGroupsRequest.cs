@@ -10,68 +10,92 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListAppGroupsRequest : TeaModel {
         /// <summary>
-        /// The ID of the instance. Exact match is used.
+        /// <para>The ID of the instance. Exact match is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ops-cn-xxxx</para>
         /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// The name of the application.
+        /// <para>The name of the application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my_name</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The page number. Default value: 1.
+        /// <para>The page number. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 10.
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The ID of the resource group.
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;110123123&quot;</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// The method based on which applications are sorted. Valid values:
+        /// <para>The method based on which applications are sorted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: sorts applications in descending order by creation time.</description></item>
+        /// <item><description>1: sorts applications in descending order by modification time.</description></item>
+        /// </list>
+        /// <para>Default value: 0.</para>
         /// 
-        /// *   0: sorts applications in descending order by creation time.
-        /// *   1: sorts applications in descending order by modification time.
-        /// 
-        /// Default value: 0.
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("sortBy")]
         [Validation(Required=false)]
         public int? SortBy { get; set; }
 
         /// <summary>
-        /// The tags.
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<ListAppGroupsRequestTags> Tags { get; set; }
         public class ListAppGroupsRequestTags : TeaModel {
             /// <summary>
-            /// The tag key.
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>foo</para>
             /// </summary>
             [NameInMap("key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value.
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bar</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
@@ -80,10 +104,14 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         }
 
         /// <summary>
-        /// The type of the application. Valid values:
+        /// <para>The type of the application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>standard: a High-performance Search Edition application.</description></item>
+        /// <item><description>enhanced: an Industry Algorithm Edition application.</description></item>
+        /// </list>
         /// 
-        /// *   standard: a High-performance Search Edition application.
-        /// *   enhanced: an Industry Algorithm Edition application.
+        /// <b>Example:</b>
+        /// <para>standard</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

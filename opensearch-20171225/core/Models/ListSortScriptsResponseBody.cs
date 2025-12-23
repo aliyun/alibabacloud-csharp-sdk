@@ -10,62 +10,84 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListSortScriptsResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ABCDEFGH</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The scripts.
+        /// <para>The scripts.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListSortScriptsResponseBodyResult> Result { get; set; }
         public class ListSortScriptsResponseBodyResult : TeaModel {
             /// <summary>
-            /// The time when the script was created.
+            /// <para>The time when the script was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-04-02 20:21:14</para>
             /// </summary>
             [NameInMap("createTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// The time when the script was last modified.
+            /// <para>The time when the script was last modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-04-02 21:21:14</para>
             /// </summary>
             [NameInMap("modifyTime")]
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// The sort phase to which the script applies.
+            /// <para>The sort phase to which the script applies.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>second_rank</para>
             /// </summary>
             [NameInMap("scope")]
             [Validation(Required=false)]
             public string Scope { get; set; }
 
             /// <summary>
-            /// The name of the script.
+            /// <para>The name of the script.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("scriptName")]
             [Validation(Required=false)]
             public string ScriptName { get; set; }
 
             /// <summary>
-            /// The status of the script. Valid values:
+            /// <para>The status of the script. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>configurable: The script is created, but no script files are uploaded.</description></item>
+            /// <item><description>not compiled: The script is not compiled.</description></item>
+            /// <item><description>compile failed: The compilation of the script failed.</description></item>
+            /// <item><description>compile successful: The script is compiled.</description></item>
+            /// <item><description>released: The script is published.</description></item>
+            /// </list>
             /// 
-            /// *   configurable: The script is created, but no script files are uploaded.
-            /// *   not compiled: The script is not compiled.
-            /// *   compile failed: The compilation of the script failed.
-            /// *   compile successful: The script is compiled.
-            /// *   released: The script is published.
+            /// <b>Example:</b>
+            /// <para>released</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The type of the script.
+            /// <para>The type of the script.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cava_script</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]

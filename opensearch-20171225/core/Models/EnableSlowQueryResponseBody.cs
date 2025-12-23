@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class EnableSlowQueryResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>728E89C6-8673-D39B-39A1-5BA2B56D448F</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The return result.
+        /// <para>The returned data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

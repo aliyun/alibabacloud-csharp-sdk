@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class CreateSearchStrategyResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;abc123&quot;</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

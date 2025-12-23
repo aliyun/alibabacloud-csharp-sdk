@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class BindEsInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F5099063-6B86-F398-D843-905F9EFB683A</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result
+        /// <para>The result</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

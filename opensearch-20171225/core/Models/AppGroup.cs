@@ -29,14 +29,26 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         [Validation(Required=false)]
         public AppGroupOrder Order { get; set; }
         public class AppGroupOrder : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("autoRenew")]
             [Validation(Required=false)]
             public bool? AutoRenew { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("duration")]
             [Validation(Required=false)]
             public long? Duration { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Month</para>
+            /// </summary>
             [NameInMap("pricingCycle")]
             [Validation(Required=false)]
             public string PricingCycle { get; set; }

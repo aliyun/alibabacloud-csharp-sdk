@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListScheduledTasksResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0A6EB64B-B4C8-CF02-810F-E660812972FF</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
@@ -21,7 +24,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         public List<Dictionary<string, object>> Result { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]

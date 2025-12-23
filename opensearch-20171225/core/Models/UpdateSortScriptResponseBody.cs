@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UpdateSortScriptResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>9F165784-5507-5342-ABF3-545293F9808A</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

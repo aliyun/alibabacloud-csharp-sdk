@@ -10,70 +10,97 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class GetFunctionInstanceResponseBody : TeaModel {
         /// <summary>
-        /// The error code. If no error occurs, this parameter is left empty.
+        /// <para>The error code. If no error occurs, this parameter is left empty.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Instance.NotExist</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpCode")]
         [Validation(Required=false)]
         public long? HttpCode { get; set; }
 
         /// <summary>
-        /// The time consumed for the request, in milliseconds.
+        /// <para>The time consumed for the request, in milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("Latency")]
         [Validation(Required=false)]
         public long? Latency { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>instance not exist.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>68ED4E1B-92B8-5821-A886-9C90686139EB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The details of the instance.
+        /// <para>The details of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetFunctionInstanceResponseBodyResult Result { get; set; }
         public class GetFunctionInstanceResponseBodyResult : TeaModel {
             /// <summary>
-            /// The information about the instance.
+            /// <para>The information about the instance.</para>
             /// </summary>
             [NameInMap("Belongs")]
             [Validation(Required=false)]
             public GetFunctionInstanceResponseBodyResultBelongs Belongs { get; set; }
             public class GetFunctionInstanceResponseBodyResultBelongs : TeaModel {
                 /// <summary>
-                /// The category.
+                /// <para>The category.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>general</para>
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
-                /// The industry.
+                /// <para>The industry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecommerce</para>
                 /// </summary>
                 [NameInMap("Domain")]
                 [Validation(Required=false)]
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// The abbreviation of the language that applies.
+                /// <para>The abbreviation of the language that applies.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>zh</para>
                 /// </summary>
                 [NameInMap("Language")]
                 [Validation(Required=false)]
@@ -82,21 +109,27 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             }
 
             /// <summary>
-            /// The parameters that are used to create the instance.
+            /// <para>The parameters that are used to create the instance.</para>
             /// </summary>
             [NameInMap("CreateParameters")]
             [Validation(Required=false)]
             public List<GetFunctionInstanceResponseBodyResultCreateParameters> CreateParameters { get; set; }
             public class GetFunctionInstanceResponseBodyResultCreateParameters : TeaModel {
                 /// <summary>
-                /// The name of the parameter.
+                /// <para>The name of the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>param1</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The value of the parameter.
+                /// <para>The value of the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>value1</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -105,103 +138,142 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             }
 
             /// <summary>
-            /// The time when the task was created. Unit: milliseconds.
+            /// <para>The time when the task was created. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1234</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// The cron expression used to schedule training, in the format of (Minutes Hours DayofMonth Month DayofWeek). If the value is empty, it indicates that no periodic training is performed.
+            /// <para>The cron expression used to schedule training, in the format of (Minutes Hours DayofMonth Month DayofWeek). If the value is empty, it indicates that no periodic training is performed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0 3 ? \* 0,1,3,5 (at 3 a.m. on Sunday, Monday, Wednesday, and Friday)</para>
             /// </summary>
             [NameInMap("Cron")]
             [Validation(Required=false)]
             public string Cron { get; set; }
 
             /// <summary>
-            /// The description of the instance.
+            /// <para>The description of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>instance descriptions</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The extended information, which is a JSON string.
+            /// <para>The extended information, which is a JSON string.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;dataReport\&quot;:{},\&quot;errors\&quot;:{}}</para>
             /// </summary>
             [NameInMap("ExtendInfo")]
             [Validation(Required=false)]
             public string ExtendInfo { get; set; }
 
             /// <summary>
-            /// The name of the feature.
+            /// <para>The name of the feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ctr</para>
             /// </summary>
             [NameInMap("FunctionName")]
             [Validation(Required=false)]
             public string FunctionName { get; set; }
 
             /// <summary>
-            /// The type of the feature.
+            /// <para>The type of the feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PAAS</para>
             /// </summary>
             [NameInMap("FunctionType")]
             [Validation(Required=false)]
             public string FunctionType { get; set; }
 
             /// <summary>
-            /// The name of the instance.
+            /// <para>The name of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ctr_test</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// The type of the model.
+            /// <para>The type of the model.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tf_checkpoint</para>
             /// </summary>
             [NameInMap("ModelType")]
             [Validation(Required=false)]
             public string ModelType { get; set; }
 
             /// <summary>
-            /// How the instance is created. Valid values:
+            /// <para>How the instance is created. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>user: The instance is created by user.</description></item>
+            /// <item><description>builtin: The instance is created by the system.</description></item>
+            /// </list>
             /// 
-            /// *   user: The instance is created by user.
-            /// *   builtin: The instance is created by the system.
+            /// <b>Example:</b>
+            /// <para>user</para>
             /// </summary>
             [NameInMap("Source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
             /// <summary>
-            /// The status of the instance. Valid values:
+            /// <para>The status of the instance. Valid values:</para>
+            /// <ol>
+            /// <item><description>unavailable: No model is available. Models must be trained before you can use them.</description></item>
+            /// <item><description>available: Models can be used.</description></item>
+            /// </ol>
             /// 
-            /// 1.  unavailable: No model is available. Models must be trained before you can use them.
-            /// 2.  available: Models can be used.
+            /// <b>Example:</b>
+            /// <para>available</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The information about the training task. This parameter is not displayed if no task is available.
+            /// <para>The information about the training task. This parameter is not displayed if no task is available.</para>
             /// </summary>
             [NameInMap("Task")]
             [Validation(Required=false)]
             public GetFunctionInstanceResponseBodyResultTask Task { get; set; }
             public class GetFunctionInstanceResponseBodyResultTask : TeaModel {
                 /// <summary>
-                /// The status of the task. Valid values:
+                /// <para>The status of the task. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>success: succeeded</description></item>
+                /// <item><description>failed: failed</description></item>
+                /// <item><description>untrained: to be trained</description></item>
+                /// <item><description>pending: being scheduled</description></item>
+                /// <item><description>running: being trained</description></item>
+                /// </list>
                 /// 
-                /// *   success: succeeded
-                /// *   failed: failed
-                /// *   untrained: to be trained
-                /// *   pending: being scheduled
-                /// *   running: being trained
+                /// <b>Example:</b>
+                /// <para>success</para>
                 /// </summary>
                 [NameInMap("DagStatus")]
                 [Validation(Required=false)]
                 public string DagStatus { get; set; }
 
                 /// <summary>
-                /// The time consumed for the most recent run, in milliseconds.
+                /// <para>The time consumed for the most recent run, in milliseconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1234</para>
                 /// </summary>
                 [NameInMap("LastRunTime")]
                 [Validation(Required=false)]
@@ -210,21 +282,27 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             }
 
             /// <summary>
-            /// The parameters that are used.
+            /// <para>The parameters that are used.</para>
             /// </summary>
             [NameInMap("UsageParameters")]
             [Validation(Required=false)]
             public List<GetFunctionInstanceResponseBodyResultUsageParameters> UsageParameters { get; set; }
             public class GetFunctionInstanceResponseBodyResultUsageParameters : TeaModel {
                 /// <summary>
-                /// The name of the parameter.
+                /// <para>The name of the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>use_param1</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// The value of the parameter.
+                /// <para>The value of the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>value1</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -233,7 +311,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             }
 
             /// <summary>
-            /// The ID of the version.
+            /// <para>The ID of the version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>101</para>
             /// </summary>
             [NameInMap("VersionId")]
             [Validation(Required=false)]
@@ -242,7 +323,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         }
 
         /// <summary>
-        /// The status of the request.
+        /// <para>The status of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

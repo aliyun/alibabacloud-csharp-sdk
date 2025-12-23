@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class CreateSearchStrategyRequest : TeaModel {
         /// <summary>
-        /// The query policy.
+        /// <para>The query policy.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

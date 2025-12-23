@@ -10,50 +10,70 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListFunctionInstancesRequest : TeaModel {
         /// <summary>
-        /// The type of the feature.
+        /// <para>The type of the feature.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;PAAS&quot;</para>
         /// </summary>
         [NameInMap("functionType")]
         [Validation(Required=false)]
         public string FunctionType { get; set; }
 
         /// <summary>
-        /// The type of the model.
+        /// <para>The type of the model.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tf_checkpoint</para>
         /// </summary>
         [NameInMap("modelType")]
         [Validation(Required=false)]
         public string ModelType { get; set; }
 
         /// <summary>
-        /// The richness of the returned information. Valid values:
+        /// <para>The richness of the returned information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>normal: displays information such as createParameters and cron. This is the default value.</description></item>
+        /// <item><description>simple: displays only the basic information.</description></item>
+        /// <item><description>detail: returns the details of the training task.</description></item>
+        /// </list>
         /// 
-        /// *   normal: displays information such as createParameters and cron. This is the default value.
-        /// *   simple: displays only the basic information.
-        /// *   detail: returns the details of the training task.
+        /// <b>Example:</b>
+        /// <para>normal</para>
         /// </summary>
         [NameInMap("output")]
         [Validation(Required=false)]
         public string Output { get; set; }
 
         /// <summary>
-        /// The number of the page to return. Default value: 1.
+        /// <para>The number of the page to return. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page. Default value: 10.
+        /// <para>The number of entries to return on each page. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// How the instance is created. Valid values:
+        /// <para>How the instance is created. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>builtin: The instance is created by system.</description></item>
+        /// <item><description>user: The instance is created by user. This is the default value.</description></item>
+        /// <item><description>all: all instances</description></item>
+        /// </list>
         /// 
-        /// *   builtin: The instance is created by system.
-        /// *   user: The instance is created by user. This is the default value.
-        /// *   all: all instances
+        /// <b>Example:</b>
+        /// <para>user</para>
         /// </summary>
         [NameInMap("source")]
         [Validation(Required=false)]

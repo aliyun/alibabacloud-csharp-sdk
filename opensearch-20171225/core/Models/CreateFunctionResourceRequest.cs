@@ -10,124 +10,128 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class CreateFunctionResourceRequest : TeaModel {
         /// <summary>
-        /// The resource data. The data structure varies with the resource type.
+        /// <para>The resource data. The data structure varies with the resource type.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateFunctionResourceRequestData Data { get; set; }
         public class CreateFunctionResourceRequestData : TeaModel {
             /// <summary>
-            /// The content of the file that corresponds to a resource of the raw_file type.
+            /// <para>The content of the file that corresponds to a resource of the raw_file type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;abc&quot;</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// The feature generators that correspond to resources of the feature_generator type.
+            /// <para>The feature generators that correspond to resources of the feature_generator type.</para>
             /// </summary>
             [NameInMap("Generators")]
             [Validation(Required=false)]
             public List<CreateFunctionResourceRequestDataGenerators> Generators { get; set; }
             public class CreateFunctionResourceRequestDataGenerators : TeaModel {
                 /// <summary>
-                /// The type of the feature generator.
+                /// <para>The type of the feature generator.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>lookup</para>
+                /// <!-- -->
                 /// 
-                /// Valid values:
+                /// <!-- -->
                 /// 
-                /// *   lookup
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>sequence</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>overlap</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                /// *   sequence
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>raw</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>combo</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                /// *   overlap
+                /// <!-- -->
+                /// </description></item>
+                /// <item><description><para>id</para>
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- -->
                 /// 
-                ///     <!-- -->
+                /// <!-- --></description></item>
+                /// </list>
                 /// 
-                ///     <!-- -->
-                /// 
-                /// *   raw
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   combo
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                /// *   id
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
-                /// 
-                ///     <!-- -->
+                /// <b>Example:</b>
+                /// <para>id</para>
                 /// </summary>
                 [NameInMap("Generator")]
                 [Validation(Required=false)]
                 public string Generator { get; set; }
 
                 /// <summary>
-                /// The input.
+                /// <para>The input.</para>
                 /// </summary>
                 [NameInMap("Input")]
                 [Validation(Required=false)]
                 public CreateFunctionResourceRequestDataGeneratorsInput Input { get; set; }
                 public class CreateFunctionResourceRequestDataGeneratorsInput : TeaModel {
                     /// <summary>
-                    /// The input features.
+                    /// <para>The input features.</para>
                     /// </summary>
                     [NameInMap("Features")]
                     [Validation(Required=false)]
                     public List<CreateFunctionResourceRequestDataGeneratorsInputFeatures> Features { get; set; }
                     public class CreateFunctionResourceRequestDataGeneratorsInputFeatures : TeaModel {
                         /// <summary>
-                        /// The name of the feature.
+                        /// <para>The name of the feature.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>system_item_id</para>
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// The type of the feature.
+                        /// <para>The type of the feature.</para>
+                        /// <para>Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description><para>item</para>
+                        /// <!-- -->
                         /// 
-                        /// Valid values:
+                        /// <!-- -->
                         /// 
-                        /// *   item
+                        /// <!-- -->
+                        /// </description></item>
+                        /// <item><description><para>user</para>
+                        /// <!-- -->
                         /// 
-                        ///     <!-- -->
+                        /// <!-- -->
                         /// 
-                        ///     <!-- -->
+                        /// <!-- --></description></item>
+                        /// </list>
                         /// 
-                        ///     <!-- -->
-                        /// 
-                        /// *   user
-                        /// 
-                        ///     <!-- -->
-                        /// 
-                        ///     <!-- -->
-                        /// 
-                        ///     <!-- -->
+                        /// <b>Example:</b>
+                        /// <para>item</para>
                         /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
@@ -138,7 +142,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                 }
 
                 /// <summary>
-                /// The name of the output feature.
+                /// <para>The name of the output feature.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>item_id_feature</para>
                 /// </summary>
                 [NameInMap("Output")]
                 [Validation(Required=false)]
@@ -149,39 +156,46 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         }
 
         /// <summary>
-        /// The description of the resource.
+        /// <para>The description of the resource.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the resource.
+        /// <para>The name of the resource.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fg_jsoon</para>
         /// </summary>
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// The resource type.
+        /// <para>The resource type.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>feature_generator</para>
+        /// <!-- -->
         /// 
-        /// Valid values:
+        /// <!-- -->
         /// 
-        /// *   feature_generator
+        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>raw_file</para>
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- -->
         /// 
-        ///     <!-- -->
+        /// <!-- --></description></item>
+        /// </list>
         /// 
-        ///     <!-- -->
-        /// 
-        /// *   raw_file
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
-        /// 
-        ///     <!-- -->
+        /// <b>Example:</b>
+        /// <para>feature_generator</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

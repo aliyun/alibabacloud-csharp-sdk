@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ValidateDataSourcesRequest : TeaModel {
         /// <summary>
-        /// The request parameter. For more information, see [DataSource](https://help.aliyun.com/document_detail/170005.html).
+        /// <para>The request parameter. For more information, see <a href="https://help.aliyun.com/document_detail/170005.html">DataSource</a>.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

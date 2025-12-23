@@ -10,42 +10,55 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class GetFunctionCurrentVersionRequest : TeaModel {
         /// <summary>
-        /// The category. By default, this parameter is left empty.
+        /// <para>The category. By default, this parameter is left empty.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>general</para>
         /// </summary>
         [NameInMap("category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// The industry. By default, this parameter is left empty, which indicates General-purpose Edition.
+        /// <para>The industry. By default, this parameter is left empty, which indicates General-purpose Edition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecommerce</para>
         /// </summary>
         [NameInMap("domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
         /// <summary>
-        /// The type of the feature. Valid values:
+        /// <para>The type of the feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PAAS. This is the default value.</description></item>
+        /// <item><description>SAAS.</description></item>
+        /// </list>
         /// 
-        /// *   PAAS. This is the default value.
-        /// *   SAAS.
+        /// <b>Example:</b>
+        /// <para>PAAS</para>
         /// </summary>
         [NameInMap("functionType")]
         [Validation(Required=false)]
         public string FunctionType { get; set; }
 
         /// <summary>
-        /// The type of the model. The following features correspond to different model types:
+        /// <para>The type of the model. The following features correspond to different model types:</para>
+        /// <list type="bullet">
+        /// <item><description>CTR model: tf_checkpoint</description></item>
+        /// <item><description>Popularity model: pop</description></item>
+        /// <item><description>Category model: offline_inference</description></item>
+        /// <item><description>Hotword model: offline_inference</description></item>
+        /// <item><description>Shading model: offline_inference</description></item>
+        /// <item><description>Drop-down suggestion model: offline_inference</description></item>
+        /// <item><description>Word segmentation model: text</description></item>
+        /// <item><description>Word weight model: tf_checkpoint</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
         /// 
-        /// *   CTR model: tf_checkpoint
-        /// *   Popularity model: pop
-        /// *   Category model: offline_inference
-        /// *   Hotword model: offline_inference
-        /// *   Shading model: offline_inference
-        /// *   Drop-down suggestion model: offline_inference
-        /// *   Word segmentation model: text
-        /// *   Word weight model: tf_checkpoint
-        /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>tf_checkpoint</para>
         /// </summary>
         [NameInMap("modelType")]
         [Validation(Required=false)]

@@ -10,19 +10,22 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class CreateABTestSceneRequest : TeaModel {
         /// <summary>
-        /// The request body.
+        /// <para>The ABTest scenario. For more information, see <a href="https://help.aliyun.com/document_detail/173618.html">ABTestScene</a></para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public ABTestScene Body { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform only a dry run, without performing the actual request. Default value: false.
+        /// <para>Specifies whether to check the validity of input parameters. Default value: false.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: checks only the validity of input parameters.</description></item>
+        /// <item><description><b>false</b>: checks the validity of input parameters and creates an attribution configuration.</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   **true**
-        /// *   **false**
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

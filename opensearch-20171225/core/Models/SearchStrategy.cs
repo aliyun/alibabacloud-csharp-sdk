@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public int? MergeProportion { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>keyword: 关键字查询 vector: 向量查询</para>
+            /// </summary>
             [NameInMap("queryType")]
             [Validation(Required=false)]
             public string QueryType { get; set; }

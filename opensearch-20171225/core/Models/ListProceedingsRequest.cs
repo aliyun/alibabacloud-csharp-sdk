@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListProceedingsRequest : TeaModel {
         /// <summary>
-        /// Specifies whether the filtering is complete.
+        /// <para>Specifies whether the filtering is complete.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("filterFinished")]
         [Validation(Required=false)]

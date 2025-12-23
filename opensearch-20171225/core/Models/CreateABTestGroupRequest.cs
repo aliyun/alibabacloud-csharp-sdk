@@ -10,19 +10,22 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class CreateABTestGroupRequest : TeaModel {
         /// <summary>
-        /// The request body. For more information, see [ABTestGroup](https://help.aliyun.com/document_detail/178935.html).
+        /// <para>The request body. For more information, see <a href="https://help.aliyun.com/document_detail/178935.html">ABTestGroup</a>.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public ABTestGroup Body { get; set; }
 
         /// <summary>
-        /// Specifies whether to check the validity of input parameters. Default value: false.
+        /// <para>Specifies whether to check the validity of input parameters. Default value: false.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: checks only the validity of input parameters.</description></item>
+        /// <item><description><b>false</b>: checks the validity of input parameters and creates an attribution configuration.</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   **true**: checks only the validity of input parameters.
-        /// *   **false**: checks the validity of input parameters and creates an attribution configuration.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

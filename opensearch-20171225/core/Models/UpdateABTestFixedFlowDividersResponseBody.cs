@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UpdateABTestFixedFlowDividersResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D77D0DAF-790D-F5F5-A9C0-133738165014</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned results.
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

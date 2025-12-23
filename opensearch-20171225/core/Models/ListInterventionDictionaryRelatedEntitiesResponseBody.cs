@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListInterventionDictionaryRelatedEntitiesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D77D0DAF-790D-F5F5-A9C0-133738165014</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about each application and each query analysis rule. If no query analysis rule references the intervention dictionary, the value of the result parameter is an empty list.
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

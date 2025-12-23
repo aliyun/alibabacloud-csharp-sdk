@@ -10,13 +10,16 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class GetFunctionResourceRequest : TeaModel {
         /// <summary>
-        /// The output level.
+        /// <para>The output level.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>simple</description></item>
+        /// <item><description>normal</description></item>
+        /// <item><description>detail</description></item>
+        /// </list>
         /// 
-        /// Valid values:
-        /// 
-        /// *   simple
-        /// *   normal
-        /// *   detail
+        /// <b>Example:</b>
+        /// <para>detail</para>
         /// </summary>
         [NameInMap("output")]
         [Validation(Required=false)]

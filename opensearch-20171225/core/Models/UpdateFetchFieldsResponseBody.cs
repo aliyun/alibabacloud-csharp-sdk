@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UpdateFetchFieldsResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D77D0DAF-790D-F5F5-A9C0-133738165014</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// Indicates whether the operation was successful.
+        /// <para>Indicates whether the operation was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

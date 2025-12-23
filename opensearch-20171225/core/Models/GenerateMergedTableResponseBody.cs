@@ -10,35 +10,53 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class GenerateMergedTableResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ABCDEFGH</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The response parameters.
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public GenerateMergedTableResponseBodyResult Result { get; set; }
         public class GenerateMergedTableResponseBodyResult : TeaModel {
             /// <summary>
-            /// The tables on which the JOIN operation is performed.
+            /// <para>The tables on which the JOIN operation is performed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("fromTable")]
             [Validation(Required=false)]
             public Dictionary<string, object> FromTable { get; set; }
 
             /// <summary>
-            /// The wide table that is generated after the JOIN operation is performed on multiple tables.
+            /// <para>The wide table that is generated after the JOIN operation is performed on multiple tables.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("mergeTable")]
             [Validation(Required=false)]
             public Dictionary<string, object> MergeTable { get; set; }
 
             /// <summary>
-            /// The primary key.
+            /// <para>The primary key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("primaryKey")]
             [Validation(Required=false)]

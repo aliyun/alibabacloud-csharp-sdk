@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListDataSourceTablesResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0A6EB64B-B4C8-CF02-810F-E660812972FF</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// The data tables.
-        /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<string> Result { get; set; }

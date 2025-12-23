@@ -10,23 +10,33 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListStatisticLogsResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F76ACE3D-E510-EE2C-B7B1-39B3136A61EE</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned result. For more information, see
+        /// <para>The returned result. For more information, see</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/421248.html">Parameters of hotwords rankings</a>.</description></item>
+        /// </list>
         /// 
-        /// *   [Parameters of hotwords rankings](https://help.aliyun.com/document_detail/421248.html).
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Result { get; set; }
 
         /// <summary>
-        /// The total number of entries returned.
+        /// <para>The total number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]

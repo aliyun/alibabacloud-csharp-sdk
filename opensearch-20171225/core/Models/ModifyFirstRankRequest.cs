@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ModifyFirstRankRequest : TeaModel {
         /// <summary>
-        /// The request body.
+        /// <para>The request body.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public FirstRank Body { get; set; }
 
         /// <summary>
-        /// Specifies whether the request is a dry run.
+        /// <para>Specifies whether the request is a dry run.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

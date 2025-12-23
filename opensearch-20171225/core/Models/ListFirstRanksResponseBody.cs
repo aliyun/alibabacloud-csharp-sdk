@@ -10,71 +10,93 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListFirstRanksResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0A6EB64B-B4C8-CF02-810F-E660812972FF</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about each rough sort expression.
+        /// <para>The information about the rough sort expression.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/170007.html">FirstRank</a>.</para>
         /// 
-        /// For more information, see [FirstRank](https://help.aliyun.com/document_detail/170007.html).
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ListFirstRanksResponseBodyResult> Result { get; set; }
         public class ListFirstRanksResponseBodyResult : TeaModel {
             /// <summary>
-            /// Indicates whether the expression is the default one.
+            /// <para>Specifies whether to set the fine sort expression as the default sort expression.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("active")]
             [Validation(Required=false)]
             public bool? Active { get; set; }
 
             /// <summary>
-            /// The time when the cluster was created.
+            /// <para>The time when the expression was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
             public int? Created { get; set; }
 
             /// <summary>
-            /// The description of the expression.
+            /// <para>Description</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;&quot;</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The content of the expression.
+            /// <para>The information about the expression.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[]</para>
             /// </summary>
             [NameInMap("meta")]
             [Validation(Required=false)]
             public List<ListFirstRanksResponseBodyResultMeta> Meta { get; set; }
             public class ListFirstRanksResponseBodyResultMeta : TeaModel {
                 /// <summary>
-                /// The parameters that are used by a function in the expression.
+                /// <para>The parameters that are used by a function in the expression.</para>
+                /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/180765.html">Rough sort functions</a>.</para>
                 /// 
-                /// For more information, see [Rough sort functions](https://help.aliyun.com/document_detail/180765.html).
+                /// <b>Example:</b>
+                /// <para>&quot;&quot;</para>
                 /// </summary>
                 [NameInMap("arg")]
                 [Validation(Required=false)]
                 public string Arg { get; set; }
 
                 /// <summary>
-                /// The attribute, feature function, or field to be searched for.
+                /// <para>The attribute, feature function, or field to be searched for.</para>
+                /// <para>For more information about supported feature functions, see <a href="https://help.aliyun.com/document_detail/180765.html">Rough sort functions</a>.</para>
                 /// 
-                /// For more information about supported feature functions, see [Rough sort functions](https://help.aliyun.com/document_detail/180765.html).
+                /// <b>Example:</b>
+                /// <para>static_bm25()</para>
                 /// </summary>
                 [NameInMap("attribute")]
                 [Validation(Required=false)]
                 public string Attribute { get; set; }
 
                 /// <summary>
-                /// The weight.
+                /// <para>The weight. Valid values: -100000 to 100000. The value cannot be 0.</para>
                 /// 
-                /// Valid values: [-100000,100000] (excluding 0).
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("weight")]
                 [Validation(Required=false)]
@@ -83,14 +105,20 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             }
 
             /// <summary>
-            /// The name of the expression.
+            /// <para>The name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The time when the cluster was updated.
+            /// <para>The time when the expression was updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]

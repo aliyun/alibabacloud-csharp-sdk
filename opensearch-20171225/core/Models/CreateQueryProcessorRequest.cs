@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class CreateQueryProcessorRequest : TeaModel {
         /// <summary>
-        /// The request body.
+        /// <para>The request body.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public object Body { get; set; }
 
         /// <summary>
-        /// Specifies whether to perform a dry run.
+        /// <para>Specifies whether to perform a dry run.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

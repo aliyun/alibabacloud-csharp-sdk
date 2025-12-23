@@ -10,42 +10,57 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class UpdateSummariesRequest : TeaModel {
         /// <summary>
-        /// The request body.
+        /// <para>The request body.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<UpdateSummariesRequestBody> Body { get; set; }
         public class UpdateSummariesRequestBody : TeaModel {
             /// <summary>
-            /// The HTML tag that is used to highlight terms in red.
+            /// <para>The HTML tag that is used to highlight terms in red.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;em&quot;</para>
             /// </summary>
             [NameInMap("element")]
             [Validation(Required=false)]
             public string Element { get; set; }
 
             /// <summary>
-            /// The connector that is used to connect segments.
+            /// <para>The connector that is used to connect segments.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;...&quot;</para>
             /// </summary>
             [NameInMap("ellipsis")]
             [Validation(Required=false)]
             public string Ellipsis { get; set; }
 
             /// <summary>
-            /// The field.
+            /// <para>The field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;title&quot;</para>
             /// </summary>
             [NameInMap("field")]
             [Validation(Required=false)]
             public string Field { get; set; }
 
             /// <summary>
-            /// The length of a segment.
+            /// <para>The length of a segment.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>50</para>
             /// </summary>
             [NameInMap("len")]
             [Validation(Required=false)]
             public int? Len { get; set; }
 
             /// <summary>
-            /// The number of segments.
+            /// <para>The number of segments.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("snippet")]
             [Validation(Required=false)]
@@ -54,7 +69,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         }
 
         /// <summary>
-        /// Specifies whether the request is a dry run.
+        /// <para>Specifies whether the request is a dry run.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

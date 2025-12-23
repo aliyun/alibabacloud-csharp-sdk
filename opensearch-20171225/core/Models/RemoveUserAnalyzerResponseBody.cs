@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class RemoveUserAnalyzerResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D77D0DAF-790D-F5F5-A9C0-133738165014</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// N/A
+        /// <para>The result set. This parameter is not returned if the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]

@@ -10,44 +10,55 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// The token that is used to retrieve the next page.
+        /// <para>The token that is used to retrieve the next page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// The resource IDs. You can specify a maximum number of 50 resource IDs.
+        /// <para>The resource IDs. You can specify a maximum number of 50 resource IDs.</para>
         /// </summary>
         [NameInMap("resourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// The resource type.
+        /// <para>The resource type.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>BIGDATA</para>
         /// </summary>
         [NameInMap("resourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// The tags. You can specify a maximum number of 20 tags.
+        /// <para>The tags. You can specify a maximum number of 20 tags.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// The key of the tag.
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bm</para>
             /// </summary>
             [NameInMap("key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the tag.
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Uefi</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]

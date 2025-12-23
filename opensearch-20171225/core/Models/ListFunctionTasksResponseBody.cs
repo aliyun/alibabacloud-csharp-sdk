@@ -10,102 +10,145 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListFunctionTasksResponseBody : TeaModel {
         /// <summary>
-        /// The error code.
+        /// <para>The error code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The HTTP status code.
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpCode")]
         [Validation(Required=false)]
         public long? HttpCode { get; set; }
 
         /// <summary>
-        /// The time consumed for the request, in milliseconds.
+        /// <para>The time consumed for the request, in milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("Latency")]
         [Validation(Required=false)]
         public long? Latency { get; set; }
 
         /// <summary>
-        /// The error message.
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>fail</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1638157479281</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The returned result.
+        /// <para>The returned result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[         {             &quot;functionName&quot;: &quot;ctr&quot;,             &quot;progress&quot;: 100,             &quot;status&quot;: &quot;success&quot;,             &quot;startTime&quot;: 100010,             &quot;endTime&quot;: 200020,             &quot;extendInfo&quot;: &quot;{\&quot;recall\&quot;:91,\&quot;errors\&quot;:[]}&quot;,             &quot;runId&quot;: &quot;trigger__2021-03-05T12:18:41&quot;         }     ]</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListFunctionTasksResponseBodyResult> Result { get; set; }
         public class ListFunctionTasksResponseBodyResult : TeaModel {
             /// <summary>
-            /// The timestamp that indicates the end time. Unit: milliseconds. 0 indicates that the task has not ended.
+            /// <para>The timestamp that indicates the end time. Unit: milliseconds. 0 indicates that the task has not ended.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100010</para>
             /// </summary>
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// The value is a JSON string. It includes model evaluation information and training error information.
+            /// <para>The value is a JSON string. It includes model evaluation information and training error information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;recall\&quot;:91,\&quot;errors\&quot;:[]}</para>
             /// </summary>
             [NameInMap("ExtendInfo")]
             [Validation(Required=false)]
             public string ExtendInfo { get; set; }
 
             /// <summary>
-            /// The name of the feature.
+            /// <para>The name of the feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ctr</para>
             /// </summary>
             [NameInMap("FunctionName")]
             [Validation(Required=false)]
             public string FunctionName { get; set; }
 
             /// <summary>
-            /// The number of iterations.
+            /// <para>The number of iterations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("Generation")]
             [Validation(Required=false)]
             public string Generation { get; set; }
 
             /// <summary>
-            /// The progress. 90 indicates 90%.
+            /// <para>The progress. 90 indicates 90%.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>90</para>
             /// </summary>
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public long? Progress { get; set; }
 
             /// <summary>
-            /// The ID of the task.
+            /// <para>The ID of the task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>trigger__2021-03-05T12:18:41</para>
             /// </summary>
             [NameInMap("RunId")]
             [Validation(Required=false)]
             public string RunId { get; set; }
 
             /// <summary>
-            /// The timestamp that indicates the start time. Unit: milliseconds.
+            /// <para>The timestamp that indicates the start time. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100010</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// The status of the task. Valid values:
+            /// <para>The status of the task. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>success</description></item>
+            /// <item><description>failed</description></item>
+            /// <item><description>running</description></item>
+            /// </list>
             /// 
-            /// *   success
-            /// *   failed
-            /// *   running
+            /// <b>Example:</b>
+            /// <para>success</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -114,14 +157,20 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         }
 
         /// <summary>
-        /// The status of the request.
+        /// <para>The status of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The total number of records that meet the requirements.
+        /// <para>The total number of records that meet the requirements.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

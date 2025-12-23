@@ -10,203 +10,294 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class DescribeAppGroupResponseBody : TeaModel {
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0A6EB64B-B4C8-CF02-810F-E660812972FF</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The information about the application.
+        /// <para>The information about the application.</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public DescribeAppGroupResponseBodyResult Result { get; set; }
         public class DescribeAppGroupResponseBodyResult : TeaModel {
             /// <summary>
-            /// The billing method. Valid values:
+            /// <para>The billing method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+            /// <item><description>PREPAY: subscription.</description></item>
+            /// </list>
             /// 
-            /// *   POSTPAY: pay-as-you-go.
-            /// *   PREPAY: subscription.
+            /// <b>Example:</b>
+            /// <para>POSTPAY</para>
             /// </summary>
             [NameInMap("chargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// The billable item. Valid values:
+            /// <para>The billable item. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: computing resources.</description></item>
+            /// <item><description>2: queries per second (QPS).</description></item>
+            /// </list>
             /// 
-            /// *   1: computing resources.
-            /// *   2: queries per second (QPS).
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("chargingWay")]
             [Validation(Required=false)]
             public int? ChargingWay { get; set; }
 
             /// <summary>
-            /// The commodity code.
+            /// <para>The commodity code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>opensearch</para>
             /// </summary>
             [NameInMap("commodityCode")]
             [Validation(Required=false)]
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// The timestamp when the application was created.
+            /// <para>The timestamp when the application was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1575442875</para>
             /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
             public int? Created { get; set; }
 
             /// <summary>
-            /// The ID of the current online version.
+            /// <para>The ID of the current online version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>110116134</para>
             /// </summary>
             [NameInMap("currentVersion")]
             [Validation(Required=false)]
             public string CurrentVersion { get; set; }
 
             /// <summary>
-            /// The description of the application.
+            /// <para>The description of the application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The industry of the application.
+            /// <para>The industry of the application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ecommerce</para>
             /// </summary>
             [NameInMap("domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }
 
+            /// <summary>
+            /// <para>The engine type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ha3</para>
+            /// </summary>
             [NameInMap("engineType")]
             [Validation(Required=false)]
             public string EngineType { get; set; }
 
             /// <summary>
-            /// The expiration time.
+            /// <para>The expiration time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("expireOn")]
             [Validation(Required=false)]
             public string ExpireOn { get; set; }
 
             /// <summary>
-            /// The ID of the created rough sort expression.
+            /// <para>The ID of the created rough sort expression.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("firstRankAlgoDeploymentId")]
             [Validation(Required=false)]
             public int? FirstRankAlgoDeploymentId { get; set; }
 
             /// <summary>
-            /// The approval state of the quotas. Valid values:
+            /// <para>The approval state of the quotas. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: The application is in service.</description></item>
+            /// <item><description>1: The quotas are being reviewed.</description></item>
+            /// </list>
             /// 
-            /// *   0: The application is in service.
-            /// *   1: The quotas are being reviewed.
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("hasPendingQuotaReviewTask")]
             [Validation(Required=false)]
             public int? HasPendingQuotaReviewTask { get; set; }
 
             /// <summary>
-            /// The application ID.
+            /// <para>The application ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>110116134</para>
             /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// The instance ID.
+            /// <para>The instance ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("instanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// The lock state. Valid values:
+            /// <para>The lock state. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Unlock: The instance is unlocked.</description></item>
+            /// <item><description>LockByExpiration: The instance is automatically locked after it expires.</description></item>
+            /// <item><description>ManualLock: The instance is manually locked.</description></item>
+            /// </list>
             /// 
-            /// *   Unlock: The instance is unlocked.
-            /// *   LockByExpiration: The instance is automatically locked after it expires.
-            /// *   ManualLock: The instance is manually locked.
+            /// <b>Example:</b>
+            /// <para>Unlock</para>
             /// </summary>
             [NameInMap("lockMode")]
             [Validation(Required=false)]
             public string LockMode { get; set; }
 
             /// <summary>
-            /// Indicates whether the instance is automatically locked after it expires.
+            /// <para>Indicates whether the instance is automatically locked after it expires.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("lockedByExpiration")]
             [Validation(Required=false)]
             public int? LockedByExpiration { get; set; }
 
             /// <summary>
-            /// The application name.
+            /// <para>The application name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>os_function_test_v1</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// The ID of the fine sort expression that is being created.
+            /// <para>The ID of the fine sort expression that is being created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("pendingSecondRankAlgoDeploymentId")]
             [Validation(Required=false)]
             public int? PendingSecondRankAlgoDeploymentId { get; set; }
 
             /// <summary>
-            /// The ID of the order that is not complete.
+            /// <para>The ID of the order that is not complete.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("processingOrderId")]
             [Validation(Required=false)]
             public string ProcessingOrderId { get; set; }
 
             /// <summary>
-            /// Indicates whether the application is created. Valid values:
+            /// <para>Indicates whether the application is created. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: The application is being created.</description></item>
+            /// <item><description>1: The application is created.</description></item>
+            /// </list>
             /// 
-            /// *   0: The application is being created.
-            /// *   1: The application is created.
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("produced")]
             [Validation(Required=false)]
             public int? Produced { get; set; }
 
             /// <summary>
-            /// The name of the A/B test group.
+            /// <para>The name of the A/B test group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("projectId")]
             [Validation(Required=false)]
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// The information about the quotas of the application.
+            /// <para>The information about the quotas of the application.</para>
             /// </summary>
             [NameInMap("quota")]
             [Validation(Required=false)]
             public DescribeAppGroupResponseBodyResultQuota Quota { get; set; }
             public class DescribeAppGroupResponseBodyResultQuota : TeaModel {
                 /// <summary>
-                /// The computing resources. Unit: logical computing unit (LCU).
+                /// <para>The computing resources. Unit: logical computing unit (LCU).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
                 /// </summary>
                 [NameInMap("computeResource")]
                 [Validation(Required=false)]
                 public int? ComputeResource { get; set; }
 
                 /// <summary>
-                /// The storage capacity. Unit: GB.
+                /// <para>The storage capacity. Unit: GB.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("docSize")]
                 [Validation(Required=false)]
                 public int? DocSize { get; set; }
 
                 /// <summary>
-                /// The specifications. Valid values:
+                /// <para>The specifications. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>opensearch.share.junior: basic.</description></item>
+                /// <item><description>opensearch.share.common: shared general-purpose.</description></item>
+                /// <item><description>opensearch.share.compute: shared computing.</description></item>
+                /// <item><description>opensearch.share.storage: shared storage.</description></item>
+                /// <item><description>opensearch.private.common: exclusive general-purpose.</description></item>
+                /// <item><description>opensearch.private.compute: exclusive computing.</description></item>
+                /// <item><description>opensearch.private.storage: exclusive storage.</description></item>
+                /// </list>
                 /// 
-                /// *   opensearch.share.junior: basic.
-                /// *   opensearch.share.common: shared general-purpose.
-                /// *   opensearch.share.compute: shared computing.
-                /// *   opensearch.share.storage: shared storage.
-                /// *   opensearch.private.common: exclusive general-purpose.
-                /// *   opensearch.private.compute: exclusive computing.
-                /// *   opensearch.private.storage: exclusive storage.
+                /// <b>Example:</b>
+                /// <para>opensearch.share.common</para>
                 /// </summary>
                 [NameInMap("spec")]
                 [Validation(Required=false)]
@@ -215,55 +306,74 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             }
 
             /// <summary>
-            /// The ID of the resource group.
+            /// <para>The ID of the resource group to which the network instance belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfmoiyerh6nzly</para>
             /// </summary>
             [NameInMap("resourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// The ID of the created fine sort expression.
+            /// <para>The ID of the created fine sort expression.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("secondRankAlgoDeploymentId")]
             [Validation(Required=false)]
             public int? SecondRankAlgoDeploymentId { get; set; }
 
             /// <summary>
-            /// The state of the application. Valid values:
+            /// <para>The state of the application. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>producing: The application is being created.</description></item>
+            /// <item><description>review_pending: The application is being reviewed.</description></item>
+            /// <item><description>config_pending: The application is to be configured.</description></item>
+            /// <item><description>normal: The application is in service.</description></item>
+            /// <item><description>frozen: The application is frozen.</description></item>
+            /// </list>
             /// 
-            /// *   producing: The application is being created.
-            /// *   review_pending: The application is being reviewed.
-            /// *   config_pending: The application is to be configured.
-            /// *   normal: The application is in service.
-            /// *   frozen: The application is frozen.
+            /// <b>Example:</b>
+            /// <para>normal</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// The timestamp when the current online version was published.
+            /// <para>The timestamp when the current online version was published.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("switchedTime")]
             [Validation(Required=false)]
             public int? SwitchedTime { get; set; }
 
             /// <summary>
-            /// The application tags.
+            /// <para>The application tags.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<DescribeAppGroupResponseBodyResultTags> Tags { get; set; }
             public class DescribeAppGroupResponseBodyResultTags : TeaModel {
                 /// <summary>
-                /// The tag key.
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>foo</para>
                 /// </summary>
                 [NameInMap("key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// The tag value
+                /// <para>The tag value</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>bar</para>
                 /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
@@ -272,18 +382,24 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             }
 
             /// <summary>
-            /// The type of the application. Valid values:
+            /// <para>The type of the application. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>standard: a High-performance Search Edition application.</description></item>
+            /// <item><description>enhanced: an Industry Algorithm Edition application.</description></item>
+            /// </list>
             /// 
-            /// *   standard: a High-performance Search Edition application.
-            /// *
-            /// *   enhanced: an Industry Algorithm Edition application.
+            /// <b>Example:</b>
+            /// <para>enhanced</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// The timestamp when the application was last updated.
+            /// <para>The timestamp when the application was last updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1578916076</para>
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]

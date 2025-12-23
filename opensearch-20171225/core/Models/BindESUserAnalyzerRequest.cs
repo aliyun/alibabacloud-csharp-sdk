@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class BindESUserAnalyzerRequest : TeaModel {
         /// <summary>
-        /// The request parameters.
+        /// <para>The request parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///   &quot;name&quot;: &quot;kevintest-analyzer&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

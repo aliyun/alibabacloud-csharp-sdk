@@ -10,49 +10,70 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ValidateDataSourcesResponseBody : TeaModel {
         /// <summary>
-        /// Id of the request
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8FA2B338-AFDC-46B4-A132-B5487820C2BF</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The result returned.
+        /// <para>The result returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("result")]
         [Validation(Required=false)]
         public List<ValidateDataSourcesResponseBodyResult> Result { get; set; }
         public class ValidateDataSourcesResponseBodyResult : TeaModel {
             /// <summary>
-            /// The code returned for the request.
+            /// <para>The code returned for the request.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SUCCEED</para>
             /// </summary>
             [NameInMap("code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// The data source.
+            /// <para>The data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{}</para>
             /// </summary>
             [NameInMap("dataSource")]
             [Validation(Required=false)]
             public ValidateDataSourcesResponseBodyResultDataSource DataSource { get; set; }
             public class ValidateDataSourcesResponseBodyResultDataSource : TeaModel {
                 /// <summary>
-                /// The parameters of the data source.
+                /// <para>The parameters of the data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{}</para>
                 /// </summary>
                 [NameInMap("parameters")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Parameters { get; set; }
 
                 /// <summary>
-                /// The name of the table.
+                /// <para>The name of the table.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>user_activity_decision</para>
                 /// </summary>
                 [NameInMap("tableName")]
                 [Validation(Required=false)]
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// The type of the data source.
+                /// <para>The type of the data source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rds</para>
                 /// </summary>
                 [NameInMap("type")]
                 [Validation(Required=false)]
@@ -61,7 +82,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             }
 
             /// <summary>
-            /// The status of the execution.
+            /// <para>The status of the execution.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>successful</para>
             /// </summary>
             [NameInMap("message")]
             [Validation(Required=false)]

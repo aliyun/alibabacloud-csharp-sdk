@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListInterventionDictionaryNerResultsRequest : TeaModel {
         /// <summary>
-        /// Query keywords.
+        /// <para>Query keywords.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// This parameter is required.
+        /// <b>Example:</b>
+        /// <para>&quot;hello world&quot;</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]

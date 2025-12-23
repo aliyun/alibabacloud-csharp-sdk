@@ -10,123 +10,151 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class ListFunctionResourcesResponseBody : TeaModel {
         /// <summary>
-        /// The error code returned. If no error occurs, this value is empty.
+        /// <para>The error code returned. If no error occurs, this value is empty.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Resource.InvalidResourceName</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// The HTTP status code returned.
+        /// <para>The HTTP status code returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("HttpCode")]
         [Validation(Required=false)]
         public long? HttpCode { get; set; }
 
         /// <summary>
-        /// The amount of time consumed for the request. Unit: milliseconds.
+        /// <para>The amount of time consumed for the request. Unit: milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("Latency")]
         [Validation(Required=false)]
         public double? Latency { get; set; }
 
         /// <summary>
-        /// The error message returned.
+        /// <para>The error message returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Invalid resource name.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;3A809095-C554-5CF5-8FCE-BE19D4673790&quot;</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// The results returned.
+        /// <para>The results returned.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListFunctionResourcesResponseBodyResult> Result { get; set; }
         public class ListFunctionResourcesResponseBodyResult : TeaModel {
             /// <summary>
-            /// The time when the resource was created. Unit: milliseconds.
+            /// <para>The time when the resource was created. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1234</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// The resource data. The data structure varies with the resource type.
+            /// <para>The resource data. The data structure varies with the resource type.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public ListFunctionResourcesResponseBodyResultData Data { get; set; }
             public class ListFunctionResourcesResponseBodyResultData : TeaModel {
                 /// <summary>
-                /// The content of the file that corresponds to a resource of the raw_file type.
+                /// <para>The content of the file that corresponds to a resource of the raw_file type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>&quot;abc&quot;</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
                 /// <summary>
-                /// The feature generators that correspond to resources of the feature_generator type.
+                /// <para>The feature generators that correspond to resources of the feature_generator type.</para>
                 /// </summary>
                 [NameInMap("Generators")]
                 [Validation(Required=false)]
                 public List<ListFunctionResourcesResponseBodyResultDataGenerators> Generators { get; set; }
                 public class ListFunctionResourcesResponseBodyResultDataGenerators : TeaModel {
                     /// <summary>
-                    /// The type of the feature generator.
+                    /// <para>The type of the feature generator.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>combo</para>
                     /// </summary>
                     [NameInMap("Generator")]
                     [Validation(Required=false)]
                     public string Generator { get; set; }
 
                     /// <summary>
-                    /// The input.
+                    /// <para>The input.</para>
                     /// </summary>
                     [NameInMap("Input")]
                     [Validation(Required=false)]
                     public ListFunctionResourcesResponseBodyResultDataGeneratorsInput Input { get; set; }
                     public class ListFunctionResourcesResponseBodyResultDataGeneratorsInput : TeaModel {
                         /// <summary>
-                        /// The input features.
+                        /// <para>The input features.</para>
                         /// </summary>
                         [NameInMap("Features")]
                         [Validation(Required=false)]
                         public List<ListFunctionResourcesResponseBodyResultDataGeneratorsInputFeatures> Features { get; set; }
                         public class ListFunctionResourcesResponseBodyResultDataGeneratorsInputFeatures : TeaModel {
                             /// <summary>
-                            /// The name of the feature.
+                            /// <para>The name of the feature.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>system_item_id</para>
                             /// </summary>
                             [NameInMap("Name")]
                             [Validation(Required=false)]
                             public string Name { get; set; }
 
                             /// <summary>
-                            /// The type of the feature.
+                            /// <para>The type of the feature.</para>
+                            /// <para>Valid values:</para>
+                            /// <list type="bullet">
+                            /// <item><description><para>item</para>
+                            /// <!-- -->
                             /// 
-                            /// Valid values:
+                            /// <!-- -->
                             /// 
-                            /// *   item
+                            /// <!-- -->
+                            /// </description></item>
+                            /// <item><description><para>user</para>
+                            /// <!-- -->
                             /// 
-                            ///     <!-- -->
+                            /// <!-- -->
                             /// 
-                            ///     <!-- -->
+                            /// <!-- --></description></item>
+                            /// </list>
                             /// 
-                            ///     <!-- -->
-                            /// 
-                            /// *   user
-                            /// 
-                            ///     <!-- -->
-                            /// 
-                            ///     <!-- -->
-                            /// 
-                            ///     <!-- -->
+                            /// <b>Example:</b>
+                            /// <para>item</para>
                             /// </summary>
                             [NameInMap("Type")]
                             [Validation(Required=false)]
@@ -137,7 +165,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
                     }
 
                     /// <summary>
-                    /// The name of the output feature.
+                    /// <para>The name of the output feature.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>feature1</para>
                     /// </summary>
                     [NameInMap("Output")]
                     [Validation(Required=false)]
@@ -148,42 +179,57 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             }
 
             /// <summary>
-            /// The description of the resource.
+            /// <para>The description of the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>resource description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The name of the feature.
+            /// <para>The name of the feature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rank</para>
             /// </summary>
             [NameInMap("FunctionName")]
             [Validation(Required=false)]
             public string FunctionName { get; set; }
 
             /// <summary>
-            /// The time when the resource was modified. Unit: milliseconds.
+            /// <para>The time when the resource was modified. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1234</para>
             /// </summary>
             [NameInMap("ModifyTime")]
             [Validation(Required=false)]
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// The algorithm instances that are referenced.
+            /// <para>The algorithm instances that are referenced.</para>
             /// </summary>
             [NameInMap("ReferencedInstances")]
             [Validation(Required=false)]
             public List<string> ReferencedInstances { get; set; }
 
             /// <summary>
-            /// The name of the resource.
+            /// <para>The name of the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>fg_json</para>
             /// </summary>
             [NameInMap("ResourceName")]
             [Validation(Required=false)]
             public string ResourceName { get; set; }
 
             /// <summary>
-            /// The type of the resource.
+            /// <para>The type of the resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>feature_generator</para>
             /// </summary>
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
@@ -192,14 +238,20 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
         }
 
         /// <summary>
-        /// The status of the request. Valid values: OK and FAIL.
+        /// <para>The status of the request. Valid values: OK and FAIL.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// The total number of records that meet the requirements.
+        /// <para>The total number of records that meet the requirements.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
