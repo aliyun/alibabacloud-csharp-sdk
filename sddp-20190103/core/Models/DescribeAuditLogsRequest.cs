@@ -107,6 +107,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>[ {   &quot;isContain&quot; : false,   &quot;queryKey&quot; : &quot;effectRowRange&quot; }, {   &quot;isContain&quot; : false,   &quot;queryKey&quot; : &quot;remoteClientIp&quot; } ]</para>
+        /// </summary>
+        [NameInMap("LogQueryOpJson")]
+        [Validation(Required=false)]
+        public string LogQueryOpJson { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>SLOW_SQL</para>
         /// </summary>
         [NameInMap("LogSource")]

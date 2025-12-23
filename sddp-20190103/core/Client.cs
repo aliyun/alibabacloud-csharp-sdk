@@ -1568,6 +1568,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["LoadWhiteList"] = request.LoadWhiteList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogQueryOpJson))
+            {
+                query["LogQueryOpJson"] = request.LogQueryOpJson;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogSource))
             {
                 query["LogSource"] = request.LogSource;
@@ -1713,6 +1717,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadWhiteList))
             {
                 query["LoadWhiteList"] = request.LoadWhiteList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogQueryOpJson))
+            {
+                query["LogQueryOpJson"] = request.LogQueryOpJson;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogSource))
             {
