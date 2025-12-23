@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public List<DescribeApplicationSlbsResponseBodyDataInternet> Internet { get; set; }
             public class DescribeApplicationSlbsResponseBodyDataInternet : TeaModel {
+                [NameInMap("ConnectionDrainTimeout")]
+                [Validation(Required=false)]
+                public int? ConnectionDrainTimeout { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>wwe</para>
@@ -74,6 +78,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("EnableConnectionDrain")]
+                [Validation(Required=false)]
+                public bool? EnableConnectionDrain { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -139,6 +147,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public int? TargetPort { get; set; }
 
+                [NameInMap("VServerGroupId")]
+                [Validation(Required=false)]
+                public string VServerGroupId { get; set; }
+
             }
 
             /// <summary>
@@ -184,6 +196,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public List<DescribeApplicationSlbsResponseBodyDataIntranet> Intranet { get; set; }
             public class DescribeApplicationSlbsResponseBodyDataIntranet : TeaModel {
+                [NameInMap("ConnectionDrainTimeout")]
+                [Validation(Required=false)]
+                public int? ConnectionDrainTimeout { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>wwe</para>
@@ -209,6 +225,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("EnableConnectionDrain")]
+                [Validation(Required=false)]
+                public bool? EnableConnectionDrain { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -273,6 +293,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [NameInMap("TargetPort")]
                 [Validation(Required=false)]
                 public int? TargetPort { get; set; }
+
+                [NameInMap("VServerGroupId")]
+                [Validation(Required=false)]
+                public string VServerGroupId { get; set; }
 
             }
 
