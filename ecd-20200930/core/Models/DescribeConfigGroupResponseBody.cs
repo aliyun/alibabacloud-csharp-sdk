@@ -54,6 +54,30 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GroupId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE_DESC</para>
+            /// </summary>
+            [NameInMap("InnerTimerDesc")]
+            [Validation(Required=false)]
+            public string InnerTimerDesc { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE</para>
+            /// </summary>
+            [NameInMap("InnerTimerName")]
+            [Validation(Required=false)]
+            public string InnerTimerName { get; set; }
+
+            [NameInMap("IsBind")]
+            [Validation(Required=false)]
+            public bool? IsBind { get; set; }
+
+            [NameInMap("IsUpdate")]
+            [Validation(Required=false)]
+            public bool? IsUpdate { get; set; }
+
+            /// <summary>
             /// <para>The name of the configuration group.</para>
             /// 
             /// <b>Example:</b>

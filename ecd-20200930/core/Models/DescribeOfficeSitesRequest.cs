@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeOfficeSitesRequest : TeaModel {
+        [NameInMap("AccountType")]
+        [Validation(Required=false)]
+        public string AccountType { get; set; }
+
         /// <summary>
         /// <para>The number of entries to return on each page.</para>
         /// <list type="bullet">

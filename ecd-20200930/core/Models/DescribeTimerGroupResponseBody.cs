@@ -126,6 +126,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 [Validation(Required=false)]
                 public List<DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers> SegmentTimers { get; set; }
                 public class DescribeTimerGroupResponseBodyDataConfigTimersSegmentTimers : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1764660600967</para>
+                    /// </summary>
+                    [NameInMap("AppointmentTimer")]
+                    [Validation(Required=false)]
+                    public long? AppointmentTimer { get; set; }
+
                     [NameInMap("EndCronExpression")]
                     [Validation(Required=false)]
                     public string EndCronExpression { get; set; }
@@ -134,9 +142,25 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     [Validation(Required=false)]
                     public bool? Enforce { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>m-5b0vjqbiqu010XXXXXX</para>
+                    /// </summary>
+                    [NameInMap("ImageId")]
+                    [Validation(Required=false)]
+                    public string ImageId { get; set; }
+
                     [NameInMap("Interval")]
                     [Validation(Required=false)]
                     public int? Interval { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1800</para>
+                    /// </summary>
+                    [NameInMap("LockScreenTime")]
+                    [Validation(Required=false)]
+                    public int? LockScreenTime { get; set; }
 
                     [NameInMap("NotificationTime")]
                     [Validation(Required=false)]
@@ -227,6 +251,30 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE_DESC</para>
+            /// </summary>
+            [NameInMap("InnerTimerDesc")]
+            [Validation(Required=false)]
+            public string InnerTimerDesc { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE</para>
+            /// </summary>
+            [NameInMap("InnerTimerName")]
+            [Validation(Required=false)]
+            public string InnerTimerName { get; set; }
+
+            [NameInMap("IsBind")]
+            [Validation(Required=false)]
+            public bool? IsBind { get; set; }
+
+            [NameInMap("IsUpdate")]
+            [Validation(Required=false)]
+            public bool? IsUpdate { get; set; }
 
             /// <summary>
             /// <para>The name of the configuration group.</para>

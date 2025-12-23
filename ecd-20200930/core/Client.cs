@@ -25812,6 +25812,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountType))
+            {
+                query["AccountType"] = request.AccountType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -25882,6 +25886,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountType))
+            {
+                query["AccountType"] = request.AccountType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
