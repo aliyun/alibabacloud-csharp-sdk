@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public List<GetTextScanResultResponseBodyDataItems> Items { get; set; }
             public class GetTextScanResultResponseBodyDataItems : TeaModel {
+                [NameInMap("AccountId")]
+                [Validation(Required=false)]
+                public string AccountId { get; set; }
+
                 /// <summary>
                 /// <para>Bailian Request ID</para>
                 /// 
@@ -62,6 +66,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
+
+                [NameInMap("DataId")]
+                [Validation(Required=false)]
+                public string DataId { get; set; }
 
                 /// <summary>
                 /// <para>Feedback information.</para>
