@@ -238,6 +238,42 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
             }
 
+            [NameInMap("LargeKeyMsg")]
+            [Validation(Required=false)]
+            public string LargeKeyMsg { get; set; }
+
+            [NameInMap("LargeKeys")]
+            [Validation(Required=false)]
+            public DescribeHotBigKeysResponseBodyDataLargeKeys LargeKeys { get; set; }
+            public class DescribeHotBigKeysResponseBodyDataLargeKeys : TeaModel {
+                [NameInMap("LargeKey")]
+                [Validation(Required=false)]
+                public List<DescribeHotBigKeysResponseBodyDataLargeKeysLargeKey> LargeKey { get; set; }
+                public class DescribeHotBigKeysResponseBodyDataLargeKeysLargeKey : TeaModel {
+                    [NameInMap("DataSize")]
+                    [Validation(Required=false)]
+                    public string DataSize { get; set; }
+
+                    [NameInMap("Db")]
+                    [Validation(Required=false)]
+                    public string Db { get; set; }
+
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("KeyType")]
+                    [Validation(Required=false)]
+                    public string KeyType { get; set; }
+
+                    [NameInMap("NodeId")]
+                    [Validation(Required=false)]
+                    public string NodeId { get; set; }
+
+                }
+
+            }
+
         }
 
         /// <summary>
