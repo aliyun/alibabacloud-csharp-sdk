@@ -1017,6 +1017,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ExcessCapacityTerminationPolicy { get; set; }
 
+        [NameInMap("ExecutionMode")]
+        [Validation(Required=false)]
+        public string ExecutionMode { get; set; }
+
         /// <summary>
         /// <remarks>
         /// <para>This parameter is in invitational preview and is not publicly available.</para>
