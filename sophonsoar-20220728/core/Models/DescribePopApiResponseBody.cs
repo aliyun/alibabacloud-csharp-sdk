@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public bool? Required { get; set; }
 
+            [NameInMap("Style")]
+            [Validation(Required=false)]
+            public string Style { get; set; }
+
             /// <summary>
             /// <para>The data type of the parameter field. Valid values:</para>
             /// <list type="bullet">

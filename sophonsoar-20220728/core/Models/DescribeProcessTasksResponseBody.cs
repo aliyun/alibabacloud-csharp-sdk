@@ -85,6 +85,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public string EntityType { get; set; }
 
+            /// <summary>
+            /// <para>The UUID of the handling entity.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>69d189e2-ec17-4676-a2fe-02969234****</para>
+            /// </summary>
             [NameInMap("EntityUuid")]
             [Validation(Required=false)]
             public string EntityUuid { get; set; }
@@ -119,6 +125,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public string ErrTip { get; set; }
 
+            /// <summary>
+            /// <para>The UUID of the event.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c1020ce1-d6a5-11e8-8298-00163e10****</para>
+            /// </summary>
             [NameInMap("EventUuid")]
             [Validation(Required=false)]
             public string EventUuid { get; set; }
@@ -183,6 +195,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public long? RemoveTime { get; set; }
 
+            /// <summary>
+            /// <para>The UUID of the playbook execution record.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>93e5df20-3d03-42e1-b44b-58197c71****</para>
+            /// </summary>
             [NameInMap("ReqUuid")]
             [Validation(Required=false)]
             public string ReqUuid { get; set; }
@@ -247,6 +265,19 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public int? TaskStatus { get; set; }
 
+            /// <summary>
+            /// <para>The triggering source of the handling task. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>system</b>: triggered when you manually handle an event.</description></item>
+            /// <item><description><b>custom</b>: triggered by an event based on an automatic response rule.</description></item>
+            /// <item><description><b>custom_alert</b>: triggered by an alert based on an automatic response rule.</description></item>
+            /// <item><description><b>soar-manual</b>: triggered when you use SOAR to manually run a playbook.</description></item>
+            /// <item><description><b>soar-mdr</b>: triggered by Managed Security Service.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>system</para>
+            /// </summary>
             [NameInMap("TriggerSource")]
             [Validation(Required=false)]
             public string TriggerSource { get; set; }

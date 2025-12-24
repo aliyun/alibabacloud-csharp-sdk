@@ -70,6 +70,16 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public int? Active { get; set; }
 
             /// <summary>
+            /// <para>The description of the playbook.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>aegis_kill_process</para>
+            /// </summary>
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            /// <summary>
             /// <para>The display name of the playbook.</para>
             /// 
             /// <b>Example:</b>
@@ -152,6 +162,16 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [NameInMap("PlaybookUuid")]
             [Validation(Required=false)]
             public string PlaybookUuid { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the tenant.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>296004</para>
+            /// </summary>
+            [NameInMap("TenantId")]
+            [Validation(Required=false)]
+            public string TenantId { get; set; }
 
         }
 

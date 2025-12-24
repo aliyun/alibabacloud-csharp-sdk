@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeOpenApiInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data returned.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeOpenApiInfoResponseBodyData Data { get; set; }
         public class DescribeOpenApiInfoResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The description of the API operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>describeEcs</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The input parameters of the API operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string InputParams { get; set; }
 
             /// <summary>
+            /// <para>The output parameters of the API operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[]</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string OutputParams { get; set; }
 
             /// <summary>
+            /// <para>The sample response parameters.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[]</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string ResponseDemo { get; set; }
 
             /// <summary>
+            /// <para>The summary of the API operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>describeEcs</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string Summary { get; set; }
 
             /// <summary>
+            /// <para>The title of the API operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>describeEcs</para>
             /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>358E012F-B516-599D-9ED0-A1A361CDE615</para>
         /// </summary>

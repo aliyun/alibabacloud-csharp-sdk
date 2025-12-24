@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <remarks>
         /// <para>You can use the UUID to query specific playbook information.</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> API to obtain this parameter.</description></item>
+        /// <item><description>Call the <a href="~~CreatePlaybook~~">CreatePlaybook</a> API to obtain this parameter.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
-        public string Sort { get; set; }
+        public int? Sort { get; set; }
 
         /// <summary>
         /// <para>Start time for the query, in 13-digit timestamp format.</para>

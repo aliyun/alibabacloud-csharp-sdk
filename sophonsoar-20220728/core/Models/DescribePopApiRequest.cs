@@ -35,17 +35,6 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string ApiVersion { get; set; }
 
         /// <summary>
-        /// <para>The environment in which the API operation parameter is used. Set the value to online.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>online</para>
-        /// </summary>
-        [NameInMap("Env")]
-        [Validation(Required=false)]
-        public string Env { get; set; }
-
-        /// <summary>
         /// <para>The POP code of the Alibaba Cloud service.</para>
         /// <remarks>
         /// <para> You can call the <a href="~~DescribeApiList~~">DescribeApiList</a> operation to query the POP code.</para>

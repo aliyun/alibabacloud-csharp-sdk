@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</para>
+        /// </summary>
+        [NameInMap("InputParams")]
+        [Validation(Required=false)]
+        public string InputParams { get; set; }
+
+        /// <summary>
         /// <para>Language type for receiving messages. Values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese</description></item>
@@ -43,6 +51,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;result&quot;: &quot;success&quot;}</para>
+        /// </summary>
+        [NameInMap("OutputParams")]
+        [Validation(Required=false)]
+        public string OutputParams { get; set; }
 
         /// <summary>
         /// <para>Playbook TaskFlow type.</para>

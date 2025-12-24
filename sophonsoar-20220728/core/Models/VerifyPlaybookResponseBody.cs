@@ -53,6 +53,20 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 
         }
 
+        [NameInMap("Prerequisites")]
+        [Validation(Required=false)]
+        public List<VerifyPlaybookResponseBodyPrerequisites> Prerequisites { get; set; }
+        public class VerifyPlaybookResponseBodyPrerequisites : TeaModel {
+            [NameInMap("PrerequisiteType")]
+            [Validation(Required=false)]
+            public string PrerequisiteType { get; set; }
+
+            [NameInMap("PrerequisiteValue")]
+            [Validation(Required=false)]
+            public string PrerequisiteValue { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 

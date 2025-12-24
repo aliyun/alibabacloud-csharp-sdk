@@ -62,6 +62,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [Validation(Required=false)]
         public string PythonScript { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>python2.0</para>
+        /// </summary>
+        [NameInMap("PythonVersion")]
+        [Validation(Required=false)]
+        public string PythonVersion { get; set; }
+
     }
 
 }

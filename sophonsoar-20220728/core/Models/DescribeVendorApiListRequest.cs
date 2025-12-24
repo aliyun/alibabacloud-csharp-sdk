@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeVendorApiListRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the Alibaba Cloud product interface, supporting fuzzy search.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AddAssetCleanConfig</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string ApiName { get; set; }
 
         /// <summary>
+        /// <para>Keyword.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Create</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string KeyWord { get; set; }
 
         /// <summary>
+        /// <para>The current page number for pagination. The default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of items per page when displaying paginated results. The default is 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -42,6 +50,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Vendor\&quot;s product identifier:</para>
+        /// <list type="bullet">
+        /// <item><description><b>waf</b>: Web Application Firewall.</description></item>
+        /// <item><description><b>cfw</b>: Cloud Firewall.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>waf</para>
         /// </summary>
@@ -50,6 +64,15 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string ProductCode { get; set; }
 
         /// <summary>
+        /// <para>Vendor code:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Tencent</b>: Tencent.</description></item>
+        /// <item><description><b>HUAWEICLOUD</b>: Huawei.</description></item>
+        /// <item><description><b>Azure</b>: Microsoft Azure.</description></item>
+        /// <item><description><b>AWS</b>: Amazon Web Services.</description></item>
+        /// <item><description><b>Chaitin</b>: Chaitin.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Azure</para>
         /// </summary>

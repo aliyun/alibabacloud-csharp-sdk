@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [Validation(Required=false)]
         public DescribeSoarTaskAndActionsResponseBodyDetails Details { get; set; }
         public class DescribeSoarTaskAndActionsResponseBodyDetails : TeaModel {
+            [NameInMap("ActionLogNum")]
+            [Validation(Required=false)]
+            public int? ActionLogNum { get; set; }
+
             /// <summary>
             /// <para>The list of component actions during the running of the playbook.</para>
             /// </summary>
@@ -84,16 +88,6 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The request ID of the task. The value is unique.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>8dac16c6-7411-4116-8d70-xxxxxxx</para>
-                /// </summary>
-                [NameInMap("RequestUuid")]
-                [Validation(Required=false)]
-                public string RequestUuid { get; set; }
-
-                /// <summary>
                 /// <para>The beginning of the time range during which the component is run. The value is a 13-digit timestamp.</para>
                 /// 
                 /// <b>Example:</b>
@@ -116,39 +110,6 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
-
-                /// <summary>
-                /// <para>The name of the task. The value is the same as the playbook UUID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ed127287-6699-4e4d-b986-xxxxxxx</para>
-                /// </summary>
-                [NameInMap("TaskName")]
-                [Validation(Required=false)]
-                public string TaskName { get; set; }
-
-                /// <summary>
-                /// <para>The status of the triggered component action.</para>
-                /// <remarks>
-                /// <para> This parameter is disabled and left empty.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>NULL</para>
-                /// </summary>
-                [NameInMap("TaskStatus")]
-                [Validation(Required=false)]
-                public string TaskStatus { get; set; }
-
-                /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that is used to execute the task.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>127xxxx4392</para>
-                /// </summary>
-                [NameInMap("TriggerUser")]
-                [Validation(Required=false)]
-                public string TriggerUser { get; set; }
 
             }
 
@@ -196,26 +157,6 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string RequestUuid { get; set; }
 
             /// <summary>
-            /// <para>The flag of the task. For debugging tasks, the value is <b>DEBUG</b>. For other tasks, the parameter is left empty.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>DEBUG</para>
-            /// </summary>
-            [NameInMap("ResultLevel")]
-            [Validation(Required=false)]
-            public string ResultLevel { get; set; }
-
-            /// <summary>
-            /// <para>The returned information about the playbook. You can define the value in the playbook.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>deubug playbook finished</para>
-            /// </summary>
-            [NameInMap("ResultMessage")]
-            [Validation(Required=false)]
-            public string ResultMessage { get; set; }
-
-            /// <summary>
             /// <para>The beginning of the time range during which the playbook is run. The value is a 13-digit timestamp.</para>
             /// 
             /// <b>Example:</b>
@@ -261,16 +202,6 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the task belongs.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>127xxxx4392</para>
-            /// </summary>
-            [NameInMap("TaskTenantId")]
-            [Validation(Required=false)]
-            public string TaskTenantId { get; set; }
-
-            /// <summary>
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>debug</b>: a debugging task</description></item>
@@ -294,6 +225,24 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [NameInMap("TriggerUser")]
             [Validation(Required=false)]
             public string TriggerUser { get; set; }
+
+        }
+
+        [NameInMap("Page")]
+        [Validation(Required=false)]
+        public DescribeSoarTaskAndActionsResponseBodyPage Page { get; set; }
+        public class DescribeSoarTaskAndActionsResponseBodyPage : TeaModel {
+            [NameInMap("PageNumber")]
+            [Validation(Required=false)]
+            public string PageNumber { get; set; }
+
+            [NameInMap("PageSize")]
+            [Validation(Required=false)]
+            public string PageSize { get; set; }
+
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public string TotalCount { get; set; }
 
         }
 

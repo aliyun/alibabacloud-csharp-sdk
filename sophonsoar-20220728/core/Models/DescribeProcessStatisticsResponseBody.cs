@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeProcessStatisticsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data returned.</para>
+        /// </summary>
         [NameInMap("Metrics")]
         [Validation(Required=false)]
         public DescribeProcessStatisticsResponseBodyMetrics Metrics { get; set; }
         public class DescribeProcessStatisticsResponseBodyMetrics : TeaModel {
             /// <summary>
+            /// <para>The number of blocked files.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public int? BanFileNum { get; set; }
 
             /// <summary>
+            /// <para>The number of blocked IP addresses.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public int? BanIpNum { get; set; }
 
             /// <summary>
+            /// <para>The number of blocked processes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public int? BanProcessNum { get; set; }
 
             /// <summary>
+            /// <para>The number of handling tasks.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4CFC0F8A-D600-5FFF-A0DF-3121C4C1B90F</para>
         /// </summary>

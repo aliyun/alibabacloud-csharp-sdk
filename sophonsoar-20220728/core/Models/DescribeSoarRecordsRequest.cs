@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeSoarRecordsRequest : TeaModel {
+        [NameInMap("CompletedBeginTime")]
+        [Validation(Required=false)]
+        public long? CompletedBeginTime { get; set; }
+
+        [NameInMap("CompletedEndTime")]
+        [Validation(Required=false)]
+        public long? CompletedEndTime { get; set; }
+
         /// <summary>
         /// <para>The end time of the task execution, in 13-digit timestamp format.</para>
         /// 
@@ -61,7 +69,6 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <remarks>
         /// <para>You can obtain this parameter by calling the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> interface.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8f55e76d-b5d5-4720-9cd7-xxxxx</para>
@@ -69,6 +76,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [NameInMap("PlaybookUuid")]
         [Validation(Required=false)]
         public string PlaybookUuid { get; set; }
+
+        [NameInMap("QueryValue")]
+        [Validation(Required=false)]
+        public string QueryValue { get; set; }
 
         /// <summary>
         /// <para>UUID of the playbook task execution.</para>
@@ -117,6 +128,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [NameInMap("TaskflowMd5")]
         [Validation(Required=false)]
         public string TaskflowMd5 { get; set; }
+
+        [NameInMap("TriggerType")]
+        [Validation(Required=false)]
+        public string TriggerType { get; set; }
 
         /// <summary>
         /// <para>The Alibaba Cloud account ID that executed the playbook task.</para>

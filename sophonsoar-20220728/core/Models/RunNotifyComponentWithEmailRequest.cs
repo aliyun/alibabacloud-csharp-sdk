@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class RunNotifyComponentWithEmailRequest : TeaModel {
         /// <summary>
+        /// <para>The action name of the component.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,16 +21,20 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string ActionName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
+        /// <para>The resource instance ID of the email sender.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribeComponentAssets~~">DescribeComponentAssets</a> operation to query the ID.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
         [NameInMap("AssetId")]
         [Validation(Required=false)]
-        public int? AssetId { get; set; }
+        public string AssetId { get; set; }
 
         /// <summary>
+        /// <para>The name of component in the playbook.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +45,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string ComponentName { get; set; }
 
         /// <summary>
+        /// <para>The body of the email.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +56,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The language of the content within the request and the response. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -58,6 +70,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The name of the node in the playbook.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,6 +81,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string NodeName { get; set; }
 
         /// <summary>
+        /// <para>The UUID of the playbook.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the UUIDs of playbooks.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,6 +95,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string PlaybookUuid { get; set; }
 
         /// <summary>
+        /// <para>The email addresses.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Receivers")]
@@ -85,6 +103,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public List<string> Receivers { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who switches from the current view to the destination view by using the management account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>137602xxx718726</para>
         /// </summary>
@@ -93,6 +113,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
+        /// <para>The type of the view. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: the view of the current Alibaba Cloud account.</description></item>
+        /// <item><description>1: the view of all accounts for the enterprise.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -101,6 +127,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string RoleType { get; set; }
 
         /// <summary>
+        /// <para>The subject of the email.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

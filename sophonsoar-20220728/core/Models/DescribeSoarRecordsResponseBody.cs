@@ -86,6 +86,24 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public string ErrorMsg { get; set; }
 
+            [NameInMap("OutputList")]
+            [Validation(Required=false)]
+            public List<DescribeSoarRecordsResponseBodySoarExecuteRecordsOutputList> OutputList { get; set; }
+            public class DescribeSoarRecordsResponseBodySoarExecuteRecordsOutputList : TeaModel {
+                [NameInMap("ActionUuid")]
+                [Validation(Required=false)]
+                public string ActionUuid { get; set; }
+
+                [NameInMap("Content")]
+                [Validation(Required=false)]
+                public string Content { get; set; }
+
+                [NameInMap("NodeName")]
+                [Validation(Required=false)]
+                public string NodeName { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The request parameters of the playbook task.</para>
             /// 
@@ -108,16 +126,6 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [NameInMap("RequestUuid")]
             [Validation(Required=false)]
             public string RequestUuid { get; set; }
-
-            /// <summary>
-            /// <para>The return information of the playbook, defined by the user within the playbook.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>Playbook finish</para>
-            /// </summary>
-            [NameInMap("ResultMessage")]
-            [Validation(Required=false)]
-            public string ResultMessage { get; set; }
 
             /// <summary>
             /// <para>The start time of the task execution, in 13-digit timestamp format.</para>
@@ -153,20 +161,6 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [NameInMap("TaskName")]
             [Validation(Required=false)]
             public string TaskName { get; set; }
-
-            /// <summary>
-            /// <para>The type of the playbook task, with values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>general</b>: Represents a general playbook task.</description></item>
-            /// <item><description><b>standard</b>: Represents a component execution task.</description></item>
-            /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>standard</para>
-            /// </summary>
-            [NameInMap("TaskType")]
-            [Validation(Required=false)]
-            public string TaskType { get; set; }
 
             /// <summary>
             /// <para>The MD5 value of the playbook configuration.</para>

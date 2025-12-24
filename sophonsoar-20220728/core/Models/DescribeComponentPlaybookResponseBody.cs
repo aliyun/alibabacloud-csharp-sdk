@@ -59,6 +59,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             [Validation(Required=false)]
             public string InputParams { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>template-alert</para>
+            /// </summary>
+            [NameInMap("ParamType")]
+            [Validation(Required=false)]
+            public string ParamType { get; set; }
+
         }
 
         /// <summary>

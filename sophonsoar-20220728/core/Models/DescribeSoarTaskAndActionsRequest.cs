@@ -23,6 +23,22 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        [NameInMap("QueryType")]
+        [Validation(Required=false)]
+        public string QueryType { get; set; }
+
+        [NameInMap("QueryValue")]
+        [Validation(Required=false)]
+        public string QueryValue { get; set; }
+
         /// <summary>
         /// <para>The playbook UUID.</para>
         /// 

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>desc</b> (default)</description></item>
-        /// <item><description><b>asc</b></description></item>
+        /// <item><description><b>desc</b> (default).</description></item>
+        /// <item><description><b>asc</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// <para>The type of the handling entity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ip</b></description></item>
-        /// <item><description><b>file</b></description></item>
-        /// <item><description><b>process</b></description></item>
+        /// <item><description><b>ip</b>.</description></item>
+        /// <item><description><b>file</b>.</description></item>
+        /// <item><description><b>process</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,10 +48,22 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [Validation(Required=false)]
         public string EntityType { get; set; }
 
+        /// <summary>
+        /// <para>The UUID of the handling entity.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>69d189e2-ec17-4676-a2fe-02969234****</para>
+        /// </summary>
         [NameInMap("EntityUuid")]
         [Validation(Required=false)]
         public string EntityUuid { get; set; }
 
+        /// <summary>
+        /// <para>The UUID of the event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>c1020ce1-d6a5-11e8-8298-00163e10****</para>
+        /// </summary>
         [NameInMap("EventUuid")]
         [Validation(Required=false)]
         public string EventUuid { get; set; }
@@ -155,6 +167,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [Validation(Required=false)]
         public string ProcessStrategyUuid { get; set; }
 
+        [NameInMap("ReqUuid")]
+        [Validation(Required=false)]
+        public string ReqUuid { get; set; }
+
         /// <summary>
         /// <para>The scenario code of the handling task.</para>
         /// <remarks>
@@ -181,11 +197,11 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// <para>The triggering source of the handling task. The value is a string array. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>system</b>: triggered when you manually handle an event</description></item>
-        /// <item><description><b>custom</b>: triggered by an event based on an automatic response rule</description></item>
-        /// <item><description><b>custom_alert</b>: triggered by an alert based on an automatic response rule</description></item>
-        /// <item><description><b>soar-manual</b>: triggered when you use SOAR to manually run a playbook</description></item>
-        /// <item><description><b>soar-mdr</b>: triggered by Managed Security Service</description></item>
+        /// <item><description><b>system</b>: triggered when you manually handle an event.</description></item>
+        /// <item><description><b>custom</b>: triggered by an event based on an automatic response rule.</description></item>
+        /// <item><description><b>custom_alert</b>: triggered by an alert based on an automatic response rule.</description></item>
+        /// <item><description><b>soar-manual</b>: triggered when you use SOAR to manually run a playbook.</description></item>
+        /// <item><description><b>soar-mdr</b>: triggered by Managed Security Service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -211,14 +227,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// <para>The status of the handling task. The value is a string. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>11</b>: being handled</description></item>
-        /// <item><description><b>21</b>: being blocked</description></item>
-        /// <item><description><b>22</b>: being quarantined</description></item>
-        /// <item><description><b>23</b>: completed</description></item>
-        /// <item><description><b>24</b>: added to the whitelist</description></item>
-        /// <item><description><b>20</b>: successful</description></item>
-        /// <item><description><b>90</b>: failed</description></item>
-        /// <item><description><b>91</b>: unblocking failed</description></item>
+        /// <item><description><b>11</b>: being handled.</description></item>
+        /// <item><description><b>21</b>: being blocked.</description></item>
+        /// <item><description><b>22</b>: being quarantined.</description></item>
+        /// <item><description><b>23</b>: completed.</description></item>
+        /// <item><description><b>24</b>: added to the whitelist.</description></item>
+        /// <item><description><b>20</b>: successful.</description></item>
+        /// <item><description><b>90</b>: failed.</description></item>
+        /// <item><description><b>91</b>: unblocking failed.</description></item>
         /// <item><description><b>92</b>: restoring quarantined files failed</description></item>
         /// </list>
         /// 
@@ -229,6 +245,19 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [Validation(Required=false)]
         public string TaskStatus { get; set; }
 
+        /// <summary>
+        /// <para>The triggering source of the handling task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>system</b>: triggered when you manually handle an event.</description></item>
+        /// <item><description><b>custom</b>: triggered by an event based on an automatic response rule.</description></item>
+        /// <item><description><b>custom_alert</b>: triggered by an alert based on an automatic response rule.</description></item>
+        /// <item><description><b>soar-manual</b>: triggered when you use SOAR to manually run a playbook.</description></item>
+        /// <item><description><b>soar-mdr</b>: triggered by Managed Security Service.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>system</para>
+        /// </summary>
         [NameInMap("TriggerSource")]
         [Validation(Required=false)]
         public string TriggerSource { get; set; }
@@ -236,9 +265,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// <para>The cloud service that is associated with the handling task. The value is a string. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>WAF</b>: Web Application Firewall (WAF)</description></item>
-        /// <item><description><b>CFW</b>: Cloud Firewall</description></item>
-        /// <item><description><b>Aegis</b>: Security Center</description></item>
+        /// <item><description><b>WAF</b>: Web Application Firewall (WAF).</description></item>
+        /// <item><description><b>CFW</b>: Cloud Firewall.</description></item>
+        /// <item><description><b>Aegis</b>: Security Center.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
