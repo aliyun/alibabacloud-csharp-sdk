@@ -1,3 +1,6 @@
+2025-12-24 Version: 3.0.3
+- Generated csharp 2019-12-30 for imageseg.
+
 2025-08-20 Version: 4.0.0
 - Delete API SegmentScene.
 
