@@ -107,6 +107,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [Validation(Required=false)]
                 public int? DataOffset { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("DependentStrategy")]
+                [Validation(Required=false)]
+                public int? DependentStrategy { get; set; }
+
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
@@ -173,6 +181,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("NodeType")]
+                [Validation(Required=false)]
+                public int? NodeType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>{&quot;failLimitTimes&quot;:1,&quot;failEnable&quot;:true,&quot;timeoutKillEnable&quot;:false,&quot;missWorkerEnable&quot;:true,&quot;timeoutEnable&quot;:true,&quot;sendChannel&quot;:&quot;&quot;,&quot;timeout&quot;:300,&quot;successNotice&quot;:false}</para>
                 /// </summary>
                 [NameInMap("NoticeConfig")]
@@ -210,6 +226,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [NameInMap("Script")]
                 [Validation(Required=false)]
                 public string Script { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("StartTimeType")]
+                [Validation(Required=false)]
+                public int? StartTimeType { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -266,6 +290,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
                 public int? Weight { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
+                [NameInMap("WorkflowId")]
+                [Validation(Required=false)]
+                public long? WorkflowId { get; set; }
 
                 [NameInMap("Xattrs")]
                 [Validation(Required=false)]

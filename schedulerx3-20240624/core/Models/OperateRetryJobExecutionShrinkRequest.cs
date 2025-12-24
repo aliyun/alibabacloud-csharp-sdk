@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string TaskListShrink { get; set; }
 
+        [NameInMap("TriggerChild")]
+        [Validation(Required=false)]
+        public bool? TriggerChild { get; set; }
+
     }
 
 }

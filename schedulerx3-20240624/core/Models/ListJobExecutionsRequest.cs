@@ -91,6 +91,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public int? Status { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
+        [NameInMap("WorkflowExecutionId")]
+        [Validation(Required=false)]
+        public long? WorkflowExecutionId { get; set; }
+
     }
 
 }

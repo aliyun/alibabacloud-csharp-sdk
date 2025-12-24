@@ -71,6 +71,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string Event { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>JOB</para>
+                /// </summary>
+                [NameInMap("EventType")]
+                [Validation(Required=false)]
+                public string EventType { get; set; }
+
+                /// <summary>
                 /// <para>130</para>
                 /// 
                 /// <b>Example:</b>
@@ -103,6 +111,22 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [NameInMap("WorkerAddr")]
                 [Validation(Required=false)]
                 public string WorkerAddr { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1450568762586578000</para>
+                /// </summary>
+                [NameInMap("WorkflowExecutionId")]
+                [Validation(Required=false)]
+                public string WorkflowExecutionId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>工作流0001</para>
+                /// </summary>
+                [NameInMap("WorkflowName")]
+                [Validation(Required=false)]
+                public string WorkflowName { get; set; }
 
             }
 

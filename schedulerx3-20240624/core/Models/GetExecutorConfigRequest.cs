@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
-    public class OperateRetryJobExecutionRequest : TeaModel {
+    public class GetExecutorConfigRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -23,29 +23,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxljob-b6ec1xxxx</para>
+        /// <para>xxljob-a1804a3226d</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1310630367761285120</para>
-        /// </summary>
-        [NameInMap("JobExecutionId")]
-        [Validation(Required=false)]
-        public string JobExecutionId { get; set; }
-
-        [NameInMap("TaskList")]
-        [Validation(Required=false)]
-        public List<string> TaskList { get; set; }
-
-        [NameInMap("TriggerChild")]
-        [Validation(Required=false)]
-        public bool? TriggerChild { get; set; }
 
     }
 

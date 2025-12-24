@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string Calendar { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1,2</para>
+        /// </summary>
         [NameInMap("ChildJobId")]
         [Validation(Required=false)]
         public string ChildJobId { get; set; }
@@ -48,6 +52,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("DependentStrategy")]
+        [Validation(Required=false)]
+        public int? DependentStrategy { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -139,6 +151,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public int? RouteStrategy { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>echo &quot;hello world&quot;</para>
+        /// </summary>
         [NameInMap("Script")]
         [Validation(Required=false)]
         public string Script { get; set; }
@@ -150,6 +166,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("StartTimeType")]
+        [Validation(Required=false)]
+        public string StartTimeType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

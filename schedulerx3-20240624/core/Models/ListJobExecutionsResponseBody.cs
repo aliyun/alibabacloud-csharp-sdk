@@ -187,6 +187,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [Validation(Required=false)]
                 public int? TimeType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1000</para>
+                /// </summary>
                 [NameInMap("TotalTokens")]
                 [Validation(Required=false)]
                 public int? TotalTokens { get; set; }
@@ -206,6 +210,30 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [NameInMap("WorkAddr")]
                 [Validation(Required=false)]
                 public string WorkAddr { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
+                [NameInMap("WorkflowExecutionId")]
+                [Validation(Required=false)]
+                public string WorkflowExecutionId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
+                [NameInMap("WorkflowId")]
+                [Validation(Required=false)]
+                public long? WorkflowId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>myWorkflow</para>
+                /// </summary>
+                [NameInMap("WorkflowName")]
+                [Validation(Required=false)]
+                public string WorkflowName { get; set; }
 
             }
 

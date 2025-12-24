@@ -151,6 +151,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("MaxWorkflowNum")]
+            [Validation(Required=false)]
+            public int? MaxWorkflowNum { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
             [NameInMap("ProductType")]
@@ -220,6 +228,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             [NameInMap("WorkerNum")]
             [Validation(Required=false)]
             public int? WorkerNum { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
+            [NameInMap("WorkflowNum")]
+            [Validation(Required=false)]
+            public int? WorkflowNum { get; set; }
 
             [NameInMap("Zones")]
             [Validation(Required=false)]

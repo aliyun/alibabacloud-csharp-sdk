@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string Calendar { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1,2</para>
+        /// </summary>
         [NameInMap("ChildJobId")]
         [Validation(Required=false)]
         public string ChildJobId { get; set; }
@@ -48,6 +52,52 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
+
+        [NameInMap("Coordinate")]
+        [Validation(Required=false)]
+        public CreateJobRequestCoordinate Coordinate { get; set; }
+        public class CreateJobRequestCoordinate : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>50.0</para>
+            /// </summary>
+            [NameInMap("Height")]
+            [Validation(Required=false)]
+            public float? Height { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100.0</para>
+            /// </summary>
+            [NameInMap("Width")]
+            [Validation(Required=false)]
+            public float? Width { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100.0</para>
+            /// </summary>
+            [NameInMap("X")]
+            [Validation(Required=false)]
+            public float? X { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100.0</para>
+            /// </summary>
+            [NameInMap("Y")]
+            [Validation(Required=false)]
+            public float? Y { get; set; }
+
+        }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("DependentStrategy")]
+        [Validation(Required=false)]
+        public int? DependentStrategy { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -113,6 +163,18 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public CreateJobRequestNoticeConfig NoticeConfig { get; set; }
         public class CreateJobRequestNoticeConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
+            [NameInMap("EndEarly")]
+            [Validation(Required=false)]
+            public int? EndEarly { get; set; }
+
+            [NameInMap("EndEarlyEnable")]
+            [Validation(Required=false)]
+            public bool? EndEarlyEnable { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>true</para>
@@ -225,6 +287,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public int? RouteStrategy { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>echo &quot;hello world&quot;</para>
+        /// </summary>
         [NameInMap("Script")]
         [Validation(Required=false)]
         public string Script { get; set; }
@@ -236,6 +302,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("StartTimeType")]
+        [Validation(Required=false)]
+        public int? StartTimeType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
