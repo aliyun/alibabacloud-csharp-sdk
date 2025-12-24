@@ -28505,6 +28505,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return await DescribeLiveAudioAuditNotifyConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询直播CDN诊断信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLiveCdnDiagnoseInfoRequest
         /// </param>
@@ -28578,6 +28583,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<DescribeLiveCdnDiagnoseInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询直播CDN诊断信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLiveCdnDiagnoseInfoRequest
         /// </param>
@@ -28651,6 +28661,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<DescribeLiveCdnDiagnoseInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询直播CDN诊断信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLiveCdnDiagnoseInfoRequest
         /// </param>
@@ -28664,6 +28679,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return DescribeLiveCdnDiagnoseInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询直播CDN诊断信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLiveCdnDiagnoseInfoRequest
         /// </param>
@@ -35857,6 +35877,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return await DescribeLiveDomainTrafficDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询直播域名转码参数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLiveDomainTranscodeParamsRequest
         /// </param>
@@ -35906,6 +35931,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<DescribeLiveDomainTranscodeParamsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询直播域名转码参数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLiveDomainTranscodeParamsRequest
         /// </param>
@@ -35955,6 +35985,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<DescribeLiveDomainTranscodeParamsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询直播域名转码参数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLiveDomainTranscodeParamsRequest
         /// </param>
@@ -35968,6 +36003,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return DescribeLiveDomainTranscodeParamsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询直播域名转码参数</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLiveDomainTranscodeParamsRequest
         /// </param>
@@ -35981,6 +36021,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return await DescribeLiveDomainTranscodeParamsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取直播DRM用量数据</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Usage notes</h3>
@@ -36053,6 +36098,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<DescribeLiveDrmUsageDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取直播DRM用量数据</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Usage notes</h3>
@@ -36125,6 +36175,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<DescribeLiveDrmUsageDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取直播DRM用量数据</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Usage notes</h3>
@@ -36149,6 +36204,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return DescribeLiveDrmUsageDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取直播DRM用量数据</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#"></a>Usage notes</h3>
@@ -48149,6 +48209,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return await DescribeLiveUserStreamMetricDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取直播用户标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLiveUserTagsRequest
         /// </param>
@@ -48190,6 +48255,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<DescribeLiveUserTagsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取直播用户标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLiveUserTagsRequest
         /// </param>
@@ -48231,6 +48301,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<DescribeLiveUserTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取直播用户标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLiveUserTagsRequest
         /// </param>
@@ -48244,6 +48319,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return DescribeLiveUserTagsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取直播用户标签</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeLiveUserTagsRequest
         /// </param>
@@ -54585,6 +54665,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return await GetMessageTokenWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取转码任务状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTranscodeTaskStatusRequest
         /// </param>
@@ -54638,6 +54723,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<GetTranscodeTaskStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取转码任务状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTranscodeTaskStatusRequest
         /// </param>
@@ -54691,6 +54781,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<GetTranscodeTaskStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取转码任务状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTranscodeTaskStatusRequest
         /// </param>
@@ -54704,6 +54799,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return GetTranscodeTaskStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取转码任务状态</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTranscodeTaskStatusRequest
         /// </param>
@@ -57887,6 +57987,182 @@ namespace AlibabaCloud.SDK.Live20161101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListLiveRealtimeLogDeliveryInfosWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询符合条件的资源和标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLiveTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLiveTagResourcesResponse
+        /// </returns>
+        public ListLiveTagResourcesResponse ListLiveTagResourcesWithOptions(ListLiveTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagOwnerBid))
+            {
+                query["TagOwnerBid"] = request.TagOwnerBid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagOwnerUid))
+            {
+                query["TagOwnerUid"] = request.TagOwnerUid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLiveTagResources",
+                Version = "2016-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLiveTagResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询符合条件的资源和标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLiveTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLiveTagResourcesResponse
+        /// </returns>
+        public async Task<ListLiveTagResourcesResponse> ListLiveTagResourcesWithOptionsAsync(ListLiveTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagOwnerBid))
+            {
+                query["TagOwnerBid"] = request.TagOwnerBid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagOwnerUid))
+            {
+                query["TagOwnerUid"] = request.TagOwnerUid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLiveTagResources",
+                Version = "2016-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLiveTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询符合条件的资源和标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLiveTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLiveTagResourcesResponse
+        /// </returns>
+        public ListLiveTagResourcesResponse ListLiveTagResources(ListLiveTagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListLiveTagResourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询符合条件的资源和标签</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLiveTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLiveTagResourcesResponse
+        /// </returns>
+        public async Task<ListLiveTagResourcesResponse> ListLiveTagResourcesAsync(ListLiveTagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListLiveTagResourcesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -66433,6 +66709,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return await RestartLivePullToPushWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重启转码任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RestartTranscodeTaskRequest
         /// </param>
@@ -66486,6 +66767,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<RestartTranscodeTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重启转码任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RestartTranscodeTaskRequest
         /// </param>
@@ -66539,6 +66825,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return TeaModel.ToObject<RestartTranscodeTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重启转码任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RestartTranscodeTaskRequest
         /// </param>
@@ -66552,6 +66843,11 @@ namespace AlibabaCloud.SDK.Live20161101
             return RestartTranscodeTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重启转码任务</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RestartTranscodeTaskRequest
         /// </param>
