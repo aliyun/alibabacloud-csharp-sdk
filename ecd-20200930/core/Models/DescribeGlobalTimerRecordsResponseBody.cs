@@ -94,6 +94,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DesktopName { get; set; }
 
+            [NameInMap("DisplayResultName")]
+            [Validation(Required=false)]
+            public string DisplayResultName { get; set; }
+
             /// <summary>
             /// <para>The time when the scheduled task ended.</para>
             /// 
@@ -114,6 +118,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            [NameInMap("Retryable")]
+            [Validation(Required=false)]
+            public bool? Retryable { get; set; }
+
             /// <summary>
             /// <para>The ID of the scheduled task group.</para>
             /// 
@@ -123,6 +131,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("TimerGroupId")]
             [Validation(Required=false)]
             public string TimerGroupId { get; set; }
+
+            [NameInMap("TimerRecordId")]
+            [Validation(Required=false)]
+            public string TimerRecordId { get; set; }
 
             /// <summary>
             /// <para>The execution result of the scheduled task.</para>

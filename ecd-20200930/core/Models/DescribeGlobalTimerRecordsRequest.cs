@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> DesktopIds { get; set; }
 
+        [NameInMap("DisplayResultName")]
+        [Validation(Required=false)]
+        public string DisplayResultName { get; set; }
+
         /// <summary>
         /// <para>The ID of the scheduled task group.</para>
         /// 
@@ -84,6 +88,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("ResultCategory")]
         [Validation(Required=false)]
         public string ResultCategory { get; set; }
+
+        [NameInMap("Retryable")]
+        [Validation(Required=false)]
+        public bool? Retryable { get; set; }
 
         /// <summary>
         /// <para>The ID of the searched region. You can specify this parameter to filter cloud computers in specific regions.</para>
