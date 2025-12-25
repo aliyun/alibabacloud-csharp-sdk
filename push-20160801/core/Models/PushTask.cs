@@ -305,6 +305,14 @@ namespace AlibabaCloud.SDK.Push20160801.Models
                 [Validation(Required=false)]
                 public string SlotType { get; set; }
 
+                [NameInMap("Sound")]
+                [Validation(Required=false)]
+                public string Sound { get; set; }
+
+                [NameInMap("SoundDuration")]
+                [Validation(Required=false)]
+                public int? SoundDuration { get; set; }
+
                 [NameInMap("TestMessage")]
                 [Validation(Required=false)]
                 public bool? TestMessage { get; set; }
