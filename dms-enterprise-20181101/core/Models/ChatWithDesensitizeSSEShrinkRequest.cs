@@ -138,6 +138,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public string Parameters { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>0.0</para>
         /// </summary>
         [NameInMap("PresencePenalty")]

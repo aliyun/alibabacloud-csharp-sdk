@@ -3839,6 +3839,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["NeedDesensitization"] = request.NeedDesensitization;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PresencePenalty))
             {
                 query["PresencePenalty"] = request.PresencePenalty;
@@ -4013,6 +4017,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedDesensitization))
             {
                 query["NeedDesensitization"] = request.NeedDesensitization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PresencePenalty))
             {
