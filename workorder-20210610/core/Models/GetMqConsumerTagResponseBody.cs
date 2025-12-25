@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Workorder20210610.Models
 {
     public class GetMqConsumerTagResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
