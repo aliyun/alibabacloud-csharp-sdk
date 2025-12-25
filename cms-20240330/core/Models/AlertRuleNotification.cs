@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public List<string> CustomWebhooks { get; set; }
 
+        [NameInMap("dingCoolAppWebhooks")]
+        [Validation(Required=false)]
+        public List<string> DingCoolAppWebhooks { get; set; }
+
         [NameInMap("dingWebhooks")]
         [Validation(Required=false)]
         public List<string> DingWebhooks { get; set; }
