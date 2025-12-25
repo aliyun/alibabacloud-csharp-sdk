@@ -10788,6 +10788,266 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>用于创建实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
+        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
+        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
+        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
+        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
+        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
+        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
+        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateUserWafRulesetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserWafRulesetResponse
+        /// </returns>
+        public CreateUserWafRulesetResponse CreateUserWafRulesetWithOptions(CreateUserWafRulesetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateUserWafRulesetShrinkRequest request = new CreateUserWafRulesetShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
+            {
+                request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Shared))
+            {
+                request.SharedShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Shared, "Shared", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expression))
+            {
+                body["Expression"] = request.Expression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phase))
+            {
+                body["Phase"] = request.Phase;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RulesShrink))
+            {
+                body["Rules"] = request.RulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedShrink))
+            {
+                body["Shared"] = request.SharedShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUserWafRuleset",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateUserWafRulesetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
+        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
+        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
+        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
+        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
+        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
+        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
+        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateUserWafRulesetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserWafRulesetResponse
+        /// </returns>
+        public async Task<CreateUserWafRulesetResponse> CreateUserWafRulesetWithOptionsAsync(CreateUserWafRulesetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateUserWafRulesetShrinkRequest request = new CreateUserWafRulesetShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
+            {
+                request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Shared))
+            {
+                request.SharedShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Shared, "Shared", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expression))
+            {
+                body["Expression"] = request.Expression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phase))
+            {
+                body["Phase"] = request.Phase;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RulesShrink))
+            {
+                body["Rules"] = request.RulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedShrink))
+            {
+                body["Shared"] = request.SharedShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUserWafRuleset",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateUserWafRulesetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
+        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
+        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
+        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
+        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
+        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
+        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
+        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserWafRulesetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserWafRulesetResponse
+        /// </returns>
+        public CreateUserWafRulesetResponse CreateUserWafRuleset(CreateUserWafRulesetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateUserWafRulesetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
+        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
+        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
+        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
+        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
+        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
+        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
+        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserWafRulesetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserWafRulesetResponse
+        /// </returns>
+        public async Task<CreateUserWafRulesetResponse> CreateUserWafRulesetAsync(CreateUserWafRulesetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateUserWafRulesetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Add video processing configurations for a website.</para>
         /// </summary>
         /// 
@@ -17676,6 +17936,198 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserDeliveryTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于删除实例级别的Web应用防火墙规则集。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
+        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
+        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
+        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
+        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
+        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
+        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
+        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteUserWafRulesetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserWafRulesetResponse
+        /// </returns>
+        public DeleteUserWafRulesetResponse DeleteUserWafRulesetWithOptions(DeleteUserWafRulesetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteUserWafRuleset",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteUserWafRulesetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于删除实例级别的Web应用防火墙规则集。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
+        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
+        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
+        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
+        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
+        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
+        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
+        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteUserWafRulesetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserWafRulesetResponse
+        /// </returns>
+        public async Task<DeleteUserWafRulesetResponse> DeleteUserWafRulesetWithOptionsAsync(DeleteUserWafRulesetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteUserWafRuleset",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteUserWafRulesetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于删除实例级别的Web应用防火墙规则集。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
+        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
+        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
+        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
+        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
+        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
+        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
+        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteUserWafRulesetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserWafRulesetResponse
+        /// </returns>
+        public DeleteUserWafRulesetResponse DeleteUserWafRuleset(DeleteUserWafRulesetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteUserWafRulesetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于删除实例级别的Web应用防火墙规则集。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
+        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
+        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
+        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
+        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
+        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
+        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
+        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteUserWafRulesetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteUserWafRulesetResponse
+        /// </returns>
+        public async Task<DeleteUserWafRulesetResponse> DeleteUserWafRulesetAsync(DeleteUserWafRulesetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteUserWafRulesetWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -27154,6 +27606,126 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询Routine默认访问记录访问鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRoutineAccessTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRoutineAccessTokenResponse
+        /// </returns>
+        public GetRoutineAccessTokenResponse GetRoutineAccessTokenWithOptions(GetRoutineAccessTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRoutineAccessToken",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRoutineAccessTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Routine默认访问记录访问鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRoutineAccessTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRoutineAccessTokenResponse
+        /// </returns>
+        public async Task<GetRoutineAccessTokenResponse> GetRoutineAccessTokenWithOptionsAsync(GetRoutineAccessTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRoutineAccessToken",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRoutineAccessTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Routine默认访问记录访问鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRoutineAccessTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRoutineAccessTokenResponse
+        /// </returns>
+        public GetRoutineAccessTokenResponse GetRoutineAccessToken(GetRoutineAccessTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRoutineAccessTokenWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Routine默认访问记录访问鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRoutineAccessTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRoutineAccessTokenResponse
+        /// </returns>
+        public async Task<GetRoutineAccessTokenResponse> GetRoutineAccessTokenAsync(GetRoutineAccessTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRoutineAccessTokenWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries information about a code version of a routine.</para>
         /// </summary>
         /// 
@@ -29714,6 +30286,134 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetUserLogDeliveryQuotaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于获取实例级别的Web应用防火墙规则集详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserWafRulesetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserWafRulesetResponse
+        /// </returns>
+        public GetUserWafRulesetResponse GetUserWafRulesetWithOptions(GetUserWafRulesetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserWafRuleset",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserWafRulesetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于获取实例级别的Web应用防火墙规则集详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserWafRulesetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserWafRulesetResponse
+        /// </returns>
+        public async Task<GetUserWafRulesetResponse> GetUserWafRulesetWithOptionsAsync(GetUserWafRulesetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserWafRuleset",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserWafRulesetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于获取实例级别的Web应用防火墙规则集详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserWafRulesetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserWafRulesetResponse
+        /// </returns>
+        public GetUserWafRulesetResponse GetUserWafRuleset(GetUserWafRulesetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetUserWafRulesetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于获取实例级别的Web应用防火墙规则集详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserWafRulesetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserWafRulesetResponse
+        /// </returns>
+        public async Task<GetUserWafRulesetResponse> GetUserWafRulesetAsync(GetUserWafRulesetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetUserWafRulesetWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -37312,6 +38012,170 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListUserRoutinesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于列举实例级别的Web应用防火墙规则集。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListUserWafRulesetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserWafRulesetsResponse
+        /// </returns>
+        public ListUserWafRulesetsResponse ListUserWafRulesetsWithOptions(ListUserWafRulesetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListUserWafRulesetsShrinkRequest request = new ListUserWafRulesetsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryArgs))
+            {
+                request.QueryArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryArgs, "QueryArgs", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phase))
+            {
+                query["Phase"] = request.Phase;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryArgsShrink))
+            {
+                query["QueryArgs"] = request.QueryArgsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserWafRulesets",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserWafRulesetsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于列举实例级别的Web应用防火墙规则集。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListUserWafRulesetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserWafRulesetsResponse
+        /// </returns>
+        public async Task<ListUserWafRulesetsResponse> ListUserWafRulesetsWithOptionsAsync(ListUserWafRulesetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListUserWafRulesetsShrinkRequest request = new ListUserWafRulesetsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryArgs))
+            {
+                request.QueryArgsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryArgs, "QueryArgs", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Phase))
+            {
+                query["Phase"] = request.Phase;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryArgsShrink))
+            {
+                query["QueryArgs"] = request.QueryArgsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserWafRulesets",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserWafRulesetsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于列举实例级别的Web应用防火墙规则集。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserWafRulesetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserWafRulesetsResponse
+        /// </returns>
+        public ListUserWafRulesetsResponse ListUserWafRulesets(ListUserWafRulesetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListUserWafRulesetsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于列举实例级别的Web应用防火墙规则集。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserWafRulesetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserWafRulesetsResponse
+        /// </returns>
+        public async Task<ListUserWafRulesetsResponse> ListUserWafRulesetsAsync(ListUserWafRulesetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListUserWafRulesetsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -50912,6 +51776,274 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateUserDeliveryTaskStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
+        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
+        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
+        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
+        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
+        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
+        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
+        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateUserWafRulesetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserWafRulesetResponse
+        /// </returns>
+        public UpdateUserWafRulesetResponse UpdateUserWafRulesetWithOptions(UpdateUserWafRulesetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateUserWafRulesetShrinkRequest request = new UpdateUserWafRulesetShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
+            {
+                request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Shared))
+            {
+                request.SharedShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Shared, "Shared", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expression))
+            {
+                body["Expression"] = request.Expression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Position))
+            {
+                body["Position"] = request.Position;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RulesShrink))
+            {
+                body["Rules"] = request.RulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedShrink))
+            {
+                body["Shared"] = request.SharedShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUserWafRuleset",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUserWafRulesetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
+        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
+        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
+        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
+        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
+        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
+        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
+        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateUserWafRulesetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserWafRulesetResponse
+        /// </returns>
+        public async Task<UpdateUserWafRulesetResponse> UpdateUserWafRulesetWithOptionsAsync(UpdateUserWafRulesetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateUserWafRulesetShrinkRequest request = new UpdateUserWafRulesetShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Rules))
+            {
+                request.RulesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Rules, "Rules", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Shared))
+            {
+                request.SharedShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Shared, "Shared", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expression))
+            {
+                body["Expression"] = request.Expression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Position))
+            {
+                body["Position"] = request.Position;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RulesShrink))
+            {
+                body["Rules"] = request.RulesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedShrink))
+            {
+                body["Shared"] = request.SharedShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUserWafRuleset",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUserWafRulesetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
+        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
+        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
+        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
+        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
+        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
+        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
+        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateUserWafRulesetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserWafRulesetResponse
+        /// </returns>
+        public UpdateUserWafRulesetResponse UpdateUserWafRuleset(UpdateUserWafRulesetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateUserWafRulesetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于更新实例级别的Web应用防火墙规则集，支持多种类型的防护规则。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</description></item>
+        /// <item><description><c>InstanceId</c> 是必需参数，指定了要为其创建规则集的具体实例。</description></item>
+        /// <item><description><c>Phase</c> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</description></item>
+        /// <item><description><c>Name</c> 和 <c>Expression</c> 是必填项，分别代表规则集的名字和具体的匹配表达式。</description></item>
+        /// <item><description>可选参数 <c>Description</c> 提供了对规则集功能或用途的文字描述。</description></item>
+        /// <item><description><c>Status</c> 控制着规则集是否立即生效 (<c>on</c>) 或者处于关闭状态 (<c>off</c>)。</description></item>
+        /// <item><description>通过 <c>Rules</c> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</description></item>
+        /// <item><description>成功响应将返回新创建规则集的唯一标识符 <c>Id</c> 以及所有关联规则的ID列表 <c>RuleIds</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateUserWafRulesetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserWafRulesetResponse
+        /// </returns>
+        public async Task<UpdateUserWafRulesetResponse> UpdateUserWafRulesetAsync(UpdateUserWafRulesetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateUserWafRulesetWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
