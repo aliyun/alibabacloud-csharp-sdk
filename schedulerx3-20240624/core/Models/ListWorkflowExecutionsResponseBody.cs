@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
-    public class ListAppsResponseBody : TeaModel {
+    public class ListWorkflowExecutionsResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>200</para>
@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public ListAppsResponseBodyData Data { get; set; }
-        public class ListAppsResponseBodyData : TeaModel {
+        public ListWorkflowExecutionsResponseBodyData Data { get; set; }
+        public class ListWorkflowExecutionsResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
@@ -49,18 +49,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
-            public List<ListAppsResponseBodyDataRecords> Records { get; set; }
-            public class ListAppsResponseBodyDataRecords : TeaModel {
-                /// <summary>
-                /// <para>AccessToken</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2f4ddeab8e344ed68e0402cf9b8502ffv3</para>
-                /// </summary>
-                [NameInMap("AccessToken")]
-                [Validation(Required=false)]
-                public string AccessToken { get; set; }
-
+            public List<ListWorkflowExecutionsResponseBodyDataRecords> Records { get; set; }
+            public class ListWorkflowExecutionsResponseBodyDataRecords : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>test-app</para>
@@ -71,117 +61,81 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>1</para>
+                /// <para>2024-11-12 14:52:42</para>
                 /// </summary>
-                [NameInMap("AppType")]
+                [NameInMap("DataTime")]
                 [Validation(Required=false)]
-                public int? AppType { get; set; }
+                public string DataTime { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>1827811800555555</para>
+                /// <para>2024-11-12 14:52:42</para>
                 /// </summary>
-                [NameInMap("Creator")]
+                [NameInMap("EndTime")]
                 [Validation(Required=false)]
-                public string Creator { get; set; }
+                public string EndTime { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>true</para>
+                /// <para>1827811800526000</para>
                 /// </summary>
-                [NameInMap("EnableLog")]
+                [NameInMap("Executor")]
                 [Validation(Required=false)]
-                public bool? EnableLog { get; set; }
+                public string Executor { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>1</para>
+                /// <para>2024-11-12 14:52:42</para>
                 /// </summary>
-                [NameInMap("ExecutorNum")]
+                [NameInMap("ScheduleTime")]
                 [Validation(Required=false)]
-                public long? ExecutorNum { get; set; }
+                public string ScheduleTime { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>43885</para>
+                /// <para>2025-11-04 01:09:27</para>
                 /// </summary>
-                [NameInMap("Id")]
+                [NameInMap("StartTime")]
                 [Validation(Required=false)]
-                public long? Id { get; set; }
+                public string StartTime { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>10</para>
+                /// <para>4</para>
                 /// </summary>
-                [NameInMap("JobNum")]
+                [NameInMap("Status")]
                 [Validation(Required=false)]
-                public int? JobNum { get; set; }
-
-                [NameInMap("LabelRouteStrategy")]
-                [Validation(Required=false)]
-                public int? LabelRouteStrategy { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para><a href="http://28.5.128.3:80">http://28.5.128.3:80</a></para>
-                /// </summary>
-                [NameInMap("Leader")]
-                [Validation(Required=false)]
-                public string Leader { get; set; }
+                public int? Status { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
-                [NameInMap("MaxConcurrency")]
+                [NameInMap("WorkflowExecutionId")]
                 [Validation(Required=false)]
-                public int? MaxConcurrency { get; set; }
-
-                /// <term><b>Obsolete</b></term>
-                /// 
-                /// <summary>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1000</para>
-                /// </summary>
-                [NameInMap("MaxJobs")]
-                [Validation(Required=false)]
-                [Obsolete]
-                public int? MaxJobs { get; set; }
-
-                [NameInMap("Title")]
-                [Validation(Required=false)]
-                public string Title { get; set; }
+                public string WorkflowExecutionId { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>1827811800555555</para>
+                /// <para>10</para>
                 /// </summary>
-                [NameInMap("Updater")]
+                [NameInMap("WorkflowId")]
                 [Validation(Required=false)]
-                public string Updater { get; set; }
+                public string WorkflowId { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>k8s_service</para>
+                /// <para>myWorkflow</para>
                 /// </summary>
-                [NameInMap("WorkerRegistry")]
+                [NameInMap("WorkflowName")]
                 [Validation(Required=false)]
-                public string WorkerRegistry { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
-                [NameInMap("WorkflowNum")]
-                [Validation(Required=false)]
-                public int? WorkflowNum { get; set; }
+                public string WorkflowName { get; set; }
 
             }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>65</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]
@@ -191,6 +145,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
         /// </summary>
         [NameInMap("Message")]
@@ -199,7 +163,17 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</para>
+        /// <para>eCKqVlS5FKF5EWGGOo8EgQ==</para>
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BAC1ADB5-EEB5-5834-93D8-522E067AF8D9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

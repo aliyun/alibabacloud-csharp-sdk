@@ -215,6 +215,158 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCalendarResponse
+        /// </returns>
+        public CreateCalendarResponse CreateCalendarWithOptions(CreateCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                body["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Months))
+            {
+                body["Months"] = request.Months;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                body["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCalendar",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCalendarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCalendarResponse
+        /// </returns>
+        public async Task<CreateCalendarResponse> CreateCalendarWithOptionsAsync(CreateCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                body["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Months))
+            {
+                body["Months"] = request.Months;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                body["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCalendar",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCalendarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCalendarResponse
+        /// </returns>
+        public CreateCalendarResponse CreateCalendar(CreateCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCalendarWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCalendarResponse
+        /// </returns>
+        public async Task<CreateCalendarResponse> CreateCalendarAsync(CreateCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCalendarWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建集群</para>
         /// </summary>
         /// 
@@ -915,6 +1067,206 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkflowResponse
+        /// </returns>
+        public CreateWorkflowResponse CreateWorkflowWithOptions(CreateWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Calendar))
+            {
+                body["Calendar"] = request.Calendar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrency))
+            {
+                body["MaxConcurrency"] = request.MaxConcurrency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeExpression))
+            {
+                body["TimeExpression"] = request.TimeExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeType))
+            {
+                body["TimeType"] = request.TimeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["Timezone"] = request.Timezone;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkflow",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkflowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkflowResponse
+        /// </returns>
+        public async Task<CreateWorkflowResponse> CreateWorkflowWithOptionsAsync(CreateWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Calendar))
+            {
+                body["Calendar"] = request.Calendar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrency))
+            {
+                body["MaxConcurrency"] = request.MaxConcurrency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeExpression))
+            {
+                body["TimeExpression"] = request.TimeExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeType))
+            {
+                body["TimeType"] = request.TimeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["Timezone"] = request.Timezone;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkflow",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkflowResponse
+        /// </returns>
+        public CreateWorkflowResponse CreateWorkflow(CreateWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateWorkflowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkflowResponse
+        /// </returns>
+        public async Task<CreateWorkflowResponse> CreateWorkflowAsync(CreateWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateWorkflowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除应用分组</para>
         /// </summary>
         /// 
@@ -1039,6 +1391,142 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAppWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCalendarResponse
+        /// </returns>
+        public DeleteCalendarResponse DeleteCalendarWithOptions(DeleteCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                body["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                body["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCalendar",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCalendarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCalendarResponse
+        /// </returns>
+        public async Task<DeleteCalendarResponse> DeleteCalendarWithOptionsAsync(DeleteCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                body["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                body["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCalendar",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCalendarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCalendarResponse
+        /// </returns>
+        public DeleteCalendarResponse DeleteCalendar(DeleteCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteCalendarWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCalendarResponse
+        /// </returns>
+        public async Task<DeleteCalendarResponse> DeleteCalendarAsync(DeleteCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteCalendarWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1311,6 +1799,306 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowResponse
+        /// </returns>
+        public DeleteWorkflowResponse DeleteWorkflowWithOptions(DeleteWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteJobs))
+            {
+                body["DeleteJobs"] = request.DeleteJobs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWorkflow",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWorkflowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowResponse
+        /// </returns>
+        public async Task<DeleteWorkflowResponse> DeleteWorkflowWithOptionsAsync(DeleteWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteJobs))
+            {
+                body["DeleteJobs"] = request.DeleteJobs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWorkflow",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowResponse
+        /// </returns>
+        public DeleteWorkflowResponse DeleteWorkflow(DeleteWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteWorkflowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowResponse
+        /// </returns>
+        public async Task<DeleteWorkflowResponse> DeleteWorkflowAsync(DeleteWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteWorkflowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteWorkflowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowsResponse
+        /// </returns>
+        public DeleteWorkflowsResponse DeleteWorkflowsWithOptions(DeleteWorkflowsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteWorkflowsShrinkRequest request = new DeleteWorkflowsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowIds))
+            {
+                request.WorkflowIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowIds, "WorkflowIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteJobs))
+            {
+                body["DeleteJobs"] = request.DeleteJobs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowIdsShrink))
+            {
+                body["WorkflowIds"] = request.WorkflowIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWorkflows",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWorkflowsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteWorkflowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowsResponse
+        /// </returns>
+        public async Task<DeleteWorkflowsResponse> DeleteWorkflowsWithOptionsAsync(DeleteWorkflowsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteWorkflowsShrinkRequest request = new DeleteWorkflowsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowIds))
+            {
+                request.WorkflowIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowIds, "WorkflowIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteJobs))
+            {
+                body["DeleteJobs"] = request.DeleteJobs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowIdsShrink))
+            {
+                body["WorkflowIds"] = request.WorkflowIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWorkflows",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWorkflowsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowsResponse
+        /// </returns>
+        public DeleteWorkflowsResponse DeleteWorkflows(DeleteWorkflowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteWorkflowsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkflowsResponse
+        /// </returns>
+        public async Task<DeleteWorkflowsResponse> DeleteWorkflowsAsync(DeleteWorkflowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteWorkflowsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>批量导出任务信息</para>
         /// </summary>
         /// 
@@ -1467,6 +2255,154 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量导出工作流信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ExportWorkflowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportWorkflowsResponse
+        /// </returns>
+        public ExportWorkflowsResponse ExportWorkflowsWithOptions(ExportWorkflowsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ExportWorkflowsShrinkRequest request = new ExportWorkflowsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowId))
+            {
+                request.WorkflowIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowId, "WorkflowId", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowIdShrink))
+            {
+                body["WorkflowId"] = request.WorkflowIdShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportWorkflows",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "byte",
+            };
+            return TeaModel.ToObject<ExportWorkflowsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导出工作流信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ExportWorkflowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportWorkflowsResponse
+        /// </returns>
+        public async Task<ExportWorkflowsResponse> ExportWorkflowsWithOptionsAsync(ExportWorkflowsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ExportWorkflowsShrinkRequest request = new ExportWorkflowsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowId))
+            {
+                request.WorkflowIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowId, "WorkflowId", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowIdShrink))
+            {
+                body["WorkflowId"] = request.WorkflowIdShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportWorkflows",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "byte",
+            };
+            return TeaModel.ToObject<ExportWorkflowsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导出工作流信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportWorkflowsResponse
+        /// </returns>
+        public ExportWorkflowsResponse ExportWorkflows(ExportWorkflowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExportWorkflowsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导出工作流信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportWorkflowsResponse
+        /// </returns>
+        public async Task<ExportWorkflowsResponse> ExportWorkflowsAsync(ExportWorkflowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExportWorkflowsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取指定应用</para>
         /// </summary>
         /// 
@@ -1591,6 +2527,142 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAppWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取日历信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCalendarResponse
+        /// </returns>
+        public GetCalendarResponse GetCalendarWithOptions(GetCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                query["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                query["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCalendar",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCalendarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取日历信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCalendarResponse
+        /// </returns>
+        public async Task<GetCalendarResponse> GetCalendarWithOptionsAsync(GetCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                query["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                query["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCalendar",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCalendarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取日历信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCalendarResponse
+        /// </returns>
+        public GetCalendarResponse GetCalendar(GetCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCalendarWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取日历信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCalendarResponse
+        /// </returns>
+        public async Task<GetCalendarResponse> GetCalendarAsync(GetCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCalendarWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2539,6 +3611,558 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowResponse
+        /// </returns>
+        public GetWorkflowResponse GetWorkflowWithOptions(GetWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkflow",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkflowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowResponse
+        /// </returns>
+        public async Task<GetWorkflowResponse> GetWorkflowWithOptionsAsync(GetWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkflow",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowResponse
+        /// </returns>
+        public GetWorkflowResponse GetWorkflow(GetWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetWorkflowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowResponse
+        /// </returns>
+        public async Task<GetWorkflowResponse> GetWorkflowAsync(GetWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetWorkflowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流的DAG信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowDAGRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowDAGResponse
+        /// </returns>
+        public GetWorkflowDAGResponse GetWorkflowDAGWithOptions(GetWorkflowDAGRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkflowDAG",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkflowDAGResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流的DAG信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowDAGRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowDAGResponse
+        /// </returns>
+        public async Task<GetWorkflowDAGResponse> GetWorkflowDAGWithOptionsAsync(GetWorkflowDAGRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkflowDAG",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkflowDAGResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流的DAG信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowDAGRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowDAGResponse
+        /// </returns>
+        public GetWorkflowDAGResponse GetWorkflowDAG(GetWorkflowDAGRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetWorkflowDAGWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流的DAG信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowDAGRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowDAGResponse
+        /// </returns>
+        public async Task<GetWorkflowDAGResponse> GetWorkflowDAGAsync(GetWorkflowDAGRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetWorkflowDAGWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流的DAG信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowDAGPreviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowDAGPreviewResponse
+        /// </returns>
+        public GetWorkflowDAGPreviewResponse GetWorkflowDAGPreviewWithOptions(GetWorkflowDAGPreviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagVersion))
+            {
+                query["DagVersion"] = request.DagVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkflowDAGPreview",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkflowDAGPreviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流的DAG信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowDAGPreviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowDAGPreviewResponse
+        /// </returns>
+        public async Task<GetWorkflowDAGPreviewResponse> GetWorkflowDAGPreviewWithOptionsAsync(GetWorkflowDAGPreviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagVersion))
+            {
+                query["DagVersion"] = request.DagVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkflowDAGPreview",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkflowDAGPreviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流的DAG信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowDAGPreviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowDAGPreviewResponse
+        /// </returns>
+        public GetWorkflowDAGPreviewResponse GetWorkflowDAGPreview(GetWorkflowDAGPreviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetWorkflowDAGPreviewWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流的DAG信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowDAGPreviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowDAGPreviewResponse
+        /// </returns>
+        public async Task<GetWorkflowDAGPreviewResponse> GetWorkflowDAGPreviewAsync(GetWorkflowDAGPreviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetWorkflowDAGPreviewWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流实例DAG信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowExecutionDAGRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowExecutionDAGResponse
+        /// </returns>
+        public GetWorkflowExecutionDAGResponse GetWorkflowExecutionDAGWithOptions(GetWorkflowExecutionDAGRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowExecutionId))
+            {
+                query["WorkflowExecutionId"] = request.WorkflowExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkflowExecutionDAG",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkflowExecutionDAGResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流实例DAG信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowExecutionDAGRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowExecutionDAGResponse
+        /// </returns>
+        public async Task<GetWorkflowExecutionDAGResponse> GetWorkflowExecutionDAGWithOptionsAsync(GetWorkflowExecutionDAGRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowExecutionId))
+            {
+                query["WorkflowExecutionId"] = request.WorkflowExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkflowExecutionDAG",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkflowExecutionDAGResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流实例DAG信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowExecutionDAGRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowExecutionDAGResponse
+        /// </returns>
+        public GetWorkflowExecutionDAGResponse GetWorkflowExecutionDAG(GetWorkflowExecutionDAGRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetWorkflowExecutionDAGWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流实例DAG信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkflowExecutionDAGRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkflowExecutionDAGResponse
+        /// </returns>
+        public async Task<GetWorkflowExecutionDAGResponse> GetWorkflowExecutionDAGAsync(GetWorkflowExecutionDAGRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetWorkflowExecutionDAGWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>导入日历</para>
         /// </summary>
         /// 
@@ -2823,6 +4447,150 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ImportJobsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导入工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportWorkflowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportWorkflowsResponse
+        /// </returns>
+        public ImportWorkflowsResponse ImportWorkflowsWithOptions(ImportWorkflowsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateApp))
+            {
+                body["AutoCreateApp"] = request.AutoCreateApp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Overwrite))
+            {
+                body["Overwrite"] = request.Overwrite;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportWorkflows",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportWorkflowsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导入工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportWorkflowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportWorkflowsResponse
+        /// </returns>
+        public async Task<ImportWorkflowsResponse> ImportWorkflowsWithOptionsAsync(ImportWorkflowsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateApp))
+            {
+                body["AutoCreateApp"] = request.AutoCreateApp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Overwrite))
+            {
+                body["Overwrite"] = request.Overwrite;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportWorkflows",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportWorkflowsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导入工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportWorkflowsResponse
+        /// </returns>
+        public ImportWorkflowsResponse ImportWorkflows(ImportWorkflowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImportWorkflowsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量导入工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportWorkflowsResponse
+        /// </returns>
+        public async Task<ImportWorkflowsResponse> ImportWorkflowsAsync(ImportWorkflowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImportWorkflowsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3271,6 +5039,166 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListCalendarNamesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCalendarsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCalendarsResponse
+        /// </returns>
+        public ListCalendarsResponse ListCalendarsWithOptions(ListCalendarsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                query["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FetchCalendarDetail))
+            {
+                query["FetchCalendarDetail"] = request.FetchCalendarDetail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                query["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCalendars",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCalendarsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCalendarsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCalendarsResponse
+        /// </returns>
+        public async Task<ListCalendarsResponse> ListCalendarsWithOptionsAsync(ListCalendarsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                query["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FetchCalendarDetail))
+            {
+                query["FetchCalendarDetail"] = request.FetchCalendarDetail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                query["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCalendars",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCalendarsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCalendarsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCalendarsResponse
+        /// </returns>
+        public ListCalendarsResponse ListCalendars(ListCalendarsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCalendarsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCalendarsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCalendarsResponse
+        /// </returns>
+        public async Task<ListCalendarsResponse> ListCalendarsAsync(ListCalendarsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCalendarsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4719,6 +6647,710 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取流程实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowExecutionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowExecutionsResponse
+        /// </returns>
+        public ListWorkflowExecutionsResponse ListWorkflowExecutionsWithOptions(ListWorkflowExecutionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowExecutionId))
+            {
+                query["WorkflowExecutionId"] = request.WorkflowExecutionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowName))
+            {
+                query["WorkflowName"] = request.WorkflowName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkflowExecutions",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkflowExecutionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取流程实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowExecutionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowExecutionsResponse
+        /// </returns>
+        public async Task<ListWorkflowExecutionsResponse> ListWorkflowExecutionsWithOptionsAsync(ListWorkflowExecutionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowExecutionId))
+            {
+                query["WorkflowExecutionId"] = request.WorkflowExecutionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowName))
+            {
+                query["WorkflowName"] = request.WorkflowName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkflowExecutions",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkflowExecutionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取流程实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowExecutionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowExecutionsResponse
+        /// </returns>
+        public ListWorkflowExecutionsResponse ListWorkflowExecutions(ListWorkflowExecutionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListWorkflowExecutionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取流程实例列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowExecutionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowExecutionsResponse
+        /// </returns>
+        public async Task<ListWorkflowExecutionsResponse> ListWorkflowExecutionsAsync(ListWorkflowExecutionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListWorkflowExecutionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前工作流版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowVersionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowVersionsResponse
+        /// </returns>
+        public ListWorkflowVersionsResponse ListWorkflowVersionsWithOptions(ListWorkflowVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkflowVersions",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkflowVersionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前工作流版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowVersionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowVersionsResponse
+        /// </returns>
+        public async Task<ListWorkflowVersionsResponse> ListWorkflowVersionsWithOptionsAsync(ListWorkflowVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkflowVersions",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkflowVersionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前工作流版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowVersionsResponse
+        /// </returns>
+        public ListWorkflowVersionsResponse ListWorkflowVersions(ListWorkflowVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListWorkflowVersionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前工作流版本列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowVersionsResponse
+        /// </returns>
+        public async Task<ListWorkflowVersionsResponse> ListWorkflowVersionsAsync(ListWorkflowVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListWorkflowVersionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowsResponse
+        /// </returns>
+        public ListWorkflowsResponse ListWorkflowsWithOptions(ListWorkflowsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkflows",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkflowsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowsResponse
+        /// </returns>
+        public async Task<ListWorkflowsResponse> ListWorkflowsWithOptionsAsync(ListWorkflowsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkflows",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkflowsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowsResponse
+        /// </returns>
+        public ListWorkflowsResponse ListWorkflows(ListWorkflowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListWorkflowsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkflowsResponse
+        /// </returns>
+        public async Task<ListWorkflowsResponse> ListWorkflowsAsync(ListWorkflowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListWorkflowsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>补数工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateBackfillWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateBackfillWorkflowResponse
+        /// </returns>
+        public OperateBackfillWorkflowResponse OperateBackfillWorkflowWithOptions(OperateBackfillWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateBackfillWorkflow",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateBackfillWorkflowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>补数工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateBackfillWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateBackfillWorkflowResponse
+        /// </returns>
+        public async Task<OperateBackfillWorkflowResponse> OperateBackfillWorkflowWithOptionsAsync(OperateBackfillWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateBackfillWorkflow",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateBackfillWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>补数工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateBackfillWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateBackfillWorkflowResponse
+        /// </returns>
+        public OperateBackfillWorkflowResponse OperateBackfillWorkflow(OperateBackfillWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateBackfillWorkflowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>补数工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateBackfillWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateBackfillWorkflowResponse
+        /// </returns>
+        public async Task<OperateBackfillWorkflowResponse> OperateBackfillWorkflowAsync(OperateBackfillWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateBackfillWorkflowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>指定执行器</para>
         /// </summary>
         /// 
@@ -5039,6 +7671,154 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量禁用工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// OperateDisableWorkflowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateDisableWorkflowsResponse
+        /// </returns>
+        public OperateDisableWorkflowsResponse OperateDisableWorkflowsWithOptions(OperateDisableWorkflowsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            OperateDisableWorkflowsShrinkRequest request = new OperateDisableWorkflowsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowIds))
+            {
+                request.WorkflowIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowIds, "WorkflowIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowIdsShrink))
+            {
+                body["WorkflowIds"] = request.WorkflowIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateDisableWorkflows",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateDisableWorkflowsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量禁用工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// OperateDisableWorkflowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateDisableWorkflowsResponse
+        /// </returns>
+        public async Task<OperateDisableWorkflowsResponse> OperateDisableWorkflowsWithOptionsAsync(OperateDisableWorkflowsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            OperateDisableWorkflowsShrinkRequest request = new OperateDisableWorkflowsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowIds))
+            {
+                request.WorkflowIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowIds, "WorkflowIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowIdsShrink))
+            {
+                body["WorkflowIds"] = request.WorkflowIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateDisableWorkflows",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateDisableWorkflowsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量禁用工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateDisableWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateDisableWorkflowsResponse
+        /// </returns>
+        public OperateDisableWorkflowsResponse OperateDisableWorkflows(OperateDisableWorkflowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateDisableWorkflowsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量禁用工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateDisableWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateDisableWorkflowsResponse
+        /// </returns>
+        public async Task<OperateDisableWorkflowsResponse> OperateDisableWorkflowsAsync(OperateDisableWorkflowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateDisableWorkflowsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>批量启用任务</para>
         /// </summary>
         /// 
@@ -5183,6 +7963,154 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await OperateEnableJobsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量启用工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// OperateEnableWorkflowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateEnableWorkflowsResponse
+        /// </returns>
+        public OperateEnableWorkflowsResponse OperateEnableWorkflowsWithOptions(OperateEnableWorkflowsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            OperateEnableWorkflowsShrinkRequest request = new OperateEnableWorkflowsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowIds))
+            {
+                request.WorkflowIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowIds, "WorkflowIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowIdsShrink))
+            {
+                body["WorkflowIds"] = request.WorkflowIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateEnableWorkflows",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateEnableWorkflowsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量启用工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// OperateEnableWorkflowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateEnableWorkflowsResponse
+        /// </returns>
+        public async Task<OperateEnableWorkflowsResponse> OperateEnableWorkflowsWithOptionsAsync(OperateEnableWorkflowsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            OperateEnableWorkflowsShrinkRequest request = new OperateEnableWorkflowsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkflowIds))
+            {
+                request.WorkflowIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowIds, "WorkflowIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowIdsShrink))
+            {
+                body["WorkflowIds"] = request.WorkflowIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateEnableWorkflows",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateEnableWorkflowsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量启用工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateEnableWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateEnableWorkflowsResponse
+        /// </returns>
+        public OperateEnableWorkflowsResponse OperateEnableWorkflows(OperateEnableWorkflowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateEnableWorkflowsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量启用工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateEnableWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateEnableWorkflowsResponse
+        /// </returns>
+        public async Task<OperateEnableWorkflowsResponse> OperateEnableWorkflowsAsync(OperateEnableWorkflowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateEnableWorkflowsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5343,6 +8271,686 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await OperateExecuteJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行一次工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateExecuteWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateExecuteWorkflowResponse
+        /// </returns>
+        public OperateExecuteWorkflowResponse OperateExecuteWorkflowWithOptions(OperateExecuteWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateExecuteWorkflow",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateExecuteWorkflowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行一次工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateExecuteWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateExecuteWorkflowResponse
+        /// </returns>
+        public async Task<OperateExecuteWorkflowResponse> OperateExecuteWorkflowWithOptionsAsync(OperateExecuteWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateExecuteWorkflow",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateExecuteWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行一次工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateExecuteWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateExecuteWorkflowResponse
+        /// </returns>
+        public OperateExecuteWorkflowResponse OperateExecuteWorkflow(OperateExecuteWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateExecuteWorkflowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行一次工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateExecuteWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateExecuteWorkflowResponse
+        /// </returns>
+        public async Task<OperateExecuteWorkflowResponse> OperateExecuteWorkflowAsync(OperateExecuteWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateExecuteWorkflowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Hold住任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateHoldJobExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateHoldJobExecutionResponse
+        /// </returns>
+        public OperateHoldJobExecutionResponse OperateHoldJobExecutionWithOptions(OperateHoldJobExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobExecutionId))
+            {
+                query["JobExecutionId"] = request.JobExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateHoldJobExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateHoldJobExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Hold住任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateHoldJobExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateHoldJobExecutionResponse
+        /// </returns>
+        public async Task<OperateHoldJobExecutionResponse> OperateHoldJobExecutionWithOptionsAsync(OperateHoldJobExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobExecutionId))
+            {
+                query["JobExecutionId"] = request.JobExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateHoldJobExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateHoldJobExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Hold住任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateHoldJobExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateHoldJobExecutionResponse
+        /// </returns>
+        public OperateHoldJobExecutionResponse OperateHoldJobExecution(OperateHoldJobExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateHoldJobExecutionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Hold住任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateHoldJobExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateHoldJobExecutionResponse
+        /// </returns>
+        public async Task<OperateHoldJobExecutionResponse> OperateHoldJobExecutionAsync(OperateHoldJobExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateHoldJobExecutionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将工作流中未开始的节点置为Held状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateHoldWorkflowExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateHoldWorkflowExecutionResponse
+        /// </returns>
+        public OperateHoldWorkflowExecutionResponse OperateHoldWorkflowExecutionWithOptions(OperateHoldWorkflowExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowExecutionId))
+            {
+                body["WorkflowExecutionId"] = request.WorkflowExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateHoldWorkflowExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateHoldWorkflowExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将工作流中未开始的节点置为Held状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateHoldWorkflowExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateHoldWorkflowExecutionResponse
+        /// </returns>
+        public async Task<OperateHoldWorkflowExecutionResponse> OperateHoldWorkflowExecutionWithOptionsAsync(OperateHoldWorkflowExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowExecutionId))
+            {
+                body["WorkflowExecutionId"] = request.WorkflowExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateHoldWorkflowExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateHoldWorkflowExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将工作流中未开始的节点置为Held状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateHoldWorkflowExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateHoldWorkflowExecutionResponse
+        /// </returns>
+        public OperateHoldWorkflowExecutionResponse OperateHoldWorkflowExecution(OperateHoldWorkflowExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateHoldWorkflowExecutionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将工作流中未开始的节点置为Held状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateHoldWorkflowExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateHoldWorkflowExecutionResponse
+        /// </returns>
+        public async Task<OperateHoldWorkflowExecutionResponse> OperateHoldWorkflowExecutionAsync(OperateHoldWorkflowExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateHoldWorkflowExecutionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标记任务实例为成功状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateMarkSuccessJobExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateMarkSuccessJobExecutionResponse
+        /// </returns>
+        public OperateMarkSuccessJobExecutionResponse OperateMarkSuccessJobExecutionWithOptions(OperateMarkSuccessJobExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobExecutionId))
+            {
+                query["JobExecutionId"] = request.JobExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateMarkSuccessJobExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateMarkSuccessJobExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标记任务实例为成功状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateMarkSuccessJobExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateMarkSuccessJobExecutionResponse
+        /// </returns>
+        public async Task<OperateMarkSuccessJobExecutionResponse> OperateMarkSuccessJobExecutionWithOptionsAsync(OperateMarkSuccessJobExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobExecutionId))
+            {
+                query["JobExecutionId"] = request.JobExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateMarkSuccessJobExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateMarkSuccessJobExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标记任务实例为成功状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateMarkSuccessJobExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateMarkSuccessJobExecutionResponse
+        /// </returns>
+        public OperateMarkSuccessJobExecutionResponse OperateMarkSuccessJobExecution(OperateMarkSuccessJobExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateMarkSuccessJobExecutionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>标记任务实例为成功状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateMarkSuccessJobExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateMarkSuccessJobExecutionResponse
+        /// </returns>
+        public async Task<OperateMarkSuccessJobExecutionResponse> OperateMarkSuccessJobExecutionAsync(OperateMarkSuccessJobExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateMarkSuccessJobExecutionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将工作流实例标记为成功</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateMarkSuccessWorkflowExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateMarkSuccessWorkflowExecutionResponse
+        /// </returns>
+        public OperateMarkSuccessWorkflowExecutionResponse OperateMarkSuccessWorkflowExecutionWithOptions(OperateMarkSuccessWorkflowExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowExecutionId))
+            {
+                body["WorkflowExecutionId"] = request.WorkflowExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateMarkSuccessWorkflowExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateMarkSuccessWorkflowExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将工作流实例标记为成功</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateMarkSuccessWorkflowExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateMarkSuccessWorkflowExecutionResponse
+        /// </returns>
+        public async Task<OperateMarkSuccessWorkflowExecutionResponse> OperateMarkSuccessWorkflowExecutionWithOptionsAsync(OperateMarkSuccessWorkflowExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowExecutionId))
+            {
+                body["WorkflowExecutionId"] = request.WorkflowExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateMarkSuccessWorkflowExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateMarkSuccessWorkflowExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将工作流实例标记为成功</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateMarkSuccessWorkflowExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateMarkSuccessWorkflowExecutionResponse
+        /// </returns>
+        public OperateMarkSuccessWorkflowExecutionResponse OperateMarkSuccessWorkflowExecution(OperateMarkSuccessWorkflowExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateMarkSuccessWorkflowExecutionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将工作流实例标记为成功</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateMarkSuccessWorkflowExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateMarkSuccessWorkflowExecutionResponse
+        /// </returns>
+        public async Task<OperateMarkSuccessWorkflowExecutionResponse> OperateMarkSuccessWorkflowExecutionAsync(OperateMarkSuccessWorkflowExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateMarkSuccessWorkflowExecutionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5671,6 +9279,286 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>重跑工作流实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateRetryWorkflowExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateRetryWorkflowExecutionResponse
+        /// </returns>
+        public OperateRetryWorkflowExecutionResponse OperateRetryWorkflowExecutionWithOptions(OperateRetryWorkflowExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnlyFailed))
+            {
+                body["OnlyFailed"] = request.OnlyFailed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowExecutionId))
+            {
+                body["WorkflowExecutionId"] = request.WorkflowExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateRetryWorkflowExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateRetryWorkflowExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重跑工作流实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateRetryWorkflowExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateRetryWorkflowExecutionResponse
+        /// </returns>
+        public async Task<OperateRetryWorkflowExecutionResponse> OperateRetryWorkflowExecutionWithOptionsAsync(OperateRetryWorkflowExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnlyFailed))
+            {
+                body["OnlyFailed"] = request.OnlyFailed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowExecutionId))
+            {
+                body["WorkflowExecutionId"] = request.WorkflowExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateRetryWorkflowExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateRetryWorkflowExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重跑工作流实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateRetryWorkflowExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateRetryWorkflowExecutionResponse
+        /// </returns>
+        public OperateRetryWorkflowExecutionResponse OperateRetryWorkflowExecution(OperateRetryWorkflowExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateRetryWorkflowExecutionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重跑工作流实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateRetryWorkflowExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateRetryWorkflowExecutionResponse
+        /// </returns>
+        public async Task<OperateRetryWorkflowExecutionResponse> OperateRetryWorkflowExecutionAsync(OperateRetryWorkflowExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateRetryWorkflowExecutionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>跳过任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateSkipJobExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateSkipJobExecutionResponse
+        /// </returns>
+        public OperateSkipJobExecutionResponse OperateSkipJobExecutionWithOptions(OperateSkipJobExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobExecutionId))
+            {
+                query["JobExecutionId"] = request.JobExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateSkipJobExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateSkipJobExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>跳过任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateSkipJobExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateSkipJobExecutionResponse
+        /// </returns>
+        public async Task<OperateSkipJobExecutionResponse> OperateSkipJobExecutionWithOptionsAsync(OperateSkipJobExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobExecutionId))
+            {
+                query["JobExecutionId"] = request.JobExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateSkipJobExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateSkipJobExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>跳过任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateSkipJobExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateSkipJobExecutionResponse
+        /// </returns>
+        public OperateSkipJobExecutionResponse OperateSkipJobExecution(OperateSkipJobExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateSkipJobExecutionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>跳过任务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateSkipJobExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateSkipJobExecutionResponse
+        /// </returns>
+        public async Task<OperateSkipJobExecutionResponse> OperateSkipJobExecutionAsync(OperateSkipJobExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateSkipJobExecutionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>停止运行中的任务实例</para>
         /// </summary>
         /// 
@@ -5823,6 +9711,550 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await OperateStopJobExecutionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止正在运行的工作流实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateStopWorkflowExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateStopWorkflowExecutionResponse
+        /// </returns>
+        public OperateStopWorkflowExecutionResponse OperateStopWorkflowExecutionWithOptions(OperateStopWorkflowExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowExecutionId))
+            {
+                body["WorkflowExecutionId"] = request.WorkflowExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateStopWorkflowExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateStopWorkflowExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止正在运行的工作流实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateStopWorkflowExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateStopWorkflowExecutionResponse
+        /// </returns>
+        public async Task<OperateStopWorkflowExecutionResponse> OperateStopWorkflowExecutionWithOptionsAsync(OperateStopWorkflowExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowExecutionId))
+            {
+                body["WorkflowExecutionId"] = request.WorkflowExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateStopWorkflowExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateStopWorkflowExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止正在运行的工作流实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateStopWorkflowExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateStopWorkflowExecutionResponse
+        /// </returns>
+        public OperateStopWorkflowExecutionResponse OperateStopWorkflowExecution(OperateStopWorkflowExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateStopWorkflowExecutionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止正在运行的工作流实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateStopWorkflowExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateStopWorkflowExecutionResponse
+        /// </returns>
+        public async Task<OperateStopWorkflowExecutionResponse> OperateStopWorkflowExecutionAsync(OperateStopWorkflowExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateStopWorkflowExecutionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将held状态的任务恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateUnholdJobExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateUnholdJobExecutionResponse
+        /// </returns>
+        public OperateUnholdJobExecutionResponse OperateUnholdJobExecutionWithOptions(OperateUnholdJobExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobExecutionId))
+            {
+                query["JobExecutionId"] = request.JobExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateUnholdJobExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateUnholdJobExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将held状态的任务恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateUnholdJobExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateUnholdJobExecutionResponse
+        /// </returns>
+        public async Task<OperateUnholdJobExecutionResponse> OperateUnholdJobExecutionWithOptionsAsync(OperateUnholdJobExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobExecutionId))
+            {
+                query["JobExecutionId"] = request.JobExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateUnholdJobExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateUnholdJobExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将held状态的任务恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateUnholdJobExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateUnholdJobExecutionResponse
+        /// </returns>
+        public OperateUnholdJobExecutionResponse OperateUnholdJobExecution(OperateUnholdJobExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateUnholdJobExecutionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将held状态的任务恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateUnholdJobExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateUnholdJobExecutionResponse
+        /// </returns>
+        public async Task<OperateUnholdJobExecutionResponse> OperateUnholdJobExecutionAsync(OperateUnholdJobExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateUnholdJobExecutionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将工作流中held状态的节点恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateUnholdWorkflowExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateUnholdWorkflowExecutionResponse
+        /// </returns>
+        public OperateUnholdWorkflowExecutionResponse OperateUnholdWorkflowExecutionWithOptions(OperateUnholdWorkflowExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowExecutionId))
+            {
+                body["WorkflowExecutionId"] = request.WorkflowExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateUnholdWorkflowExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateUnholdWorkflowExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将工作流中held状态的节点恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateUnholdWorkflowExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateUnholdWorkflowExecutionResponse
+        /// </returns>
+        public async Task<OperateUnholdWorkflowExecutionResponse> OperateUnholdWorkflowExecutionWithOptionsAsync(OperateUnholdWorkflowExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowExecutionId))
+            {
+                body["WorkflowExecutionId"] = request.WorkflowExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateUnholdWorkflowExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateUnholdWorkflowExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将工作流中held状态的节点恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateUnholdWorkflowExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateUnholdWorkflowExecutionResponse
+        /// </returns>
+        public OperateUnholdWorkflowExecutionResponse OperateUnholdWorkflowExecution(OperateUnholdWorkflowExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateUnholdWorkflowExecutionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将工作流中held状态的节点恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateUnholdWorkflowExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateUnholdWorkflowExecutionResponse
+        /// </returns>
+        public async Task<OperateUnholdWorkflowExecutionResponse> OperateUnholdWorkflowExecutionAsync(OperateUnholdWorkflowExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateUnholdWorkflowExecutionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将skipped状态的任务恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateUnskipJobExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateUnskipJobExecutionResponse
+        /// </returns>
+        public OperateUnskipJobExecutionResponse OperateUnskipJobExecutionWithOptions(OperateUnskipJobExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobExecutionId))
+            {
+                query["JobExecutionId"] = request.JobExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateUnskipJobExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateUnskipJobExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将skipped状态的任务恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateUnskipJobExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateUnskipJobExecutionResponse
+        /// </returns>
+        public async Task<OperateUnskipJobExecutionResponse> OperateUnskipJobExecutionWithOptionsAsync(OperateUnskipJobExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobExecutionId))
+            {
+                query["JobExecutionId"] = request.JobExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OperateUnskipJobExecution",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OperateUnskipJobExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将skipped状态的任务恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateUnskipJobExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateUnskipJobExecutionResponse
+        /// </returns>
+        public OperateUnskipJobExecutionResponse OperateUnskipJobExecution(OperateUnskipJobExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OperateUnskipJobExecutionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将skipped状态的任务恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OperateUnskipJobExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OperateUnskipJobExecutionResponse
+        /// </returns>
+        public async Task<OperateUnskipJobExecutionResponse> OperateUnskipJobExecutionAsync(OperateUnskipJobExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OperateUnskipJobExecutionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6155,6 +10587,166 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateAppWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCalendarResponse
+        /// </returns>
+        public UpdateCalendarResponse UpdateCalendarWithOptions(UpdateCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                body["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Incremental))
+            {
+                body["Incremental"] = request.Incremental;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Months))
+            {
+                body["Months"] = request.Months;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                body["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCalendar",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCalendarResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCalendarRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCalendarResponse
+        /// </returns>
+        public async Task<UpdateCalendarResponse> UpdateCalendarWithOptionsAsync(UpdateCalendarRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalendarName))
+            {
+                body["CalendarName"] = request.CalendarName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Incremental))
+            {
+                body["Incremental"] = request.Incremental;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Months))
+            {
+                body["Months"] = request.Months;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Year))
+            {
+                body["Year"] = request.Year;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCalendar",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCalendarResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCalendarResponse
+        /// </returns>
+        public UpdateCalendarResponse UpdateCalendar(UpdateCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCalendarWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新日历</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCalendarRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCalendarResponse
+        /// </returns>
+        public async Task<UpdateCalendarResponse> UpdateCalendarAsync(UpdateCalendarRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCalendarWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6911,6 +11503,514 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateJobScriptWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowResponse
+        /// </returns>
+        public UpdateWorkflowResponse UpdateWorkflowWithOptions(UpdateWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Calendar))
+            {
+                body["Calendar"] = request.Calendar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrency))
+            {
+                body["MaxConcurrency"] = request.MaxConcurrency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeExpression))
+            {
+                body["TimeExpression"] = request.TimeExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeType))
+            {
+                body["TimeType"] = request.TimeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["Timezone"] = request.Timezone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkflow",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkflowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowResponse
+        /// </returns>
+        public async Task<UpdateWorkflowResponse> UpdateWorkflowWithOptionsAsync(UpdateWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Calendar))
+            {
+                body["Calendar"] = request.Calendar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConcurrency))
+            {
+                body["MaxConcurrency"] = request.MaxConcurrency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeExpression))
+            {
+                body["TimeExpression"] = request.TimeExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeType))
+            {
+                body["TimeType"] = request.TimeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["Timezone"] = request.Timezone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkflow",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowResponse
+        /// </returns>
+        public UpdateWorkflowResponse UpdateWorkflow(UpdateWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateWorkflowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowResponse
+        /// </returns>
+        public async Task<UpdateWorkflowResponse> UpdateWorkflowAsync(UpdateWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateWorkflowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流DAG</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateWorkflowDAGRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowDAGResponse
+        /// </returns>
+        public UpdateWorkflowDAGResponse UpdateWorkflowDAGWithOptions(UpdateWorkflowDAGRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateWorkflowDAGShrinkRequest request = new UpdateWorkflowDAGShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Dag))
+            {
+                request.DagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Dag, "Dag", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagShrink))
+            {
+                body["Dag"] = request.DagShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagVersion))
+            {
+                body["DagVersion"] = request.DagVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkflowDAG",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkflowDAGResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流DAG</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateWorkflowDAGRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowDAGResponse
+        /// </returns>
+        public async Task<UpdateWorkflowDAGResponse> UpdateWorkflowDAGWithOptionsAsync(UpdateWorkflowDAGRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateWorkflowDAGShrinkRequest request = new UpdateWorkflowDAGShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Dag))
+            {
+                request.DagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Dag, "Dag", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagShrink))
+            {
+                body["Dag"] = request.DagShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagVersion))
+            {
+                body["DagVersion"] = request.DagVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkflowDAG",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkflowDAGResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流DAG</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkflowDAGRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowDAGResponse
+        /// </returns>
+        public UpdateWorkflowDAGResponse UpdateWorkflowDAG(UpdateWorkflowDAGRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateWorkflowDAGWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流DAG</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkflowDAGRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowDAGResponse
+        /// </returns>
+        public async Task<UpdateWorkflowDAGResponse> UpdateWorkflowDAGAsync(UpdateWorkflowDAGRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateWorkflowDAGWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>切换工作流DAG版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkflowDAGVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowDAGVersionResponse
+        /// </returns>
+        public UpdateWorkflowDAGVersionResponse UpdateWorkflowDAGVersionWithOptions(UpdateWorkflowDAGVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagVersion))
+            {
+                body["DagVersion"] = request.DagVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkflowDAGVersion",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkflowDAGVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>切换工作流DAG版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkflowDAGVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowDAGVersionResponse
+        /// </returns>
+        public async Task<UpdateWorkflowDAGVersionResponse> UpdateWorkflowDAGVersionWithOptionsAsync(UpdateWorkflowDAGVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DagVersion))
+            {
+                body["DagVersion"] = request.DagVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                body["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkflowDAGVersion",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkflowDAGVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>切换工作流DAG版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkflowDAGVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowDAGVersionResponse
+        /// </returns>
+        public UpdateWorkflowDAGVersionResponse UpdateWorkflowDAGVersion(UpdateWorkflowDAGVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateWorkflowDAGVersionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>切换工作流DAG版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkflowDAGVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkflowDAGVersionResponse
+        /// </returns>
+        public async Task<UpdateWorkflowDAGVersionResponse> UpdateWorkflowDAGVersionAsync(UpdateWorkflowDAGVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateWorkflowDAGVersionWithOptionsAsync(request, runtime);
         }
 
     }
