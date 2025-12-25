@@ -323,6 +323,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>30</para>
+                /// </summary>
+                [NameInMap("SliceDuration")]
+                [Validation(Required=false)]
+                public long? SliceDuration { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>{AppId}<em>{ChannelId}</em>{StartTime}_{Sequence}</para>
                 /// </summary>
                 [NameInMap("SliceNamePattern")]
