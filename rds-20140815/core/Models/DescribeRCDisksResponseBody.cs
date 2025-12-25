@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeRCDisksResponseBodyDisks> Disks { get; set; }
         public class DescribeRCDisksResponseBodyDisks : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>2017-12-05T2340:00Z</para>
+            /// </summary>
+            [NameInMap("AttachedTime")]
+            [Validation(Required=false)]
+            public string AttachedTime { get; set; }
+
+            /// <summary>
             /// <para>The category of the disk. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>cloud_efficiency</b>: ultra disk.</description></item>

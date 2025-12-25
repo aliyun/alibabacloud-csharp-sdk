@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>mysql.x2.medium.9cm</para>
+        /// <para>rc-3ndh4shwes*</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

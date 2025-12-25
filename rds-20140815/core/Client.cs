@@ -67583,6 +67583,182 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改RDS用户磁盘付费类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRCDiskChargeTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRCDiskChargeTypeResponse
+        /// </returns>
+        public ModifyRCDiskChargeTypeResponse ModifyRCDiskChargeTypeWithOptions(ModifyRCDiskChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
+            {
+                query["AutoUseCoupon"] = request.AutoUseCoupon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessInfo))
+            {
+                query["BusinessInfo"] = request.BusinessInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                query["PromotionCode"] = request.PromotionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyRCDiskChargeType",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyRCDiskChargeTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改RDS用户磁盘付费类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRCDiskChargeTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRCDiskChargeTypeResponse
+        /// </returns>
+        public async Task<ModifyRCDiskChargeTypeResponse> ModifyRCDiskChargeTypeWithOptionsAsync(ModifyRCDiskChargeTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
+            {
+                query["AutoUseCoupon"] = request.AutoUseCoupon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessInfo))
+            {
+                query["BusinessInfo"] = request.BusinessInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                query["PromotionCode"] = request.PromotionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyRCDiskChargeType",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyRCDiskChargeTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改RDS用户磁盘付费类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRCDiskChargeTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRCDiskChargeTypeResponse
+        /// </returns>
+        public ModifyRCDiskChargeTypeResponse ModifyRCDiskChargeType(ModifyRCDiskChargeTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyRCDiskChargeTypeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改RDS用户磁盘付费类型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyRCDiskChargeTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyRCDiskChargeTypeResponse
+        /// </returns>
+        public async Task<ModifyRCDiskChargeTypeResponse> ModifyRCDiskChargeTypeAsync(ModifyRCDiskChargeTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyRCDiskChargeTypeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the disk type or performance level (PL) of the cloud disks of an RDS Custom instance.</para>
         /// </summary>
         /// 
