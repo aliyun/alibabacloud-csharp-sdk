@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 [Validation(Required=false)]
                 public string ExchangeType { get; set; }
 
+                [NameInMap("Internal")]
+                [Validation(Required=false)]
+                public bool? Internal { get; set; }
+
                 /// <summary>
                 /// <para>The exchange name.</para>
                 /// 
