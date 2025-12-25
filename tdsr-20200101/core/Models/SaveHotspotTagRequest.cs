@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Tdsr20200101.Models
         [Validation(Required=false)]
         public string ParamTag { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2345****</para>
+        /// </summary>
         [NameInMap("SubSceneUuid")]
         [Validation(Required=false)]
         public string SubSceneUuid { get; set; }

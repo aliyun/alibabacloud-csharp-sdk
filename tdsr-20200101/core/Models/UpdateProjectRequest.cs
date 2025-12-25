@@ -9,10 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class UpdateProjectRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5432****</para>
+        /// </summary>
         [NameInMap("BusinessId")]
         [Validation(Required=false)]
         public string BusinessId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234****</para>
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }

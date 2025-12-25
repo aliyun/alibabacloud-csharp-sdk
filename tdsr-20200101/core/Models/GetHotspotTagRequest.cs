@@ -9,22 +9,42 @@ using Tea;
 namespace AlibabaCloud.SDK.Tdsr20200101.Models
 {
     public class GetHotspotTagRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
+        /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
         public string Domain { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true/false</para>
+        /// </summary>
         [NameInMap("Enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>344794c32937474a9c59eb130936****</para>
+        /// </summary>
         [NameInMap("PreviewToken")]
         [Validation(Required=false)]
         public string PreviewToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
         [NameInMap("SubSceneUuid")]
         [Validation(Required=false)]
         public string SubSceneUuid { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
