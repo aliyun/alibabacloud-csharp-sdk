@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
         [Validation(Required=false)]
         public TermEditRequestExt Ext { get; set; }
         public class TermEditRequestExt : TeaModel {
+            [NameInMap("paramMap")]
+            [Validation(Required=false)]
+            public object ParamMap { get; set; }
+
             /// <summary>
             /// <para>This parameter is required.</para>
             /// </summary>

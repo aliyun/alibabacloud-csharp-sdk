@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 
             }
 
+            [NameInMap("paramMap")]
+            [Validation(Required=false)]
+            public object ParamMap { get; set; }
+
             [NameInMap("prefix")]
             [Validation(Required=false)]
             public string Prefix { get; set; }

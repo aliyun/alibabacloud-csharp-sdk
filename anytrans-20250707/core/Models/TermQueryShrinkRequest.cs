@@ -8,16 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 {
-    public class TermQueryRequest : TeaModel {
+    public class TermQueryShrinkRequest : TeaModel {
         [NameInMap("ext")]
         [Validation(Required=false)]
-        public TermQueryRequestExt Ext { get; set; }
-        public class TermQueryRequestExt : TeaModel {
-            [NameInMap("paramMap")]
-            [Validation(Required=false)]
-            public object ParamMap { get; set; }
-
-        }
+        public string ExtShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

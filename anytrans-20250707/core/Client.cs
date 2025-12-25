@@ -1956,7 +1956,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
         /// <para>通义多模态翻译术语查询</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// TermQueryRequest
         /// </param>
         /// <param name="headers">
@@ -1969,10 +1969,20 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
         /// <returns>
         /// TermQueryResponse
         /// </returns>
-        public TermQueryResponse TermQueryWithOptions(TermQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public TermQueryResponse TermQueryWithOptions(TermQueryRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TermQueryShrinkRequest request = new TermQueryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
+            {
+                request.ExtShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ext, "ext", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
+            {
+                body["ext"] = request.ExtShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
             {
                 body["scene"] = request.Scene;
@@ -2018,7 +2028,7 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
         /// <para>通义多模态翻译术语查询</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// TermQueryRequest
         /// </param>
         /// <param name="headers">
@@ -2031,10 +2041,20 @@ namespace AlibabaCloud.SDK.AnyTrans20250707
         /// <returns>
         /// TermQueryResponse
         /// </returns>
-        public async Task<TermQueryResponse> TermQueryWithOptionsAsync(TermQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<TermQueryResponse> TermQueryWithOptionsAsync(TermQueryRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TermQueryShrinkRequest request = new TermQueryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ext))
+            {
+                request.ExtShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ext, "ext", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtShrink))
+            {
+                body["ext"] = request.ExtShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scene))
             {
                 body["scene"] = request.Scene;

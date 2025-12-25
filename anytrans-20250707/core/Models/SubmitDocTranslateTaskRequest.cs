@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
             [Validation(Required=false)]
             public string DomainHint { get; set; }
 
+            [NameInMap("paramMap")]
+            [Validation(Required=false)]
+            public object ParamMap { get; set; }
+
             [NameInMap("terminologies")]
             [Validation(Required=false)]
             public List<SubmitDocTranslateTaskRequestExtTerminologies> Terminologies { get; set; }
