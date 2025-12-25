@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string Qualifier { get; set; }
 
+            [NameInMap("sourceId")]
+            [Validation(Required=false)]
+            public string SourceId { get; set; }
+
         }
 
         /// <summary>

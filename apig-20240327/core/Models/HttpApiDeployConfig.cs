@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public List<HttpApiDeployConfigServiceConfigs> ServiceConfigs { get; set; }
         public class HttpApiDeployConfigServiceConfigs : TeaModel {
+            [NameInMap("intentCode")]
+            [Validation(Required=false)]
+            public string IntentCode { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>qwen-max</para>

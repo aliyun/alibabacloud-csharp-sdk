@@ -7351,7 +7351,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务来源</para>
+        /// <para>Obtains the details of a service source.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7387,7 +7387,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务来源</para>
+        /// <para>Obtains the details of a service source.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7423,7 +7423,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务来源</para>
+        /// <para>Obtains the details of a service source.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7438,7 +7438,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取服务来源</para>
+        /// <para>Obtains the details of a service source.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8481,7 +8481,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Gateway的Features</para>
+        /// <para>Queries the feature parameter configurations of an instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8517,7 +8517,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Gateway的Features</para>
+        /// <para>Queries the feature parameter configurations of an instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8553,7 +8553,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Gateway的Features</para>
+        /// <para>Queries the feature parameter configurations of an instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8568,7 +8568,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Gateway的Features</para>
+        /// <para>Queries the feature parameter configurations of an instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11285,6 +11285,168 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await RestartGatewayWithOptionsAsync(gatewayId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步外部MCP server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SyncMCPServersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncMCPServersResponse
+        /// </returns>
+        public SyncMCPServersResponse SyncMCPServersWithOptions(SyncMCPServersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainIds))
+            {
+                body["domainIds"] = request.DomainIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NacosMcpServers))
+            {
+                body["nacosMcpServers"] = request.NacosMcpServers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SyncMCPServers",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/mcp-servers/sync-mcp-server",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SyncMCPServersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步外部MCP server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SyncMCPServersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncMCPServersResponse
+        /// </returns>
+        public async Task<SyncMCPServersResponse> SyncMCPServersWithOptionsAsync(SyncMCPServersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainIds))
+            {
+                body["domainIds"] = request.DomainIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NacosMcpServers))
+            {
+                body["nacosMcpServers"] = request.NacosMcpServers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                body["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SyncMCPServers",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/mcp-servers/sync-mcp-server",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SyncMCPServersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步外部MCP server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SyncMCPServersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncMCPServersResponse
+        /// </returns>
+        public SyncMCPServersResponse SyncMCPServers(SyncMCPServersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SyncMCPServersWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步外部MCP server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SyncMCPServersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SyncMCPServersResponse
+        /// </returns>
+        public async Task<SyncMCPServersResponse> SyncMCPServersAsync(SyncMCPServersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SyncMCPServersWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
