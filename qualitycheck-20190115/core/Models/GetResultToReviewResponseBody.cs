@@ -405,6 +405,94 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public long? Rid { get; set; }
 
+                        [NameInMap("SentenceReviewResults")]
+                        [Validation(Required=false)]
+                        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResults SentenceReviewResults { get; set; }
+                        public class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResults : TeaModel {
+                            [NameInMap("SentenceReviewResults")]
+                            [Validation(Required=false)]
+                            public List<GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults> SentenceReviewResults { get; set; }
+                            public class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfoSentenceReviewResultsSentenceReviewResults : TeaModel {
+                                [NameInMap("Changed")]
+                                [Validation(Required=false)]
+                                public bool? Changed { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>1</para>
+                                /// </summary>
+                                [NameInMap("Cid")]
+                                [Validation(Required=false)]
+                                public long? Cid { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>无意见</para>
+                                /// </summary>
+                                [NameInMap("Comment")]
+                                [Validation(Required=false)]
+                                public string Comment { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>1</para>
+                                /// </summary>
+                                [NameInMap("HitStatus")]
+                                [Validation(Required=false)]
+                                public int? HitStatus { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>122-122-22-333</para>
+                                /// </summary>
+                                [NameInMap("OriginTaskId")]
+                                [Validation(Required=false)]
+                                public string OriginTaskId { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>1001</para>
+                                /// </summary>
+                                [NameInMap("OriginVid")]
+                                [Validation(Required=false)]
+                                public string OriginVid { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>1</para>
+                                /// </summary>
+                                [NameInMap("Pid")]
+                                [Validation(Required=false)]
+                                public string Pid { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>2</para>
+                                /// </summary>
+                                [NameInMap("ReviewDimensionType")]
+                                [Validation(Required=false)]
+                                public string ReviewDimensionType { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>1</para>
+                                /// </summary>
+                                [NameInMap("Rid")]
+                                [Validation(Required=false)]
+                                public long? Rid { get; set; }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>1</para>
+                                /// </summary>
+                                [NameInMap("Sid")]
+                                [Validation(Required=false)]
+                                public long? Sid { get; set; }
+
+                            }
+
+                        }
+
                     }
 
                     /// <summary>
