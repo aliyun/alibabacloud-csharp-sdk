@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string Content { get; set; }
 
+        [NameInMap("OriginContent")]
+        [Validation(Required=false)]
+        public string OriginContent { get; set; }
+
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
