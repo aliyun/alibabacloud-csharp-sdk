@@ -101,6 +101,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>67F33190-946B-1105-B6A1-E2DF0426DD51</para>
+            /// </summary>
+            [NameInMap("LxRequestId")]
+            [Validation(Required=false)]
+            public string LxRequestId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>存在未支付订单，请先支付或取消原有订单</para>
             /// </summary>
             [NameInMap("Message")]

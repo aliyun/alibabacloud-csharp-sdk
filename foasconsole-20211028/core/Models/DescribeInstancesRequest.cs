@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class DescribeInstancesRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>X86</para>
+        /// </summary>
         [NameInMap("ArchitectureType")]
         [Validation(Required=false)]
         public string ArchitectureType { get; set; }
@@ -28,6 +32,22 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>e2e-test</para>
+        /// </summary>
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>e2e-test-default</para>
+        /// </summary>
+        [NameInMap("NamespaceName")]
+        [Validation(Required=false)]
+        public string NamespaceName { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
