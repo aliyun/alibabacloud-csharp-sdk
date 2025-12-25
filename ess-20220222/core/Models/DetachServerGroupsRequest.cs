@@ -75,7 +75,6 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public class DetachServerGroupsRequestServerGroups : TeaModel {
             /// <summary>
             /// <para>The port used by ECS instances or elastic container instances as backend servers of the server group.</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
