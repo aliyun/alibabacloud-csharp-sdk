@@ -176,6 +176,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                     [Validation(Required=false)]
                     public int? Replica { get; set; }
 
+                    [NameInMap("ZoneId")]
+                    [Validation(Required=false)]
+                    public string ZoneId { get; set; }
+
                 }
 
                 /// <summary>
@@ -261,6 +265,28 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public long? ExpireTime { get; set; }
+
+            [NameInMap("HighAvailability")]
+            [Validation(Required=false)]
+            public GetInstanceDetailResponseBodyDataHighAvailability HighAvailability { get; set; }
+            public class GetInstanceDetailResponseBodyDataHighAvailability : TeaModel {
+                [NameInMap("CurrentActiveAZ")]
+                [Validation(Required=false)]
+                public string CurrentActiveAZ { get; set; }
+
+                [NameInMap("Mode")]
+                [Validation(Required=false)]
+                public string Mode { get; set; }
+
+                [NameInMap("PrimaryZoneId")]
+                [Validation(Required=false)]
+                public string PrimaryZoneId { get; set; }
+
+                [NameInMap("SecondaryZoneId")]
+                [Validation(Required=false)]
+                public string SecondaryZoneId { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The ID of the instance.</para>

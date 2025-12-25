@@ -346,6 +346,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 
             }
 
+            [NameInMap("Version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
+
             /// <summary>
             /// <para>The virtual private cloud (VPC) ID.</para>
             /// 

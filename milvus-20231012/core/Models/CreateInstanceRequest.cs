@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         [Validation(Required=false)]
         public bool? AutoBackup { get; set; }
 
+        [NameInMap("autoRenew")]
+        [Validation(Required=false)]
+        public bool? AutoRenew { get; set; }
+
         [NameInMap("components")]
         [Validation(Required=false)]
         public List<CreateInstanceRequestComponents> Components { get; set; }
@@ -111,9 +115,17 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
+        [NameInMap("isMultiAzStorage")]
+        [Validation(Required=false)]
+        public bool? IsMultiAzStorage { get; set; }
+
         [NameInMap("kmsKeyId")]
         [Validation(Required=false)]
         public string KmsKeyId { get; set; }
+
+        [NameInMap("loadReplicas")]
+        [Validation(Required=false)]
+        public int? LoadReplicas { get; set; }
 
         [NameInMap("multiZoneMode")]
         [Validation(Required=false)]
@@ -144,6 +156,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         [NameInMap("paymentType")]
         [Validation(Required=false)]
         public string PaymentType { get; set; }
+
+        [NameInMap("promotionNo")]
+        [Validation(Required=false)]
+        public string PromotionNo { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
