@@ -1,3 +1,7 @@
+2025-12-26 Version: 2.37.0
+- Support API GetKvDetail.
+
+
 2025-12-25 Version: 2.36.0
 - Support API CreateUserWafRuleset.
 - Support API DeleteUserWafRuleset.
