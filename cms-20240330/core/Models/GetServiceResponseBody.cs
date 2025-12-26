@@ -87,6 +87,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>rg-aekxxzuad5zzzz</para>
+            /// </summary>
+            [NameInMap("resourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            /// <summary>
             /// <para>Service ID.</para>
             /// 
             /// <b>Example:</b>
@@ -125,6 +133,28 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [NameInMap("serviceType")]
             [Validation(Required=false)]
             public string ServiceType { get; set; }
+
+            [NameInMap("tags")]
+            [Validation(Required=false)]
+            public List<GetServiceResponseBodyServiceTags> Tags { get; set; }
+            public class GetServiceResponseBodyServiceTags : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>env</para>
+                /// </summary>
+                [NameInMap("key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>prod</para>
+                /// </summary>
+                [NameInMap("value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             /// <summary>
             /// <para>Workspace name</para>

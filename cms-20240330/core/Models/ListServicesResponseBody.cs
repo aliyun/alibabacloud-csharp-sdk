@@ -97,6 +97,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Pid { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>rg-aekxxzuad5zzzz</para>
+            /// </summary>
+            [NameInMap("resourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            /// <summary>
             /// <para>Service ID</para>
             /// 
             /// <b>Example:</b>

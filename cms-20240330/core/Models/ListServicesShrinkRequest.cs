@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
-    public class ListServicesRequest : TeaModel {
+    public class ListServicesShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The maximum number of records to return in this request.</para>
         /// 
@@ -61,25 +61,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
-        public List<ListServicesRequestTags> Tags { get; set; }
-        public class ListServicesRequestTags : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>evn</para>
-            /// </summary>
-            [NameInMap("key")]
-            [Validation(Required=false)]
-            public string Key { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>prod</para>
-            /// </summary>
-            [NameInMap("value")]
-            [Validation(Required=false)]
-            public string Value { get; set; }
-
-        }
+        public string TagsShrink { get; set; }
 
     }
 
