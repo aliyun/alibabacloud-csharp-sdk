@@ -1,3 +1,6 @@
+2025-12-26 Version: 4.0.1
+- Generated csharp 2019-12-30 for imageseg.
+
 2025-12-24 Version: 3.0.3
 - Generated csharp 2019-12-30 for imageseg.
 
