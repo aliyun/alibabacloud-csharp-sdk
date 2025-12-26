@@ -140,6 +140,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        [NameInMap("MaxPrice")]
+        [Validation(Required=false)]
+        public float? MaxPrice { get; set; }
+
         /// <summary>
         /// <para>The type of the network policy (in invitational preview).</para>
         /// 
@@ -225,6 +229,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("ServerPortRange")]
         [Validation(Required=false)]
         public string ServerPortRange { get; set; }
+
+        [NameInMap("SubPayType")]
+        [Validation(Required=false)]
+        public string SubPayType { get; set; }
 
         /// <summary>
         /// <para>The system disk category.</para>

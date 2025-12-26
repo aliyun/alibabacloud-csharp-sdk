@@ -185,6 +185,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             }
 
+            [NameInMap("MaxPrice")]
+            [Validation(Required=false)]
+            public float? MaxPrice { get; set; }
+
             /// <summary>
             /// <para>The private IP address.</para>
             /// 
@@ -307,6 +311,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("SubPayType")]
+            [Validation(Required=false)]
+            public string SubPayType { get; set; }
 
             /// <summary>
             /// <para>The type of the system disk.</para>

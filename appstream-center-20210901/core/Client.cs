@@ -1221,6 +1221,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["ImageId"] = request.ImageId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxPrice))
+            {
+                body["MaxPrice"] = request.MaxPrice;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkStrategyType))
             {
                 body["NetworkStrategyType"] = request.NetworkStrategyType;
@@ -1256,6 +1260,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerPortRange))
             {
                 body["ServerPortRange"] = request.ServerPortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubPayType))
+            {
+                body["SubPayType"] = request.SubPayType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskCategory))
             {
@@ -1377,6 +1385,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["ImageId"] = request.ImageId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxPrice))
+            {
+                body["MaxPrice"] = request.MaxPrice;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkStrategyType))
             {
                 body["NetworkStrategyType"] = request.NetworkStrategyType;
@@ -1412,6 +1424,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerPortRange))
             {
                 body["ServerPortRange"] = request.ServerPortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubPayType))
+            {
+                body["SubPayType"] = request.SubPayType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskCategory))
             {
