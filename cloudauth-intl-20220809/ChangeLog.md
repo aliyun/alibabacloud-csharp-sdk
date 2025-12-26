@@ -1,3 +1,7 @@
+2025-12-26 Version: 3.14.0
+- Support API AddFaceRecord.
+
+
 2025-12-17 Version: 3.13.0
 - Support API DownloadVerifyRecordIntl.
 
