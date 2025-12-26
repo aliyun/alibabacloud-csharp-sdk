@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.PAICopilot20250731.Models
         [Validation(Required=false)]
         public List<SearchInfoRequestWebFilters> WebFilters { get; set; }
         public class SearchInfoRequestWebFilters : TeaModel {
+            [NameInMap("Category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
             [NameInMap("IncludeSites")]
             [Validation(Required=false)]
             public List<string> IncludeSites { get; set; }
