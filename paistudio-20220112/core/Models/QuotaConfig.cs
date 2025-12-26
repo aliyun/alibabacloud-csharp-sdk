@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public bool? EnablePreemptSubquotaWorkloads { get; set; }
 
+        [NameInMap("EnableSelfQuotaPreemption")]
+        [Validation(Required=false)]
+        public bool? EnableSelfQuotaPreemption { get; set; }
+
         [NameInMap("EnableSubQuotaPreemption")]
         [Validation(Required=false)]
         public bool? EnableSubQuotaPreemption { get; set; }
