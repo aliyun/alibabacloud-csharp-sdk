@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DataDiskSize { get; set; }
 
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
             /// <summary>
             /// <para>The ID of the cloud desktop type.</para>
             /// 

@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DesktopStatus { get; set; }
 
+            [NameInMap("DesktopType")]
+            [Validation(Required=false)]
+            public string DesktopType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2021-12-31T15:59Z</para>
@@ -85,6 +89,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public List<string> ManagementFlags { get; set; }
 
+            [NameInMap("MemberEniIp")]
+            [Validation(Required=false)]
+            public string MemberEniIp { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-363353****</para>
@@ -92,6 +100,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("OfficeSiteId")]
             [Validation(Required=false)]
             public string OfficeSiteId { get; set; }
+
+            [NameInMap("Platform")]
+            [Validation(Required=false)]
+            public string Platform { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
