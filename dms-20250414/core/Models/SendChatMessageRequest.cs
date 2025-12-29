@@ -187,6 +187,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Language { get; set; }
 
+            [NameInMap("ReportWaterMark")]
+            [Validation(Required=false)]
+            public string ReportWaterMark { get; set; }
+
         }
 
         /// <summary>
