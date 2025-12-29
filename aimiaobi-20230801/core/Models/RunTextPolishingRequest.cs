@@ -28,6 +28,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string Prompt { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>taskld-xxxxx</para>
+        /// </summary>
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
