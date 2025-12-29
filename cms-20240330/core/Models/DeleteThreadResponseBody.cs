@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteThreadResponseBody : TeaModel {
-        [NameInMap("deleted")]
-        [Validation(Required=false)]
-        public bool? Deleted { get; set; }
-
         /// <summary>
         /// <para>Id of the request</para>
         /// 
