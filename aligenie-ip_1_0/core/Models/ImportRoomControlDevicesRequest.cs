@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.AliGenieip_1_0.Models
         [Validation(Required=false)]
         public string EnableInfraredDeviceImport { get; set; }
 
+        [NameInMap("EnableMeshDeviceImport")]
+        [Validation(Required=false)]
+        public string EnableMeshDeviceImport { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
