@@ -120,6 +120,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string RoleId { get; set; }
 
+        [NameInMap("SearchId")]
+        [Validation(Required=false)]
+        public string SearchId { get; set; }
+
         /// <summary>
         /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>

@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string CertCommonName { get; set; }
 
+        [NameInMap("ForceEncryption")]
+        [Validation(Required=false)]
+        public string ForceEncryption { get; set; }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 

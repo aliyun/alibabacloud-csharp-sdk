@@ -8,34 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
-    public class DescribeShardingNetworkAddressRequest : TeaModel {
+    public class ModifyActiveOperationMaintenanceConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>dds-bpxxxxxxxx</para>
+        /// <para>1,2,3</para>
         /// </summary>
-        [NameInMap("DBInstanceId")]
+        [NameInMap("CycleTime")]
         [Validation(Required=false)]
-        public string DBInstanceId { get; set; }
-
-        [NameInMap("NetworkType")]
-        [Validation(Required=false)]
-        public string NetworkType { get; set; }
+        public string CycleTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</para>
-        /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</para>
-        /// </remarks>
-        /// 
         /// <b>Example:</b>
-        /// <para>d-bpxxxxxxxx</para>
+        /// <para>Week</para>
         /// </summary>
-        [NameInMap("NodeId")]
+        [NameInMap("CycleType")]
         [Validation(Required=false)]
-        public string NodeId { get; set; }
+        public string CycleType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>22:00Z</para>
+        /// </summary>
+        [NameInMap("MaintainEndTime")]
+        [Validation(Required=false)]
+        public string MaintainEndTime { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>21:00Z</para>
+        /// </summary>
+        [NameInMap("MaintainStartTime")]
+        [Validation(Required=false)]
+        public string MaintainStartTime { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -52,6 +56,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public int? Status { get; set; }
 
     }
 

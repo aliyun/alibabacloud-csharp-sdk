@@ -8,34 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
-    public class DescribeShardingNetworkAddressRequest : TeaModel {
+    public class ModifyBackupExpireTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <b>Example:</b>
+        /// <para>2025-03-29T03:47:12Z</para>
+        /// </summary>
+        [NameInMap("BackupExpireTime")]
+        [Validation(Required=false)]
+        public string BackupExpireTime { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dds-bpxxxxxxxx</para>
+        /// <para>260032xxxx</para>
+        /// </summary>
+        [NameInMap("BackupId")]
+        [Validation(Required=false)]
+        public string BackupId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dds-bp16cb162771****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
-
-        [NameInMap("NetworkType")]
-        [Validation(Required=false)]
-        public string NetworkType { get; set; }
-
-        /// <summary>
-        /// <para>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</para>
-        /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>d-bpxxxxxxxx</para>
-        /// </summary>
-        [NameInMap("NodeId")]
-        [Validation(Required=false)]
-        public string NodeId { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
