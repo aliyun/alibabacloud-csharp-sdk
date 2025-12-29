@@ -8,30 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
-    public class ListGitAccountsRequest : TeaModel {
-        [NameInMap("BindType")]
-        [Validation(Required=false)]
-        public string BindType { get; set; }
-
+    public class StartDebugExecutionRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>abcde3OARpx77No54nv6</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>github</para>
+        /// <para>{&quot;Service&quot;: &quot;ecs&quot;, &quot;API&quot;: &quot;DescribeRegions&quot;}</para>
         /// </summary>
-        [NameInMap("Platform")]
+        [NameInMap("Properties")]
         [Validation(Required=false)]
-        public string Platform { get; set; }
+        public string Properties { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -43,11 +35,11 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>roleName</para>
+        /// <para>ACS::ExecuteAPI</para>
         /// </summary>
-        [NameInMap("RoleName")]
+        [NameInMap("TaskType")]
         [Validation(Required=false)]
-        public string RoleName { get; set; }
+        public string TaskType { get; set; }
 
     }
 

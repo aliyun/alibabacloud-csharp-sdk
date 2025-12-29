@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListGitOrganizationsRequest : TeaModel {
+        [NameInMap("BindType")]
+        [Validation(Required=false)]
+        public string BindType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <list type="bullet">
