@@ -24,6 +24,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public bool? Deploy { get; set; }
 
+        [NameInMap("MinReadyInstanceRatio")]
+        [Validation(Required=false)]
+        public int? MinReadyInstanceRatio { get; set; }
+
+        [NameInMap("MinReadyInstances")]
+        [Validation(Required=false)]
+        public int? MinReadyInstances { get; set; }
+
         /// <summary>
         /// <para>The ID of the vSwitch.</para>
         /// <para>This parameter is required.</para>

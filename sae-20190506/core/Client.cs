@@ -22211,6 +22211,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["Deploy"] = request.Deploy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
+            {
+                query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstances))
+            {
+                query["MinReadyInstances"] = request.MinReadyInstances;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
@@ -22264,6 +22272,14 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Deploy))
             {
                 query["Deploy"] = request.Deploy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstanceRatio))
+            {
+                query["MinReadyInstanceRatio"] = request.MinReadyInstanceRatio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinReadyInstances))
+            {
+                query["MinReadyInstances"] = request.MinReadyInstances;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {

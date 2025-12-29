@@ -242,6 +242,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
                 }
 
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public List<DescribeApplicationInstancesResponseBodyDataInstancesTags> Tags { get; set; }
+                public class DescribeApplicationInstancesResponseBodyDataInstancesTags : TeaModel {
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>1750061980000</para>
