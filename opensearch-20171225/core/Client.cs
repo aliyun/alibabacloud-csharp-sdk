@@ -2657,6 +2657,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
                 body["scope"] = request.Scope;
@@ -2711,6 +2715,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
                 body["scope"] = request.Scope;
@@ -15909,6 +15917,9 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
         /// <para>You can call this operation to modify the description of a sort script.</para>
         /// </description>
         /// 
+        /// <param name="request">
+        /// UpdateSortScriptRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -15919,11 +15930,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
         /// <returns>
         /// UpdateSortScriptResponse
         /// </returns>
-        public UpdateSortScriptResponse UpdateSortScriptWithOptions(string appGroupIdentity, string appVersionId, string scriptName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateSortScriptResponse UpdateSortScriptWithOptions(string appGroupIdentity, string appVersionId, string scriptName, UpdateSortScriptRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -15950,6 +15968,9 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
         /// <para>You can call this operation to modify the description of a sort script.</para>
         /// </description>
         /// 
+        /// <param name="request">
+        /// UpdateSortScriptRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -15960,11 +15981,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
         /// <returns>
         /// UpdateSortScriptResponse
         /// </returns>
-        public async Task<UpdateSortScriptResponse> UpdateSortScriptWithOptionsAsync(string appGroupIdentity, string appVersionId, string scriptName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateSortScriptResponse> UpdateSortScriptWithOptionsAsync(string appGroupIdentity, string appVersionId, string scriptName, UpdateSortScriptRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -15991,14 +16019,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
         /// <para>You can call this operation to modify the description of a sort script.</para>
         /// </description>
         /// 
+        /// <param name="request">
+        /// UpdateSortScriptRequest
+        /// </param>
+        /// 
         /// <returns>
         /// UpdateSortScriptResponse
         /// </returns>
-        public UpdateSortScriptResponse UpdateSortScript(string appGroupIdentity, string appVersionId, string scriptName)
+        public UpdateSortScriptResponse UpdateSortScript(string appGroupIdentity, string appVersionId, string scriptName, UpdateSortScriptRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return UpdateSortScriptWithOptions(appGroupIdentity, appVersionId, scriptName, headers, runtime);
+            return UpdateSortScriptWithOptions(appGroupIdentity, appVersionId, scriptName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -16011,14 +16043,18 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
         /// <para>You can call this operation to modify the description of a sort script.</para>
         /// </description>
         /// 
+        /// <param name="request">
+        /// UpdateSortScriptRequest
+        /// </param>
+        /// 
         /// <returns>
         /// UpdateSortScriptResponse
         /// </returns>
-        public async Task<UpdateSortScriptResponse> UpdateSortScriptAsync(string appGroupIdentity, string appVersionId, string scriptName)
+        public async Task<UpdateSortScriptResponse> UpdateSortScriptAsync(string appGroupIdentity, string appVersionId, string scriptName, UpdateSortScriptRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await UpdateSortScriptWithOptionsAsync(appGroupIdentity, appVersionId, scriptName, headers, runtime);
+            return await UpdateSortScriptWithOptionsAsync(appGroupIdentity, appVersionId, scriptName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

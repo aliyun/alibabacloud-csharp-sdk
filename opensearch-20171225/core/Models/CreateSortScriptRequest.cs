@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.OpenSearch20171225.Models
 {
     public class CreateSortScriptRequest : TeaModel {
+        [NameInMap("description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         /// <summary>
         /// <para>The sort phase to which the script applies.</para>
         /// 

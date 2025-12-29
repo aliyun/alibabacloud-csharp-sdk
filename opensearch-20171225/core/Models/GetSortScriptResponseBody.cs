@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.OpenSearch20171225.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
             /// <summary>
             /// <para>The time when the script was last modified.</para>
             /// 
