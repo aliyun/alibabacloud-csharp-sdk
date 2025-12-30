@@ -2,6 +2,10 @@
 - Support API ListTransferFileDownloadUrl.
 
 
+2025-12-30 Version: 4.19.0
+- Support API ListTransferFileDownloadUrl.
+
+
 2025-12-27 Version: 4.18.3
 - Update API DescribeDesktopMetadata: add response parameters Body.Desktops.$.DesktopType.
 - Update API DescribeDesktopMetadata: add response parameters Body.Desktops.$.MemberEniIp.
