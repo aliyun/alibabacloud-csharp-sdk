@@ -5234,7 +5234,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>机器列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListHyperNodesRequest
         /// </param>
         /// <param name="runtime">
@@ -5244,9 +5244,24 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <returns>
         /// ListHyperNodesResponse
         /// </returns>
-        public ListHyperNodesResponse ListHyperNodesWithOptions(ListHyperNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListHyperNodesResponse ListHyperNodesWithOptions(ListHyperNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListHyperNodesShrinkRequest request = new ListHyperNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OperatingStates))
+            {
+                request.OperatingStatesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperatingStates, "OperatingStates", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingStatesShrink))
+            {
+                query["OperatingStates"] = request.OperatingStatesShrink;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
             {
@@ -5290,6 +5305,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -5312,7 +5328,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>机器列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListHyperNodesRequest
         /// </param>
         /// <param name="runtime">
@@ -5322,9 +5338,24 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <returns>
         /// ListHyperNodesResponse
         /// </returns>
-        public async Task<ListHyperNodesResponse> ListHyperNodesWithOptionsAsync(ListHyperNodesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListHyperNodesResponse> ListHyperNodesWithOptionsAsync(ListHyperNodesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListHyperNodesShrinkRequest request = new ListHyperNodesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OperatingStates))
+            {
+                request.OperatingStatesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperatingStates, "OperatingStates", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingStatesShrink))
+            {
+                query["OperatingStates"] = request.OperatingStatesShrink;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
             {
@@ -5368,6 +5399,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params

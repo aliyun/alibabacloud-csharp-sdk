@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
-    public class ListHyperNodesRequest : TeaModel {
+    public class ListHyperNodesShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>Standard_Cluster</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         [NameInMap("OperatingStates")]
         [Validation(Required=false)]
-        public List<string> OperatingStates { get; set; }
+        public string OperatingStatesShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -83,8 +83,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public List<ListHyperNodesRequestTags> Tags { get; set; }
-        public class ListHyperNodesRequestTags : TeaModel {
+        public List<ListHyperNodesShrinkRequestTags> Tags { get; set; }
+        public class ListHyperNodesShrinkRequestTags : TeaModel {
             /// <summary>
             /// <b>Example:</b>
             /// <para>alarm_xdc</para>
