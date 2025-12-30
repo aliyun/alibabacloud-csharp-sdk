@@ -365,6 +365,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo ReviewInfo { get; set; }
                     public class GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo : TeaModel {
+                        [NameInMap("Comment")]
+                        [Validation(Required=false)]
+                        public string Comment { get; set; }
+
                         /// <summary>
                         /// <b>Example:</b>
                         /// <para>013c68142fec4f0899fa6ee0exxx</para>
