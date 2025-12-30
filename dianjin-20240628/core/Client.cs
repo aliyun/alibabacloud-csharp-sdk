@@ -2078,6 +2078,154 @@ namespace AlibabaCloud.SDK.DianJin20240628
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Dashscope异步任务完成事件处理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DashscopeAsyncTaskFinishEventRequest
+        /// </param>
+        /// <param name="headers">
+        /// DashscopeAsyncTaskFinishEventHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DashscopeAsyncTaskFinishEventResponse
+        /// </returns>
+        public DashscopeAsyncTaskFinishEventResponse DashscopeAsyncTaskFinishEventWithOptions(string workspaceId, DashscopeAsyncTaskFinishEventRequest request, DashscopeAsyncTaskFinishEventHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                body["body"] = request.Body;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DashscopeAsyncTaskFinishEvent",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/event/dashscopeAsyncTaskFinish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DashscopeAsyncTaskFinishEventResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dashscope异步任务完成事件处理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DashscopeAsyncTaskFinishEventRequest
+        /// </param>
+        /// <param name="headers">
+        /// DashscopeAsyncTaskFinishEventHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DashscopeAsyncTaskFinishEventResponse
+        /// </returns>
+        public async Task<DashscopeAsyncTaskFinishEventResponse> DashscopeAsyncTaskFinishEventWithOptionsAsync(string workspaceId, DashscopeAsyncTaskFinishEventRequest request, DashscopeAsyncTaskFinishEventHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                body["body"] = request.Body;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DashscopeAsyncTaskFinishEvent",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/event/dashscopeAsyncTaskFinish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DashscopeAsyncTaskFinishEventResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dashscope异步任务完成事件处理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DashscopeAsyncTaskFinishEventRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DashscopeAsyncTaskFinishEventResponse
+        /// </returns>
+        public DashscopeAsyncTaskFinishEventResponse DashscopeAsyncTaskFinishEvent(string workspaceId, DashscopeAsyncTaskFinishEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DashscopeAsyncTaskFinishEventHeaders headers = new DashscopeAsyncTaskFinishEventHeaders();
+            return DashscopeAsyncTaskFinishEventWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dashscope异步任务完成事件处理</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DashscopeAsyncTaskFinishEventRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DashscopeAsyncTaskFinishEventResponse
+        /// </returns>
+        public async Task<DashscopeAsyncTaskFinishEventResponse> DashscopeAsyncTaskFinishEventAsync(string workspaceId, DashscopeAsyncTaskFinishEventRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DashscopeAsyncTaskFinishEventHeaders headers = new DashscopeAsyncTaskFinishEventHeaders();
+            return await DashscopeAsyncTaskFinishEventWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除文档</para>
         /// </summary>
         /// 
