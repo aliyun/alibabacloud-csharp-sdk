@@ -7228,6 +7228,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PriorityForwardConfigs))
+            {
+                query["PriorityForwardConfigs"] = request.PriorityForwardConfigs;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
                 query["RuleId"] = request.RuleId;
@@ -7285,6 +7289,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PriorityForwardConfigs))
+            {
+                query["PriorityForwardConfigs"] = request.PriorityForwardConfigs;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {

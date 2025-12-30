@@ -79,6 +79,32 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("PriorityForwardConfigs")]
+        [Validation(Required=false)]
+        public List<UpdateResolverRuleRequestPriorityForwardConfigs> PriorityForwardConfigs { get; set; }
+        public class UpdateResolverRuleRequestPriorityForwardConfigs : TeaModel {
+            [NameInMap("AlidnsServiceAddresses")]
+            [Validation(Required=false)]
+            public List<string> AlidnsServiceAddresses { get; set; }
+
+            [NameInMap("CustomAddresses")]
+            [Validation(Required=false)]
+            public List<string> CustomAddresses { get; set; }
+
+            [NameInMap("EnableStatus")]
+            [Validation(Required=false)]
+            public string EnableStatus { get; set; }
+
+            [NameInMap("Priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+
+            [NameInMap("Protocol")]
+            [Validation(Required=false)]
+            public string Protocol { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the forwarding rule.</para>
         /// <para>This parameter is required.</para>
