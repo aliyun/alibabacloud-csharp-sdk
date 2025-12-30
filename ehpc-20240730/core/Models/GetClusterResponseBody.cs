@@ -607,6 +607,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public GetClusterResponseBodySchedulerSpec SchedulerSpec { get; set; }
         public class GetClusterResponseBodySchedulerSpec : TeaModel {
+            [NameInMap("EnablePowerSaving")]
+            [Validation(Required=false)]
+            public bool? EnablePowerSaving { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the topology awareness feature is enabled for the cluster. Valid values:</para>
             /// <list type="bullet">

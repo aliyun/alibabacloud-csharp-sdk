@@ -994,6 +994,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             {
                 request.ComputeNodeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ComputeNode, "ComputeNode", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Hostnames))
+            {
+                request.HostnamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Hostnames, "Hostnames", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
@@ -1022,6 +1026,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostnameSuffix))
             {
                 query["HostnameSuffix"] = request.HostnameSuffix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostnamesShrink))
+            {
+                query["Hostnames"] = request.HostnamesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepAlive))
             {
@@ -1091,6 +1099,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             {
                 request.ComputeNodeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ComputeNode, "ComputeNode", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Hostnames))
+            {
+                request.HostnamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Hostnames, "Hostnames", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
@@ -1119,6 +1131,10 @@ namespace AlibabaCloud.SDK.EHPC20240730
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostnameSuffix))
             {
                 query["HostnameSuffix"] = request.HostnameSuffix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostnamesShrink))
+            {
+                query["Hostnames"] = request.HostnamesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepAlive))
             {

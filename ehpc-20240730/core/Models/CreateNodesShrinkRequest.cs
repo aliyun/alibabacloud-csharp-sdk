@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public string HostnameSuffix { get; set; }
 
+        [NameInMap("Hostnames")]
+        [Validation(Required=false)]
+        public string HostnamesShrink { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable deletion protection for the added compute nodes.</para>
         /// 
