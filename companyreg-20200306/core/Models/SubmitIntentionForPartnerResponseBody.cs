@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Companyreg20200306.Models
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
+        [NameInMap("ExtInfo")]
+        [Validation(Required=false)]
+        public string ExtInfo { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>I20211223101045000001</para>
