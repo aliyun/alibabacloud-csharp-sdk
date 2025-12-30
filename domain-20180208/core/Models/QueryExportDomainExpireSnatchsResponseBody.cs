@@ -97,6 +97,14 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
             [Validation(Required=false)]
             public double? FreezeAmount { get; set; }
 
+            [NameInMap("IcpNumber")]
+            [Validation(Required=false)]
+            public string IcpNumber { get; set; }
+
+            [NameInMap("IcpStatus")]
+            [Validation(Required=false)]
+            public bool? IcpStatus { get; set; }
+
             [NameInMap("Introduction")]
             [Validation(Required=false)]
             public string Introduction { get; set; }

@@ -573,6 +573,11 @@ namespace AlibabaCloud.SDK.Domain20180208
             return await BatchRecallPushWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>出价</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BidDomainRequest
         /// </param>
@@ -618,6 +623,11 @@ namespace AlibabaCloud.SDK.Domain20180208
             return TeaModel.ToObject<BidDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>出价</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BidDomainRequest
         /// </param>
@@ -663,6 +673,11 @@ namespace AlibabaCloud.SDK.Domain20180208
             return TeaModel.ToObject<BidDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>出价</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BidDomainRequest
         /// </param>
@@ -676,6 +691,11 @@ namespace AlibabaCloud.SDK.Domain20180208
             return BidDomainWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>出价</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BidDomainRequest
         /// </param>
