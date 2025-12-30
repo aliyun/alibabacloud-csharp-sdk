@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SearchLibConfig")]
+        [Validation(Required=false)]
+        public string SearchLibConfig { get; set; }
+
         /// <summary>
         /// <para>The name of the search library.</para>
         /// 

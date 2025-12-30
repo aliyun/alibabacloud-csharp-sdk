@@ -129,6 +129,38 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string AvatarUrlType { get; set; }
 
+        [NameInMap("BackChannelingConfig")]
+        [Validation(Required=false)]
+        public List<AIAgentConfigBackChannelingConfig> BackChannelingConfig { get; set; }
+        public class AIAgentConfigBackChannelingConfig : TeaModel {
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("Probability")]
+            [Validation(Required=false)]
+            public double? Probability { get; set; }
+
+            [NameInMap("TriggerStage")]
+            [Validation(Required=false)]
+            public string TriggerStage { get; set; }
+
+            [NameInMap("Words")]
+            [Validation(Required=false)]
+            public List<AIAgentConfigBackChannelingConfigWords> Words { get; set; }
+            public class AIAgentConfigBackChannelingConfigWords : TeaModel {
+                [NameInMap("Probability")]
+                [Validation(Required=false)]
+                public double? Probability { get; set; }
+
+                [NameInMap("Text")]
+                [Validation(Required=false)]
+                public string Text { get; set; }
+
+            }
+
+        }
+
         [NameInMap("EnableIntelligentSegment")]
         [Validation(Required=false)]
         public bool? EnableIntelligentSegment { get; set; }
@@ -160,6 +192,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("InterruptWords")]
             [Validation(Required=false)]
             public List<string> InterruptWords { get; set; }
+
+            [NameInMap("NoInterruptMode")]
+            [Validation(Required=false)]
+            public string NoInterruptMode { get; set; }
 
         }
 
@@ -285,6 +321,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AIAgentConfigTurnDetectionConfig TurnDetectionConfig { get; set; }
         public class AIAgentConfigTurnDetectionConfig : TeaModel {
+            [NameInMap("Eagerness")]
+            [Validation(Required=false)]
+            public string Eagerness { get; set; }
+
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public string Mode { get; set; }

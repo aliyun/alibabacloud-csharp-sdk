@@ -8,13 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
-    public class CreateSearchLibRequest : TeaModel {
+    public class AlterSearchLibRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;faceGroupIds&quot;:&quot;xxx1,xxx2,xx3&quot;}</para>
+        /// </summary>
         [NameInMap("SearchLibConfig")]
         [Validation(Required=false)]
         public string SearchLibConfig { get; set; }
 
         /// <summary>
-        /// <para>The name of the search library. The name can contain letters and digits and must start with a letter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

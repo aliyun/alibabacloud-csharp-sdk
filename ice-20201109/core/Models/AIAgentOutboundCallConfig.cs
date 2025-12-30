@@ -111,6 +111,38 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
         }
 
+        [NameInMap("BackChannelingConfig")]
+        [Validation(Required=false)]
+        public AIAgentOutboundCallConfigBackChannelingConfig BackChannelingConfig { get; set; }
+        public class AIAgentOutboundCallConfigBackChannelingConfig : TeaModel {
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("Probability")]
+            [Validation(Required=false)]
+            public double? Probability { get; set; }
+
+            [NameInMap("TriggerStage")]
+            [Validation(Required=false)]
+            public string TriggerStage { get; set; }
+
+            [NameInMap("Words")]
+            [Validation(Required=false)]
+            public AIAgentOutboundCallConfigBackChannelingConfigWords Words { get; set; }
+            public class AIAgentOutboundCallConfigBackChannelingConfigWords : TeaModel {
+                [NameInMap("Probability")]
+                [Validation(Required=false)]
+                public double? Probability { get; set; }
+
+                [NameInMap("Text")]
+                [Validation(Required=false)]
+                public string Text { get; set; }
+
+            }
+
+        }
+
         [NameInMap("EnableIntelligentSegment")]
         [Validation(Required=false)]
         public bool? EnableIntelligentSegment { get; set; }
@@ -131,6 +163,12 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AIAgentOutboundCallConfigInterruptConfig InterruptConfig { get; set; }
         public class AIAgentOutboundCallConfigInterruptConfig : TeaModel {
+            /// <term><b>Obsolete</b></term>
+            [NameInMap("Eagerness")]
+            [Validation(Required=false)]
+            [Obsolete]
+            public string Eagerness { get; set; }
+
             [NameInMap("EnableVoiceInterrupt")]
             [Validation(Required=false)]
             public bool? EnableVoiceInterrupt { get; set; }
@@ -138,6 +176,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [NameInMap("InterruptWords")]
             [Validation(Required=false)]
             public List<string> InterruptWords { get; set; }
+
+            [NameInMap("NoInterruptMode")]
+            [Validation(Required=false)]
+            public string NoInterruptMode { get; set; }
 
         }
 
@@ -263,6 +305,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public AIAgentOutboundCallConfigTurnDetectionConfig TurnDetectionConfig { get; set; }
         public class AIAgentOutboundCallConfigTurnDetectionConfig : TeaModel {
+            [NameInMap("Eagerness")]
+            [Validation(Required=false)]
+            public string Eagerness { get; set; }
+
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public string Mode { get; set; }

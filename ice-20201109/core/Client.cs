@@ -2026,6 +2026,134 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AlterSearchLibRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AlterSearchLibResponse
+        /// </returns>
+        public AlterSearchLibResponse AlterSearchLibWithOptions(AlterSearchLibRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibConfig))
+            {
+                query["SearchLibConfig"] = request.SearchLibConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
+            {
+                query["SearchLibName"] = request.SearchLibName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AlterSearchLib",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AlterSearchLibResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AlterSearchLibRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AlterSearchLibResponse
+        /// </returns>
+        public async Task<AlterSearchLibResponse> AlterSearchLibWithOptionsAsync(AlterSearchLibRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibConfig))
+            {
+                query["SearchLibConfig"] = request.SearchLibConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
+            {
+                query["SearchLibName"] = request.SearchLibName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AlterSearchLib",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AlterSearchLibResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AlterSearchLibRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AlterSearchLibResponse
+        /// </returns>
+        public AlterSearchLibResponse AlterSearchLib(AlterSearchLibRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AlterSearchLibWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AlterSearchLibRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AlterSearchLibResponse
+        /// </returns>
+        public async Task<AlterSearchLibResponse> AlterSearchLibAsync(AlterSearchLibRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AlterSearchLibWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Ingests multiple assets for VOD packaging.</para>
         /// </summary>
         /// 
@@ -7527,6 +7655,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibConfig))
+            {
+                query["SearchLibConfig"] = request.SearchLibConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
             {
                 query["SearchLibName"] = request.SearchLibName;
@@ -7569,6 +7701,10 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibConfig))
+            {
+                query["SearchLibConfig"] = request.SearchLibConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
             {
                 query["SearchLibName"] = request.SearchLibName;
