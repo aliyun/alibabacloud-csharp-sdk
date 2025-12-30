@@ -17,6 +17,24 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public string AppKeyId { get; set; }
 
+            [NameInMap("BindEdgeDnsClusters")]
+            [Validation(Required=false)]
+            public List<DescribePdnsAppKeysResponseBodyAppKeysBindEdgeDnsClusters> BindEdgeDnsClusters { get; set; }
+            public class DescribePdnsAppKeysResponseBodyAppKeysBindEdgeDnsClusters : TeaModel {
+                [NameInMap("ClusterId")]
+                [Validation(Required=false)]
+                public string ClusterId { get; set; }
+
+                [NameInMap("ClusterName")]
+                [Validation(Required=false)]
+                public string ClusterName { get; set; }
+
+                [NameInMap("ClusterUserId")]
+                [Validation(Required=false)]
+                public string ClusterUserId { get; set; }
+
+            }
+
             [NameInMap("CreateDate")]
             [Validation(Required=false)]
             public string CreateDate { get; set; }
