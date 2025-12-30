@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.AgentIdentityData20251127.Models
         /// </summary>
         [NameInMap("DurationSeconds")]
         [Validation(Required=false)]
-        public string DurationSeconds { get; set; }
+        public long? DurationSeconds { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
