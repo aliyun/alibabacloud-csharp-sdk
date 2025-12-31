@@ -7047,6 +7047,206 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>预警联系人保存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveContactsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveContactsResponse
+        /// </returns>
+        public SaveContactsResponse SaveContactsWithOptions(SaveContactsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactEmail))
+            {
+                query["ContactEmail"] = request.ContactEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                query["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactPhone))
+            {
+                query["ContactPhone"] = request.ContactPhone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailStatus))
+            {
+                query["MailStatus"] = request.MailStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenStatusWarning))
+            {
+                query["OpenStatusWarning"] = request.OpenStatusWarning;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpentAttributionWarning))
+            {
+                query["OpentAttributionWarning"] = request.OpentAttributionWarning;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneStatus))
+            {
+                query["PhoneStatus"] = request.PhoneStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveContacts",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveContactsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预警联系人保存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveContactsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveContactsResponse
+        /// </returns>
+        public async Task<SaveContactsResponse> SaveContactsWithOptionsAsync(SaveContactsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactEmail))
+            {
+                query["ContactEmail"] = request.ContactEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                query["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactPhone))
+            {
+                query["ContactPhone"] = request.ContactPhone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MailStatus))
+            {
+                query["MailStatus"] = request.MailStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenStatusWarning))
+            {
+                query["OpenStatusWarning"] = request.OpenStatusWarning;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpentAttributionWarning))
+            {
+                query["OpentAttributionWarning"] = request.OpentAttributionWarning;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneStatus))
+            {
+                query["PhoneStatus"] = request.PhoneStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveContacts",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveContactsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预警联系人保存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveContactsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveContactsResponse
+        /// </returns>
+        public SaveContactsResponse SaveContacts(SaveContactsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SaveContactsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预警联系人保存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveContactsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveContactsResponse
+        /// </returns>
+        public async Task<SaveContactsResponse> SaveContactsAsync(SaveContactsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SaveContactsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Verifies whether the name, phone number, and ID card number entered by a user belong to the same user.</para>
         /// </summary>
         /// 
