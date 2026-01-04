@@ -321,7 +321,6 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <item><description>If you set <b>ListenerProtocol</b> to <b>TCPSSL</b>, you can associate the listener with server groups whose backend protocol is <b>TCP</b> and have <b>client IP preservation disabled</b>. You cannot associate the listener with server groups whose backend protocol is <b>TCP</b> and have <b>client IP preservation enabled</b> or server groups whose backend protocol is <b>UDP</b> or <b>TCP_UDP</b>.</description></item>
         /// </list>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sgp-ppdpc14gdm3x4o****</para>
