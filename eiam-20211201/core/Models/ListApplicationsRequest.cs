@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>system_init</para>
+        /// </summary>
+        [NameInMap("ApplicationCreationType")]
+        [Validation(Required=false)]
+        public string ApplicationCreationType { get; set; }
+
+        /// <summary>
         /// <para>The IDs of the applications.</para>
         /// 
         /// <b>Example:</b>

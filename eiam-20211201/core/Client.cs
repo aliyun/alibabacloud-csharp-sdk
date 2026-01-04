@@ -16808,6 +16808,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationCreationType))
+            {
+                query["ApplicationCreationType"] = request.ApplicationCreationType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationIds))
             {
                 query["ApplicationIds"] = request.ApplicationIds;
@@ -16886,6 +16890,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationCreationType))
+            {
+                query["ApplicationCreationType"] = request.ApplicationCreationType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationIds))
             {
                 query["ApplicationIds"] = request.ApplicationIds;

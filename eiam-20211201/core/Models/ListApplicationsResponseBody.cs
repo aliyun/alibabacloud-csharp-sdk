@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListApplicationsResponseBodyApplications> Applications { get; set; }
         public class ListApplicationsResponseBodyApplications : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>user_created</para>
+            /// </summary>
+            [NameInMap("ApplicationCreationType")]
+            [Validation(Required=false)]
+            public string ApplicationCreationType { get; set; }
+
+            /// <summary>
             /// <para>The ID of the application.</para>
             /// 
             /// <b>Example:</b>
@@ -138,6 +146,30 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("ManagedServiceCode")]
             [Validation(Required=false)]
             public string ManagedServiceCode { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
+            [NameInMap("ResourceServerIdentifier")]
+            [Validation(Required=false)]
+            public string ResourceServerIdentifier { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>urn:cloud:idaas:resourceserver:source:custom</para>
+            /// </summary>
+            [NameInMap("ResourceServerSourceType")]
+            [Validation(Required=false)]
+            public string ResourceServerSourceType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>enabled</para>
+            /// </summary>
+            [NameInMap("ResourceServerStatus")]
+            [Validation(Required=false)]
+            public string ResourceServerStatus { get; set; }
 
             /// <summary>
             /// <para>Indicates whether the application template is managed by a cloud service.</para>

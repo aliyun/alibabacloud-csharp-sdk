@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApiInvokeStatus { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>user_custom</para>
+            /// </summary>
+            [NameInMap("ApplicationCreationType")]
+            [Validation(Required=false)]
+            public string ApplicationCreationType { get; set; }
+
+            /// <summary>
             /// <para>The ID of the application.</para>
             /// 
             /// <b>Example:</b>
@@ -193,6 +201,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("ResourceServerIdentifier")]
             [Validation(Required=false)]
             public string ResourceServerIdentifier { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>urn:cloud:idaas:resourceserver:source:custom</para>
+            /// </summary>
+            [NameInMap("ResourceServerSourceType")]
+            [Validation(Required=false)]
+            public string ResourceServerSourceType { get; set; }
 
             /// <summary>
             /// <para>Resource server status.</para>
