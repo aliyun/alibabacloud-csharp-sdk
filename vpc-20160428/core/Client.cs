@@ -17782,6 +17782,246 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Create Route Target Group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>CreateRouteTargetGroup</b> interface is an asynchronous interface, meaning the system will return an instance ID, but the route target group instance has not yet been fully created, and the system\&quot;s background creation task is still in progress. You can call <b>ListRouteTargetGroup</b> to query the creation status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Pending</b> state, it indicates that the route target group is being created.</description></item>
+        /// <item><description>When the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, it indicates that the route target group has been created.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>Active-Standby Mode</b>: When creating a route target group, you need to configure primary and standby instances that are located in different availability zones and have the same type.</description></item>
+        /// <item><description><b>Primary Instance</b>: The weight is 100. Under normal circumstances, it carries all traffic and takes effect when the health check is normal.</description></item>
+        /// <item><description><b>Standby Instance</b>: The weight is 0. It takes over the traffic after the primary instance fails, serving as a disaster recovery backup.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRouteTargetGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRouteTargetGroupResponse
+        /// </returns>
+        public CreateRouteTargetGroupResponse CreateRouteTargetGroupWithOptions(CreateRouteTargetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMode))
+            {
+                query["ConfigMode"] = request.ConfigMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupDescription))
+            {
+                query["RouteTargetGroupDescription"] = request.RouteTargetGroupDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupName))
+            {
+                query["RouteTargetGroupName"] = request.RouteTargetGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetMemberList))
+            {
+                query["RouteTargetMemberList"] = request.RouteTargetMemberList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRouteTargetGroup",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRouteTargetGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create Route Target Group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>CreateRouteTargetGroup</b> interface is an asynchronous interface, meaning the system will return an instance ID, but the route target group instance has not yet been fully created, and the system\&quot;s background creation task is still in progress. You can call <b>ListRouteTargetGroup</b> to query the creation status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Pending</b> state, it indicates that the route target group is being created.</description></item>
+        /// <item><description>When the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, it indicates that the route target group has been created.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>Active-Standby Mode</b>: When creating a route target group, you need to configure primary and standby instances that are located in different availability zones and have the same type.</description></item>
+        /// <item><description><b>Primary Instance</b>: The weight is 100. Under normal circumstances, it carries all traffic and takes effect when the health check is normal.</description></item>
+        /// <item><description><b>Standby Instance</b>: The weight is 0. It takes over the traffic after the primary instance fails, serving as a disaster recovery backup.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRouteTargetGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRouteTargetGroupResponse
+        /// </returns>
+        public async Task<CreateRouteTargetGroupResponse> CreateRouteTargetGroupWithOptionsAsync(CreateRouteTargetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMode))
+            {
+                query["ConfigMode"] = request.ConfigMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupDescription))
+            {
+                query["RouteTargetGroupDescription"] = request.RouteTargetGroupDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupName))
+            {
+                query["RouteTargetGroupName"] = request.RouteTargetGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetMemberList))
+            {
+                query["RouteTargetMemberList"] = request.RouteTargetMemberList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRouteTargetGroup",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRouteTargetGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create Route Target Group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>CreateRouteTargetGroup</b> interface is an asynchronous interface, meaning the system will return an instance ID, but the route target group instance has not yet been fully created, and the system\&quot;s background creation task is still in progress. You can call <b>ListRouteTargetGroup</b> to query the creation status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Pending</b> state, it indicates that the route target group is being created.</description></item>
+        /// <item><description>When the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, it indicates that the route target group has been created.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>Active-Standby Mode</b>: When creating a route target group, you need to configure primary and standby instances that are located in different availability zones and have the same type.</description></item>
+        /// <item><description><b>Primary Instance</b>: The weight is 100. Under normal circumstances, it carries all traffic and takes effect when the health check is normal.</description></item>
+        /// <item><description><b>Standby Instance</b>: The weight is 0. It takes over the traffic after the primary instance fails, serving as a disaster recovery backup.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRouteTargetGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRouteTargetGroupResponse
+        /// </returns>
+        public CreateRouteTargetGroupResponse CreateRouteTargetGroup(CreateRouteTargetGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRouteTargetGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create Route Target Group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>CreateRouteTargetGroup</b> interface is an asynchronous interface, meaning the system will return an instance ID, but the route target group instance has not yet been fully created, and the system\&quot;s background creation task is still in progress. You can call <b>ListRouteTargetGroup</b> to query the creation status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Pending</b> state, it indicates that the route target group is being created.</description></item>
+        /// <item><description>When the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, it indicates that the route target group has been created.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>Active-Standby Mode</b>: When creating a route target group, you need to configure primary and standby instances that are located in different availability zones and have the same type.</description></item>
+        /// <item><description><b>Primary Instance</b>: The weight is 100. Under normal circumstances, it carries all traffic and takes effect when the health check is normal.</description></item>
+        /// <item><description><b>Standby Instance</b>: The weight is 0. It takes over the traffic after the primary instance fails, serving as a disaster recovery backup.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateRouteTargetGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRouteTargetGroupResponse
+        /// </returns>
+        public async Task<CreateRouteTargetGroupResponse> CreateRouteTargetGroupAsync(CreateRouteTargetGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRouteTargetGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a router interface.</para>
         /// </summary>
         /// 
@@ -31494,6 +31734,194 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteRouteTableWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Route Target Group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>DeleteRouteTargetGroup</b> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been successfully deleted as the deletion task is still in progress in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Deleting</b> state, it indicates that the route target group is being deleted.</description></item>
+        /// <item><description>If you cannot find the specified route target group, it means the route target group has been successfully deleted.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteTargetGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteTargetGroupResponse
+        /// </returns>
+        public DeleteRouteTargetGroupResponse DeleteRouteTargetGroupWithOptions(DeleteRouteTargetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupId))
+            {
+                query["RouteTargetGroupId"] = request.RouteTargetGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRouteTargetGroup",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRouteTargetGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Route Target Group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>DeleteRouteTargetGroup</b> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been successfully deleted as the deletion task is still in progress in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Deleting</b> state, it indicates that the route target group is being deleted.</description></item>
+        /// <item><description>If you cannot find the specified route target group, it means the route target group has been successfully deleted.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteTargetGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteTargetGroupResponse
+        /// </returns>
+        public async Task<DeleteRouteTargetGroupResponse> DeleteRouteTargetGroupWithOptionsAsync(DeleteRouteTargetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupId))
+            {
+                query["RouteTargetGroupId"] = request.RouteTargetGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRouteTargetGroup",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRouteTargetGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Route Target Group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>DeleteRouteTargetGroup</b> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been successfully deleted as the deletion task is still in progress in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Deleting</b> state, it indicates that the route target group is being deleted.</description></item>
+        /// <item><description>If you cannot find the specified route target group, it means the route target group has been successfully deleted.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteTargetGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteTargetGroupResponse
+        /// </returns>
+        public DeleteRouteTargetGroupResponse DeleteRouteTargetGroup(DeleteRouteTargetGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteRouteTargetGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete Route Target Group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>DeleteRouteTargetGroup</b> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been successfully deleted as the deletion task is still in progress in the background. You can call ListRouteTargetGroup to query the deletion status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Deleting</b> state, it indicates that the route target group is being deleted.</description></item>
+        /// <item><description>If you cannot find the specified route target group, it means the route target group has been successfully deleted.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteRouteTargetGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRouteTargetGroupResponse
+        /// </returns>
+        public async Task<DeleteRouteTargetGroupResponse> DeleteRouteTargetGroupAsync(DeleteRouteTargetGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteRouteTargetGroupWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -54982,6 +55410,170 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Get the route target group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Get the information of the route target group instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRouteTargetGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRouteTargetGroupResponse
+        /// </returns>
+        public GetRouteTargetGroupResponse GetRouteTargetGroupWithOptions(GetRouteTargetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupId))
+            {
+                query["RouteTargetGroupId"] = request.RouteTargetGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRouteTargetGroup",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRouteTargetGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the route target group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Get the information of the route target group instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRouteTargetGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRouteTargetGroupResponse
+        /// </returns>
+        public async Task<GetRouteTargetGroupResponse> GetRouteTargetGroupWithOptionsAsync(GetRouteTargetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupId))
+            {
+                query["RouteTargetGroupId"] = request.RouteTargetGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRouteTargetGroup",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRouteTargetGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the route target group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Get the information of the route target group instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRouteTargetGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRouteTargetGroupResponse
+        /// </returns>
+        public GetRouteTargetGroupResponse GetRouteTargetGroup(GetRouteTargetGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRouteTargetGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the route target group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Get the information of the route target group instance.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRouteTargetGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRouteTargetGroupResponse
+        /// </returns>
+        public async Task<GetRouteTargetGroupResponse> GetRouteTargetGroupAsync(GetRouteTargetGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRouteTargetGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the status of the traffic mirror feature.</para>
         /// </summary>
         /// 
@@ -59600,6 +60192,210 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListPublicIpAddressPoolsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch query for route target groups</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the route target groups.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRouteTargetGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRouteTargetGroupsResponse
+        /// </returns>
+        public ListRouteTargetGroupsResponse ListRouteTargetGroupsWithOptions(ListRouteTargetGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupIds))
+            {
+                query["RouteTargetGroupIds"] = request.RouteTargetGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRouteTargetGroups",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRouteTargetGroupsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch query for route target groups</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the route target groups.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRouteTargetGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRouteTargetGroupsResponse
+        /// </returns>
+        public async Task<ListRouteTargetGroupsResponse> ListRouteTargetGroupsWithOptionsAsync(ListRouteTargetGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupIds))
+            {
+                query["RouteTargetGroupIds"] = request.RouteTargetGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRouteTargetGroups",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRouteTargetGroupsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch query for route target groups</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the route target groups.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRouteTargetGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRouteTargetGroupsResponse
+        /// </returns>
+        public ListRouteTargetGroupsResponse ListRouteTargetGroups(ListRouteTargetGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListRouteTargetGroupsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch query for route target groups</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the route target groups.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRouteTargetGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRouteTargetGroupsResponse
+        /// </returns>
+        public async Task<ListRouteTargetGroupsResponse> ListRouteTargetGroupsAsync(ListRouteTargetGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListRouteTargetGroupsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -79428,6 +80224,170 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Switch Active and Standby For RouteTargetGroup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Switch Active and Standby For RouteTargetGroup.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchActiveRouteTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchActiveRouteTargetResponse
+        /// </returns>
+        public SwitchActiveRouteTargetResponse SwitchActiveRouteTargetWithOptions(SwitchActiveRouteTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupId))
+            {
+                query["RouteTargetGroupId"] = request.RouteTargetGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SwitchActiveRouteTarget",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SwitchActiveRouteTargetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switch Active and Standby For RouteTargetGroup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Switch Active and Standby For RouteTargetGroup.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchActiveRouteTargetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchActiveRouteTargetResponse
+        /// </returns>
+        public async Task<SwitchActiveRouteTargetResponse> SwitchActiveRouteTargetWithOptionsAsync(SwitchActiveRouteTargetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupId))
+            {
+                query["RouteTargetGroupId"] = request.RouteTargetGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SwitchActiveRouteTarget",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SwitchActiveRouteTargetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switch Active and Standby For RouteTargetGroup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Switch Active and Standby For RouteTargetGroup.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchActiveRouteTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchActiveRouteTargetResponse
+        /// </returns>
+        public SwitchActiveRouteTargetResponse SwitchActiveRouteTarget(SwitchActiveRouteTargetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SwitchActiveRouteTargetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Switch Active and Standby For RouteTargetGroup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Switch Active and Standby For RouteTargetGroup.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchActiveRouteTargetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchActiveRouteTargetResponse
+        /// </returns>
+        public async Task<SwitchActiveRouteTargetResponse> SwitchActiveRouteTargetAsync(SwitchActiveRouteTargetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SwitchActiveRouteTargetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates and adds tags to resources.</para>
         /// </summary>
         /// 
@@ -84256,6 +85216,210 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdatePublicIpAddressPoolAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update Route Target Group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>UpdateRouteTargetGroup</b> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been fully updated, and the system\&quot;s background update task is still in progress. You can call ListRouteTargetGroup to query the update status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Updating</b> state, it indicates that the route target group is being created.</description></item>
+        /// <item><description>When the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, it indicates that the route target group has completed its update.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRouteTargetGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRouteTargetGroupResponse
+        /// </returns>
+        public UpdateRouteTargetGroupResponse UpdateRouteTargetGroupWithOptions(UpdateRouteTargetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupDescription))
+            {
+                query["RouteTargetGroupDescription"] = request.RouteTargetGroupDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupId))
+            {
+                query["RouteTargetGroupId"] = request.RouteTargetGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupName))
+            {
+                query["RouteTargetGroupName"] = request.RouteTargetGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetMemberList))
+            {
+                query["RouteTargetMemberList"] = request.RouteTargetMemberList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRouteTargetGroup",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRouteTargetGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update Route Target Group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>UpdateRouteTargetGroup</b> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been fully updated, and the system\&quot;s background update task is still in progress. You can call ListRouteTargetGroup to query the update status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Updating</b> state, it indicates that the route target group is being created.</description></item>
+        /// <item><description>When the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, it indicates that the route target group has completed its update.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRouteTargetGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRouteTargetGroupResponse
+        /// </returns>
+        public async Task<UpdateRouteTargetGroupResponse> UpdateRouteTargetGroupWithOptionsAsync(UpdateRouteTargetGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupDescription))
+            {
+                query["RouteTargetGroupDescription"] = request.RouteTargetGroupDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupId))
+            {
+                query["RouteTargetGroupId"] = request.RouteTargetGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetGroupName))
+            {
+                query["RouteTargetGroupName"] = request.RouteTargetGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTargetMemberList))
+            {
+                query["RouteTargetMemberList"] = request.RouteTargetMemberList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateRouteTargetGroup",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateRouteTargetGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update Route Target Group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>UpdateRouteTargetGroup</b> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been fully updated, and the system\&quot;s background update task is still in progress. You can call ListRouteTargetGroup to query the update status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Updating</b> state, it indicates that the route target group is being created.</description></item>
+        /// <item><description>When the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, it indicates that the route target group has completed its update.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRouteTargetGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRouteTargetGroupResponse
+        /// </returns>
+        public UpdateRouteTargetGroupResponse UpdateRouteTargetGroup(UpdateRouteTargetGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateRouteTargetGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update Route Target Group</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>UpdateRouteTargetGroup</b> interface is an asynchronous API, meaning the system will return a request ID, but the route target group has not yet been fully updated, and the system\&quot;s background update task is still in progress. You can call ListRouteTargetGroup to query the update status of the route target group:<list type="bullet">
+        /// <item><description>When the route target group is in the <b>Updating</b> state, it indicates that the route target group is being created.</description></item>
+        /// <item><description>When the route target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, it indicates that the route target group has completed its update.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateRouteTargetGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateRouteTargetGroupResponse
+        /// </returns>
+        public async Task<UpdateRouteTargetGroupResponse> UpdateRouteTargetGroupAsync(UpdateRouteTargetGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateRouteTargetGroupWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
