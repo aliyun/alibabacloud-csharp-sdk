@@ -9465,6 +9465,114 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101
             return await DescribeDomainBpsWithOptionsAsync(request, runtime);
         }
 
+        /// <param name="request">
+        /// DescribeDomainCcProtectSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainCcProtectSwitchResponse
+        /// </returns>
+        public DescribeDomainCcProtectSwitchResponse DescribeDomainCcProtectSwitchWithOptions(DescribeDomainCcProtectSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domains))
+            {
+                query["Domains"] = request.Domains;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDomainCcProtectSwitch",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDomainCcProtectSwitchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DescribeDomainCcProtectSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainCcProtectSwitchResponse
+        /// </returns>
+        public async Task<DescribeDomainCcProtectSwitchResponse> DescribeDomainCcProtectSwitchWithOptionsAsync(DescribeDomainCcProtectSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domains))
+            {
+                query["Domains"] = request.Domains;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDomainCcProtectSwitch",
+                Version = "2020-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDomainCcProtectSwitchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// DescribeDomainCcProtectSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainCcProtectSwitchResponse
+        /// </returns>
+        public DescribeDomainCcProtectSwitchResponse DescribeDomainCcProtectSwitch(DescribeDomainCcProtectSwitchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDomainCcProtectSwitchWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// DescribeDomainCcProtectSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDomainCcProtectSwitchResponse
+        /// </returns>
+        public async Task<DescribeDomainCcProtectSwitchResponse> DescribeDomainCcProtectSwitchAsync(DescribeDomainCcProtectSwitchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDomainCcProtectSwitchWithOptionsAsync(request, runtime);
+        }
+
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the information about HTTP/2 fingerprints of a website.</para>
