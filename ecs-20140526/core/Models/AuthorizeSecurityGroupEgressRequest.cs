@@ -158,14 +158,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The security group rules. You can specify 1 to 100 security group rules.</para>
+        /// <para>An array of security group rules. You can specify 1 to 100 security group rules.</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
         public List<AuthorizeSecurityGroupEgressRequestPermissions> Permissions { get; set; }
         public class AuthorizeSecurityGroupEgressRequestPermissions : TeaModel {
             /// <summary>
-            /// <para>The description of the security group rule. The description must be 1 to 512 characters in length.</para>
+            /// <para>The description of the security group rule. The description can be up to 1 to 512 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is description.</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DestCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the destination security group.</para>
+            /// <para>The ID of the destination security group that is specified in the security group rule.</para>
             /// <list type="bullet">
             /// <item><description>You must specify at least one of the following parameters: <c>DestGroupId</c>, <c>DestCidrIp</c>, <c>Ipv6DestCidrIp</c>, and <c>DestPrefixListId</c>.</description></item>
             /// <item><description>If you specify <c>DestGroupId</c> but do not specify <c>DestCidrIp</c>, you must set <c>NicType</c> to intranet.</description></item>
@@ -229,9 +229,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The ID of the destination prefix list. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</para>
-            /// <para>When you specify this parameter, take note of the following items:</para>
+            /// <para>Notes:</para>
             /// <list type="bullet">
-            /// <item><description>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</description></item>
+            /// <item><description>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas on ECS&quot; topic.</description></item>
             /// <item><description>If you specify <c>DestCidrIp</c>, <c>Ipv6DestCidrIp</c>, or <c>DestGroupId</c>, this parameter is ignored.</description></item>
             /// </list>
             /// 
@@ -243,14 +243,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DestPrefixListId { get; set; }
 
             /// <summary>
-            /// <para>The protocol. The values of this parameter are case-insensitive. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</para>
+            /// <para>Network Layer /transport layer protocol. Two types of assignments are supported:</para>
+            /// <ol>
+            /// <item><description>The case-insensitive protocol name. Valid value:</description></item>
+            /// </ol>
             /// <list type="bullet">
-            /// <item><description>TCP.</description></item>
-            /// <item><description>UDP.</description></item>
-            /// <item><description>ICMP.</description></item>
-            /// <item><description>ICMPv6.</description></item>
-            /// <item><description>GRE.</description></item>
-            /// <item><description>ALL: All protocols are supported.</description></item>
+            /// <item><description>ICMP</description></item>
+            /// <item><description>GRE</description></item>
+            /// <item><description>TCP</description></item>
+            /// <item><description>UDP</description></item>
+            /// <item><description>ALL: supports all protocols.</description></item>
+            /// </list>
+            /// <ol start="2">
+            /// <item><description>The value of the IANA-compliant protocol number, which is an integer from 0 to 255. List of regions currently available:</description></item>
+            /// </ol>
+            /// <list type="bullet">
+            /// <item><description>Philippines (Manila)</description></item>
+            /// <item><description>UK (London)</description></item>
+            /// <item><description>Malaysia (Kuala Lumpur)</description></item>
+            /// <item><description>China (Hohhot)</description></item>
+            /// <item><description>China (Qingdao)</description></item>
+            /// <item><description>US (Silicon Valley)</description></item>
+            /// <item><description>Singapore</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -263,7 +277,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The destination IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</para>
             /// <remarks>
-            /// <para> This parameter is valid only for ECS instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify this parameter and <c>DestCidrIp</c> in the same request.</para>
+            /// <para> This parameter is valid only for VPC-type ECS instances that support IPv6. This parameter and the <c>DestCidrIp</c> parameter cannot be set at the same time.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -274,10 +288,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Ipv6DestCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The source IPv6 CIDR block or IPv6 address.</para>
-            /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
+            /// <para>The source IPv6 CIDR block of the security group rule. or IPv6 address.</para>
+            /// <para>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
             /// <remarks>
-            /// <para> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and <c>DestCidrIp</c> in the same request.</para>
+            /// <para> This parameter is valid only for ECS instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify this parameter and <c>DestCidrIp</c> in the same request.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -288,7 +302,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Ipv6SourceCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</para>
+            /// <para>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>internet: public NIC.</para>
             /// </description></item>
@@ -309,7 +323,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NicType { get; set; }
 
             /// <summary>
-            /// <para>The action of the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</para>
+            /// <para>The action of the security group rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>accept: allows outbound access.</description></item>
             /// <item><description>drop: denies outbound access and returns no responses. In this case, the request times out or the connection cannot be established.</description></item>
@@ -324,12 +338,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The range of destination port numbers for the protocols specified in the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</para>
+            /// <para>The destination port range of the security group rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
-            /// <item><description>If you set IpProtocol to ICMP, the port number range is -1/-1.</description></item>
-            /// <item><description>If the IpProtocol parameter is set to GRE, the port number range is -1/-1, which indicates all ports.</description></item>
-            /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1.</description></item>
+            /// <item><description>TCP/UDP: Valid values: 1 to 65535. Use a forward slash (/) to separate the start and end ports. Example: 1/200.</description></item>
+            /// <item><description>ICMP:-1/-1.</description></item>
+            /// <item><description>GRE:-1/-1.</description></item>
+            /// <item><description>ALL:-1/-1.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -340,6 +354,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PortRange { get; set; }
 
             /// <summary>
+            /// <para>The ID of the port list. You can call the <c>DescribePortRangeLists</c> operation to query the IDs of available prefix lists.</para>
+            /// <list type="bullet">
+            /// <item><description>If you specify <c>Permissions.N.PortRange</c>, this parameter is ignored.</description></item>
+            /// <item><description>If a security group resides in the classic network, you cannot reference port lists in the rules of the security group. For more information about limits on security groups and ports, see <a href="~~25412#SecurityGroupQuota1~~">Limits on security groups</a>.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>prl-2ze9743****</para>
             /// </summary>
@@ -348,7 +368,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PortRangeListId { get; set; }
 
             /// <summary>
-            /// <para>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</para>
+            /// <para>The priority of security group rule N. A smaller value specifies a higher priority. Valid values: 1 to 100.</para>
             /// <para>Default value: 1.</para>
             /// 
             /// <b>Example:</b>
@@ -359,8 +379,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The source IPv4 CIDR blocks and IPv4 addresses are supported.</para>
-            /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
+            /// <para>The source IPv4 CIDR block of the security group rule. IPv4 CIDR blocks and IPv4 addresses are supported.</para>
+            /// <para>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.0.0/8</para>
@@ -370,12 +390,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SourceCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The range of source port numbers for the protocols specified in the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</para>
+            /// <para>The source port range of the security group rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.</description></item>
-            /// <item><description>If you set IpProtocol to ICMP, the port number range is -1/-1.</description></item>
-            /// <item><description>If you set IpProtocol to GRE, the port number range is -1/-1.</description></item>
-            /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1.</description></item>
+            /// <item><description>TCP/UDP protocol: 1 to 65535. Use a forward slash (/) to separate the start and end ports. Example: 1/200.</description></item>
+            /// <item><description>ICMP protocol:-1/-1.</description></item>
+            /// <item><description>GRE protocol:-1/-1.</description></item>
+            /// <item><description>ALL:-1/-1.</description></item>
             /// </list>
             /// <para>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
             /// 

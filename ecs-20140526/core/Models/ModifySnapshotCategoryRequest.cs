@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifySnapshotCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the snapshot. Valid value:</para>
+        /// <para>The type of the snapshot.</para>
         /// <list type="bullet">
         /// <item><description>Archive: archive snapshot</description></item>
         /// </list>

@@ -576,19 +576,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// <para>QoS Speed Limit Settings</para>
+        /// </summary>
         [NameInMap("QoSConfig")]
         [Validation(Required=false)]
         public DescribeNetworkInterfaceAttributeResponseBodyQoSConfig QoSConfig { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyQoSConfig : TeaModel {
+            /// <summary>
+            /// <para>Whether to enable QoS speed limit settings</para>
+            /// </summary>
             [NameInMap("EnableQoS")]
             [Validation(Required=false)]
             public bool? EnableQoS { get; set; }
 
+            /// <summary>
+            /// <para>QoS Speed Limit Settings</para>
+            /// </summary>
             [NameInMap("QoS")]
             [Validation(Required=false)]
             public DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS QoS { get; set; }
             public class DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS : TeaModel {
                 /// <summary>
+                /// <para>maximum inbound internal bandwidth</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>50000</para>
                 /// </summary>
@@ -597,6 +608,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? BandwidthRx { get; set; }
 
                 /// <summary>
+                /// <para>Maximum outbound internal bandwidth</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>50000</para>
                 /// </summary>
@@ -605,6 +618,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? BandwidthTx { get; set; }
 
                 /// <summary>
+                /// <para>Maximum number of sessions</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>50000</para>
                 /// </summary>
@@ -613,6 +628,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? ConcurrentConnections { get; set; }
 
                 /// <summary>
+                /// <para>Inbound packet forwarding rate over the internal network</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>50000</para>
                 /// </summary>
@@ -621,6 +638,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? PpsRx { get; set; }
 
                 /// <summary>
+                /// <para>Outbound packet forwarding rate over the internal network</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>50000</para>
                 /// </summary>

@@ -108,10 +108,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The method that you want to use to resize the disk. Specifies whether to check the image used by the instance supports hot migration. Valid values:</para>
+        /// <para>The method that you want to use to resize the disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>offline (default): resizes the disk offline. After you resize a disk offline, you must <a href="https://help.aliyun.com/document_detail/25440.html">restart the associated instance</a> in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the resizing operation to take effect.</description></item>
-        /// <item><description>online: resizes the disk online. After you resize a disk online, the resizing operation immediately takes effect. You do not need to restart the associated instance. You can resize ultra disks, standard SSDs, ESSDs, and elastic ephemeral disks online.</description></item>
+        /// <item><description>offline (default): resizes the disk offline. After resizing a disk offline, you must <a href="https://help.aliyun.com/document_detail/25440.html">restart the instance</a> in the console or call an API operation <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> make the operation take effect.</description></item>
+        /// <item><description>online: resizes the disk online without the need to restart the instance. You can resize ultra disks, standard SSDs, ESSDs, and elastic ephemeral disks online.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

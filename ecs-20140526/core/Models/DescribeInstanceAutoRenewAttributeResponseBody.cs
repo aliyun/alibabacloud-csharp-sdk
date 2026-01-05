@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public int? Duration { get; set; }
 
+                [NameInMap("EnableExpectedRenewDay")]
+                [Validation(Required=false)]
+                public bool? EnableExpectedRenewDay { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the instance.</para>
                 /// 

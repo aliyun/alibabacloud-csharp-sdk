@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ActivationId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Connected")]
         [Validation(Required=false)]
         public string Connected { get; set; }

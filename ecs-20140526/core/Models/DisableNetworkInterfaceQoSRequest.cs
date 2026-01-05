@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DisableNetworkInterfaceQoSRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the ENI.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
