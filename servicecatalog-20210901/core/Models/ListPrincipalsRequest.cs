@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class ListPrincipalsRequest : TeaModel {
         /// <summary>
-        /// The ID of the product portfolio.
+        /// <para>The ID of the product portfolio.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>port-bp1yt7582g****</para>
         /// </summary>
         [NameInMap("PortfolioId")]
         [Validation(Required=false)]

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class CancelProvisionedProductPlanRequest : TeaModel {
         /// <summary>
-        /// The ID of the plan.
+        /// <para>The ID of the plan.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>plan-bp1jvmdk2k****</para>
         /// </summary>
         [NameInMap("PlanId")]
         [Validation(Required=false)]

@@ -1,3 +1,6 @@
+2026-01-05 Version: 1.0.2
+- Generated csharp 2021-09-01 for servicecatalog.
+
 2024-02-27 Version: 1.0.1
 - Update API CreateProduct: add param TemplateType.
 - Update API CreateProduct: update param ProductVersionParameters.

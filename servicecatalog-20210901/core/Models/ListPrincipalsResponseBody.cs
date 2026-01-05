@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class ListPrincipalsResponseBody : TeaModel {
         /// <summary>
-        /// The RAM entities.
+        /// <para>The RAM entities.</para>
         /// </summary>
         [NameInMap("Principals")]
         [Validation(Required=false)]
         public List<ListPrincipalsResponseBodyPrincipals> Principals { get; set; }
         public class ListPrincipalsResponseBodyPrincipals : TeaModel {
             /// <summary>
-            /// The ID of the RAM entity.
+            /// <para>The ID of the RAM entity.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>24477111603637****</para>
             /// </summary>
             [NameInMap("PrincipalId")]
             [Validation(Required=false)]
             public string PrincipalId { get; set; }
 
             /// <summary>
-            /// The type of the RAM entity. Valid values:
+            /// <para>The type of the RAM entity. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>RamUser: a RAM user</description></item>
+            /// <item><description>RamRole: a RAM role</description></item>
+            /// </list>
             /// 
-            /// *   RamUser: a RAM user
-            /// *   RamRole: a RAM role
+            /// <b>Example:</b>
+            /// <para>RamUser</para>
             /// </summary>
             [NameInMap("PrincipalType")]
             [Validation(Required=false)]
@@ -36,7 +43,10 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
         }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

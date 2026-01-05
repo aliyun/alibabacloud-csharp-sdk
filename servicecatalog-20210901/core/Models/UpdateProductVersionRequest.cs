@@ -10,47 +10,67 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class UpdateProductVersionRequest : TeaModel {
         /// <summary>
-        /// Specifies whether to enable the product version. Valid values:
+        /// <para>Specifies whether to enable the product version. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: enables the product version. This is the default value.</description></item>
+        /// <item><description>false: disables the product version.</description></item>
+        /// </list>
         /// 
-        /// *   true: enables the product version. This is the default value.
-        /// *   false: disables the product version.
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Active")]
         [Validation(Required=false)]
         public bool? Active { get; set; }
 
         /// <summary>
-        /// The description of the product version.
+        /// <para>The description of the product version.</para>
+        /// <para>The value must be 1 to 128 characters in length.</para>
         /// 
-        /// The value must be 1 to 128 characters in length.
+        /// <b>Example:</b>
+        /// <para>The description of the product version.</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The recommendation information. Valid values:
+        /// <para>The recommendation information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Default: No recommendation information is provided. This is the default value.</description></item>
+        /// <item><description>Recommended: the recommended version.</description></item>
+        /// <item><description>Latest: the latest version.</description></item>
+        /// <item><description>Deprecated: the version that is about to be discontinued.</description></item>
+        /// </list>
         /// 
-        /// *   Default: No recommendation information is provided. This is the default value.
-        /// *   Recommended: the recommended version.
-        /// *   Latest: the latest version.
-        /// *   Deprecated: the version that is about to be discontinued.
+        /// <b>Example:</b>
+        /// <para>Default</para>
         /// </summary>
         [NameInMap("Guidance")]
         [Validation(Required=false)]
         public string Guidance { get; set; }
 
         /// <summary>
-        /// The ID of the product version.
+        /// <para>The ID of the product version.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pv-bp15e79d26****</para>
         /// </summary>
         [NameInMap("ProductVersionId")]
         [Validation(Required=false)]
         public string ProductVersionId { get; set; }
 
         /// <summary>
-        /// The name of the product version.
+        /// <para>The name of the product version.</para>
+        /// <para>The value must be 1 to 128 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The value must be 1 to 128 characters in length.
+        /// <b>Example:</b>
+        /// <para>1.0</para>
         /// </summary>
         [NameInMap("ProductVersionName")]
         [Validation(Required=false)]

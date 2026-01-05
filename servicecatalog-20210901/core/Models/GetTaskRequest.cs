@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class GetTaskRequest : TeaModel {
         /// <summary>
-        /// The ID of the task.
+        /// <para>The ID of the task.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>task-bp1dmg242c****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

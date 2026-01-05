@@ -10,24 +10,31 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class ListProductsAsEndUserRequest : TeaModel {
         /// <summary>
-        /// The filter conditions.
+        /// <para>The filter conditions.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<ListProductsAsEndUserRequestFilters> Filters { get; set; }
         public class ListProductsAsEndUserRequestFilters : TeaModel {
             /// <summary>
-            /// The name of the filter condition. Valid values:
+            /// <para>The name of the filter condition. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ProductName: performs exact matches by product name. Product names are not case-sensitive.</description></item>
+            /// <item><description>FullTextSearch: performs full-text searches by product name, product provider, or product description. Fuzzy match is supported.</description></item>
+            /// </list>
             /// 
-            /// *   ProductName: performs exact matches by product name. Product names are not case-sensitive.
-            /// *   FullTextSearch: performs full-text searches by product name, product provider, or product description. Fuzzy match is supported.
+            /// <b>Example:</b>
+            /// <para>ProductName</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The value of the filter condition.
+            /// <para>The value of the filter condition.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DEMO-Create an ECS instance</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -36,37 +43,47 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
         }
 
         /// <summary>
-        /// The number of the page to return.
+        /// <para>The number of the page to return.</para>
+        /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
-        /// Pages start from page 1. Default value: 1.
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// The number of entries to return on each page.
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
-        /// Valid values: 1 to 100. Default value: 10.
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// The field that is used to sort the queried data.
+        /// <para>The field that is used to sort data.</para>
+        /// <para>The default value is CreateTime, which specifies the time when the product was created.</para>
         /// 
-        /// Set the value to CreateTime, which specifies the time when the product was created.
+        /// <b>Example:</b>
+        /// <para>CreateTime</para>
         /// </summary>
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
         /// <summary>
-        /// The order in which you want to sort the queried data. Valid values:
+        /// <para>The method that is used to sort the returned entries. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Asc: sorts the entries in ascending order.</description></item>
+        /// <item><description>Desc (default): sorts the entries in descending order.</description></item>
+        /// </list>
         /// 
-        /// *   Asc: the ascending order
-        /// *   Desc: the descending order
+        /// <b>Example:</b>
+        /// <para>Desc</para>
         /// </summary>
         [NameInMap("SortOrder")]
         [Validation(Required=false)]

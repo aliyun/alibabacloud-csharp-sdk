@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class AssociateTagOptionWithResourceResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DC833558-AFF4-5935-9AB6-8A12EE7D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

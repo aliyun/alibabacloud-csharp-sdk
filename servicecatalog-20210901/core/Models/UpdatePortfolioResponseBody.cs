@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class UpdatePortfolioResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>port-bp1yt7582g****</para>
+        /// </summary>
         [NameInMap("PortfolioId")]
         [Validation(Required=false)]
         public string PortfolioId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class GetConstraintRequest : TeaModel {
         /// <summary>
-        /// The ID of the constraint.
+        /// <para>The ID of the constraint.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cons-bp1yx7x42v****</para>
         /// </summary>
         [NameInMap("ConstraintId")]
         [Validation(Required=false)]

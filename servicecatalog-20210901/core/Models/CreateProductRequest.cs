@@ -10,92 +10,119 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class CreateProductRequest : TeaModel {
         /// <summary>
-        /// The description of the product.
+        /// <para>The description of the product.</para>
+        /// <para>The value must be 1 to 128 characters in length.</para>
         /// 
-        /// The value must be 1 to 128 characters in length.
+        /// <b>Example:</b>
+        /// <para>The description of the product.</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// The name of the product.
+        /// <para>The name of the product.</para>
+        /// <para>The value must be 1 to 128 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The value must be 1 to 128 characters in length.
+        /// <b>Example:</b>
+        /// <para>DEMO-Create an ECS instance</para>
         /// </summary>
         [NameInMap("ProductName")]
         [Validation(Required=false)]
         public string ProductName { get; set; }
 
         /// <summary>
-        /// The type of the product.
+        /// <para>The type of the product.</para>
+        /// <para>Set the value to Ros, which specifies Resource Orchestration Service (ROS).</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// Set the value to Ros, which specifies Resource Orchestration Service (ROS).
+        /// <b>Example:</b>
+        /// <para>Ros</para>
         /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
         /// <summary>
-        /// The information about the product version.
+        /// <para>The information about the product version.</para>
         /// </summary>
         [NameInMap("ProductVersionParameters")]
         [Validation(Required=false)]
         public CreateProductRequestProductVersionParameters ProductVersionParameters { get; set; }
         public class CreateProductRequestProductVersionParameters : TeaModel {
             /// <summary>
-            /// Specifies whether to enable the product version. Valid values:
+            /// <para>Specifies whether to enable the product version. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true (default)</description></item>
+            /// <item><description>false</description></item>
+            /// </list>
             /// 
-            /// *   true: enables the product version. This is the default value.
-            /// *   false: disables the product version.
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Active")]
             [Validation(Required=false)]
             public bool? Active { get; set; }
 
             /// <summary>
-            /// The description of the product version.
+            /// <para>The description of the product version.</para>
+            /// <para>The value must be 1 to 128 characters in length.</para>
             /// 
-            /// The value must be 1 to 128 characters in length.
+            /// <b>Example:</b>
+            /// <para>The description of the product version.</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// The recommendation information. Valid values:
+            /// <para>The recommended product version. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Default (default): No product version is recommended.</description></item>
+            /// <item><description>Recommended: the stable version.</description></item>
+            /// <item><description>Latest: the latest version.</description></item>
+            /// <item><description>Deprecated: the version that is about to be deprecated.</description></item>
+            /// </list>
             /// 
-            /// *   Default: No recommendation information is provided. This is the default value.
-            /// *   Recommended: the recommended version.
-            /// *   Latest: the latest version.
-            /// *   Deprecated: the version that is about to be discontinued.
+            /// <b>Example:</b>
+            /// <para>Default</para>
             /// </summary>
             [NameInMap("Guidance")]
             [Validation(Required=false)]
             public string Guidance { get; set; }
 
             /// <summary>
-            /// The name of the product version.
+            /// <para>The name of the product version.</para>
+            /// <para>The value must be 1 to 128 characters in length.</para>
             /// 
-            /// The value must be 1 to 128 characters in length.
+            /// <b>Example:</b>
+            /// <para>1.0</para>
             /// </summary>
             [NameInMap("ProductVersionName")]
             [Validation(Required=false)]
             public string ProductVersionName { get; set; }
 
             /// <summary>
-            /// The type of the template.
+            /// <para>The type of the template.</para>
+            /// <para>Set the value to RosTerraformTemplate, which indicates the Terraform template that is supported by Resource Orchestration Service (ROS).</para>
             /// 
-            /// Set the value to RosTerraformTemplate, which specifies the Terraform template that is supported by ROS.
+            /// <b>Example:</b>
+            /// <para>RosTerraformTemplate</para>
             /// </summary>
             [NameInMap("TemplateType")]
             [Validation(Required=false)]
             public string TemplateType { get; set; }
 
             /// <summary>
-            /// The URL of the template.
-            /// 
-            /// For more information about how to obtain the URL of a template, see [CreateTemplate](~~CreateTemplate~~).
+            /// <para>The URL of the template.</para>
+            /// <para>To obtain the URL of a template, you can call the <a href="~~CreateTemplate~~">CreateTemplate</a> operation.</para>
             /// </summary>
             [NameInMap("TemplateUrl")]
             [Validation(Required=false)]
@@ -104,14 +131,27 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
         }
 
         /// <summary>
-        /// The provider of the product.
+        /// <para>The provider of the product.</para>
+        /// <para>The value must be 1 to 128 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The value must be 1 to 128 characters in length.
+        /// <b>Example:</b>
+        /// <para>IT team</para>
         /// </summary>
         [NameInMap("ProviderName")]
         [Validation(Required=false)]
         public string ProviderName { get; set; }
 
+        /// <summary>
+        /// <para>The type of the product template. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RosTerraformTemplate: the Terraform template that is supported by ROS.</description></item>
+        /// <item><description>RosStandardTemplate: the standard ROS template.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RosTerraformTemplate</para>
+        /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
         public string TemplateType { get; set; }

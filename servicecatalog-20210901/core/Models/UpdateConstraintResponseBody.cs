@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class UpdateConstraintResponseBody : TeaModel {
         /// <summary>
-        /// The ID of the constraint.
+        /// <para>The ID of the constraint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cons-bp1yx7x42v****</para>
         /// </summary>
         [NameInMap("ConstraintId")]
         [Validation(Required=false)]
         public string ConstraintId { get; set; }
 
         /// <summary>
-        /// The ID of the request.
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0FEEF92D-4052-5202-87D0-3D8EC16F81BF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

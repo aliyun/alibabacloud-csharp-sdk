@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class DeleteTagOptionRequest : TeaModel {
         /// <summary>
-        /// The ID of the tag option.
+        /// <para>The ID of the tag option.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tag-bp1u6mdf3d****</para>
         /// </summary>
         [NameInMap("TagOptionId")]
         [Validation(Required=false)]

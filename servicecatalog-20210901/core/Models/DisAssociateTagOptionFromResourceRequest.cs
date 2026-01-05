@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class DisAssociateTagOptionFromResourceRequest : TeaModel {
         /// <summary>
-        /// The ID of the resource with which the tag option is associated.
+        /// <para>The ID of the resource with which the tag option is associated.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>prod-bp14katy3d****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// The ID of the tag option.
+        /// <para>The ID of the tag option.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tag-bp1u6mdf3d****</para>
         /// </summary>
         [NameInMap("TagOptionId")]
         [Validation(Required=false)]

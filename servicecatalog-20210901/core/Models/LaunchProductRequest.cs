@@ -10,25 +10,31 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class LaunchProductRequest : TeaModel {
         /// <summary>
-        /// The input parameters of the template.
-        /// 
-        /// You can specify up to 200 parameters.
-        /// 
-        /// > This parameter is optional. If you specify the Parameters parameter, you must specify the ParameterKey and ParameterValue parameters.
+        /// <para>The input parameters of the template.</para>
+        /// <para>You can specify up to 200 parameters.</para>
+        /// <remarks>
+        /// <para>This parameter is optional. If you specify the Parameters parameter, you must specify the ParameterKey and ParameterValue parameters.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<LaunchProductRequestParameters> Parameters { get; set; }
         public class LaunchProductRequestParameters : TeaModel {
             /// <summary>
-            /// The name of the input parameter for the template.
+            /// <para>The name of the input parameter for the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>instance_type</para>
             /// </summary>
             [NameInMap("ParameterKey")]
             [Validation(Required=false)]
             public string ParameterKey { get; set; }
 
             /// <summary>
-            /// The value of the input parameter for the template.
+            /// <para>The value of the input parameter for the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ecs.s6-c1m1.small</para>
             /// </summary>
             [NameInMap("ParameterValue")]
             [Validation(Required=false)]
@@ -37,74 +43,97 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
         }
 
         /// <summary>
-        /// The ID of the product portfolio.
+        /// <para>The ID of the product portfolio.</para>
+        /// <remarks>
+        /// <para>If the PortfolioId parameter is not required, you do not need to specify the PortfolioId parameter. If the PortfolioId parameter is required, you must specify the PortfolioId parameter. For more information about how to obtain the value of the PortfolioId parameter, see <a href="~~ListLaunchOptions~~">ListLaunchOptions</a>.</para>
+        /// </remarks>
         /// 
-        /// > If the PortfolioId parameter is not required, you do not need to specify the PortfolioId parameter. If the PortfolioId parameter is required, you must specify the PortfolioId parameter. For more information about how to obtain the value of the PortfolioId parameter, see [ListLaunchOptions](~~ListLaunchOptions~~).
+        /// <b>Example:</b>
+        /// <para>port-bp1yt7582g****</para>
         /// </summary>
         [NameInMap("PortfolioId")]
         [Validation(Required=false)]
         public string PortfolioId { get; set; }
 
         /// <summary>
-        /// The ID of the product.
+        /// <para>The ID of the product.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>prod-bp18r7q127****</para>
         /// </summary>
         [NameInMap("ProductId")]
         [Validation(Required=false)]
         public string ProductId { get; set; }
 
         /// <summary>
-        /// The ID of the product version.
+        /// <para>The ID of the product version.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pv-bp15e79d26****</para>
         /// </summary>
         [NameInMap("ProductVersionId")]
         [Validation(Required=false)]
         public string ProductVersionId { get; set; }
 
         /// <summary>
-        /// The name of the product instance.
+        /// <para>The name of the product instance.</para>
+        /// <para>The value must be 1 to 128 characters in length.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// The value must be 1 to 128 characters in length.
+        /// <b>Example:</b>
+        /// <para>DEMO-ECS instance</para>
         /// </summary>
         [NameInMap("ProvisionedProductName")]
         [Validation(Required=false)]
         public string ProvisionedProductName { get; set; }
 
         /// <summary>
-        /// The ID of the region to which the Resource Orchestration Service (ROS) stack belongs.
+        /// <para>The ID of the region to which the Resource Orchestration Service (ROS) stack belongs.</para>
+        /// <para>For more information about how to obtain the regions that are supported by ROS, see <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a>.</para>
+        /// <para>This parameter is required.</para>
         /// 
-        /// For more information about how to obtain the regions that are supported by ROS, see [DescribeRegions](~~131035~~).
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("StackRegionId")]
         [Validation(Required=false)]
         public string StackRegionId { get; set; }
 
         /// <summary>
-        /// The custom tags that are specified by the end user.
-        /// 
-        /// Maximum value of N: 20.
-        /// 
-        /// > 
-        /// 
-        /// *   The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key and Tags.N.Value parameters.
-        /// 
-        /// *   The tag is propagated to each stack resource that supports the tag feature.
+        /// <para>The custom tags that are specified by the end user.</para>
+        /// <para>Maximum value of N: 20.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key and Tags.N.Value parameters.</para>
+        /// </description></item>
+        /// <item><description><para>The tag is propagated to each stack resource that supports the tag feature.</para>
+        /// </description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<LaunchProductRequestTags> Tags { get; set; }
         public class LaunchProductRequestTags : TeaModel {
             /// <summary>
-            /// The tag key of the custom tag.
+            /// <para>The tag key of the custom tag.</para>
+            /// <para>The tag key must be 1 to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
             /// 
-            /// The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
+            /// <b>Example:</b>
+            /// <para>k1</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// The tag value of the custom tag.
+            /// <para>The tag value of the custom tag.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
-            /// The tag value can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
+            /// <b>Example:</b>
+            /// <para>v1</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

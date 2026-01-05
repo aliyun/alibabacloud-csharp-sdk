@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class GetTagOptionRequest : TeaModel {
         /// <summary>
-        /// The ID of the tag option.
+        /// <para>The ID of the tag option.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tag-bp1r3mxq3t****</para>
         /// </summary>
         [NameInMap("TagOptionId")]
         [Validation(Required=false)]

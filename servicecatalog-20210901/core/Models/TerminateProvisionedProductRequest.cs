@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Servicecatalog20210901.Models
 {
     public class TerminateProvisionedProductRequest : TeaModel {
         /// <summary>
-        /// The ID of the product instance.
+        /// <para>The ID of the product instance.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pp-bp1ddg1n2a****</para>
         /// </summary>
         [NameInMap("ProvisionedProductId")]
         [Validation(Required=false)]
