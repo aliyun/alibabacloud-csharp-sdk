@@ -2773,6 +2773,150 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>支持基础版支持clone文件或目录快照</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClonePolarFsBasicSnapshotRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClonePolarFsBasicSnapshotResponse
+        /// </returns>
+        public ClonePolarFsBasicSnapshotResponse ClonePolarFsBasicSnapshotWithOptions(ClonePolarFsBasicSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePath))
+            {
+                query["SourcePath"] = request.SourcePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetPath))
+            {
+                query["TargetPath"] = request.TargetPath;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ClonePolarFsBasicSnapshot",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ClonePolarFsBasicSnapshotResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支持基础版支持clone文件或目录快照</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClonePolarFsBasicSnapshotRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClonePolarFsBasicSnapshotResponse
+        /// </returns>
+        public async Task<ClonePolarFsBasicSnapshotResponse> ClonePolarFsBasicSnapshotWithOptionsAsync(ClonePolarFsBasicSnapshotRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePath))
+            {
+                query["SourcePath"] = request.SourcePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetPath))
+            {
+                query["TargetPath"] = request.TargetPath;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ClonePolarFsBasicSnapshot",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ClonePolarFsBasicSnapshotResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支持基础版支持clone文件或目录快照</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClonePolarFsBasicSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClonePolarFsBasicSnapshotResponse
+        /// </returns>
+        public ClonePolarFsBasicSnapshotResponse ClonePolarFsBasicSnapshot(ClonePolarFsBasicSnapshotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ClonePolarFsBasicSnapshotWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支持基础版支持clone文件或目录快照</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClonePolarFsBasicSnapshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClonePolarFsBasicSnapshotResponse
+        /// </returns>
+        public async Task<ClonePolarFsBasicSnapshotResponse> ClonePolarFsBasicSnapshotAsync(ClonePolarFsBasicSnapshotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ClonePolarFsBasicSnapshotWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>关闭DB4AI</para>
         /// </summary>
         /// 
