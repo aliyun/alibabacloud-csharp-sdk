@@ -1732,6 +1732,190 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建APP-ICP备案对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmsAppIcpRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmsAppIcpRecordResponse
+        /// </returns>
+        public CreateSmsAppIcpRecordResponse CreateSmsAppIcpRecordWithOptions(CreateSmsAppIcpRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppApprovalDate))
+            {
+                query["AppApprovalDate"] = request.AppApprovalDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIcpLicenseNumber))
+            {
+                query["AppIcpLicenseNumber"] = request.AppIcpLicenseNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIcpRecordPic))
+            {
+                query["AppIcpRecordPic"] = request.AppIcpRecordPic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppPrincipalUnitName))
+            {
+                query["AppPrincipalUnitName"] = request.AppPrincipalUnitName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppServiceName))
+            {
+                query["AppServiceName"] = request.AppServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSmsAppIcpRecord",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSmsAppIcpRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建APP-ICP备案对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmsAppIcpRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmsAppIcpRecordResponse
+        /// </returns>
+        public async Task<CreateSmsAppIcpRecordResponse> CreateSmsAppIcpRecordWithOptionsAsync(CreateSmsAppIcpRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppApprovalDate))
+            {
+                query["AppApprovalDate"] = request.AppApprovalDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIcpLicenseNumber))
+            {
+                query["AppIcpLicenseNumber"] = request.AppIcpLicenseNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIcpRecordPic))
+            {
+                query["AppIcpRecordPic"] = request.AppIcpRecordPic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppPrincipalUnitName))
+            {
+                query["AppPrincipalUnitName"] = request.AppPrincipalUnitName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppServiceName))
+            {
+                query["AppServiceName"] = request.AppServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSmsAppIcpRecord",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSmsAppIcpRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建APP-ICP备案对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmsAppIcpRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmsAppIcpRecordResponse
+        /// </returns>
+        public CreateSmsAppIcpRecordResponse CreateSmsAppIcpRecord(CreateSmsAppIcpRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSmsAppIcpRecordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建APP-ICP备案对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmsAppIcpRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmsAppIcpRecordResponse
+        /// </returns>
+        public async Task<CreateSmsAppIcpRecordResponse> CreateSmsAppIcpRecordAsync(CreateSmsAppIcpRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSmsAppIcpRecordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建委托授权书</para>
         /// </summary>
         /// 
@@ -2484,6 +2668,182 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSmsTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建商标对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmsTrademarkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmsTrademarkResponse
+        /// </returns>
+        public CreateSmsTrademarkResponse CreateSmsTrademarkWithOptions(CreateSmsTrademarkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkApplicantName))
+            {
+                query["TrademarkApplicantName"] = request.TrademarkApplicantName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkEffExpDate))
+            {
+                query["TrademarkEffExpDate"] = request.TrademarkEffExpDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkName))
+            {
+                query["TrademarkName"] = request.TrademarkName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkPic))
+            {
+                query["TrademarkPic"] = request.TrademarkPic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkRegistrationNumber))
+            {
+                query["TrademarkRegistrationNumber"] = request.TrademarkRegistrationNumber;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSmsTrademark",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSmsTrademarkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建商标对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmsTrademarkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmsTrademarkResponse
+        /// </returns>
+        public async Task<CreateSmsTrademarkResponse> CreateSmsTrademarkWithOptionsAsync(CreateSmsTrademarkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkApplicantName))
+            {
+                query["TrademarkApplicantName"] = request.TrademarkApplicantName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkEffExpDate))
+            {
+                query["TrademarkEffExpDate"] = request.TrademarkEffExpDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkName))
+            {
+                query["TrademarkName"] = request.TrademarkName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkPic))
+            {
+                query["TrademarkPic"] = request.TrademarkPic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkRegistrationNumber))
+            {
+                query["TrademarkRegistrationNumber"] = request.TrademarkRegistrationNumber;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSmsTrademark",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSmsTrademarkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建商标对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmsTrademarkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmsTrademarkResponse
+        /// </returns>
+        public CreateSmsTrademarkResponse CreateSmsTrademark(CreateSmsTrademarkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSmsTrademarkWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建商标对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSmsTrademarkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSmsTrademarkResponse
+        /// </returns>
+        public async Task<CreateSmsTrademarkResponse> CreateSmsTrademarkAsync(CreateSmsTrademarkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSmsTrademarkWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4862,6 +5222,226 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询模板列表详情（新接口）</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetSmsTemplateListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmsTemplateListResponse
+        /// </returns>
+        public GetSmsTemplateListResponse GetSmsTemplateListWithOptions(GetSmsTemplateListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetSmsTemplateListShrinkRequest request = new GetSmsTemplateListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UsableStateList))
+            {
+                request.UsableStateListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UsableStateList, "UsableStateList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditStatus))
+            {
+                query["AuditStatus"] = request.AuditStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["PageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
+            {
+                query["SignName"] = request.SignName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateTag))
+            {
+                query["TemplateTag"] = request.TemplateTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsableStateListShrink))
+            {
+                query["UsableStateList"] = request.UsableStateListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSmsTemplateList",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSmsTemplateListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模板列表详情（新接口）</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetSmsTemplateListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmsTemplateListResponse
+        /// </returns>
+        public async Task<GetSmsTemplateListResponse> GetSmsTemplateListWithOptionsAsync(GetSmsTemplateListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetSmsTemplateListShrinkRequest request = new GetSmsTemplateListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UsableStateList))
+            {
+                request.UsableStateListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UsableStateList, "UsableStateList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditStatus))
+            {
+                query["AuditStatus"] = request.AuditStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["PageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SignName))
+            {
+                query["SignName"] = request.SignName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                query["TemplateCode"] = request.TemplateCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateTag))
+            {
+                query["TemplateTag"] = request.TemplateTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsableStateListShrink))
+            {
+                query["UsableStateList"] = request.UsableStateListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSmsTemplateList",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSmsTemplateListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模板列表详情（新接口）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmsTemplateListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmsTemplateListResponse
+        /// </returns>
+        public GetSmsTemplateListResponse GetSmsTemplateList(GetSmsTemplateListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSmsTemplateListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模板列表详情（新接口）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSmsTemplateListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSmsTemplateListResponse
+        /// </returns>
+        public async Task<GetSmsTemplateListResponse> GetSmsTemplateListAsync(GetSmsTemplateListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSmsTemplateListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the tags of a message template.</para>
         /// </summary>
         /// 
@@ -7078,6 +7658,162 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询APP-ICP备案对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QuerySmsAppIcpRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsAppIcpRecordResponse
+        /// </returns>
+        public QuerySmsAppIcpRecordResponse QuerySmsAppIcpRecordWithOptions(QuerySmsAppIcpRecordRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QuerySmsAppIcpRecordShrinkRequest request = new QuerySmsAppIcpRecordShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AppIcpRecordIdList))
+            {
+                request.AppIcpRecordIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AppIcpRecordIdList, "AppIcpRecordIdList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIcpRecordIdListShrink))
+            {
+                query["AppIcpRecordIdList"] = request.AppIcpRecordIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySmsAppIcpRecord",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySmsAppIcpRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询APP-ICP备案对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QuerySmsAppIcpRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsAppIcpRecordResponse
+        /// </returns>
+        public async Task<QuerySmsAppIcpRecordResponse> QuerySmsAppIcpRecordWithOptionsAsync(QuerySmsAppIcpRecordRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QuerySmsAppIcpRecordShrinkRequest request = new QuerySmsAppIcpRecordShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AppIcpRecordIdList))
+            {
+                request.AppIcpRecordIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AppIcpRecordIdList, "AppIcpRecordIdList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIcpRecordIdListShrink))
+            {
+                query["AppIcpRecordIdList"] = request.AppIcpRecordIdListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySmsAppIcpRecord",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySmsAppIcpRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询APP-ICP备案对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySmsAppIcpRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsAppIcpRecordResponse
+        /// </returns>
+        public QuerySmsAppIcpRecordResponse QuerySmsAppIcpRecord(QuerySmsAppIcpRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QuerySmsAppIcpRecordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询APP-ICP备案对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySmsAppIcpRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsAppIcpRecordResponse
+        /// </returns>
+        public async Task<QuerySmsAppIcpRecordResponse> QuerySmsAppIcpRecordAsync(QuerySmsAppIcpRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QuerySmsAppIcpRecordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询委托授权书</para>
         /// </summary>
         /// 
@@ -8190,6 +8926,162 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QuerySmsTemplateListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询商标对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QuerySmsTrademarkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsTrademarkResponse
+        /// </returns>
+        public QuerySmsTrademarkResponse QuerySmsTrademarkWithOptions(QuerySmsTrademarkRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QuerySmsTrademarkShrinkRequest request = new QuerySmsTrademarkShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TrademarkIdList))
+            {
+                request.TrademarkIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TrademarkIdList, "TrademarkIdList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkIdListShrink))
+            {
+                query["TrademarkIdList"] = request.TrademarkIdListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySmsTrademark",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySmsTrademarkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询商标对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QuerySmsTrademarkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsTrademarkResponse
+        /// </returns>
+        public async Task<QuerySmsTrademarkResponse> QuerySmsTrademarkWithOptionsAsync(QuerySmsTrademarkRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QuerySmsTrademarkShrinkRequest request = new QuerySmsTrademarkShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TrademarkIdList))
+            {
+                request.TrademarkIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TrademarkIdList, "TrademarkIdList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrademarkIdListShrink))
+            {
+                query["TrademarkIdList"] = request.TrademarkIdListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySmsTrademark",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySmsTrademarkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询商标对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySmsTrademarkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsTrademarkResponse
+        /// </returns>
+        public QuerySmsTrademarkResponse QuerySmsTrademark(QuerySmsTrademarkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QuerySmsTrademarkWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询商标对客openAPI</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySmsTrademarkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySmsTrademarkResponse
+        /// </returns>
+        public async Task<QuerySmsTrademarkResponse> QuerySmsTrademarkAsync(QuerySmsTrademarkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QuerySmsTrademarkWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
