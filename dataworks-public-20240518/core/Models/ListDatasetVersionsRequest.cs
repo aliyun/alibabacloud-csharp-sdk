@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDatasetVersionsRequest : TeaModel {
         /// <summary>
+        /// <para>The creator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12103XXX46492139</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CreatorId { get; set; }
 
         /// <summary>
+        /// <para>The dataset ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DatasetId { get; set; }
 
         /// <summary>
+        /// <para>The sort order. Default: Desc.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Asc: Ascending.</description></item>
+        /// <item><description>Desc: Descending.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Desc</para>
         /// </summary>
@@ -36,6 +46,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Order { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -44,6 +56,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default: 10. Maximum: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -52,6 +66,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The sort field. Default: VersionNumber.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ModifyTime: Modification time.</description></item>
+        /// <item><description>CreateTime: Creation time.</description></item>
+        /// <item><description>VersionNumber: Version number.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>
         /// </summary>

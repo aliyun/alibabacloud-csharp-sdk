@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class PreviewDatasetVersionRequest : TeaModel {
         /// <summary>
+        /// <para>The dataset version ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

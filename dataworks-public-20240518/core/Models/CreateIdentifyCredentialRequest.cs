@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateIdentifyCredentialRequest : TeaModel {
+        /// <summary>
+        /// <para>The user credential object.</para>
+        /// </summary>
         [NameInMap("IdentifyCredential")]
         [Validation(Required=false)]
         public IdentifyCredential IdentifyCredential { get; set; }

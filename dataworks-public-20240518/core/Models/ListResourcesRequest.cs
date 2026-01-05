@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListResourcesRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the file resource. Supports fuzzy search.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -24,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the data to retrieve, used for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

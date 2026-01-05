@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListTaskInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>Pagination information.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
@@ -424,6 +424,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public string TriggerType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1234</para>
+                /// </summary>
                 [NameInMap("UnifiedWorkflowInstanceId")]
                 [Validation(Required=false)]
                 public long? UnifiedWorkflowInstanceId { get; set; }

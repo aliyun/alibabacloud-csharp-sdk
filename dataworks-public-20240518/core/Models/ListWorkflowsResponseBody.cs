@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListWorkflowsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>Pagination information.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
@@ -185,6 +185,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public List<ListWorkflowsResponseBodyPagingInfoWorkflowsTags> Tags { get; set; }
                 public class ListWorkflowsResponseBodyPagingInfoWorkflowsTags : TeaModel {
                     /// <summary>
+                    /// <para>The key of a tag.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>key1</para>
                     /// </summary>
@@ -193,6 +195,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Key { get; set; }
 
                     /// <summary>
+                    /// <para>The value of a tag.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>value1</para>
                     /// </summary>

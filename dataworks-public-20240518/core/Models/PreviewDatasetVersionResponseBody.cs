@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class PreviewDatasetVersionResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Preview results</para>
+        /// </summary>
         [NameInMap("PreviewResult")]
         [Validation(Required=false)]
         public PreviewDatasetVersionResponseBodyPreviewResult PreviewResult { get; set; }
         public class PreviewDatasetVersionResponseBodyPreviewResult : TeaModel {
             /// <summary>
+            /// <para>Content</para>
+            /// 
             /// <b>Example:</b>
             /// <para>this is content</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>File name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>parth/data.csv</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string FileName { get; set; }
 
             /// <summary>
+            /// <para>The MIME type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>text/plain</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string MimeType { get; set; }
 
             /// <summary>
+            /// <para>Preview availability</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

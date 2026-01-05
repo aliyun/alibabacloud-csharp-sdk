@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListWorkflowDefinitionsRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the workflow. Fuzzy search is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
@@ -24,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the data to retrieve, used for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The workflow type. This parameter specifies a filter condition.</para>
+        /// <para>Filter condition: The type of the workflow. The default value is CycleWorkflow.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CycleWorkflow</description></item>

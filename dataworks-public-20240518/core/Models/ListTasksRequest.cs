@@ -57,11 +57,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace.</para>
+        /// <para>The workspace environment.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod: production environment</description></item>
-        /// <item><description>Dev: development environment</description></item>
+        /// <item><description>Prod</description></item>
+        /// <item><description>Dev</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The running mode of the task after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler.</para>
+        /// <para>The run mode when triggered. Valid only if TriggerType is Scheduler.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Pause</description></item>
@@ -163,8 +163,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The trigger type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduler: scheduling cycle-based trigger</description></item>
-        /// <item><description>Manual: manual trigger</description></item>
+        /// <item><description>Scheduler: Triggered by schedule.</description></item>
+        /// <item><description>Manual: Triggered manually.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

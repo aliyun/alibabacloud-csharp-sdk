@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteDatasetVersionRequest : TeaModel {
         /// <summary>
+        /// <para>The dataset version ID. Only DataWorks datasets are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? BizDate { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{<br>    &quot;status&quot;: &quot;Success&quot;,
+        ///     &quot;executionDate&quot;: &quot;1763481600000&quot;
+        /// }</para>
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
@@ -122,6 +128,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1234</para>
+        /// </summary>
         [NameInMap("UnifiedWorkflowInstanceId")]
         [Validation(Required=false)]
         public long? UnifiedWorkflowInstanceId { get; set; }

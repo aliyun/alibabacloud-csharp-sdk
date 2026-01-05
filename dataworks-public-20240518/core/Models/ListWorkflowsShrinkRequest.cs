@@ -106,6 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <list type="bullet">
         /// <item><description>Scheduler</description></item>
         /// <item><description>Manual</description></item>
+        /// <item><description>TriggerWorkflow</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

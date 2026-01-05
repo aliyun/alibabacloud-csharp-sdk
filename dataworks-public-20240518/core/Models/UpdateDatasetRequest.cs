@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateDatasetRequest : TeaModel {
         /// <summary>
+        /// <para>The dataset description. Length not exceeding 1024.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>new comment</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The dataset ID. Only DataWorks datasets are supported for update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The dataset name. A non-empty string, length not exceeding 128.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_oss_dataset_new</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The user guide, supports Markdown formatted rich text.</para>
+        /// 
         /// <b>Example:</b>
         /// <h2>introduction</h2>
         /// </summary>

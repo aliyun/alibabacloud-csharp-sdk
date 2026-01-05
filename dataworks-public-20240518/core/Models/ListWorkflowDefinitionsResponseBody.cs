@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitions> WorkflowDefinitions { get; set; }
             public class ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitions : TeaModel {
                 /// <summary>
-                /// <para>The time when the workflow was created. This value is a UNIX timestamp.</para>
+                /// <para>The timestamp when the workflow was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1698057323000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The description of the workflow.</para>
+                /// <para>Description</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Workflow description</para>
@@ -74,17 +74,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the workflow.</para>
+                /// <para>The unique identifier of the workflow.</para>
+                /// <remarks>
+                /// <para> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK; parameters are still returned according to the type defined in the SDK. Compilation failures due to the type change may occur only when upgrading the SDK across version 8.0.0, in which case users need to manually correct the data type.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>463497880880954XXXX</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
-                public long? Id { get; set; }
+                public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The time when the workflow was last modified. This value is a UNIX timestamp.</para>
+                /// <para>The timestamp when the workflow was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1698057323000</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The owner.</para>
+                /// <para>Owner</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110755000425XXXX</para>
@@ -132,14 +135,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScript Script { get; set; }
                 public class ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScript : TeaModel {
                     /// <summary>
-                    /// <para>The script ID.</para>
+                    /// <para>The ID of the script.</para>
+                    /// <remarks>
+                    /// <para> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK; parameters are still returned according to the type defined in the SDK. Compilation failures due to the type change may occur only when upgrading the SDK across version 8.0.0, in which case users need to manually correct the data type.</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>698002781368644XXXX</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
-                    public long? Id { get; set; }
+                    public string Id { get; set; }
 
                     /// <summary>
                     /// <para>The script path.</para>
@@ -152,14 +158,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>The runtime.</para>
+                    /// <para>Runtime</para>
                     /// </summary>
                     [NameInMap("Runtime")]
                     [Validation(Required=false)]
                     public ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScriptRuntime Runtime { get; set; }
                     public class ListWorkflowDefinitionsResponseBodyPagingInfoWorkflowDefinitionsScriptRuntime : TeaModel {
                         /// <summary>
-                        /// <para>The command.</para>
+                        /// <para>Command</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>WORKFLOW</para>

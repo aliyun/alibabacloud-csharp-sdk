@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDatasetResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The dataset information.</para>
+        /// </summary>
         [NameInMap("Dataset")]
         [Validation(Required=false)]
         public Dataset Dataset { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>204EAF68-CCE3-5112-8DA0-E7A60F02XXXX</para>
@@ -24,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

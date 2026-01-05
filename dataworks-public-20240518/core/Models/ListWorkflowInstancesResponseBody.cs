@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListWorkflowInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>Pagination information.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
@@ -146,6 +146,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The account ID of the workflow owner.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
                 /// </summary>
@@ -240,6 +242,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1234</para>
+                /// </summary>
                 [NameInMap("UnifiedWorkflowInstanceId")]
                 [Validation(Required=false)]
                 public long? UnifiedWorkflowInstanceId { get; set; }
@@ -262,6 +268,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string WorkflowParameters { get; set; }
 
                 /// <summary>
+                /// <para>The task instance ID corresponding to the workflow instance.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
                 /// </summary>

@@ -73,17 +73,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the node.</para>
+                /// <para>The unique identifier of the Data Studio node.</para>
+                /// <remarks>
+                /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>723932906364267XXXX</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
-                public long? Id { get; set; }
+                public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The input of the node.</para>
+                /// <para>The node input.</para>
                 /// </summary>
                 [NameInMap("Inputs")]
                 [Validation(Required=false)]
@@ -146,13 +149,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                         /// <summary>
                         /// <para>The variable ID.</para>
+                        /// <remarks>
+                        /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                        /// </remarks>
                         /// 
                         /// <b>Example:</b>
                         /// <para>543218872620113XXXX</para>
                         /// </summary>
                         [NameInMap("Id")]
                         [Validation(Required=false)]
-                        public long? Id { get; set; }
+                        public string Id { get; set; }
 
                         /// <summary>
                         /// <para>The variable name.</para>
@@ -314,13 +320,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                         /// <summary>
                         /// <para>The variable ID.</para>
+                        /// <remarks>
+                        /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                        /// </remarks>
                         /// 
                         /// <b>Example:</b>
                         /// <para>543217824470354XXXX</para>
                         /// </summary>
                         [NameInMap("Id")]
                         [Validation(Required=false)]
-                        public long? Id { get; set; }
+                        public string Id { get; set; }
 
                         /// <summary>
                         /// <para>The variable name.</para>
@@ -461,14 +470,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListNodeDependenciesResponseBodyPagingInfoNodesScript Script { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesScript : TeaModel {
                     /// <summary>
-                    /// <para>The script ID.</para>
+                    /// <para>The ID of the script.</para>
+                    /// <remarks>
+                    /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>853573334108680XXXX</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
-                    public long? Id { get; set; }
+                    public string Id { get; set; }
 
                     /// <summary>
                     /// <para>The script path.</para>
@@ -637,13 +649,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                     /// <summary>
                     /// <para>The unique identifier of the trigger.</para>
+                    /// <remarks>
+                    /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>543680677872062XXXX</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
-                    public long? Id { get; set; }
+                    public string Id { get; set; }
 
                     /// <summary>
                     /// <para>The effective start time of the schedule, in the format yyyy-MM-dd HH:mm:ss.</para>

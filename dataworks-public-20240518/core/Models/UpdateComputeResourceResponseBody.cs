@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateComputeResourceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The request ID. Used to locate logs and troubleshoot issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7C352CB7-CD88-50CF-9D0D-E81BDF02XXXX</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

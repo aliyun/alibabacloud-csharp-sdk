@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateDatasetVersionRequest : TeaModel {
         /// <summary>
+        /// <para>The dataset version description. Maximum length: 1024 characters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The dataset version ID. Only DataWorks datasets can be updated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

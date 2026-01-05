@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListNodeDependenciesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the node.</para>
+        /// <para>The unique identifier of the Data Studio node.</para>
+        /// <remarks>
+        /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -18,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
-        public long? Id { get; set; }
+        public string Id { get; set; }
 
         /// <summary>
         /// <para>The page number, starting from 1. Default value: 1.</para>

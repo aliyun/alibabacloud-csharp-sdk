@@ -62,6 +62,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public List<long?> WorkflowInstanceIds { get; set; }
 
+            /// <summary>
+            /// <para>The list of task instance IDs corresponding to the workflow instance. This field is returned after successful creation.</para>
+            /// </summary>
             [NameInMap("WorkflowTaskInstanceIds")]
             [Validation(Required=false)]
             public List<long?> WorkflowTaskInstanceIds { get; set; }

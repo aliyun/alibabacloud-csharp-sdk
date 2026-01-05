@@ -20,6 +20,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? Bizdate { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;startedTimeStart&quot;: &quot;1763481600000&quot;,
+        ///     &quot;startedTimeEnd&quot;: &quot;1763481600000&quot;,
+        ///     &quot;finishedTimeStart&quot;: &quot;1763481600000&quot;,
+        ///     &quot;finishedTimeEnd&quot;: &quot;1763481600000&quot;,
+        ///     &quot;createTimeStart&quot;: &quot;1763481600000&quot;,
+        ///     &quot;createTimeEnd&quot;: &quot;1763481600000&quot;
+        /// }</para>
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
@@ -213,6 +224,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string TriggerType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1234</para>
+        /// </summary>
         [NameInMap("UnifiedWorkflowInstanceId")]
         [Validation(Required=false)]
         public long? UnifiedWorkflowInstanceId { get; set; }
@@ -245,6 +260,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <item><description>SupplementData: Data backfill</description></item>
         /// <item><description>ManualWorkflow: Manually triggered workflow</description></item>
         /// <item><description>Normal: Scheduled execution</description></item>
+        /// <item><description>TriggerWorkflow: Triggered Workflow</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

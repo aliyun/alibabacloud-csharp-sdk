@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
-            public long? Id { get; set; }
+            public string Id { get; set; }
 
             /// <summary>
             /// <para>The time when the workflow was last modified. This value is a UNIX timestamp.</para>

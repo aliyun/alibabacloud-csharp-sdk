@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListFunctionsRequest : TeaModel {
+        /// <summary>
+        /// <para>Filter criteria: UDF name. Supports fuzzy search.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

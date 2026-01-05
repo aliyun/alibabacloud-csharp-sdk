@@ -55,13 +55,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The unique identifier of the deployment.</para>
+                /// <remarks>
+                /// <para> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect normal SDK usage; the parameter will still be returned according to the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>860438872620113XXXX</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
-                public long? Id { get; set; }
+                public string Id { get; set; }
 
                 /// <summary>
                 /// <para>The error message if the deployment failed.</para>

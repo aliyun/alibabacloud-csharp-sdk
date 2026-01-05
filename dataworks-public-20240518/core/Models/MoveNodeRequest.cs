@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
-        public long? Id { get; set; }
+        public string Id { get; set; }
 
         /// <summary>
         /// <para>The path to which you want to move the node. You do not need to specify a node name in the path.</para>

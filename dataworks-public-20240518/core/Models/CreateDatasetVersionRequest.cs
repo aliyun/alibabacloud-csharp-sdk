@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDatasetVersionRequest : TeaModel {
         /// <summary>
+        /// <para>The description for this dataset version. Maximum length: 1,024 characters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The dataset ID. Currently supports DataWorks datasets only.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,11 +30,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string DatasetId { get; set; }
 
+        /// <summary>
+        /// <para>The storage import configuration for the dataset. Required configuration varies by storage type.</para>
+        /// <para><b>NAS</b></para>
+        /// <para>For valid values, see the response from the file storage API DescribeFileSystems.</para>
+        /// <pre><code class="language-JSON">{
+        /// &quot;fileSystemId&quot;: &quot;3b6XXX89c9&quot;, // The file system ID.
+        /// &quot;fileSystemStorageType&quot;:  &quot;Performance&quot; // The file system storage type.
+        /// &quot;vpcId&quot;: &quot;vpc-uf66oxxxrqge1t2gson7s&quot; // The VPC ID for the mount point.
+        /// }
+        /// </c></pre>
+        /// </summary>
         [NameInMap("ImportInfo")]
         [Validation(Required=false)]
         public Dictionary<string, string> ImportInfo { get; set; }
 
         /// <summary>
+        /// <para>The mount path, which must start with /mnt/. Default value: /mnt/data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/mnt/data</para>
         /// </summary>
@@ -40,6 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string MountPath { get; set; }
 
         /// <summary>
+        /// <para>URL</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -577,11 +577,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string TriggerType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1234</para>
+            /// </summary>
             [NameInMap("UnifiedWorkflowInstanceId")]
             [Validation(Required=false)]
             public long? UnifiedWorkflowInstanceId { get; set; }
 
             /// <summary>
+            /// <para>The timestamp for when it started waiting for resources.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1710239005403</para>
             /// </summary>
@@ -590,6 +596,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? WaitingResourceTime { get; set; }
 
             /// <summary>
+            /// <para>The timestamp for when it started waiting for the scheduled time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1710239005403</para>
             /// </summary>

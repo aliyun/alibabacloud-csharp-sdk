@@ -9,11 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetComputeResourceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the computing resource.</para>
+        /// </summary>
         [NameInMap("ComputeResource")]
         [Validation(Required=false)]
         public GetComputeResourceResponseBodyComputeResource ComputeResource { get; set; }
         public class GetComputeResourceResponseBodyComputeResource : TeaModel {
             /// <summary>
+            /// <para>The specific connection configuration details for the computing resource, including the connection address, access identity, and environment information. envType, which specifies the computing resource environment, is a property of this object. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Dev</description></item>
+            /// <item><description>Prod Different types of computing resources have different attribute specifications under various configuration modes (ConnectionPropertiesMode).</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///     &quot;envType&quot;: &quot;Prod&quot;,
@@ -30,6 +39,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public object ConnectionProperties { get; set; }
 
             /// <summary>
+            /// <para>The addition category of the computing resource. Different types will have different subtypes, each with corresponding parameter constraints. For instance:</para>
+            /// <list type="bullet">
+            /// <item><description>InstanceMode: Instance mode</description></item>
+            /// <item><description>UrlMode: Connection String Mode</description></item>
+            /// <item><description>CdhMode: CDH mode</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>InstanceMode</para>
             /// </summary>
@@ -38,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ConnectionPropertiesMode { get; set; }
 
             /// <summary>
+            /// <para>The creation time, in timestamp format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1698286929333</para>
             /// </summary>
@@ -46,6 +64,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1107550004253538</para>
             /// </summary>
@@ -54,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string CreateUser { get; set; }
 
             /// <summary>
+            /// <para>The description of the computing resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>My Description</para>
             /// </summary>
@@ -62,6 +84,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The ID of the computing resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>16738</para>
             /// </summary>
@@ -70,6 +94,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The last modification time, in timestamp format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1698286929333</para>
             /// </summary>
@@ -78,6 +104,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the modifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1107550004253538</para>
             /// </summary>
@@ -86,6 +114,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ModifyUser { get; set; }
 
             /// <summary>
+            /// <para>The name of the computing resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MyCs</para>
             /// </summary>
@@ -94,6 +124,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The ID of the workspace to which the computing resource belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>52660</para>
             /// </summary>
@@ -102,6 +134,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The business unique key for the computing resource. For example, the format for Hologres is ${tenantOwnerId}:${regionId}:${type}:${instanceId}:${database}.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1107550004253538:cn-beijing:holo:hgprecn-cn-x0r3oun4k001:testdb</para>
             /// </summary>
@@ -110,6 +144,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string QualifiedName { get; set; }
 
             /// <summary>
+            /// <para>The type of the computing resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hologres</para>
             /// </summary>
@@ -118,6 +154,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Type { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether it is the default computing resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -128,6 +166,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The request ID. You can use the request ID to locate logs and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9252F32F-D855-549E-8898-61CF5A733050</para>
         /// </summary>
