@@ -9,22 +9,42 @@ using Tea;
 namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801.Models
 {
     public class InstanceStatus : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Init Succeed</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Running</para>
+        /// </summary>
         [NameInMap("Phase")]
         [Validation(Required=false)]
         public string Phase { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("SlotNum")]
         [Validation(Required=false)]
         public int? SlotNum { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20.0G</para>
+        /// </summary>
         [NameInMap("UsedCapacity")]
         [Validation(Required=false)]
         public string UsedCapacity { get; set; }

@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801.Models
 {
     public class SlotLifeCycle : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Running</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

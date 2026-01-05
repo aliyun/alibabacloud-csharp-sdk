@@ -37,6 +37,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将一个挂载点关联到一个数据集加速槽上。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindEndpointResponse
+        /// </returns>
         public BindEndpointResponse BindEndpointWithOptions(string EndpointId, string SlotId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -58,6 +73,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<BindEndpointResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将一个挂载点关联到一个数据集加速槽上。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindEndpointResponse
+        /// </returns>
         public async Task<BindEndpointResponse> BindEndpointWithOptionsAsync(string EndpointId, string SlotId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -79,6 +109,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<BindEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将一个挂载点关联到一个数据集加速槽上。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// BindEndpointResponse
+        /// </returns>
         public BindEndpointResponse BindEndpoint(string EndpointId, string SlotId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -86,6 +124,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return BindEndpointWithOptions(EndpointId, SlotId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将一个挂载点关联到一个数据集加速槽上。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// BindEndpointResponse
+        /// </returns>
         public async Task<BindEndpointResponse> BindEndpointAsync(string EndpointId, string SlotId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -93,6 +139,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await BindEndpointWithOptionsAsync(EndpointId, SlotId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建并注册一个数据集加速槽挂载点。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEndpointResponse
+        /// </returns>
         public CreateEndpointResponse CreateEndpointWithOptions(CreateEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -137,6 +201,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<CreateEndpointResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建并注册一个数据集加速槽挂载点。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEndpointResponse
+        /// </returns>
         public async Task<CreateEndpointResponse> CreateEndpointWithOptionsAsync(CreateEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -181,6 +263,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<CreateEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建并注册一个数据集加速槽挂载点。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEndpointResponse
+        /// </returns>
         public CreateEndpointResponse CreateEndpoint(CreateEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -188,6 +282,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return CreateEndpointWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建并注册一个数据集加速槽挂载点。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEndpointResponse
+        /// </returns>
         public async Task<CreateEndpointResponse> CreateEndpointAsync(CreateEndpointRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -195,6 +301,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await CreateEndpointWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据集加速实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public CreateInstanceResponse CreateInstanceWithOptions(CreateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -259,6 +383,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据集加速实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public async Task<CreateInstanceResponse> CreateInstanceWithOptionsAsync(CreateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -323,6 +465,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据集加速实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public CreateInstanceResponse CreateInstance(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -330,6 +484,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return CreateInstanceWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建数据集加速实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceResponse
+        /// </returns>
         public async Task<CreateInstanceResponse> CreateInstanceAsync(CreateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -337,6 +503,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await CreateInstanceWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建并注册一个 数据集加速槽。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSlotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSlotResponse
+        /// </returns>
         public CreateSlotResponse CreateSlotWithOptions(CreateSlotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -405,6 +589,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<CreateSlotResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建并注册一个 数据集加速槽。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSlotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSlotResponse
+        /// </returns>
         public async Task<CreateSlotResponse> CreateSlotWithOptionsAsync(CreateSlotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -473,6 +675,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<CreateSlotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建并注册一个 数据集加速槽。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSlotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSlotResponse
+        /// </returns>
         public CreateSlotResponse CreateSlot(CreateSlotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -480,6 +694,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return CreateSlotWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建并注册一个 数据集加速槽。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSlotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSlotResponse
+        /// </returns>
         public async Task<CreateSlotResponse> CreateSlotAsync(CreateSlotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -487,6 +713,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await CreateSlotWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同时创建并注册多个数据集加速槽，并使用相同的一组数据加速槽挂载点。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSlotsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSlotsResponse
+        /// </returns>
         public CreateSlotsResponse CreateSlotsWithOptions(CreateSlotsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -519,6 +763,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<CreateSlotsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同时创建并注册多个数据集加速槽，并使用相同的一组数据加速槽挂载点。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSlotsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSlotsResponse
+        /// </returns>
         public async Task<CreateSlotsResponse> CreateSlotsWithOptionsAsync(CreateSlotsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -551,6 +813,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<CreateSlotsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同时创建并注册多个数据集加速槽，并使用相同的一组数据加速槽挂载点。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSlotsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSlotsResponse
+        /// </returns>
         public CreateSlotsResponse CreateSlots(CreateSlotsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -558,6 +832,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return CreateSlotsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同时创建并注册多个数据集加速槽，并使用相同的一组数据加速槽挂载点。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSlotsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSlotsResponse
+        /// </returns>
         public async Task<CreateSlotsResponse> CreateSlotsAsync(CreateSlotsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -565,6 +851,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await CreateSlotsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>针对一个资源，创建一个标签。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTagRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagResponse
+        /// </returns>
         public CreateTagResponse CreateTagWithOptions(CreateTagRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -605,6 +909,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<CreateTagResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>针对一个资源，创建一个标签。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTagRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagResponse
+        /// </returns>
         public async Task<CreateTagResponse> CreateTagWithOptionsAsync(CreateTagRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -645,6 +967,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<CreateTagResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>针对一个资源，创建一个标签。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagResponse
+        /// </returns>
         public CreateTagResponse CreateTag(CreateTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -652,6 +986,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return CreateTagWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>针对一个资源，创建一个标签。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTagResponse
+        /// </returns>
         public async Task<CreateTagResponse> CreateTagAsync(CreateTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -659,6 +1005,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await CreateTagWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个数据集加速槽挂载点。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEndpointResponse
+        /// </returns>
         public DeleteEndpointResponse DeleteEndpointWithOptions(string EndpointId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -680,6 +1041,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DeleteEndpointResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个数据集加速槽挂载点。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEndpointResponse
+        /// </returns>
         public async Task<DeleteEndpointResponse> DeleteEndpointWithOptionsAsync(string EndpointId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -701,6 +1077,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DeleteEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个数据集加速槽挂载点。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteEndpointResponse
+        /// </returns>
         public DeleteEndpointResponse DeleteEndpoint(string EndpointId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -708,6 +1092,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return DeleteEndpointWithOptions(EndpointId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个数据集加速槽挂载点。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteEndpointResponse
+        /// </returns>
         public async Task<DeleteEndpointResponse> DeleteEndpointAsync(string EndpointId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -715,6 +1107,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await DeleteEndpointWithOptionsAsync(EndpointId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个数据集加速实例。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public DeleteInstanceResponse DeleteInstanceWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -736,6 +1143,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个数据集加速实例。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public async Task<DeleteInstanceResponse> DeleteInstanceWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -757,6 +1179,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个数据集加速实例。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public DeleteInstanceResponse DeleteInstance(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -764,6 +1194,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return DeleteInstanceWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个数据集加速实例。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteInstanceResponse
+        /// </returns>
         public async Task<DeleteInstanceResponse> DeleteInstanceAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -771,6 +1209,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await DeleteInstanceWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个数据集加速槽。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSlotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSlotResponse
+        /// </returns>
         public DeleteSlotResponse DeleteSlotWithOptions(string SlotId, DeleteSlotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -799,6 +1255,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DeleteSlotResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个数据集加速槽。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSlotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSlotResponse
+        /// </returns>
         public async Task<DeleteSlotResponse> DeleteSlotWithOptionsAsync(string SlotId, DeleteSlotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -827,6 +1301,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DeleteSlotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个数据集加速槽。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSlotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSlotResponse
+        /// </returns>
         public DeleteSlotResponse DeleteSlot(string SlotId, DeleteSlotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -834,6 +1320,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return DeleteSlotWithOptions(SlotId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个数据集加速槽。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSlotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSlotResponse
+        /// </returns>
         public async Task<DeleteSlotResponse> DeleteSlotAsync(string SlotId, DeleteSlotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -841,6 +1339,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await DeleteSlotWithOptionsAsync(SlotId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个资源上的一个标签。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
         public DeleteTagResponse DeleteTagWithOptions(DeleteTagRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -877,6 +1393,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DeleteTagResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个资源上的一个标签。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
         public async Task<DeleteTagResponse> DeleteTagWithOptionsAsync(DeleteTagRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -913,6 +1447,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DeleteTagResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个资源上的一个标签。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
         public DeleteTagResponse DeleteTag(DeleteTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -920,6 +1466,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return DeleteTagWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除一个资源上的一个标签。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTagResponse
+        /// </returns>
         public async Task<DeleteTagResponse> DeleteTagAsync(DeleteTagRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -927,6 +1485,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await DeleteTagWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速组件的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeComponentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComponentResponse
+        /// </returns>
         public DescribeComponentResponse DescribeComponentWithOptions(string ComponentId, DescribeComponentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -965,6 +1541,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DescribeComponentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速组件的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeComponentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComponentResponse
+        /// </returns>
         public async Task<DescribeComponentResponse> DescribeComponentWithOptionsAsync(string ComponentId, DescribeComponentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1003,6 +1597,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DescribeComponentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速组件的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComponentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComponentResponse
+        /// </returns>
         public DescribeComponentResponse DescribeComponent(string ComponentId, DescribeComponentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1010,6 +1616,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return DescribeComponentWithOptions(ComponentId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速组件的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComponentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComponentResponse
+        /// </returns>
         public async Task<DescribeComponentResponse> DescribeComponentAsync(string ComponentId, DescribeComponentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1017,6 +1635,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await DescribeComponentWithOptionsAsync(ComponentId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速槽挂载点的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEndpointResponse
+        /// </returns>
         public DescribeEndpointResponse DescribeEndpointWithOptions(string EndpointId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1038,6 +1671,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DescribeEndpointResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速槽挂载点的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEndpointResponse
+        /// </returns>
         public async Task<DescribeEndpointResponse> DescribeEndpointWithOptionsAsync(string EndpointId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1059,6 +1707,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DescribeEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速槽挂载点的信息。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeEndpointResponse
+        /// </returns>
         public DescribeEndpointResponse DescribeEndpoint(string EndpointId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1066,6 +1722,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return DescribeEndpointWithOptions(EndpointId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速槽挂载点的信息。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeEndpointResponse
+        /// </returns>
         public async Task<DescribeEndpointResponse> DescribeEndpointAsync(string EndpointId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1073,6 +1737,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await DescribeEndpointWithOptionsAsync(EndpointId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速实例信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public DescribeInstanceResponse DescribeInstanceWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1094,6 +1773,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DescribeInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速实例信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public async Task<DescribeInstanceResponse> DescribeInstanceWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1115,6 +1809,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DescribeInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速实例信息。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public DescribeInstanceResponse DescribeInstance(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1122,6 +1824,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return DescribeInstanceWithOptions(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速实例信息。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeInstanceResponse
+        /// </returns>
         public async Task<DescribeInstanceResponse> DescribeInstanceAsync(string InstanceId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1129,6 +1839,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await DescribeInstanceWithOptionsAsync(InstanceId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速槽的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlotResponse
+        /// </returns>
         public DescribeSlotResponse DescribeSlotWithOptions(string SlotId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1150,6 +1875,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DescribeSlotResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速槽的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlotResponse
+        /// </returns>
         public async Task<DescribeSlotResponse> DescribeSlotWithOptionsAsync(string SlotId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -1171,6 +1911,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<DescribeSlotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速槽的信息。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeSlotResponse
+        /// </returns>
         public DescribeSlotResponse DescribeSlot(string SlotId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1178,6 +1926,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return DescribeSlotWithOptions(SlotId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定数据集加速槽的信息。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DescribeSlotResponse
+        /// </returns>
         public async Task<DescribeSlotResponse> DescribeSlotAsync(string SlotId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1185,6 +1941,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await DescribeSlotWithOptionsAsync(SlotId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速组件的信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComponentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComponentsResponse
+        /// </returns>
         public ListComponentsResponse ListComponentsWithOptions(ListComponentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1237,6 +2011,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<ListComponentsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速组件的信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComponentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComponentsResponse
+        /// </returns>
         public async Task<ListComponentsResponse> ListComponentsWithOptionsAsync(ListComponentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1289,6 +2081,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<ListComponentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速组件的信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComponentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComponentsResponse
+        /// </returns>
         public ListComponentsResponse ListComponents(ListComponentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1296,6 +2100,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return ListComponentsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速组件的信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListComponentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListComponentsResponse
+        /// </returns>
         public async Task<ListComponentsResponse> ListComponentsAsync(ListComponentsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1303,6 +2119,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await ListComponentsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速槽挂载点的信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEndpointsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEndpointsResponse
+        /// </returns>
         public ListEndpointsResponse ListEndpointsWithOptions(ListEndpointsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1363,6 +2197,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<ListEndpointsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速槽挂载点的信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEndpointsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEndpointsResponse
+        /// </returns>
         public async Task<ListEndpointsResponse> ListEndpointsWithOptionsAsync(ListEndpointsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1423,6 +2275,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<ListEndpointsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速槽挂载点的信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEndpointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEndpointsResponse
+        /// </returns>
         public ListEndpointsResponse ListEndpoints(ListEndpointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1430,6 +2294,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return ListEndpointsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速槽挂载点的信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEndpointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEndpointsResponse
+        /// </returns>
         public async Task<ListEndpointsResponse> ListEndpointsAsync(ListEndpointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1437,6 +2313,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await ListEndpointsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速实例信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public ListInstancesResponse ListInstancesWithOptions(ListInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1497,6 +2391,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速实例信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public async Task<ListInstancesResponse> ListInstancesWithOptionsAsync(ListInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1557,6 +2469,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速实例信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public ListInstancesResponse ListInstances(ListInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1564,6 +2488,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return ListInstancesWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速实例信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstancesResponse
+        /// </returns>
         public async Task<ListInstancesResponse> ListInstancesAsync(ListInstancesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1571,6 +2507,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await ListInstancesWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速槽的信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSlotsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSlotsResponse
+        /// </returns>
         public ListSlotsResponse ListSlotsWithOptions(ListSlotsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1639,6 +2593,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<ListSlotsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速槽的信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSlotsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSlotsResponse
+        /// </returns>
         public async Task<ListSlotsResponse> ListSlotsWithOptionsAsync(ListSlotsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1707,6 +2679,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<ListSlotsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速槽的信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSlotsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSlotsResponse
+        /// </returns>
         public ListSlotsResponse ListSlots(ListSlotsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1714,6 +2698,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return ListSlotsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集加速槽的信息列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSlotsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSlotsResponse
+        /// </returns>
         public async Task<ListSlotsResponse> ListSlotsAsync(ListSlotsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1721,6 +2717,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await ListSlotsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取标签列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagsResponse
+        /// </returns>
         public ListTagsResponse ListTagsWithOptions(ListTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1777,6 +2791,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<ListTagsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取标签列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagsResponse
+        /// </returns>
         public async Task<ListTagsResponse> ListTagsWithOptionsAsync(ListTagsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -1833,6 +2865,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<ListTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取标签列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagsResponse
+        /// </returns>
         public ListTagsResponse ListTags(ListTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1840,6 +2884,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return ListTagsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取标签列表信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagsResponse
+        /// </returns>
         public async Task<ListTagsResponse> ListTagsAsync(ListTagsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1847,6 +2903,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await ListTagsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询并获取监控指标信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryInstanceMetricsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryInstanceMetricsResponse
+        /// </returns>
         public QueryInstanceMetricsResponse QueryInstanceMetricsWithOptions(string InstanceId, QueryInstanceMetricsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1897,6 +2971,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<QueryInstanceMetricsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询并获取监控指标信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryInstanceMetricsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryInstanceMetricsResponse
+        /// </returns>
         public async Task<QueryInstanceMetricsResponse> QueryInstanceMetricsWithOptionsAsync(string InstanceId, QueryInstanceMetricsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -1947,6 +3039,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<QueryInstanceMetricsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询并获取监控指标信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryInstanceMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryInstanceMetricsResponse
+        /// </returns>
         public QueryInstanceMetricsResponse QueryInstanceMetrics(string InstanceId, QueryInstanceMetricsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1954,6 +3058,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return QueryInstanceMetricsWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询并获取监控指标信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryInstanceMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryInstanceMetricsResponse
+        /// </returns>
         public async Task<QueryInstanceMetricsResponse> QueryInstanceMetricsAsync(string InstanceId, QueryInstanceMetricsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -1961,6 +3077,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await QueryInstanceMetricsWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询并获取监控指标信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QuerySlotMetricsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySlotMetricsResponse
+        /// </returns>
         public QuerySlotMetricsResponse QuerySlotMetricsWithOptions(string SlotId, QuerySlotMetricsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2011,6 +3145,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<QuerySlotMetricsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询并获取监控指标信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QuerySlotMetricsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySlotMetricsResponse
+        /// </returns>
         public async Task<QuerySlotMetricsResponse> QuerySlotMetricsWithOptionsAsync(string SlotId, QuerySlotMetricsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -2061,6 +3213,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<QuerySlotMetricsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询并获取监控指标信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySlotMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySlotMetricsResponse
+        /// </returns>
         public QuerySlotMetricsResponse QuerySlotMetrics(string SlotId, QuerySlotMetricsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2068,6 +3232,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return QuerySlotMetricsWithOptions(SlotId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询并获取监控指标信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QuerySlotMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySlotMetricsResponse
+        /// </returns>
         public async Task<QuerySlotMetricsResponse> QuerySlotMetricsAsync(string SlotId, QuerySlotMetricsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2075,6 +3251,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await QuerySlotMetricsWithOptionsAsync(SlotId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前账号下数据集加速相关的统计信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryStatisticRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryStatisticResponse
+        /// </returns>
         public QueryStatisticResponse QueryStatisticWithOptions(QueryStatisticRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2111,6 +3305,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<QueryStatisticResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前账号下数据集加速相关的统计信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryStatisticRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryStatisticResponse
+        /// </returns>
         public async Task<QueryStatisticResponse> QueryStatisticWithOptionsAsync(QueryStatisticRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2147,6 +3359,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<QueryStatisticResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前账号下数据集加速相关的统计信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryStatisticResponse
+        /// </returns>
         public QueryStatisticResponse QueryStatistic(QueryStatisticRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2154,6 +3378,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return QueryStatisticWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前账号下数据集加速相关的统计信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryStatisticResponse
+        /// </returns>
         public async Task<QueryStatisticResponse> QueryStatisticAsync(QueryStatisticRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2161,6 +3397,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await QueryStatisticWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重载数据加速槽的数据</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReloadSlotResponse
+        /// </returns>
         public ReloadSlotResponse ReloadSlotWithOptions(string SlotId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2182,6 +3433,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<ReloadSlotResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重载数据加速槽的数据</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReloadSlotResponse
+        /// </returns>
         public async Task<ReloadSlotResponse> ReloadSlotWithOptionsAsync(string SlotId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2203,6 +3469,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<ReloadSlotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重载数据加速槽的数据</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ReloadSlotResponse
+        /// </returns>
         public ReloadSlotResponse ReloadSlot(string SlotId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2210,6 +3484,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return ReloadSlotWithOptions(SlotId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重载数据加速槽的数据</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ReloadSlotResponse
+        /// </returns>
         public async Task<ReloadSlotResponse> ReloadSlotAsync(string SlotId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2217,6 +3499,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await ReloadSlotWithOptionsAsync(SlotId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止一个数据集加速槽。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopSlotResponse
+        /// </returns>
         public StopSlotResponse StopSlotWithOptions(string SlotId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2238,6 +3535,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<StopSlotResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止一个数据集加速槽。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopSlotResponse
+        /// </returns>
         public async Task<StopSlotResponse> StopSlotWithOptionsAsync(string SlotId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2259,6 +3571,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<StopSlotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止一个数据集加速槽。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StopSlotResponse
+        /// </returns>
         public StopSlotResponse StopSlot(string SlotId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2266,6 +3586,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return StopSlotWithOptions(SlotId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止一个数据集加速槽。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StopSlotResponse
+        /// </returns>
         public async Task<StopSlotResponse> StopSlotAsync(string SlotId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2273,6 +3601,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await StopSlotWithOptionsAsync(SlotId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消挂载点关联和指定数据集加速槽的关联关系。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindEndpointResponse
+        /// </returns>
         public UnbindEndpointResponse UnbindEndpointWithOptions(string EndpointId, string SlotId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2294,6 +3637,21 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<UnbindEndpointResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消挂载点关联和指定数据集加速槽的关联关系。</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindEndpointResponse
+        /// </returns>
         public async Task<UnbindEndpointResponse> UnbindEndpointWithOptionsAsync(string EndpointId, string SlotId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -2315,6 +3673,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<UnbindEndpointResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消挂载点关联和指定数据集加速槽的关联关系。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// UnbindEndpointResponse
+        /// </returns>
         public UnbindEndpointResponse UnbindEndpoint(string EndpointId, string SlotId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2322,6 +3688,14 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return UnbindEndpointWithOptions(EndpointId, SlotId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消挂载点关联和指定数据集加速槽的关联关系。</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// UnbindEndpointResponse
+        /// </returns>
         public async Task<UnbindEndpointResponse> UnbindEndpointAsync(string EndpointId, string SlotId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2329,6 +3703,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await UnbindEndpointWithOptionsAsync(EndpointId, SlotId, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新一个数据集加速实例的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public UpdateInstanceResponse UpdateInstanceWithOptions(string InstanceId, UpdateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2365,6 +3757,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<UpdateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新一个数据集加速实例的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public async Task<UpdateInstanceResponse> UpdateInstanceWithOptionsAsync(string InstanceId, UpdateInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2401,6 +3811,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<UpdateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新一个数据集加速实例的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public UpdateInstanceResponse UpdateInstance(string InstanceId, UpdateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2408,6 +3830,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return UpdateInstanceWithOptions(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新一个数据集加速实例的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceResponse
+        /// </returns>
         public async Task<UpdateInstanceResponse> UpdateInstanceAsync(string InstanceId, UpdateInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2415,6 +3849,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return await UpdateInstanceWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新一个数据集加速槽的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSlotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSlotResponse
+        /// </returns>
         public UpdateSlotResponse UpdateSlotWithOptions(string SlotId, UpdateSlotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2467,6 +3919,24 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<UpdateSlotResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新一个数据集加速槽的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSlotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSlotResponse
+        /// </returns>
         public async Task<UpdateSlotResponse> UpdateSlotWithOptionsAsync(string SlotId, UpdateSlotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2519,6 +3989,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return TeaModel.ToObject<UpdateSlotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新一个数据集加速槽的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSlotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSlotResponse
+        /// </returns>
         public UpdateSlotResponse UpdateSlot(string SlotId, UpdateSlotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2526,6 +4008,18 @@ namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801
             return UpdateSlotWithOptions(SlotId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新一个数据集加速槽的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSlotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSlotResponse
+        /// </returns>
         public async Task<UpdateSlotResponse> UpdateSlotAsync(string SlotId, UpdateSlotRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();

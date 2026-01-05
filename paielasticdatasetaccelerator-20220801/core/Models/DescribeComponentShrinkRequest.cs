@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PAIElasticDatasetAccelerator20220801.Models
 {
     public class DescribeComponentShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("RenderTemplate")]
         [Validation(Required=false)]
         public bool? RenderTemplate { get; set; }
