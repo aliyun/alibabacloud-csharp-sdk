@@ -4943,6 +4943,126 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询资源预留</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCapacityReservationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCapacityReservationResponse
+        /// </returns>
+        public DescribeCapacityReservationResponse DescribeCapacityReservationWithOptions(DescribeCapacityReservationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
+            {
+                query["LoadBalancerId"] = request.LoadBalancerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCapacityReservation",
+                Version = "2020-06-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCapacityReservationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源预留</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCapacityReservationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCapacityReservationResponse
+        /// </returns>
+        public async Task<DescribeCapacityReservationResponse> DescribeCapacityReservationWithOptionsAsync(DescribeCapacityReservationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
+            {
+                query["LoadBalancerId"] = request.LoadBalancerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCapacityReservation",
+                Version = "2020-06-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCapacityReservationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源预留</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCapacityReservationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCapacityReservationResponse
+        /// </returns>
+        public DescribeCapacityReservationResponse DescribeCapacityReservation(DescribeCapacityReservationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCapacityReservationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源预留</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCapacityReservationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCapacityReservationResponse
+        /// </returns>
+        public async Task<DescribeCapacityReservationResponse> DescribeCapacityReservationAsync(DescribeCapacityReservationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCapacityReservationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries available regions.</para>
         /// </summary>
         /// 
@@ -10373,6 +10493,158 @@ namespace AlibabaCloud.SDK.Alb20200616
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await LoadBalancerLeaveSecurityGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改资源预留</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCapacityReservationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCapacityReservationResponse
+        /// </returns>
+        public ModifyCapacityReservationResponse ModifyCapacityReservationWithOptions(ModifyCapacityReservationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
+            {
+                query["LoadBalancerId"] = request.LoadBalancerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinimumLoadBalancerCapacity))
+            {
+                query["MinimumLoadBalancerCapacity"] = request.MinimumLoadBalancerCapacity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResetCapacityReservation))
+            {
+                query["ResetCapacityReservation"] = request.ResetCapacityReservation;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyCapacityReservation",
+                Version = "2020-06-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyCapacityReservationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改资源预留</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCapacityReservationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCapacityReservationResponse
+        /// </returns>
+        public async Task<ModifyCapacityReservationResponse> ModifyCapacityReservationWithOptionsAsync(ModifyCapacityReservationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
+            {
+                query["LoadBalancerId"] = request.LoadBalancerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinimumLoadBalancerCapacity))
+            {
+                query["MinimumLoadBalancerCapacity"] = request.MinimumLoadBalancerCapacity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResetCapacityReservation))
+            {
+                query["ResetCapacityReservation"] = request.ResetCapacityReservation;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyCapacityReservation",
+                Version = "2020-06-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyCapacityReservationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改资源预留</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCapacityReservationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCapacityReservationResponse
+        /// </returns>
+        public ModifyCapacityReservationResponse ModifyCapacityReservation(ModifyCapacityReservationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyCapacityReservationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改资源预留</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyCapacityReservationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyCapacityReservationResponse
+        /// </returns>
+        public async Task<ModifyCapacityReservationResponse> ModifyCapacityReservationAsync(ModifyCapacityReservationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyCapacityReservationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
