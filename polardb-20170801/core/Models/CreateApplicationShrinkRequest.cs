@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Architecture { get; set; }
 
+        [NameInMap("AutoCreatePolarFs")]
+        [Validation(Required=false)]
+        public bool? AutoCreatePolarFs { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>
