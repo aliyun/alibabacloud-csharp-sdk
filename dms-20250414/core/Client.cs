@@ -2571,6 +2571,142 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>DeleteFileUpload</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFileUploadRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFileUploadResponse
+        /// </returns>
+        public DeleteFileUploadResponse DeleteFileUploadWithOptions(DeleteFileUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallFrom))
+            {
+                query["CallFrom"] = request.CallFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFileUpload",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFileUploadResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteFileUpload</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFileUploadRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFileUploadResponse
+        /// </returns>
+        public async Task<DeleteFileUploadResponse> DeleteFileUploadWithOptionsAsync(DeleteFileUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallFrom))
+            {
+                query["CallFrom"] = request.CallFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFileUpload",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFileUploadResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteFileUpload</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFileUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFileUploadResponse
+        /// </returns>
+        public DeleteFileUploadResponse DeleteFileUpload(DeleteFileUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteFileUploadWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteFileUpload</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteFileUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFileUploadResponse
+        /// </returns>
+        public async Task<DeleteFileUploadResponse> DeleteFileUploadAsync(DeleteFileUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteFileUploadWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>DescribeCustomAgent</para>
         /// </summary>
         /// 
@@ -2831,6 +2967,286 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDataAgentSessionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeFileUploadSignature</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFileUploadSignatureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileUploadSignatureResponse
+        /// </returns>
+        public DescribeFileUploadSignatureResponse DescribeFileUploadSignatureWithOptions(DescribeFileUploadSignatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallFrom))
+            {
+                query["CallFrom"] = request.CallFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFileUploadSignature",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFileUploadSignatureResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeFileUploadSignature</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFileUploadSignatureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileUploadSignatureResponse
+        /// </returns>
+        public async Task<DescribeFileUploadSignatureResponse> DescribeFileUploadSignatureWithOptionsAsync(DescribeFileUploadSignatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallFrom))
+            {
+                query["CallFrom"] = request.CallFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFileUploadSignature",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFileUploadSignatureResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeFileUploadSignature</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFileUploadSignatureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileUploadSignatureResponse
+        /// </returns>
+        public DescribeFileUploadSignatureResponse DescribeFileUploadSignature(DescribeFileUploadSignatureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFileUploadSignatureWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeFileUploadSignature</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFileUploadSignatureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFileUploadSignatureResponse
+        /// </returns>
+        public async Task<DescribeFileUploadSignatureResponse> DescribeFileUploadSignatureAsync(DescribeFileUploadSignatureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFileUploadSignatureWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>FileUploadCallback</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FileUploadCallbackRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FileUploadCallbackResponse
+        /// </returns>
+        public FileUploadCallbackResponse FileUploadCallbackWithOptions(FileUploadCallbackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallFrom))
+            {
+                query["CallFrom"] = request.CallFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSize))
+            {
+                query["FileSize"] = request.FileSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filename))
+            {
+                query["Filename"] = request.Filename;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadLocation))
+            {
+                query["UploadLocation"] = request.UploadLocation;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FileUploadCallback",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FileUploadCallbackResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>FileUploadCallback</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FileUploadCallbackRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FileUploadCallbackResponse
+        /// </returns>
+        public async Task<FileUploadCallbackResponse> FileUploadCallbackWithOptionsAsync(FileUploadCallbackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallFrom))
+            {
+                query["CallFrom"] = request.CallFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
+            {
+                query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSize))
+            {
+                query["FileSize"] = request.FileSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filename))
+            {
+                query["Filename"] = request.Filename;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadLocation))
+            {
+                query["UploadLocation"] = request.UploadLocation;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FileUploadCallback",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FileUploadCallbackResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>FileUploadCallback</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FileUploadCallbackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FileUploadCallbackResponse
+        /// </returns>
+        public FileUploadCallbackResponse FileUploadCallback(FileUploadCallbackRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return FileUploadCallbackWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>FileUploadCallback</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FileUploadCallbackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FileUploadCallbackResponse
+        /// </returns>
+        public async Task<FileUploadCallbackResponse> FileUploadCallbackAsync(FileUploadCallbackRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await FileUploadCallbackWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
