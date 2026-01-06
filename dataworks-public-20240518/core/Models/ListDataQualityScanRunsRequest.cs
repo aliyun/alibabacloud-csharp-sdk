@@ -39,6 +39,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? DataQualityScanId { get; set; }
 
+        /// <summary>
+        /// <para>The extended query filter. Supported parameters:</para>
+        /// <list type="bullet">
+        /// <item><description>TaskInstanceId</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;TaskInstanceId&quot;: 111L
+        /// }</para>
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public Dictionary<string, object> Filter { get; set; }

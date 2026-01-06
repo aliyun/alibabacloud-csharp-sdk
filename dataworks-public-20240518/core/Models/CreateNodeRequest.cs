@@ -38,13 +38,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The scenario for node creation. This determines whether the node is created in the manual task pane or the Data Studio pane. DataworksManualWorkflow is valid only when ContainerId is specified and the container is a manual workflow.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DATAWORKS_PROJECT: Project directory</description></item>
-        /// <item><description>DATAWORKS_MANUAL_WORKFLOW: Manual workflow</description></item>
-        /// <item><description>DATAWORKS_MANUAL_TASK: Manual task</description></item>
-        /// </list>
+        /// <para>Specify this parameter if you want to create the node inside a container. This parameter represents the unique identifier of the container, which can be a workflow or a container node.</para>
+        /// <remarks>
+        /// <para> If this parameter is specified, the path field defined in FlowSpec is ignored.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string Creator { get; set; }
 
+        [NameInMap("ObjectId")]
+        [Validation(Required=false)]
+        public string ObjectId { get; set; }
+
         /// <summary>
         /// <para>The page number. Pages start from page 1. Default value: 1.</para>
         /// 

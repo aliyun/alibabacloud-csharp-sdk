@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default is 10, and the maximum is 100.</para>
+        /// <para>The page number of the data to retrieve, used for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -64,12 +64,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The scheduling type, which is a filter condition. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Normal: The nodes are scheduled as expected.</description></item>
-        /// <item><description>Pause: The nodes are paused, and the running of their descendant nodes is blocked.</description></item>
-        /// <item><description>Skip: The nodes are dry run. The system does not actually run the nodes, but directly returns a success response. The running duration of the nodes is 0 seconds. In addition, the nodes do not occupy resources or block the running of their descendant nodes.</description></item>
-        /// </list>
+        /// <para>Leave this parameter empty if not specified. Filter condition: within a specified container. Specify the container ID. This parameter is independent of the resource group ID (ResourceGroupId).</para>
+        /// <remarks>
+        /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>

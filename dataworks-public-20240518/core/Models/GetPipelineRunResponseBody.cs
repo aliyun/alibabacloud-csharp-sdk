@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Creator { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>发布流程描述信息</para>
+            /// </summary>
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            /// <summary>
             /// <para>The process ID.</para>
             /// 
             /// <b>Example:</b>

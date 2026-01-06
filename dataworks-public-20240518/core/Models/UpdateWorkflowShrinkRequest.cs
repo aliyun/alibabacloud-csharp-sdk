@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace. Valid values:</para>
+        /// <para>The project environment.</para>
         /// <list type="bullet">
-        /// <item><description>Prod: production environment</description></item>
-        /// <item><description>Dev: development environment</description></item>
+        /// <item><description>Prod</description></item>
+        /// <item><description>Dev</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,6 +61,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// <para>The instance generation mode.</para>
+        /// <list type="bullet">
+        /// <item><description>T+1: the next day</description></item>
+        /// <item><description>Immediately Note: Periodic instances will only be generated normally if the workflow\&quot;s scheduled time is more than 10 minutes after the workflow publication time. Real-time instance generation is not available during the batch instance generation period (23:30 to 24:00). While workflows can be published during this time, instances will not be regenerated immediately after submission.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>T+1</para>
+        /// </summary>
         [NameInMap("InstanceMode")]
         [Validation(Required=false)]
         public string InstanceMode { get; set; }
@@ -112,7 +122,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The tasks.</para>
+        /// <para>Details about tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]

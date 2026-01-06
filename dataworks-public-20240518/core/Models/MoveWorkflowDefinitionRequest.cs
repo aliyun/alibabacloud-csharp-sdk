@@ -24,8 +24,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The path to which you want to move the workflow. You do not need to specify a workflow name in the path.</para>
-        /// <para>For example, if you want to move the test workflow to root/demo/test, you must set this parameter to root/demo.</para>
+        /// <para>The unique identifier of the workflow.</para>
+        /// <remarks>
+        /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

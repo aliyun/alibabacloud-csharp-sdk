@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The number of entries per page. Default: 10. Maximum: 100.</para>
+        /// <para>The requested page number, used for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

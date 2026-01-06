@@ -144,8 +144,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The nested resource type.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>File: General resource file</description></item>
-                /// <item><description>Embedded: Embedded resource</description></item>
+                /// <item><description>File: General resource file.</description></item>
+                /// <item><description>Embedded: Embedded resource.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -277,9 +277,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListFunctionsResponseBodyPagingInfoFunctionsScript Script { get; set; }
                 public class ListFunctionsResponseBodyPagingInfoFunctionsScript : TeaModel {
                     /// <summary>
-                    /// <para>The script ID.</para>
+                    /// <para>The ID of the script.</para>
                     /// <remarks>
-                    /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                    /// <para> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>

@@ -20,7 +20,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account used by the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the ID on the Security Settings page.</para>
+        /// <para>Filter condition: The type of the workflow. The default value is CycleWorkflow.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CycleWorkflow</description></item>
+        /// <item><description>ManualWorkflow</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>110755000425XXXX</para>
@@ -40,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The page number of the data to retrieve, used for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

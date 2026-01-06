@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListNodesResponseBodyPagingInfoNodes> Nodes { get; set; }
             public class ListNodesResponseBodyPagingInfoNodes : TeaModel {
                 /// <summary>
-                /// <para>The timestamp when the node in DataStudio was created.</para>
+                /// <para>The timestamp when the node in Data Studio was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1722910655000</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The unique identifier of the Data Studio node.</para>
                 /// <remarks>
-                /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                /// <para> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public List<ListNodesResponseBodyPagingInfoNodesInputsNodeOutputs> NodeOutputs { get; set; }
                     public class ListNodesResponseBodyPagingInfoNodesInputsNodeOutputs : TeaModel {
                         /// <summary>
-                        /// <para>The node output.</para>
+                        /// <para>The output of the node.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>623731286945488XXXX</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public ListNodesResponseBodyPagingInfoNodesInputsVariablesNode Node { get; set; }
                         public class ListNodesResponseBodyPagingInfoNodesInputsVariablesNode : TeaModel {
                             /// <summary>
-                            /// <para>The node output.</para>
+                            /// <para>The output of the node.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>623731286945488XXXX</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public List<ListNodesResponseBodyPagingInfoNodesOutputsNodeOutputs> NodeOutputs { get; set; }
                     public class ListNodesResponseBodyPagingInfoNodesOutputsNodeOutputs : TeaModel {
                         /// <summary>
-                        /// <para>The node output.</para>
+                        /// <para>The output of the node.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>860438872620113XXXX</para>
@@ -349,7 +349,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public ListNodesResponseBodyPagingInfoNodesOutputsVariablesNode Node { get; set; }
                         public class ListNodesResponseBodyPagingInfoNodesOutputsVariablesNode : TeaModel {
                             /// <summary>
-                            /// <para>The node output.</para>
+                            /// <para>The output of the node.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>860438872620113XXXX</para>
@@ -408,7 +408,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The owner of nodes in DataStudio.</para>
+                /// <para>The owner of nodes in Data Studio.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110755000425XXXX</para>
@@ -482,7 +482,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The ID of the script.</para>
                     /// <remarks>
-                    /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                    /// <para> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -621,7 +621,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The scheduling task ID.</para>
+                /// <para>The ID of the scheduling task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>88888888888</para>
@@ -638,7 +638,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListNodesResponseBodyPagingInfoNodesTrigger Trigger { get; set; }
                 public class ListNodesResponseBodyPagingInfoNodesTrigger : TeaModel {
                     /// <summary>
-                    /// <para>The cron expression for scheduling</para>
+                    /// <para>The cron expression for scheduling.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>00 00 00 * * ?</para>
@@ -694,9 +694,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <para>The trigger type.</para>
                     /// <para>Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Scheduler: periodic scheduling</description></item>
-                    /// <item><description>Manual: manual trigger</description></item>
-                    /// <item><description>Streaming: streaming task</description></item>
+                    /// <item><description>Scheduler: Periodic scheduling</description></item>
+                    /// <item><description>Manual: Manual trigger</description></item>
+                    /// <item><description>Streaming: Streaming task</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
