@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class GetCertWarehouseQuotaResponseBody : TeaModel {
+        [NameInMap("AppTotalQuota")]
+        [Validation(Required=false)]
+        public long? AppTotalQuota { get; set; }
+
+        [NameInMap("AppUseCount")]
+        [Validation(Required=false)]
+        public long? AppUseCount { get; set; }
+
         /// <summary>
         /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
         /// 

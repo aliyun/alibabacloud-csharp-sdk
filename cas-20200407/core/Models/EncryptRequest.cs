@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string Plaintext { get; set; }
 
+        [NameInMap("WarehouseId")]
+        [Validation(Required=false)]
+        public long? WarehouseId { get; set; }
+
     }
 
 }

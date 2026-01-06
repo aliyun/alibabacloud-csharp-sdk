@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string SigningAlgorithm { get; set; }
 
+        [NameInMap("WarehouseId")]
+        [Validation(Required=false)]
+        public long? WarehouseId { get; set; }
+
     }
 
 }

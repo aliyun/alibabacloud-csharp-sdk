@@ -1423,6 +1423,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             {
                 query["MessageType"] = request.MessageType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarehouseId))
+            {
+                query["WarehouseId"] = request.WarehouseId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1485,6 +1489,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageType))
             {
                 query["MessageType"] = request.MessageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarehouseId))
+            {
+                query["WarehouseId"] = request.WarehouseId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3031,6 +3039,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             {
                 query["Plaintext"] = request.Plaintext;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarehouseId))
+            {
+                query["WarehouseId"] = request.WarehouseId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3093,6 +3105,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Plaintext))
             {
                 query["Plaintext"] = request.Plaintext;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarehouseId))
+            {
+                query["WarehouseId"] = request.WarehouseId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5595,6 +5611,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             {
                 query["SigningAlgorithm"] = request.SigningAlgorithm;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarehouseId))
+            {
+                query["WarehouseId"] = request.WarehouseId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5659,6 +5679,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SigningAlgorithm))
             {
                 query["SigningAlgorithm"] = request.SigningAlgorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarehouseId))
+            {
+                query["WarehouseId"] = request.WarehouseId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6671,6 +6695,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             {
                 query["SigningAlgorithm"] = request.SigningAlgorithm;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarehouseId))
+            {
+                query["WarehouseId"] = request.WarehouseId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6739,6 +6767,10 @@ namespace AlibabaCloud.SDK.Cas20200407
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SigningAlgorithm))
             {
                 query["SigningAlgorithm"] = request.SigningAlgorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarehouseId))
+            {
+                query["WarehouseId"] = request.WarehouseId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
