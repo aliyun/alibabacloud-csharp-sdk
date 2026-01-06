@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.PolardbAI20251013.Models
 {
     public class ChatBIPredictSseRequest : TeaModel {
+        [NameInMap("AuthMessage")]
+        [Validation(Required=false)]
+        public string AuthMessage { get; set; }
+
+        [NameInMap("AuthType")]
+        [Validation(Required=false)]
+        public string AuthType { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -108,6 +116,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013.Models
         [NameInMap("SelectData")]
         [Validation(Required=false)]
         public bool? SelectData { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("ThinkingMode")]
+        [Validation(Required=false)]
+        public bool? ThinkingMode { get; set; }
 
     }
 

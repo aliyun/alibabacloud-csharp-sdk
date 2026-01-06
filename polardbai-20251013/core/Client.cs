@@ -56,6 +56,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -102,6 +110,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -184,6 +200,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -230,6 +254,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -312,6 +344,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -362,6 +402,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -448,6 +496,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -506,6 +562,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -600,6 +664,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -650,6 +722,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -736,6 +816,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -810,6 +898,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -920,6 +1016,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -966,6 +1070,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -1048,6 +1160,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
                 query["FileName"] = request.FileName;
@@ -1094,6 +1214,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
                 query["FileName"] = request.FileName;
@@ -1176,6 +1304,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CharacterSetName))
             {
                 query["CharacterSetName"] = request.CharacterSetName;
@@ -1238,6 +1374,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CharacterSetName))
             {
                 query["CharacterSetName"] = request.CharacterSetName;
@@ -1336,6 +1480,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -1386,6 +1538,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -1472,6 +1632,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -1522,6 +1690,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -1608,6 +1784,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -1662,6 +1846,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -1752,6 +1944,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -1806,6 +2006,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -1896,6 +2104,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -1946,6 +2162,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -2032,6 +2256,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -2090,6 +2322,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -2184,6 +2424,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -2246,6 +2494,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -2344,6 +2600,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -2402,6 +2666,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -2496,6 +2768,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -2566,6 +2846,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -2678,6 +2966,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
                 request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -2713,6 +3009,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectData))
             {
                 query["SelectData"] = request.SelectData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingMode))
+            {
+                query["ThinkingMode"] = request.ThinkingMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2758,6 +3058,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
                 request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -2793,6 +3101,10 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectData))
             {
                 query["SelectData"] = request.SelectData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingMode))
+            {
+                query["ThinkingMode"] = request.ThinkingMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2868,6 +3180,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnsExcluded))
             {
                 query["ColumnsExcluded"] = request.ColumnsExcluded;
@@ -2930,6 +3250,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnsExcluded))
             {
                 query["ColumnsExcluded"] = request.ColumnsExcluded;
@@ -3028,6 +3356,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -3078,6 +3414,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -3164,6 +3508,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -3222,6 +3574,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -3316,6 +3676,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -3370,6 +3738,14 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
             {
                 query["DbName"] = request.DbName;
@@ -4271,6 +4647,142 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获得鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserTokenResponse
+        /// </returns>
+        public GetUserTokenResponse GetUserTokenWithOptions(GetUserTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserToken",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获得鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserTokenResponse
+        /// </returns>
+        public async Task<GetUserTokenResponse> GetUserTokenWithOptionsAsync(GetUserTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserToken",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获得鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserTokenResponse
+        /// </returns>
+        public GetUserTokenResponse GetUserToken(GetUserTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetUserTokenWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获得鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserTokenResponse
+        /// </returns>
+        public async Task<GetUserTokenResponse> GetUserTokenAsync(GetUserTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetUserTokenWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询多模态数据集列表</para>
         /// </summary>
         /// 
@@ -4687,6 +5199,150 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询search task结果列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalSearchTaskResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalSearchTaskResultResponse
+        /// </returns>
+        public ListMultimodalSearchTaskResultResponse ListMultimodalSearchTaskResultWithOptions(ListMultimodalSearchTaskResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMultimodalSearchTaskResult",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMultimodalSearchTaskResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询search task结果列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalSearchTaskResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalSearchTaskResultResponse
+        /// </returns>
+        public async Task<ListMultimodalSearchTaskResultResponse> ListMultimodalSearchTaskResultWithOptionsAsync(ListMultimodalSearchTaskResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMultimodalSearchTaskResult",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMultimodalSearchTaskResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询search task结果列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalSearchTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalSearchTaskResultResponse
+        /// </returns>
+        public ListMultimodalSearchTaskResultResponse ListMultimodalSearchTaskResult(ListMultimodalSearchTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListMultimodalSearchTaskResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询search task结果列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMultimodalSearchTaskResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMultimodalSearchTaskResultResponse
+        /// </returns>
+        public async Task<ListMultimodalSearchTaskResultResponse> ListMultimodalSearchTaskResultAsync(ListMultimodalSearchTaskResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListMultimodalSearchTaskResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>更新数据集信息</para>
         /// </summary>
         /// 
@@ -4963,6 +5619,286 @@ namespace AlibabaCloud.SDK.PolardbAI20251013
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UploadOSSMultimodalDatasetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检验鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateDatabaseUserTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateDatabaseUserTokenResponse
+        /// </returns>
+        public ValidateDatabaseUserTokenResponse ValidateDatabaseUserTokenWithOptions(ValidateDatabaseUserTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
+            {
+                query["DBName"] = request.DBName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateDatabaseUserToken",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateDatabaseUserTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检验鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateDatabaseUserTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateDatabaseUserTokenResponse
+        /// </returns>
+        public async Task<ValidateDatabaseUserTokenResponse> ValidateDatabaseUserTokenWithOptionsAsync(ValidateDatabaseUserTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBName))
+            {
+                query["DBName"] = request.DBName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateDatabaseUserToken",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateDatabaseUserTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检验鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateDatabaseUserTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateDatabaseUserTokenResponse
+        /// </returns>
+        public ValidateDatabaseUserTokenResponse ValidateDatabaseUserToken(ValidateDatabaseUserTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ValidateDatabaseUserTokenWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检验鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateDatabaseUserTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateDatabaseUserTokenResponse
+        /// </returns>
+        public async Task<ValidateDatabaseUserTokenResponse> ValidateDatabaseUserTokenAsync(ValidateDatabaseUserTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ValidateDatabaseUserTokenWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检验鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateUserTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateUserTokenResponse
+        /// </returns>
+        public ValidateUserTokenResponse ValidateUserTokenWithOptions(ValidateUserTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateUserToken",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateUserTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检验鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateUserTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateUserTokenResponse
+        /// </returns>
+        public async Task<ValidateUserTokenResponse> ValidateUserTokenWithOptionsAsync(ValidateUserTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthMessage))
+            {
+                query["AuthMessage"] = request.AuthMessage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                query["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ValidateUserToken",
+                Version = "2025-10-13",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ValidateUserTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检验鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateUserTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateUserTokenResponse
+        /// </returns>
+        public ValidateUserTokenResponse ValidateUserToken(ValidateUserTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ValidateUserTokenWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预检验鉴权token</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ValidateUserTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ValidateUserTokenResponse
+        /// </returns>
+        public async Task<ValidateUserTokenResponse> ValidateUserTokenAsync(ValidateUserTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ValidateUserTokenWithOptionsAsync(request, runtime);
         }
 
     }

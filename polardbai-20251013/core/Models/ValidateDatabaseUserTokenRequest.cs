@@ -8,11 +8,23 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PolardbAI20251013.Models
 {
-    public class ChatBIConfigDeleteRequest : TeaModel {
+    public class ValidateDatabaseUserTokenRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>yEtNjzuM21NVLVJTuL9Trw****</para>
+        /// </summary>
         [NameInMap("AuthMessage")]
         [Validation(Required=false)]
         public string AuthMessage { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>token</para>
+        /// </summary>
         [NameInMap("AuthType")]
         [Validation(Required=false)]
         public string AuthType { get; set; }
@@ -21,21 +33,21 @@ namespace AlibabaCloud.SDK.PolardbAI20251013.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>db_test</para>
+        /// <para>pc-2ze454l20me07****</para>
         /// </summary>
-        [NameInMap("DbName")]
+        [NameInMap("DBClusterId")]
         [Validation(Required=false)]
-        public string DbName { get; set; }
+        public string DBClusterId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pc-2ze454l20me07****</para>
+        /// <para>ai_test</para>
         /// </summary>
-        [NameInMap("InstanceName")]
+        [NameInMap("DBName")]
         [Validation(Required=false)]
-        public string InstanceName { get; set; }
+        public string DBName { get; set; }
 
     }
 
