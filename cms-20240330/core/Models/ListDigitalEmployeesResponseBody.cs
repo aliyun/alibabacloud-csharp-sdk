@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
+            [NameInMap("employeeType")]
+            [Validation(Required=false)]
+            public string EmployeeType { get; set; }
+
             [NameInMap("knowledges")]
             [Validation(Required=false)]
             public ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledges Knowledges { get; set; }

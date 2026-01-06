@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
+            [NameInMap("clusterNamespace")]
+            [Validation(Required=false)]
+            public string ClusterNamespace { get; set; }
+
             /// <summary>
             /// <para>Whether to disable the unique binding of the Policy. If enabled, multiple Policies can be created for a single container cluster.</para>
             /// 
