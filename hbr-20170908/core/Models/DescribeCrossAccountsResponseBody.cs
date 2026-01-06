@@ -61,6 +61,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public string CrossAccountRoleName { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>CROSS_ACCOUNT</para>
+                /// </summary>
+                [NameInMap("CrossAccountType")]
+                [Validation(Required=false)]
+                public string CrossAccountType { get; set; }
+
+                /// <summary>
                 /// <para>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</para>
                 /// 
                 /// <b>Example:</b>

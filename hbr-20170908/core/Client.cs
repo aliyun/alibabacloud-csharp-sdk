@@ -4591,6 +4591,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return await DeleteBackupPlanWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除客户端</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteClientRequest
         /// </param>
@@ -4636,6 +4641,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteClientResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除客户端</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteClientRequest
         /// </param>
@@ -4681,6 +4691,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return TeaModel.ToObject<DeleteClientResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除客户端</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteClientRequest
         /// </param>
@@ -4694,6 +4709,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
             return DeleteClientWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除客户端</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteClientRequest
         /// </param>
