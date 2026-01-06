@@ -9968,6 +9968,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 query["QueryType"] = request.QueryType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryVideo))
+            {
+                query["QueryVideo"] = request.QueryVideo;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScoreThreshold))
             {
                 query["ScoreThreshold"] = request.ScoreThreshold;
@@ -10135,6 +10139,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryType))
             {
                 query["QueryType"] = request.QueryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryVideo))
+            {
+                query["QueryVideo"] = request.QueryVideo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScoreThreshold))
             {

@@ -158,6 +158,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string QueryType { get; set; }
 
+        [NameInMap("QueryVideo")]
+        [Validation(Required=false)]
+        public string QueryVideo { get; set; }
+
         /// <summary>
         /// <para>The similarity score. Only dataset files whose similarity score is greater than the value of ScoreThreshold are returned. This parameter is valid only when QueryType is set to VECTOR.</para>
         /// 
