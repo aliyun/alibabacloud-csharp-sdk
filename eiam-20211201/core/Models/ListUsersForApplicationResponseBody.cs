@@ -37,6 +37,25 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListUsersForApplicationResponseBodyUsers> Users { get; set; }
         public class ListUsersForApplicationResponseBodyUsers : TeaModel {
             /// <summary>
+            /// <para>应用角色列表。</para>
+            /// </summary>
+            [NameInMap("ApplicationRoles")]
+            [Validation(Required=false)]
+            public List<ListUsersForApplicationResponseBodyUsersApplicationRoles> ApplicationRoles { get; set; }
+            public class ListUsersForApplicationResponseBodyUsersApplicationRoles : TeaModel {
+                /// <summary>
+                /// <para>应用角色标识。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
+                /// </summary>
+                [NameInMap("ApplicationRoleId")]
+                [Validation(Required=false)]
+                public string ApplicationRoleId { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The ID of the account.</para>
             /// 
             /// <b>Example:</b>

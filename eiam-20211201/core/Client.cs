@@ -612,6 +612,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ApplicationId"] = request.ApplicationId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupIds))
             {
                 query["GroupIds"] = request.GroupIds;
@@ -661,6 +665,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupIds))
             {
@@ -748,6 +756,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ApplicationId"] = request.ApplicationId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -797,6 +809,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -884,6 +900,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ApplicationId"] = request.ApplicationId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -933,6 +953,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -19614,6 +19638,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ApplicationId"] = request.ApplicationId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupIds))
             {
                 query["GroupIds"] = request.GroupIds;
@@ -19671,6 +19699,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupIds))
             {
@@ -21300,6 +21332,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ApplicationId"] = request.ApplicationId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -21357,6 +21393,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -22146,6 +22186,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ApplicationId"] = request.ApplicationId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -22203,6 +22247,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -23410,6 +23458,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ApplicationId"] = request.ApplicationId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupIds))
             {
                 query["GroupIds"] = request.GroupIds;
@@ -23459,6 +23511,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupIds))
             {
@@ -23546,6 +23602,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ApplicationId"] = request.ApplicationId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -23595,6 +23655,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -23682,6 +23746,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ApplicationId"] = request.ApplicationId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -23731,6 +23799,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationRoleId))
+            {
+                query["ApplicationRoleId"] = request.ApplicationRoleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {

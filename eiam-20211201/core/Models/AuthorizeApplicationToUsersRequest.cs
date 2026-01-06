@@ -21,6 +21,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>应用角色ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
+        /// </summary>
+        [NameInMap("ApplicationRoleId")]
+        [Validation(Required=false)]
+        public string ApplicationRoleId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 

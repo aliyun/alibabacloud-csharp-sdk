@@ -17,6 +17,25 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListGroupsForApplicationResponseBodyGroups> Groups { get; set; }
         public class ListGroupsForApplicationResponseBodyGroups : TeaModel {
             /// <summary>
+            /// <para>应用角色列表。</para>
+            /// </summary>
+            [NameInMap("ApplicationRoles")]
+            [Validation(Required=false)]
+            public List<ListGroupsForApplicationResponseBodyGroupsApplicationRoles> ApplicationRoles { get; set; }
+            public class ListGroupsForApplicationResponseBodyGroupsApplicationRoles : TeaModel {
+                /// <summary>
+                /// <para>应用角色标识。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
+                /// </summary>
+                [NameInMap("ApplicationRoleId")]
+                [Validation(Required=false)]
+                public string ApplicationRoleId { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The group ID.</para>
             /// 
             /// <b>Example:</b>
