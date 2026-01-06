@@ -45,8 +45,6 @@ namespace AlibabaCloud.SDK.LingMou20250527.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>M16vSG46Pby9HWOrFSZ7QaQA</para>
         /// </summary>
