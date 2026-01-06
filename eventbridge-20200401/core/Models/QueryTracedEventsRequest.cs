@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
+        [NameInMap("Subject")]
+        [Validation(Required=false)]
+        public string Subject { get; set; }
+
     }
 
 }
