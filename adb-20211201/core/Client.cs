@@ -12066,7 +12066,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自动续费参数</para>
+        /// <para>Queries the auto-renewal status of a subscription cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12146,7 +12146,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自动续费参数</para>
+        /// <para>Queries the auto-renewal status of a subscription cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12226,7 +12226,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自动续费参数</para>
+        /// <para>Queries the auto-renewal status of a subscription cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12244,7 +12244,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自动续费参数</para>
+        /// <para>Queries the auto-renewal status of a subscription cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35134,7 +35134,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改自动续费配置</para>
+        /// <para>Configures auto-renewal for a subscription cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35208,7 +35208,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改自动续费配置</para>
+        /// <para>Configures auto-renewal for a subscription cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35282,7 +35282,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改自动续费配置</para>
+        /// <para>Configures auto-renewal for a subscription cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35300,7 +35300,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改自动续费配置</para>
+        /// <para>Configures auto-renewal for a subscription cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">

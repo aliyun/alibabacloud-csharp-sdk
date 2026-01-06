@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAutoRenewalAttributeShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The cluster IDs.</para>
+        /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterIdShrink { get; set; }
@@ -22,6 +25,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number. A positive integer greater than 0 and not exceeding the maximum value of the Integer data type. Default value: <b>1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -30,6 +35,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned on each page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>30</b>(Default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -38,6 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +61,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-4690g37929****</para>
         /// </summary>

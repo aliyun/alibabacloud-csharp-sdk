@@ -23,6 +23,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The language of the returned data. Valid values:</para>
         /// <list type="bullet">
@@ -37,6 +39,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Lang { get; set; }
 
         /// <summary>

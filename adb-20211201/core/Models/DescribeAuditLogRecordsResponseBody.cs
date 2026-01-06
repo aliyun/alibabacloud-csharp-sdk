@@ -61,6 +61,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? ExecuteTimestamp { get; set; }
 
             /// <summary>
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("HasDiagnosticInfo")]
+            [Validation(Required=false)]
+            public bool? HasDiagnosticInfo { get; set; }
+
+            /// <summary>
             /// <para>The IP address and port number of the client that is used to execute the SQL statement.</para>
             /// 
             /// <b>Example:</b>
