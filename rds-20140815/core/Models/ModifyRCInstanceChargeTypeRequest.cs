@@ -133,7 +133,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>Prepaid</b>: subscription.</description></item>
         /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Postpaid</para>

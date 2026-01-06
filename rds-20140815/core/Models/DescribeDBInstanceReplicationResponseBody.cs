@@ -23,6 +23,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string ExternalReplication { get; set; }
 
+        [NameInMap("GtidExecuted")]
+        [Validation(Required=false)]
+        public string GtidExecuted { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>COMPLETED</para>
+        /// </summary>
+        [NameInMap("ImportStatus")]
+        [Validation(Required=false)]
+        public string ImportStatus { get; set; }
+
         /// <summary>
         /// <para>The replication latency. Unit: seconds.</para>
         /// 
