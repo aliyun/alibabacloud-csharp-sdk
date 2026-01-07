@@ -88,6 +88,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string SourceDataSourceType { get; set; }
 
+        [NameInMap("SpecType")]
+        [Validation(Required=false)]
+        public string SpecType { get; set; }
+
     }
 
 }
