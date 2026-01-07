@@ -18,12 +18,12 @@ namespace AlibabaCloud.SDK.Sts20150401
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._signatureAlgorithm = "v2";
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
                 {"ap-northeast-2-pop", "sts.aliyuncs.com"},
-                {"cn-beijing-finance-1", "sts.aliyuncs.com"},
+                {"ap-south-1", "sts.aliyuncs.com"},
+                {"ap-southeast-2", "sts.aliyuncs.com"},
                 {"cn-beijing-finance-pop", "sts.aliyuncs.com"},
                 {"cn-beijing-gov-1", "sts.aliyuncs.com"},
                 {"cn-beijing-nu16-b01", "sts.aliyuncs.com"},
@@ -31,7 +31,6 @@ namespace AlibabaCloud.SDK.Sts20150401
                 {"cn-fujian", "sts.aliyuncs.com"},
                 {"cn-haidian-cm12-c01", "sts.aliyuncs.com"},
                 {"cn-hangzhou-bj-b01", "sts.aliyuncs.com"},
-                {"cn-hangzhou-finance", "sts.aliyuncs.com"},
                 {"cn-hangzhou-internal-prod-1", "sts.aliyuncs.com"},
                 {"cn-hangzhou-internal-test-1", "sts.aliyuncs.com"},
                 {"cn-hangzhou-internal-test-2", "sts.aliyuncs.com"},
@@ -39,13 +38,10 @@ namespace AlibabaCloud.SDK.Sts20150401
                 {"cn-hangzhou-test-306", "sts.aliyuncs.com"},
                 {"cn-hongkong-finance-pop", "sts.aliyuncs.com"},
                 {"cn-huhehaote-nebula-1", "sts.aliyuncs.com"},
-                {"cn-north-2-gov-1", "sts-vpc.cn-north-2-gov-1.aliyuncs.com"},
-                {"cn-qingdao-nebula", "sts.aliyuncs.com"},
                 {"cn-shanghai-et15-b01", "sts.aliyuncs.com"},
                 {"cn-shanghai-et2-b01", "sts.aliyuncs.com"},
                 {"cn-shanghai-inner", "sts.aliyuncs.com"},
                 {"cn-shanghai-internal-test-1", "sts.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "sts-vpc.cn-shenzhen-finance-1.aliyuncs.com"},
                 {"cn-shenzhen-inner", "sts.aliyuncs.com"},
                 {"cn-shenzhen-st4-d01", "sts.aliyuncs.com"},
                 {"cn-shenzhen-su18-b01", "sts.aliyuncs.com"},
@@ -369,7 +365,7 @@ namespace AlibabaCloud.SDK.Sts20150401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssumeRoleWithOIDCResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<AssumeRoleWithOIDCResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -441,7 +437,7 @@ namespace AlibabaCloud.SDK.Sts20150401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssumeRoleWithOIDCResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<AssumeRoleWithOIDCResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -565,7 +561,7 @@ namespace AlibabaCloud.SDK.Sts20150401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssumeRoleWithSAMLResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<AssumeRoleWithSAMLResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -633,7 +629,7 @@ namespace AlibabaCloud.SDK.Sts20150401
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return TeaModel.ToObject<AssumeRoleWithSAMLResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<AssumeRoleWithSAMLResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
