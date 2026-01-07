@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Ddoscoo20200101.Models
             [Validation(Required=false)]
             public int? CcEnable { get; set; }
 
+            [NameInMap("CcGlobalSwitch")]
+            [Validation(Required=false)]
+            public string CcGlobalSwitch { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>default</para>
