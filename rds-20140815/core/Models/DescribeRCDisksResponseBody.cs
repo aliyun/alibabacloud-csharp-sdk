@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string AttachedTime { get; set; }
 
+            [NameInMap("BurstingEnabled")]
+            [Validation(Required=false)]
+            public bool? BurstingEnabled { get; set; }
+
             /// <summary>
             /// <para>The category of the disk. Valid values:</para>
             /// <list type="bullet">
@@ -199,6 +203,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
+
+            [NameInMap("Portable")]
+            [Validation(Required=false)]
+            public bool? Portable { get; set; }
 
             /// <summary>
             /// <para>The region ID.</para>
