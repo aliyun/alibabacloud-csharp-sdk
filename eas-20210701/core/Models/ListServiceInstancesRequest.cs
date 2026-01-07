@@ -140,9 +140,17 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("QuotaId")]
+        [Validation(Required=false)]
+        public string QuotaId { get; set; }
+
         [NameInMap("ReplicaName")]
         [Validation(Required=false)]
         public string ReplicaName { get; set; }
+
+        [NameInMap("Resource")]
+        [Validation(Required=false)]
+        public string Resource { get; set; }
 
         /// <summary>
         /// <para>The type of the resource group to which the instance belongs.</para>

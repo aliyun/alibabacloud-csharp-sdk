@@ -260,6 +260,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Sort { get; set; }
 
+        [NameInMap("Zone")]
+        [Validation(Required=false)]
+        public string Zone { get; set; }
+
     }
 
 }

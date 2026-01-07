@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? AutoscalerEnabled { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>19989224166xxxxxxx</para>
+        /// </summary>
+        [NameInMap("CallerUid")]
+        [Validation(Required=false)]
+        public string CallerUid { get; set; }
+
         [NameInMap("CronscalerEnabled")]
         [Validation(Required=false)]
         public bool? CronscalerEnabled { get; set; }
