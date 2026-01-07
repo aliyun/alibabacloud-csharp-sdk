@@ -13486,6 +13486,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudServiceKubeConfig))
+            {
+                query["cloudServiceKubeConfig"] = request.CloudServiceKubeConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;
@@ -13546,6 +13550,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudServiceKubeConfig))
+            {
+                query["cloudServiceKubeConfig"] = request.CloudServiceKubeConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;

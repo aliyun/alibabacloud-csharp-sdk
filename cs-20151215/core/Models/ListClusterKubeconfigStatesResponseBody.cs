@@ -140,6 +140,28 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string CertState { get; set; }
 
+            [NameInMap("cloud_service_roles")]
+            [Validation(Required=false)]
+            public List<ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles> CloudServiceRoles { get; set; }
+            public class ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles : TeaModel {
+                [NameInMap("is_default_template")]
+                [Validation(Required=false)]
+                public bool? IsDefaultTemplate { get; set; }
+
+                [NameInMap("role_name")]
+                [Validation(Required=false)]
+                public string RoleName { get; set; }
+
+                [NameInMap("role_namespace")]
+                [Validation(Required=false)]
+                public string RoleNamespace { get; set; }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             /// <summary>
             /// <para>Indicates whether the client certificate for the kubeconfig file can be revoked.</para>
             /// 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListClusterKubeconfigStatesRequest : TeaModel {
+        [NameInMap("cloudServiceKubeConfig")]
+        [Validation(Required=false)]
+        public bool? CloudServiceKubeConfig { get; set; }
+
         /// <summary>
         /// <para>The page number.</para>
         /// <list type="bullet">
