@@ -35,6 +35,22 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public List<RealtimeDialogAssistRequestConversationModel> ConversationModel { get; set; }
         public class RealtimeDialogAssistRequestConversationModel : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("begin")]
+            [Validation(Required=false)]
+            public int? Begin { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2025-12-12 09:00:00</para>
+            /// </summary>
+            [NameInMap("beginTime")]
+            [Validation(Required=false)]
+            public string BeginTime { get; set; }
+
+            /// <summary>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("content")]
@@ -64,6 +80,14 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [NameInMap("customerServiceType")]
             [Validation(Required=false)]
             public string CustomerServiceType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("end")]
+            [Validation(Required=false)]
+            public int? End { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
@@ -119,6 +143,14 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>你好</para>
+        /// </summary>
+        [NameInMap("scriptContentPlayed")]
+        [Validation(Required=false)]
+        public string ScriptContentPlayed { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,6 +159,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [NameInMap("sessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
+
+        [NameInMap("userVad")]
+        [Validation(Required=false)]
+        public bool? UserVad { get; set; }
 
     }
 

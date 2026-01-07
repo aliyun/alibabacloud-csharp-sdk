@@ -6346,9 +6346,17 @@ namespace AlibabaCloud.SDK.DianJin20240628
             {
                 body["requestId"] = request.RequestId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptContentPlayed))
+            {
+                body["scriptContentPlayed"] = request.ScriptContentPlayed;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserVad))
+            {
+                body["userVad"] = request.UserVad;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6420,9 +6428,17 @@ namespace AlibabaCloud.SDK.DianJin20240628
             {
                 body["requestId"] = request.RequestId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptContentPlayed))
+            {
+                body["scriptContentPlayed"] = request.ScriptContentPlayed;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserVad))
+            {
+                body["userVad"] = request.UserVad;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

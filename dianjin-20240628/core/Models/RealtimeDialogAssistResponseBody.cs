@@ -143,6 +143,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
             }
 
+            [NameInMap("interrupt")]
+            [Validation(Required=false)]
+            public bool? Interrupt { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>0FC6636E-380A-5369-AE01-D1C15BB9B254</para>
