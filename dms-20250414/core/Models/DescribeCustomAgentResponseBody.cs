@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public DescribeCustomAgentResponseBodyDataExecutionConfig ExecutionConfig { get; set; }
             public class DescribeCustomAgentResponseBodyDataExecutionConfig : TeaModel {
+                [NameInMap("SkipAskHuman")]
+                [Validation(Required=false)]
+                public bool? SkipAskHuman { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -72,6 +76,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [NameInMap("SkipPlan")]
                 [Validation(Required=false)]
                 public bool? SkipPlan { get; set; }
+
+                [NameInMap("SkipSqlConfirm")]
+                [Validation(Required=false)]
+                public bool? SkipSqlConfirm { get; set; }
+
+                [NameInMap("SkipWebReportConfirm")]
+                [Validation(Required=false)]
+                public bool? SkipWebReportConfirm { get; set; }
 
             }
 
