@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20250301.Models
     public class GetLabelTaskResultRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>196118</para>
+        /// </summary>
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>03s1Xmp791KUMYuZVEb</para>
         /// </summary>
         [NameInMap("TaskId")]

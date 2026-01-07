@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20250301.Models
         [Validation(Required=false)]
         public string FileType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1413094986355164</para>
+        /// </summary>
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
     }
 
 }

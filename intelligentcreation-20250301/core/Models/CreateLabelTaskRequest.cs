@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20250301.Models
         [Validation(Required=false)]
         public string LabelTemplateId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1733766254635026</para>
+        /// </summary>
+        [NameInMap("ProjectId")]
+        [Validation(Required=false)]
+        public long? ProjectId { get; set; }
+
     }
 
 }
