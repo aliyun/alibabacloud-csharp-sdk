@@ -5249,6 +5249,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListHyperNodesShrinkRequest request = new ListHyperNodesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HyperNodeIds))
+            {
+                request.HyperNodeIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HyperNodeIds, "HyperNodeIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OperatingStates))
             {
                 request.OperatingStatesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperatingStates, "OperatingStates", "json");
@@ -5257,6 +5261,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
             {
                 query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HyperNodeIdsShrink))
+            {
+                query["HyperNodeIds"] = request.HyperNodeIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingStatesShrink))
             {
@@ -5343,6 +5351,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListHyperNodesShrinkRequest request = new ListHyperNodesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HyperNodeIds))
+            {
+                request.HyperNodeIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HyperNodeIds, "HyperNodeIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OperatingStates))
             {
                 request.OperatingStatesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperatingStates, "OperatingStates", "json");
@@ -5351,6 +5363,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
             {
                 query["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HyperNodeIdsShrink))
+            {
+                query["HyperNodeIds"] = request.HyperNodeIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingStatesShrink))
             {

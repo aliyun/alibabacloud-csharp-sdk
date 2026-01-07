@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string HyperNodeId { get; set; }
 
+        [NameInMap("HyperNodeIds")]
+        [Validation(Required=false)]
+        public List<string> HyperNodeIds { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>efg1.nvga1</para>
