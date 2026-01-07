@@ -39,6 +39,946 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>添加私有联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactAddRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactAddResponse
+        /// </returns>
+        public AccountContactAddResponse AccountContactAddWithOptions(AccountContactAddRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncEmailVerify))
+            {
+                body["AsyncEmailVerify"] = request.AsyncEmailVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncMobileVerify))
+            {
+                body["AsyncMobileVerify"] = request.AsyncMobileVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactEmail))
+            {
+                body["ContactEmail"] = request.ContactEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactMobile))
+            {
+                body["ContactMobile"] = request.ContactMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactPosition))
+            {
+                body["ContactPosition"] = request.ContactPosition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailCode))
+            {
+                body["EmailCode"] = request.EmailCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileCode))
+            {
+                body["MobileCode"] = request.MobileCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedContact))
+            {
+                body["SharedContact"] = request.SharedContact;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AccountContactAdd",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AccountContactAddResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加私有联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactAddRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactAddResponse
+        /// </returns>
+        public async Task<AccountContactAddResponse> AccountContactAddWithOptionsAsync(AccountContactAddRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncEmailVerify))
+            {
+                body["AsyncEmailVerify"] = request.AsyncEmailVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncMobileVerify))
+            {
+                body["AsyncMobileVerify"] = request.AsyncMobileVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactEmail))
+            {
+                body["ContactEmail"] = request.ContactEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactMobile))
+            {
+                body["ContactMobile"] = request.ContactMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactPosition))
+            {
+                body["ContactPosition"] = request.ContactPosition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailCode))
+            {
+                body["EmailCode"] = request.EmailCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileCode))
+            {
+                body["MobileCode"] = request.MobileCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedContact))
+            {
+                body["SharedContact"] = request.SharedContact;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AccountContactAdd",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AccountContactAddResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加私有联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactAddRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactAddResponse
+        /// </returns>
+        public AccountContactAddResponse AccountContactAdd(AccountContactAddRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AccountContactAddWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加私有联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactAddRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactAddResponse
+        /// </returns>
+        public async Task<AccountContactAddResponse> AccountContactAddAsync(AccountContactAddRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AccountContactAddWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除私有联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactDeleteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactDeleteResponse
+        /// </returns>
+        public AccountContactDeleteResponse AccountContactDeleteWithOptions(AccountContactDeleteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                body["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AccountContactDelete",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AccountContactDeleteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除私有联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactDeleteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactDeleteResponse
+        /// </returns>
+        public async Task<AccountContactDeleteResponse> AccountContactDeleteWithOptionsAsync(AccountContactDeleteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                body["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AccountContactDelete",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AccountContactDeleteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除私有联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactDeleteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactDeleteResponse
+        /// </returns>
+        public AccountContactDeleteResponse AccountContactDelete(AccountContactDeleteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AccountContactDeleteWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除私有联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactDeleteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactDeleteResponse
+        /// </returns>
+        public async Task<AccountContactDeleteResponse> AccountContactDeleteAsync(AccountContactDeleteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AccountContactDeleteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改私有联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactEditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactEditResponse
+        /// </returns>
+        public AccountContactEditResponse AccountContactEditWithOptions(AccountContactEditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncEmailVerify))
+            {
+                body["AsyncEmailVerify"] = request.AsyncEmailVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncMobileVerify))
+            {
+                body["AsyncMobileVerify"] = request.AsyncMobileVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactEmail))
+            {
+                body["ContactEmail"] = request.ContactEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                body["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactMobile))
+            {
+                body["ContactMobile"] = request.ContactMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactPosition))
+            {
+                body["ContactPosition"] = request.ContactPosition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailCode))
+            {
+                body["EmailCode"] = request.EmailCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileCode))
+            {
+                body["MobileCode"] = request.MobileCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedContact))
+            {
+                body["SharedContact"] = request.SharedContact;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AccountContactEdit",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AccountContactEditResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改私有联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactEditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactEditResponse
+        /// </returns>
+        public async Task<AccountContactEditResponse> AccountContactEditWithOptionsAsync(AccountContactEditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncEmailVerify))
+            {
+                body["AsyncEmailVerify"] = request.AsyncEmailVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncMobileVerify))
+            {
+                body["AsyncMobileVerify"] = request.AsyncMobileVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactEmail))
+            {
+                body["ContactEmail"] = request.ContactEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                body["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactMobile))
+            {
+                body["ContactMobile"] = request.ContactMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactPosition))
+            {
+                body["ContactPosition"] = request.ContactPosition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailCode))
+            {
+                body["EmailCode"] = request.EmailCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileCode))
+            {
+                body["MobileCode"] = request.MobileCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedContact))
+            {
+                body["SharedContact"] = request.SharedContact;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AccountContactEdit",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AccountContactEditResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改私有联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactEditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactEditResponse
+        /// </returns>
+        public AccountContactEditResponse AccountContactEdit(AccountContactEditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AccountContactEditWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改私有联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactEditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactEditResponse
+        /// </returns>
+        public async Task<AccountContactEditResponse> AccountContactEditAsync(AccountContactEditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AccountContactEditWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactQueryDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactQueryDetailResponse
+        /// </returns>
+        public AccountContactQueryDetailResponse AccountContactQueryDetailWithOptions(AccountContactQueryDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                body["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AccountContactQueryDetail",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AccountContactQueryDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactQueryDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactQueryDetailResponse
+        /// </returns>
+        public async Task<AccountContactQueryDetailResponse> AccountContactQueryDetailWithOptionsAsync(AccountContactQueryDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                body["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AccountContactQueryDetail",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AccountContactQueryDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactQueryDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactQueryDetailResponse
+        /// </returns>
+        public AccountContactQueryDetailResponse AccountContactQueryDetail(AccountContactQueryDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AccountContactQueryDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactQueryDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactQueryDetailResponse
+        /// </returns>
+        public async Task<AccountContactQueryDetailResponse> AccountContactQueryDetailAsync(AccountContactQueryDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AccountContactQueryDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactQueryPageListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactQueryPageListResponse
+        /// </returns>
+        public AccountContactQueryPageListResponse AccountContactQueryPageListWithOptions(AccountContactQueryPageListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowCompleteInfo))
+            {
+                query["ShowCompleteInfo"] = request.ShowCompleteInfo;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateContact))
+            {
+                body["PrivateContact"] = request.PrivateContact;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedContact))
+            {
+                body["SharedContact"] = request.SharedContact;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AccountContactQueryPageList",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AccountContactQueryPageListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactQueryPageListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactQueryPageListResponse
+        /// </returns>
+        public async Task<AccountContactQueryPageListResponse> AccountContactQueryPageListWithOptionsAsync(AccountContactQueryPageListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowCompleteInfo))
+            {
+                query["ShowCompleteInfo"] = request.ShowCompleteInfo;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateContact))
+            {
+                body["PrivateContact"] = request.PrivateContact;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedContact))
+            {
+                body["SharedContact"] = request.SharedContact;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AccountContactQueryPageList",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AccountContactQueryPageListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactQueryPageListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactQueryPageListResponse
+        /// </returns>
+        public AccountContactQueryPageListResponse AccountContactQueryPageList(AccountContactQueryPageListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AccountContactQueryPageListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AccountContactQueryPageListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AccountContactQueryPageListResponse
+        /// </returns>
+        public async Task<AccountContactQueryPageListResponse> AccountContactQueryPageListAsync(AccountContactQueryPageListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AccountContactQueryPageListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>修改登录密码</para>
         /// </summary>
         /// 
@@ -2471,6 +3411,946 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>增加企业联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactAddRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactAddResponse
+        /// </returns>
+        public EnterpriseContactAddResponse EnterpriseContactAddWithOptions(EnterpriseContactAddRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncEmailVerify))
+            {
+                body["AsyncEmailVerify"] = request.AsyncEmailVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncMobileVerify))
+            {
+                body["AsyncMobileVerify"] = request.AsyncMobileVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactEmail))
+            {
+                body["ContactEmail"] = request.ContactEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactMobile))
+            {
+                body["ContactMobile"] = request.ContactMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactPosition))
+            {
+                body["ContactPosition"] = request.ContactPosition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailCode))
+            {
+                body["EmailCode"] = request.EmailCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileCode))
+            {
+                body["MobileCode"] = request.MobileCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedContact))
+            {
+                body["SharedContact"] = request.SharedContact;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseContactAdd",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseContactAddResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加企业联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactAddRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactAddResponse
+        /// </returns>
+        public async Task<EnterpriseContactAddResponse> EnterpriseContactAddWithOptionsAsync(EnterpriseContactAddRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncEmailVerify))
+            {
+                body["AsyncEmailVerify"] = request.AsyncEmailVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncMobileVerify))
+            {
+                body["AsyncMobileVerify"] = request.AsyncMobileVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactEmail))
+            {
+                body["ContactEmail"] = request.ContactEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactMobile))
+            {
+                body["ContactMobile"] = request.ContactMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactPosition))
+            {
+                body["ContactPosition"] = request.ContactPosition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailCode))
+            {
+                body["EmailCode"] = request.EmailCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileCode))
+            {
+                body["MobileCode"] = request.MobileCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedContact))
+            {
+                body["SharedContact"] = request.SharedContact;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseContactAdd",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseContactAddResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加企业联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactAddRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactAddResponse
+        /// </returns>
+        public EnterpriseContactAddResponse EnterpriseContactAdd(EnterpriseContactAddRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnterpriseContactAddWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加企业联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactAddRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactAddResponse
+        /// </returns>
+        public async Task<EnterpriseContactAddResponse> EnterpriseContactAddAsync(EnterpriseContactAddRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnterpriseContactAddWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除企业联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactDeleteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactDeleteResponse
+        /// </returns>
+        public EnterpriseContactDeleteResponse EnterpriseContactDeleteWithOptions(EnterpriseContactDeleteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                body["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseContactDelete",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseContactDeleteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除企业联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactDeleteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactDeleteResponse
+        /// </returns>
+        public async Task<EnterpriseContactDeleteResponse> EnterpriseContactDeleteWithOptionsAsync(EnterpriseContactDeleteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                body["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseContactDelete",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseContactDeleteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除企业联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactDeleteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactDeleteResponse
+        /// </returns>
+        public EnterpriseContactDeleteResponse EnterpriseContactDelete(EnterpriseContactDeleteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnterpriseContactDeleteWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除企业联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactDeleteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactDeleteResponse
+        /// </returns>
+        public async Task<EnterpriseContactDeleteResponse> EnterpriseContactDeleteAsync(EnterpriseContactDeleteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnterpriseContactDeleteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改私企业联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactEditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactEditResponse
+        /// </returns>
+        public EnterpriseContactEditResponse EnterpriseContactEditWithOptions(EnterpriseContactEditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncEmailVerify))
+            {
+                body["AsyncEmailVerify"] = request.AsyncEmailVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncMobileVerify))
+            {
+                body["AsyncMobileVerify"] = request.AsyncMobileVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactEmail))
+            {
+                body["ContactEmail"] = request.ContactEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                body["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactMobile))
+            {
+                body["ContactMobile"] = request.ContactMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactPosition))
+            {
+                body["ContactPosition"] = request.ContactPosition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailCode))
+            {
+                body["EmailCode"] = request.EmailCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileCode))
+            {
+                body["MobileCode"] = request.MobileCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedContact))
+            {
+                body["SharedContact"] = request.SharedContact;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseContactEdit",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseContactEditResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改私企业联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactEditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactEditResponse
+        /// </returns>
+        public async Task<EnterpriseContactEditResponse> EnterpriseContactEditWithOptionsAsync(EnterpriseContactEditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncEmailVerify))
+            {
+                body["AsyncEmailVerify"] = request.AsyncEmailVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncMobileVerify))
+            {
+                body["AsyncMobileVerify"] = request.AsyncMobileVerify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactEmail))
+            {
+                body["ContactEmail"] = request.ContactEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                body["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactMobile))
+            {
+                body["ContactMobile"] = request.ContactMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactPosition))
+            {
+                body["ContactPosition"] = request.ContactPosition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailCode))
+            {
+                body["EmailCode"] = request.EmailCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileCode))
+            {
+                body["MobileCode"] = request.MobileCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedContact))
+            {
+                body["SharedContact"] = request.SharedContact;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseContactEdit",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseContactEditResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改私企业联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactEditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactEditResponse
+        /// </returns>
+        public EnterpriseContactEditResponse EnterpriseContactEdit(EnterpriseContactEditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnterpriseContactEditWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改私企业联系人</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactEditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactEditResponse
+        /// </returns>
+        public async Task<EnterpriseContactEditResponse> EnterpriseContactEditAsync(EnterpriseContactEditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnterpriseContactEditWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactQueryDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactQueryDetailResponse
+        /// </returns>
+        public EnterpriseContactQueryDetailResponse EnterpriseContactQueryDetailWithOptions(EnterpriseContactQueryDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                body["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseContactQueryDetail",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseContactQueryDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactQueryDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactQueryDetailResponse
+        /// </returns>
+        public async Task<EnterpriseContactQueryDetailResponse> EnterpriseContactQueryDetailWithOptionsAsync(EnterpriseContactQueryDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                body["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseContactQueryDetail",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseContactQueryDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactQueryDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactQueryDetailResponse
+        /// </returns>
+        public EnterpriseContactQueryDetailResponse EnterpriseContactQueryDetail(EnterpriseContactQueryDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnterpriseContactQueryDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactQueryDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactQueryDetailResponse
+        /// </returns>
+        public async Task<EnterpriseContactQueryDetailResponse> EnterpriseContactQueryDetailAsync(EnterpriseContactQueryDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnterpriseContactQueryDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactQueryPageListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactQueryPageListResponse
+        /// </returns>
+        public EnterpriseContactQueryPageListResponse EnterpriseContactQueryPageListWithOptions(EnterpriseContactQueryPageListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowCompleteInfo))
+            {
+                query["ShowCompleteInfo"] = request.ShowCompleteInfo;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateContact))
+            {
+                body["PrivateContact"] = request.PrivateContact;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedContact))
+            {
+                body["SharedContact"] = request.SharedContact;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseContactQueryPageList",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseContactQueryPageListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactQueryPageListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactQueryPageListResponse
+        /// </returns>
+        public async Task<EnterpriseContactQueryPageListResponse> EnterpriseContactQueryPageListWithOptionsAsync(EnterpriseContactQueryPageListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowCompleteInfo))
+            {
+                query["ShowCompleteInfo"] = request.ShowCompleteInfo;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedEcId))
+            {
+                body["OrientedEcId"] = request.OrientedEcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedLeId))
+            {
+                body["OrientedLeId"] = request.OrientedLeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrientedNbId))
+            {
+                body["OrientedNbId"] = request.OrientedNbId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateContact))
+            {
+                body["PrivateContact"] = request.PrivateContact;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharedContact))
+            {
+                body["SharedContact"] = request.SharedContact;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnterpriseContactQueryPageList",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnterpriseContactQueryPageListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactQueryPageListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactQueryPageListResponse
+        /// </returns>
+        public EnterpriseContactQueryPageListResponse EnterpriseContactQueryPageList(EnterpriseContactQueryPageListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnterpriseContactQueryPageListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询联系人列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnterpriseContactQueryPageListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnterpriseContactQueryPageListResponse
+        /// </returns>
+        public async Task<EnterpriseContactQueryPageListResponse> EnterpriseContactQueryPageListAsync(EnterpriseContactQueryPageListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnterpriseContactQueryPageListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>组织目录树查询</para>
         /// </summary>
         /// 
@@ -4675,6 +6555,278 @@ namespace AlibabaCloud.SDK.AccountCenter20241209
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnterpriseUninvitedAdminInviteJoinEnterpriseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>账号中心发送异步验证邮件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAsyncEmailCaptchaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAsyncEmailCaptchaResponse
+        /// </returns>
+        public SendAsyncEmailCaptchaResponse SendAsyncEmailCaptchaWithOptions(SendAsyncEmailCaptchaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactInfo))
+            {
+                body["ContactInfo"] = request.ContactInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactorId))
+            {
+                body["ContactorId"] = request.ContactorId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendAsyncEmailCaptcha",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendAsyncEmailCaptchaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>账号中心发送异步验证邮件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAsyncEmailCaptchaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAsyncEmailCaptchaResponse
+        /// </returns>
+        public async Task<SendAsyncEmailCaptchaResponse> SendAsyncEmailCaptchaWithOptionsAsync(SendAsyncEmailCaptchaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactInfo))
+            {
+                body["ContactInfo"] = request.ContactInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactorId))
+            {
+                body["ContactorId"] = request.ContactorId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendAsyncEmailCaptcha",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendAsyncEmailCaptchaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>账号中心发送异步验证邮件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAsyncEmailCaptchaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAsyncEmailCaptchaResponse
+        /// </returns>
+        public SendAsyncEmailCaptchaResponse SendAsyncEmailCaptcha(SendAsyncEmailCaptchaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SendAsyncEmailCaptchaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>账号中心发送异步验证邮件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAsyncEmailCaptchaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAsyncEmailCaptchaResponse
+        /// </returns>
+        public async Task<SendAsyncEmailCaptchaResponse> SendAsyncEmailCaptchaAsync(SendAsyncEmailCaptchaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SendAsyncEmailCaptchaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>账号中心发送异步验证短信</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAsyncMobileCaptchaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAsyncMobileCaptchaResponse
+        /// </returns>
+        public SendAsyncMobileCaptchaResponse SendAsyncMobileCaptchaWithOptions(SendAsyncMobileCaptchaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactInfo))
+            {
+                body["ContactInfo"] = request.ContactInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactorId))
+            {
+                body["ContactorId"] = request.ContactorId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendAsyncMobileCaptcha",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendAsyncMobileCaptchaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>账号中心发送异步验证短信</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAsyncMobileCaptchaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAsyncMobileCaptchaResponse
+        /// </returns>
+        public async Task<SendAsyncMobileCaptchaResponse> SendAsyncMobileCaptchaWithOptionsAsync(SendAsyncMobileCaptchaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactInfo))
+            {
+                body["ContactInfo"] = request.ContactInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactorId))
+            {
+                body["ContactorId"] = request.ContactorId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendAsyncMobileCaptcha",
+                Version = "2024-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendAsyncMobileCaptchaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>账号中心发送异步验证短信</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAsyncMobileCaptchaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAsyncMobileCaptchaResponse
+        /// </returns>
+        public SendAsyncMobileCaptchaResponse SendAsyncMobileCaptcha(SendAsyncMobileCaptchaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SendAsyncMobileCaptchaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>账号中心发送异步验证短信</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SendAsyncMobileCaptchaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendAsyncMobileCaptchaResponse
+        /// </returns>
+        public async Task<SendAsyncMobileCaptchaResponse> SendAsyncMobileCaptchaAsync(SendAsyncMobileCaptchaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SendAsyncMobileCaptchaWithOptionsAsync(request, runtime);
         }
 
     }
