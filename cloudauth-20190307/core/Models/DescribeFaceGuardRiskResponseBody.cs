@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [Validation(Required=false)]
             public string CertifyId { get; set; }
 
+            [NameInMap("GuardRiskScore")]
+            [Validation(Required=false)]
+            public double? GuardRiskScore { get; set; }
+
             /// <summary>
             /// <para>Extended information, in JSON format. (Customized return based on tenant requirements)</para>
             /// 
