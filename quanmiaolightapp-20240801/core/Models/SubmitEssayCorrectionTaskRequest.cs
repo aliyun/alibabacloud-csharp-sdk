@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
             [Validation(Required=false)]
             public string Answer { get; set; }
 
+            [NameInMap("customId")]
+            [Validation(Required=false)]
+            public string CustomId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>高中二年级</para>
