@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.SasRasp20240727.Models
         [Validation(Required=false)]
         public long? EndTimestamp { get; set; }
 
+        [NameInMap("HandleStatus")]
+        [Validation(Required=false)]
+        public int? HandleStatus { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>block</para>

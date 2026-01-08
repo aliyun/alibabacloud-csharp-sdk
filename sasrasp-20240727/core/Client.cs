@@ -216,6 +216,10 @@ namespace AlibabaCloud.SDK.SasRasp20240727
             {
                 query["EndTimestamp"] = request.EndTimestamp;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandleStatus))
+            {
+                query["HandleStatus"] = request.HandleStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandlerType))
             {
                 query["HandlerType"] = request.HandlerType;
@@ -331,6 +335,10 @@ namespace AlibabaCloud.SDK.SasRasp20240727
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
             {
                 query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandleStatus))
+            {
+                query["HandleStatus"] = request.HandleStatus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandlerType))
             {
