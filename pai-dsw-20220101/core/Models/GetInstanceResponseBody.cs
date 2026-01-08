@@ -175,6 +175,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public List<GetInstanceResponseBodyDatasets> Datasets { get; set; }
         public class GetInstanceResponseBodyDatasets : TeaModel {
+            [NameInMap("ActualMountAccess")]
+            [Validation(Required=false)]
+            public string ActualMountAccess { get; set; }
+
             /// <summary>
             /// <para>The dataset ID.</para>
             /// 
