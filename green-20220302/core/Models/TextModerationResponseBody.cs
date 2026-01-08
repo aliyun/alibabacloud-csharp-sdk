@@ -66,6 +66,22 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public string DeviceId { get; set; }
 
+            [NameInMap("ext")]
+            [Validation(Required=false)]
+            public TextModerationResponseBodyDataExt Ext { get; set; }
+            public class TextModerationResponseBodyDataExt : TeaModel {
+                [NameInMap("llmContent")]
+                [Validation(Required=false)]
+                public TextModerationResponseBodyDataExtLlmContent LlmContent { get; set; }
+                public class TextModerationResponseBodyDataExtLlmContent : TeaModel {
+                    [NameInMap("outputText")]
+                    [Validation(Required=false)]
+                    public string OutputText { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <para>The labels. Multiple labels are separated by commas (,). Valid values: ad: ad violation profanity: abuse contraband: contraband sexual_content: pornography violence: violence nonsense: irrigation spam: spam negative_content: undesirable content cyberbullying: cyberbullying C_customized: custom library that is hit</para>
             /// 

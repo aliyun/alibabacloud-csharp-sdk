@@ -142,6 +142,22 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public string DetectedLanguage { get; set; }
 
+            [NameInMap("Ext")]
+            [Validation(Required=false)]
+            public TextModerationPlusResponseBodyDataExt Ext { get; set; }
+            public class TextModerationPlusResponseBodyDataExt : TeaModel {
+                [NameInMap("LlmContent")]
+                [Validation(Required=false)]
+                public TextModerationPlusResponseBodyDataExtLlmContent LlmContent { get; set; }
+                public class TextModerationPlusResponseBodyDataExtLlmContent : TeaModel {
+                    [NameInMap("OutputText")]
+                    [Validation(Required=false)]
+                    public string OutputText { get; set; }
+
+                }
+
+            }
+
             [NameInMap("ManualTaskId")]
             [Validation(Required=false)]
             public string ManualTaskId { get; set; }
