@@ -318,6 +318,26 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        [NameInMap("control_plane_endpoints_config")]
+        [Validation(Required=false)]
+        public DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig ControlPlaneEndpointsConfig { get; set; }
+        public class DescribeClusterDetailResponseBodyControlPlaneEndpointsConfig : TeaModel {
+            [NameInMap("internal_dns_config")]
+            [Validation(Required=false)]
+            public DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig InternalDnsConfig { get; set; }
+            public class DescribeClusterDetailResponseBodyControlPlaneEndpointsConfigInternalDnsConfig : TeaModel {
+                [NameInMap("bind_vpcs")]
+                [Validation(Required=false)]
+                public List<string> BindVpcs { get; set; }
+
+                [NameInMap("enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The time when the cluster was created.</para>
         /// 

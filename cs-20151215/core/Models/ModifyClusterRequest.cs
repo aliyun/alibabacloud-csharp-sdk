@@ -385,6 +385,26 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        [NameInMap("control_plane_endpoints_config")]
+        [Validation(Required=false)]
+        public ModifyClusterRequestControlPlaneEndpointsConfig ControlPlaneEndpointsConfig { get; set; }
+        public class ModifyClusterRequestControlPlaneEndpointsConfig : TeaModel {
+            [NameInMap("internal_dns_config")]
+            [Validation(Required=false)]
+            public ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig InternalDnsConfig { get; set; }
+            public class ModifyClusterRequestControlPlaneEndpointsConfigInternalDnsConfig : TeaModel {
+                [NameInMap("bind_vpcs")]
+                [Validation(Required=false)]
+                public List<string> BindVpcs { get; set; }
+
+                [NameInMap("enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. Valid values:</para>
         /// <list type="bullet">

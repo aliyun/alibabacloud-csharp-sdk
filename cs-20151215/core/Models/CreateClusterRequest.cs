@@ -479,6 +479,22 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        [NameInMap("control_plane_endpoints_config")]
+        [Validation(Required=false)]
+        public CreateClusterRequestControlPlaneEndpointsConfig ControlPlaneEndpointsConfig { get; set; }
+        public class CreateClusterRequestControlPlaneEndpointsConfig : TeaModel {
+            [NameInMap("internal_dns_config")]
+            [Validation(Required=false)]
+            public CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig InternalDnsConfig { get; set; }
+            public class CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig : TeaModel {
+                [NameInMap("bind_vpcs")]
+                [Validation(Required=false)]
+                public List<string> BindVpcs { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The control plane components for which you want to enable log collection.</para>
         /// <para>By default, the logs of kube-apiserver, kube-controller-manager, and kube-scheduler are collected.</para>

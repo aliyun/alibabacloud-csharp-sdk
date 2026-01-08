@@ -1851,6 +1851,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["control_plane_config"] = request.ControlPlaneConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneEndpointsConfig))
+            {
+                body["control_plane_endpoints_config"] = request.ControlPlaneEndpointsConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlplaneLogComponents))
             {
                 body["controlplane_log_components"] = request.ControlplaneLogComponents;
@@ -2313,6 +2317,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneConfig))
             {
                 body["control_plane_config"] = request.ControlPlaneConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneEndpointsConfig))
+            {
+                body["control_plane_endpoints_config"] = request.ControlPlaneEndpointsConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlplaneLogComponents))
             {
@@ -14456,6 +14464,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["control_plane_config"] = request.ControlPlaneConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneEndpointsConfig))
+            {
+                body["control_plane_endpoints_config"] = request.ControlPlaneEndpointsConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
             {
                 body["deletion_protection"] = request.DeletionProtection;
@@ -14569,6 +14581,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneConfig))
             {
                 body["control_plane_config"] = request.ControlPlaneConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneEndpointsConfig))
+            {
+                body["control_plane_endpoints_config"] = request.ControlPlaneEndpointsConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
             {
