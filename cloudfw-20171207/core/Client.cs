@@ -32628,6 +32628,414 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询VPC互访的域名信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDomainListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDomainListResponse
+        /// </returns>
+        public DescribeVpcFirewallDomainListResponse DescribeVpcFirewallDomainListWithOptions(DescribeVpcFirewallDomainListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAITraffic))
+            {
+                query["IsAITraffic"] = request.IsAITraffic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcIP))
+            {
+                query["SrcIP"] = request.SrcIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcVpcId))
+            {
+                query["SrcVpcId"] = request.SrcVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVpcFirewallDomainList",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVpcFirewallDomainListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询VPC互访的域名信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDomainListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDomainListResponse
+        /// </returns>
+        public async Task<DescribeVpcFirewallDomainListResponse> DescribeVpcFirewallDomainListWithOptionsAsync(DescribeVpcFirewallDomainListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAITraffic))
+            {
+                query["IsAITraffic"] = request.IsAITraffic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcIP))
+            {
+                query["SrcIP"] = request.SrcIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcVpcId))
+            {
+                query["SrcVpcId"] = request.SrcVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVpcFirewallDomainList",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVpcFirewallDomainListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询VPC互访的域名信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDomainListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDomainListResponse
+        /// </returns>
+        public DescribeVpcFirewallDomainListResponse DescribeVpcFirewallDomainList(DescribeVpcFirewallDomainListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVpcFirewallDomainListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询VPC互访的域名信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDomainListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDomainListResponse
+        /// </returns>
+        public async Task<DescribeVpcFirewallDomainListResponse> DescribeVpcFirewallDomainListAsync(DescribeVpcFirewallDomainListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVpcFirewallDomainListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询VPC互访的域名信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDomainRelationListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDomainRelationListResponse
+        /// </returns>
+        public DescribeVpcFirewallDomainRelationListResponse DescribeVpcFirewallDomainRelationListWithOptions(DescribeVpcFirewallDomainRelationListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainList))
+            {
+                query["DomainList"] = request.DomainList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstIP))
+            {
+                query["DstIP"] = request.DstIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstVpcId))
+            {
+                query["DstVpcId"] = request.DstVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcIP))
+            {
+                query["SrcIP"] = request.SrcIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcVpcId))
+            {
+                query["SrcVpcId"] = request.SrcVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVpcFirewallDomainRelationList",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVpcFirewallDomainRelationListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询VPC互访的域名信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDomainRelationListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDomainRelationListResponse
+        /// </returns>
+        public async Task<DescribeVpcFirewallDomainRelationListResponse> DescribeVpcFirewallDomainRelationListWithOptionsAsync(DescribeVpcFirewallDomainRelationListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainList))
+            {
+                query["DomainList"] = request.DomainList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstIP))
+            {
+                query["DstIP"] = request.DstIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DstVpcId))
+            {
+                query["DstVpcId"] = request.DstVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
+            {
+                query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcIP))
+            {
+                query["SrcIP"] = request.SrcIP;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcVpcId))
+            {
+                query["SrcVpcId"] = request.SrcVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVpcFirewallDomainRelationList",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVpcFirewallDomainRelationListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询VPC互访的域名信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDomainRelationListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDomainRelationListResponse
+        /// </returns>
+        public DescribeVpcFirewallDomainRelationListResponse DescribeVpcFirewallDomainRelationList(DescribeVpcFirewallDomainRelationListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVpcFirewallDomainRelationListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询VPC互访的域名信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeVpcFirewallDomainRelationListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVpcFirewallDomainRelationListResponse
+        /// </returns>
+        public async Task<DescribeVpcFirewallDomainRelationListResponse> DescribeVpcFirewallDomainRelationListAsync(DescribeVpcFirewallDomainRelationListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVpcFirewallDomainRelationListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>概览页-vpc防火墙拦截趋势</para>
         /// </summary>
         /// 
