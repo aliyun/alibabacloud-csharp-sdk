@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CancelRepoBuildResponse>(CallApi(params_, req, runtime));
         }
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CancelRepoBuildResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CreateNamespaceResponse>(CallApi(params_, req, runtime));
         }
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CreateNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CreateRepoResponse>(CallApi(params_, req, runtime));
         }
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CreateRepoResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CreateRepoBuildRuleResponse>(CallApi(params_, req, runtime));
         }
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CreateRepoBuildRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CreateRepoWebhookResponse>(CallApi(params_, req, runtime));
         }
@@ -326,7 +326,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CreateRepoWebhookResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -361,7 +361,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CreateUserInfoResponse>(CallApi(params_, req, runtime));
         }
@@ -382,7 +382,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CreateUserInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -420,7 +420,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<DeleteImageResponse>(CallApi(params_, req, runtime));
         }
@@ -444,7 +444,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<DeleteImageResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -480,7 +480,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<DeleteNamespaceResponse>(CallApi(params_, req, runtime));
         }
@@ -502,7 +502,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<DeleteNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -539,7 +539,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<DeleteRepoResponse>(CallApi(params_, req, runtime));
         }
@@ -562,7 +562,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<DeleteRepoResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -600,7 +600,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<DeleteRepoBuildRuleResponse>(CallApi(params_, req, runtime));
         }
@@ -624,7 +624,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<DeleteRepoBuildRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -662,7 +662,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<DeleteRepoWebhookResponse>(CallApi(params_, req, runtime));
         }
@@ -686,7 +686,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<DeleteRepoWebhookResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -721,7 +721,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetAuthorizationTokenResponse>(CallApi(params_, req, runtime));
         }
@@ -742,7 +742,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetAuthorizationTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -780,7 +780,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetImageLayerResponse>(CallApi(params_, req, runtime));
         }
@@ -804,7 +804,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetImageLayerResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -849,7 +849,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetImageManifestResponse>(CallApi(params_, req, runtime));
         }
@@ -880,7 +880,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetImageManifestResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -916,7 +916,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetNamespaceResponse>(CallApi(params_, req, runtime));
         }
@@ -938,7 +938,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -984,7 +984,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetNamespaceListResponse>(CallApi(params_, req, runtime));
         }
@@ -1016,7 +1016,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetNamespaceListResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -1058,7 +1058,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRegionResponse>(CallApi(params_, req, runtime));
         }
@@ -1086,7 +1086,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRegionResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -1121,7 +1121,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRegionListResponse>(CallApi(params_, req, runtime));
         }
@@ -1142,7 +1142,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRegionListResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -1179,7 +1179,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoResponse>(CallApi(params_, req, runtime));
         }
@@ -1202,7 +1202,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -1250,7 +1250,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoBuildListResponse>(CallApi(params_, req, runtime));
         }
@@ -1284,7 +1284,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoBuildListResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -1321,7 +1321,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoBuildRuleListResponse>(CallApi(params_, req, runtime));
         }
@@ -1344,7 +1344,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoBuildRuleListResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -1382,7 +1382,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoBuildStatusResponse>(CallApi(params_, req, runtime));
         }
@@ -1406,7 +1406,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoBuildStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -1456,7 +1456,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoListResponse>(CallApi(params_, req, runtime));
         }
@@ -1492,7 +1492,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoListResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -1543,7 +1543,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoListByNamespaceResponse>(CallApi(params_, req, runtime));
         }
@@ -1580,7 +1580,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoListByNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -1695,7 +1695,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoTagScanListResponse>(CallApi(params_, req, runtime));
         }
@@ -1734,7 +1734,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoTagScanListResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -1772,7 +1772,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoTagScanStatusResponse>(CallApi(params_, req, runtime));
         }
@@ -1796,7 +1796,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoTagScanStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -1834,7 +1834,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoTagScanSummaryResponse>(CallApi(params_, req, runtime));
         }
@@ -1858,7 +1858,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoTagScanSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -1906,7 +1906,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoTagsResponse>(CallApi(params_, req, runtime));
         }
@@ -1940,7 +1940,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -1977,7 +1977,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoWebhookResponse>(CallApi(params_, req, runtime));
         }
@@ -2000,7 +2000,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetRepoWebhookResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -2036,7 +2036,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetResourceQuotaResponse>(CallApi(params_, req, runtime));
         }
@@ -2058,7 +2058,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetResourceQuotaResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -2096,7 +2096,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<StartImageScanResponse>(CallApi(params_, req, runtime));
         }
@@ -2120,7 +2120,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<StartImageScanResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -2158,7 +2158,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<StartRepoBuildByRuleResponse>(CallApi(params_, req, runtime));
         }
@@ -2182,7 +2182,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<StartRepoBuildByRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -2218,7 +2218,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UpdateNamespaceResponse>(CallApi(params_, req, runtime));
         }
@@ -2240,7 +2240,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UpdateNamespaceResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -2277,7 +2277,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UpdateRepoResponse>(CallApi(params_, req, runtime));
         }
@@ -2300,7 +2300,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UpdateRepoResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -2338,7 +2338,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UpdateRepoBuildRuleResponse>(CallApi(params_, req, runtime));
         }
@@ -2362,7 +2362,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UpdateRepoBuildRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -2400,7 +2400,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UpdateRepoWebhookResponse>(CallApi(params_, req, runtime));
         }
@@ -2424,7 +2424,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UpdateRepoWebhookResponse>(await CallApiAsync(params_, req, runtime));
         }
@@ -2459,7 +2459,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UpdateUserInfoResponse>(CallApi(params_, req, runtime));
         }
@@ -2480,7 +2480,7 @@ namespace AlibabaCloud.SDK.Cr20160607
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<UpdateUserInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
