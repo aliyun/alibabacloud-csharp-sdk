@@ -1479,6 +1479,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public int? RxQueueSize { get; set; }
 
+            [NameInMap("SecondaryPrivateIpAddressCount")]
+            [Validation(Required=false)]
+            public int? SecondaryPrivateIpAddressCount { get; set; }
+
             /// <summary>
             /// <para>The ID of the security group to which to assign ENI N.</para>
             /// <para>Take note of the following items:</para>
