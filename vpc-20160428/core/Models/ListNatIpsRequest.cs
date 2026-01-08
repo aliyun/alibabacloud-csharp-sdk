@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string IpOrigin { get; set; }
 
+        [NameInMap("Ipv4Prefix")]
+        [Validation(Required=false)]
+        public string Ipv4Prefix { get; set; }
+
         /// <summary>
         /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 

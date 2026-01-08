@@ -170,7 +170,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Status of the route target group.</para>
+        /// <para>The status of the route target group. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Recovering</b>: In the process of switching back to the primary </description></item>
+        /// <item><description><b>Switched</b>: The primary and secondary have been switched </description></item>
+        /// <item><description><b>Available</b>: Available </description></item>
+        /// <item><description><b>Abnormal</b>: Secondary instance is abnormal </description></item>
+        /// <item><description><b>Pending</b>: In the process of being created </description></item>
+        /// <item><description><b>Switching</b>: In the process of switching between primary and secondary </description></item>
+        /// <item><description><b>Deleting</b>: In the process of being deleted </description></item>
+        /// <item><description><b>Unavailable</b>: Both primary and secondary instances are abnormal</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>

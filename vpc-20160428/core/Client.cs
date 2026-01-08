@@ -59193,6 +59193,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["IpOrigin"] = request.IpOrigin;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4Prefix))
+            {
+                query["Ipv4Prefix"] = request.Ipv4Prefix;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -59294,6 +59298,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpOrigin))
             {
                 query["IpOrigin"] = request.IpOrigin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4Prefix))
+            {
+                query["Ipv4Prefix"] = request.Ipv4Prefix;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {

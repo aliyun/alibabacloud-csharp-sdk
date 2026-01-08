@@ -1,3 +1,7 @@
+2026-01-08 Version: 6.15.1
+- Update API ListNatIps: add request parameters Ipv4Prefix.
+
+
 2026-01-04 Version: 6.15.0
 - Support API CreateRouteTargetGroup.
 - Support API DeleteRouteTargetGroup.
