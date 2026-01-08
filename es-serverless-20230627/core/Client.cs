@@ -3295,6 +3295,126 @@ namespace AlibabaCloud.SDK.Es_serverless20230627
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改应用公网信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePrivateNetwrokRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePrivateNetwrokResponse
+        /// </returns>
+        public UpdatePrivateNetwrokResponse UpdatePrivateNetwrokWithOptions(string appName, UpdatePrivateNetwrokRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePrivateNetwrok",
+                Version = "2023-06-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/es-serverless/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appName) + "/private-networks",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePrivateNetwrokResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用公网信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePrivateNetwrokRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePrivateNetwrokResponse
+        /// </returns>
+        public async Task<UpdatePrivateNetwrokResponse> UpdatePrivateNetwrokWithOptionsAsync(string appName, UpdatePrivateNetwrokRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.TeaUtil.Common.ToArray(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePrivateNetwrok",
+                Version = "2023-06-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/es-serverless/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appName) + "/private-networks",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePrivateNetwrokResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用公网信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePrivateNetwrokRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePrivateNetwrokResponse
+        /// </returns>
+        public UpdatePrivateNetwrokResponse UpdatePrivateNetwrok(string appName, UpdatePrivateNetwrokRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdatePrivateNetwrokWithOptions(appName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改应用公网信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePrivateNetwrokRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePrivateNetwrokResponse
+        /// </returns>
+        public async Task<UpdatePrivateNetwrokResponse> UpdatePrivateNetwrokAsync(string appName, UpdatePrivateNetwrokRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdatePrivateNetwrokWithOptionsAsync(appName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>修改自动备份配置</para>
         /// </summary>
         /// 
