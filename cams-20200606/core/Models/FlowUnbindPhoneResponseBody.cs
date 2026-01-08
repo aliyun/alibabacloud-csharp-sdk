@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public bool? Model { get; set; }
 
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
         /// <summary>
         /// <para>Whether the operation was successful. Values: true: success; false: failure.</para>
         /// 

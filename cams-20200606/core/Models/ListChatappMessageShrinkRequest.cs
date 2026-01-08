@@ -57,6 +57,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>2024-01-30 00:00:00</para>
+        /// </summary>
+        [NameInMap("EndTimeStr")]
+        [Validation(Required=false)]
+        public string EndTimeStr { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>UP</para>
         /// </summary>
         [NameInMap("EventAction")]
@@ -105,6 +113,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2024-01-01 00:00:00</para>
+        /// </summary>
+        [NameInMap("StartTimeStr")]
+        [Validation(Required=false)]
+        public string StartTimeStr { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

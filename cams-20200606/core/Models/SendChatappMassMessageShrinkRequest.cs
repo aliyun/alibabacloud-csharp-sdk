@@ -27,12 +27,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string CustWabaId { get; set; }
 
         /// <summary>
@@ -73,12 +77,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string From { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
+        [Obsolete]
         public string IsvCode { get; set; }
 
         /// <summary>
