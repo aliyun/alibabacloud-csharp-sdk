@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeLifecyclePoliciesRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>描述</para>
+        /// </summary>
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        /// <summary>
         /// <para>The ID of the file system.</para>
         /// 
         /// <b>Example:</b>
@@ -18,6 +26,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>lc-xxx</para>
+        /// </summary>
+        [NameInMap("LifecyclePolicyId")]
+        [Validation(Required=false)]
+        public string LifecyclePolicyId { get; set; }
 
         /// <summary>
         /// <para>The name of the lifecycle policy. The name must meet the following conventions:</para>
@@ -29,6 +45,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [NameInMap("LifecyclePolicyName")]
         [Validation(Required=false)]
         public string LifecyclePolicyName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Auto</para>
+        /// </summary>
+        [NameInMap("LifecyclePolicyType")]
+        [Validation(Required=false)]
+        public string LifecyclePolicyType { get; set; }
 
         /// <summary>
         /// <para>The page number.</para>
@@ -52,6 +76,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>/abc/</para>
+        /// </summary>
+        [NameInMap("Path")]
+        [Validation(Required=false)]
+        public string Path { get; set; }
 
         /// <summary>
         /// <para>The storage class.</para>

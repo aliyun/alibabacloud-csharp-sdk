@@ -5339,6 +5339,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
             {
                 query["FileSystemId"] = request.FileSystemId;
@@ -5346,6 +5350,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyName))
             {
                 query["LifecyclePolicyName"] = request.LifecyclePolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyType))
+            {
+                query["LifecyclePolicyType"] = request.LifecyclePolicyType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecycleRuleName))
             {
@@ -5359,9 +5367,17 @@ namespace AlibabaCloud.SDK.NAS20170626
             {
                 query["Paths"] = request.Paths;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetrieveRules))
+            {
+                query["RetrieveRules"] = request.RetrieveRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
             {
                 query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRules))
+            {
+                query["TransitRules"] = request.TransitRules;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5409,6 +5425,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
             {
                 query["FileSystemId"] = request.FileSystemId;
@@ -5416,6 +5436,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyName))
             {
                 query["LifecyclePolicyName"] = request.LifecyclePolicyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyType))
+            {
+                query["LifecyclePolicyType"] = request.LifecyclePolicyType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecycleRuleName))
             {
@@ -5429,9 +5453,17 @@ namespace AlibabaCloud.SDK.NAS20170626
             {
                 query["Paths"] = request.Paths;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetrieveRules))
+            {
+                query["RetrieveRules"] = request.RetrieveRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
             {
                 query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRules))
+            {
+                query["TransitRules"] = request.TransitRules;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8360,6 +8392,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             {
                 query["FileSystemId"] = request.FileSystemId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyId))
+            {
+                query["LifecyclePolicyId"] = request.LifecyclePolicyId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyName))
             {
                 query["LifecyclePolicyName"] = request.LifecyclePolicyName;
@@ -8410,6 +8446,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
             {
                 query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyId))
+            {
+                query["LifecyclePolicyId"] = request.LifecyclePolicyId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyName))
             {
@@ -17728,6 +17768,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             {
                 query["FileSystemId"] = request.FileSystemId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyId))
+            {
+                query["LifecyclePolicyId"] = request.LifecyclePolicyId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyName))
             {
                 query["LifecyclePolicyName"] = request.LifecyclePolicyName;
@@ -17790,6 +17834,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
             {
                 query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyId))
+            {
+                query["LifecyclePolicyId"] = request.LifecyclePolicyId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyName))
             {

@@ -21,9 +21,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>lc-xxx</para>
+        /// </summary>
+        [NameInMap("LifecyclePolicyId")]
+        [Validation(Required=false)]
+        public string LifecyclePolicyId { get; set; }
+
+        /// <summary>
         /// <para>The name of the lifecycle policy.</para>
         /// <para>The name must be 3 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lifecyclepolicy_01</para>

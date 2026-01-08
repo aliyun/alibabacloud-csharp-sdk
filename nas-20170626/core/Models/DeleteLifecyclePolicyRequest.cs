@@ -21,8 +21,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>lc-xxx</para>
+        /// </summary>
+        [NameInMap("LifecyclePolicyId")]
+        [Validation(Required=false)]
+        public string LifecyclePolicyId { get; set; }
+
+        /// <summary>
         /// <para>The name of the lifecycle policy.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lifecyclepolicy1</para>

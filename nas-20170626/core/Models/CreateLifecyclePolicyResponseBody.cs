@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateLifecyclePolicyResponseBody : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>lc-xxx</para>
+        /// </summary>
+        [NameInMap("LifecyclePolicyId")]
+        [Validation(Required=false)]
+        public string LifecyclePolicyId { get; set; }
+
+        /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>

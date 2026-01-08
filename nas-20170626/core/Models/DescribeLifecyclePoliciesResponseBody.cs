@@ -28,6 +28,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>描述</para>
+            /// </summary>
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            /// <summary>
             /// <para>The ID of the file system.</para>
             /// 
             /// <b>Example:</b>
@@ -38,6 +46,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>lc-xxx</para>
+            /// </summary>
+            [NameInMap("LifecyclePolicyId")]
+            [Validation(Required=false)]
+            public string LifecyclePolicyId { get; set; }
+
+            /// <summary>
             /// <para>The name of the lifecycle policy.</para>
             /// 
             /// <b>Example:</b>
@@ -46,6 +62,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [NameInMap("LifecyclePolicyName")]
             [Validation(Required=false)]
             public string LifecyclePolicyName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Auto</para>
+            /// </summary>
+            [NameInMap("LifecyclePolicyType")]
+            [Validation(Required=false)]
+            public string LifecyclePolicyType { get; set; }
 
             /// <summary>
             /// <para>The management rule that is associated with the lifecycle policy.</para>
@@ -81,6 +105,28 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public List<string> Paths { get; set; }
 
+            [NameInMap("RetrieveRules")]
+            [Validation(Required=false)]
+            public List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules> RetrieveRules { get; set; }
+            public class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesRetrieveRules : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>RetrieveType</para>
+                /// </summary>
+                [NameInMap("Attribute")]
+                [Validation(Required=false)]
+                public string Attribute { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>All</para>
+                /// </summary>
+                [NameInMap("Threshold")]
+                [Validation(Required=false)]
+                public string Threshold { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The storage type of the data that is dumped to the IA storage medium.</para>
             /// <para>Default value: InfrequentAccess (IA).</para>
@@ -91,6 +137,28 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [NameInMap("StorageType")]
             [Validation(Required=false)]
             public string StorageType { get; set; }
+
+            [NameInMap("TransitRules")]
+            [Validation(Required=false)]
+            public List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules> TransitRules { get; set; }
+            public class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesTransitRules : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Atime</para>
+                /// </summary>
+                [NameInMap("Attribute")]
+                [Validation(Required=false)]
+                public string Attribute { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
+                [NameInMap("Threshold")]
+                [Validation(Required=false)]
+                public string Threshold { get; set; }
+
+            }
 
         }
 
