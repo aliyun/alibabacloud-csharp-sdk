@@ -197,6 +197,14 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("statusReason")]
+            [Validation(Required=false)]
+            public string StatusReason { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
             [NameInMap("taskId")]
