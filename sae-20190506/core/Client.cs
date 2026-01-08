@@ -12733,6 +12733,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return await DisableApplicationScalingRuleWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables ARMS monitoring.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableArmsRequest
         /// </param>
@@ -12774,6 +12779,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<DisableArmsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables ARMS monitoring.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableArmsRequest
         /// </param>
@@ -12815,6 +12825,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return TeaModel.ToObject<DisableArmsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables ARMS monitoring.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableArmsRequest
         /// </param>
@@ -12829,6 +12844,11 @@ namespace AlibabaCloud.SDK.Sae20190506
             return DisableArmsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables ARMS monitoring.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableArmsRequest
         /// </param>
@@ -19783,7 +19803,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复实例的流量</para>
+        /// <para>Resumes traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Services on an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19833,7 +19853,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复实例的流量</para>
+        /// <para>Resumes traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Services on an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19883,7 +19903,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复实例的流量</para>
+        /// <para>Resumes traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Services on an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19902,7 +19922,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复实例的流量</para>
+        /// <para>Resumes traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Services on an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20797,7 +20817,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将流量从实例中摘除</para>
+        /// <para>Removes traffic routed from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20847,7 +20867,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将流量从实例中摘除</para>
+        /// <para>Removes traffic routed from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20897,7 +20917,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将流量从实例中摘除</para>
+        /// <para>Removes traffic routed from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20916,7 +20936,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将流量从实例中摘除</para>
+        /// <para>Removes traffic routed from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21583,6 +21603,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["EnableIdle"] = request.EnableIdle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleHour))
+            {
+                query["IdleHour"] = request.IdleHour;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
             {
                 query["NamespaceId"] = request.NamespaceId;
@@ -21640,6 +21664,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIdle))
             {
                 query["EnableIdle"] = request.EnableIdle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleHour))
+            {
+                query["IdleHour"] = request.IdleHour;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
             {

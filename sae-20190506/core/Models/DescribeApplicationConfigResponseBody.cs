@@ -450,6 +450,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string Html { get; set; }
 
+            [NameInMap("IdleHour")]
+            [Validation(Required=false)]
+            public string IdleHour { get; set; }
+
             /// <summary>
             /// <para>The ID of the corresponding secret dictionary.</para>
             /// 

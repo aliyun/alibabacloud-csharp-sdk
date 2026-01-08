@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public bool? EnableIdle { get; set; }
 
+        [NameInMap("IdleHour")]
+        [Validation(Required=false)]
+        public string IdleHour { get; set; }
+
         [NameInMap("NamespaceId")]
         [Validation(Required=false)]
         public string NamespaceId { get; set; }
