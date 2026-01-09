@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 {
     public class GetTokenRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>Aliyun</para>
+        /// </summary>
+        [NameInMap("Audience")]
+        [Validation(Required=false)]
+        public string Audience { get; set; }
+
+        /// <summary>
         /// <para>The validity period. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
@@ -29,6 +37,14 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Access</para>
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

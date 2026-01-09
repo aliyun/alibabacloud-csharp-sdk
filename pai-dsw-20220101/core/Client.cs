@@ -3195,6 +3195,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Audience))
+            {
+                query["Audience"] = request.Audience;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
             {
                 query["ExpireTime"] = request.ExpireTime;
@@ -3202,6 +3206,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3245,6 +3253,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Audience))
+            {
+                query["Audience"] = request.Audience;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
             {
                 query["ExpireTime"] = request.ExpireTime;
@@ -3252,6 +3264,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
