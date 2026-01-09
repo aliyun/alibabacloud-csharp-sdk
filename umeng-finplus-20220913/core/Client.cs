@@ -1195,6 +1195,200 @@ namespace AlibabaCloud.SDK.Umeng_finplus20220913
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建友准达实例任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceTaskResponse
+        /// </returns>
+        public CreateInstanceTaskResponse CreateInstanceTaskWithOptions(CreateInstanceTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalbackUrl))
+            {
+                body["CalbackUrl"] = request.CalbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                body["ClientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetIds))
+            {
+                body["DatasetIds"] = request.DatasetIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorType))
+            {
+                body["MonitorType"] = request.MonitorType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                body["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["RequestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScoreStrategyConfig))
+            {
+                body["ScoreStrategyConfig"] = request.ScoreStrategyConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstanceTask",
+                Version = "2022-09-13",
+                Protocol = "HTTPS",
+                Pathname = "/CreateInstanceTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建友准达实例任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceTaskResponse
+        /// </returns>
+        public async Task<CreateInstanceTaskResponse> CreateInstanceTaskWithOptionsAsync(CreateInstanceTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalbackUrl))
+            {
+                body["CalbackUrl"] = request.CalbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                body["ClientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetIds))
+            {
+                body["DatasetIds"] = request.DatasetIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorType))
+            {
+                body["MonitorType"] = request.MonitorType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                body["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["RequestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScoreStrategyConfig))
+            {
+                body["ScoreStrategyConfig"] = request.ScoreStrategyConfig;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstanceTask",
+                Version = "2022-09-13",
+                Protocol = "HTTPS",
+                Pathname = "/CreateInstanceTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建友准达实例任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceTaskResponse
+        /// </returns>
+        public CreateInstanceTaskResponse CreateInstanceTask(CreateInstanceTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateInstanceTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建友准达实例任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceTaskResponse
+        /// </returns>
+        public async Task<CreateInstanceTaskResponse> CreateInstanceTaskAsync(CreateInstanceTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateInstanceTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>友准达-创建知识库</para>
         /// </summary>
         /// 
