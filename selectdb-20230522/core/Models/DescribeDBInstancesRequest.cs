@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDBInstancesRequestTag> Tag { get; set; }
