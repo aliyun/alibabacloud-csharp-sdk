@@ -131,6 +131,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>outId</para>
+                /// </summary>
+                [NameInMap("OutId")]
+                [Validation(Required=false)]
+                public string OutId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>https://*******</para>
                 /// </summary>
                 [NameInMap("RecordingFilePath")]

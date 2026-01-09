@@ -125,6 +125,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
+                [NameInMap("WithActivePrompt")]
+                [Validation(Required=false)]
+                public bool? WithActivePrompt { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("WithConfig")]
                 [Validation(Required=false)]
                 public bool? WithConfig { get; set; }
