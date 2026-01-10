@@ -53,6 +53,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string CreatedTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>实例描述</para>
+                /// </summary>
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
                 [NameInMap("Edition")]
                 [Validation(Required=false)]
                 public string Edition { get; set; }
@@ -85,9 +93,25 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
                 [Validation(Required=false)]
                 public string MajorVersion { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>地域信息</para>
+                /// </summary>
+                [NameInMap("RegionCode")]
+                [Validation(Required=false)]
+                public string RegionCode { get; set; }
+
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>running</para>
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
 
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]

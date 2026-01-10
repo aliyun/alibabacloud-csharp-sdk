@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string PluginType { get; set; }
 
+        [NameInMap("RealLoginUserUid")]
+        [Validation(Required=false)]
+        public string RealLoginUserUid { get; set; }
+
         /// <summary>
         /// <para>The IDs of the stakeholders that are involved in the ticket. Separate multiple IDs with commas (,).</para>
         /// 

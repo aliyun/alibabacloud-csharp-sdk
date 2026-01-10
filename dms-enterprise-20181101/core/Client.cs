@@ -8425,6 +8425,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["PluginType"] = request.PluginType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedUserList))
             {
                 query["RelatedUserList"] = request.RelatedUserList;
@@ -8505,6 +8509,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginType))
             {
                 query["PluginType"] = request.PluginType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RealLoginUserUid))
+            {
+                query["RealLoginUserUid"] = request.RealLoginUserUid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedUserList))
             {
