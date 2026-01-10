@@ -8,24 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
-    public class DeleteMemoryResponseBody : TeaModel {
+    public class NASConfig : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>SUCCESS</para>
+        /// <para>100</para>
         /// </summary>
-        [NameInMap("code")]
+        [NameInMap("groupId")]
         [Validation(Required=false)]
-        public string Code { get; set; }
+        public int? GroupId { get; set; }
+
+        [NameInMap("mountPoints")]
+        [Validation(Required=false)]
+        public List<NASMountConfig> MountPoints { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>970F08C9-EB28-5A3D-A228-D541AEC4C807</para>
+        /// <para>100</para>
         /// </summary>
-        [NameInMap("requestId")]
+        [NameInMap("userId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? UserId { get; set; }
 
     }
 

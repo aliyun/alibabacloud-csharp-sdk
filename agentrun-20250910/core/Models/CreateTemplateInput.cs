@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateTemplateInput : TeaModel {
+        /// <summary>
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("allowAnonymousManage")]
+        [Validation(Required=false)]
+        public bool? AllowAnonymousManage { get; set; }
+
         [NameInMap("armsConfiguration")]
         [Validation(Required=false)]
         public ArmsConfiguration ArmsConfiguration { get; set; }

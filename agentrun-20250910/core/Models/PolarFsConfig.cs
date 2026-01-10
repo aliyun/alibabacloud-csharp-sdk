@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
-    public class ListMemoryResponse : TeaModel {
-        [NameInMap("headers")]
+    public class PolarFsConfig : TeaModel {
+        [NameInMap("groupId")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Headers { get; set; }
+        public int? GroupId { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("mountPoints")]
         [Validation(Required=false)]
-        public int? StatusCode { get; set; }
+        public List<PolarFsMountConfig> MountPoints { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("userId")]
         [Validation(Required=false)]
-        public ListMemoryResponseBody Body { get; set; }
+        public int? UserId { get; set; }
 
     }
 

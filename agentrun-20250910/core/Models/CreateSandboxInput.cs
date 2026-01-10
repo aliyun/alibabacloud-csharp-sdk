@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateSandboxInput : TeaModel {
+        [NameInMap("nasConfig")]
+        [Validation(Required=false)]
+        public NASConfig NasConfig { get; set; }
+
+        [NameInMap("ossMountConfig")]
+        [Validation(Required=false)]
+        public OSSMountConfig OssMountConfig { get; set; }
+
         [NameInMap("sandboxId")]
         [Validation(Required=false)]
         public string SandboxId { get; set; }

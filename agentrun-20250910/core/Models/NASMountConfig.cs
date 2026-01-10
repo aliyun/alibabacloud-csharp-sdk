@@ -8,26 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
-    public class UpdateMemoryRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>365</para>
-        /// </summary>
-        [NameInMap("longTtl")]
+    public class NASMountConfig : TeaModel {
+        [NameInMap("enableTLS")]
         [Validation(Required=false)]
-        public int? LongTtl { get; set; }
+        public bool? EnableTLS { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>30</para>
+        /// <para>/home/test</para>
         /// </summary>
-        [NameInMap("shortTtl")]
+        [NameInMap("mountDir")]
         [Validation(Required=false)]
-        public int? ShortTtl { get; set; }
+        public string MountDir { get; set; }
 
-        [NameInMap("strategy")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>***-uni85.cn-hangzhou.nas.com:/</para>
+        /// </summary>
+        [NameInMap("serverAddr")]
         [Validation(Required=false)]
-        public List<string> Strategy { get; set; }
+        public string ServerAddr { get; set; }
 
     }
 

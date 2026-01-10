@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class Template : TeaModel {
+        [NameInMap("allowAnonymousManage")]
+        [Validation(Required=false)]
+        public bool? AllowAnonymousManage { get; set; }
+
         [NameInMap("containerConfiguration")]
         [Validation(Required=false)]
         public ContainerConfiguration ContainerConfiguration { get; set; }

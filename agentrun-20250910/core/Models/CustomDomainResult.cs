@@ -8,8 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
-    public class RetrieveMemoryResponseBody : TeaModel {
+    public class CustomDomainResult : TeaModel {
         /// <summary>
+        /// <para>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -17,25 +19,21 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("data")]
-        [Validation(Required=false)]
-        public RetrieveMemoryResponseBodyData Data { get; set; }
-        public class RetrieveMemoryResponseBodyData : TeaModel {
-            [NameInMap("events")]
-            [Validation(Required=false)]
-            public List<Dictionary<string, string>> Events { get; set; }
-
-            [NameInMap("memories")]
-            [Validation(Required=false)]
-            public List<Dictionary<string, string>> Memories { get; set; }
-
-        }
-
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>自定义域名的详细信息</para>
         /// 
         /// <b>Example:</b>
-        /// <para>BC65E49E-1F6A-55E0-8A0E-7255DBFAA8F9</para>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("data")]
+        [Validation(Required=false)]
+        public CustomDomain Data { get; set; }
+
+        /// <summary>
+        /// <para>唯一的请求标识符，用于问题追踪</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F8A0F5F3-0C3E-4C82-9D4F-5E4B6A7C8D9E</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
