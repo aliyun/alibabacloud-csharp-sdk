@@ -98,6 +98,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string ApiTaskId { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>agent_01</para>
+                /// </summary>
+                [NameInMap("AppId")]
+                [Validation(Required=false)]
+                public string AppId { get; set; }
+
+                /// <summary>
                 /// <para>Attack level, returned based on the set high and low risk scores. The return values include:</para>
                 /// <list type="bullet">
                 /// <item><description><para>high: High risk</para>
@@ -227,6 +235,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [NameInMap("ImageUrl")]
                 [Validation(Required=false)]
                 public string ImageUrl { get; set; }
+
+                [NameInMap("ImageUrls")]
+                [Validation(Required=false)]
+                public List<string> ImageUrls { get; set; }
 
                 /// <summary>
                 /// <para>Labels.</para>

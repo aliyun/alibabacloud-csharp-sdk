@@ -9929,6 +9929,10 @@ namespace AlibabaCloud.SDK.Green20220926
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                body["Channel"] = request.Channel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
             {
                 body["Messages"] = request.Messages;
@@ -9983,6 +9987,10 @@ namespace AlibabaCloud.SDK.Green20220926
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                body["Channel"] = request.Channel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
             {
                 body["Messages"] = request.Messages;
