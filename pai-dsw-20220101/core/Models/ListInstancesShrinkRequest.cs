@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        [NameInMap("CreateTimeAfter")]
+        [Validation(Required=false)]
+        public string CreateTimeAfter { get; set; }
+
+        [NameInMap("CreateTimeBefore")]
+        [Validation(Required=false)]
+        public string CreateTimeBefore { get; set; }
+
         /// <summary>
         /// <para>The UID of the creator.</para>
         /// 
