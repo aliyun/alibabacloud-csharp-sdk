@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class ListClusterAddonInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>Cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

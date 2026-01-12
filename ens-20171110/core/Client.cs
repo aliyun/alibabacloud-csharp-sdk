@@ -15719,6 +15719,142 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询集群列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClustersV1Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClustersV1Response
+        /// </returns>
+        public DescribeClustersV1Response DescribeClustersV1WithOptions(DescribeClustersV1Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
+            {
+                query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeClustersV1",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeClustersV1Response>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询集群列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClustersV1Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClustersV1Response
+        /// </returns>
+        public async Task<DescribeClustersV1Response> DescribeClustersV1WithOptionsAsync(DescribeClustersV1Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
+            {
+                query["EnsRegionId"] = request.EnsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeClustersV1",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeClustersV1Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询集群列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClustersV1Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClustersV1Response
+        /// </returns>
+        public DescribeClustersV1Response DescribeClustersV1(DescribeClustersV1Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeClustersV1WithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询集群列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClustersV1Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClustersV1Response
+        /// </returns>
+        public async Task<DescribeClustersV1Response> DescribeClustersV1Async(DescribeClustersV1Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeClustersV1WithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the results of creating an instance.</para>
         /// </summary>
         /// 
@@ -32415,7 +32551,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可用的组件列表</para>
+        /// <para>Querying the details of a cluster component</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32448,7 +32584,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可用的组件列表</para>
+        /// <para>Querying the details of a cluster component</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32481,7 +32617,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可用的组件列表</para>
+        /// <para>Querying the details of a cluster component</para>
         /// </summary>
         /// 
         /// <returns>
@@ -32495,7 +32631,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可用的组件列表</para>
+        /// <para>Querying the details of a cluster component</para>
         /// </summary>
         /// 
         /// <returns>
@@ -32821,7 +32957,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群已安装的组件实例列表</para>
+        /// <para>List of Installed Addon Instances in the Cluster</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32863,7 +32999,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群已安装的组件实例列表</para>
+        /// <para>List of Installed Addon Instances in the Cluster</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32905,7 +33041,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群已安装的组件实例列表</para>
+        /// <para>List of Installed Addon Instances in the Cluster</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32923,7 +33059,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询集群已安装的组件实例列表</para>
+        /// <para>List of Installed Addon Instances in the Cluster</para>
         /// </summary>
         /// 
         /// <param name="request">
