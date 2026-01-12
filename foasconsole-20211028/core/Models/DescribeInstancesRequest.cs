@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("Elastic")]
+        [Validation(Required=false)]
+        public bool? Elastic { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>f-cn-wwo36qj4g06</para>
         /// </summary>
         [NameInMap("InstanceId")]

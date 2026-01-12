@@ -2007,6 +2007,210 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             return await ModifyElasticResourceSpecWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对包年实例升降配，对按量实例修改resource quota</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyInstanceSpecRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceSpecResponse
+        /// </returns>
+        public ModifyInstanceSpecResponse ModifyInstanceSpecWithOptions(ModifyInstanceSpecRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyInstanceSpecShrinkRequest request = new ModifyInstanceSpecShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaResourceSpec))
+            {
+                request.HaResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaResourceSpec, "HaResourceSpec", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaVSwitchIds))
+            {
+                request.HaVSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaVSwitchIds, "HaVSwitchIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceSpec))
+            {
+                request.ResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSpec, "ResourceSpec", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ha))
+            {
+                body["Ha"] = request.Ha;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaResourceSpecShrink))
+            {
+                body["HaResourceSpec"] = request.HaResourceSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaVSwitchIdsShrink))
+            {
+                body["HaVSwitchIds"] = request.HaVSwitchIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                body["PromotionCode"] = request.PromotionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpecShrink))
+            {
+                body["ResourceSpec"] = request.ResourceSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
+            {
+                body["UsePromotionCode"] = request.UsePromotionCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceSpec",
+                Version = "2021-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceSpecResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对包年实例升降配，对按量实例修改resource quota</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyInstanceSpecRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceSpecResponse
+        /// </returns>
+        public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpecWithOptionsAsync(ModifyInstanceSpecRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyInstanceSpecShrinkRequest request = new ModifyInstanceSpecShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaResourceSpec))
+            {
+                request.HaResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaResourceSpec, "HaResourceSpec", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaVSwitchIds))
+            {
+                request.HaVSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaVSwitchIds, "HaVSwitchIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ResourceSpec))
+            {
+                request.ResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResourceSpec, "ResourceSpec", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ha))
+            {
+                body["Ha"] = request.Ha;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaResourceSpecShrink))
+            {
+                body["HaResourceSpec"] = request.HaResourceSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HaVSwitchIdsShrink))
+            {
+                body["HaVSwitchIds"] = request.HaVSwitchIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                body["PromotionCode"] = request.PromotionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["Region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpecShrink))
+            {
+                body["ResourceSpec"] = request.ResourceSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsePromotionCode))
+            {
+                body["UsePromotionCode"] = request.UsePromotionCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInstanceSpec",
+                Version = "2021-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInstanceSpecResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对包年实例升降配，对按量实例修改resource quota</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceSpecResponse
+        /// </returns>
+        public ModifyInstanceSpecResponse ModifyInstanceSpec(ModifyInstanceSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyInstanceSpecWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>对包年实例升降配，对按量实例修改resource quota</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInstanceSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInstanceSpecResponse
+        /// </returns>
+        public async Task<ModifyInstanceSpecResponse> ModifyInstanceSpecAsync(ModifyInstanceSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyInstanceSpecWithOptionsAsync(request, runtime);
+        }
+
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI ModifyInstanceVswitch is deprecated
