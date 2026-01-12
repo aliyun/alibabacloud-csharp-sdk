@@ -359,6 +359,318 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>整机备份</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BackupAndroidInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BackupAndroidInstanceResponse
+        /// </returns>
+        public BackupAndroidInstanceResponse BackupAndroidInstanceWithOptions(BackupAndroidInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIdList))
+            {
+                query["AndroidInstanceIdList"] = request.AndroidInstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFileName))
+            {
+                query["BackupFileName"] = request.BackupFileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFilePath))
+            {
+                query["BackupFilePath"] = request.BackupFilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
+            {
+                query["UploadEndpoint"] = request.UploadEndpoint;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BackupAndroidInstance",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BackupAndroidInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整机备份</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BackupAndroidInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BackupAndroidInstanceResponse
+        /// </returns>
+        public async Task<BackupAndroidInstanceResponse> BackupAndroidInstanceWithOptionsAsync(BackupAndroidInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIdList))
+            {
+                query["AndroidInstanceIdList"] = request.AndroidInstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFileName))
+            {
+                query["BackupFileName"] = request.BackupFileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFilePath))
+            {
+                query["BackupFilePath"] = request.BackupFilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
+            {
+                query["UploadEndpoint"] = request.UploadEndpoint;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BackupAndroidInstance",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BackupAndroidInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整机备份</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BackupAndroidInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BackupAndroidInstanceResponse
+        /// </returns>
+        public BackupAndroidInstanceResponse BackupAndroidInstance(BackupAndroidInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BackupAndroidInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整机备份</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BackupAndroidInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BackupAndroidInstanceResponse
+        /// </returns>
+        public async Task<BackupAndroidInstanceResponse> BackupAndroidInstanceAsync(BackupAndroidInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BackupAndroidInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>应用备份</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BackupAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BackupAppResponse
+        /// </returns>
+        public BackupAppResponse BackupAppWithOptions(BackupAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIdList))
+            {
+                query["AndroidInstanceIdList"] = request.AndroidInstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFileName))
+            {
+                query["BackupFileName"] = request.BackupFileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFilePath))
+            {
+                query["BackupFilePath"] = request.BackupFilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAppList))
+            {
+                query["SourceAppList"] = request.SourceAppList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
+            {
+                query["UploadEndpoint"] = request.UploadEndpoint;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BackupApp",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BackupAppResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>应用备份</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BackupAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BackupAppResponse
+        /// </returns>
+        public async Task<BackupAppResponse> BackupAppWithOptionsAsync(BackupAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIdList))
+            {
+                query["AndroidInstanceIdList"] = request.AndroidInstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFileName))
+            {
+                query["BackupFileName"] = request.BackupFileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFilePath))
+            {
+                query["BackupFilePath"] = request.BackupFilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceAppList))
+            {
+                query["SourceAppList"] = request.SourceAppList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
+            {
+                query["UploadEndpoint"] = request.UploadEndpoint;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BackupApp",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BackupAppResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>应用备份</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BackupAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BackupAppResponse
+        /// </returns>
+        public BackupAppResponse BackupApp(BackupAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BackupAppWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>应用备份</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BackupAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BackupAppResponse
+        /// </returns>
+        public async Task<BackupAppResponse> BackupAppAsync(BackupAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BackupAppWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Generates and uploads backup files.</para>
         /// </summary>
         /// 
@@ -11423,6 +11735,310 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RebootAndroidInstancesInGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整机恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecoverAndroidInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverAndroidInstanceResponse
+        /// </returns>
+        public RecoverAndroidInstanceResponse RecoverAndroidInstanceWithOptions(RecoverAndroidInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIdList))
+            {
+                query["AndroidInstanceIdList"] = request.AndroidInstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFileId))
+            {
+                query["BackupFileId"] = request.BackupFileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFilePath))
+            {
+                query["BackupFilePath"] = request.BackupFilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
+            {
+                query["UploadEndpoint"] = request.UploadEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadType))
+            {
+                query["UploadType"] = request.UploadType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecoverAndroidInstance",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecoverAndroidInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整机恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecoverAndroidInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverAndroidInstanceResponse
+        /// </returns>
+        public async Task<RecoverAndroidInstanceResponse> RecoverAndroidInstanceWithOptionsAsync(RecoverAndroidInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIdList))
+            {
+                query["AndroidInstanceIdList"] = request.AndroidInstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFileId))
+            {
+                query["BackupFileId"] = request.BackupFileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFilePath))
+            {
+                query["BackupFilePath"] = request.BackupFilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
+            {
+                query["UploadEndpoint"] = request.UploadEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadType))
+            {
+                query["UploadType"] = request.UploadType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecoverAndroidInstance",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecoverAndroidInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整机恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecoverAndroidInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverAndroidInstanceResponse
+        /// </returns>
+        public RecoverAndroidInstanceResponse RecoverAndroidInstance(RecoverAndroidInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RecoverAndroidInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>整机恢复</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecoverAndroidInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverAndroidInstanceResponse
+        /// </returns>
+        public async Task<RecoverAndroidInstanceResponse> RecoverAndroidInstanceAsync(RecoverAndroidInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RecoverAndroidInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecoverAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverAppResponse
+        /// </returns>
+        public RecoverAppResponse RecoverAppWithOptions(RecoverAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIdList))
+            {
+                query["AndroidInstanceIdList"] = request.AndroidInstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFileId))
+            {
+                query["BackupFileId"] = request.BackupFileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFilePath))
+            {
+                query["BackupFilePath"] = request.BackupFilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
+            {
+                query["UploadEndpoint"] = request.UploadEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadType))
+            {
+                query["UploadType"] = request.UploadType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecoverApp",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecoverAppResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecoverAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverAppResponse
+        /// </returns>
+        public async Task<RecoverAppResponse> RecoverAppWithOptionsAsync(RecoverAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidInstanceIdList))
+            {
+                query["AndroidInstanceIdList"] = request.AndroidInstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFileId))
+            {
+                query["BackupFileId"] = request.BackupFileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFilePath))
+            {
+                query["BackupFilePath"] = request.BackupFilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
+            {
+                query["UploadEndpoint"] = request.UploadEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadType))
+            {
+                query["UploadType"] = request.UploadType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecoverApp",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecoverAppResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecoverAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverAppResponse
+        /// </returns>
+        public RecoverAppResponse RecoverApp(RecoverAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RecoverAppWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复应用</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RecoverAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecoverAppResponse
+        /// </returns>
+        public async Task<RecoverAppResponse> RecoverAppAsync(RecoverAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RecoverAppWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
