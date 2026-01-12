@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [Validation(Required=false)]
                 public string SubJob { get; set; }
 
+                [NameInMap("SubJobMessage")]
+                [Validation(Required=false)]
+                public string SubJobMessage { get; set; }
+
                 /// <summary>
                 /// <para>The subtask status.</para>
                 /// 
