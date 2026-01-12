@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeSubnetsRequest : TeaModel {
+        [NameInMap("Eid")]
+        [Validation(Required=false)]
+        public string Eid { get; set; }
+
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }

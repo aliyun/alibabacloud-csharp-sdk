@@ -2585,6 +2585,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return await AttachEndUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns multiple cloud computers to users in a batch.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  The cloud computers for which you want to change their policies must be in the Running state.</para>
@@ -2655,6 +2660,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<BatchModifyEntitlementResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns multiple cloud computers to users in a batch.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  The cloud computers for which you want to change their policies must be in the Running state.</para>
@@ -2725,6 +2735,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return TeaModel.ToObject<BatchModifyEntitlementResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns multiple cloud computers to users in a batch.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  The cloud computers for which you want to change their policies must be in the Running state.</para>
@@ -2747,6 +2762,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
             return BatchModifyEntitlementWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns multiple cloud computers to users in a batch.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>  The cloud computers for which you want to change their policies must be in the Running state.</para>
@@ -12064,6 +12084,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["DomainName"] = request.DomainName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Eid))
+            {
+                query["Eid"] = request.Eid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAdminAccess))
             {
                 query["EnableAdminAccess"] = request.EnableAdminAccess;
@@ -12181,6 +12205,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
             {
                 query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Eid))
+            {
+                query["Eid"] = request.Eid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableAdminAccess))
             {
@@ -28944,6 +28972,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Eid))
+            {
+                query["Eid"] = request.Eid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -29006,6 +29038,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Eid))
+            {
+                query["Eid"] = request.Eid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;

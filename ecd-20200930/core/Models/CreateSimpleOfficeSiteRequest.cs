@@ -120,6 +120,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        [NameInMap("Eid")]
+        [Validation(Required=false)]
+        public string Eid { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</para>
         /// <para>Valid values:</para>

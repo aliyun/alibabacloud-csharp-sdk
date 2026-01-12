@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class BatchModifyEntitlementResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The results.</para>
+        /// </summary>
         [NameInMap("Entitlements")]
         [Validation(Required=false)]
         public BatchModifyEntitlementResponseBodyEntitlements Entitlements { get; set; }
         public class BatchModifyEntitlementResponseBodyEntitlements : TeaModel {
+            /// <summary>
+            /// <para>The assignment results.</para>
+            /// </summary>
             [NameInMap("AssignModels")]
             [Validation(Required=false)]
             public List<BatchModifyEntitlementResponseBodyEntitlementsAssignModels> AssignModels { get; set; }

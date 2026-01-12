@@ -343,6 +343,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DomainUserName { get; set; }
 
+            [NameInMap("Eid")]
+            [Validation(Required=false)]
+            public string Eid { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the local administrator permissions are granted to users that are authorized to use cloud computers in the office network.</para>
             /// <para>Valid values:</para>
@@ -387,6 +391,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("EnableServiceRoute")]
             [Validation(Required=false)]
             public bool? EnableServiceRoute { get; set; }
+
+            [NameInMap("EnvType")]
+            [Validation(Required=false)]
+            public string EnvType { get; set; }
 
             /// <summary>
             /// <para>An array of File Storage NAS (NAS) file system IDs.</para>
