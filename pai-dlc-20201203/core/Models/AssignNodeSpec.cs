@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class AssignNodeSpec : TeaModel {
+        [NameInMap("AntiAffinityHyperNodes")]
+        [Validation(Required=false)]
+        public List<HyperNodeSpec> AntiAffinityHyperNodes { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>lingjxxxxxxxx</para>
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("EnableAssignNode")]
         [Validation(Required=false)]
         public bool? EnableAssignNode { get; set; }
+
+        [NameInMap("HyperNodes")]
+        [Validation(Required=false)]
+        public List<HyperNodeSpec> HyperNodes { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

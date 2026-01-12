@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         [NameInMap("JobReplicaStatuses")]
         [Validation(Required=false)]
-        public JobReplicaStatus JobReplicaStatuses { get; set; }
+        public List<JobReplicaStatus> JobReplicaStatuses { get; set; }
 
         [NameInMap("JobSpecs")]
         [Validation(Required=false)]

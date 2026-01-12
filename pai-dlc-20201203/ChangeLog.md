@@ -1,3 +1,6 @@
+2026-01-12 Version: 1.7.7
+- Generated csharp 2020-12-03 for pai-dlc.
+
 2025-11-18 Version: 1.7.6
 - Update API GetJob: add response parameters Body.Pods.$.Duration.
 - Update API GetJob: add response parameters Body.Pods.$.NodeName.
