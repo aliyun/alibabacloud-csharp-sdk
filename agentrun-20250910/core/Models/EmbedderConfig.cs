@@ -1,0 +1,28 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.AgentRun20250910.Models
+{
+    public class EmbedderConfig : TeaModel {
+        [NameInMap("config")]
+        [Validation(Required=false)]
+        public EmbedderConfigConfig Config { get; set; }
+        public class EmbedderConfigConfig : TeaModel {
+            [NameInMap("model")]
+            [Validation(Required=false)]
+            public string Model { get; set; }
+
+        }
+
+        [NameInMap("modelServiceName")]
+        [Validation(Required=false)]
+        public string ModelServiceName { get; set; }
+
+    }
+
+}

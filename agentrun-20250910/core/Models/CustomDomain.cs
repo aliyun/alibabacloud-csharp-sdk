@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        [NameInMap("domainType")]
+        [Validation(Required=false)]
+        public string DomainType { get; set; }
+
         /// <summary>
         /// <para>域名支持的协议类型：● HTTP：仅支持 HTTP 协议。● HTTPS：仅支持 HTTPS 协议。● HTTP,HTTPS：支持 HTTP 及 HTTPS 协议。</para>
         /// 

@@ -1,0 +1,46 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.AgentRun20250910.Models
+{
+    public class CreateMemoryCollectionInput : TeaModel {
+        [NameInMap("description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        [NameInMap("embedderConfig")]
+        [Validation(Required=false)]
+        public EmbedderConfig EmbedderConfig { get; set; }
+
+        [NameInMap("executionRoleArn")]
+        [Validation(Required=false)]
+        public string ExecutionRoleArn { get; set; }
+
+        [NameInMap("llmConfig")]
+        [Validation(Required=false)]
+        public LLMConfig LlmConfig { get; set; }
+
+        [NameInMap("memoryCollectionName")]
+        [Validation(Required=false)]
+        public string MemoryCollectionName { get; set; }
+
+        [NameInMap("networkConfiguration")]
+        [Validation(Required=false)]
+        public NetworkConfiguration NetworkConfiguration { get; set; }
+
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
+        [NameInMap("vectorStoreConfig")]
+        [Validation(Required=false)]
+        public VectorStoreConfig VectorStoreConfig { get; set; }
+
+    }
+
+}
