@@ -1741,6 +1741,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["CheckFileName"] = request.CheckFileName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceRiskPlus))
+            {
+                query["DeviceRiskPlus"] = request.DeviceRiskPlus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MiniProgramName))
             {
                 query["MiniProgramName"] = request.MiniProgramName;
@@ -1822,6 +1826,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckFileName))
             {
                 query["CheckFileName"] = request.CheckFileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceRiskPlus))
+            {
+                query["DeviceRiskPlus"] = request.DeviceRiskPlus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MiniProgramName))
             {
@@ -15664,6 +15672,142 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>手机号二次放号核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MobileRecycledMetaVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MobileRecycledMetaVerifyResponse
+        /// </returns>
+        public MobileRecycledMetaVerifyResponse MobileRecycledMetaVerifyWithOptions(MobileRecycledMetaVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                query["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegisterDate))
+            {
+                query["RegisterDate"] = request.RegisterDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MobileRecycledMetaVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MobileRecycledMetaVerifyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手机号二次放号核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MobileRecycledMetaVerifyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MobileRecycledMetaVerifyResponse
+        /// </returns>
+        public async Task<MobileRecycledMetaVerifyResponse> MobileRecycledMetaVerifyWithOptionsAsync(MobileRecycledMetaVerifyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamType))
+            {
+                query["ParamType"] = request.ParamType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegisterDate))
+            {
+                query["RegisterDate"] = request.RegisterDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MobileRecycledMetaVerify",
+                Version = "2019-03-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MobileRecycledMetaVerifyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手机号二次放号核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MobileRecycledMetaVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MobileRecycledMetaVerifyResponse
+        /// </returns>
+        public MobileRecycledMetaVerifyResponse MobileRecycledMetaVerify(MobileRecycledMetaVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MobileRecycledMetaVerifyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手机号二次放号核验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MobileRecycledMetaVerifyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MobileRecycledMetaVerifyResponse
+        /// </returns>
+        public async Task<MobileRecycledMetaVerifyResponse> MobileRecycledMetaVerifyAsync(MobileRecycledMetaVerifyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MobileRecycledMetaVerifyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modify Black and White List Policy</para>
         /// </summary>
         /// 
@@ -17914,6 +18058,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["CheckFileName"] = request.CheckFileName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceRiskPlus))
+            {
+                query["DeviceRiskPlus"] = request.DeviceRiskPlus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MiniProgramName))
             {
                 query["MiniProgramName"] = request.MiniProgramName;
@@ -18004,6 +18152,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckFileName))
             {
                 query["CheckFileName"] = request.CheckFileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceRiskPlus))
+            {
+                query["DeviceRiskPlus"] = request.DeviceRiskPlus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MiniProgramName))
             {

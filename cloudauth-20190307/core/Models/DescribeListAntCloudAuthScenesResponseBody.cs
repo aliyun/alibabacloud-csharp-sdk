@@ -70,6 +70,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [Validation(Required=false)]
             public string Creator { get; set; }
 
+            [NameInMap("DeviceRiskPlus")]
+            [Validation(Required=false)]
+            public string DeviceRiskPlus { get; set; }
+
             /// <summary>
             /// <para>Bound domain.</para>
             /// 
