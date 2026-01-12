@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ListCustomAgentResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListCustomAgentResponseBodyData> Data { get; set; }
         public class ListCustomAgentResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The creation time of the agent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-11-27 16:01:28</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether tools are enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -30,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public bool? EnableTools { get; set; }
 
             /// <summary>
-            /// <para>AgentId。</para>
+            /// <para>The ID of the agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d1b7d639-f34e-44c7-8231-987da14d****</para>
@@ -39,19 +46,30 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <para>The name of the dedicated agent.</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The system prompts.</para>
+            /// </summary>
             [NameInMap("SystemPrompt")]
             [Validation(Required=false)]
             public string SystemPrompt { get; set; }
 
+            /// <summary>
+            /// <para>The information about the tool.</para>
+            /// </summary>
             [NameInMap("Tools")]
             [Validation(Required=false)]
             public List<string> Tools { get; set; }
 
             /// <summary>
+            /// <para>The modification time of the agent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-11-27 16:02:28</para>
             /// </summary>
@@ -62,6 +80,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
+        /// <para>The page number of the returned page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -70,6 +90,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -78,6 +100,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
         /// </summary>
@@ -86,6 +110,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned. By default, this parameter is not returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

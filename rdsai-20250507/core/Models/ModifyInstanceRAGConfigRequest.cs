@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstanceRAGConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The value of the configuration item.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
@@ -17,6 +19,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable the RAG agent. If you do not configure this parameter, the RAG agent state remains unchanged. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("ConfigList")]
         [Validation(Required=false)]
         public List<ModifyInstanceRAGConfigRequestConfigList> ConfigList { get; set; }
@@ -40,6 +49,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The operation that you want to perform. Set the value to <b>ModifyInstanceRAGConfig</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the RDS Supabase instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

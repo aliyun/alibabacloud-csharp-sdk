@@ -9,7 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceIpWhitelistRequest : TeaModel {
+        [NameInMap("GroupName")]
+        [Validation(Required=false)]
+        public string GroupName { get; set; }
+
         /// <summary>
+        /// <para>The region ID of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The operation that you want to perform. Set the value to <b>DescribeInstanceIpWhitelist</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetMessagesRequest : TeaModel {
         /// <summary>
+        /// <para>The operation that you want to perform. Set the value to <b>GetMessages</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>941c6f59-acf5-4e11-9adc-31e52e1f****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the conversation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>038866af-a050-4bc5-bfad-b7bfc838****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string FirstId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the first message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

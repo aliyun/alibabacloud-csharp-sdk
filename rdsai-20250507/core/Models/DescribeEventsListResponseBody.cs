@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeEventsListResponseBody : TeaModel {
         /// <summary>
+        /// <para>The total number of events.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OtherException:3,MysqlIOException:1</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string EventCodeCounts { get; set; }
 
+        /// <summary>
+        /// <para>The information about the events.</para>
+        /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
         public List<DescribeEventsListResponseBodyEvents> Events { get; set; }
         public class DescribeEventsListResponseBodyEvents : TeaModel {
             /// <summary>
+            /// <para>The event code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ExceptionEvent</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string EventCode { get; set; }
 
             /// <summary>
+            /// <para>The state of the event.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>None</para>
             /// </summary>
@@ -37,15 +46,23 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string EventStatus { get; set; }
 
+            /// <summary>
+            /// <para>The event.</para>
+            /// </summary>
             [NameInMap("EventTimeList")]
             [Validation(Required=false)]
             public List<string> EventTimeList { get; set; }
 
+            /// <summary>
+            /// <para>The description of the instance.</para>
+            /// </summary>
             [NameInMap("InstanceDescription")]
             [Validation(Required=false)]
             public string InstanceDescription { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rm-2zecnb327gp36e7lh</para>
             /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The recovery time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-07-23T02:11:07Z</para>
             /// </summary>
@@ -68,6 +87,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
+        /// <para>The total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -76,6 +97,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageCount { get; set; }
 
         /// <summary>
+        /// <para>The page number of the returned page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -84,6 +107,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -92,6 +117,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329241C</para>
         /// </summary>
@@ -100,6 +127,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -108,6 +137,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

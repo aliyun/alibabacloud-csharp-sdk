@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstanceStorageConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The value of the configuration item.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the RDS Supabase instance.</para>
+        /// </summary>
         [NameInMap("ConfigList")]
         [Validation(Required=false)]
         public List<ModifyInstanceStorageConfigRequestConfigList> ConfigList { get; set; }
@@ -40,6 +45,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +56,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The operation that you want to perform. Set the value to <b>ModifyInstanceStorageConfig</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>

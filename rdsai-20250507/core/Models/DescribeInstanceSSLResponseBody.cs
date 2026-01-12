@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceSSLResponseBody : TeaModel {
         /// <summary>
+        /// <para>The type of the certificate. Set the value to <b>custom</b>, which indicates that a custom certificate is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>custom</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string CAType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the RDS Supabase instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32DEFB4A-861F-5D1D-ADD5-918E4FD7AB8C</para>
         /// </summary>
@@ -34,6 +40,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable SSL encryption. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: enables SSL encryption.</description></item>
+        /// <item><description><b>0</b>: disables SSL encryption.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string SSLEnabled { get; set; }
 
         /// <summary>
+        /// <para>The content of the custom certificate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----MIID*****QqEP-----END CERTIFICATE-----</para>
         /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ServerCert { get; set; }
 
         /// <summary>
+        /// <para>The private key of the certificate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN PRIVATE KEY-----MIIE****ihfg==-----END PRIVATE KEY-----</para>
         /// </summary>

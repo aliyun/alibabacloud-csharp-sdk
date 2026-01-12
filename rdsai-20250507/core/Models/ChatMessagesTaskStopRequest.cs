@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ChatMessagesTaskStopRequest : TeaModel {
         /// <summary>
+        /// <para>The operation that you want to perform. Set the value to <b>ChatMessagesTaskStop</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DeleteCustomAgentRequest : TeaModel {
         /// <summary>
-        /// <para>AgentId。</para>
+        /// <para>The operation that you want to perform. Set the value to <b>DeleteCustomAgent</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ebe44453-3b41-4c74-94d1-01d088d7****</para>

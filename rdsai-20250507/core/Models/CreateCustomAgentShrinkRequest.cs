@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateCustomAgentShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The system prompts.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -17,17 +19,24 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public bool? EnableTools { get; set; }
 
+        /// <summary>
+        /// <para>The operation that you want to perform. Set the value to <b>CreateCustomAgent</b>.</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The name of the dedicated agent.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]
         public string SystemPrompt { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable tools.</para>
+        /// </summary>
         [NameInMap("Tools")]
         [Validation(Required=false)]
         public string ToolsShrink { get; set; }

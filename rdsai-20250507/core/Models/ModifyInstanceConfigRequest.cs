@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstanceConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the RDS Supabase instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eip、nat</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ConfigName { get; set; }
 
         /// <summary>
+        /// <para>The name of the configuration item that you want to modify. Configure this parameter together with the ConfigValue parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>on、off</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ConfigValue { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The operation that you want to perform. Set the value to <b>ModifyInstanceConfig</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>

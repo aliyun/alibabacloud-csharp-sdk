@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送对话消息</para>
+        /// <para>Sends chat messages.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送对话消息</para>
+        /// <para>Sends chat messages.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送对话消息</para>
+        /// <para>Sends chat messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送对话消息</para>
+        /// <para>Sends chat messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止对话</para>
+        /// <para>Stops a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止对话</para>
+        /// <para>Stops a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止对话</para>
+        /// <para>Stops a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止对话</para>
+        /// <para>Stops a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -315,8 +315,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用服务实例</para>
+        /// <para>Creates an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <remarks>
+        /// <para> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.
+        /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAppInstanceRequest
@@ -419,8 +430,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用服务实例</para>
+        /// <para>Creates an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <remarks>
+        /// <para> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.
+        /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAppInstanceRequest
@@ -523,8 +545,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用服务实例</para>
+        /// <para>Creates an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <remarks>
+        /// <para> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.
+        /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAppInstanceRequest
@@ -541,8 +574,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用服务实例</para>
+        /// <para>Creates an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <remarks>
+        /// <para> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.
+        /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAppInstanceRequest
@@ -559,7 +603,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义agent</para>
+        /// <para>Creates a dedicated agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -619,7 +663,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义agent</para>
+        /// <para>Creates a dedicated agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -679,7 +723,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义agent</para>
+        /// <para>Creates a dedicated agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -697,7 +741,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义agent</para>
+        /// <para>Creates a dedicated agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -715,8 +759,20 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用服务实例</para>
+        /// <para>Deletes an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <remarks>
+        /// <para> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.
+        /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
+        ///  If you delete an RDS Supabase instance, the created RDS for PostgreSQL instance and the created NAT gateway are not automatically deleted. You must manually release the instance and delete the Internet NAT gateway and EIP.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppInstanceRequest
@@ -765,8 +821,20 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用服务实例</para>
+        /// <para>Deletes an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <remarks>
+        /// <para> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.
+        /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
+        ///  If you delete an RDS Supabase instance, the created RDS for PostgreSQL instance and the created NAT gateway are not automatically deleted. You must manually release the instance and delete the Internet NAT gateway and EIP.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppInstanceRequest
@@ -815,8 +883,20 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用服务实例</para>
+        /// <para>Deletes an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <remarks>
+        /// <para> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.
+        /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
+        ///  If you delete an RDS Supabase instance, the created RDS for PostgreSQL instance and the created NAT gateway are not automatically deleted. You must manually release the instance and delete the Internet NAT gateway and EIP.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppInstanceRequest
@@ -833,8 +913,20 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用服务实例</para>
+        /// <para>Deletes an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <remarks>
+        /// <para> Fees of an instance are changed if the call is successful. Before you call this operation, carefully read the related topics.
+        /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
+        ///  If you delete an RDS Supabase instance, the created RDS for PostgreSQL instance and the created NAT gateway are not automatically deleted. You must manually release the instance and delete the Internet NAT gateway and EIP.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAppInstanceRequest
@@ -851,7 +943,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Custom Agent</para>
+        /// <para>Deletes the dedicated agent created by a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -893,7 +985,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Custom Agent</para>
+        /// <para>Deletes the dedicated agent created by a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -935,7 +1027,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Custom Agent</para>
+        /// <para>Deletes the dedicated agent created by a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -953,7 +1045,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Custom Agent</para>
+        /// <para>Deletes the dedicated agent created by a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -971,8 +1063,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用服务详情</para>
+        /// <para>Queries the details of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppInstanceAttributeRequest
@@ -1017,8 +1117,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用服务详情</para>
+        /// <para>Queries the details of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppInstanceAttributeRequest
@@ -1063,8 +1171,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用服务详情</para>
+        /// <para>Queries the details of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppInstanceAttributeRequest
@@ -1081,8 +1197,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用服务详情</para>
+        /// <para>Queries the details of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppInstanceAttributeRequest
@@ -1099,8 +1223,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用服务列表</para>
+        /// <para>Queries the RDS Supabase instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppInstancesRequest
@@ -1157,8 +1289,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用服务列表</para>
+        /// <para>Queries the RDS Supabase instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppInstancesRequest
@@ -1215,8 +1355,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用服务列表</para>
+        /// <para>Queries the RDS Supabase instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppInstancesRequest
@@ -1233,8 +1381,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用服务列表</para>
+        /// <para>Queries the RDS Supabase instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAppInstancesRequest
@@ -1251,7 +1407,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件信息列表</para>
+        /// <para>Queries the events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1313,7 +1469,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件信息列表</para>
+        /// <para>Queries the events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1375,7 +1531,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件信息列表</para>
+        /// <para>Queries the events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1393,7 +1549,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件信息列表</para>
+        /// <para>Queries the events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1411,8 +1567,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例认证信息</para>
+        /// <para>Queries the authentication information about an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceAuthInfoRequest
@@ -1457,8 +1621,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例认证信息</para>
+        /// <para>Queries the authentication information about an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceAuthInfoRequest
@@ -1503,8 +1675,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例认证信息</para>
+        /// <para>Queries the authentication information about an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceAuthInfoRequest
@@ -1521,8 +1701,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例认证信息</para>
+        /// <para>Queries the authentication information about an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceAuthInfoRequest
@@ -1539,8 +1727,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看服务连接信息</para>
+        /// <para>Queries the endpoint of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceEndpointsRequest
@@ -1585,8 +1781,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看服务连接信息</para>
+        /// <para>Queries the endpoint of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceEndpointsRequest
@@ -1631,8 +1835,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看服务连接信息</para>
+        /// <para>Queries the endpoint of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceEndpointsRequest
@@ -1649,8 +1861,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看服务连接信息</para>
+        /// <para>Queries the endpoint of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceEndpointsRequest
@@ -1667,8 +1887,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务白名单</para>
+        /// <para>Queries the IP address whitelists of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceIpWhitelistRequest
@@ -1684,6 +1912,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -1713,8 +1945,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务白名单</para>
+        /// <para>Queries the IP address whitelists of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceIpWhitelistRequest
@@ -1730,6 +1970,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -1759,8 +2003,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务白名单</para>
+        /// <para>Queries the IP address whitelists of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceIpWhitelistRequest
@@ -1777,8 +2029,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务白名单</para>
+        /// <para>Queries the IP address whitelists of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceIpWhitelistRequest
@@ -1795,7 +2055,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例RAG配置</para>
+        /// <para>Queries the RAG agent configurations of an RDS Supabase instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1841,7 +2101,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例RAG配置</para>
+        /// <para>Queries the RAG agent configurations of an RDS Supabase instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1887,7 +2147,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例RAG配置</para>
+        /// <para>Queries the RAG agent configurations of an RDS Supabase instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1905,7 +2165,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例RAG配置</para>
+        /// <para>Queries the RAG agent configurations of an RDS Supabase instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1923,8 +2183,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例SSL配置</para>
+        /// <para>Queries the SSL settings of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceSSLRequest
@@ -1969,8 +2237,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例SSL配置</para>
+        /// <para>Queries the SSL settings of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceSSLRequest
@@ -2015,8 +2291,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例SSL配置</para>
+        /// <para>Queries the SSL settings of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceSSLRequest
@@ -2033,8 +2317,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例SSL配置</para>
+        /// <para>Queries the SSL settings of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceSSLRequest
@@ -2051,8 +2343,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例存储配置</para>
+        /// <para>Queries the storage configurations of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para> Only Object Storage Service (OSS) is supported for the storage of RDS Supabase.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceStorageConfigRequest
@@ -2097,8 +2400,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例存储配置</para>
+        /// <para>Queries the storage configurations of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para> Only Object Storage Service (OSS) is supported for the storage of RDS Supabase.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceStorageConfigRequest
@@ -2143,8 +2457,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例存储配置</para>
+        /// <para>Queries the storage configurations of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para> Only Object Storage Service (OSS) is supported for the storage of RDS Supabase.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceStorageConfigRequest
@@ -2161,8 +2486,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看实例存储配置</para>
+        /// <para>Queries the storage configurations of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para> Only Object Storage Service (OSS) is supported for the storage of RDS Supabase.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceStorageConfigRequest
@@ -2179,7 +2515,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话列表</para>
+        /// <para>Queries the history conversations of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2233,7 +2569,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话列表</para>
+        /// <para>Queries the history conversations of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2287,7 +2623,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话列表</para>
+        /// <para>Queries the history conversations of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2305,7 +2641,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话列表</para>
+        /// <para>Queries the history conversations of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2323,7 +2659,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询CustomAgent</para>
+        /// <para>Queries the dedicated agents created by a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2365,7 +2701,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询CustomAgent</para>
+        /// <para>Queries the dedicated agents created by a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2407,7 +2743,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询CustomAgent</para>
+        /// <para>Queries the dedicated agents created by a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2425,7 +2761,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询CustomAgent</para>
+        /// <para>Queries the dedicated agents created by a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2443,7 +2779,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话历史消息</para>
+        /// <para>Queries specific conversation messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2493,7 +2829,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话历史消息</para>
+        /// <para>Queries specific conversation messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2543,7 +2879,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话历史消息</para>
+        /// <para>Queries specific conversation messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2561,7 +2897,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话历史消息</para>
+        /// <para>Queries specific conversation messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2579,7 +2915,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Custom Agent列表</para>
+        /// <para>Queries the dedicated agents created by a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2625,7 +2961,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Custom Agent列表</para>
+        /// <para>Queries the dedicated agents created by a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2671,7 +3007,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Custom Agent列表</para>
+        /// <para>Queries the dedicated agents created by a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2689,7 +3025,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Custom Agent列表</para>
+        /// <para>Queries the dedicated agents created by a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2707,7 +3043,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取专属Agent可用工具</para>
+        /// <para>Queries the custom agent tools of the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2740,7 +3076,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取专属Agent可用工具</para>
+        /// <para>Queries the custom agent tools of the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2773,7 +3109,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取专属Agent可用工具</para>
+        /// <para>Queries the custom agent tools of the user.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2787,7 +3123,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取专属Agent可用工具</para>
+        /// <para>Queries the custom agent tools of the user.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2801,8 +3137,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Supabase Auth相关配置</para>
+        /// <para>Modifies the authentication configurations of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyInstanceAuthConfigRequest
@@ -2857,8 +3201,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Supabase Auth相关配置</para>
+        /// <para>Modifies the authentication configurations of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyInstanceAuthConfigRequest
@@ -2913,8 +3265,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Supabase Auth相关配置</para>
+        /// <para>Modifies the authentication configurations of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceAuthConfigRequest
@@ -2931,8 +3291,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Supabase Auth相关配置</para>
+        /// <para>Modifies the authentication configurations of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceAuthConfigRequest
@@ -2949,7 +3317,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例RAG配置</para>
+        /// <para>Modifies the general configurations of an instance, such as the EIP and NAT settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3007,7 +3375,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例RAG配置</para>
+        /// <para>Modifies the general configurations of an instance, such as the EIP and NAT settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3065,7 +3433,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例RAG配置</para>
+        /// <para>Modifies the general configurations of an instance, such as the EIP and NAT settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3083,7 +3451,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例RAG配置</para>
+        /// <para>Modifies the general configurations of an instance, such as the EIP and NAT settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3101,8 +3469,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改服务白名单</para>
+        /// <para>Modifies the IP address whitelist of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceIpWhitelistRequest
@@ -3163,8 +3539,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改服务白名单</para>
+        /// <para>Modifies the IP address whitelist of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceIpWhitelistRequest
@@ -3225,8 +3609,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改服务白名单</para>
+        /// <para>Modifies the IP address whitelist of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceIpWhitelistRequest
@@ -3243,8 +3635,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改服务白名单</para>
+        /// <para>Modifies the IP address whitelist of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceIpWhitelistRequest
@@ -3261,7 +3661,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例RAG配置</para>
+        /// <para>Modifies the RAG agent configurations of an RDS Supabase instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3325,7 +3725,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例RAG配置</para>
+        /// <para>Modifies the RAG agent configurations of an RDS Supabase instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3389,7 +3789,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例RAG配置</para>
+        /// <para>Modifies the RAG agent configurations of an RDS Supabase instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3407,7 +3807,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例RAG配置</para>
+        /// <para>Modifies the RAG agent configurations of an RDS Supabase instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3425,8 +3825,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例SSL配置</para>
+        /// <para>Modifies the SSL settings of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceSSLRequest
@@ -3487,8 +3895,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例SSL配置</para>
+        /// <para>Modifies the SSL settings of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceSSLRequest
@@ -3549,8 +3965,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例SSL配置</para>
+        /// <para>Modifies the SSL settings of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceSSLRequest
@@ -3567,8 +3991,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例SSL配置</para>
+        /// <para>Modifies the SSL settings of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceSSLRequest
@@ -3585,8 +4017,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例存储配置</para>
+        /// <para>Modifies the storage configurations of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para> Only Object Storage Service (OSS) is supported for the storage of RDS Supabase.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyInstanceStorageConfigRequest
@@ -3645,8 +4088,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例存储配置</para>
+        /// <para>Modifies the storage configurations of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para> Only Object Storage Service (OSS) is supported for the storage of RDS Supabase.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyInstanceStorageConfigRequest
@@ -3705,8 +4159,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例存储配置</para>
+        /// <para>Modifies the storage configurations of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para> Only Object Storage Service (OSS) is supported for the storage of RDS Supabase.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceStorageConfigRequest
@@ -3723,8 +4188,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例存储配置</para>
+        /// <para>Modifies the storage configurations of an RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para> Only Object Storage Service (OSS) is supported for the storage of RDS Supabase.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInstanceStorageConfigRequest
@@ -3741,7 +4217,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消息终端用户反馈、点赞/点踩</para>
+        /// <para>Modifies the returned messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3791,7 +4267,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消息终端用户反馈、点赞/点踩</para>
+        /// <para>Modifies the returned messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3841,7 +4317,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消息终端用户反馈、点赞/点踩</para>
+        /// <para>Modifies the returned messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3859,7 +4335,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>消息终端用户反馈、点赞/点踩</para>
+        /// <para>Modifies the returned messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3877,8 +4353,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置实例密码</para>
+        /// <para>Resets the logon password of the RDS Supabase instance and the access password of the database.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para> You can only change the password of a RDS Supabase Dashboard user.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetInstancePasswordRequest
@@ -3931,8 +4418,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置实例密码</para>
+        /// <para>Resets the logon password of the RDS Supabase instance and the access password of the database.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para> You can only change the password of a RDS Supabase Dashboard user.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetInstancePasswordRequest
@@ -3985,8 +4483,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置实例密码</para>
+        /// <para>Resets the logon password of the RDS Supabase instance and the access password of the database.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para> You can only change the password of a RDS Supabase Dashboard user.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetInstancePasswordRequest
@@ -4003,8 +4512,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置实例密码</para>
+        /// <para>Resets the logon password of the RDS Supabase instance and the access password of the database.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para> You can only change the password of a RDS Supabase Dashboard user.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetInstancePasswordRequest
@@ -4021,8 +4541,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启实例</para>
+        /// <para>Restarts an RDS Supabase instance that is in the Running state.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RestartInstanceRequest
@@ -4067,8 +4595,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启实例</para>
+        /// <para>Restarts an RDS Supabase instance that is in the Running state.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RestartInstanceRequest
@@ -4113,8 +4649,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启实例</para>
+        /// <para>Restarts an RDS Supabase instance that is in the Running state.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RestartInstanceRequest
@@ -4131,8 +4675,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启实例</para>
+        /// <para>Restarts an RDS Supabase instance that is in the Running state.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RestartInstanceRequest
@@ -4149,8 +4701,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动实例</para>
+        /// <para>Starts a stopped RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartInstanceRequest
@@ -4195,8 +4755,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动实例</para>
+        /// <para>Starts a stopped RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartInstanceRequest
@@ -4241,8 +4809,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动实例</para>
+        /// <para>Starts a stopped RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartInstanceRequest
@@ -4259,8 +4835,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动实例</para>
+        /// <para>Starts a stopped RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartInstanceRequest
@@ -4277,8 +4861,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停实例</para>
+        /// <para>Stops a running RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopInstanceRequest
@@ -4323,8 +4915,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停实例</para>
+        /// <para>Stops a running RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopInstanceRequest
@@ -4369,8 +4969,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停实例</para>
+        /// <para>Stops a running RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopInstanceRequest
@@ -4387,8 +4995,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停实例</para>
+        /// <para>Stops a running RDS Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Supported database engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3><a href="#"></a>References</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopInstanceRequest
@@ -4405,7 +5021,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Custom Agent</para>
+        /// <para>Updates the custom agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4469,7 +5085,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Custom Agent</para>
+        /// <para>Updates the custom agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4533,7 +5149,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Custom Agent</para>
+        /// <para>Updates the custom agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4551,7 +5167,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Custom Agent</para>
+        /// <para>Updates the custom agent.</para>
         /// </summary>
         /// 
         /// <param name="request">

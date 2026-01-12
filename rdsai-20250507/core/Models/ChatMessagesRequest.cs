@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ChatMessagesRequest : TeaModel {
         /// <summary>
+        /// <para>The query content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>fea7bdca-e848-44dd-b1ae-852472b8****</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string ConversationId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the parent message.</para>
+        /// </summary>
         [NameInMap("Inputs")]
         [Validation(Required=false)]
         public ChatMessagesRequestInputs Inputs { get; set; }
@@ -56,6 +61,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
+        /// <para>The ID of the conversation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>84dc9f9b-424a-404d-9c36-35e9d000****</para>
         /// </summary>
@@ -64,6 +71,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ParentMessageId { get; set; }
 
         /// <summary>
+        /// <para>The operation that you want to perform. Set the value to <b>ChatMessages</b>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Query")]
