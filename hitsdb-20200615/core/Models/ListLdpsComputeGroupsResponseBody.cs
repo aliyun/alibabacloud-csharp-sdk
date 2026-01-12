@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             [Validation(Required=false)]
             public Dictionary<string, object> Properties { get; set; }
 
+            [NameInMap("RayInteractiveAccessAddr")]
+            [Validation(Required=false)]
+            public string RayInteractiveAccessAddr { get; set; }
+
+            [NameInMap("RayVpcWebUIAddr")]
+            [Validation(Required=false)]
+            public string RayVpcWebUIAddr { get; set; }
+
             [NameInMap("State")]
             [Validation(Required=false)]
             public string State { get; set; }

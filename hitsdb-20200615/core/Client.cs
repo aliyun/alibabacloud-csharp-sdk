@@ -6853,6 +6853,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return await ListAutoScalingRulesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取计算引擎资源组列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListLdpsComputeGroupsRequest
         /// </param>
@@ -6914,6 +6919,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<ListLdpsComputeGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取计算引擎资源组列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListLdpsComputeGroupsRequest
         /// </param>
@@ -6975,6 +6985,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return TeaModel.ToObject<ListLdpsComputeGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取计算引擎资源组列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListLdpsComputeGroupsRequest
         /// </param>
@@ -6988,6 +7003,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return ListLdpsComputeGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取计算引擎资源组列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListLdpsComputeGroupsRequest
         /// </param>
