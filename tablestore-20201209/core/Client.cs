@@ -39,6 +39,160 @@ namespace AlibabaCloud.SDK.Tablestore20201209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>绑定vpc</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindInstance2VpcRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindInstance2VpcResponse
+        /// </returns>
+        public BindInstance2VpcResponse BindInstance2VpcWithOptions(BindInstance2VpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceVpcName))
+            {
+                body["InstanceVpcName"] = request.InstanceVpcName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualSwitchId))
+            {
+                body["VirtualSwitchId"] = request.VirtualSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BindInstance2Vpc",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/bindinstance2vpc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BindInstance2VpcResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定vpc</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindInstance2VpcRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindInstance2VpcResponse
+        /// </returns>
+        public async Task<BindInstance2VpcResponse> BindInstance2VpcWithOptionsAsync(BindInstance2VpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceVpcName))
+            {
+                body["InstanceVpcName"] = request.InstanceVpcName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualSwitchId))
+            {
+                body["VirtualSwitchId"] = request.VirtualSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                body["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BindInstance2Vpc",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/bindinstance2vpc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BindInstance2VpcResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定vpc</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindInstance2VpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindInstance2VpcResponse
+        /// </returns>
+        public BindInstance2VpcResponse BindInstance2Vpc(BindInstance2VpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BindInstance2VpcWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>绑定vpc</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindInstance2VpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindInstance2VpcResponse
+        /// </returns>
+        public async Task<BindInstance2VpcResponse> BindInstance2VpcAsync(BindInstance2VpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BindInstance2VpcWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Changes the resource group to which an instance belongs.</para>
         /// </summary>
         /// 
@@ -1099,6 +1253,136 @@ namespace AlibabaCloud.SDK.Tablestore20201209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除VCU实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVCUInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVCUInstanceResponse
+        /// </returns>
+        public DeleteVCUInstanceResponse DeleteVCUInstanceWithOptions(DeleteVCUInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVCUInstance",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/deletevcuinstance",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVCUInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除VCU实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVCUInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVCUInstanceResponse
+        /// </returns>
+        public async Task<DeleteVCUInstanceResponse> DeleteVCUInstanceWithOptionsAsync(DeleteVCUInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVCUInstance",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/deletevcuinstance",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVCUInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除VCU实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVCUInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVCUInstanceResponse
+        /// </returns>
+        public DeleteVCUInstanceResponse DeleteVCUInstance(DeleteVCUInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteVCUInstanceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除VCU实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVCUInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVCUInstanceResponse
+        /// </returns>
+        public async Task<DeleteVCUInstanceResponse> DeleteVCUInstanceAsync(DeleteVCUInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteVCUInstanceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries supported regions.</para>
         /// </summary>
         /// 
@@ -1355,6 +1639,108 @@ namespace AlibabaCloud.SDK.Tablestore20201209
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetInstanceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举集群类型</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterTypeResponse
+        /// </returns>
+        public ListClusterTypeResponse ListClusterTypeWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListClusterType",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/listclustertype",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListClusterTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举集群类型</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListClusterTypeResponse
+        /// </returns>
+        public async Task<ListClusterTypeResponse> ListClusterTypeWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListClusterType",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/listclustertype",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListClusterTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举集群类型</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListClusterTypeResponse
+        /// </returns>
+        public ListClusterTypeResponse ListClusterType()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListClusterTypeWithOptions(headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举集群类型</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// ListClusterTypeResponse
+        /// </returns>
+        public async Task<ListClusterTypeResponse> ListClusterTypeAsync()
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListClusterTypeWithOptionsAsync(headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1739,6 +2125,298 @@ namespace AlibabaCloud.SDK.Tablestore20201209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取实例的vpcInfo列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcInfoByInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcInfoByInstanceResponse
+        /// </returns>
+        public ListVpcInfoByInstanceResponse ListVpcInfoByInstanceWithOptions(ListVpcInfoByInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVpcInfoByInstance",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/listvpcinfobyinstance",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVpcInfoByInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例的vpcInfo列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcInfoByInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcInfoByInstanceResponse
+        /// </returns>
+        public async Task<ListVpcInfoByInstanceResponse> ListVpcInfoByInstanceWithOptionsAsync(ListVpcInfoByInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVpcInfoByInstance",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/listvpcinfobyinstance",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVpcInfoByInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例的vpcInfo列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcInfoByInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcInfoByInstanceResponse
+        /// </returns>
+        public ListVpcInfoByInstanceResponse ListVpcInfoByInstance(ListVpcInfoByInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListVpcInfoByInstanceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例的vpcInfo列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcInfoByInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcInfoByInstanceResponse
+        /// </returns>
+        public async Task<ListVpcInfoByInstanceResponse> ListVpcInfoByInstanceAsync(ListVpcInfoByInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListVpcInfoByInstanceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例的vpcInfo列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcInfoByVpcRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcInfoByVpcResponse
+        /// </returns>
+        public ListVpcInfoByVpcResponse ListVpcInfoByVpcWithOptions(ListVpcInfoByVpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVpcInfoByVpc",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/listvpcinfobyvpc",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVpcInfoByVpcResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例的vpcInfo列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcInfoByVpcRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcInfoByVpcResponse
+        /// </returns>
+        public async Task<ListVpcInfoByVpcResponse> ListVpcInfoByVpcWithOptionsAsync(ListVpcInfoByVpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVpcInfoByVpc",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/listvpcinfobyvpc",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVpcInfoByVpcResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例的vpcInfo列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcInfoByVpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcInfoByVpcResponse
+        /// </returns>
+        public ListVpcInfoByVpcResponse ListVpcInfoByVpc(ListVpcInfoByVpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListVpcInfoByVpcWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取实例的vpcInfo列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVpcInfoByVpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVpcInfoByVpcResponse
+        /// </returns>
+        public async Task<ListVpcInfoByVpcResponse> ListVpcInfoByVpcAsync(ListVpcInfoByVpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListVpcInfoByVpcWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds tags to instances.</para>
         /// </summary>
         /// 
@@ -1881,6 +2559,144 @@ namespace AlibabaCloud.SDK.Tablestore20201209
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await TagResourcesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑vpc</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindInstance2VpcRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindInstance2VpcResponse
+        /// </returns>
+        public UnbindInstance2VpcResponse UnbindInstance2VpcWithOptions(UnbindInstance2VpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceVpcName))
+            {
+                body["InstanceVpcName"] = request.InstanceVpcName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnbindInstance2Vpc",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/unbindinstance2vpc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnbindInstance2VpcResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑vpc</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindInstance2VpcRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindInstance2VpcResponse
+        /// </returns>
+        public async Task<UnbindInstance2VpcResponse> UnbindInstance2VpcWithOptionsAsync(UnbindInstance2VpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceVpcName))
+            {
+                body["InstanceVpcName"] = request.InstanceVpcName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnbindInstance2Vpc",
+                Version = "2020-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/v2/openapi/unbindinstance2vpc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnbindInstance2VpcResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑vpc</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindInstance2VpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindInstance2VpcResponse
+        /// </returns>
+        public UnbindInstance2VpcResponse UnbindInstance2Vpc(UnbindInstance2VpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UnbindInstance2VpcWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑vpc</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindInstance2VpcRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindInstance2VpcResponse
+        /// </returns>
+        public async Task<UnbindInstance2VpcResponse> UnbindInstance2VpcAsync(UnbindInstance2VpcRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UnbindInstance2VpcWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
