@@ -319,6 +319,330 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>CancelKyuubiSparkApplication</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelKyuubiSparkApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelKyuubiSparkApplicationResponse
+        /// </returns>
+        public CancelKyuubiSparkApplicationResponse CancelKyuubiSparkApplicationWithOptions(string workspaceId, string kyuubiServiceId, string applicationId, CancelKyuubiSparkApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelKyuubiSparkApplication",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId) + "/application/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(applicationId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelKyuubiSparkApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CancelKyuubiSparkApplication</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelKyuubiSparkApplicationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelKyuubiSparkApplicationResponse
+        /// </returns>
+        public async Task<CancelKyuubiSparkApplicationResponse> CancelKyuubiSparkApplicationWithOptionsAsync(string workspaceId, string kyuubiServiceId, string applicationId, CancelKyuubiSparkApplicationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelKyuubiSparkApplication",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId) + "/application/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(applicationId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelKyuubiSparkApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CancelKyuubiSparkApplication</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelKyuubiSparkApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelKyuubiSparkApplicationResponse
+        /// </returns>
+        public CancelKyuubiSparkApplicationResponse CancelKyuubiSparkApplication(string workspaceId, string kyuubiServiceId, string applicationId, CancelKyuubiSparkApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CancelKyuubiSparkApplicationWithOptions(workspaceId, kyuubiServiceId, applicationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CancelKyuubiSparkApplication</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelKyuubiSparkApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelKyuubiSparkApplicationResponse
+        /// </returns>
+        public async Task<CancelKyuubiSparkApplicationResponse> CancelKyuubiSparkApplicationAsync(string workspaceId, string kyuubiServiceId, string applicationId, CancelKyuubiSparkApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CancelKyuubiSparkApplicationWithOptionsAsync(workspaceId, kyuubiServiceId, applicationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKyuubiServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKyuubiServiceResponse
+        /// </returns>
+        public CreateKyuubiServiceResponse CreateKyuubiServiceWithOptions(string workspaceId, CreateKyuubiServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeInstance))
+            {
+                body["computeInstance"] = request.ComputeInstance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KyuubiConfigs))
+            {
+                body["kyuubiConfigs"] = request.KyuubiConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KyuubiReleaseVersion))
+            {
+                body["kyuubiReleaseVersion"] = request.KyuubiReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicEndpointEnabled))
+            {
+                body["publicEndpointEnabled"] = request.PublicEndpointEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Queue))
+            {
+                body["queue"] = request.Queue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseVersion))
+            {
+                body["releaseVersion"] = request.ReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replica))
+            {
+                body["replica"] = request.Replica;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparkConfigs))
+            {
+                body["sparkConfigs"] = request.SparkConfigs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKyuubiService",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKyuubiServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKyuubiServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKyuubiServiceResponse
+        /// </returns>
+        public async Task<CreateKyuubiServiceResponse> CreateKyuubiServiceWithOptionsAsync(string workspaceId, CreateKyuubiServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeInstance))
+            {
+                body["computeInstance"] = request.ComputeInstance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KyuubiConfigs))
+            {
+                body["kyuubiConfigs"] = request.KyuubiConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KyuubiReleaseVersion))
+            {
+                body["kyuubiReleaseVersion"] = request.KyuubiReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicEndpointEnabled))
+            {
+                body["publicEndpointEnabled"] = request.PublicEndpointEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Queue))
+            {
+                body["queue"] = request.Queue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseVersion))
+            {
+                body["releaseVersion"] = request.ReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replica))
+            {
+                body["replica"] = request.Replica;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparkConfigs))
+            {
+                body["sparkConfigs"] = request.SparkConfigs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKyuubiService",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId),
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKyuubiServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKyuubiServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKyuubiServiceResponse
+        /// </returns>
+        public CreateKyuubiServiceResponse CreateKyuubiService(string workspaceId, CreateKyuubiServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateKyuubiServiceWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKyuubiServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKyuubiServiceResponse
+        /// </returns>
+        public async Task<CreateKyuubiServiceResponse> CreateKyuubiServiceAsync(string workspaceId, CreateKyuubiServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateKyuubiServiceWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建kyuubi的token</para>
         /// </summary>
         /// 
@@ -1873,6 +2197,108 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>DeleteKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKyuubiServiceResponse
+        /// </returns>
+        public DeleteKyuubiServiceResponse DeleteKyuubiServiceWithOptions(string workspaceId, string kyuubiServiceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKyuubiService",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKyuubiServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKyuubiServiceResponse
+        /// </returns>
+        public async Task<DeleteKyuubiServiceResponse> DeleteKyuubiServiceWithOptionsAsync(string workspaceId, string kyuubiServiceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKyuubiService",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKyuubiServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteKyuubiServiceResponse
+        /// </returns>
+        public DeleteKyuubiServiceResponse DeleteKyuubiService(string workspaceId, string kyuubiServiceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteKyuubiServiceWithOptions(workspaceId, kyuubiServiceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteKyuubiServiceResponse
+        /// </returns>
+        public async Task<DeleteKyuubiServiceResponse> DeleteKyuubiServiceAsync(string workspaceId, string kyuubiServiceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteKyuubiServiceWithOptionsAsync(workspaceId, kyuubiServiceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除compute的token</para>
         /// </summary>
         /// 
@@ -2429,6 +2855,152 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>上线工作流及其调度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateTaskCodesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateTaskCodesResponse
+        /// </returns>
+        public GenerateTaskCodesResponse GenerateTaskCodesWithOptions(string bizId, GenerateTaskCodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenNum))
+            {
+                query["genNum"] = request.GenNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductNamespace))
+            {
+                query["productNamespace"] = request.ProductNamespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateTaskCodes",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/dolphinscheduler/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(bizId) + "/task-definition/gen-task-codes",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateTaskCodesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上线工作流及其调度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateTaskCodesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateTaskCodesResponse
+        /// </returns>
+        public async Task<GenerateTaskCodesResponse> GenerateTaskCodesWithOptionsAsync(string bizId, GenerateTaskCodesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenNum))
+            {
+                query["genNum"] = request.GenNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductNamespace))
+            {
+                query["productNamespace"] = request.ProductNamespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateTaskCodes",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/dolphinscheduler/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(bizId) + "/task-definition/gen-task-codes",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateTaskCodesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上线工作流及其调度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateTaskCodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateTaskCodesResponse
+        /// </returns>
+        public GenerateTaskCodesResponse GenerateTaskCodes(string bizId, GenerateTaskCodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GenerateTaskCodesWithOptions(bizId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上线工作流及其调度</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateTaskCodesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateTaskCodesResponse
+        /// </returns>
+        public async Task<GenerateTaskCodesResponse> GenerateTaskCodesAsync(string bizId, GenerateTaskCodesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GenerateTaskCodesWithOptionsAsync(bizId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the number of CU-hours consumed by a queue during a specified cycle.</para>
         /// </summary>
         /// 
@@ -2843,6 +3415,108 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>GetKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKyuubiServiceResponse
+        /// </returns>
+        public GetKyuubiServiceResponse GetKyuubiServiceWithOptions(string workspaceId, string kyuubiServiceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKyuubiService",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKyuubiServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKyuubiServiceResponse
+        /// </returns>
+        public async Task<GetKyuubiServiceResponse> GetKyuubiServiceWithOptionsAsync(string workspaceId, string kyuubiServiceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKyuubiService",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKyuubiServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetKyuubiServiceResponse
+        /// </returns>
+        public GetKyuubiServiceResponse GetKyuubiService(string workspaceId, string kyuubiServiceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetKyuubiServiceWithOptions(workspaceId, kyuubiServiceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetKyuubiServiceResponse
+        /// </returns>
+        public async Task<GetKyuubiServiceResponse> GetKyuubiServiceAsync(string workspaceId, string kyuubiServiceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetKyuubiServiceWithOptionsAsync(workspaceId, kyuubiServiceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取compute的token</para>
         /// </summary>
         /// 
@@ -3229,6 +3903,136 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetLivyComputeTokenWithOptionsAsync(workspaceBizId, livyComputeId, tokenId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRunConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRunConfigurationResponse
+        /// </returns>
+        public GetRunConfigurationResponse GetRunConfigurationWithOptions(string workspaceId, string runId, GetRunConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRunConfiguration",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/runs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(runId) + "/action/getRunConfiguration",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRunConfigurationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRunConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRunConfigurationResponse
+        /// </returns>
+        public async Task<GetRunConfigurationResponse> GetRunConfigurationWithOptionsAsync(string workspaceId, string runId, GetRunConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRunConfiguration",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/runs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(runId) + "/action/getRunConfiguration",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRunConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRunConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRunConfigurationResponse
+        /// </returns>
+        public GetRunConfigurationResponse GetRunConfiguration(string workspaceId, string runId, GetRunConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRunConfigurationWithOptions(workspaceId, runId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRunConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRunConfigurationResponse
+        /// </returns>
+        public async Task<GetRunConfigurationResponse> GetRunConfigurationAsync(string workspaceId, string runId, GetRunConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRunConfigurationWithOptionsAsync(workspaceId, runId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6713,6 +7517,108 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>StartKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartKyuubiServiceResponse
+        /// </returns>
+        public StartKyuubiServiceResponse StartKyuubiServiceWithOptions(string workspaceId, string kyuubiServiceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartKyuubiService",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId) + "/start",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartKyuubiServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StartKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartKyuubiServiceResponse
+        /// </returns>
+        public async Task<StartKyuubiServiceResponse> StartKyuubiServiceWithOptionsAsync(string workspaceId, string kyuubiServiceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartKyuubiService",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId) + "/start",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartKyuubiServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StartKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StartKyuubiServiceResponse
+        /// </returns>
+        public StartKyuubiServiceResponse StartKyuubiService(string workspaceId, string kyuubiServiceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StartKyuubiServiceWithOptions(workspaceId, kyuubiServiceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StartKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StartKyuubiServiceResponse
+        /// </returns>
+        public async Task<StartKyuubiServiceResponse> StartKyuubiServiceAsync(string workspaceId, string kyuubiServiceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StartKyuubiServiceWithOptionsAsync(workspaceId, kyuubiServiceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>启动livy compute</para>
         /// </summary>
         /// 
@@ -7203,6 +8109,108 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>StopKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopKyuubiServiceResponse
+        /// </returns>
+        public StopKyuubiServiceResponse StopKyuubiServiceWithOptions(string workspaceId, string kyuubiServiceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopKyuubiService",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId) + "/stop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopKyuubiServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StopKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopKyuubiServiceResponse
+        /// </returns>
+        public async Task<StopKyuubiServiceResponse> StopKyuubiServiceWithOptionsAsync(string workspaceId, string kyuubiServiceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopKyuubiService",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId) + "/stop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopKyuubiServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StopKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StopKyuubiServiceResponse
+        /// </returns>
+        public StopKyuubiServiceResponse StopKyuubiService(string workspaceId, string kyuubiServiceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StopKyuubiServiceWithOptions(workspaceId, kyuubiServiceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>StopKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// StopKyuubiServiceResponse
+        /// </returns>
+        public async Task<StopKyuubiServiceResponse> StopKyuubiServiceAsync(string workspaceId, string kyuubiServiceId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StopKyuubiServiceWithOptionsAsync(workspaceId, kyuubiServiceId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>停止livy compute</para>
         /// </summary>
         /// 
@@ -7609,6 +8617,208 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await TerminateSqlStatementWithOptionsAsync(workspaceId, statementId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKyuubiServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKyuubiServiceResponse
+        /// </returns>
+        public UpdateKyuubiServiceResponse UpdateKyuubiServiceWithOptions(string workspaceId, string kyuubiServiceId, UpdateKyuubiServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeInstance))
+            {
+                body["computeInstance"] = request.ComputeInstance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KyuubiConfigs))
+            {
+                body["kyuubiConfigs"] = request.KyuubiConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KyuubiReleaseVersion))
+            {
+                body["kyuubiReleaseVersion"] = request.KyuubiReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicEndpointEnabled))
+            {
+                body["publicEndpointEnabled"] = request.PublicEndpointEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Queue))
+            {
+                body["queue"] = request.Queue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseVersion))
+            {
+                body["releaseVersion"] = request.ReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replica))
+            {
+                body["replica"] = request.Replica;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Restart))
+            {
+                body["restart"] = request.Restart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparkConfigs))
+            {
+                body["sparkConfigs"] = request.SparkConfigs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKyuubiService",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKyuubiServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKyuubiServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKyuubiServiceResponse
+        /// </returns>
+        public async Task<UpdateKyuubiServiceResponse> UpdateKyuubiServiceWithOptionsAsync(string workspaceId, string kyuubiServiceId, UpdateKyuubiServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeInstance))
+            {
+                body["computeInstance"] = request.ComputeInstance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KyuubiConfigs))
+            {
+                body["kyuubiConfigs"] = request.KyuubiConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KyuubiReleaseVersion))
+            {
+                body["kyuubiReleaseVersion"] = request.KyuubiReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicEndpointEnabled))
+            {
+                body["publicEndpointEnabled"] = request.PublicEndpointEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Queue))
+            {
+                body["queue"] = request.Queue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseVersion))
+            {
+                body["releaseVersion"] = request.ReleaseVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replica))
+            {
+                body["replica"] = request.Replica;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Restart))
+            {
+                body["restart"] = request.Restart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparkConfigs))
+            {
+                body["sparkConfigs"] = request.SparkConfigs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKyuubiService",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/kyuubi/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(kyuubiServiceId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKyuubiServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKyuubiServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKyuubiServiceResponse
+        /// </returns>
+        public UpdateKyuubiServiceResponse UpdateKyuubiService(string workspaceId, string kyuubiServiceId, UpdateKyuubiServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateKyuubiServiceWithOptions(workspaceId, kyuubiServiceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateKyuubiService</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKyuubiServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKyuubiServiceResponse
+        /// </returns>
+        public async Task<UpdateKyuubiServiceResponse> UpdateKyuubiServiceAsync(string workspaceId, string kyuubiServiceId, UpdateKyuubiServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateKyuubiServiceWithOptionsAsync(workspaceId, kyuubiServiceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

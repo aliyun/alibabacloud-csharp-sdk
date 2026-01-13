@@ -1,3 +1,8 @@
+2026-01-13 Version: 1.9.4
+- Update API ListCatalogs: add response parameters Body.catalogs.$.alias.
+- Update API ListKyuubiSparkApplications: add response parameters Body.applications.$.tags.
+
+
 2025-10-28 Version: 1.9.3
 - Update API EditWorkspaceQueue: add request parameters body.resourceSpec.maxCu.
 - Update API GetJobRun: add response parameters Body.jobRun.notebookAccessUrl.

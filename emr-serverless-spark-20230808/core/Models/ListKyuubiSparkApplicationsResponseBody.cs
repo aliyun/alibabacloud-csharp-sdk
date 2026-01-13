@@ -129,6 +129,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string State { get; set; }
 
+            [NameInMap("tags")]
+            [Validation(Required=false)]
+            public List<Tag> Tags { get; set; }
+
             /// <summary>
             /// <para>The total number of CPU cores allocated to the job multiplied by the running duration (seconds).</para>
             /// 

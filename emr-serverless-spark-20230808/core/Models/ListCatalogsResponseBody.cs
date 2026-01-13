@@ -14,6 +14,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<ListCatalogsResponseBodyCatalogs> Catalogs { get; set; }
         public class ListCatalogsResponseBodyCatalogs : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>alias</para>
+            /// </summary>
+            [NameInMap("alias")]
+            [Validation(Required=false)]
+            public string Alias { get; set; }
+
+            /// <summary>
             /// <para>regionId。</para>
             /// 
             /// <b>Example:</b>
