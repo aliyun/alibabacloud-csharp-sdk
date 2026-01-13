@@ -597,6 +597,10 @@ namespace AlibabaCloud.SDK.IQS20241111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerId))
+            {
+                query["callerId"] = request.CallerId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
             {
                 query["endDate"] = request.EndDate;
@@ -647,6 +651,10 @@ namespace AlibabaCloud.SDK.IQS20241111
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerId))
+            {
+                query["callerId"] = request.CallerId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
             {
                 query["endDate"] = request.EndDate;

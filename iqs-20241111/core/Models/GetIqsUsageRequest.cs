@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class GetIqsUsageRequest : TeaModel {
+        [NameInMap("callerId")]
+        [Validation(Required=false)]
+        public string CallerId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>20241017</para>
