@@ -8664,7 +8664,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除IP分组</para>
+        /// <para>Deletes an IP whitelist group from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8710,7 +8710,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除IP分组</para>
+        /// <para>Deletes an IP whitelist group from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8756,7 +8756,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除IP分组</para>
+        /// <para>Deletes an IP whitelist group from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8774,7 +8774,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除IP分组</para>
+        /// <para>Deletes an IP whitelist group from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9092,7 +9092,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库</para>
+        /// <para>Deletes a database from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9138,7 +9138,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库</para>
+        /// <para>Deletes a database from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9184,7 +9184,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库</para>
+        /// <para>Deletes a database from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9202,7 +9202,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据库</para>
+        /// <para>Deletes a database from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10592,7 +10592,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭私有RAG服务</para>
+        /// <para>Deletes a private RAG service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10634,7 +10634,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭私有RAG服务</para>
+        /// <para>Deletes a private RAG service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10676,7 +10676,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭私有RAG服务</para>
+        /// <para>Deletes a private RAG service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10694,7 +10694,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭私有RAG服务</para>
+        /// <para>Deletes a private RAG service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11740,8 +11740,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署私有RAG服务</para>
+        /// <para>Deploy a private RAG service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>Before you deploy the private RAG service, create an initial account.</description></item>
+        /// <item><description>The private RAG service supports vector interfaces. When you call this operation, you must configure a CA certificate.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeployPrivateRAGServiceRequest
@@ -11790,8 +11798,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署私有RAG服务</para>
+        /// <para>Deploy a private RAG service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>Before you deploy the private RAG service, create an initial account.</description></item>
+        /// <item><description>The private RAG service supports vector interfaces. When you call this operation, you must configure a CA certificate.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeployPrivateRAGServiceRequest
@@ -11840,8 +11856,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署私有RAG服务</para>
+        /// <para>Deploy a private RAG service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>Before you deploy the private RAG service, create an initial account.</description></item>
+        /// <item><description>The private RAG service supports vector interfaces. When you call this operation, you must configure a CA certificate.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeployPrivateRAGServiceRequest
@@ -11858,8 +11882,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署私有RAG服务</para>
+        /// <para>Deploy a private RAG service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>Before you deploy the private RAG service, create an initial account.</description></item>
+        /// <item><description>The private RAG service supports vector interfaces. When you call this operation, you must configure a CA certificate.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeployPrivateRAGServiceRequest
@@ -16744,7 +16776,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述数据库</para>
+        /// <para>Describes the basic information about an AnalyticDB for PostgreSQL database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16790,7 +16822,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述数据库</para>
+        /// <para>Describes the basic information about an AnalyticDB for PostgreSQL database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16836,7 +16868,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述数据库</para>
+        /// <para>Describes the basic information about an AnalyticDB for PostgreSQL database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16854,7 +16886,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述数据库</para>
+        /// <para>Describes the basic information about an AnalyticDB for PostgreSQL database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18028,7 +18060,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安装在某个数据库上的插件信息</para>
+        /// <para>Describes the extension information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18078,7 +18110,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安装在某个数据库上的插件信息</para>
+        /// <para>Describes the extension information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18128,7 +18160,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安装在某个数据库上的插件信息</para>
+        /// <para>Describes the extension information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18146,7 +18178,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安装在某个数据库上的插件信息</para>
+        /// <para>Describes the extension information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20068,7 +20100,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取私有RAG服务详情</para>
+        /// <para>Obtains the details of a private RAG service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20110,7 +20142,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取私有RAG服务详情</para>
+        /// <para>Obtains the details of a private RAG service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20152,7 +20184,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取私有RAG服务详情</para>
+        /// <para>Obtains the details of a private RAG service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20170,7 +20202,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取私有RAG服务详情</para>
+        /// <para>Obtains the details of a private RAG service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23320,7 +23352,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取私有RAG服务可部署可用区</para>
+        /// <para>Obtains the deployable zone of the private RAG service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23366,7 +23398,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取私有RAG服务可部署可用区</para>
+        /// <para>Obtains the deployable zone of the private RAG service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23412,7 +23444,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取私有RAG服务可部署可用区</para>
+        /// <para>Obtains the deployable zone of the private RAG service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23430,7 +23462,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取私有RAG服务可部署可用区</para>
+        /// <para>Obtains the deployable zone of the private RAG service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27288,7 +27320,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安装在某个数据库上的所有插件信息</para>
+        /// <para>List all extensions installed in the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27334,7 +27366,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安装在某个数据库上的所有插件信息</para>
+        /// <para>List all extensions installed in the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27380,7 +27412,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安装在某个数据库上的所有插件信息</para>
+        /// <para>List all extensions installed in the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27398,7 +27430,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取安装在某个数据库上的所有插件信息</para>
+        /// <para>List all extensions installed in the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28368,7 +28400,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举数据库</para>
+        /// <para>List all databases in an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28418,7 +28450,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举数据库</para>
+        /// <para>List all databases in an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28468,7 +28500,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举数据库</para>
+        /// <para>List all databases in an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28486,7 +28518,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举数据库</para>
+        /// <para>List all databases in an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

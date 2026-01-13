@@ -365,6 +365,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public class ChatWithKnowledgeBaseStreamRequestModelParamsMessages : TeaModel {
                 /// <summary>
                 /// <para>The message content.</para>
+                /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
@@ -377,6 +378,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <item><description>user</description></item>
                 /// <item><description>assistant</description></item>
                 /// </list>
+                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user</para>
@@ -515,6 +517,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// <para>The region ID of the instance.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -318,19 +318,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// </summary>
                 [NameInMap("Metadata")]
                 [Validation(Required=false)]
-                public ChatWithKnowledgeBaseResponseBodyMultiCollectionRecallResultMatchesMetadata Metadata { get; set; }
-                public class ChatWithKnowledgeBaseResponseBodyMultiCollectionRecallResultMatchesMetadata : TeaModel {
-                    /// <summary>
-                    /// <para>The source of the document.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
-                    [NameInMap("Source")]
-                    [Validation(Required=false)]
-                    public long? Source { get; set; }
-
-                }
+                public Dictionary<string, object> Metadata { get; set; }
 
                 /// <summary>
                 /// <para>The rerank score.</para>
